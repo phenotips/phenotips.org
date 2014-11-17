@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc version="1.1">
+  <web>DeveloperResources</web>
+  <name>ContinuousBuild</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1383329174000</creationDate>
+  <parent>DeveloperResources.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1383329208000</date>
+  <contentUpdateDate>1383329193000</contentUpdateDate>
+  <version>1.1</version>
+  <title>ContinuousBuild</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{box cssClass="floatinginfobox" title="**Contents**"}}
+{{toc/}}
+{{/box}}
+
+= General =
+
+PhenoTips has a [[Continuous Integration&gt;&gt;http://www.martinfowler.com/articles/continuousIntegration.html]] setup to ensure the PhenoTips code can be built correctly at all times (i.e. at every code check in). This also allows developers to only build the module they want and they'll have the other module dependencies downloaded from the [[remote repository&gt;&gt;http://nexus.cs.toronto.edu/]].
+
+We use the following tools:
+
+* {{scm}}GitHub{{/scm}} is used as our [[SCM&gt;&gt;http://en.wikipedia.org/wiki/Source_Code_Management]]
+* [[Maven&gt;&gt;http://maven.apache.org/]] is used for [[building PhenoTips&gt;&gt;DeveloperResources.Building]]
+* [[Nexus&gt;&gt;http://www.sonatype.org/nexus/]] is used for hosting the [[build artifacts&gt;&gt;http://nexus.cs.toronto.edu/nexus/content/repositories/snapshots/]], including [[final releases&gt;&gt;http://nexus.cs.toronto.edu/nexus/content/repositories/releases/]] and [[external dependencies&gt;&gt;http://nexus.cs.toronto.edu/nexus/content/repositories/externals/]] not found in other repositories
+* [[Jenkins&gt;&gt;http://jenkins-ci.org/]] is used as our Continuous Integration (CI) tool (set up at [[http://ci.cs.toronto.edu/]])
+
+We use a technique called [[binary dependency build&gt;&gt;http://web.archive.org/web/20090423073100/http://blogs.codehaus.org/people/vmassol/archives/000953_binary_dependency_builds.html]] which allows to check out only the module a developer wishes to work on and he'll automatically get the latest fresh binary dependencies built by our CI tool.
+
+== Current build status ==
+
+[[image:http://ci.cs.toronto.edu/jenkins/job/phenotips/badge/icon&gt;&gt;http://ci.cs.toronto.edu/jenkins/job/phenotips/]]</content>
+</xwikidoc>

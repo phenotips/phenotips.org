@@ -107,6 +107,7 @@
       <plugin>
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-tool-xar-plugin</artifactId>
+        <version>${xwiki.version}</version>
       </plugin>
       <!-- Step 3: Import the XAR content into the Database -->
       <plugin>
@@ -138,26 +139,6 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-platform-activitystream-api</artifactId>
             <version>${xwiki.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>application-configuration-migrations</artifactId>
-            <version>${project.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>patient-data-migrations</artifactId>
-            <version>${project.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>patient-access-rules-migrations</artifactId>
-            <version>${project.version}</version>
-          </dependency>
-          <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>patient-measurements-migrations</artifactId>
-            <version>${project.version}</version>
           </dependency>
           <!-- WikiMacro classes are automatically generated. -->
           <dependency>

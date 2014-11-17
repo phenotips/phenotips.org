@@ -109,12 +109,6 @@
       <version>${xwiki.version}</version>
       <scope>runtime</scope>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.xwiki.platform</groupId>-->
-      <!--<artifactId>xwiki-platform-extension-script</artifactId>-->
-      <!--<version>${xwiki.version}</version>-->
-      <!--<scope>runtime</scope>-->
-    <!--</dependency>-->
     <dependency>
       <groupId>org.xwiki.commons</groupId>
       <artifactId>xwiki-commons-extension-repository-maven</artifactId>
@@ -183,12 +177,6 @@
       <version>${xwiki.version}</version>
       <scope>runtime</scope>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.xwiki.platform</groupId>-->
-      <!--<artifactId>xwiki-platform-rendering-wikimacro-store</artifactId>-->
-      <!--<version>${xwiki.version}</version>-->
-      <!--<scope>runtime</scope>-->
-    <!--</dependency>-->
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-dashboard-macro</artifactId>
@@ -568,16 +556,6 @@
 
     <!-- Second round of dependency additions -->
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>phenotips-authorization</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>phenotips-security-bridge</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rendering-wikimacro-store</artifactId>
       <version>${xwiki.version}</version>
@@ -647,7 +625,7 @@
                   xwiki.section.edit=0
                   xwiki.backlinks=0
                   xwiki.showviewaction=0
-                  xwiki.defaultweb=data
+                  xwiki.defaultweb=PhenoTips
                   xwiki.usedefaultweb=1
                   xwiki.usedefaultaction=0
                   xwiki.monitor=0
@@ -657,7 +635,7 @@
                 </xwikiCfgAdditionalProperties>
                 <xwikiPropertiesEnvironmentPermanentDirectory>/var/lib/phenotips/</xwikiPropertiesEnvironmentPermanentDirectory>
                 <xwikiPropertiesAdditionalProperties>
-                  model.reference.default.space=data
+                  model.reference.default.space=PhenoTips
                   extension.repositories=maven-central:maven:https://nexus.phenotips.org/nexus/content/groups/public/
                   extension.repositories=maven-phenotips:maven:https://nexus.phenotips.org/nexus/content/repositories/releases/
                   extension.repositories=phenotips.org:xwiki:https://phenotips.org/rest/

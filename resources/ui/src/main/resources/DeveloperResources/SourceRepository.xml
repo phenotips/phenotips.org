@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc version="1.1">
+  <web>DeveloperResources</web>
+  <name>SourceRepository</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1383329013000</creationDate>
+  <parent>DeveloperResources.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1383330142000</date>
+  <contentUpdateDate>1383330142000</contentUpdateDate>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{box cssClass="floatinginfobox" title="**Contents**"}}
+{{toc/}}
+{{/box}}
+
+All sources are stored in [[Git&gt;&gt;http://git-scm.com/]] repositories on {{scm}}GitHub{{/scm}}.
+
+You can browse the source repositories and download/clone the sources by using {{scm}}GitHub{{/scm}}.
+
+= Project Structure =
+
+|=Directory name|=Description
+|pom.xml|The top level Maven build descriptor (a.k.a POM). It's referenced by all other build modules.
+|components|Java modules, most of them components that can plug into the XWiki platform (JARs)
+|resources|Various resource modules, with static configuration files and wiki documents
+|distribution|Distribution packages, such as a ##.war## file that can be deployed in a servlet container, or a standalone ##.zip## ready to go
+
+= Getting Sources =
+
+Go to {{scm}}GitHub{{/scm}} and follow the GitHub instructions.
+
+For example, the official git software can be used from the command line as: ##git clone https:~/~/github.com/phenotips/phenotips.git##
+
+GitHub also provides dedicated graphical clients for [[Mac OS&gt;&gt;http://mac.github.com/]] and [[Windows&gt;&gt;http://windows.github.com/]], and an [[Eclipse plugin&gt;&gt;http://eclipse.github.com/]].
+
+Then [[build&gt;&gt;DeveloperResources.Building]] the sources.
+
+Alternatively, locate the artifact for which you wish to get the sources of in our [[Maven Repository&gt;&gt;http://nexus.cs.toronto.edu/nexus/content/repositories/releases/]] and download the associated source JAR. For example to get the sources for the "PhenoTips - Patient measurements - Java APIs" module, get the JAR file ending with ##-sources.jar## [[from the target version&gt;&gt;http://nexus.cs.toronto.edu/nexus/content/repositories/releases/edu/toronto/cs/phenotips/patient-measurements-api/]].</content>
+</xwikidoc>

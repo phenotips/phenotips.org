@@ -45,13 +45,13 @@
       <type>war</type>
       <!--<optional>true</optional>-->
     </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>solr-configuration</artifactId>
-      <version>${project.version}</version>
-      <type>jar</type>
-      <optional>true</optional>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>${project.groupId}</groupId>-->
+      <!--<artifactId>solr-configuration</artifactId>-->
+      <!--<version>${project.version}</version>-->
+      <!--<type>jar</type>-->
+      <!--<optional>true</optional>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>database-zip</artifactId>

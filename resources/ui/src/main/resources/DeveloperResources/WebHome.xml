@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc version="1.1">
+  <web>DeveloperResources</web>
+  <name>WebHome</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1383324729000</creationDate>
+  <parent>PhenoTips.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1385391232000</date>
+  <contentUpdateDate>1385391232000</contentUpdateDate>
+  <version>1.1</version>
+  <title>Developer Resources</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{velocity}}
+
+Welcome to the PhenoTips development community. This area is for developers of the PhenoTips project itself and all contributors in general.
+
+(% style="width: 49%; float: left"%)(((
+; {{icon name="code" size="large" /}} [[Source Repository&gt;&gt;DeveloperResources.SourceRepository]]
+: //Find information on how to get the PhenoTips sources.//
+
+; {{icon name="cog" size="large" /}} [[Building from sources&gt;&gt;DeveloperResources.Building]]
+: //Learn how to build PhenoTips directly from the sources.//
+
+; {{icon name="cogs" size="large" /}} [[Continuous build&gt;&gt;DeveloperResources.ContinuousBuild]]
+: //Information about our continuous build.//
+)))(% style="width: 49%; float: right"%)(((
+; {{icon name="plus" size="large" /}} [[Contributing&gt;&gt;DeveloperResources.Contributing]]
+: //Find out all the different manners in which you can contribute to the project.//
+
+; {{icon name="envelope" size="large" /}} [[Mailing Lists &amp; Forums&gt;&gt;Contact.Mailing Lists]]
+: //Discuss with other users or developers.//
+
+; {{icon name="comments" size="large" /}} [[IRC&gt;&gt;Contact.IRC]]
+: //Talk with other users or developers in real time.//
+)))
+(% class="clearfloats" %)((()))</content>
+  <attachment>
+    <filename>build.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514032000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>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</content>
+    <filesize>2174</filesize>
+  </attachment>
+  <attachment>
+    <filename>coders.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514032000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>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</content>
+    <filesize>2275</filesize>
+  </attachment>
+  <attachment>
+    <filename>codestyle.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514033000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>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</content>
+    <filesize>1673</filesize>
+  </attachment>
+  <attachment>
+    <filename>committership.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514061000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>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</content>
+    <filesize>2397</filesize>
+  </attachment>
+  <attachment>
+    <filename>continuousbuild.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514033000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>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</content>
+    <filesize>2587</filesize>
+  </attachment>
+  <attachment>
+    <filename>contrib.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514062000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAi5JREFUWIXFl89u00AQh7/QKqRSqRDKLZQKESWB/HHuFATPUClvgpB4ACSoqr4Ir8CFvEBTwsFCitQStxd6aIUQrVUPh2Qdr702tuOIueSXTOzfN7OzKxv+c5SCXw4O923XvWms0nBtbf1sZ/vxo8FgcAuwHky67k3j7Zt3q/Tn4PBjdTKZbAKXEQAV19d/CjcWESqVDUC03+8U7hRjLiJzreeMHQD4PP5ZgLGveP3sgfE/sQDFmIsPIeHS0wAcHY1ic/2+lZhX0ev15iA5AP4V/b7l62C7da3WfgUAunl4yMwghQLEm+n61dP7xQOIwGiUPAOdTgcAzxPC+39pAJD5gM10Ugdm1ecACA4ZmNY6zlgfutwAunGSoVm/bG4t14E0+9wU7XbbP35zA4iAZVlkrTq89xVApl2giPO2Xt3ji33l6+f1zWwAWQyjA5esUwGAcHz81XhRlmi1WtlnQHWg2+2yTKX6c4AZwPhAspgBZR4comS9t1sH8D9VLlMHPC9/1Z+G39nbrXN+fhbaDTlmYDz+ZrwoLprNZuQe0Q6mBBBZHCj6TZP14qgWo04NkHXLRQ3iZiUlwIvG4hw3rWW4xUrXag9xnB/UattMpydaPhNAnKmpqmCLp9NTRGRuvsQSZKk6vNZxeRW2bZfDABuA/+BerVaNtAVFaTgcPgHKwIUCKAMVgZMP++93VukuwpXjOCWgAvrb8V1gC7jHrCNFv7S4wC3wm9mL6S/A+wt4XC3V/kjVrQAAAABJRU5ErkJggg==</content>
+    <filesize>631</filesize>
+  </attachment>
+  <attachment>
+    <filename>governance.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514033000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABSlJREFUWIXdl1lsVUUYx/8zc7a7daUroXQhlkpoQ4sVA8b6gilbIEIDggEiEiSRFwzEJ/pCXXjgQR8sAW0I0QQSicZIiC9IsClFFqlC6HorXW/Xe+/p7b3nnpnxobbpJW1pS+uD3+N3vpn/b2b+c853gP9rrNp1WZtNHVlo4ZLDl/YzkC+lhAMUZ+9Uv3MCIHK6eraQ4sXvX9ri0tVvD2wtMt4oyaZPvP1rE1bf93ff/f72dGMWbAcKj1xMNYTSeGh7cbxUFNhcQpE2Lvxwz1Sj4czfvn4vONU4ulAAGicni/LTjYR4Jxo7g2jzjSAzJQ5Ll3iUCDUqphu3IACF7150MUqPvr4mS2/sCkICEEKic3AUhfkZBlXJjkUF0HW6JTXJTVwOHYOmNZHv80eQlRYHSFLyQgCrdlXOeKUkIRtezklVff5ITH7U4vC4dAjO00sOVzvnASDJ8vJPz5ghPZSz+ZNg9uaq/VNOQkmypjMaifKYvC0kKBn3eaI6Z4DsTZ9/mBTvOHZ0TxnbVV7q1hXlfO6mqi3P1nEhvIFg2NbU2Ol0hcIM2yAgPHcI5pwA8rd95iFEnN5UVqS19piQTMHO8lJFEHIpb+OZ1Mm1DLjT1jVsexyxizQ0hkF/CJSSlitXKmK353kAYc4rUpPilbQlcXjQ5MOv9zvgdjuwesVSw1b4yRgAxut7B4KGxgjIpDdLSpyOx20+Swh5dTqdaQEo2I6VKzKNJ0+HwIWEkBJ1j7rx6ppcnVIcTdt4xjVeawmHyYVE1BYTZ+5xqFCpxMOmHoVSXJgzAICSrPREtHX7JxKdfSaYoiIj2UMczJ7kBVuldExY/Gu83FQXrtc2WlLImtvVe5vmBJC5tdIppUh3OjUEQ1bMM29PAMsyl6gScgMAFB+6WECkuOlxaLBsCQkgM8lAR++wbO0cClpW9PgMi5wawBg1VACghMJ65mqFLRuMMUooSwYAytgxl6EWFOSlcv9oFJpCkehScb22kQsujzyoOTg8Z4DWxFxTEvDASBhOI9bZDk1BYCRsQwovADCCbbvfKsS6wizW548gJU5HQ4tPhsJRJcevTWu+GQFwpYJT0BbfoIl4V+xL0O3Q0NfvtyXFnZLD1SrnMlNRGf78O4BwlCMlXofKxhcisucHAEAKcbW1vdfKSHZP5AgBDI2if9g0OHi9orscACAkgS3Geo5AKIqoJSVltPbuud0t8wagjF3wdvUpTo0izjm2C4yOeYJzAS2smLe/2BdglA72Do0gwaki2aMhErFQ+9ArbFvMaL7nArT+dKKJc1FT/0eztTI7GZQQcCEmrpniUFQAICBnb/7eEtaZBOwofrzxyLI5P3Xv/L662QDM2BFlb69MQFRvXlf8UlIUKmnvCWBtfhpu1TXADEUeS0LfznmltCnU3V0jBN9DKIsQKU7Xn9tbNVMfOGsAAMgpr9qpG9p3b64vUhraBpCe5IQ5PMzbO3xsNBL9yvvzxx8AQNmBb4wbNQfDsxGdHM/tB9rcK66GI1Glpb1HZiS70DUwgrycpWx9aQEIJdvG6+YjPiuAZaY3GwA0hSHBrcOKcjxo9kGAQgqZWVJSPeV3fsEAnl470UIJqbVsLobNsY4nagtwPnbE/tRux6ICAIAQ5Hirt0sKbiPJY8Dj1DDoN0FABpuvVQYWHcB77WQdF/JUw1/Nlko44gyK5raOMICzLyIOzOHPaLjpl1vuvFuir3/otW7fAOO2vLw8FP7I670hXhRizpFdVmn856KLFf8AcP0p5DnhnVEAAAAASUVORK5CYII=</content>
+    <filesize>1394</filesize>
+  </attachment>
+  <attachment>
+    <filename>irc.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514033000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAsZJREFUWIXtlsFr01Acx7/vvWKwWVdmi8KoTBmI9T7wNnAMj4LHHnYXxmCXbnONCGPLDmOHIcSDeJA58D/YoLCBJ68KO4kg4sFCbdKQVG3ynoc1JUuTLOn0tH3hkfDy3vt+8n6/30uAS110kTSDFUWZc133Jef86jBmjDGbUvpkbW3tzTDzoSiKaVmWGFbtdlvUajXTv2YmDUC32x3JZrOwbXvgmRBioAX7x8bG4DjOiH8eTb8Pg0piLoQAIYMRPzdAmHEc1D8FOI+xp4EcUBRlTgihOY6TDZuwsrISu6AkSZidnUW5XB4IRSIAIcSL5eXlrCzLsUZRsiwL29vbKJfLp8wTAziOk5NlOTTTA6CnDLz70dFR2LadOBSpytBvHgUQHJM6B84yTgsQ7B8KIM4syogQ0q99r/59zykAnggg7m3jsrxYLKLZbKJQKIBzDgBotVpgjNnwfYMiAdKYhgEcHh4609PTGQBYXV09eW1KO4ZhVAG4iQDO2u44gP39/Q+c86mZmZkr4+PjjYWFhfsA9F7rK/IkDJYQ5zz0PqrUNE17VK/XX6mq2rFt+/ri4uIUAKvn2Q9BYoCoFoTxZJpmZnNz8/nx8fFDwzB+SpL0rlKpTPR2nXkQwRD0gbws9ocgTiGZzgB0d3d3PwG4XalUbhQKhbsAvuKkAkQYgMQYs3Rdl/P5fH9hwzCQz+dDQYJ9rVYLmUzG7pn86l3dvb29LwA+e8aeggBC1/WnW1tbquu6WQBQVRW5XA5HR0fOwcHBmWVLKe00Go1nANoA4s/zEBEA1wDcBDC5s7PzQwgh6vX676WlpfeSJN0BMBnTJgDcAlBEwv/NsEEEgDQ/P/+4VCq95Zx3TNN8rWlaTdd1N2S8XxyAA+APAludBgDVarVEKf1GCGkSQh5sbGx8TLLYMAqNKaX0HmOstL6+/v1/GV/qUp7+AvGMoWAgfcX2AAAAAElFTkSuQmCC</content>
+    <filesize>783</filesize>
+  </attachment>
+  <attachment>
+    <filename>mail.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514034000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABUlJREFUWIXll91vU2Ucx7/P6Xpa+sbY2rW0ZTNdt46tjuA2Mt2lxgwI4iCAFwQu/Ae8I96ROBNAER1xcRdqYjTxynjhXyA2CIthCWwwWMG5jVVk3dqe9pzTc57n8WLr8fRlrBMSL/wlv5zzvP2+n+flPM9zgP/YyHYqj46OhlxO25eaph7gnHNGGSjj4JyBUgbBIszlcpkzly59NvvCSS9fGH1t/PNP/8xkMpxSyimlXNf1Ms/lsvzK5Yvpc+feO1hvXEtd4pc/fN0XCP545uy7XkIIJElCoVAwXJIkSJIEq1XE4KtDO5YW/jjSs7fr3i+J6/eeG+DKlQuHg4HQ9ydPnd6lqipkWQalFIyxMqeUGmUDBwZti4vzh7r2dswlEr/O/GuA8asfvx0Kt34zcuxUY6FQgKIoVcKVrigKdF3HwIFB29Li0sGOzujD69dvTG8bYHzsozdagsHvjh490ZjP5+sSL7mqqtB1HX39A7b53x+92dH+0uSNyd8e1Q1w9eonLzd7vT+NjLzTtF3xksuyDMYY+vsHbLP3Zw/HuiI/TE7eSm8JMDZ2Mdy4c+fPJ06eblEUBYVCoSo457yuPFmWYbFY8Epfv2P69u1j7dHOb6empgpmvbJ9YGJiwiE28FsnT53upIwhm82WBS69b5VHKUUmk4GqqvB4PGhtbYWmaXxiYvy2w+HuO3/+vF7SFMwANpGMDR96K0oEAZlMBpTSulzXdUiShIWFBciyDL/fj6GhIQwPD6NYLOLx48dwOp3k+PET3bnc6gdmzQZzglH9mM/XIiwvLxuf2ma9lWUZ6XQaoigiFAohGo3C4XCU1dc0Db29vZiensbS0hIikfYGRtlZAO/XBODghBACznkVgK7rSKfTUFUVu3fvRiQSwf79+0EIKVv9nPP1WJyDcw632w1N00AphcViASHl014GAACEEOhMB+ccmUwGa2traGpqQjAYRCwWQ0NDgzHPxWLREDILmwEYY4jH41hZWYEgCJVy1QAA4Pf5MT07je6ubjidTmNEzKJmkVrC5vdUKoVgMLieZnxrAMYYYu0x3L1/F7FoDIIg1C1mLmeMIZlMYs+ePUa60srGxByAEIK2cBsSNxNQVbXmyt/q63jw4AG8Xi+sVmsZ4KYA5p4wxiCKInpiPbh24xpkWUaxWISqqtA0DZqmGRC1YObm5uB2u+F2u414tWzTKSjBuJwuxKIxJG4msK97H4D1hVrZG3NeKpWCxWKBz+fbtOfPBKicS1+TD+FQGFMzU2hpbkFyPlnegAAEBBwcVosV/l1+xOPxmuuiboDKhpHWCFJPUlhZW8HI4RG4nC5jKsxTs7i8iOW/llFQCrCL9qpObQlQ2lTMjRhjuDN7B+FgGPGuOHK5HJ4+fVpWhxACURQRaYvA2+zFzP0ZdEY64dzhfOYo1AQwN1CLKpLzSfT29MIu2rG6ulozoDnP5XAhHovj4cJDBLwBuJ1uox5lumjWq96aNoIwxpCTckhn0hjsGwQYIEmSAWj2WqeiRbCgo60DeTmPrJQ1dZCXaVaNQClAXsnD6XLC3+Kv2evNnpUW8AYgFSTk5TwcDkdVeU2AolaE3+eHIivGnWA7opXmcrig6RoYr94LzAAexrggCAJ8Xh8YY7Db7bDZbFXb7WYH0FYmCAIIEQQAQQASgGwJwAOgiVLd8/VXX0iUUcKZ6Yq1cYj8cy9gYIyDMQpm/BltlHMGzkrlvCLNoCiyB0AAQBoAL53NIoBmAI0A3ACsG/4irYj1O6gKIAfgCYDVyn9Dq8lrfiHPYQwABaBteO3D4X9nfwNezNnriR/SdQAAAABJRU5ErkJggg==</content>
+    <filesize>1426</filesize>
+  </attachment>
+  <attachment>
+    <filename>source.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514034000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABBJJREFUWIXll99qFEkUxn+nqrsnmzhjwpghg4KgOJNEUBERfI19ARd8j73dy70SvMwT7CsI3giKIviPaMC/mIuJsZkk0zPdXdV7Ebvo6fRkMnHv9sChus5AfV9955yqGvi/m5QD9+/f/933/Q0RqSulUEphrcVaS5qmGGMqx2kxEdmL4/iPjY2Nf45l9ODBgx/GmMxam1lrsziO3bcxZszTNHWeJMmYx3HsfDQaZaPRKLt3796PMp5XDqRpuigifPjwARHBGMPCwgJxHCNyKFh5dHLKEUEByLKMVqtFkiSLUwlkWeYWy704Pw2BSfFKAtbaSkARYWtrC2NM5YJVMa01nU5nIvhUAkVwEeHKlSuVSkwiULZc3akEqtIgIrx//x5jTCXgJAW63e5sBIoA5TrodDpjuw/DkFevXmGtZWFhgfPnz9Nut48txlMRyOdlBdI0JYoi0jRlMBiws7PD1tYWzWYTEUFrzerq6ukJPH/+nBs3brh5t9s9kv9ut8vjx4+JogilFEmScO7cOdrt9q8pAHD79m3X/yLCu3fvKmug2Wzy8eNHrLUYY3j9+jXfv3/H8zzW1tZmJ5BlGSJypCU7nQ5Kqcqz4fPnz8Bh4YkI165dOwKWr3diBYo2GAx4+vQpS0tL+L7v4iJClmXO0zTFWsvLly/xPI/19fXZFSjuLvf9/X08z2Nvb4+bN29Sr9ddIT58+JDhcEitVkMpxfLyMtevX/81BcpdMDc3RxRFGGN49OgRQRCgtWYwGBBFkVPFWksYhrx48YIgCLh69arb/YkJVEnVaDRYWlri4OCAJEmI45gkSdzRLCL4vo/neQRBgDGG1dXVsWKtWleVA2majs3zxZVSXL58mfyNoJTC8zx83ycIAqeI53kopYiiiM3NTbdGrs6JFCgCF4n0ej3m5+fZ3d11R3YxVdZap0ocx0RRxPz8PJcuXZqdAMCTJ0+4deuWm6+trbk3QhiGRFFErVaj1WoxGAx49uwZWZa5VPi+T7/fZ3t7m4sXLx4BrySQpqnL1Z07d4jj2Cnw9u3bses4H3u9HgBnzpyh1+sxHA7RWqO1ZmVlhX6/Xwl+rALlgwhgfX39SHvmB1PuYRiyubmJ1topobWenUCVvXnzZqzqi+SK33kraq25cOHCbASKKShbrkB511VqhGHIt2/fXLecmMCvKOD7vrs9FxcP3587Ozv/HYFpCuT3Qm5nz55FRE5XhMdZ8cl23O9w2BnHWZlAQynVz7Ks0Wg0XM97njexLqaZiFCv1wEIgmAPWAF+AKMygTqw/PXr17/u3r37p4j8dirEyTb89OnT30Ab0MA2YIsa1oAW0AQWf84n98+M4Bxu9gDYBb4A+1Dx5/Qn8NzPcfpj/2RmgIRD2UeAy+e/XqV0+PZsBNUAAAAASUVORK5CYII=</content>
+    <filesize>1115</filesize>
+  </attachment>
+  <attachment>
+    <filename>tools.png</filename>
+    <author>XWiki.Admin</author>
+    <date>1365514034000</date>
+    <version>1.1</version>
+    <comment/>
+    <content>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</content>
+    <filesize>2223</filesize>
+  </attachment>
+  <object>
+    <name>DeveloperResources.WebHome</name>
+    <number>0</number>
+    <className>XWiki.StyleSheetExtension</className>
+    <guid>bab623a8-0c0a-49c5-98c3-ea9e989d9009</guid>
+    <class>
+      <name>XWiki.StyleSheetExtension</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>5</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <name>code</name>
+        <number>2</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>4</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>3</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage=Always on this page|onDemand=On demand|always=Always on this wiki</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <property>
+      <cache>long</cache>
+    </property>
+    <property>
+      <code>.features td, .features th{
+  border: 0;
+}</code>
+    </property>
+    <property>
+      <name/>
+    </property>
+    <property>
+      <parse>0</parse>
+    </property>
+    <property>
+      <use>onDemand</use>
+    </property>
+  </object>
+</xwikidoc>

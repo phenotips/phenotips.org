@@ -1,45 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!--
- * See the NOTICE file distributed with this work for additional
- * information regarding copyright ownership.
- *
- * This is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as
- * published by the Free Software Foundation; either version 2.1 of
- * the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this software; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
- * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
--->
-
+<?xml version='1.0' encoding='UTF-8'?>
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>TouchscreenEvents</name>
-  <language/>
-  <defaultLanguage/>
+  <language />
+  <defaultLanguage />
   <translation>0</translation>
-  <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1401822215000</creationDate>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1337872966000</creationDate>
   <parent>PhenoTips.WebHome</parent>
-  <author>xwiki:XWiki.Admin</author>
-  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1401822215000</date>
-  <contentUpdateDate>1401822215000</contentUpdateDate>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1338130244000</date>
+  <contentUpdateDate>1338130244000</contentUpdateDate>
   <version>1.1</version>
-  <title/>
-  <comment/>
+  <title />
+  <comment>Imported from XAR</comment>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
-  <hidden>true</hidden>
-  <content/>
+  <hidden>false</hidden>
+  <content />
   <object>
     <name>PhenoTips.TouchscreenEvents</name>
     <number>0</number>
@@ -47,13 +26,13 @@
     <guid>073bec93-3da3-4c18-a52f-bc96fa7cbb83</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass/>
-      <customMapping/>
-      <defaultViewSheet/>
-      <defaultEditSheet/>
-      <defaultWeb/>
-      <nameField/>
-      <validationScript/>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -258,7 +237,7 @@ var webkit_tools =
   hasClassName: function(element, className)
   {
     var elementClassName = element.className;
-    return (elementClassName.length &gt; 0 &amp;&amp; (elementClassName == className ||
+    return (elementClassName.length > 0 &amp;&amp; (elementClassName == className ||
     new RegExp("(^|\\s)" + className + "(\\s|$)").test(elementClassName)));
     },
 
@@ -383,12 +362,12 @@ var webkit_droppables = function()
       minY = r.offset.top;
       maxY = minY + r.size.height;
 
-      if((y &gt; minY) &amp;&amp; (y &lt; maxY))
+      if((y > minY) &amp;&amp; (y &lt; maxY))
       {
         minX = r.offset.left;
         maxX = minX + r.size.width;
 
-        if((x &gt; minX) &amp;&amp; (x &lt; maxX))
+        if((x > minX) &amp;&amp; (x &lt; maxX))
         {
           active.push(r.i);
         }
@@ -410,7 +389,7 @@ var webkit_droppables = function()
     while(l--)
     {
       curZ = parseInt(d[indices[l]].r.style.zIndex || 0);
-      if(curZ &gt; maxZ)
+      if(curZ > maxZ)
       {
         maxZ = curZ;
         index = indices[l];
@@ -772,7 +751,7 @@ var webkit_click = function(r, ip)
 }</code>
     </property>
     <property>
-      <name/>
+      <name></name>
     </property>
     <property>
       <parse>0</parse>
