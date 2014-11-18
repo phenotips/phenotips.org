@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>DevGuide</web>
+  <name>Building</name>
+  <language />
+  <defaultLanguage>en</defaultLanguage>
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1415672253000</creationDate>
+  <parent>DevGuide.WebHome</parent>
+  <author>XWiki.marta</author>
+  <contentAuthor>XWiki.marta</contentAuthor>
+  <date>1415672306000</date>
+  <contentUpdateDate>1415672306000</contentUpdateDate>
+  <version>13.1</version>
+  <title>Building PhenoTips</title>
+  <comment>Copied from xwiki:DeveloperResources.Building</comment>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{box cssClass="floatinginfobox" title="**Contents**"}}&#xd;
+{{toc/}}&#xd;
+{{/box}}&#xd;
+&#xd;
+= Understanding the directory structure =&#xd;
+&#xd;
+Before you start it's good to have some minimal understanding of [[how Maven works>>http://maven.apache.org/users/index.html]]. You probably won't need it if everything goes fine but you'll need that knowledge if something breaks!&#xd;
+&#xd;
+The first thing to understand is the [[directory structure we use>>SourceRepository]].&#xd;
+&#xd;
+= Checking out the sources =&#xd;
+&#xd;
+Use your favorite SCM client to [[check out the code>>SourceRepository]].&#xd;
+&#xd;
+= Installing Maven =&#xd;
+&#xd;
+[[Install>>http://maven.apache.org/download.cgi#Installation_Instructions]] [[Maven 3.0 or greater>>http://maven.apache.org/]]. Create an ##M2_HOME## environment variable pointing to where you have installed Maven. Add ##M2_HOME/bin## to your PATH environment variable.&#xd;
+&#xd;
+{{info}}&#xd;
+For more information on how to install Maven or how to use it check this [[excellent Maven book>>http://www.sonatype.com/books/mvnref-book/reference/]].&#xd;
+{{/info}}&#xd;
+&#xd;
+= Building with Maven =&#xd;
+&#xd;
+Now that you have installed Maven and checked out the [[source code>>SourceRepository]], you'll want to build it. To build a project with Maven just issue the command:&#xd;
+&#xd;
+{{code}}&#xd;
+mvn clean install&#xd;
+{{/code}}&#xd;
+&#xd;
+Each project is made of modules. You can check out and build any single module (and its children) you wish without having to rebuild the other modules from source. Maven will pick the latest version of your module's dependencies from [[our Nexus/Maven remote repositories>>http://nexus.cs.toronto.edu/]]. Of course if you have uncommitted changes in a dependent module, you'll want to build that module before. The build result is placed in two places:&#xd;
+&#xd;
+* Your [[local maven repository>>http://maven.apache.org/guides/introduction/introduction-to-repositories.html]], for making the module available to other projects or modules using maven (even other PhenoTips modules take the needed libraries from this repository, and not directly from a "neighbor" directory)&#xd;
+* In a subdirectory of that module, called ##target##.&#xd;
+&#xd;
+{{info}}&#xd;
+Some of the modules are very large (in the 200MB+ size) and sometimes you don't absolutely need the latest version to get downloaded as it'll take too long. In that case here's a tip: run Maven in 'no-snapshot-update' mode with ##mvn install -nsu##.&#xd;
+{{/info}}&#xd;
+&#xd;
+== Relationship between PhenoTips and XWiki ==&#xd;
+&#xd;
+The [[XWiki Platform>>http://www.xwiki.org/]] is a generic platform and API for building flexible extensible wikis and web applications. PhenoTips is an application built on top of the XWiki Platform. While compiling PhenoTips, you will notice Maven downloads many dependencies from the ##org.xwiki.*## groups, and these are different parts of the XWiki platform that PhenoTips depends on.&#xd;
+&#xd;
+For developers/contributors, this means that there are two different projects where a change could go into.&#xd;
+&#xd;
+Since PhenoTips is just an application built on top of a larger platform/framework, most of the features are provided not by PhenoTips code, but by XWiki code. As such, many bugfixes and improvements will have to be submitted to the [[XWiki community>>http://dev.xwiki.org/xwiki/bin/Community/]], following their rules and practices. However, most of the PhenoTips developers are also XWiki committers, and have a long history in the XWiki Community, so they can help to facilitate the communication between the two communities, PhenoTips and XWiki.&#xd;
+&#xd;
+= Automatic Checks =&#xd;
+&#xd;
+The build performs some automated checks:&#xd;
+&#xd;
+* Style checks with Checkstyle (skip with: ##-Dcheckstyle.skip##)&#xd;
+* Verify header licenses (skip with: ##-Dlicense.skip##)&#xd;
+* Backward compatibility checks with [[CLIRR>>http://clirr.sourceforge.net/]] (skip with: ##-Dclirr.skip##)&#xd;
+* Verify that all Maven plugins have their versions specified&#xd;
+&#xd;
+= Troubleshooting =&#xd;
+&#xd;
+== Dealing with Out-of-Memory Errors ==&#xd;
+&#xd;
+If you get an ##OutOfMemoryError## then increase the maximum heap space by setting the ##MAVEN_OPTS## environment variable.&#xd;
+&#xd;
+If you're getting a ##PermGen space## error you need to increase the ##JVM PERMGEN##. For example:&#xd;
+&#xd;
+{{code language="sh"}}&#xd;
+export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=256m"&#xd;
+{{/code}}&#xd;
+&#xd;
+== Building behind a proxy ==&#xd;
+&#xd;
+If you are connecting to the Internet through a proxy then you need to modify your ##/.m2/settings.xml## file so that Maven knows it:&#xd;
+&#xd;
+{{code language="xml"}}&#xd;
+&lt;settings>&#xd;
+  &lt;proxies>&#xd;
+    &lt;proxy>&#xd;
+      &lt;active>true&lt;/active>&#xd;
+      &lt;protocol>http&lt;/protocol>&#xd;
+      &lt;host>host&lt;/host>&#xd;
+      &lt;port>port&lt;/port>&#xd;
+      &lt;username>uname&lt;/username>&#xd;
+      &lt;password>password&lt;/password>&#xd;
+    &lt;/proxy>&#xd;
+  &lt;/proxies>&#xd;
+  &lt;!--other tags-->&#xd;
+&lt;/settings>&#xd;
+{{/code}}</content>
+</xwikidoc>

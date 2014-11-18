@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>Contact</web>
+  <name>IRC</name>
+  <language />
+  <defaultLanguage>en</defaultLanguage>
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1383329962000</creationDate>
+  <parent>Contact.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1383329987000</date>
+  <contentUpdateDate>1383329987000</contentUpdateDate>
+  <version>6.1</version>
+  <title>IRC</title>
+  <comment>Copied from xwiki:Community.IRC</comment>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{box cssClass="floatinginfobox" title="**Contents**"}}&#xd;
+{{toc/}}&#xd;
+{{/box}}&#xd;
+&#xd;
+All Serious decisions are made on the [[mailing lists>>Contact.Mailing Lists]]. However if you have a question or want to drop by for a chat, we have an IRC channel.&#xd;
+&#xd;
+{{warning}}The chat channel is publicly logged, you can find the [[chat archives here>>IRC.WebHome]].{{/warning}}&#xd;
+&#xd;
+= Etiquette =&#xd;
+&#xd;
+If you are new to asking for help via chat medium, there are a few things you can do which will get you an answer faster and be make it a more pleasant experience for the developers:&#xd;
+&#xd;
+* Join and ask your question into the channel, that's what it's for. We are not available all the time and with volunteer support you will need to make your question easy to answer. If you ask a specific question then the developer who is most knowledgeable in the area of your question will see it and be able to help you.&#xd;
+* Just ask the question directly, don't waste time with formalities and asking if you can ask questions; this is what the channel is for.&#xd;
+* Don't ask and run. Just because you didn't get an answer instantly doesn't mean you won't ever get one. It's perfectly fine to idle in the channel for as long as you want.&#xd;
+* Provide any relevant information from the logs, paste it to one of the numerous pastebins on the web then provide the link with your question. {{error}}If you see this{{/error}} in your instance, click on it and it will likely expand to provide you with more information which you can paste to a [[pastebin>>http://pastebin.com/]].&#xd;
+* Sending private messages to people you don't know is rude. It amounts to demanding their immediate attention and it will often be ignored.&#xd;
+&#xd;
+If you are interested in how to ask better questions which will get you better answers, you should read [[How To Ask Questions The Smart Way>>http://www.catb.org/~esr/faqs/smart-questions.html]].&#xd;
+&#xd;
+= IRC =&#xd;
+&#xd;
+The IRC channel is available on [[FreeNode>>http://freenode.net/]]:&#xd;
+&#xd;
+* Server: irc.freenode.org&#xd;
+* Port: 6667 (SSL on port 7000)&#xd;
+* Channel: #phenotips&#xd;
+&#xd;
+**If you ask a question and don't get a response, please wait (maybe for a number of hours.) We're not at the computer all the time but when we do see your question we will try to answer.**&#xd;
+&#xd;
+You can use any IRC client. Examples of IRC clients are:&#xd;
+&#xd;
+* [[Pidgin>>http://pidgin.im/]]&#xd;
+* [[Irssi>>http://irssi.org/]]&#xd;
+* [[Chatzilla>>https://addons.mozilla.org/firefox/addon/16]]&#xd;
+** If you have chatzilla, use this direct link to our channel: ##ircs:~//irc.freenode.net:7000/phenotips##&#xd;
+* [[KVirc>>http://www.kvirc.net/]]&#xd;
+* [[Colloquy>>http://colloquy.info]]&#xd;
+* [[Adium>>http://adium.im/]]&#xd;
+&#xd;
+(% id="Connect" %)(((&#xd;
+== You can connect to our IRC channel directly from this page ==&#xd;
+&#xd;
+{{html}}&#xd;
+&lt;iframe src="http://webchat.freenode.net?channels=phenotips&amp;prompt=1&amp;uio=d4&amp;nick=phenotips_guest_..." width="647" height="400">&lt;/iframe>&#xd;
+{{/html}}&#xd;
+)))&#xd;
+= Archives =&#xd;
+&#xd;
+The IRC chat is publicly archived and the archives are located [[here>>IRC.WebHome]].&#xd;
+</content>
+</xwikidoc>

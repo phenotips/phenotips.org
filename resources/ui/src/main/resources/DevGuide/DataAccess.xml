@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version='1.0' encoding='UTF-8'?>
 <xwikidoc version="1.1">
   <web>DevGuide</web>
   <name>DataAccess</name>
-  <language/>
-  <defaultLanguage/>
+  <language />
+  <defaultLanguage>en</defaultLanguage>
   <translation>0</translation>
-  <creator>xwiki:XWiki.Admin</creator>
+  <creator>XWiki.marta</creator>
   <creationDate>1385378703000</creationDate>
   <parent>DevGuide.WebHome</parent>
-  <author>xwiki:XWiki.Admin</author>
-  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <author>XWiki.marta</author>
+  <contentAuthor>XWiki.marta</contentAuthor>
   <date>1385378703000</date>
   <contentUpdateDate>1385378703000</contentUpdateDate>
   <version>1.1</version>
   <title>Data Access</title>
-  <comment/>
+  <comment />
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>

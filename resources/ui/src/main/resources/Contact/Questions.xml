@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>Contact</web>
+  <name>Questions</name>
+  <language />
+  <defaultLanguage>en</defaultLanguage>
+  <translation>0</translation>
+  <creator>XWiki.marta</creator>
+  <creationDate>1384537122000</creationDate>
+  <author>XWiki.marta</author>
+  <contentAuthor>XWiki.marta</contentAuthor>
+  <date>1384537326000</date>
+  <contentUpdateDate>1384537326000</contentUpdateDate>
+  <version>2.4</version>
+  <title>Contact PhenoTips</title>
+  <comment />
+  <minorEdit>true</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{velocity}}$xwiki.ssx.use('Contact.Questions'){{/velocity}}&#xd;
+&#xd;
+== Questions? ==&#xd;
+(% class="section-1" %)(((&#xd;
+Please address your questions or report issues encountered while using PhenoTips to ##support@phenotips.org##.&#xd;
+)))</content>
+  <object>
+    <name>Contact.Questions</name>
+    <number>0</number>
+    <className>XWiki.StyleSheetExtension</className>
+    <guid>2c2e1408-7bf2-4d40-a60a-aee68b8e2fd7</guid>
+    <class>
+      <name>XWiki.StyleSheetExtension</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>5</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <name>code</name>
+        <number>2</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>4</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>3</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage=Always on this page|onDemand=On demand|always=Always on this wiki</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <property>
+      <cache>forbid</cache>
+    </property>
+    <property>
+      <code>h1, h2, h3, h4, h5, h6, #xwikidoctitleinput {&#xd;
+    border: 0 none;&#xd;
+    font-weight: 300;&#xd;
+}&#xd;
+#xwikicontent img {&#xd;
+    border: 1px solid #FFFFFF;&#xd;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;&#xd;
+    box-shadow: 0 0 10px #BBBBBB;&#xd;
+    display: block;&#xd;
+    margin: auto;&#xd;
+    max-width: 95%;&#xd;
+}&#xd;
+.section-1 {&#xd;
+    margin-left: 2em;&#xd;
+}&#xd;
+.section-2 {&#xd;
+    margin-left: 3em;&#xd;
+}&#xd;
+.section-3 {&#xd;
+    margin-left: 4em;&#xd;
+}&#xd;
+.section-4 {&#xd;
+    margin-left: 5em;&#xd;
+}</code>
+    </property>
+    <property>
+      <name></name>
+    </property>
+    <property>
+      <parse />
+    </property>
+    <property>
+      <use>onDemand</use>
+    </property>
+  </object>
+</xwikidoc>

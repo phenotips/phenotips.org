@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>ExtensionCode</web>
+  <name>XWikiApplicationExtensionRepository</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1408739696000</creationDate>
+  <parent>XAppManager.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1408739696000</date>
+  <contentUpdateDate>1408739696000</contentUpdateDate>
+  <version>1.1</version>
+  <title />
+  <comment>Imported from XAR</comment>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>#includeForm("XAppSheets.XWikiApplicationClassSheet")</content>
+  <object>
+    <name>ExtensionCode.XWikiApplicationExtensionRepository</name>
+    <number>0</number>
+    <className>XAppClasses.XWikiApplicationClass</className>
+    <guid>deed05a9-7198-4546-86d2-db2404c0236f</guid>
+    <class>
+      <name>XAppClasses.XWikiApplicationClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+    </class>
+    <property>
+      <appauthors></appauthors>
+    </property>
+    <property>
+      <applications>[]</applications>
+    </property>
+    <property>
+      <appname>extension-repository</appname>
+    </property>
+    <property>
+      <appprettyname></appprettyname>
+    </property>
+    <property>
+      <appversion>1.0</appversion>
+    </property>
+    <property>
+      <dependencies>[]</dependencies>
+    </property>
+    <property>
+      <description>A repository of extensions based on XWiki</description>
+    </property>
+    <property>
+      <docstoinclude>[]</docstoinclude>
+    </property>
+    <property>
+      <docstolink>[]</docstolink>
+    </property>
+    <property>
+      <documents>[Extension.WebHome, [ExtensionCode.%]]</documents>
+    </property>
+    <property>
+      <license></license>
+    </property>
+    <property>
+      <translationdocs>[]</translationdocs>
+    </property>
+  </object>
+</xwikidoc>

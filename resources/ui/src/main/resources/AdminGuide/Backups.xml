@@ -1,89 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version='1.0' encoding='UTF-8'?>
 <xwikidoc version="1.1">
   <web>AdminGuide</web>
   <name>Backups</name>
-  <language/>
-  <defaultLanguage/>
+  <language />
+  <defaultLanguage>en</defaultLanguage>
   <translation>0</translation>
-  <creator>xwiki:XWiki.Admin</creator>
+  <creator>XWiki.marta</creator>
   <creationDate>1383397576000</creationDate>
   <parent>AdminGuide.WebHome</parent>
-  <author>xwiki:XWiki.Admin</author>
-  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <author>XWiki.marta</author>
+  <contentAuthor>XWiki.marta</contentAuthor>
   <date>1384518040000</date>
   <contentUpdateDate>1384518040000</contentUpdateDate>
-  <version>1.1</version>
+  <version>9.1</version>
   <title>Daily database backups</title>
-  <comment/>
+  <comment>Copied from xwiki:PhenoTips.Backups</comment>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>= Daily database backups =
-{{box cssClass="floatinginfobox" title="**Contents**"}}
-{{toc depth="3"/}}
-{{/box}}
-
-{{warning}}These instructions are valid for a PhenoTips server running on //linux//, under //Tomcat//, with //MySQL// as the database system.{{/warning}}
-
-== Manual backups ==
-
-[[This script&gt;&gt;attach:@backup-phenotips-database.sh]] can be used to create a new database backup. By default it uses the connection details configured in the running PhenoTips instance, and saves the backup in a file named ##data-&lt;yyyy-mm-dd&gt;.sql## in the directory ##/var/lib/phenotips/backups/mysql/##.
-
-To use the script, simply [[download it&gt;&gt;attach:@backup-phenotips-database.sh]] and execute it from the server.
-
-{{code language="bash"}}
-wget http://phenotips.org/download/PhenoTips/Backups/backup-phenotips-database.sh
-chmod +x backup-phenotips-database.sh
-./backup-phenotips-database.sh
-{{/code}}
-
-To save the data in a different directory, run:
-
-{{code language="bash"}}
-BACKUPDIR=/path/to/directory/ ./backup-phenotips-database.sh
-{{/code}}
-
-To save the data in a file named ##data.sql##, without the date in the filename, pass ##undated## as the first parameter:
-
-{{code language="bash"}}
-./backup-phenotips-database.sh undated
-{{/code}}
-
-== Automatic periodical backups ==
-
-##crontab## can be used to automatically run the script at given intervals. For example, to automatically backup each day at midnight, run ##crontab -e## and put this in the editor that shows up:
-
-{{code language="none"}}
-0 0 * * * $HOME/backup-phenotips-database.sh
-{{/code}}
-
-{{warning}}Make sure the user running this crontab has write access to the target directory, ##/var/lib/phenotips/backups/mysql/##{{/warning}}
-
-{{info}}Use the proper path to the backup script, if it is not placed in the user's home directory{{/info}}
-
-== Rotating backups ==
-
-##logrotate## can be used to automatically discard older backups, keeping only a few daily backups, and then increasingly rare weekly, monthly, and yearly backups. [[This logrotate configuration&gt;&gt;attach:@backup-phenotips.logrotate.conf]] saves:
-
-* daily backups for a week
-* weekly backups for a month
-* monthly backups for a year
-* yearly backups for a decade
-
-To use it, [[download the configuration&gt;&gt;attach:@backup-phenotips.logrotate.conf]] and enable it in ##crontab -e##
-
-{{code language="none"}}
-0 0 * * * $HOME/backup-phenotips-database.sh undated ; logrotate -f $HOME/backup-phenotips.logrotate.conf
-{{/code}}
-
+  <content>= Daily database backups =&#xd;
+{{box cssClass="floatinginfobox" title="**Contents**"}}&#xd;
+{{toc depth="3"/}}&#xd;
+{{/box}}&#xd;
+&#xd;
+{{warning}}These instructions are valid for a PhenoTips server running on //linux//, under //Tomcat//, with //MySQL// as the database system.{{/warning}}&#xd;
+&#xd;
+== Manual backups ==&#xd;
+&#xd;
+[[This script>>attach:@backup-phenotips-database.sh]] can be used to create a new database backup. By default it uses the connection details configured in the running PhenoTips instance, and saves the backup in a file named ##data-&lt;yyyy-mm-dd>.sql## in the directory ##/var/lib/phenotips/backups/mysql/##.&#xd;
+&#xd;
+To use the script, simply [[download it>>attach:@backup-phenotips-database.sh]] and execute it from the server.&#xd;
+&#xd;
+{{code language="bash"}}&#xd;
+wget http://phenotips.org/download/PhenoTips/Backups/backup-phenotips-database.sh&#xd;
+chmod +x backup-phenotips-database.sh&#xd;
+./backup-phenotips-database.sh&#xd;
+{{/code}}&#xd;
+&#xd;
+To save the data in a different directory, run:&#xd;
+&#xd;
+{{code language="bash"}}&#xd;
+BACKUPDIR=/path/to/directory/ ./backup-phenotips-database.sh&#xd;
+{{/code}}&#xd;
+&#xd;
+To save the data in a file named ##data.sql##, without the date in the filename, pass ##undated## as the first parameter:&#xd;
+&#xd;
+{{code language="bash"}}&#xd;
+./backup-phenotips-database.sh undated&#xd;
+{{/code}}&#xd;
+&#xd;
+== Automatic periodical backups ==&#xd;
+&#xd;
+##crontab## can be used to automatically run the script at given intervals. For example, to automatically backup each day at midnight, run ##crontab -e## and put this in the editor that shows up:&#xd;
+&#xd;
+{{code language="none"}}&#xd;
+0 0 * * * $HOME/backup-phenotips-database.sh&#xd;
+{{/code}}&#xd;
+&#xd;
+{{warning}}Make sure the user running this crontab has write access to the target directory, ##/var/lib/phenotips/backups/mysql/##{{/warning}}&#xd;
+&#xd;
+{{info}}Use the proper path to the backup script, if it is not placed in the user's home directory{{/info}}&#xd;
+&#xd;
+== Rotating backups ==&#xd;
+&#xd;
+##logrotate## can be used to automatically discard older backups, keeping only a few daily backups, and then increasingly rare weekly, monthly, and yearly backups. [[This logrotate configuration>>attach:@backup-phenotips.logrotate.conf]] saves:&#xd;
+&#xd;
+* daily backups for a week&#xd;
+* weekly backups for a month&#xd;
+* monthly backups for a year&#xd;
+* yearly backups for a decade&#xd;
+&#xd;
+To use it, [[download the configuration>>attach:@backup-phenotips.logrotate.conf]] and enable it in ##crontab -e##&#xd;
+&#xd;
+{{code language="none"}}&#xd;
+0 0 * * * $HOME/backup-phenotips-database.sh undated ; logrotate -f $HOME/backup-phenotips.logrotate.conf&#xd;
+{{/code}}&#xd;
+&#xd;
 {{warning}}For the logrotate to work, the backup script must be executed with the ##undated## option{{/warning}}</content>
   <attachment>
     <filename>backup-phenotips-database.sh</filename>
     <author>XWiki.sdumitriu</author>
     <date>1370445056000</date>
     <version>1.2</version>
-    <comment/>
+    <comment />
     <content>IyEvYmluL2Jhc2gKCiMjIERldGVjdCB3aGVyZSB0aGUgUGhlbm9UaXBzIGluc3RhbmNlIGlzCmlmIFtbIC1mIC92YXIvbGliL3RvbWNhdDYvd2ViYXBwcy9ST09UL1dFQi1JTkYveHdpa2kucHJvcGVydGllcyBdXQp0aGVuCiAgSElCRVJOQVRFX0NPTkZJRz0iL3Zhci9saWIvdG9tY2F0Ni93ZWJhcHBzL1JPT1QvV0VCLUlORi9oaWJlcm5hdGUuY2ZnLnhtbCIKZWxpZiBbWyAtZiAvdmFyL2xpYi90b21jYXQ2L3dlYmFwcHMvcGhlbm90aXBzL1dFQi1JTkYveHdpa2kucHJvcGVydGllcyBdXQp0aGVuCiAgSElCRVJOQVRFX0NPTkZJRz0iL3Zhci9saWIvdG9tY2F0Ni93ZWJhcHBzL3BoZW5vdGlwcy9XRUItSU5GL2hpYmVybmF0ZS5jZmcueG1sIgpmaQoKIyMgRXh0cmFjdCB0aGUgbXlzcWwgaG9zdCwgREIgbmFtZSwgdXNlcm5hbWUgYW5kIHBhc3N3b3JkCk1IT1NUPWBjYXQgJEhJQkVSTkFURV9DT05GSUcgfCBncmVwICdqZGJjOm15c3FsOi8vJyB8IHNlZCAtciAtZSAncy8uKlwvXC8oW15cL10rKVwvLiovXDEvJ2AKTURCPWBjYXQgJEhJQkVSTkFURV9DT05GSUcgfCBncmVwICdqZGJjOm15c3FsOi8vJyB8IHNlZCAtciAtZSAncy8uKlwvXC9bXlwvXStcLyhbXj88XSspLiovXDEvJ2AKTVVTRVI9YGNhdCAkSElCRVJOQVRFX0NPTkZJRyB8IGdyZXAgJ2pkYmM6bXlzcWw6Ly8nIC1BIDUgfCBncmVwICdjb25uZWN0aW9uLnVzZXJuYW1lJyB8IHNlZCAtciAtZSAncy8uKj4oW148XSspPC4qL1wxLydgCk1QQVNTPWBjYXQgJEhJQkVSTkFURV9DT05GSUcgfCBncmVwICdqZGJjOm15c3FsOi8vJyAtQSA1IHwgZ3JlcCAnY29ubmVjdGlvbi5wYXNzd29yZCcgfCBzZWQgLXIgLWUgJ3MvLio+KFtePF0rKTwuKi9cMS8nYAoKIyMgQ29tcHV0ZSB0aGUgYmFja3VwIGZpbGVuYW1lIGFuZCBtYWtlIHN1cmUgaXRzIHBhcmVudCBkaXJlY3RvcnkgZXhpc3RzCmlmIFtbICEgLWQgJHtCQUNLVVBESVI6PS92YXIvbGliL3BoZW5vdGlwcy9iYWNrdXBzL215c3FsfSBdXQp0aGVuCiAgbWtkaXIgLXAgJEJBQ0tVUERJUgpmaQppZiBbWyAkMSA9PSAidW5kYXRlZCIgXV0KdGhlbgogIEZJTEU9IiR7QkFDS1VQRElSfS9kYXRhLnNxbCIKZWxzZQogIEZJTEU9IiR7QkFDS1VQRElSfS9kYXRhLSQoZGF0ZSArIiVGIikuc3FsIgpmaQoKIyMgRHVtcCB0aGUgZGF0YWJhc2UKbXlzcWxkdW1wIC0tZXZlbnRzIC0tc2luZ2xlLXRyYW5zYWN0aW9uICRNREIgLXUgJE1VU0VSIC1oICRNSE9TVCAtcCRNUEFTUyA+ICRGSUxFCg==</content>
     <filesize>1240</filesize>
   </attachment>
@@ -92,7 +91,7 @@ To use it, [[download the configuration&gt;&gt;attach:@backup-phenotips.logrotat
     <author>XWiki.sdumitriu</author>
     <date>1370290121000</date>
     <version>1.1</version>
-    <comment/>
+    <comment />
     <content>IyBEYWlseSBiYWNrdXAgZm9yIDcgZGF5cwoiL3Zhci9saWIvcGhlbm90aXBzL2JhY2t1cHMvbXlzcWwvZGF0YS5zcWwiIHsKICBkYWlseQogIG1pc3NpbmdvawogIHJvdGF0ZSA3CiAgY29tcHJlc3MKfQoKIyBXZWVrbHkgYmFja3VwIGZvciA1IHdlZWtzCiIvdmFyL2xpYi9waGVub3RpcHMvYmFja3Vwcy9teXNxbC9kYXRhLnNxbC43Lmd6IiB7CiAgd2Vla2x5CiAgbWlzc2luZ29rCiAgcm90YXRlIDUKfQoKIyBNb250aGx5IGJhY2t1cCBmb3IgMTIgbW9udGhzCiIvdmFyL2xpYi9waGVub3RpcHMvYmFja3Vwcy9teXNxbC9kYXRhLnNxbC43Lmd6LjQiIHsKICBtb250aGx5CiAgbWlzc2luZ29rCiAgcm90YXRlIDEyCn0KCiMgWWVhcmx5IGJhY2t1cCBmb3IgMTAgeWVhcnMKIi92YXIvbGliL3BoZW5vdGlwcy9iYWNrdXBzL215c3FsL2RhdGEuc3FsLjcuZ3ouNC4xMiIgewogIHllYXJseQogIG1pc3NpbmdvawogIHJvdGF0ZSAxMAp9</content>
     <filesize>471</filesize>
   </attachment>

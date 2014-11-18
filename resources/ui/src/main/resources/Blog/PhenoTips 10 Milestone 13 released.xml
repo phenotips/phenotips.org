@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>Blog</web>
+  <name>PhenoTips 10 Milestone 13 released</name>
+  <language />
+  <defaultLanguage>en</defaultLanguage>
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1406660250000</creationDate>
+  <parent>Blog.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1406687184000</date>
+  <contentUpdateDate>1406660250000</contentUpdateDate>
+  <version>4.1</version>
+  <title>PhenoTips 1.0 Milestone 13 released</title>
+  <comment>Published article</comment>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.0</syntaxId>
+  <hidden>false</hidden>
+  <content />
+  <object>
+    <name>Blog.PhenoTips 10 Milestone 13 released</name>
+    <number>0</number>
+    <className>Blog.BlogPostClass</className>
+    <guid>6f13b73a-fec5-4c78-9208-76372a0675e9</guid>
+    <class>
+      <name>Blog.BlogPostClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <category>
+        <cache>0</cache>
+        <classname>Blog.CategoryClass</classname>
+        <customDisplay />
+        <disabled>0</disabled>
+        <displayType>checkbox</displayType>
+        <idField>doc.fullName</idField>
+        <multiSelect>1</multiSelect>
+        <name>category</name>
+        <number>4</number>
+        <parentField>doc.parent</parentField>
+        <picker>0</picker>
+        <prettyName>Category</prettyName>
+        <relationalStorage>1</relationalStorage>
+        <separator>, </separator>
+        <separators />
+        <size>1</size>
+        <sort>value</sort>
+        <sql />
+        <tooltip />
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <valueField>name</valueField>
+        <classType>com.xpn.xwiki.objects.classes.DBTreeListClass</classType>
+      </category>
+      <content>
+        <contenttype>FullyRenderedText</contenttype>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>---</editor>
+        <name>content</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>Content</prettyName>
+        <rows>20</rows>
+        <size>80</size>
+        <tooltip />
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </content>
+      <extract>
+        <contenttype>FullyRenderedText</contenttype>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>---</editor>
+        <name>extract</name>
+        <number>3</number>
+        <picker>0</picker>
+        <prettyName>Extract</prettyName>
+        <rows>10</rows>
+        <size>80</size>
+        <tooltip />
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </extract>
+      <hidden>
+        <customDisplay />
+        <defaultValue>0</defaultValue>
+        <disabled>0</disabled>
+        <displayFormType>checkbox</displayFormType>
+        <displayType />
+        <name>hidden</name>
+        <number>5</number>
+        <prettyName>Is hidden</prettyName>
+        <tooltip />
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </hidden>
+      <publishDate>
+        <customDisplay />
+        <dateFormat>dd/MM/yyyy HH:mm:ss</dateFormat>
+        <disabled>0</disabled>
+        <emptyIsToday>1</emptyIsToday>
+        <name>publishDate</name>
+        <number>7</number>
+        <picker>1</picker>
+        <prettyName>Publish date</prettyName>
+        <size>20</size>
+        <tooltip />
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.DateClass</classType>
+      </publishDate>
+      <published>
+        <customDisplay />
+        <defaultValue>0</defaultValue>
+        <disabled>0</disabled>
+        <displayFormType>checkbox</displayFormType>
+        <displayType />
+        <name>published</name>
+        <number>6</number>
+        <prettyName>Is published</prettyName>
+        <tooltip />
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </published>
+      <title>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>title</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Title</prettyName>
+        <size>80</size>
+        <tooltip />
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </title>
+    </class>
+    <property>
+      <category>
+        <value>Blog.Releases</value>
+      </category>
+    </property>
+    <property>
+      <content>The PhenoTips development team is happy to announce the availability of the thirteenth milestone of PhenoTips 1.0. Since there are still a few open issues preventing a final 1.0 release, and it has been more than two months since the previous milestone, we decided to release another milestone, so that our users can benefit from the latest improvements and bugfixes sooner. The highlights of this release are:&#xd;
+&#xd;
+* **Selected phenotypes appear in their corresponding top level anatomical system category** instead of the generic //Other//, even if those categories are not present by default in the form&#xd;
+* Added **severity, temporal pattern, spatial pattern, and locality qualifiers** for phenotypes&#xd;
+* Removed the **mode of inheritance** qualifier from phenotypes, since it shouldn't be applied to symptoms but to diseases&#xd;
+* More **abnormal measurements automatically select their corresponding phenotypes**&#xd;
+* Terms in phenotype **subcategories are now expandable**&#xd;
+* Added **help/description buttons** for many of the fields in the patient record&#xd;
+* The **disease search doesn't list most genes, loci and proteins anymore**, just actual disease names&#xd;
+* Fixed two bug where a user's own patient records, and patients owned by a user's group wouldn't appear in data tables&#xd;
+* A link to **browse all patients has been added in the top menu**, where it is always accessible&#xd;
+* **Pedigree improvements**:&#xd;
+** Support for **importing pedigrees** from a few formats: **PED**, **GEDCOM**, and our own custom format&#xd;
+** Added the ability to enter **ethnic background** for each person&#xd;
+** By default **siblings are ordered by age**, if possible&#xd;
+** Improved the generated **layout**&#xd;
+* Changed the **default date format** to the international //year-month-day//&#xd;
+* Added a RPM package compatible with RHEL 7 and derived distributions&#xd;
+* The separate **Solr ##.war## has now been merged** into the main PhenoTips one, making it easier to install PhenoTips&#xd;
+* Java 1.7 is now the minimum version of Java supported, since 1.6 has been discontinued&#xd;
+* Plus many other minor bugfixes and improvements&#xd;
+&#xd;
+See [[the full list of issues on GitHub>>https://github.com/phenotips/phenotips/issues?q=milestone%3A1.0-milestone-13]].</content>
+    </property>
+    <property>
+      <extract></extract>
+    </property>
+    <property>
+      <hidden>0</hidden>
+    </property>
+    <property>
+      <publishDate>2014-07-29 14:57:15.0</publishDate>
+    </property>
+    <property>
+      <published>1</published>
+    </property>
+    <property>
+      <title>PhenoTips 1.0 Milestone 13 released</title>
+    </property>
+  </object>
+</xwikidoc>
