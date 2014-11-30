@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130423</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1366692406000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1366770304000</date>
+  <contentUpdateDate>1366770304000</contentUpdateDate>
+  <version>1.107</version>
+  <title>IRC Archive for channel #ccm on 23 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has joined #ccm
+01:05 &lt;kushalkhandelwal> has joined #ccm
+01:50 &lt;kushalk124> has joined #ccm
+01:57 &lt;vshivam> has joined #ccm
+03:14 &lt;kushalk124> has joined #ccm
+03:30 &lt;kushalk124> has joined #ccm
+03:51 &lt;kushalk124> has joined #ccm
+03:55 &lt;kushalk124> has joined #ccm
+04:03 &lt;kushalk124> has joined #ccm
+04:15 &lt;kushalk124> has joined #ccm
+04:33 &lt;kushalk124> has joined #ccm
+04:47 &lt;sdumitriu> has joined #ccm
+04:51 &lt;kushalk124> has joined #ccm
+04:55 &lt;kushalk124> has joined #ccm
+05:01 &lt;kushalk124> has joined #ccm
+05:04 &lt;kushalk124> has joined #ccm
+05:09 &lt;kushalk124> has joined #ccm
+05:13 &lt;kushalk124> has joined #ccm
+05:17 &lt;kushalk124> has joined #ccm
+05:21 &lt;kushalk124> has joined #ccm
+05:25 &lt;kushalk124> has joined #ccm
+05:30 &lt;kushalk124> has joined #ccm
+05:34 &lt;kushalk124> has joined #ccm
+05:38 &lt;kushalk124> has joined #ccm
+05:42 &lt;kushalk124> has joined #ccm
+05:48 &lt;kushalk124> has joined #ccm
+05:52 &lt;kushalk124> has joined #ccm
+05:57 &lt;kushalk124> has joined #ccm
+06:01 &lt;kushalk124> has joined #ccm
+06:05 &lt;kushalk124> has joined #ccm
+06:09 &lt;kushalk124> has joined #ccm
+06:13 &lt;kushalk124> has joined #ccm
+06:17 &lt;kushalk124> has joined #ccm
+06:22 &lt;kushalk124> has joined #ccm
+06:28 &lt;kushalk124> has joined #ccm
+06:33 &lt;kushalk124> has joined #ccm
+06:36 &lt;kushalk124> has joined #ccm
+06:50 &lt;kushalk124> has joined #ccm
+06:55 &lt;vevoo> has joined #ccm
+06:59 &lt;kushalk124> has joined #ccm
+07:11 &lt;kushalk124> has joined #ccm
+07:44 &lt;kushalk124> has joined #ccm
+07:54 &lt;UCC> has joined #ccm
+08:03 &lt;kushalk124> has joined #ccm
+08:27 &lt;kushalk124> has joined #ccm
+08:39 &lt;kushalkhandelwal> has joined #ccm
+08:45 &lt;kushalk124> has joined #ccm
+10:51 &lt;ravigarg27> has joined #ccm
+11:13 &lt;UCC> has joined #ccm
+11:38 &lt;ravigarg27> has joined #ccm
+11:45 &lt;froggy> has joined #ccm
+11:55 &lt;camelia_> has joined #ccm
+12:17 &lt;froggy> has joined #ccm
+12:48 &lt;ravigarg27> has joined #ccm
+12:52 &lt;sdumitriu1> Hey, who wants to fix a very easy issue?
+12:52 &lt;sdumitriu1> For PhenoTips
+12:59 &lt;kushalkhandelwal> Me :P
+12:59 &lt;sdumitriu1> Except you
+12:59 &lt;kushalkhandelwal> :D
+13:18 &lt;ravigarg27> i would try to!!
+13:21 &lt;sdumitriu1> OK ravigarg27
+13:21 &lt;sdumitriu1> It's this one: https://github.com/compbio-UofT/phenotips/issues/408
+13:22 &lt;sdumitriu1> Don't hesitate to ask me any questions you might have
+13:27 &lt;ravigarg27> ok so how should I start
+13:28 &lt;sdumitriu1> First, you did build and run phenotips locally, right?
+13:28 &lt;ravigarg27> yup
+13:28 &lt;sdumitriu1> OK, now find out where are these categories defined
+13:29 &lt;ravigarg27> k
+13:29 &lt;ravigarg27> will be back just a minute
+13:29 &lt;sdumitriu1> Search for "Cognition and Development"
+13:31 &lt;ravigarg27> has joined #ccm
+13:34 &lt;ravigarg27> sry sdumitriu, had to reboot was in windows before
+13:35 &lt;sdumitriu1> Search for "Cognition and Development"
+13:36 &lt;ravigarg27> on the new patient record page?
+13:37 &lt;sdumitriu1> No, in the sources, or in the app through http://localhost:8080/bin/Main/Search
+13:38 &lt;ravigarg27> ok searched
+13:39 &lt;ravigarg27> getting some 7 results
+13:40 &lt;sdumitriu1> OK, now see if you can find out how to change the category
+13:41 &lt;ravigarg27> yeah looking into that
+13:43 &lt;froggy> has joined #ccm
+14:24 &lt;alex_____> has joined #ccm
+14:26 &lt;ravigarg27> has joined #ccm
+14:27 &lt;kushalkhandelwal> has joined #ccm
+14:30 &lt;camelia_> has joined #ccm
+14:32 &lt;sdumitriu1> Hey camelia_
+14:32 &lt;sdumitriu1> That's a pretty long application
+14:32 &lt;sdumitriu1> Still reading on it
+14:33 &lt;sdumitriu1> One thing, though, it's "phenotype", not "phenotip", when talking about patients
+14:33 &lt;Krinye> has joined #ccm
+14:33 &lt;ravigarg27> has joined #ccm
+14:33 &lt;kushalkhandelwal> has joined #ccm
+14:33 &lt;camelia_> ok, Thank You!
+14:37 &lt;qwebirc78499> has joined #ccm
+14:38 &lt;kushalkhandelwal> has joined #ccm
+14:43 &lt;kushalkhandelwal> has joined #ccm
+14:50 &lt;ravigarg27> has joined #ccm
+15:04 &lt;kushalkhandelwal> has joined #ccm
+15:05 &lt;ravi_> has joined #ccm
+15:10 &lt;ravi_> has joined #ccm
+15:14 &lt;ravi_> has joined #ccm
+15:20 &lt;ravi_> has joined #ccm
+15:24 &lt;ravi_> has joined #ccm
+15:29 &lt;ravi_> has joined #ccm
+15:33 &lt;ravi_> has joined #ccm
+15:39 &lt;ravi_> has joined #ccm
+16:01 &lt;ravigarg27> has joined #ccm
+22:25 &lt;froggy> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130423</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>17d374cb-b16e-437d-b660-6d555b4677ae</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20140715</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1405418571000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1405452482000</date>
+  <contentUpdateDate>1405452482000</contentUpdateDate>
+  <version>1.7</version>
+  <title>IRC Archive for channel #medsavant on 15 July 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;meatcar> has joined #medsavant
+08:40 &lt;jim_> has joined #medsavant
+10:39 &lt;mcupak> has joined #medsavant
+15:14 &lt;meatcar> jim_: thanks
+15:14 &lt;meatcar> do you know if the PharmacoGx application was working previously/
+15:14 &lt;meatcar> ?
+15:28 &lt;meatcar> never mind. Seems like it's Ron's tool. I'll ask him.</content>
+  <object>
+    <name>IRC.medsavantArchive20140715</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>5e91065f-e87b-4544-9807-07167ee63314</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

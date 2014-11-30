@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20140107</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1389122558000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1389128894000</date>
+  <contentUpdateDate>1389128894000</contentUpdateDate>
+  <version>1.15</version>
+  <title>IRC Archive for channel #medsavant on 07 January 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #medsavant
+14:24 &lt;sdumitriu1> has joined #medsavant
+14:31 &lt;mcupak> has joined #medsavant
+15:37 &lt;sdumitriu1> Hey mcupak
+15:37 &lt;sdumitriu1> How's it going?
+15:42 &lt;mcupak> hey sdumitriu1, happy new year!
+15:43 &lt;sdumitriu1> Happy new year!
+15:44 &lt;mcupak> I'm just finishing my thesis about sharding, how are you?
+15:49 &lt;sdumitriu1> Getting familiar with the new office
+15:52 &lt;mcupak> cool, I didn't know you guys got a new space
+15:52 &lt;mcupak> where is it?
+15:53 &lt;sdumitriu1> http://www.sickkids.ca/AboutSickKids/Newsroom/toppingoff/topping-off-ceremony.html
+15:54 &lt;mcupak> very nice
+16:08 &lt;mcupak> here's where I work, not such a new office though :-)
+16:08 &lt;mcupak> https://foursquare.com/v/red-hat-czech-office/4b942dfef964a5200d6d34e3</content>
+  <object>
+    <name>IRC.medsavantArchive20140107</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f4ec137a-4053-42d6-814e-26b7fb216a4d</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

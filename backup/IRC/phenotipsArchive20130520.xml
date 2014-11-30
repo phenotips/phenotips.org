@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130520</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1369029196000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1369084854000</date>
+  <contentUpdateDate>1369084854000</contentUpdateDate>
+  <version>1.52</version>
+  <title>IRC Archive for channel #phenotips on 20 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;BogdanVancea1> has quit
+04:26 &lt;tishan> has joined #phenotips
+04:40 &lt;tishan> has quit
+06:22 &lt;BogdanVancea1> has quit
+07:01 &lt;tishan> has joined #phenotips
+07:02 &lt;tishan> Hi
+07:41 &lt;tishan> has quit
+10:06 &lt;tishan> has joined #phenotips
+10:31 &lt;tishan> Hi
+10:33 &lt;sdumitriu> Hi
+10:34 &lt;tishan> I came across that war download issue when building
+10:42 &lt;sdumitriu> Where does it stop?
+10:43 &lt;tishan> http://nexus.cs.toronto.edu/nexus/content/groups/public/org/xwiki/platform/xwiki-platform-web/4.5.3/xwiki-platform-web-4.5.3.war
+10:44 &lt;sdumitriu> Try to do a "git pull"
+10:44 &lt;sdumitriu> We've moved to 5.0.1
+10:44 &lt;tishan> ah ok
+10:47 &lt;tishan> I checked out from here
+10:47 &lt;tishan> https://github.com/compbio-UofT/phenotips
+10:48 &lt;tishan> git pull says file are up to date
+10:48 &lt;sdumitriu> OK
+10:48 &lt;sdumitriu> And it still fails at 4.5.3?
+10:48 &lt;tishan> yeah
+10:49 &lt;sdumitriu> If you edit pom.xml (the topmost one), what does it say for xwiki.version?
+10:50 &lt;tishan> 4.5.3
+10:52 &lt;sdumitriu> Then it can't be up to date...
+10:52 &lt;tishan> yup
+10:53 &lt;sdumitriu> What exactly does git pull say?
+10:53 &lt;tishan> just check the repo. there are updates before 3,4 days
+10:53 &lt;tishan> those changes cant be in local repo
+10:54 &lt;tishan> Already up-to-date.
+10:54 &lt;sdumitriu> Hm, wait
+10:54 &lt;sdumitriu> git remote -v
+10:55 &lt;tishan> ah got it got it
+10:55 &lt;tishan> i cloned from my fork
+10:55 &lt;tishan> Dumb!
+10:55 &lt;sdumitriu> git pull upstream
+10:56 &lt;sdumitriu> Or if you don't have that remote already, git remote add upstream https://github.com/compbio-UofT/phenotips.git
+10:56 &lt;sdumitriu> Then git pull upstream
+10:56 &lt;sdumitriu> Then git push origin
+10:58 &lt;tishan> master?
+11:00 &lt;sdumitriu> Yes
+11:02 &lt;tishan> Can we point me to some references to get familiar with groovy scripting for xwiki
+11:03 &lt;sdumitriu> You shouldn't need groovy
+11:03 &lt;sdumitriu> Velocity is enough
+11:03 &lt;tishan> I googled. But couldnt find adequate resources to understand existing code
+11:03 &lt;tishan> mmh
+11:05 &lt;sdumitriu> This might help: http://platform.xwiki.org/xwiki/bin/view/SRD/Navigation?xpage=embed
+11:09 &lt;tishan> Ill be out for dinner and will be back shortly
+12:24 &lt;tishan> has quit
+12:51 &lt;tishan> has joined #phenotips
+14:20 &lt;tishan> has quit
+17:20 &lt;BogdanVancea> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130520</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>66e3abd0-bdc5-4c00-b510-2c4bc1f60720</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130510</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1368193365000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1368235126000</date>
+  <contentUpdateDate>1368235126000</contentUpdateDate>
+  <version>1.25</version>
+  <title>IRC Archive for channel #ccm on 10 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalkhandelwal> has joined #ccm
+09:43 &lt;kushalkhandelwal> Hey
+09:43 &lt;sdumitriu> Hey
+09:44 &lt;kushalkhandelwal> You opened issues
+09:44 &lt;kushalkhandelwal> and closed them :P
+09:45 &lt;kushalkhandelwal> So how is it going ?
+09:45 &lt;kushalkhandelwal> Working from home today ?
+09:45 &lt;sdumitriu> A bit, yes
+09:45 &lt;sdumitriu> Finishing some commits
+09:46 &lt;sdumitriu> I'm leaving in less than an hour, only a bit left to do
+09:46 &lt;kushalkhandelwal> Oh
+09:47 &lt;kushalkhandelwal> Some new features in form ?
+09:47 &lt;sdumitriu> Yes
+09:49 &lt;kushalkhandelwal> Hm
+09:50 &lt;kushalkhandelwal> Carry on , time to study
+09:50 &lt;kushalkhandelwal> Last exam :D
+09:50 &lt;kushalkhandelwal> Will catch you late in night
+09:50 &lt;kushalkhandelwal> Bye
+09:51 &lt;sdumitriu> Bye
+10:31 &lt;ravigarg27> has joined #ccm
+11:33 &lt;sdumitriu1> has joined #ccm
+15:50 &lt;phenotips_org> has joined #ccm
+19:46 &lt;kushalkhandelwal> has joined #ccm
+19:47 &lt;kushalkhandelwal> Hello
+21:18 &lt;ravigarg27> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130510</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>7606e7dc-8920-430d-acbc-bcc5c08af419</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140213</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1392316127000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1392331681000</date>
+  <contentUpdateDate>1392331681000</contentUpdateDate>
+  <version>1.31</version>
+  <title>IRC Archive for channel #phenotips on 13 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #phenotips
+13:55 &lt;mcupak> has quit
+14:03 &lt;akats> I'm not sure if this will solve the problem or if it's the right place to write the code in. Could you check? This is just a part of the code. https://github.com/soLEED/phenotips-1/compare/issue-723?expand=1
+14:03 &lt;akats> Thank you
+14:06 &lt;sdumitriu> akats: getFormData is called many times... Fixing the IDs at every call is expensive
+14:18 &lt;sdumitriu> allasm: http://phenotips.org/DevGuide/UIX
+14:25 &lt;sdumitriu> allasm: http://localhost:8080/bin/edit/PhenoTips/PatientAccessRightsManagement?editor=object
+15:34 &lt;akats> sdumitriu: DocumentSaveEvent - is that deprecated?
+15:35 &lt;sdumitriu> Yes
+15:36 &lt;sdumitriu> There are two: DocumentUpdatingEvent and DocumentUpdatedEvent that you can use
+15:37 &lt;sdumitriu> The first one is sent with the data that is going to be saved, and you can change it before the actual save happens
+15:37 &lt;sdumitriu> The second one is sent after the document has already been saved
+15:38 &lt;sdumitriu> But each time you listen to Updating event, you should also listen to DocumentCreatingEvent, since that one is sent the first time the document is saved
+15:48 &lt;marta__> has joined #phenotips
+16:25 &lt;akats> are fields within a DBStringListProperty mutable?
+16:26 &lt;akats> Actually nevermind
+16:34 &lt;akats> I get a patientClass object from a xwikidoc as a BaseObject. Then
+16:35 &lt;akats> I get a field which is clearly shown as a DBStringListProperty. However, per documentation it should be a PropertyInterface and therefore I cast it. Does the list stay mutable?
+16:36 &lt;akats> As in if I change it, would it reflect in the original xwikidoc?
+17:00 &lt;akats> Before I forget, is monday off for us or can I still come?
+17:00 &lt;sdumitriu> Officially it's off
+17:01 &lt;sdumitriu> Unofficially we're going to be working, but I'm not sure if from home or from here
+17:01 &lt;akats> Aha, I see
+17:01 &lt;sdumitriu> The building might be closed... Security has a day off too
+17:22 &lt;akats> Would it be possible to do some work from home?
+17:24 &lt;sdumitriu> Sure
+17:25 &lt;akats> Sweet. Should I start on issue-708 (https://github.com/phenotips/phenotips/issues/708?source=cc) while you check this issue and the work on membership applications?
+17:26 &lt;sdumitriu> I think marta__ has another issue for you
+17:26 &lt;akats> Ok
+17:38 &lt;akats> has quit
+17:48 &lt;sdumitriu> allasm: https://gsoc.ccm.sickkids.ca/GoogleSummerOfCode/Mobile+UI+for+the+Pedigree+tool2014</content>
+  <object>
+    <name>IRC.phenotipsArchive20140213</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>0841bf63-3049-43b9-bff6-11efec9e38c6</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

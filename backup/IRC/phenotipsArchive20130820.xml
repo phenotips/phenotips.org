@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130820</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1376996186000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1377033920000</date>
+  <contentUpdateDate>1377033920000</contentUpdateDate>
+  <version>1.25</version>
+  <title>IRC Archive for channel #phenotips on 20 August 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has joined #phenotips
+08:05 &lt;ravigarg27> has quit
+08:52 &lt;ravigarg27> has joined #phenotips
+08:59 &lt;ravigarg27> hey sdumitriu, were you able to get that code to run, I think I was not getting errors as I didnt had the latest changes I am though getting those errors now
+09:29 &lt;ravigarg27> has quit
+11:22 &lt;mcupak> has quit
+11:22 &lt;ravigarg27> has joined #phenotips
+11:39 &lt;sdumitriu1> has joined #phenotips
+11:40 &lt;sdumitriu1> Hey ravigarg27
+11:40 &lt;sdumitriu1> More meetings today
+11:40 &lt;sdumitriu1> No, I didn't get it to work
+11:40 &lt;ravigarg27> Hi sdumitriu
+11:40 &lt;ravigarg27> ohh okay
+11:40 &lt;ravigarg27> I am trying to get to error
+11:41 &lt;ravigarg27> I mean solve the error
+11:41 &lt;ravigarg27> any idea but what the problem could be
+11:41 &lt;sdumitriu1> Some library conflict
+11:42 &lt;sdumitriu1> Build PhenoTips from the master branch, copy the final result someplace
+11:42 &lt;sdumitriu1> Build PhenoTips from your branch, compare the contents of WEB-INF/lib between the two versions
+11:43 &lt;ravigarg27> okay will do that
+11:57 &lt;sdumitriu1> has quit
+12:22 &lt;sdumitriu1> has joined #phenotips
+13:22 &lt;ravigarg27> has quit
+16:14 &lt;sdumitriu1> has quit
+17:25 &lt;bvancea> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130820</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>294b35ba-579f-49c1-bb69-be336e28bc8c</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20131122</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1385128957000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1385181700000</date>
+  <contentUpdateDate>1385181700000</contentUpdateDate>
+  <version>1.39</version>
+  <title>IRC Archive for channel #ccm on 22 November 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu1> has joined #ccm
+12:40 &lt;natani> has joined #ccm
+12:41 &lt;natani> sdumitriu: hey, I want to contribute to the org. can you guide me through the steps needed to be followed?
+12:42 &lt;sdumitriu1> Hi natani
+12:43 &lt;sdumitriu1> As part of GSoC?
+12:44 &lt;natani> Yes :)
+12:44 &lt;sdumitriu1> Excellent
+12:45 &lt;sdumitriu1> Did you find something interesting in 2013's list of project ideas?
+12:47 &lt;natani> yes, actually I was thinking to contribute to an organization which works in the area of  high performance computing, I saw the project list and found the project titled as Parallelization of Queries in MedSavant interesting. But I don't know much about the project that's why I want to know more about the organization and it's works.
+12:56 &lt;sdumitriu1> Hold on a bit, debugging something
+12:57 &lt;natani> Sure
+13:04 &lt;sdumitriu1> So, while the CCM does handle a bit of HPC, I wouldn't say that it is an organization that's a good host for HPC projects, in the broad sense
+13:05 &lt;sdumitriu1> The MedSavant parallelization was selected this year, and the project was successful
+13:07 &lt;sdumitriu1> But we can find some ideas for you
+13:07 &lt;natani> ok, fine so what all projects do you have which are in your todo list? may be I can find something to contribute to.. :)
+13:10 &lt;sdumitriu1> Strictly HPC, or general ideas
+13:14 &lt;natani> General ones, keeping HiPC aside, my purpose for doing GSoC this year is more for open source contribution, I am anyway doing my research in HPC. So if the goal of having a good experience of open source contribution is achieved, I will be more than happy.
+13:15 &lt;sdumitriu1> So what's your level? BSc, Msc?
+13:16 &lt;natani> I am in my pre-final/third year of B.Tech. (Computer Science).
+13:16 &lt;sdumitriu1> Good
+13:17 &lt;sdumitriu1> Do you prefer Java, Mobile apps, or Web?
+13:17 &lt;natani> Web or java both are ok. I have no experience with mobile apps development.
+13:18 &lt;sdumitriu1> This is an interesting project: https://gsoc.ccm.sickkids.ca/GoogleSummerOfCode/Multiple+visits+support+in+PhenoTips
+13:18 &lt;sdumitriu1> What do you think about it?
+13:24 &lt;natani> ok, I got the second and the third point, that these functionalities can be added. But how can the new visit be unnamed ? as they allow to track different versions saved for the same patients. Anyway, the project looks good.
+13:25 &lt;natani> Did you propose it for GSoC 2014?
+13:35 &lt;sdumitriu1> Yes
+13:36 &lt;natani> So how should I start contributing?
+13:36 &lt;sdumitriu1> Hold on, debugging something else
+14:00 &lt;sdumitriu1> So, first step is to stick around
+14:01 &lt;sdumitriu1&gt; Since that project is about PhenoTips, you should learn more about it
+14:01 &lt;sdumitriu1> Read the documentation available at http://phenotips.org/
+14:02 &lt;sdumitriu1> Especially the developer resources http://phenotips.org/DeveloperResources/
+14:02 &lt;sdumitriu1> (not that many now, though...)
+14:03 &lt;sdumitriu1> You should try to get the sources, build the project, and run it to see how it works
+14:04 &lt;natani> Ok, I will read and try it and get back to you. It's 4:30 AM here in my country, I should go to sleep now. By the way , thanks a lot. See you tomorrow.
+14:08 &lt;sdumitriu1> Good night natani, see you tomorrow
+23:03 &lt;natani> has joined #ccm
+23:41 &lt;natani> I am trying to build the project using $ mvn install and get the error like:  http://paste.ubuntu.com/6462634/</content>
+  <object>
+    <name>IRC.ccmArchive20131122</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>7600965f-5b68-4970-91d5-24acb891b2bb</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

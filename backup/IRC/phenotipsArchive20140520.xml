@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140520</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1400592138000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1400630388000</date>
+  <contentUpdateDate>1400630388000</contentUpdateDate>
+  <version>1.71</version>
+  <title>IRC Archive for channel #phenotips on 20 May 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;mcupak> has quit
+09:36 &lt;mcupak> has quit
+10:35 &lt;akats> has joined #phenotips
+11:34 &lt;akats> Are there calculations made for left/right hand length? I see only - instead of a usual percentile number calculation
+11:35 &lt;sdumitriu> There should be
+12:18 &lt;akats> Its a bug in a newer build
+12:19 &lt;akats> It's fairly recent
+12:19 &lt;akats> Maybe in the last 2 weeks
+12:19 &lt;sdumitriu> Hm...
+12:19 &lt;sdumitriu> Nothing changed there
+12:20 &lt;sdumitriu> Indeed, it doesn't work on Playground either
+12:21 &lt;sdumitriu> Can you debug it?
+12:22 &lt;akats> Yes
+12:22 &lt;akats> It's somewhere in the /bin/get/PhenoTips/PatientToolsService
+12:22 &lt;akats> shall I make a separate issue?
+12:22 &lt;sdumitriu> Yes
+12:22 &lt;akats> ok
+12:27 &lt;sdumitriu> akats: Did you look into https://github.com/phenotips/phenotips/issues/756 at some point?
+12:28 &lt;akats> Nope.
+12:29 &lt;akats> First time I see the github page
+12:29 &lt;sdumitriu> OK
+12:29 &lt;akats> Do you want to assign it to me?
+12:30 &lt;sdumitriu> Nope
+12:52 &lt;akats> found the issue.
+12:52 &lt;akats> the data array for hands is sparce
+12:52 &lt;akats> so it goes 24, 48, etc
+12:52 &lt;akats> whereas weight for example is continious
+12:53 &lt;akats> the current code can't work with sparce arrays
+12:53 &lt;sdumitriu> It used to work with gaps...
+12:54 &lt;akats> https://github.com/phenotips/phenotips/blob/master/components/patient-measurements/api/src/main/java/org/phenotips/measurements/internal/AbstractMeasurementHandler.java#L241
+12:54 &lt;akats> Thats the problem
+12:55 &lt;akats> but it is not the code that changed
+12:56 &lt;sdumitriu> Oh, I see, the issue is that there's no measurement for 0 months
+12:56 &lt;sdumitriu> It only works from 2 years upwards
+16:04 &lt;akats> sdumitriu: I'm looking into this issue right now https://github.com/phenotips/phenotips/issues/93. I'm also remember you talking about having to make the csv export nicer with several lines per patient.
+16:05 &lt;akats> Thinking of how these problems can be implemented, I started wondering if it would be better to use a spreadsheet generation library
+16:10 &lt;sdumitriu1> Yes, we could
+16:10 &lt;sdumitriu1> It's quite simple to use
+16:11 &lt;sdumitriu1> I think we already have the libraries for that in the application
+16:11 &lt;sdumitriu1> You can look into http://extensions.xwiki.org/xwiki/bin/view/Extension/LiveTableExcelExport+Macro
+16:12 &lt;sdumitriu1> Not to use it directly, but to see how to create an excel file
+16:12 &lt;sdumitriu1> http://poi.apache.org/
+16:13 &lt;sdumitriu1> akats: It looks like I'm not coming back today after all
+16:14 &lt;akats> I see. Are you ok to chat though or are you busy?
+16:35 &lt;sdumitriu1> A bit later
+16:38 &lt;akats> Ok. Well I'll just outline what I'm thinking
+16:40 &lt;akats> - Should we write to both Microsoft and Open/Libre office formats?
+16:43 &lt;akats> Should we use newer or older formats?
+16:43 &lt;mcupak> has quit
+16:55 &lt;akats> Is it really worth it to switch? The real power of not using csv comes from the ability to have cells with column span and text formatting
+16:55 &lt;akats> Column span would be really nice to subdivide phenotype column into more columns
+16:56 &lt;akats> And formatting text would be nice for making the document much more readable on the whole
+16:57 &lt;akats> I'm wondering just how often do doctors export data? Or if not often, how important is it to have good export?
+17:30 &lt;akats> The conclusion that I have arrived at: If export is an important feature, we should definitely make the switch. The ease of reading a spreadsheet is probably times better when there is formatting present such as font weight, style, color, size, borders, column widths and row eights.
+17:30 &lt;akats> It would make sense to ship out only microsoft format as the quality of conversion seems ok now
+17:34 &lt;sdumitriu1> I think new format
+17:35 &lt;sdumitriu1> And both ODS and XLSX
+17:36 &lt;akats> Ok. Since this is the only issue I have that I can work on I just want to know if you want me to implement the library or to hack what we have now
+17:36 &lt;akats> So that when I come in tomorrow I have something to work on
+17:36 &lt;sdumitriu1> Many european countries want a "standard" format for government documents
+17:36 &lt;sdumitriu1> And OD* is that format
+17:36 &lt;sdumitriu1> Implement what library?
+17:37 &lt;akats> well we'll probably have to either implement 2 (poi and http://incubator.apache.org/odftoolkit/odfdom/index.html)
+17:37 &lt;akats> or implement poi and a converter
+17:37 &lt;sdumitriu1> You don't implement POI, you use it
+17:38 &lt;akats> Sorry, I meant implement using
+17:38 &lt;sdumitriu1> Implementing new format would be better
+17:40 &lt;akats> Ok. I'll start on it tomorrow. I'll try to make flexible. To reasonable limits of course.
+17:43 &lt;akats> has quit
+18:57 &lt;vijay13> has quit
+19:59 &lt;vijay13> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140520</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>d842a3fc-d52b-4de3-b03b-058277b41b6b</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140418</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1397820661000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1397872070000</date>
+  <contentUpdateDate>1397872070000</contentUpdateDate>
+  <version>1.23</version>
+  <title>IRC Archive for channel #phenotips on 18 April 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;vijay13> has quit
+08:21 &lt;vijay13> has quit
+09:34 &lt;Shubham> has quit
+11:55 &lt;mcupak> has quit
+12:01 &lt;Shubham> has quit
+12:20 &lt;Shubham> has quit
+14:18 &lt;akats> has joined #phenotips
+14:20 &lt;akats> How is the export in JSON supposed to fit into the UI? In the "Export Options" lightbox, should there be a third step, as in "1 Filter records you wish to export", "2. Select format. CSV/JSON", "3 Select the fields to be exported"?
+14:22 &lt;sdumitriu> I'd say yes
+14:22 &lt;sdumitriu> Marta didn't agree, but we'll see how it turns out
+14:23 &lt;akats> Ok.
+14:23 &lt;akats> Did she propose adding a second "Export" button?
+14:24 &lt;sdumitriu> Yes
+14:30 &lt;akats> There is merit in that idea. It is still logically sound since these two export options have very different uses. From the coding perspective, it would be about the same amount of work. From the UX perspective, it might actually be better. You don't want to throw words like "JSON" onto an unsuspecting user. But at the same time I can't come up with a good name for the second "export" button.
+14:30 &lt;sdumitriu> Yes
+14:32 &lt;akats> Maybe "Advanced database export", to indicate that it is not for a regular user, or better yet, only show it to advanced users.
+14:45 &lt;sdumitriu> is now known as &lt;ccm_sdumitriu>
+14:46 &lt;akats> sdumitriu1: Who is the referrer?
+14:46 &lt;akats> The original creator?
+14:48 &lt;ccm_sdumitriu> Yes
+15:20 &lt;ccm_sdumitriu> is now known as &lt;sdumitriu>
+17:52 &lt;akats> has quit
+21:47 &lt;Shubham> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140418</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f782af5c-26c4-477a-8c5e-aa2297412927</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

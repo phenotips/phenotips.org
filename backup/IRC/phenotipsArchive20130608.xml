@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130608</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1370697378000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1370734459000</date>
+  <contentUpdateDate>1370734459000</contentUpdateDate>
+  <version>1.10</version>
+  <title>IRC Archive for channel #phenotips on 08 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has quit
+09:28 &lt;krinye> has quit
+09:36 &lt;bvancea> has quit
+11:07 &lt;kushalkhandelwal> has joined #phenotips
+12:57 &lt;sdumitriu> Hey kushalkhandelwal
+12:57 &lt;sdumitriu> How's it going?
+13:51 &lt;kushalkhandelwal> has quit
+15:40 &lt;bvancea> has quit
+19:33 &lt;sdumitriu> has quit
+19:34 &lt;sdumitriu> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20130608</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>3cce4956-0e63-4081-a8e8-b678d5705f50</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140706</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1404661235000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1404692430000</date>
+  <contentUpdateDate>1404692430000</contentUpdateDate>
+  <version>1.17</version>
+  <title>IRC Archive for channel #phenotips on 06 July 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #phenotips
+12:04 &lt;akats> has joined #phenotips
+12:04 &lt;akats> sdumitriu: Tell me if you experience trouble with Gene Matcher's self signed certificate.
+12:07 &lt;sdumitriu1> I think we might
+12:08 &lt;sdumitriu1> Do you know how to disable cert validation? I can show you the code
+12:11 &lt;akats> No idea how to disable it
+12:12 &lt;akats> What I have found on the internet were two streams of thought
+12:12 &lt;akats> There was adding the certificate authority and java not coming with the right libraries by default
+12:13 &lt;akats> These http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
+12:19 &lt;akats> Maybe something like this? http://stackoverflow.com/questions/2703161/how-to-ignore-ssl-certificate-errors-in-apache-httpclient-4-0
+12:19 &lt;akats> Want me to try?
+12:32 &lt;sdumitriu1> akats: Yes, I think that's the one
+12:32 &lt;sdumitriu1> I have some code on a local branch
+12:32 &lt;sdumitriu1> I'll push it when I have a free minute
+12:33 &lt;akats> Ok.
+19:52 &lt;jim_> has quit
+20:20 &lt;akats> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140706</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>2f6b2737-0d7e-4e12-b910-892701a58741</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

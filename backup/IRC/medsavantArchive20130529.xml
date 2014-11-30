@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130529</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1369812006000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1369878620000</date>
+  <contentUpdateDate>1369878620000</contentUpdateDate>
+  <version>1.45</version>
+  <title>IRC Archive for channel #medsavant on 29 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;BogdanVancea1_> has joined #medsavant
+11:13 &lt;BogdanVancea> has joined #medsavant
+11:13 &lt;BogdanVancea> hello everyone :)
+11:14 &lt;sdumitriu> Hey BogdanVancea
+11:15 &lt;BogdanVancea> hey, sdumitriu? how are you?
+11:15 &lt;sdumitriu> Good, you?
+11:15 &lt;BogdanVancea> pretty good, just came back from school
+11:16 &lt;BogdanVancea> I need to check for new commits on Medsavant
+11:16 &lt;BogdanVancea> I can't seem to be able to run the client in a different ide than netbeans
+11:17 &lt;sdumitriu> I think it needs a MainClass entry
+11:17 &lt;sdumitriu> Plus the classpath
+11:17 &lt;BogdanVancea> are you using netbeans aswell?
+11:17 &lt;sdumitriu> No
+11:17 &lt;sdumitriu> Eclipse
+11:17 &lt;BogdanVancea> I've seen some .iml files
+11:18 &lt;sdumitriu> Those are Idea
+11:18 &lt;BogdanVancea> in the svn repo
+11:18 &lt;BogdanVancea> yeah, I'm also using idea
+11:18 &lt;sdumitriu> I've never tried it
+11:18 &lt;BogdanVancea> I've been converted from eclipse a few months ago
+11:18 &lt;BogdanVancea> has better suport for vcs (imo)
+11:19 &lt;BogdanVancea> and its a lot faster than eclipse on linux
+11:19 &lt;BogdanVancea> but its a matter of taste, in the end
+11:19 &lt;BogdanVancea> :)
+11:20 &lt;BogdanVancea> btw, would you like the scrum meetings to be more formal?
+11:20 &lt;BogdanVancea> as in, should I clearly state, yesterday I did x, tomorrow I'm doing y
+11:20 &lt;BogdanVancea> ?
+11:21 &lt;sdumitriu> No, they don't need to be formal
+11:21 &lt;sdumitriu> But it helps you to organize your ideas better
+11:21 &lt;BogdanVancea> okay
+11:22 &lt;BogdanVancea> well, they'll probably get more formal once I actually start coding
+11:22 &lt;BogdanVancea> sincer I'll probably encounter problems
+11:23 &lt;BogdanVancea> btw, can you recommend me some material for reading about dna, chromosomes, genomes, variants, etc?
+11:23 &lt;BogdanVancea> or is wikipedia fine?
+11:25 &lt;sdumitriu> Wikipedia should do fine for the moment
+11:25 &lt;sdumitriu> Let me see if I can get you something better
+11:26 &lt;BogdanVancea> okay
+11:38 &lt;sdumitriu> Nope, WP should do fine
+11:39 &lt;BogdanVancea> ok :)
+12:26 &lt;sdumitriu1> has joined #medsavant
+17:21 &lt;BogdanVancea> well, I'm going to bed
+17:21 &lt;BogdanVancea> good night
+17:21 &lt;BogdanVancea> :)
+17:58 &lt;sdumitriu> has joined #medsavant
+21:50 &lt;phenotips_org> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20130529</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>0f1e7674-65eb-48e6-bf42-c9d3b28f9f02</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

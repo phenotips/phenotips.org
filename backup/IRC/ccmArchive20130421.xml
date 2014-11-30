@@ -1,0 +1,574 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130421</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1366518449000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1366600444000</date>
+  <contentUpdateDate>1366600444000</contentUpdateDate>
+  <version>1.523</version>
+  <title>IRC Archive for channel #ccm on 21 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has joined #ccm
+00:59 &lt;ravigarg27> has joined #ccm
+02:54 &lt;anuja> has joined #ccm
+03:04 &lt;anuja> Hi marta
+03:30 &lt;ravigarg27> has joined #ccm
+03:32 &lt;kushalkhandelwal> has joined #ccm
+03:39 &lt;ravigarg27> has joined #ccm
+04:07 &lt;kushalkhandelwal> has joined #ccm
+04:46 &lt;kushalkhandelwal> has joined #ccm
+04:53 &lt;kushalkhandelwal> has joined #ccm
+05:00 &lt;kushalkhandelwal> has joined #ccm
+05:09 &lt;kushalkhandelwal> has joined #ccm
+05:13 &lt;kushalkhandelwal> has joined #ccm
+05:18 &lt;kushalkhandelwal> has joined #ccm
+05:25 &lt;camelia_> has joined #ccm
+05:27 &lt;kushalkhandelwal> has joined #ccm
+05:31 &lt;kushalkhandelwal> has joined #ccm
+05:36 &lt;kushalkhandelwal> has joined #ccm
+05:39 &lt;kushalkhandelwal> has joined #ccm
+05:43 &lt;kushalkhandelwal> has joined #ccm
+05:48 &lt;kushalkhandelwal> has joined #ccm
+05:52 &lt;kushalkhandelwal> has joined #ccm
+05:56 &lt;kushalkhandelwal> has joined #ccm
+05:59 &lt;kushalkhandelwal> hey marta
+06:01 &lt;kushalkhandelwal> has joined #ccm
+06:26 &lt;kushalkhandelwal> has joined #ccm
+06:51 &lt;qwebirc47023> has joined #ccm
+07:11 &lt;LAKHAN> has joined #ccm
+07:12 &lt;LAKHAN> can anyone tell me where should i post my idea for gsoc 2013??
+08:15 &lt;lakhan> has joined #ccm
+08:20 &lt;kushalkhandelwal> has joined #ccm
+08:25 &lt;kushalkhandelwal> lakhan, Talk to mentors ,they should be available tomorrow
+08:26 &lt;kushalkhandelwal> Decide on some idea
+08:26 &lt;lakhan> hello
+08:26 &lt;lakhan> ya tell me
+08:26 &lt;kushalkhandelwal> Decide on some idea
+08:26 &lt;kushalkhandelwal> And discuss it with mentors
+08:26 &lt;kushalkhandelwal> in the mean time go through phenotips.org/community
+08:27 &lt;kushalkhandelwal> There you would find some useful content
+08:27 &lt;kushalkhandelwal> download the source code
+08:27 &lt;kushalkhandelwal> and build it
+08:27 &lt;kushalkhandelwal> If you need help let me know would help you as much as I can
+08:27 &lt;kushalkhandelwal> or wait till tomorrow :)
+08:27 &lt;lakhan> okay
+08:27 &lt;lakhan> thnx for the help
+08:28 &lt;kushalkhandelwal> First step for GSOC should be downloading and understanding the current codebase
+08:28 &lt;lakhan> vl u  b available here all day??
+08:28 &lt;kushalkhandelwal> So do that
+08:28 &lt;kushalkhandelwal> Mostly
+08:28 &lt;lakhan> okay
+08:28 &lt;kushalkhandelwal> drop a message here
+08:28 &lt;lakhan> hw long r u working on the projects?
+08:28 &lt;kushalkhandelwal> As in ?
+08:29 &lt;lakhan> means hw many months or weeks??
+08:29 &lt;lakhan> i mean this project
+08:30 &lt;kushalkhandelwal> Not long
+08:30 &lt;kushalkhandelwal> 2 weeks
+08:31 &lt;lakhan> oh so you know the code
+08:31 &lt;kushalkhandelwal> Kind of not that much
+08:31 &lt;kushalkhandelwal> What languages do you use ?
+08:32 &lt;lakhan> tel me once i fork this what shld i do nxt
+08:32 &lt;lakhan> from the github?
+08:33 &lt;kushalkhandelwal> clone the code on your computer
+08:33 &lt;kushalkhandelwal> Have you used git before ?
+08:33 &lt;lakhan> yup
+08:35 &lt;kushalkhandelwal> Go through the build instructions
+08:35 &lt;kushalkhandelwal> And build the code
+08:35 &lt;kushalkhandelwal> Do you know Java ?
+08:35 &lt;sdumitriu> has joined #ccm
+08:36 &lt;kushalkhandelwal> sdumitriu, Good morning :)
+08:36 &lt;sdumitriu> Hi
+08:36 &lt;kushalkhandelwal> lakhan, in readme of github build instructions are given , try to build the code
+08:39 &lt;kushalkhandelwal> sdumitriu, Help me  I am stuck
+08:39 &lt;sdumitriu> OK, what's going on?
+08:40 &lt;kushalkhandelwal> #__displayIfNotEmpty('indication_for_referral') Calls the display and label function
+08:40 &lt;kushalkhandelwal> __label set the lable
+08:40 &lt;kushalkhandelwal> and __display() for the field
+08:40 &lt;kushalkhandelwal> ${doc.display($propName)} gives an input area i.e WYSIWYG box
+08:41 &lt;kushalkhandelwal> I cant figure that out why 2 instances being displayed
+08:41 &lt;sdumitriu> OK, here's what's wrong
+08:42 &lt;sdumitriu> Every call to $doc.display(textarea property) registers a WYSIWYG instance for that field
+08:42 &lt;sdumitriu> Even if the output of $doc.display isn't printed
+08:42 &lt;sdumitriu> Does that help?
+08:43 &lt;kushalkhandelwal> has joined #ccm
+08:44 &lt;kushalk124> has joined #ccm
+08:46 &lt;kushalkhandelwal> Ohh
+08:46 &lt;lakhan> has joined #ccm
+08:50 &lt;kushalkhandelwal> has joined #ccm
+08:51 &lt;kushalkhandelwal> sdumitriu,
+08:51 &lt;kushalkhandelwal> Now I get it
+08:52 &lt;kushalkhandelwal> So now it seems to be fixed
+08:53 &lt;lakhan> hello sir
+08:53 &lt;sdumitriu> Hi lakhan
+08:53 &lt;kushalkhandelwal> sdumitriu,  so this should be ok ? (% class="displayed-value"%)((( ${doc.display($propName)})))
+08:54 &lt;kushalkhandelwal> (% class="displayed-value"%)${doc.display($propName)}##
+08:54 &lt;lakhan> i wanted to work on a project :Mobile Web interface for PhenoTips
+08:55 &lt;sdumitriu> kushalkhandelwal: Nope, the #if must stay there, but the condition must be different
+08:57 &lt;lakhan> Sir i am new here
+08:58 &lt;kushalkhandelwal> Hmm
+08:58 &lt;lakhan> @sdumitriu:can you guide me what should i do?
+08:58 &lt;sdumitriu> lakhan: OK, I've read your email
+08:58 &lt;kushalkhandelwal> What case we are checking here ?
+08:59 &lt;sdumitriu> kushalkhandelwal: Same as __displayIfNotEmpty
+08:59 &lt;lakhan> sdumitriu:Thank you sir.
+08:59 &lt;sdumitriu> Don't call me sir
+08:59 &lt;lakhan> ok
+09:00 &lt;lakhan> the main thing is i was immobilized for past 4 months
+09:00 &lt;lakhan> and i just came across your project
+09:00 &lt;lakhan> and i would like to contibute in it
+09:01 &lt;sdumitriu> So, the first thing to do is to try and run the project
+09:01 &lt;sdumitriu> Get the sources, build, run, play with it
+09:01 &lt;lakhan> ok
+09:01 &lt;sdumitriu> So that you get a better idea of what PhenoTips does
+09:02 &lt;lakhan> I have forked the project from github
+09:02 &lt;sdumitriu> Then you have to start thinking about the project, like what do you think needs to be done, how, and how much time do you think that would take
+09:02 &lt;sdumitriu> Then start writing the application template
+09:03 &lt;kushalkhandelwal> So we keep the same condition in display
+09:03 &lt;sdumitriu> Since the student registration opens tomorrow, you'll be able to apply already, and mentors can give further feedback so that you can improve the application
+09:03 &lt;sdumitriu> kushalkhandelwal: Yes
+09:03 &lt;kushalkhandelwal> Check if we have the edit mode on
+09:03 &lt;kushalkhandelwal> as in action is edit
+09:03 &lt;kushalkhandelwal> else we display -
+09:04 &lt;kushalkhandelwal> Why does every call  register an instance of WYSIWYG ?
+09:04 &lt;sdumitriu> lakhan: To improve your chances of acceptance, you should stay on the IRC channel, and try to send a few pull requests
+09:04 &lt;sdumitriu> Like kushalkhandelwal is doing
+09:04 &lt;kushalkhandelwal> :)
+09:04 &lt;kushalkhandelwal> I guided him when you were not there
+09:05 &lt;kushalkhandelwal> lakhan, You tried building the source ?
+09:05 &lt;sdumitriu> Yes, helping others is also a +
+09:05 &lt;kushalkhandelwal> Yep , open source community :)
+09:05 &lt;kushalkhandelwal> helping each other is a must I say
+09:05 &lt;sdumitriu> Indeed
+09:06 &lt;lakhan> Kushalkhandelwal: Yes I have forked it and i will try to play around with it
+09:06 &lt;kushalkhandelwal> sdumitriu, Why does every call  register an instance of WYSIWYG ?
+09:06 &lt;lakhan> Sdumitriu: Okay,I will do as you said
+09:06 &lt;kushalkhandelwal> I went through the entire code today , case by case tried it
+09:07 &lt;kushalkhandelwal> Was able to deduce what calls what
+09:07 &lt;sdumitriu> kushalkhandelwal: Since the WYSIWYG is rich in JavaScript, while most other types of fields just output some HTML, displaying a WYSIWYG field registers that a WYSIWYG instance should be activated
+09:07 &lt;kushalk124> Ohh
+09:07 &lt;kushalkhandelwal> has joined #ccm
+09:08 &lt;sdumitriu> Breakfast time, ttyl
+09:09 &lt;kushalk124> Ok :) I will make a PR
+09:12 &lt;kushalkhandelwal> has joined #ccm
+09:23 &lt;kushalkhandelwal> has joined #ccm
+09:29 &lt;kushalkhandelwal> has joined #ccm
+09:33 &lt;kushalkhandelwal> has joined #ccm
+09:36 &lt;froggy> has joined #ccm
+09:37 &lt;kushalkhandelwal> has joined #ccm
+09:40 &lt;kushalkhandelwal> has joined #ccm
+09:46 &lt;kushalkhandelwal> has joined #ccm
+09:49 &lt;kushalkhandelwal> has joined #ccm
+10:00 &lt;lakhan> has left #ccm
+10:19 &lt;lakhan> has joined #ccm
+10:34 &lt;kushalk124> sdumitriu: there ?
+10:34 &lt;sdumitriu> Nope
+10:35 &lt;kushalk124> :P
+10:35 &lt;kushalk124> busy ?
+10:35 &lt;sdumitriu> I was just checking what the ---- looks like
+10:35 &lt;sdumitriu> It's good
+10:35 &lt;kushalk124> :)
+10:35 &lt;kushalk124> I was going through the code and the page
+10:35 &lt;kushalk124> it looked cluttered so
+10:35 &lt;kushalk124> a small fix
+10:36 &lt;sdumitriu> Yep
+10:36 &lt;sdumitriu> Anyway
+10:36 &lt;sdumitriu> You shouldn't mix different things in the same commit
+10:36 &lt;sdumitriu> Here's a trick:
+10:37 &lt;sdumitriu> git add --interactive
+10:37 &lt;kushalk124> A small fix so added in the same
+10:37 &lt;kushalk124> Hmm
+10:37 &lt;kushalk124> Would keep a note of that next time.
+10:38 &lt;sdumitriu> (try git add --interactive when you actually have changes
+10:38 &lt;kushalk124> if ("$!activeFields.contains('age_of_onset')" != 'false' Why we have this ?
+10:38 &lt;kushalk124> Next time would try it for sure
+10:41 &lt;sdumitriu> It's because we want to be able to customize which fields are enabled for each installation
+10:42 &lt;sdumitriu> Not every hospital/research project need all those fields
+10:42 &lt;kushalk124> Ohh
+10:42 &lt;kushalk124> So some field would be common
+10:43 &lt;kushalk124> Some would depend on hospital
+10:43 &lt;kushalk124> So indication_for_referral would be optional ?
+10:47 &lt;sdumitriu> Yes
+10:47 &lt;sdumitriu> Click on the Administration link on the top left menu
+10:48 &lt;sdumitriu> Then choose Database and form configuration from the left
+10:48 &lt;sdumitriu> Here's where you can disable fields
+10:49 &lt;sdumitriu> Another tip: you can write #{else}-#{end} if you don't want extra whitespace in there
+10:50 &lt;kushalk124> Hmm .. Ok
+10:51 &lt;kushalk124> I had to put a space over there
+10:52 &lt;kushalk124> Should i change it ?
+10:52 &lt;sdumitriu> Yes
+11:04 &lt;kushalk124> if ("$!activeFields.contains('indication_for_referral')" != 'false' also ?
+11:04 &lt;sdumitriu> Probably not, let's ask marta
+11:05 &lt;sdumitriu> She says yes
+11:05 &lt;sdumitriu> So, yes it is
+11:05 &lt;sdumitriu> But
+11:05 &lt;sdumitriu> Don't commit in the same pull request
+11:05 &lt;sdumitriu> That's a different issue
+11:07 &lt;kushalk124> Yes
+11:07 &lt;kushalk124> would open a  new issue for that
+11:18 &lt;kushalk124> Corrected white space error
+11:18 &lt;kushalk124> opened a new issue
+11:18 &lt;kushalk124> Is the commit fit to merge ?
+11:18 &lt;sdumitriu> Perfect
+11:19 &lt;kushalk124> Tell me one thing
+11:20 &lt;kushalk124> i should merge this issue in my local repo master before  the fix
+11:20 &lt;kushalk124> ?
+11:28 &lt;kushalk124> Sent PR
+11:28 &lt;kushalk124> sdumitriu:
+11:31 &lt;sdumitriu> kushalk124: Yes
+11:31 &lt;kushalk124> Opened a new issue
+11:32 &lt;kushalk124> and sent a PR for that
+11:32 &lt;kushalk124> I should have merged it ?
+11:35 &lt;sdumitriu> See my comment on the code
+11:35 &lt;kushalk124> Oops a mistake
+11:35 &lt;kushalk124> was copying the changes from repo
+11:35 &lt;kushalk124> Wait
+11:35 &lt;sdumitriu> Copying how?
+11:35 &lt;sdumitriu> You'll learn
+11:35 &lt;sdumitriu> That's what GSoC is about
+11:35 &lt;kushalk124> Copying as in
+11:36 &lt;kushalk124> edited on the WebUI
+11:36 &lt;kushalk124> and was putting in my editor
+11:36 &lt;kushalk124> Need to learn a lot
+11:36 &lt;kushalk124> I guess
+11:38 &lt;lakhan> has left #ccm
+11:46 &lt;kushalk124> Issue #390 ? That is done ?
+11:46 &lt;kushalk124> sdumitriu:
+12:13 &lt;sdumitriu> kushalk124: To merge upstream changes you need to do:
+12:13 &lt;sdumitriu> git remote add upstream https://github.com/compbio-UofT/phenotips.git
+12:13 &lt;sdumitriu> (only once, to register the upstream repo)
+12:13 &lt;sdumitriu> git pull --rebase upstream
+12:13 &lt;sdumitriu> (every time when there are changes upstream)
+12:15 &lt;sdumitriu> #390 I think is done
+12:15 &lt;sdumitriu> I'm supposed to check that nothing is broken, but with so many students it's hard to find time for actual work...
+12:16 &lt;sdumitriu> The other issues, I'm working on them
+12:17 &lt;kushalk124> So everytime i should rebase
+12:17 &lt;kushalk124> Ohh
+12:18 &lt;kushalk124> Will keep a track if I also find something broken
+12:18 &lt;kushalk124> Which issues ?
+12:18 &lt;sdumitriu> https://github.com/compbio-UofT/phenotips/issues?milestone=5&amp;state=open
+12:18 &lt;kushalk124> I was also looking at the milestone also
+12:19 &lt;sdumitriu> I was supposed to release it yesterday, but it's been a very busy week...
+12:19 &lt;kushalk124> Issue 375
+12:19 &lt;kushalk124> Distribution wizard ?
+12:19 &lt;sdumitriu> Hehe
+12:20 &lt;kushalk124> You done with the milestone ?
+12:20 &lt;sdumitriu> That's harder to fix since it requires changing stuff in XWiki
+12:20 &lt;sdumitriu> But I've fixed it locally, just have to push
+12:20 &lt;kushalk124> What is Distribution wizard ?
+12:20 &lt;kushalk124> Ohh nice :)
+12:20 &lt;sdumitriu> The distribution wizard is not something you should see often
+12:21 &lt;sdumitriu> It's triggered when upgrading between two stable versions
+12:21 &lt;sdumitriu> Like from 1.0-milestone-3 to 1.0-milestone-4
+12:21 &lt;kushalk124> Ohh
+12:22 &lt;sdumitriu> Since the application itself and the actual wiki content are in two different places, upgrade means:
+12:22 &lt;sdumitriu> 1. Upgrade the application files on the filesystem
+12:22 &lt;sdumitriu> 2. Upgrade the contents of the database
+12:23 &lt;sdumitriu> 2. is done by the distribution manager, which can do a 3-way merge between the previous version, the new version, and the actual file in the database
+12:24 &lt;kushalk124> Hmm
+12:24 &lt;kushalk124> Disribution manager is ?
+12:24 &lt;kushalk124> Maven ?
+12:24 &lt;sdumitriu> Nope
+12:24 &lt;sdumitriu> http://localhost:8080/bin/distribution/XWiki/Distribution?
+12:25 &lt;sdumitriu> But it's going to be broken on your instance, since you're not actually upgrading anything
+12:25 &lt;kushalk124> Yes it is broken
+12:37 &lt;sdumitriu> kushalk124: Did you start preparing the GSOC application?
+12:37 &lt;sdumitriu> Ah, I have a small issue
+12:37 &lt;kushalk124> I have to had made a rough draft before
+12:38 &lt;kushalk124> ?
+12:39 &lt;sdumitriu> https://github.com/compbio-UofT/phenotips/issues/397
+12:41 &lt;kushalk124> I was looking at this one also https://github.com/compbio-UofT/phenotips/issues/187
+12:49 &lt;sdumitriu> Oh, #187 is big
+12:50 &lt;sdumitriu> Some minor improvements are possible
+12:50 &lt;sdumitriu> But the whole issue could be a whole GSoC project
+12:50 &lt;sdumitriu> Actually that's a good idea, I'll propose it
+12:52 &lt;sdumitriu> Ah, actually I was confusing it with another issue
+12:52 &lt;sdumitriu> #187 is doable
+12:52 &lt;sdumitriu> But it's still quite a lot of work, around a week for a novice
+12:55 &lt;kushalk124> You were confusing with which idea ?
+12:55 &lt;kushalk124> *issue
+12:56 &lt;kushalk124> Can be done in parts
+12:56 &lt;kushalk124> In the meantime
+12:56 &lt;kushalk124> How would i edit the front page
+12:56 &lt;kushalk124> ?
+12:56 &lt;kushalk124> for issue 397
+12:57 &lt;sdumitriu> PhenoTips.DBWebHomeSheet
+12:57 &lt;kushalk124> How to figure it out ?
+12:58 &lt;sdumitriu> http://localhost:8080/bin/WebHome?viewer=code
+12:58 &lt;sdumitriu> I'm sorry, but the fact that we've hidden the developer interface makes it really hard to... develop
+12:59 &lt;sdumitriu> We have to improve this really soon
+12:59 &lt;kushalk124> Yep
+12:59 &lt;sdumitriu> Otherwise students will have a hard time doing stuff
+12:59 &lt;kushalk124> You will have a hard time dealing with my pings all the time :P
+13:00 &lt;sdumitriu> Confusing with https://github.com/compbio-UofT/phenotips/issues/190
+13:09 &lt;kushalk124> What does this do {{html wiki=false clean=false}}
+13:10 &lt;sdumitriu> It allows to embed HTML code in the output
+13:10 &lt;sdumitriu> Normally, any &lt; and > will be printed as-is
+13:10 &lt;sdumitriu> So if you want to have a &lt;form>, you need to wrap it in {{html}}...{{/html}}
+13:11 &lt;sdumitriu> Stuff in double curly brackets are macros
+13:11 &lt;sdumitriu> Like {{velocity}} which allows to execute Velocity code
+13:11 &lt;sdumitriu> Or {{warning}} which displays a warning
+13:11 &lt;sdumitriu> wiki=false means that the content doesn't contain any other wiki markup
+13:11 &lt;kushalk124> wiki=false clean=false
+13:11 &lt;kushalk124> ohh
+13:12 &lt;sdumitriu> So {{html wiki="true"}}This is &lt;strong>bold&lt;/strong>, and so is **this**{{/html}} will print two bolds
+13:12 &lt;sdumitriu> But {{html wiki="false"}}This is &lt;strong>bold&lt;/strong>, but **this** isn't{{/html}} will print only one, and actual **this** will be printed
+13:13 &lt;sdumitriu> clean controls whether the HTML code is cleaned or not
+13:13 &lt;sdumitriu> Meaning that you can write messy HTML inside, but the output will always be valid XHTML
+13:13 &lt;kushalk124> Ohh nice
+13:14 &lt;kushalk124> One more thing is it necessary to rebase
+13:14 &lt;sdumitriu> {{html clean="false"}}This &lt;b>is bold and &lt;i>italic&lt;/b>&lt;/i>{{/html}
+13:14 &lt;sdumitriu>  gets cleaned as
+13:14 &lt;sdumitriu> This &lt;strong> is bold and &lt;em>italic&lt;/em>&lt;/strong>
+13:14 &lt;kushalk124> becuase I am not able to do that with my network
+13:15 &lt;kushalk124> Oh nice so it cleans the misformatted ones
+13:15 &lt;sdumitriu> But this is costly, so if you know the content is valid, you can skip the cleaning part
+13:15 &lt;kushalk124> It costs in performance ?
+13:15 &lt;sdumitriu> It's not mandatory to rebase, but it's better
+13:15 &lt;sdumitriu> Yes, hurts performance
+13:22 &lt;camelia_> has joined #ccm
+13:27 &lt;kushalkhandelwal> has joined #ccm
+13:27 &lt;kushalkhandelwal> Sent PR
+13:27 &lt;kushalkhandelwal> sorry net issue
+13:28 &lt;kushalkhandelwal> sdumitriu,
+13:28 &lt;camelia_> hello, I  have a question regarding the data included in the phenotip and relevant to comparing patients, please: it contains only clinical symptoms or it is related to measurements as well?
+13:31 &lt;kushalkhandelwal> has joined #ccm
+13:32 &lt;kushalk124> has joined #ccm
+13:33 &lt;kushalkhandelwal> Hi camelia_
+13:35 &lt;kushalkhandelwal> has joined #ccm
+13:39 &lt;kushalkhandelwal> has joined #ccm
+13:40 &lt;sdumitriu&gt; has joined #ccm
+13:43 &lt;kushalkhandelwal> has joined #ccm
+13:43 &lt;camelia_> I guess it's only the clinical symptoms, because the measurements are somehow comprised in the "growth parameters" physical findings
+13:46 &lt;camelia_> so the "clinical symptoms &amp; physical findings" would be sufficient the comparison criteria among patients, plus age and sex. Are there any other criteria to be considered when establishing similar patients?
+13:47 &lt;kushalkhandelwal> has joined #ccm
+13:51 &lt;sdumitriu> Sorry, phone call
+13:51 &lt;kushalkhandelwal> has joined #ccm
+13:53 &lt;kushalk124> Ok :)
+13:53 &lt;sdumitriu> camelia_: Indeed, the measurements are not that relevant on their own, since they're going to be reflected in the phenotypes
+13:53 &lt;sdumitriu> But in the future we'll have more data to take into account
+13:54 &lt;sdumitriu> Temporal data is something that's going to be very important
+13:55 &lt;sdumitriu> We already have some basic support for that, provided by the onset in the phenotype details
+13:55 &lt;sdumitriu> In that direction, the age of the measurements would be important as well
+13:55 &lt;kushalkhandelwal> has joined #ccm
+13:56 &lt;camelia_> So the algorithms need to consider both three valued logic (True/False/Null) and numeric features
+13:56 &lt;sdumitriu> Yep
+13:59 &lt;kushalkhandelwal> has joined #ccm
+14:00 &lt;camelia_> the onset is numeric, what is its meaning?
+14:01 &lt;kushalk124> sdumitriu:  Checked the PR ?
+14:01 &lt;sdumitriu> camelia_: Are you sure it's numeric?
+14:03 &lt;sdumitriu> kushalk124: Doing it now
+14:03 &lt;kushalkhandelwal> has joined #ccm
+14:04 &lt;camelia_> let me check again
+14:04 &lt;camelia_> &lt;name>onset&lt;/name>       &lt;number>8&lt;/number>       &lt;numberType>integer&lt;/numberType>       &lt;prettyName>Onset&lt;/prettyName>
+14:05 &lt;sdumitriu> Ah, yes, that's not used actually
+14:05 &lt;sdumitriu> It's deprecated
+14:05 &lt;sdumitriu> It's the next one, age_of_onset
+14:06 &lt;camelia_> which is a Database List
+14:07 &lt;sdumitriu> It allows to choose between a few HPO terms related to onset
+14:07 &lt;kushalkhandelwal> has joined #ccm
+14:07 &lt;sdumitriu> If you edit a patient sheet and hover over each onset value, you'll see what they mean
+14:08 &lt;sdumitriu> kushalk124: Hehe, you needed two commits, again :)
+14:09 &lt;sdumitriu> Maybe next one will be better
+14:09 &lt;kushalk124> Ya i noticed that white space :P
+14:09 &lt;kushalk124> I was about to make a PR
+14:09 &lt;kushalk124> than i notices something is wrong
+14:09 &lt;kushalk124> :P
+14:09 &lt;kushalk124> so opened the demo page and saw the mistake
+14:09 &lt;kushalk124> Are you free ?
+14:09 &lt;sdumitriu> Yes
+14:10 &lt;lakhan> has joined #ccm
+14:11 &lt;kushalk124> So any other bug ?
+14:11 &lt;sdumitriu> kushalk124: Want another one?
+14:11 &lt;kushalkhandelwal> has joined #ccm
+14:12 &lt;kushalk124> Yep
+14:12 &lt;sdumitriu> K, creating it
+14:15 &lt;kushalk124> Creating it ? o.O
+14:16 &lt;kushalkhandelwal> has joined #ccm
+14:16 &lt;sdumitriu> https://github.com/compbio-UofT/phenotips/issues/399
+14:17 &lt;sdumitriu> Let me know when you need a hint
+14:19 &lt;camelia_> To check that I understood it right: each time a patient visits the doctor a new Patient class instance is created. All instances related to a specific patient share the same patient id. Then we have an evolution of the patient's phenotip and diagnosis in time, at different exam dates.
+14:20 &lt;kushalkhandelwal> has joined #ccm
+14:20 &lt;camelia_> Should we rely in diagnosis consistency in time, i.e. for the same one patient, if he/she had the same phenotip in subsequent visits, the diagnosis remained unaltered?
+14:21 &lt;sdumitriu> camelia_: We're not quite sure yet
+14:21 &lt;sdumitriu> Since the software is new, we don't have any repeat visits so far
+14:22 &lt;sdumitriu> But probably we're not going to create a new patient record, but branch a new visit for the same patient
+14:22 &lt;sdumitriu> We're recording the history of all changes done to the patient record
+14:22 &lt;kushalk124> Hey sdumitriu
+14:22 &lt;kushalk124> If you have time
+14:22 &lt;kushalk124> we can try new PR i sent
+14:23 &lt;sdumitriu> But this history is linear, and there aren't any tags that mark when a new visit occurs
+14:23 &lt;sdumitriu> This is something that will be improved in the future
+14:24 &lt;kushalkhandelwal> has joined #ccm
+14:28 &lt;kushalkhandelwal> has joined #ccm
+14:31 &lt;camelia_> So all symptoms the patient ever had are put together in  one Database List ?
+14:32 &lt;sdumitriu> Yes
+14:32 &lt;kushalkhandelwal> has joined #ccm
+14:36 &lt;kushalkhandelwal> has joined #ccm
+14:36 &lt;camelia_> And so are the diagnosis? I mean, if patient pac got diagnosis d1 and d2 on 1/04/2013 and then he went to another visit on 8/04/2013 and the doctor replaced diagnosis d2 with d3 for pac, then now pac has diagnosis d1 and d3 in the database.
+14:36 &lt;sdumitriu> Yes
+14:38 &lt;camelia_> so we're working with the last snapshot of the patient's data
+14:38 &lt;sdumitriu> Yes
+14:38 &lt;camelia_> ok, Thank You!
+14:40 &lt;kushalkhandelwal> has joined #ccm
+14:40 &lt;camelia_> Good evening and see You tomorrow!
+14:41 &lt;sdumitriu> Bye camelia_
+14:44 &lt;kushalkhandelwal> has joined #ccm
+14:48 &lt;kushalkhandelwal> has joined #ccm
+14:52 &lt;kushalkhandelwal> has joined #ccm
+14:57 &lt;kushalkhandelwal> has joined #ccm
+15:01 &lt;kushalkhandelwal> has joined #ccm
+15:02 &lt;vshivam> has joined #ccm
+15:05 &lt;vshivam> has joined #ccm
+15:05 &lt;kushalkhandelwal> has joined #ccm
+15:09 &lt;kushalkhandelwal> has joined #ccm
+15:09 &lt;vshivam> has joined #ccm
+15:13 &lt;vshivam> has joined #ccm
+15:13 &lt;kushalkhandelwal> has joined #ccm
+15:14 &lt;sdumitriu> Travis build timed out
+15:15 &lt;sdumitriu> Building PhenoTips for the first time takes a lot more than 10 minutes...
+15:17 &lt;vshivam> has joined #ccm
+15:17 &lt;kushalkhandelwal> has joined #ccm
+15:18 &lt;kushalk124> It didnt build
+15:18 &lt;kushalk124> ?
+15:18 &lt;kushalk124> Sorry was out
+15:19 &lt;kushalk124> I cant find it on travis site
+15:19 &lt;sdumitriu> https://travis-ci.org/compbio-UofT/phenotips/jobs/6518913
+15:20 &lt;kushalk124> Hmm
+15:21 &lt;kushalk124> They have this local maven mirror
+15:22 &lt;kushalk124> http://maven.mirrors.travis-ci.org/nexus/index.html
+15:22 &lt;vshivam> has joined #ccm
+15:22 &lt;kushalkhandelwal> has joined #ccm
+15:22 &lt;kushalk124> I think we have to configure it to use this
+15:22 &lt;kushalk124> For some repositories
+15:23 &lt;kushalk124&gt; Will raise a support ticket for this
+15:24 &lt;kushalk124> Can you join #travis
+15:26 &lt;vshivam> has joined #ccm
+15:26 &lt;kushalkhandelwal> has joined #ccm
+15:28 &lt;kushalk124> sdumitriu:  ?
+15:30 &lt;vshivam> has joined #ccm
+15:30 &lt;kushalkhandelwal> has joined #ccm
+15:31 &lt;sdumitriu> kushalk124: Ye
+15:31 &lt;sdumitriu> p
+15:33 &lt;kushalk124> He replied only once
+15:33 &lt;kushalk124> No support !
+15:33 &lt;kushalk124> Will try to tweak it somehow
+15:34 &lt;kushalk124> There should be a way
+15:34 &lt;kushalk124> How much time does it take on jenkins ?
+15:34 &lt;vshivam> has joined #ccm
+15:34 &lt;kushalkhandelwal> has joined #ccm
+15:34 &lt;sdumitriu> 16 minutes
+15:35 &lt;sdumitriu> But that's not the problem
+15:35 &lt;sdumitriu> The first part is "fetch all dependencies"
+15:35 &lt;sdumitriu> And they assume that it shouldn't take more than 10 minutes to do that
+15:35 &lt;sdumitriu> But we have a lot of dependencies, and a few big ones
+15:36 &lt;sdumitriu> So it's going to take a while
+15:36 &lt;kushalk124> Hmm
+15:36 &lt;sdumitriu> I'll try to commit that
+15:37 &lt;kushalk124> I opened a PR
+15:39 &lt;sdumitriu> K
+15:40 &lt;kushalk124> If build time out is 50 mins
+15:40 &lt;kushalk124> it should work
+15:40 &lt;vshivam> has joined #ccm
+15:40 &lt;kushalkhandelwal> has joined #ccm
+15:40 &lt;sdumitriu> Yeah, read that
+15:41 &lt;kushalk124> Lets try it
+15:41 &lt;sdumitriu> Waiting for the build result
+15:41 &lt;kushalk124> And I was reproducing the bug
+15:41 &lt;sdumitriu> It's nice that pull requests now have Travis integrated
+15:41 &lt;sdumitriu> I already see it building
+15:41 &lt;kushalk124> Yes thats the best part of travis
+15:41 &lt;sdumitriu> https://travis-ci.org/compbio-UofT/phenotips/jobs/6519947
+15:42 &lt;kushalk124> Without merge we can check :)
+15:44 &lt;vshivam> has joined #ccm
+15:44 &lt;kushalkhandelwal> has joined #ccm
+15:49 &lt;vshivam> has joined #ccm
+15:49 &lt;kushalkhandelwal> has joined #ccm
+15:51 &lt;kushalk124> It seems to be working fine now
+15:52 &lt;kushalk124> sdumitriu:
+15:52 &lt;kushalk124> What do you mean by homepage is read only ?
+15:52 &lt;kushalk124> for the bug
+15:52 &lt;sdumitriu> There are steps to reproduce
+15:53 &lt;kushalk124> That I reproduced
+15:53 &lt;sdumitriu> It means that normal users can't edit it
+15:53 &lt;sdumitriu> Only administrators
+15:54 &lt;kushalk124> If i remove the last commit  i.e $hasedit
+15:54 &lt;kushalk124> than it can
+15:54 &lt;kushalk124> normal users dont have edit allowed ?
+15:55 &lt;sdumitriu> They do y default
+15:55 &lt;sdumitriu> They do by default
+15:55 &lt;sdumitriu> Again, the normal interface is hidden
+15:56 &lt;sdumitriu> But they can access http://localhost:8080/bin/edit/data/WebHome
+15:56 &lt;kushalk124> I cant access after reproducing it
+16:00 &lt;vshivam> has joined #ccm
+16:00 &lt;kushalkhandelwal> has joined #ccm
+16:00 &lt;kushalk124> Build failed :\
+16:00 &lt;kushalk124> sdumitriu:
+16:02 &lt;kushalk124> We have some way out ?
+16:08 &lt;sdumitriu> kushalk124: You should /join #phenotips as well
+16:08 &lt;sdumitriu> I wonder why the IRC notifications don't work
+16:09 &lt;kushalk124> Hmm
+16:09 &lt;kushalk124> they should have worked
+16:11 &lt;kushalk124> We get jenkins build status on #phenotips ?
+16:11 &lt;sdumitriu> Jenkins, no, I didn't configure it
+16:11 &lt;sdumitriu> But that's a good idea, I should look into it
+16:12 &lt;sdumitriu> But anyway, that's where PhenoTips discussions should take place
+16:12 &lt;kushalk124> Ohh
+16:12 &lt;kushalk124> :P
+16:17 &lt;travis-ci> has joined #ccm
+16:17 &lt;travis-ci> [travis-ci] compbio-UofT/phenotips (master:33d8fb1 by Sergiu Dumitriu): The build has errored. (http://travis-ci.org/compbio-UofT/phenotips/builds/6520353)
+16:17 &lt;travis-ci> has left #ccm
+16:17 &lt;sdumitriu> There you go, we got a notification
+16:17 &lt;kushalk124> :)
+16:17 &lt;kushalk124> What was the error ?
+16:18 &lt;kushalk124> Why did it fail again ?
+16:19 &lt;sdumitriu> Ah, that's normal
+16:20 &lt;sdumitriu> It's on master, before the install: change
+16:22 &lt;travis-ci> [travis-ci] compbio-UofT/phenotips (master:bbcb6f1 by Sergiu Dumitriu): The build has errored. (http://travis-ci.org/compbio-UofT/phenotips/builds/6520541)
+16:25 &lt;kushalk124> Late night hunger pangs :D
+16:25 &lt;kushalk124> I need to find something to eat :P
+18:31 &lt;camelia_> has joined #ccm
+23:14 &lt;ravigarg27> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130421</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>3b5db486-30fb-4452-972f-a7f09dc33fe4</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

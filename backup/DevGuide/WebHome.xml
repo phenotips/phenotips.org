@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>DevGuide</web>
+  <name>WebHome</name>
+  <language />
+  <defaultLanguage>en</defaultLanguage>
+  <translation>0</translation>
+  <creator>XWiki.marta</creator>
+  <creationDate>1385200007000</creationDate>
+  <parent>PhenoTips.WebHome</parent>
+  <author>XWiki.marta</author>
+  <contentAuthor>XWiki.marta</contentAuthor>
+  <date>1415672363000</date>
+  <contentUpdateDate>1415672363000</contentUpdateDate>
+  <version>8.1</version>
+  <title>Developer Guide</title>
+  <comment />
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{warning}}This guide is a stub{{/warning}}&#xd;
+&#xd;
+PhenoTips is built on top of [[XWiki>>http://xwiki.org]], a professional java-based with enterprise features such as strong rights management, LDAP authentication, PDF export, full skinning, advanced Form and scripting engine. For information about XWiki development, please consult the [[XWiki Developer Documentation>>http://platform.xwiki.org/xwiki/bin/view/DevGuide/WebHome]].&#xd;
+&#xd;
+(% style="width: 48%; float: left"%)(((&#xd;
+=== Developer resources ===&#xd;
+&#xd;
+; {{icon name="code" size="large" /}} [[Source Repository>>SourceRepository]]&#xd;
+: //Find information on how to get the PhenoTips sources.//&#xd;
+&#xd;
+; {{icon name="cog" size="large" /}} [[Building from sources>>Building]]&#xd;
+: //Learn how to build PhenoTips directly from the sources.//&#xd;
+&#xd;
+; {{icon name="cogs" size="large" /}} [[Continuous build>>ContinuousBuild]]&#xd;
+: //Information about our continuous build.//&#xd;
+&#xd;
+; {{icon name="plus" size="large" /}} [[Contributing>>Contributing]]&#xd;
+: //Find out all the different manners in which you can contribute to the project.//&#xd;
+&#xd;
+; {{icon name="envelope" size="large" /}} [[Mailing Lists &amp; Forums>>Contact.Mailing Lists]]&#xd;
+: //Discuss with other users or developers.//&#xd;
+&#xd;
+; {{icon name="comments" size="large" /}} [[IRC>>Contact.IRC]]&#xd;
+: //Talk with other users or developers in real time.//&#xd;
+)))&#xd;
+&#xd;
+(% style="width: 48%; float: right"%)(((&#xd;
+=== Developing on top of PhenoTips ===&#xd;
+&#xd;
+; {{icon name="sitemap" size="large"/}} [[General architecture>>Architecture]]&#xd;
+: //Learn how PhenoTips is organized.//&#xd;
+&#xd;
+; {{icon name="database" size="large" /}} [[Accessing the data>>DataAccess]]&#xd;
+: //Learn how to access patient data, ontology data, etc from your own code.//&#xd;
+&#xd;
+; {{icon name="puzzle-piece" size="large" /}} [[Custom user interface components>>DevGuide.UIX]]&#xd;
+: //Add your own widgets in the PhenoTips UI.//&#xd;
+&#xd;
+; {{icon name="cog" size="large" /}} [[Custom server-side components>>DevGuide.Components]]&#xd;
+: //Write your own server-side components and services.//&#xd;
+&#xd;
+; {{icon name="book" size="large" /}} [[API Reference>>DevGuide.API]]&#xd;
+: //API Reference for the latest stable release.//&#xd;
+; {{icon name="file-text" size="large" /}} [[JSON Export>>DevGuide.JSONExport]]&#xd;
+: //Documentation of the JSON Export.//&#xd;
+)))(% class=clearfloats"%)((()))</content>
+</xwikidoc>

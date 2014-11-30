@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140127</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1390806281000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1390864275000</date>
+  <contentUpdateDate>1390864275000</contentUpdateDate>
+  <version>1.17</version>
+  <title>IRC Archive for channel #phenotips on 27 January 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has quit
+02:15 &lt;sdumitriu> has joined #phenotips
+02:49 &lt;werebutt> has joined #phenotips
+02:49 &lt;werebutt> has left #phenotips
+11:32 &lt;marta__> has joined #phenotips
+15:33 &lt;akats> has joined #phenotips
+15:39 &lt;sdumitriu1> akats: So you learned how to rebase a branch once its dependencies are pushed to master, right?
+15:46 &lt;akats> This one (#678) wasn't that easy. It didn't want to rebase itself on the central, so first I rebased it on top of issue #681, and then on top of phenotips/master.
+15:48 &lt;sdumitriu1> We should probably change your local master branch to reference the upstream master instead of your clone's master
+15:48 &lt;sdumitriu1> That should make things easier
+15:54 &lt;akats> As long as I keep my issue branches clean and rebase them often on top of the central repo, I should be fine I think.
+17:08 &lt;sdumitriu1> akats: Since GitHub doesn't notify when new commits are added to a pull request, can you let me know here when you commit stuff?
+17:09 &lt;akats> Ok. I will.
+17:55 &lt;akats> Made a commit. Also before I forget once again, today is the last day the email for getting my visitors badge has effect.
+17:56 &lt;sdumitriu1> OK
+17:57 &lt;akats> has quit
+18:11 &lt;marta__> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140127</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>2d39a188-bdab-4912-95bf-538a19bc129b</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

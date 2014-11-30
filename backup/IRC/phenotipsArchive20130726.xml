@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130726</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1374820501000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1374883898000</date>
+  <contentUpdateDate>1374883898000</contentUpdateDate>
+  <version>1.51</version>
+  <title>IRC Archive for channel #phenotips on 26 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;misko_> has quit
+03:22 &lt;misko_> has quit
+06:20 &lt;bvancea> has quit
+11:01 &lt;sdumitriu1> has joined #phenotips
+11:48 &lt;ravigarg27> has joined #phenotips
+11:50 &lt;ravigarg27> Hi sdumitriu1
+11:51 &lt;sdumitriu1> Hi ravigarg27
+11:53 &lt;ravigarg27> I mailed them today and got an early reply They have updated code in their svn trunk and are also planning to release 3.1 version of cTAKES soon
+11:53 &lt;ravigarg27> http://mail-archives.apache.org/mod_mbox/ctakes-user/201307.mbox/browser
+11:55 &lt;sdumitriu1> Great
+11:56 &lt;sdumitriu1> So they have other improvements coming
+11:56 &lt;ravigarg27> yeah, so what should I do now to integrate the library from trunk
+11:57 &lt;ravigarg27> I have actually never worked with svn
+11:57 &lt;ravigarg27> I have installed the subversion plugin though for eclipse
+11:58 &lt;ravigarg27> and understood I have to checkout the project, but I am not getting how to integrate that with phenotips
+11:59 &lt;sdumitriu1> I'd suggest using the 3.1 branch instead of trunk
+11:59 &lt;sdumitriu1> https://svn.apache.org/repos/asf/ctakes/branches/ctakes-3.1.0/
+11:59 &lt;sdumitriu1> svn checout https://svn.apache.org/repos/asf/ctakes/branches/ctakes-3.1.0/
+11:59 &lt;sdumitriu1> Then run
+11:59 &lt;sdumitriu1> mvn install
+12:00 &lt;sdumitriu1> And in the ctakes module in phenotips sources update the version to 3.1.0-SNAPSHOT
+12:03 &lt;ravigarg27> but wont it give an error since it is not on maven central
+12:03 &lt;sdumitriu1> No
+12:03 &lt;sdumitriu1> It's going to find it in the local repository
+12:03 &lt;sdumitriu1> That's where maven looks first, always
+12:04 &lt;ravigarg27> ohh okay
+12:04 &lt;ravigarg27> great
+12:04 &lt;sdumitriu1> But it will fail if somebody else wants to build without building ctakes first
+12:04 &lt;sdumitriu1> So the code can't be integrated until 3.1.0 is released
+12:05 &lt;ravigarg27> yeah hoping they release it soon
+12:31 &lt;ravigarg27> has quit
+12:45 &lt;bvancea> has quit
+12:46 &lt;bvancea_> is now known as &lt;bvancea>
+13:07 &lt;sdumitriu1> has quit
+13:29 &lt;bvancea> has quit
+13:41 &lt;sdumitriu1> has joined #phenotips
+13:49 &lt;sdumitriu1> has quit
+14:14 &lt;sdumitriu1> has joined #phenotips
+14:21 &lt;sdumitriu1> has quit
+14:26 &lt;sdumitriu1> has joined #phenotips
+14:37 &lt;sdumitriu1> has quit
+14:52 &lt;sdumitriu1> has joined #phenotips
+14:57 &lt;sdumitriu1> has quit
+15:01 &lt;sdumitriu1> has joined #phenotips
+17:34 &lt;bvancea> has quit
+18:02 &lt;marta> has quit
+18:02 &lt;marta> has joined #phenotips
+19:07 &lt;phenotips_org> has joined #phenotips
+19:10 &lt;sdumitriu1> has quit
+20:09 &lt;sdumitriu> has quit
+20:11 &lt;sdumitriu> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20130726</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>3ca073f2-61cd-46f3-b5e8-3b2022afed15</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

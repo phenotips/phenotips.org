@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130513</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1368418142000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1368500338000</date>
+  <contentUpdateDate>1368500338000</contentUpdateDate>
+  <version>1.313</version>
+  <title>IRC Archive for channel #phenotips on 13 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has quit
+00:18 &lt;kushalkhandelwal> has joined #phenotips
+03:20 &lt;kushalkhandelwal> has quit
+04:21 &lt;sdumitriu> has quit
+04:23 &lt;sdumitriu> has joined #phenotips
+08:39 &lt;sdumitriu1> has joined #phenotips
+08:43 &lt;sdumitriu> has quit
+10:24 &lt;kushalkhandelwal> has joined #phenotips
+11:06 &lt;kushalkhandelwal> has quit
+11:20 &lt;sdumitriu> has joined #phenotips
+12:59 &lt;kushalkhandelwal> has joined #phenotips
+13:04 &lt;kushalkhandelwal>  Hey sdumitriu1
+13:04 &lt;kushalkhandelwal> Need to fix net at my place :(
+13:04 &lt;kushalkhandelwal> Some issues with network today
+13:11 &lt;sdumitriu> has quit
+13:14 &lt;sdumitriu> has joined #phenotips
+13:15 &lt;sdumitriu> Hm, issues with my network as well
+13:15 &lt;sdumitriu> So, kushalkhandelwal, what are you up to?
+13:16 &lt;kushalkhandelwal> Was without connectivity
+13:16 &lt;kushalkhandelwal> Trying to figure out alternative ways
+13:16 &lt;kushalkhandelwal> Would work on Xwiki issue
+13:16 &lt;kushalkhandelwal> and issue 429 phenotips
+13:18 &lt;sdumitriu> Building XWiki requires some changes to make Maven work properly: http://dev.xwiki.org/xwiki/bin/view/Community/Building
+13:18 &lt;kushalkhandelwal> Reading this http://dev.xwiki.org/xwiki/bin/view/Community/Contributing
+13:18 &lt;kushalkhandelwal> Oh ok
+13:18 &lt;kushalkhandelwal> would follow this
+13:19 &lt;kushalkhandelwal> I have maven 3.0.4 on my system
+13:35 &lt;kushalk124> has joined #phenotips
+13:35 &lt;kushalk124> Hey
+13:35 &lt;kushalk124> My network :x
+13:36 &lt;kushalkhandelwal> has quit
+13:38 &lt;sdumitriu1> has quit
+13:39 &lt;sdumitriu1> has joined #phenotips
+14:05 &lt;kushalk124&gt; has quit
+14:22 &lt;kushalk124> has joined #phenotips
+14:23 &lt;kushalk124> is now known as &lt;Guest46993>
+14:30 &lt;Guest46993> has quit
+15:35 &lt;kushalkhandelwal> has joined #phenotips
+15:35 &lt;kushalkhandelwal> Hey sdumitriu
+15:35 &lt;sdumitriu> Hey
+15:35 &lt;kushalkhandelwal> Network problems today :x
+15:36 &lt;kushalkhandelwal> How was your meeting ?
+15:36 &lt;kushalkhandelwal> And how are the new interns ?
+15:36 &lt;sdumitriu> Good
+15:37 &lt;kushalkhandelwal> :)
+15:37 &lt;kushalkhandelwal> So working on something today ? Busy ?
+15:38 &lt;sdumitriu> Well, I'm always busy
+15:38 &lt;sdumitriu> But I can make time for you
+15:38 &lt;kushalkhandelwal> :D
+15:39 &lt;kushalkhandelwal> My network ! not letting me work
+15:39 &lt;kushalkhandelwal> Planning to switch it
+15:39 &lt;kushalkhandelwal> Actually I am having 2 connections at home , and now I have to use WiFi which somehow is not working properly
+15:39 &lt;kushalkhandelwal> Anyways I was looking at this
+15:39 &lt;kushalkhandelwal> https://github.com/compbio-UofT/phenotips/issues/429
+15:40 &lt;sdumitriu> Stuck?
+15:41 &lt;kushalkhandelwal> In DBWebhomesheet
+15:41 &lt;kushalkhandelwal> "className"         : $patientClassName,
+15:41 &lt;kushalkhandelwal> "translationPrefix" : "patient.livetable."
+15:41 &lt;kushalkhandelwal> I can see this
+15:41 &lt;kushalkhandelwal> patient.livetable is appended in front of all column names
+15:41 &lt;sdumitriu> Yep
+15:42 &lt;sdumitriu> Did you find where the translations are defined?
+15:42 &lt;kushalkhandelwal> Looking for that
+15:42 &lt;kushalkhandelwal> http://localhost:8080/bin/edit/PhenoTips/LiveTableResults
+15:42 &lt;kushalkhandelwal> Looking at this
+15:42 &lt;sdumitriu> Well, it's simple
+15:43 &lt;sdumitriu> Just search for patient.livetable. on the filesystem
+15:43 &lt;kushalkhandelwal> How do I search that ?
+15:43 &lt;kushalkhandelwal> Oh yes
+15:43 &lt;kushalkhandelwal> I had to ask
+15:43 &lt;kushalkhandelwal> how to search
+15:43 &lt;kushalkhandelwal> I look for different files and look in them
+15:43 &lt;sdumitriu> You're on Linux, right?
+15:43 &lt;kushalkhandelwal> Yep
+15:44 &lt;kushalkhandelwal> I used to do that on github
+15:44 &lt;kushalkhandelwal> is there a way in XWiki to search ?
+15:44 &lt;sdumitriu> Yep
+15:44 &lt;sdumitriu> http://localhost:8080/bin/Main/Search
+15:45 &lt;sdumitriu> I use a nice little tool called Midnight Commander (mc)
+15:45 &lt;sdumitriu> And it has the option to search files and look in the content
+15:45 &lt;kushalkhandelwal> Oh nice
+15:48 &lt;sdumitriu> Found something?
+15:48 &lt;kushalkhandelwal> Yes
+15:48 &lt;kushalkhandelwal> I am looking in the translations page
+15:49 &lt;sdumitriu> Good
+15:51 &lt;kushalkhandelwal> I need to define the ones which are not defined ?
+15:51 &lt;sdumitriu> Yep
+15:51 &lt;sdumitriu> You can usually get the texts from the class
+15:52 &lt;sdumitriu> http://localhost:8080/bin/edit/PhenoTips/PatientClass?editor=class
+15:52 &lt;sdumitriu> Not all of them should be added, though
+15:52 &lt;kushalkhandelwal> Oh
+15:52 &lt;kushalkhandelwal> So which ones to be added ?
+15:54 &lt;sdumitriu> The ones that would make sense in the livetable...
+15:54 &lt;kushalkhandelwal> Hm
+15:54 &lt;kushalkhandelwal> Ok
+15:54 &lt;kushalkhandelwal> :)
+15:54 &lt;sdumitriu> For example Notes not
+15:54 &lt;sdumitriu> Pedigree not
+15:54 &lt;sdumitriu> All the extended_ columns
+15:54 &lt;kushalkhandelwal> Why there are two identifier ?
+15:54 &lt;sdumitriu> Indication for referral
+15:55 &lt;sdumitriu> One is internal, the other external
+15:55 &lt;sdumitriu> It depends which one is needed at the installation
+15:55 &lt;sdumitriu> Some already have their patients in another application
+15:56 &lt;sdumitriu> So they use an external identifier that we don't care about
+15:56 &lt;kushalkhandelwal> Ohh
+15:56 &lt;sdumitriu> Others use PhenoTips as the main patient database, so they use the internal identifier
+15:57 &lt;kushalkhandelwal> Why don't we remove the irrelevant colums from Form configuration page
+15:57 &lt;kushalkhandelwal> for livetable
+15:57 &lt;kushalkhandelwal> Oh
+15:57 &lt;sdumitriu> Hm, we should, but it's not easy
+15:57 &lt;sdumitriu> Since it just lists all the existing class properties
+15:57 &lt;sdumitriu> And there's no way to specify that a property is searchable or not
+15:58 &lt;kushalkhandelwal> Hmm
+16:00 &lt;kushalkhandelwal> Do you remember that place
+16:00 &lt;kushalkhandelwal> where I added one field to be enabled/disabled ?
+16:00 &lt;kushalkhandelwal> This commit
+16:00 &lt;kushalkhandelwal> https://github.com/compbio-UofT/phenotips/commit/afb62d6383361f991d12aea265de3fae4e63a049
+16:01 &lt;sdumitriu> Yep
+16:01 &lt;kushalkhandelwal> Using this we enabled/disabled field in form ?
+16:02 &lt;kushalkhandelwal> The option was available in the form configuration ?
+16:02 &lt;kushalkhandelwal> Now I remember it was
+16:02 &lt;sdumitriu> Yes, it was
+16:03 &lt;kushalkhandelwal> I am thinking how to remove the irrelevant columns
+16:03 &lt;kushalkhandelwal> Will think more on this
+16:03 &lt;kushalkhandelwal> Because for the administrator everything is very cluttered
+16:04 &lt;kushalkhandelwal> Which page would contain the code for Form configuration page ?
+16:05 &lt;sdumitriu> Hm, hard to say...
+16:05 &lt;sdumitriu> Most of the code is in XWiki.AdminSheet
+16:05 &lt;kushalkhandelwal> Hmm
+16:05 &lt;kushalkhandelwal> So it just runs a loop to display the columns ?
+16:05 &lt;sdumitriu> But the display for those properties is in PhenoTips.DBConfigurationClassDisplayer
+16:06 &lt;sdumitriu> Yes
+16:06 &lt;kushalkhandelwal> And how to use MC ? :P
+16:06 &lt;sdumitriu> Did you install it?
+16:06 &lt;kushalkhandelwal> Yep
+16:06 &lt;sdumitriu> Type mc
+16:06 &lt;kushalkhandelwal> Did that
+16:06 &lt;kushalkhandelwal> looking in it
+16:06 &lt;kushalkhandelwal> File explorer
+16:06 &lt;sdumitriu> Look in the menus
+16:07 &lt;sdumitriu> Comman -> Find file
+16:07 &lt;sdumitriu> I know the key shortcuts, so I don't really know where to find things in the menu...
+16:07 &lt;kushalkhandelwal> Hehe
+16:07 &lt;kushalkhandelwal> I would learn them :)
+16:08 &lt;sdumitriu> Plus, if you're on Ubuntu, I think their console application steals some important keys, like F10
+16:08 &lt;sdumitriu> Alt+Shift+? opens the search dialog
+16:08 &lt;kushalkhandelwal> I am on Ubuntu
+16:08 &lt;sdumitriu> And you can filter by file name and file content
+16:08 &lt;kushalkhandelwal> Which OS you use ?
+16:08 &lt;sdumitriu> Gentoo
+16:09 &lt;kushalkhandelwal> Oh
+16:09 &lt;kushalkhandelwal> Never used it
+16:09 &lt;sdumitriu> With KDE
+16:09 &lt;kushalkhandelwal> Installing it was such a pain when I tried last year :P
+16:10 &lt;sdumitriu> What, Gentoo?
+16:10 &lt;sdumitriu> Or KDE?
+16:10 &lt;kushalkhandelwal> My laptops just boils on Linux
+16:10 &lt;kushalkhandelwal> Gentoo
+16:10 &lt;kushalkhandelwal> There were some issues
+16:10 &lt;kushalkhandelwal> The only reason we use Ubuntu is
+16:10 &lt;kushalkhandelwal> We have a mirror of the repo
+16:11 &lt;kushalkhandelwal> A local mirror
+16:11 &lt;kushalkhandelwal> so installing and upgrading packages becomes easier
+16:11 &lt;kushalkhandelwal> with our net
+16:11 &lt;sdumitriu> Yeah, you need to know more about how a Linux OS works to be able to install Gentoo
+16:11 &lt;sdumitriu> Yet they have the best documentation I've seen
+16:11 &lt;kushalkhandelwal> Hmm
+16:12 &lt;kushalkhandelwal> Would try it someday
+16:12 &lt;kushalkhandelwal> Any idea how can I control over heating of my laptop ??
+16:12 &lt;sdumitriu> Ubuntu's is mostly a bunch of kids asking random question on a dozen or more forums
+16:12 &lt;kushalkhandelwal> I agree
+16:13 &lt;kushalkhandelwal> But then it gets easier because of that
+16:13 &lt;kushalkhandelwal> Community support is good
+16:13 &lt;sdumitriu> Since Gentoo requires some knowledge, most of the users are more advanced and organized, and can formulate a good question and a good answer
+16:13 &lt;kushalkhandelwal> Although the way they are commercializing it is sad
+16:13 &lt;kushalkhandelwal> I did install Arch once
+16:13 &lt;kushalkhandelwal> I liked it
+16:15 &lt;kushalkhandelwal> in MC where it shows the results ?
+16:19 &lt;kushalkhandelwal> It is 4 at your place temp 11 degree
+16:19 &lt;kushalkhandelwal>  It is 1 AM at my place temp 29 degree :\
+16:20 &lt;kushalkhandelwal> Now I think even nights are hot
+16:45 &lt;sdumitriu> 1AM, and still up?
+16:46 &lt;sdumitriu> More like 2:30 now
+18:06 &lt;sdumitriu> has quit
+19:05 &lt;kushalkhandelwal> has quit
+19:20 &lt;sdumitriu1> has quit
+19:21 &lt;sdumitriu> has joined #phenotips
+21:38 &lt;kushalkhandelwal> has joined #phenotips
+21:38 &lt;kushalkhandelwal> is now known as &lt;Guest24849>
+21:39 &lt;Guest24849> is now known as &lt;kushalk124>
+21:39 &lt;kushalk124> clear
+21:39 &lt;kushalk124> Hey sdumitriu
+21:39 &lt;sdumitriu> Hey
+21:39 &lt;sdumitriu> Up already?
+21:40 &lt;sdumitriu> Good morning
+21:40 &lt;kushalk124> Yes
+21:40 &lt;kushalk124> Good morning
+21:40 &lt;kushalk124> My mom thought I slept early so she woke me up
+21:41 &lt;kushalk124> What you upto ?
+21:41 &lt;kushalk124> Working on something ?
+21:41 &lt;sdumitriu> Scoring GSoC proposals
+21:41 &lt;sdumitriu> Got the email?
+21:42 &lt;kushalk124> Yes
+21:42 &lt;kushalk124> Reading it :)
+21:42 &lt;kushalk124> Just saw that
+21:44 &lt;kushalk124> Is tuesday a hard deadline ?
+21:44 &lt;sdumitriu> Nope
+21:45 &lt;kushalk124> As I am not available from 16th to 20
+21:45 &lt;kushalk124> I would start working today only
+21:46 &lt;kushalk124> Yayy new task :)
+21:50 &lt;kushalk124> How are all the proposals ?
+21:50 &lt;kushalk124> And you didn't tell me about the new interns
+21:52 &lt;sdumitriu> Well, there are about 10 proposals that we'd like to accept, but we're lacking the slots and the mentors to do that
+21:53 &lt;sdumitriu> There are 8 that are really good
+21:53 &lt;sdumitriu> 6 that we
+21:53 &lt;sdumitriu> 'd really want to accept
+21:53 &lt;kushalk124> :)
+21:54 &lt;sdumitriu> 4 that I think are really important
+21:54 &lt;sdumitriu> Or 5?
+21:54 &lt;kushalk124> Ohh
+21:54 &lt;sdumitriu> Yes, 5
+21:54 &lt;sdumitriu> And that have good chances of success
+21:54 &lt;kushalk124> The important ones are ?
+21:54 &lt;kushalk124> I think one would be mobile app
+21:54 &lt;sdumitriu> Secret
+21:54 &lt;kushalk124> hehe :D
+21:55 &lt;sdumitriu> Now we'll see which of these 5 finish their tasks
+21:55 &lt;kushalk124> Ohh
+21:56 &lt;kushalk124> Task is very imp
+21:56 &lt;kushalk124> I will try to work in 2 days only , from 16th I wont be having laptop also :(
+22:28 &lt;kushalk124> sdumitriu, Busy ?
+22:29 &lt;sdumitriu> Shoot
+22:30 &lt;kushalk124> So in the measurement section we would have a dropbox to select the unit system ?
+22:30 &lt;sdumitriu> Yes
+22:30 &lt;sdumitriu> Or radios
+22:30 &lt;kushalk124> If imperial selected we would change the field inputs along with the labels ?
+22:31 &lt;kushalk124> But the value to server would pe passed in Imperial only ?
+22:31 &lt;sdumitriu> No, metric only
+22:31 &lt;kushalk124> So if we pass that in metric
+22:31 &lt;kushalk124> But the user chose imperial
+22:32 &lt;kushalk124> When he would export PDF
+22:32 &lt;kushalk124> then ?
+22:32 &lt;kushalk124> Would it be in imperial or metric ?
+22:32 &lt;sdumitriu> Imperial, but don't worry about that
+22:32 &lt;sdumitriu> That's a different task
+22:32 &lt;kushalk124> I was just thinking about that :)
+22:32 &lt;sdumitriu> And there are a few other related tasks
+22:32 &lt;kushalk124> Ok
+22:33 &lt;sdumitriu> But the most important one is allowing users to enter data in those units
+22:33 &lt;kushalk124> Yep
+22:34 &lt;sdumitriu> (actually doctors don't care about imperial units, it's just that they receive old measurements from smaller regional hospitals that don't know metric, but they don't want to convert themselves to metric)
+22:35 &lt;sdumitriu> (so it's OK if after the data is entered and converted to metric, it will only be displayed as metric from that point on)
+22:35 &lt;sdumitriu> When we'll get users asking for imperial display, we might add support for that as well
+22:36 &lt;sdumitriu> But don't take this the wrong way, it's very good that you're thinking about this
+22:36 &lt;sdumitriu> A good software engineer should always think about all the implications of a choice
+22:41 &lt;kushalk124> :)
+22:42 &lt;kushalk124> I was thinking what other changes needs to be implemented if we switch to imperial
+22:42 &lt;sdumitriu> has quit
+22:42 &lt;sdumitriu> has joined #phenotips
+22:42 &lt;kushalk124> I wanted to ask one more thing
+22:43 &lt;kushalk124> Not related to this task
+22:43 &lt;sdumitriu> Shoot
+22:44 &lt;kushalk124> How is the anonymized patient phenotype data collected ?
+22:44 &lt;sdumitriu> Simple
+22:45 &lt;kushalk124> And how is the data used ?
+22:45 &lt;sdumitriu> Right now big hospitals already have a huge EHR software package where they securely hold private data
+22:46 &lt;sdumitriu> Then they use phenotips as a side project where they don't enter any PII (Personally identifiable information), just phenotypes
+22:47 &lt;sdumitriu> And they use the "external identifier" field that we talked about to say which patient from the private EHR is described here
+22:47 &lt;kushalk124> Oh
+22:47 &lt;sdumitriu> Then this data can be shared between research institutions, since it's just abstract data which can't be used to identify individuals
+22:48 &lt;kushalk124> In UofT lab this data is used for research ? To study about genetic diseases ?
+22:48 &lt;kushalk124> How is that done ?
+22:48 &lt;sdumitriu> The main kind of usage that we see for PhenoTips right now is for large collaborative studies for identifying rare diseases
+22:49 &lt;sdumitriu> And we mean rare
+22:49 &lt;sdumitriu> Like, one-two cases per country
+22:49 &lt;kushalk124> I have a great interest in how ML and ANN can be used in medicinal purposes
+22:49 &lt;kushalk124> As in I have a good interest in Data
+22:49 &lt;sdumitriu> When you have so few people with a disease, there's very little that one doctor can do
+22:49 &lt;kushalk124> how it can utilized to gather some useful information
+22:49 &lt;kushalk124> Yep
+22:50 &lt;sdumitriu> But when pooling together resources from different countries, it's more likely to be able to pinpoint the genetic mutations that affect all the individuals
+22:50 &lt;kushalk124> Rare diseases
+22:50 &lt;kushalk124> and mutations
+22:51 &lt;sdumitriu> The problem is that there is no such thing as a "standard" genome
+22:51 &lt;sdumitriu> Everybody has many variations
+22:51 &lt;sdumitriu> And we haven't analyzed enough genomes to see what is good and what is bad
+22:52 &lt;sdumitriu> So it's almost impossible to say just from one individual which of the thousands of differences from the few reference genomes that we have is the likely cause for some symptoms
+22:53 &lt;kushalk124> Yep you need more data on that
+22:53 &lt;kushalk124> To be more accurate you need more data
+22:53 &lt;sdumitriu> Right
+22:53 &lt;kushalk124> and hence PhenoTips
+22:53 &lt;sdumitriu> Once you have good data, you can put different teams to work on it
+22:54 &lt;sdumitriu> A team in our lab is studying "copy number variations"
+22:54 &lt;sdumitriu> That means that the DNA is not just a unique chain, it's normal for many regions to be present in several copies
+22:55 &lt;sdumitriu> And having more or less copies than it's "normal" affects the body
+22:55 &lt;sdumitriu> The problem is that with the current sequencing machines it's hard to detect CNVs
+22:55 &lt;sdumitriu> Since sequencing is already done by multiplying thousands of times each piece of DNA
+22:56 &lt;kushalk124> Hm
+22:56 &lt;kushalk124> Yes , you have to replicate data
+22:57 &lt;sdumitriu> OK, I'm going to sleep
+22:57 &lt;sdumitriu> How's the progress on the translations issue?
+22:57 &lt;kushalk124> So we detect the variations ?
+22:57 &lt;kushalk124> Oh ok :)
+22:58 &lt;kushalk124> Will complete it today
+22:58 &lt;kushalk124> I slept yesterday while working on it :P
+22:58 &lt;kushalk124> At home it gets hard to be awake :D
+22:58 &lt;sdumitriu> K
+22:58 &lt;sdumitriu> Bye
+22:58 &lt;kushalk124> 1 more week at home
+22:58 &lt;kushalk124> Ok
+22:58 &lt;kushalk124> Bye
+22:58 &lt;kushalk124> Good night :)</content>
+  <object>
+    <name>IRC.phenotipsArchive20130513</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>49d82656-af2b-4cdb-8760-60063c283726</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

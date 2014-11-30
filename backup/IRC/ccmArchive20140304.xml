@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140304</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1393910009000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1393995526000</date>
+  <contentUpdateDate>1393995526000</contentUpdateDate>
+  <version>1.62</version>
+  <title>IRC Archive for channel #ccm on 04 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;puneet> has joined #ccm
+00:14 &lt;puneet> hi, i am interested in doing machine learning project on modeling of evolution of tumors. Can someone please provide more information.
+00:26 &lt;puneet> hello, anyone there?
+01:21 &lt;raghav> has joined #ccm
+01:34 &lt;IonelPopescu> has joined #ccm
+01:44 &lt;SayAsh> has joined #ccm
+02:21 &lt;nileshc> has joined #ccm
+02:29 &lt;IonelPopescu> has joined #ccm
+05:25 &lt;IonelPopescu> has joined #ccm
+06:46 &lt;SayAsh> has joined #ccm
+08:13 &lt;Ravneet> has joined #ccm
+08:40 &lt;pradeeban> has joined #ccm
+09:12 &lt;akif500> has joined #ccm
+09:48 &lt;IonelPopescu> has joined #ccm
+11:08 &lt;IonelPopescu> has joined #ccm
+11:29 &lt;pradeeban1> has joined #ccm
+11:30 &lt;sdumitriu> Hi Ravneet
+11:30 &lt;sdumitriu> Did you solve that build problem?
+11:30 &lt;Ravneet> no...its still there
+11:30 &lt;pradeeban2> has joined #ccm
+11:31 &lt;sdumitriu> The error is: Unknown host proxy.iiit.ac.in
+11:31 &lt;sdumitriu> Are you using a proxy?
+11:31 &lt;Ravneet> ya...i'm behind a college proxy
+11:32 &lt;sdumitriu> That "unknown host" is weird...
+11:32 &lt;sdumitriu&gt; Can you ping it?
+11:33 &lt;Ravneet> i made the changes required for the proxy thing as mentioned in the getting started steps...
+11:33 &lt;Ravneet> ya i can ping it
+11:34 &lt;pradeeban> has joined #ccm
+11:35 &lt;sdumitriu> Are you on Linux?
+11:35 &lt;Ravneet> ya
+11:35 &lt;sdumitriu> OK, then let's help Java resolve this host
+11:35 &lt;sdumitriu> edit /etc/hosts and add the IP and the domain name on a new line
+11:36 &lt;sdumitriu> Then try to build again
+11:38 &lt;Ravneet> which IP and domain name?
+11:38 &lt;pradeeban1> has joined #ccm
+11:38 &lt;sdumitriu> Of the proxy.iiit.ac.in
+11:39 &lt;sdumitriu> So when you ping it, it should print the actual IP
+11:40 &lt;sdumitriu> PING proxy.iiit.ac.in (AAA.BBB.CCC.DDD)
+11:40 &lt;sdumitriu> Then add:
+11:40 &lt;sdumitriu> AAA.BBB.CCC.DDD proxy.iiit.ac.in
+11:40 &lt;sdumitriu> (use the actual IP printed)
+11:40 &lt;Ravneet> cool...got it
+11:40 &lt;Ravneet> so then the Java ppl will look into it?
+11:41 &lt;Ravneet> i'll try and build it again...and will let you know
+11:41 &lt;Ravneet> thanks
+11:44 &lt;puneet_> has joined #ccm
+11:57 &lt;pradeeban> has joined #ccm
+12:47 &lt;reid_a> has joined #ccm
+13:11 &lt;sdumitriu> Ravneet: Did the build work?
+13:42 &lt;reid_a> has joined #ccm
+13:55 &lt;Not-002> has joined #ccm
+14:01 &lt;IonelPopescu> has joined #ccm
+15:05 &lt;IonelPopescu> has joined #ccm
+15:37 &lt;nairboon> has joined #ccm
+16:10 &lt;pradeeban> has joined #ccm
+16:27 &lt;pradeeban> has joined #ccm
+16:45 &lt;pradeeban> has joined #ccm
+17:18 &lt;IonelPopescu> has joined #ccm
+17:36 &lt;reid_a> has joined #ccm
+20:34 &lt;SayAsh> has joined #ccm
+23:22 &lt;nileshc> has joined #ccm
+23:58 &lt;nileshc> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20140304</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>79a06850-c63b-4b59-bd0d-1627324314bb</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20131126</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1385479687000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1385483870000</date>
+  <contentUpdateDate>1385483870000</contentUpdateDate>
+  <version>1.23</version>
+  <title>IRC Archive for channel #phenotips on 26 November 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;zladlie> has joined #phenotips
+10:28 &lt;zladlie> Hello, I have a question about the phenotips upgrade script
+11:29 &lt;sdumitriu> Hi zladlie
+11:29 &lt;zladlie> Hi, how are you?
+11:30 &lt;sdumitriu> In a day full of conference calls..
+11:30 &lt;sdumitriu> I have 30 minutes
+11:30 &lt;sdumitriu> You?
+11:30 &lt;zladlie> No problem, should be a short question
+11:31 &lt;zladlie> There is the upgrade script upgrade-phenotips.sh. When we run this, I assume it updates the base Phenotips components? How do we keep any custom modifications to base files, such as a skin update to template files like pdffooter.vm?
+11:32 &lt;zladlie> I am well
+11:32 &lt;sdumitriu> Well, it depends where these changes are
+11:32 &lt;sdumitriu> It overrides all the jars, so if you have a custom patched jar, you'll need to manually rebuild and replace that one
+11:33 &lt;sdumitriu> But changes that are in the database won't be replaced
+11:33 &lt;zladlie> Are changes in site xml files replaced?
+11:33 &lt;sdumitriu> The second step of the upgrade, the one with the distribution manager, tries to do a 3-way merge between the previous official version, your current version, and the new official version
+11:34 &lt;sdumitriu> If it manages to cleanly merge, it will do that automatically
+11:34 &lt;sdumitriu> If there are changes in the same place, it will ask you what to do
+11:34 &lt;sdumitriu> In which case you'll have to manually check after the upgrade if it's in a good state or not
+11:35 &lt;sdumitriu> The changes in the xml files aren't replaced
+11:35 &lt;zladlie> Sounds good, thank you very much
+11:37 &lt;zladlie> I also have a meeting to run to :) Have a good day
+11:37 &lt;sdumitriu> Bye
+11:37 &lt;zladlie> has left #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20131126</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>91025987-c428-4e1d-8e13-6026f8661ad5</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

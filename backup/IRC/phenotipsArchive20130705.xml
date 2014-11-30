@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130705</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372998032000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1373058825000</date>
+  <contentUpdateDate>1373058825000</contentUpdateDate>
+  <version>1.46</version>
+  <title>IRC Archive for channel #phenotips on 05 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> is now known as &lt;Guest81988>
+07:15 &lt;ravigarg27> has joined #phenotips
+08:40 &lt;marta> has quit
+08:49 &lt;marta> has joined #phenotips
+09:05 &lt;phenotips_org> is now known as &lt;Guest72235>
+09:07 &lt;Guest81988> has quit
+09:08 &lt;Guest81988> has joined #phenotips
+09:12 &lt;ravigarg27> has quit
+09:14 &lt;ravigarg27> has joined #phenotips
+09:24 &lt;ravigarg27> has left #phenotips
+09:24 &lt;ravigarg27> has joined #phenotips
+10:15 &lt;Guest81988> has quit
+10:16 &lt;phenotips_org> has joined #phenotips
+11:01 &lt;ravigarg27> has quit
+11:03 &lt;ravigarg27> has joined #phenotips
+11:07 &lt;ravigarg27> has quit
+11:53 &lt;ravigarg27> has joined #phenotips
+12:17 &lt;sdumitriu1> has joined #phenotips
+12:24 &lt;marta> hi ravigarg27
+12:25 &lt;marta> sorry for not having a google hangout today, it was a busy morning
+12:26 &lt;marta> ad it will be a busy day...
+12:28 &lt;ravigarg27> has quit
+12:43 &lt;mfiume> has quit
+14:50 &lt;ravigarg27> has joined #phenotips
+14:51 &lt;ravigarg27> hey sdumitriu1, got the mail, thanx
+14:51 &lt;sdumitriu1> You're welcome
+14:55 &lt;ravigarg27> just one question where should the xml files be placed, is it in the src/main/resources folder of the component
+14:55 &lt;sdumitriu1> Yes
+14:55 &lt;ravigarg27> okay
+14:55 &lt;sdumitriu1> Well, it depends on how you use them
+14:55 &lt;sdumitriu1> If you put them in there, they'll end up inside the jar
+14:56 &lt;sdumitriu1> So you'll have to open them with the class loader, getResourceAsStream
+14:57 &lt;ravigarg27> I dont need them after initialisation of analysis engine
+14:57 &lt;ravigarg27> ohh okay
+14:59 &lt;ravigarg27> well just one thing more how do you debug the java code of component
+15:00 &lt;ravigarg27> can we code that in eclipse
+15:01 &lt;sdumitriu1> Yes
+15:02 &lt;sdumitriu1> In start.sh:
+15:02 &lt;sdumitriu1> +  START_OPTS="-Xmx512m -XX:MaxPermSize=192m -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+15:03 &lt;sdumitriu1> Then you have to debug the module as a "Remote Java Application"
+15:04 &lt;ravigarg27> ohh okay will try that soon
+15:19 &lt;ravigarg27> also once I am done with the component thing, do I require to have SolrService.xml kind of file which makes a call to the component or can I directly can I directly make a call from javascript
+15:19 &lt;ravigarg27> oops typo
+15:54 &lt;ravigarg27> has quit
+16:24 &lt;bvancea> has quit
+17:13 &lt;sdumitriu1> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130705</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>07845ad0-c0df-4ce5-9989-320b888c3d7b</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

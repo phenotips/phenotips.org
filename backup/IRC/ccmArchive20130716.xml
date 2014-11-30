@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130716</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1373952577000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1374014186000</date>
+  <contentUpdateDate>1374014186000</contentUpdateDate>
+  <version>1.10</version>
+  <title>IRC Archive for channel #ccm on 16 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalkhandelwal> has joined #ccm
+04:32 &lt;kushalkhandelwal> has joined #ccm
+09:11 &lt;ravigarg27> has joined #ccm
+10:24 &lt;ravigarg27> Hi sdumitriu
+10:30 &lt;sdumitriu> has joined #ccm
+12:41 &lt;ravigarg27> has joined #ccm
+13:02 &lt;kushalkhandelwal> has joined #ccm
+14:40 &lt;sdumitriu1> has joined #ccm
+17:19 &lt;kushalkhandelwal> has joined #ccm
+18:36 &lt;sdumitriu> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130716</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>770c3133-476e-4043-857d-e5e8e403dbc8</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

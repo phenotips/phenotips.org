@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130711</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1373542244000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1373572167000</date>
+  <contentUpdateDate>1373572167000</contentUpdateDate>
+  <version>1.118</version>
+  <title>IRC Archive for channel #medsavant on 11 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has joined #medsavant
+07:36 &lt;bvancea> hey sdumitriu
+07:47 &lt;sdumitriu> Hey bvancea
+07:57 &lt;bvancea> how are you?
+07:57 &lt;bvancea> got time for a few technical questions?
+07:58 &lt;sdumitriu> Cooking, so not much
+07:58 &lt;sdumitriu> But go ahead
+07:59 &lt;bvancea> okay
+07:59 &lt;bvancea> so I managed to get from the jpql query the "table name"
+07:59 &lt;bvancea> which will probably translate to a collection/core name
+08:00 &lt;bvancea> I'm wondering how to get a reference to the appropriate solr service, execute the query and get a list of entities
+08:00 &lt;bvancea> as a generic type T
+08:02 &lt;bvancea> to be more precise, I'm a SolrQueryExecutor class, in the method &lt;T> List&lt;T> execute(Query query)
+08:02 &lt;bvancea> and I'm not sure how to return the entities as a generic list
+08:05 &lt;bvancea> don't worry if you're busy, you can answer when you have time
+08:49 &lt;sdumitriu> bvancea: Did we decide, multiple cores or one core with an entityType field?
+08:50 &lt;bvancea> I thought we're going to try multiple cores first
+08:50 &lt;sdumitriu> OK
+08:50 &lt;sdumitriu> Then:
+08:50 &lt;sdumitriu> We have a SolrCoreFactory
+08:51 &lt;sdumitriu> (I'm not sure a Factory is the right term, we'll see)
+08:51 &lt;bvancea> I see, go on
+08:51 &lt;sdumitriu> Which has a SolrCore getSolrCore(String entityType)
+08:53 &lt;sdumitriu> On that SolrCore you have a search method
+08:53 &lt;mcupak> has joined #medsavant
+08:53 &lt;sdumitriu> Hey mcupak
+08:53 &lt;sdumitriu> Welcome back
+08:53 &lt;sdumitriu> Healthy?
+08:53 &lt;mcupak> sdumitriu: hey!
+08:53 &lt;sdumitriu> bvancea: Now, since T is a bit too generic, you'll probably have to do an untyped cast
+08:54 &lt;bvancea> hey mcupak
+08:54 &lt;sdumitriu> Or, there might be a workaround
+08:54 &lt;sdumitriu> Hm, no
+08:54 &lt;sdumitriu> It won't work
+08:54 &lt;mcupak> thanks, more or less functioning :)
+08:54 &lt;sdumitriu> Generics are a pain sometimes...
+08:55 &lt;bvancea> yeah
+08:55 &lt;bvancea> should I change the execute methods to return List&lt;Object> ?
+08:55 &lt;sdumitriu> No
+08:55 &lt;sdumitriu> That's avoiding one generics pain at the cost of almost all the generics benefits
+08:56 &lt;bvancea> hmm
+08:56 &lt;bvancea> true
+08:56 &lt;bvancea> well, we could have a SolrCore&lt;T> class
+08:56 &lt;bvancea> and extend it with VariantSolrCore&lt;Variant>
+08:56 &lt;sdumitriu> That's what I thought of
+08:57 &lt;bvancea> nice
+08:57 &lt;sdumitriu> But then what about things that don't return entities, but lists of numbers, strings, or just a mixed select e.numberProp, e.stringProp, count(*)
+08:57 &lt;bvancea> exactly
+08:58 &lt;sdumitriu> It could be a &lt;T> List&lt;? super T> search
+08:58 &lt;sdumitriu> But that's using super the wrong way
+08:59 &lt;sdumitriu> It's against PECS
+08:59 &lt;bvancea> yeah
+08:59 &lt;bvancea> it should be extends
+08:59 &lt;bvancea> PECS always cracks me up
+09:00 &lt;sdumitriu> We'll see
+09:00 &lt;sdumitriu> Code has a way of driving itself
+09:01 &lt;sdumitriu> Once we have something written, it's easier to refactor
+09:02 &lt;bvancea> yeah
+09:02 &lt;bvancea> well I'll try my best to write something decent for now
+09:06 &lt;bvancea> mcupak, how are feeling?
+09:07 &lt;mcupak> bvancea: I'm well, thanks
+09:07 &lt;mcupak> how was it going?
+09:07 &lt;bvancea> I'm pretty good, finished with my diploma exam earlier this week :)
+09:08 &lt;mcupak> bvancea: congrats!
+09:08 &lt;bvancea> thanks :)
+09:09 &lt;bvancea> what happened though? we were a bit worried
+09:14 &lt;mcupak> bad luck :-/
+09:14 &lt;mcupak> long story short, I got fever and my doctor misdiagnosed me with flu, when I wasn't getting better for a few days, I was admitted to the hospital to have some tests run and they found out it wasn't flu, but I was apparently bitten by this sort of bug with some disease (which I didn't notice)
+09:15 &lt;mcupak> now it's antibiotics for a few days and all should be good soon
+09:16 &lt;mcupak> (ironically, it happened because I started going running in the forest nearby, which I was doing for my health in the first place)
+09:17 &lt;bvancea> ouch
+09:17 &lt;bvancea> bad luck indeed
+09:17 &lt;bvancea> get better soon though :)
+09:18 &lt;mcupak> cheers
+09:58 &lt;mcupak> has joined #medsavant
+10:54 &lt;mcupak> has joined #medsavant
+10:57 &lt;sdumitriu> mcupak: You should answer this: http://mail.medsavant.com/pipermail/development/2013-July/000065.html
+10:59 &lt;bvancea> yup :)
+10:59 &lt;bvancea> when are we having the next meet-up?
+11:00 &lt;sdumitriu> It should have been today maybe?
+11:00 &lt;sdumitriu> No word from Marc
+11:00 &lt;mcupak> sdumitriu: I believe I did, I have it among sent emails
+11:01 &lt;sdumitriu> Don't see it: http://mail.medsavant.com/pipermail/development/2013-July/date.html
+11:01 &lt;bvancea> yeah
+11:03 &lt;bvancea> I'll be unavailable for the next 2-3 hours, my last roommate is moving out of the dorms and I told him I'll give him a hand
+11:03 &lt;bvancea> and tomorrow I'll be moving out
+11:05 &lt;mcupak> sdumitriu: strange, I just resent the email
+11:06 &lt;sdumitriu> OK, got it this time
+11:06 &lt;bvancea> nice
+11:19 &lt;bvancea> okay, I won't be next to the computer for the next couple of hours
+11:20 &lt;bvancea> bbl
+13:02 &lt;mcupak> I was just sending Marc some data about the experiments I did with sharding and infobright as part of the task he gave me if you want to have a look
+13:02 &lt;mcupak> https://docs.google.com/document/d/1ASEfJhp6T7XXB3cKUBqsD3JYv-bdmYs2yvRp1i6OpSE/edit?usp=sharing
+13:04 &lt;mcupak> sdumitriu: do you know if Marc is usually hanging out on any IRC channel?
+13:05 &lt;sdumitriu> I keep telling him to be on #medsavant
+13:06 &lt;sdumitriu> When I catch him in the lab, he gets in for a while, but when he gets home he's off again
+13:06 &lt;sdumitriu> And so on
+13:06 &lt;sdumitriu> Now he's offline completely, no idea where he is
+13:07 &lt;sdumitriu> mcupak: You should try with 3 threads as well
+13:07 &lt;sdumitriu> To leave one core free for other tasks
+13:07 &lt;sdumitriu> Is that 4 cores, or 2 + hyperthreading, or 4 + hyperthreading?
+13:10 &lt;sdumitriu> You should try some WHERE conditions as well
+13:11 &lt;sdumitriu> A simple "select * from table" doesn't test the DB that much, just the data transfer and data loading in the java process
+13:13 &lt;mcupak> ^^ it's 4 cores (core i5)
+13:13 &lt;mcupak> yeah, with where conditions it's kind of tricky, the number of rows returned affects the time the most (i.e. loading is the heavy part)
+13:18 &lt;mcupak> any update on whether there is a call tonight?
+13:18 &lt;mcupak> just wondering if I can go offline for now or if I should wait
+13:23 &lt;sdumitriu> I doubt it
+13:24 &lt;sdumitriu> We should schedule it for next Thursday
+13:24 &lt;mcupak> sounds good
+13:26 &lt;mcupak> I'm going to get some dinner, ttyl
+14:44 &lt;misko__> has joined #medsavant
+14:51 &lt;sdumitriu> Hey misko__
+14:51 &lt;sdumitriu> Everybody else left already
+14:52 &lt;misko__> :(
+14:52 &lt;misko__> sorry i had to take care of some things earlier, just got free now
+14:53 &lt;sdumitriu> No problem
+15:49 &lt;bvancea> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20130711</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>cf314ca8-150c-49e0-bc73-0389b8f4177a</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

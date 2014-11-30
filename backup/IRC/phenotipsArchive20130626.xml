@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130626</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372235513000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1372303579000</date>
+  <contentUpdateDate>1372303579000</contentUpdateDate>
+  <version>1.49</version>
+  <title>IRC Archive for channel #phenotips on 26 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has quit
+04:33 &lt;sdumitriu> has joined #phenotips
+04:41 &lt;bvancea> has quit
+09:13 &lt;bvancea> has quit
+10:53 &lt;ravigarg27> has joined #phenotips
+11:53 &lt;ravigarg27> has quit
+12:17 &lt;mcupak> has quit
+12:20 &lt;ravigarg27> has joined #phenotips
+12:28 &lt;ravigarg27> has quit
+12:37 &lt;kushalkhandelwal> has joined #phenotips
+12:39 &lt;sdumitriu> Hey kushalkhandelwal
+12:39 &lt;sdumitriu> How's it going?
+12:44 &lt;kushalkhandelwal> Hey
+12:44 &lt;kushalkhandelwal> sdumitriu,
+12:44 &lt;kushalkhandelwal> I am good :)
+12:44 &lt;kushalkhandelwal> waiting to go home
+12:45 &lt;kushalkhandelwal> going back in 3-4 days :D
+12:45 &lt;kushalkhandelwal> Connectivity issues from 2 days :x I hardly get 3G coverage
+12:45 &lt;kushalkhandelwal> You say
+12:45 &lt;kushalkhandelwal> how are you ?
+12:45 &lt;kushalkhandelwal> How is it at lab ?
+12:45 &lt;kushalkhandelwal> How is work going ?
+12:45 &lt;sdumitriu> Going well
+13:52 &lt;kushalkhandelwal> has quit
+13:53 &lt;kushalkhandelwal> has joined #phenotips
+14:02 &lt;kushalkhandelwal> has quit
+15:38 &lt;marta_> has joined #phenotips
+15:39 &lt;marta_> is now known as &lt;Guest64867>
+15:46 &lt;Guest64867> has quit
+16:49 &lt;bvancea> has joined #phenotips
+16:50 &lt;sdumitriu> Hello bvancea
+16:51 &lt;bvancea> well, hello
+16:51 &lt;bvancea> :)))
+16:51 &lt;bvancea> I was wondering if there are any people here
+16:51 &lt;bvancea> not much activity in the IRC
+16:51 &lt;bvancea> its mostly me spaming you
+16:51 &lt;sdumitriu> No...
+16:52 &lt;bvancea> maybe the other students are less outgoing and they'll be more active as the program goes on
+17:02 &lt;bvancea> what does that log mean?
+17:03 &lt;sdumitriu> Someone left a patient sheet open, and the autosave kicks in
+17:03 &lt;sdumitriu> This bot notifies of changes done on phenotips.org
+17:07 &lt;bvancea> oh, I see
+17:07 &lt;bvancea> nice
+18:07 &lt;bvancea> has quit
+18:44 &lt;bvancea> has quit
+22:42 &lt;sdumitriu> has quit
+23:09 &lt;sdumitriu> has joined #phenotips
+23:23 &lt;sdumitriu> has quit
+23:26 &lt;sdumitriu> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20130626</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>5d80fca7-d745-4a12-8d1e-19459c9fbeb7</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

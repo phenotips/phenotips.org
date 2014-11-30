@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140317</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395028931000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395107033000</date>
+  <contentUpdateDate>1395107033000</contentUpdateDate>
+  <version>1.228</version>
+  <title>IRC Archive for channel #phenotips on 17 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has quit
+01:15 &lt;sdumitriu> has joined #phenotips
+01:17 &lt;sdumitriu1> has joined #phenotips
+01:17 &lt;sdumitriu1> has quit
+01:19 &lt;sdumitriu> has quit
+08:23 &lt;winter_flower> has quit
+12:03 &lt;s37syed> has quit
+12:03 &lt;akats> has joined #phenotips
+12:08 &lt;sdumitriu_[Away]&gt; has quit
+12:08 &lt;sdumitriu> has joined #phenotips
+12:33 &lt;akats> Is it safe to cast ExecutionContext to XWikiContext?
+12:34 &lt;sdumitriu> No
+12:34 &lt;sdumitriu> They're completely different
+12:37 &lt;akats> Is it safe to do this (XWikiContext) this.execution.getContext().getProperty("xwikicontext"); ?
+12:38 &lt;sdumitriu> Yes
+12:39 &lt;akats> Thanks, that's the one I was vaguely remembering
+13:12 &lt;SayAsh> has joined #phenotips
+14:31 &lt;nclandrei> has joined #phenotips
+14:31 &lt;nclandrei> hi everyone
+14:31 &lt;sdumitriu> Hi nclandrei
+14:31 &lt;nclandrei> how are things going?
+14:32 &lt;sdumitriu> A little better
+14:32 &lt;nclandrei> for me too, I've taken a break from homeworks this week (-:
+14:32 &lt;nclandrei> now I can finish the project part from my proposal as well
+14:32 &lt;nclandrei> and I can send you a complete draft
+14:32 &lt;nclandrei> is it alright?
+14:33 &lt;sdumitriu> Yep
+14:33 &lt;nclandrei> one more question for now
+14:33 &lt;nclandrei> how would you think it would be best to divide my schedule? like on months, from 2 to 2 weeks?
+14:34 &lt;nclandrei> because I would like to assign tasks for regular periods of time and I don't know how concise should it be
+14:34 &lt;sdumitriu> 2w
+14:34 &lt;nclandrei> okay
+14:36 &lt;nclandrei> how many people are also applying to this specific project, if I may ask?
+14:36 &lt;sdumitriu> You
+14:36 &lt;sdumitriu> (so far)
+14:36 &lt;nclandrei> awesome.. for me this is good news haha
+14:38 &lt;nclandrei> thank you, I shall go back to work
+14:39 &lt;nclandrei> however, I will hang around here, if you want to ask me any question I will come back right away
+14:39 &lt;sdumitriu> How's the bugfix going?
+14:56 &lt;SayAsh> has quit
+15:45 &lt;nclandrei> so sorry for being late with the reply
+15:45 &lt;bvancea> has joined #phenotips
+15:45 &lt;nclandrei> I have looked at another bug, Rename "Company" to "Institution" in the user profile #801, posted by you and I have identified the problem
+15:45 &lt;nclandrei> and did the necessary changes
+15:45 &lt;nclandrei> should I commit them on git?
+15:47 &lt;sdumitriu> Yes
+15:47 &lt;nclandrei> okay awesome
+15:47 &lt;sdumitriu> Then make a pull request
+15:48 &lt;nclandrei> okay
+15:49 &lt;sdumitriu> Hey bvancea
+15:49 &lt;bvancea> hey sdumitriu
+15:50 &lt;bvancea> thanks for the feedback on the application
+15:50 &lt;sdumitriu> You'll get an email in a few seconds
+15:50 &lt;bvancea> ah
+15:50 &lt;bvancea&gt; okay
+15:50 &lt;sdumitriu> Sent
+15:51 &lt;bvancea> Hmmm...
+15:51 &lt;bvancea> password reset request, link not working
+16:04 &lt;nclandrei> I have just made a pull request
+16:14 &lt;nclandrei> did it work?
+16:15 &lt;sdumitriu> Didn't receive it...
+16:18 &lt;nclandrei> do the commits at least appear there?
+16:20 &lt;sdumitriu> Can't find anything
+16:21 &lt;nclandrei> just a second, I'll redo it
+16:30 &lt;akats> sdumitriu: are we following your suggestion on splitting the name into last and first (in the json)?
+16:31 &lt;sdumitriu> No
+16:44 &lt;nclandrei> so I am trying now
+16:44 &lt;nclandrei> to put my local branch where I did the changes
+16:44 &lt;nclandrei> to git
+16:45 &lt;nclandrei> with git push origin iss801 ( that is how I named my branch)
+16:45 &lt;nclandrei> and I don't have access
+16:45 &lt;nclandrei> am I doing something stupid?
+16:45 &lt;sdumitriu> Where are you trying to push?
+16:45 &lt;sdumitriu> git remote -v
+16:47 &lt;bvancea> nclandrei, you need a fork of the phenotips repo
+16:48 &lt;bvancea> seems you might be trying to push directly to the main repository
+16:48 &lt;bvancea> I assume that because the github user nclandrei has no fork of phenotips on his profile
+16:50 &lt;nclandrei> okay
+16:51 &lt;nclandrei> thanks
+16:51 &lt;bvancea> yw
+16:51 &lt;bvancea> let me know if you need more help :)
+16:55 &lt;nclandrei> so I need to fork it, then just clone the fork on my computer, change what I have to change, commit my changes and then what should I do? push my changes to my forked repo?
+16:55 &lt;nclandrei> and after that how can I finish the actual pull request?
+16:56 &lt;bvancea> hmm, well if you have your clone, you can just add the fork on github as a remote
+16:56 &lt;bvancea> and push to it
+16:56 &lt;bvancea> like, if you're in the github repo where you did your commits
+16:57 &lt;bvancea> git remote add my-fork &lt;url-to-your-fork-on-github>
+16:57 &lt;bvancea> then git push my-fork iss801
+16:57 &lt;bvancea> once you have your commits on your fork, the github menu will allow you to do a pull request
+16:58 &lt;nclandrei> okay awesome
+16:58 &lt;nclandrei> understood it now
+16:58 &lt;nclandrei> thank you
+16:58 &lt;nclandrei> you are also applying for phenotips? :)
+16:58 &lt;bvancea> yes :)
+16:59 &lt;nclandrei> awesome
+16:59 &lt;nclandrei> :D
+16:59 &lt;nclandrei> nice to meet you
+17:00 &lt;bvancea> nice to meet you too :)
+17:21 &lt;nclandrei> now I finished it
+17:22 &lt;nclandrei> and sorry for leaving my branch named master in the end
+17:28 &lt;nclandrei> has quit
+17:57 &lt;mcupak> has quit
+18:06 &lt;pritham> has quit
+18:17 &lt;pritham> has quit
+18:23 &lt;ruthgrace_> has quit
+18:25 &lt;akats> has quit
+18:29 &lt;bvancea> has quit
+18:30 &lt;nclandrei> has joined #phenotips
+18:30 &lt;nclandrei> sorry, we had wifi problems
+18:30 &lt;sdumitriu> nclandrei: Good, you're back
+18:30 &lt;nclandrei> yes
+18:31 &lt;nclandrei> sorry
+18:37 &lt;nclandrei_> has joined #phenotips
+18:39 &lt;nclandrei> has quit
+18:44 &lt;nclandrei_> I am still here
+18:44 &lt;nclandrei_> I told you, I am sorry, we are experiencing some wi fi problems out here
+19:16 &lt;nclandrei_> sdumitriu, are you still here?
+19:16 &lt;sdumitriu> Yes
+19:16 &lt;sdumitriu> Busy with something, will get back to you in a few minutes
+19:16 &lt;sdumitriu&gt; Btw, the pull request isn't correct
+19:16 &lt;sdumitriu> Read the issue description
+19:20 &lt;nclandrei_> ok
+19:20 &lt;sdumitriu> Ok, so
+19:21 &lt;sdumitriu> The issue said that it should only be a translation thing
+19:21 &lt;sdumitriu> Since changing
+19:21 &lt;sdumitriu> "company" is harder
+19:21 &lt;sdumitriu> That field is defined in the XWiki code, and we prefer not to override too many XWiki things
+19:23 &lt;sdumitriu> Changing the header (the things you changed in the Skin document) is also not relevant, that's how the main logo is displayed and has nothing to do with the user's institution
+19:26 &lt;nclandrei_> okay
+19:27 &lt;nclandrei_> so I should work on the Admin file?
+19:27 &lt;sdumitriu> Nope
+19:27 &lt;sdumitriu> That one shouldn't change either
+19:27 &lt;sdumitriu> That's just an instance of a user
+19:28 &lt;sdumitriu> Where would translations be defined, I wonder...
+19:29 &lt;nclandrei_> okay
+19:29 &lt;nclandrei_> so I need to look in the translations.xml file?
+19:29 &lt;nclandrei_> haha
+19:29 &lt;sdumitriu> Yes
+19:31 &lt;nclandrei_> okay then
+19:31 &lt;nclandrei_> thank you
+19:31 &lt;tweety098> has quit
+19:37 &lt;nclandrei_> so it should become just a translation from company
+19:37 &lt;nclandrei_> to institution
+19:37 &lt;nclandrei_> for the admin
+19:37 &lt;nclandrei_> ?
+19:43 &lt;sdumitriu> Yes
+19:51 &lt;nclandrei_> done
+19:51 &lt;nclandrei_> :-D
+20:25 &lt;nclandrei_> sdumitriu, I kind of have an idea
+20:27 &lt;nclandrei_> so eventually I thought that we might need something related to git( as you also proposed as a tip to use jgit)
+20:27 &lt;nclandrei_> http://www.michaelfcollins3.me/blog/2012/05/18/implementing-a-git-http-server.html
+20:27 &lt;nclandrei_> here is an aricle related to a possible implementation of a git server
+20:27 &lt;nclandrei_> could we somehow take this approach
+20:28 &lt;nclandrei_> modify it and make it suitable to our needs?
+20:31 &lt;nairboon> has quit
+20:44 &lt;nclandrei_> sdumitriu, can you please reply to this question I asked you? because I wanted to go to sleep but I am too curious to leave without getting some feedback haha
+20:44 &lt;sdumitriu> nclandrei_: Sorry, I was away for a while
+20:44 &lt;nclandrei_> no problem
+20:45 &lt;sdumitriu> Reading that article
+20:52 &lt;sdumitriu> I don't think that's relevant
+20:53 &lt;sdumitriu> Let's start from scratch
+20:54 &lt;sdumitriu> So, tell me in a few phrases what is this project trying to accomplish
+20:54 &lt;nclandrei_> okay
+20:54 &lt;nclandrei_> so
+20:56 &lt;nclandrei_> what it actually tries to accomplish is to make the history of a patient's record editable and not just a linear history
+20:56 &lt;nclandrei_> so as we have the record history published
+20:56 &lt;nclandrei_> we want to allow the users to see the previous "commits", the previous changes brought to the record
+20:56 &lt;nclandrei_> and maybe even edit them, if they want to
+20:57 &lt;nclandrei_> and we would also like to add some sort of id for every visit, as we want them available and editable
+20:57 &lt;nclandrei_> right?
+20:57 &lt;sdumitriu> Almost
+20:57 &lt;sdumitriu> The first step is that the current history is too verbose
+20:58 &lt;sdumitriu> It doesn't make it easy for the user to understand what happened
+20:59 &lt;nclandrei_> okay..
+20:59 &lt;sdumitriu> So the first step is to make it easy to see when were changes done to the patient record, with a selectable granularity
+21:00 &lt;nclandrei_> okay, good
+21:01 &lt;sdumitriu> So while right now it shows a bunch of versions without any description, it would be better to not see "autosaves" for example, and see "Edited by Patch Adams on February 29th (updates in Measurements and Family History)"
+21:03 &lt;sdumitriu> Then if the user wants to see more details he could "expand" the history
+21:03 &lt;sdumitriu> And see individual changes
+21:04 &lt;sdumitriu> Next step is to be able to create "snapshots" of the patient record
+21:04 &lt;sdumitriu> These snapshots correspond to visits
+21:04 &lt;sdumitriu> Actually no
+21:04 &lt;sdumitriu> Some of these snapshots correspond to visits
+21:04 &lt;sdumitriu> Other snapshots correspond to "validated" records
+21:06 &lt;allasm> has quit
+21:07 &lt;sdumitriu> So when the big doctor comes and checks the patient record, he can "sign" it
+21:07 &lt;nclandrei_> mhm
+21:07 &lt;nclandrei_> okay
+21:09 &lt;sdumitriu> Visits are another usecase
+21:11 &lt;sdumitriu> Instead of simply editing the patient record, the user can create a "fork" in the history, so that the current state of the patient record is preserved for future reference, and all new changes will only be visible in the new visit
+21:12 &lt;sdumitriu> Normally users shouldn't want to edit the previous visits
+21:12 &lt;sdumitriu> But they do want to view the past states
+21:12 &lt;nclandrei_> yes, true
+21:13 &lt;sdumitriu> And occasionally they will want to edit past visits, not so much as to enter new data, but to correct mistakes
+21:13 &lt;sdumitriu> A valid scenario is custom symptoms not found in the HPO (which we call "term requests"), which could be switched to the new official terms once they're added to HPO
+21:15 &lt;sdumitriu> Another usecase isn't related to what users do, but what the backend does: drafts
+21:21 &lt;nclandrei_> okay
+21:21 &lt;sdumitriu> Drafts mean that while a user is editing and autosave kicks in, the data shouldn't be permanently saved
+21:21 &lt;nclandrei_> yes
+21:22 &lt;sdumitriu> So when another user comes and checks the patient record, partial data isn't shown, but the previous state
+21:22 &lt;sdumitriu> Only when the user explicitly presses save will the document be saved
+21:22 &lt;nclandrei_> yes yes
+21:23 &lt;nclandrei_> I have started looking at some JGit projects, how it would be implemented
+21:23 &lt;sdumitriu> But if he somehow exits without saving and opens the same patient again, he'll be promted "resume previous editing session from two days ago?"
+21:23 &lt;nclandrei_> could* actually
+21:23 &lt;nclandrei_> oooh
+21:24 &lt;nclandrei_> don't we need for this a way to extensive history?
+21:24 &lt;nclandrei_> because this can happen to multiple patients as well
+21:24 &lt;nclandrei_> like he/ she can start editing 10 patients
+21:24 &lt;nclandrei_> and not save for any of them
+21:24 &lt;nclandrei_> we need to have some sort of backup for these situations
+21:24 &lt;sdumitriu> Yes, that's possible
+21:25 &lt;nclandrei_> this is nice
+21:25 &lt;sdumitriu> So, the way to accomplish that is by replacing the versioning backend
+21:26 &lt;sdumitriu> It doesn't have to be a server, all the data is local
+21:26 &lt;nclandrei_> okay
+21:33 &lt;nclandrei_> so this would be the main plan?
+21:34 &lt;sdumitriu> Yes
+21:34 &lt;sdumitriu> That's the user's perspective
+21:34 &lt;sdumitriu> Now it's your turn to come up with an implementation plan
+21:36 &lt;nclandrei_> thank you
+21:36 &lt;nclandrei_> I think I should go to sleep
+21:36 &lt;nclandrei_> I'll talk to you tomorrow
+21:36 &lt;nclandrei_> thanks for all the support
+21:38 &lt;sdumitriu> You're welcome
+21:39 &lt;nclandrei_> have a good night
+21:40 &lt;sdumitriu> You too
+21:43 &lt;nclandrei_> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140317</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>168d7409-b608-47b8-9b72-49e4cbdd6353</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

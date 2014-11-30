@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130519</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1368955212000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1368996439000</date>
+  <contentUpdateDate>1368996439000</contentUpdateDate>
+  <version>1.100</version>
+  <title>IRC Archive for channel #phenotips on 19 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has quit
+09:22 &lt;ravigarg27> has quit
+09:47 &lt;BogdanVancea> has quit
+14:37 &lt;ravigarg27> has quit
+14:51 &lt;tishan> has joined #phenotips
+15:11 &lt;tishan> sdumitriu1: Hi
+15:22 &lt;sdumitriu> Hi
+15:23 &lt;sdumitriu> tishan: How are you?
+15:24 &lt;tishan> I was working on the task you gave me
+15:24 &lt;tishan> still could not build because of the issue i told you earlier
+15:24 &lt;tishan> :(
+15:24 &lt;tishan> even tried with ADSL
+15:24 &lt;tishan> no luck
+15:24 &lt;sdumitriu> Ah, fails to download the xwiki war?
+15:25 &lt;tishan> nope this one
+15:25 &lt;tishan> lucene-analyzers-common-4.0.0.jar
+15:26 &lt;sdumitriu> http://nexus.cs.toronto.edu/nexus/content/groups/public/org/apache/lucene/lucene-analyzers-common/4.0.0/lucene-analyzers-common-4.0.0.jar ?
+15:26 &lt;tishan> yup
+15:26 &lt;sdumitriu> Hm...
+15:27 &lt;tishan> it should be a connection error
+15:28 &lt;tishan> download stops exactly at 458KB
+15:30 &lt;sdumitriu> How about this one? http://nexus.xwiki.org/nexus/content/groups/public/org/apache/lucene/lucene-analyzers-common/4.0.0/lucene-analyzers-common-4.0.0.jar
+15:31 &lt;tishan> tried
+15:31 &lt;sdumitriu> K, let me try something else
+15:31 &lt;tishan> it also halts
+15:32 &lt;tishan> I tried various thing for about a day
+15:32 &lt;tishan> :)
+15:34 &lt;sdumitriu> Try this file: http://phenotips.org/skins/lucene-analyzers-common-4.0.0.jar.bz2.gz
+15:36 &lt;tishan> done :0
+15:36 &lt;tishan> :)
+15:37 &lt;sdumitriu> Good
+15:37 &lt;sdumitriu> It's bzipped then gzipped
+15:37 &lt;sdumitriu> So undo that in reverse order
+15:37 &lt;tishan> ok.got the jar
+15:38 &lt;sdumitriu> Now move it in ~/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.0.0
+15:38 &lt;sdumitriu> Try to build, see if it works
+15:38 &lt;tishan> shouldnt we update m2 registry
+15:38 &lt;sdumitriu> No
+15:39 &lt;sdumitriu> I guess the problem was a content filter, probably an antivirus scanner that was falsely triggered by the jar
+15:40 &lt;tishan> um using ubuntu 12.04
+15:40 &lt;sdumitriu> Yeah, probably not from your machine, somewhere along the line
+15:41 &lt;sdumitriu> Although it's strange that it happened on multiple connections
+15:41 &lt;tishan> hmm..
+15:44 &lt;sdumitriu> Building?
+15:44 &lt;tishan> yup. still building
+15:46 &lt;tishan> in SL we get internet connections for amount data. like 5GB per month. not bandwidth wise.
+15:47 &lt;tishan> this month my connection has exceeded the limit.:)
+15:47 &lt;sdumitriu> Oh
+15:48 &lt;tishan> it takes a while to build
+15:49 &lt;tishan> mobile broadband connections are around 1Mbps
+15:52 &lt;tishan> In the meantime can you give a brief overview of the problem. What I understood is use existing create record ui and save the record with predefined version message
+15:53 &lt;tishan> then design a new ui to list down new visits and fetch visits using the version message
+15:53 &lt;sdumitriu> Yes
+15:54 &lt;tishan> since records are saved as wikis I need to study some xwiki
+15:54 &lt;tishan> snt t?
+15:54 &lt;sdumitriu> In PhenoTips the version message is hidden
+15:54 &lt;sdumitriu> So you can do two things to specify one
+15:54 &lt;sdumitriu> 1. Use an URL that contains the message
+15:55 &lt;sdumitriu> 2. Write a script that calls $doc.save('message')
+15:57 &lt;sdumitriu> To list versions from the history, you can look at what webapps/phenotips/templates/historyinline.vm does
+15:57 &lt;tishan> for 1. message should be included here. def createURL = newDoc.getURL() snt t
+15:57 &lt;tishan> isnt it?
+15:58 &lt;sdumitriu> Yes
+15:58 &lt;sdumitriu> The name of the request parameter is "comment"
+15:59 &lt;sdumitriu> So append comment=something in the URL
+16:01 &lt;tishan> ok
+16:02 &lt;tishan> seems like some xwiki knowledge is needed
+16:04 &lt;sdumitriu> Yes
+16:07 &lt;tishan> is this used for retrieving def crtMaxIDList = crtContext.getWiki().search()?
+16:08 &lt;sdumitriu> Retrieving what?
+16:09 &lt;tishan> patient recordings
+16:09 &lt;tishan> i mean new records
+16:09 &lt;sdumitriu> Well, search is the method that searches stuff in the database
+16:09 &lt;sdumitriu> It can only retrieve existing data
+16:10 &lt;sdumitriu> There's no explicit method for creating documents
+16:10 &lt;sdumitriu> They get created when they're saved
+16:10 &lt;sdumitriu> How's your schedule, do you still have school/exams?
+16:11 &lt;tishan> yeah. have a presentation on tuesday
+16:11 &lt;tishan> was busy on completing it last week
+16:11 &lt;sdumitriu> Oh, so you're not really free to work on this
+16:13 &lt;tishan> not really. I can manage around 6-8 hours tommorw
+16:14 &lt;tishan> I only started out yesterday. Did not thought this would take much time
+16:15 &lt;sdumitriu> Yes, I might have underestimated the complexity, given that you don't really know that much about the platform
+16:15 &lt;sdumitriu> But I'm here to help
+16:16 &lt;tishan> thanks :)
+16:17 &lt;tishan> better to have a all nighter tomorrow. working in day time isnt much effective since u are unavailable due to time zone issue
+16:17 &lt;sdumitriu> Well, I should be up pretty early
+16:17 &lt;sdumitriu> Today I got up at 4:15
+16:17 &lt;sdumitriu> Not sure I can do that again tomorrow
+16:18 &lt;tishan> u are GMT-??
+16:18 &lt;sdumitriu> 4
+16:20 &lt;tishan> Then ill start around 4 pm
+16:20 &lt;sdumitriu> K
+16:20 &lt;tishan> I can work till 2-3 am
+16:20 &lt;tishan> used to it :)
+16:21 &lt;tishan> it is already 2 am
+16:27 &lt;tishan> g2g sdumitriu. catch u tommorow. have a nice day
+16:28 &lt;sdumitriu> Good night
+16:33 &lt;tishan> has quit
+16:47 &lt;krinye> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130519</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>2bbd020d-4356-45c0-a049-b2124389e392</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

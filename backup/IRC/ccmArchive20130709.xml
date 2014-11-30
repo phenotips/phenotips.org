@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130709</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1373373319000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1373393607000</date>
+  <contentUpdateDate>1373393607000</contentUpdateDate>
+  <version>1.45</version>
+  <title>IRC Archive for channel #ccm on 09 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #ccm
+12:00 &lt;mfiume> has joined #ccm
+12:01 &lt;sdumitriu1> has joined #ccm
+12:37 &lt;ravigarg27> has joined #ccm
+12:39 &lt;ravigarg27> hey sdumitriu1, had few queries
+12:40 &lt;ravigarg27> free?
+12:41 &lt;sdumitriu1> Hi
+12:41 &lt;sdumitriu1> Yes, go ahead
+12:42 &lt;ravigarg27> I get error while resolving this maven dependency "mastif-i2b2"
+12:42 &lt;ravigarg27> Failed to read artifact descriptor for org.mitre:jcarafe-core_2.9.1:jar:0.9.8.2: Could not transfer artifact org.mitre:jcarafe-core_2.9.1:pom:0.9.8.2 from/to mitrechatterrepository (http://rcf.mitre.org/project/chatter/repo/): null to http://rcf.mitre.org/project/chatter/repo/org/mitre/jcarafe-core_2.9.1/0.9.8.2/jcarafe-core_2.9.1-0.9.8.2.pom: UnresolvedAddressException -> [Help 1]
+12:46 &lt;sdumitriu1> I think they're using a repository that's private to their network
+12:46 &lt;sdumitriu1> Which dependency triggered this?
+12:49 &lt;ravigarg27> mastif-i2b2 i only i.e &lt;dependency>     &lt;groupId>net.sf.mastif&lt;/groupId>     &lt;artifactId>mastif-i2b2&lt;/artifactId>     &lt;version>1.4&lt;/version> &lt;/dependency>
+12:51 &lt;ravigarg27> I found it here http://repo.jfrog.org/artifactory/libs-releases/net/sf/mastif/ but dunno how to use that
+12:51 &lt;sdumitriu1> But it's available in the central repo, you don't need to get it from another repo
+12:53 &lt;sdumitriu1> Ah, I see the problem
+12:54 &lt;sdumitriu1> It requires org.mitre:jcarafe-core_2.9.1 but it's available as net.sf.carafe.jcarafe:jcarafe-core_2.9.1
+12:54 &lt;sdumitriu1> So you need to exclude it
+12:56 &lt;sdumitriu1> http://pastebin.com/mAKXap4d
+12:57 &lt;ravigarg27> okay thanx I was searching for how to exclude certain dependency
+12:57 &lt;ravigarg27> its very simple indeed
+12:59 &lt;ravigarg27> just one more thing I included this as you suggested START_OPTS="$START_OPTS -Xmx1512m -XX:MaxPermSize=192m -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+13:00 &lt;ravigarg27> but it gives handshake failed error Debugger failed to attach: handshake failed - received >GET / HTTP/1.1&lt; - expected >JDWP-Handshake&lt;
+13:00 &lt;ravigarg27> when I it open on port 5005
+13:00 &lt;ravigarg27> *open it
+13:01 &lt;sdumitriu1> Hm...
+13:01 &lt;sdumitriu1> Oh
+13:01 &lt;sdumitriu1> How are you opening it?
+13:01 &lt;sdumitriu1> You're not supposed to open it in the browser
+13:02 &lt;ravigarg27> ohh
+13:02 &lt;sdumitriu1> From Eclipse
+13:02 &lt;sdumitriu1> Run -> Run configurations...
+13:03 &lt;sdumitriu1> No
+13:03 &lt;sdumitriu1> Run -> Debug configurations...
+13:03 &lt;sdumitriu1> Remote Java Application
+13:03 &lt;sdumitriu1> new
+13:04 &lt;sdumitriu1> Select a module as the project
+13:04 &lt;sdumitriu1> Use 5005 as the port
+13:04 &lt;sdumitriu1> And attach other modules in the Source path
+13:05 &lt;ravigarg27> ohh okay
+13:05 &lt;sdumitriu1> Then set breakpoints where you want the execution to stop
+13:05 &lt;sdumitriu1> And interact with the application through the normal 8080 port
+13:06 &lt;sdumitriu1> When the execution hits a breakpoint, Eclipse will open the debug mode and stop
+13:13 &lt;sdumitriu1> mfiume: You should be on #medsavant
+14:13 &lt;mfiume> has left #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130709</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>a9efac11-e7c5-4c41-8767-84ff4f5ac50f</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

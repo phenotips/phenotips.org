@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130624</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372064049000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1372126288000</date>
+  <contentUpdateDate>1372126288000</contentUpdateDate>
+  <version>1.39</version>
+  <title>IRC Archive for channel #ccm on 24 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #ccm
+08:23 &lt;bvancea> has joined #ccm
+09:04 &lt;sdumitriu> has joined #ccm
+11:13 &lt;ravigarg27> has joined #ccm
+12:01 &lt;sdumitriu> Hey Ravi
+12:02 &lt;ravigarg27> Hi sdumitriu
+12:02 &lt;ravigarg27> How are you?
+12:03 &lt;sdumitriu> Good
+12:03 &lt;sdumitriu> You?
+12:03 &lt;ravigarg27> umm happy to arrive safely
+12:03 &lt;ravigarg27> was trapped in floods in North India
+12:10 &lt;ravigarg27> anyways, I will work on cTAKES integration to Phenotips this week
+12:10 &lt;ravigarg27> can you please guide me on How to start
+12:14 &lt;ravigarg27_> has joined #ccm
+12:17 &lt;kushalkhandelwal> has joined #ccm
+12:18 &lt;sdumitriu> Well, you alredy started
+12:18 &lt;sdumitriu> What's blocking you?
+12:20 &lt;ravigarg27_> integration I didn't
+12:21 &lt;ravigarg27_> I have to make it maven dependency right?
+12:22 &lt;sdumitriu> Yes
+12:22 &lt;ravigarg27_> so can you just give me the pathway on how to proceed with it
+12:28 &lt;sdumitriu> So, you have to decide which components you want to use
+12:28 &lt;sdumitriu> The list is here: https://cwiki.apache.org/confluence/display/CTAKES/cTAKES+3.0+Component+Use+Guide
+12:28 &lt;sdumitriu> You can start with the Core
+12:29 &lt;sdumitriu> You can go to http://search.maven.org/ , which searches in the central maven repository
+12:29 &lt;ravigarg27> has joined #ccm
+12:29 &lt;sdumitriu> ravigarg27: Did you get that?
+12:29 &lt;ravigarg27> yeah I am reading the logs
+12:29 &lt;sdumitriu> Good
+12:30 &lt;sdumitriu> You can search for "ctakes core"
+12:30 &lt;ravigarg27> sorry for the disruptions
+12:30 &lt;ravigarg27> ok
+12:30 &lt;sdumitriu> Click on the version
+12:30 &lt;sdumitriu> It should lead to this: http://search.maven.org/#artifactdetails|org.apache.ctakes|ctakes-core|3.0.0-incubating|jar
+12:31 &lt;sdumitriu> And it gives the exact code to use in the pom to declare a dependency, in the "Dependency Information -> Apache Maven" section
+12:33 &lt;ravigarg27> okay and do that for every component
+12:36 &lt;ravigarg27> so I will include all the necessary components for now
+13:06 &lt;sdumitriu1> has joined #ccm
+22:11 &lt;kushalkhandelwal> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130624</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>d6169ba4-caf5-43cc-8edb-4d72574f5613</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

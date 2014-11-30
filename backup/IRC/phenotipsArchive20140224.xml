@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140224</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1393218737000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1393297423000</date>
+  <contentUpdateDate>1393297423000</contentUpdateDate>
+  <version>1.63</version>
+  <title>IRC Archive for channel #phenotips on 24 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has quit
+00:13 &lt;sdumitriu> has joined #phenotips
+01:14 &lt;sdumitriu> has quit
+01:28 &lt;sdumitriu> has joined #phenotips
+01:36 &lt;sdumitriu> has quit
+01:36 &lt;sdumitriu> has joined #phenotips
+03:02 &lt;sdumitriu> has quit
+03:03 &lt;sdumitriu> has joined #phenotips
+03:04 &lt;sdumitriu> is now known as &lt;Guest38699>
+03:08 &lt;Guest38699> has quit
+03:14 &lt;Guest38699> has joined #phenotips
+05:48 &lt;Guest38699> has quit
+05:50 &lt;sdumitriu> has joined #phenotips
+08:35 &lt;sdumitriu> has quit
+11:59 &lt;mcupak> has quit
+12:05 &lt;marta__> has joined #phenotips
+12:25 &lt;akats> has joined #phenotips
+12:43 &lt;sdumitriu> has joined #phenotips
+12:51 &lt;sdumitriu> has quit
+12:53 &lt;marta__> has quit
+12:55 &lt;marta__> has joined #phenotips
+14:35 &lt;phenotips_org> has joined #phenotips
+14:35 &lt;sdumitriu> akats: Did you register your nickname?
+14:35 &lt;sdumitriu> allasm: You should register your nick as well
+14:36 &lt;sdumitriu> type: /nickserv help register
+14:36 &lt;sdumitriu> aw1231: So, to increase your chances of being accepted, you should get familiar with the project
+14:37 &lt;aw1231> Alright, that is what I am doing now.
+14:38 &lt;sdumitriu> Get the sources, build the project, run it, explore it
+14:39 &lt;aw1231> Will do, thanks!
+14:40 &lt;marta__> has joined #phenotips
+14:40 &lt;marta__1> has quit
+14:43 &lt;akats> registered
+14:46 &lt;marta__> has quit
+15:01 &lt;marta__> has joined #phenotips
+15:22 &lt;akats> sdumitriu is there a physical IT help desk somewhere? They still haven't replied about the ethernet problem.
+15:23 &lt;sdumitriu> There is, not sure where
+15:27 &lt;akats> Ok. Thanks
+15:29 &lt;marta__1> has joined #phenotips
+15:30 &lt;marta__> has quit
+15:32 &lt;marta__> has joined #phenotips
+15:34 &lt;marta__1> has quit
+17:03 &lt;akats> sdumitriu: I have a few questions for you, when you have a moment
+17:13 &lt;shalin> has quit
+17:25 &lt;shalin> has quit
+17:58 &lt;akats> has quit
+17:58 &lt;akats1> has joined #phenotips
+17:59 &lt;marta__1> has joined #phenotips
+18:01 &lt;marta__> has quit
+18:02 &lt;sdumitriu> aw1231: How's it going?
+18:03 &lt;akats1> has quit
+18:32 &lt;mcupak> has quit
+18:49 &lt;sdumitriu> is now known as &lt;sdumitriu_[away]&gt;
+18:50 &lt;marta__1> has quit
+19:07 &lt;marta__> has joined #phenotips
+19:27 &lt;aw1231> sdmitriu_[away]: I am doing fine. I finished compiling phenotips and will experiment with it tonight.
+19:28 &lt;marta__1> has joined #phenotips
+19:30 &lt;marta__> has quit
+19:51 &lt;nairboon_> has quit
+20:02 &lt;aw1231> has quit
+21:02 &lt;sdumitriu> has joined #phenotips
+21:27 &lt;sdumitriu> has quit
+21:48 &lt;marta__1> has quit
+22:03 &lt;marta__> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20140224</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>b73812ab-6208-4fde-8d92-59d8c27499ae</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

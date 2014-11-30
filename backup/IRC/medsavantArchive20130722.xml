@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130722</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1374467930000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1374526998000</date>
+  <contentUpdateDate>1374526998000</contentUpdateDate>
+  <version>1.30</version>
+  <title>IRC Archive for channel #medsavant on 22 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #medsavant
+02:03 &lt;bvancea> has joined #medsavant
+08:32 &lt;bvancea> has joined #medsavant
+09:18 &lt;mcupak> has joined #medsavant
+10:21 &lt;sdumitriu> has joined #medsavant
+12:47 &lt;sdumitriu1> has joined #medsavant
+14:41 &lt;sdumitriu1> Hey kids, still waiting for those weekly status updates
+14:44 &lt;bvancea> hey sdumitriu1
+14:44 &lt;bvancea> sorry, I had it saved as a draft
+14:51 &lt;bvancea> each week I use the email from the previous week for the status, and I always forget to change the email subject
+14:51 &lt;bvancea> thank god for the undo feature
+15:06 &lt;mcupak> mine should be there now as well
+15:07 &lt;sdumitriu1> Thanks
+15:08 &lt;sdumitriu1> bvancea: I see that you're managing to do exactly what you set out to do
+15:08 &lt;sdumitriu1> You've discovered your velocity
+15:23 &lt;bvancea> sdumitriu: thanks :)
+15:28 &lt;bvancea> how did the phenotips release go last week?
+15:28 &lt;sdumitriu1> It didn't
+15:28 &lt;sdumitriu1> I still have one thing to implement
+15:29 &lt;bvancea> oh, I see
+15:29 &lt;bvancea> what do you have remaining?
+15:31 &lt;sdumitriu1> An authentication module that would allow integrating PhenoTips into LIMS (an MRS)
+15:31 &lt;sdumitriu1> It's required by one of our top users
+15:32 &lt;bvancea> I see
+15:32 &lt;bvancea> what's a MRS
+15:32 &lt;sdumitriu1> Medical Record System, I think
+15:33 &lt;sdumitriu1> http://www.ruro.com/software/lims-247/overview
+15:47 &lt;bvancea> O.o
+15:47 &lt;bvancea> nice
+17:03 &lt;bvancea> good night all</content>
+  <object>
+    <name>IRC.medsavantArchive20130722</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>6e8e0fd6-2e5b-4eb0-a6e6-0b52affef05d</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

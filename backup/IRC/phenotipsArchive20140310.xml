@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140310</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1394425045000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1394506296000</date>
+  <contentUpdateDate>1394506296000</contentUpdateDate>
+  <version>1.107</version>
+  <title>IRC Archive for channel #phenotips on 10 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;gauravsaini03> has joined #phenotips
+01:53 &lt;blink2> has quit
+02:07 &lt;mgsdcenter> has quit
+02:09 &lt;qubitex> has quit
+04:29 &lt;IonelPopescu> has joined #phenotips
+04:33 &lt;IonelPopescu> has quit
+04:34 &lt;gauravsaini03> has quit
+04:35 &lt;gauravsaini03> has joined #phenotips
+05:26 &lt;gauravsaini03> has quit
+05:29 &lt;gauravsaini03> has joined #phenotips
+06:58 &lt;SayAsh> has joined #phenotips
+08:02 &lt;blink2> has quit
+08:09 &lt;gauravsaini03> has quit
+08:41 &lt;IonelPopescu> has joined #phenotips
+09:03 &lt;IonelPopescu> has quit
+09:03 &lt;IonelPopescu> has joined #phenotips
+09:32 &lt;SayAsh> has quit
+10:00 &lt;SayAsh> has joined #phenotips
+10:17 &lt;new> has quit
+10:20 &lt;SayAsh> has quit
+11:13 &lt;SayAsh> has joined #phenotips
+11:44 &lt;GSOC-Dushyant> has quit
+11:45 &lt;GSOC-Dushyant> has joined #phenotips
+11:51 &lt;GSOC-Dushyant> has quit
+11:52 &lt;GSOC-Dushyant> has joined #phenotips
+12:10 &lt;SayAsh> has quit
+12:36 &lt;GSOC-Dushyant> has quit
+12:46 &lt;gauravsaini03> has joined #phenotips
+13:32 &lt;SayAsh> has joined #phenotips
+13:52 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+13:56 &lt;darklord> has joined #phenotips
+13:58 &lt;gauravsaini03> has quit
+14:50 &lt;aw1231> has joined #phenotips
+15:06 &lt;GSOC-Dushyant__> has joined #phenotips
+15:07 &lt;GSOC-Dushyant> has quit
+15:07 &lt;GSOC-Dushyant___> has joined #phenotips
+15:10 &lt;GSOC-Dushyant__> has quit
+15:15 &lt;aw1231> Hi GSOC-Dushyant___
+15:15 &lt;GSOC-Dushyant___> hello alan
+15:16 &lt;aw1231> You are applying for GSOC I assume?
+15:16 &lt;GSOC-Dushyant___> yes
+15:16 &lt;aw1231> What project? Or are you doing one of your own?
+15:17 &lt;GSOC-Dushyant___> I was interested in two projects : 1 is UI for a mobile web app and the other is machine learning methods for modelling
+15:24 &lt;GSOC-Dushyant___> Alan your introduction ?
+15:26 &lt;aw1231> Cool.  I'm most likely going to apply for the one related to medical ontologies.
+15:26 &lt;aw1231> I'm a student too.
+15:27 &lt;GSOC-Dushyant___> hmmm cool
+15:28 &lt;aw1231> :) Good luck!
+15:28 &lt;sdumitriu> Hey, don't forget that the student application period just started
+15:28 &lt;sdumitriu> "Don't delay, submit today!"
+15:29 &lt;aw1231> Will do!
+15:29 &lt;GSOC-Dushyant___> yes
+15:30 &lt;sdumitriu> The sooner you submit, the more constructive feedback the mentors can give you
+15:31 &lt;sdumitriu> And your application will be easier to remember than the dozens we get at the last moment
+15:36 &lt;GSOC-Dushyant___> i see
+15:36 &lt;GSOC-Dushyant___> thanks for the information
+15:49 &lt;SayAsh> has quit
+15:50 &lt;GSOC-Dushyant___> Hello
+15:50 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;
+15:50 &lt;GSOC-Dushyant___> i was getting this error while installing maven
+15:50 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+15:50 &lt;GSOC-Dushyant___> its giving me an error could not find tools.jar when its actualy there in the lib folder
+15:51 &lt;sdumitriu> GSOC-Dushyant___: Check that you have M2_HOME defined
+15:51 &lt;sdumitriu> And that Java is properly installed
+15:51 &lt;sdumitriu> What does "mvn -version" say?
+15:51 &lt;GSOC-Dushyant___> yes its installed
+15:52 &lt;GSOC-Dushyant___> Apache Maven 3.0.5 (r01de14724cdef164cd33c7c8c2fe155faf9602da; 2013-02-19 19:21:28+0530) Maven home: C:\Program Files\apache-maven-3.0.5 Java version: 1.7.0_51, vendor: Oracle Corporation Java home: C:\Program Files (x86)\Java\jre7 Default locale: en_IN, platform encoding: Cp1252 OS name: "windows 7", version: "6.1", arch: "x86", family: "windows" C:\Users\admin\My Documents\GitHub\phenotips>
+15:53 &lt;GSOC-Dushyant___> this path " C:\Program Files (x86)\Java\jre7/../lib/tools.jar" which the maven is generating does not seem to be proper
+15:53 &lt;GSOC-Dushyant___> the slashes do not seem to be in the right format
+15:54 &lt;sdumitriu> That should be fine, Java can handle both kinds of slashes
+15:55 &lt;sdumitriu> Sorry, but I have to go now, try to ask for help in #maven
+15:55 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;
+15:55 &lt;GSOC-Dushyant___> ok no problem
+16:00 &lt;GSOC-Dushyant> has quit
+16:01 &lt;aw1231> has quit
+16:03 &lt;scorpy> has joined #phenotips
+16:06 &lt;IonelPopescu> has quit
+16:24 &lt;mcupak> has quit
+16:26 &lt;scorpy> has quit
+16:26 &lt;todenis> has quit
+16:26 &lt;stinex> has quit
+16:39 &lt;GSOC-Dushyant___> has quit
+16:56 &lt;aw1231> has joined #phenotips
+17:39 &lt;aw1231> has quit
+18:41 &lt;darklord> has quit
+18:59 &lt;aw1231> has joined #phenotips
+19:07 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+20:23 &lt;IonelPopescu> has joined #phenotips
+20:39 &lt;aw1231> sdmitriu: I've submitted my application, what should I do next?
+20:39 &lt;aw1231> *sdumitriu
+20:43 &lt;sdumitriu> aw1231: Several things
+20:43 &lt;sdumitriu> - keep exploring PhenoTips, try to understand it better
+20:44 &lt;sdumitriu> - wait for feedback
+20:44 &lt;sdumitriu> - improve the application (you can edit it until the submission deadline)
+20:44 &lt;sdumitriu> - try to fix some bugs
+20:47 &lt;aw1231> I'm nervous to submit a bugfix, mostly because I don't know whether it will be acceptable.
+20:48 &lt;sdumitriu> Well, that's part of your training
+20:48 &lt;aw1231> :) alright
+20:51 &lt;sdumitriu> aw1231: Looking at your application, make sure you can provide Google with proof of enrollment; to be eligible, you must be considered a student on April 21
+20:51 &lt;sdumitriu> http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2014/proofofenrollment
+20:51 &lt;aw1231> Yes, I have.
+20:53 &lt;aw1231> has quit
+21:08 &lt;IonelPopescu> has quit
+21:11 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;
+21:42 &lt;SayAsh> has joined #phenotips
+22:23 &lt;SayAsh> has quit
+22:51 &lt;sonia> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140310</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f75cc7b6-43d0-4b08-b4d3-9f5c768f461f</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

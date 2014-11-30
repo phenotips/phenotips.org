@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130628</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372423096000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1372475108000</date>
+  <contentUpdateDate>1372475108000</contentUpdateDate>
+  <version>1.6</version>
+  <title>IRC Archive for channel #ccm on 28 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has joined #ccm
+09:51 &lt;ravigarg27> has joined #ccm
+13:13 &lt;sdumitriu1> has joined #ccm
+13:43 &lt;sdumitriu> has joined #ccm
+16:23 &lt;sdumitriu1> has joined #ccm
+23:05 &lt;sdumitriu> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130628</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>d29b8fd6-d130-41d8-9037-01f66f0f960b</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

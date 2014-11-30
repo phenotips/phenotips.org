@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140701</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1404188799000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1404252289000</date>
+  <contentUpdateDate>1404252289000</contentUpdateDate>
+  <version>1.9</version>
+  <title>IRC Archive for channel #ccm on 01 July 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;Not-930a> has joined #ccm
+07:45 &lt;Not-930a> [Pay2Spawn] dries007 pushed 1 commit to 1.6.4 [+0/-0/±2] http://git.io/jvjhuA
+07:45 &lt;Not-930a> [Pay2Spawn] dries007 8064a31 - Fixed $name issue
+07:46 &lt;Not-930a> [Pay2Spawn] dries007 pushed 1 commit to 1.6.4 [+0/-0/±1] http://git.io/_u_0jA
+07:46 &lt;Not-930a> [Pay2Spawn] dries007 a9a676e - version bump
+16:17 &lt;Not-930a> [Pay2Spawn] dries007 pushed 1 commit to master [+0/-0/±1] http://git.io/BB8WMg
+16:17 &lt;Not-930a> [Pay2Spawn] dries007 bf40d2e - Fixed special negative rewars
+18:04 &lt;Not-930a> [Pay2Spawn] dries007 pushed 1 commit to master [+0/-0/±4] http://git.io/lBZLZw
+18:04 &lt;Not-930a> [Pay2Spawn] dries007 8569945 - update for the matrix</content>
+  <object>
+    <name>IRC.ccmArchive20140701</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>c2702bbe-16e5-4cbd-8fce-82662cf46c98</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20140214</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1392366275000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1392434362000</date>
+  <contentUpdateDate>1392434362000</contentUpdateDate>
+  <version>1.5</version>
+  <title>IRC Archive for channel #medsavant on 14 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;mcupak> has joined #medsavant
+18:08 &lt;sdumitriu> has joined #medsavant
+21:47 &lt;sdumitriu1> has joined #medsavant
+22:16 &lt;sdumitriu2> has joined #medsavant
+22:19 &lt;sdumitriu1> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20140214</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>0b32dfc4-cd1e-4867-8008-768d4a2fa95d</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

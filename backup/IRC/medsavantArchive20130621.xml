@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130621</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1371830782000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1371856277000</date>
+  <contentUpdateDate>1371856277000</contentUpdateDate>
+  <version>1.51</version>
+  <title>IRC Archive for channel #medsavant on 21 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has joined #medsavant
+12:15 &lt;sdumitriu1> has joined #medsavant
+12:18 &lt;bvancea> hey sdumitriu1
+12:19 &lt;sdumitriu1> Hey
+12:19 &lt;sdumitriu1> How's it going?
+12:19 &lt;bvancea> pretty good
+12:19 &lt;bvancea> just came back from the conference
+12:19 &lt;sdumitriu1> How was the conference?
+12:19 &lt;bvancea> like 20 minutes ago
+12:19 &lt;bvancea> it was really nice
+12:19 &lt;bvancea> a really good practice for my diploma exam
+12:20 &lt;bvancea> some of the other presentation were also nice
+12:20 &lt;bvancea> there was this invited guest who was kind of boring
+12:20 &lt;bvancea> but it was nice overall
+12:21 &lt;bvancea> and how is your day?
+12:25 &lt;bvancea> hmmm, a little of topic, they've changed github a bit
+12:29 &lt;sdumitriu1> Fixed a bug
+12:30 &lt;sdumitriu1> Good so far
+12:30 &lt;sdumitriu1> Yes, I've seen the changes since a few days
+12:30 &lt;bvancea> hmm, I think I liked the old design more
+12:31 &lt;sdumitriu1> It'
+12:31 &lt;bvancea> this one is a little faster I guess, less ajax
+12:31 &lt;sdumitriu1> s harder to find things now, until I get used to it
+12:31 &lt;sdumitriu1> But I think it has a little more space for longer text
+12:31 &lt;bvancea> yeah
+12:32 &lt;bvancea> that minimalist design
+12:32 &lt;bvancea> with buttons/menus being just icons
+12:32 &lt;bvancea> and no text
+12:32 &lt;bvancea> is a little confusing for me
+12:32 &lt;bvancea> but its sort of a trend these days
+12:33 &lt;bvancea> anyway, I'll be working on the variant parser/indexer
+12:33 &lt;bvancea> its waaaay to slow
+12:34 &lt;bvancea> I've checked it a couple of this last night, the lowest time I got was around 15 minutes for around 200k variants
+12:34 &lt;bvancea> which is annoyingly slow
+12:35 &lt;bvancea> I think my mistake might come from the fact that I'm adding one variant at a time to the SolrServer class
+12:36 &lt;bvancea> and I think that actually sends some data to solr
+12:36 &lt;bvancea> even if its not commited
+12:36 &lt;bvancea> I should group some variants before adding them
+12:38 &lt;sdumitriu1> Yes
+12:40 &lt;bvancea> I'm not sure how I thought it doesn't send the file to solr
+12:41 &lt;bvancea> since if it didn't, I should have gotten an out of memory exception
+13:04 &lt;bvancea> nice, a lot of commits today
+13:04 &lt;bvancea> :D
+14:28 &lt;bvancea> so I've added a buffer for the variants in the indexing service
+14:28 &lt;bvancea> and I only send the documents to solr when I reach a certain number of variants
+14:28 &lt;bvancea> and now it takes around 40-50 seconds to index the 200k variants
+14:28 &lt;sdumitriu1> Much better
+14:29 &lt;bvancea> I'm gonna play with the buffer size a bit
+14:29 &lt;bvancea> see how much I can give it without having to add extra space to the jvm memory
+14:30 &lt;bvancea> I've got 42 seconds for a buffer size of 1500
+19:11 &lt;sdumitriu> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20130621</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>8548b7f6-2884-4797-a467-d1919bd4c335</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

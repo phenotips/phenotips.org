@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140329</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1396091828000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1396145833000</date>
+  <contentUpdateDate>1396145833000</contentUpdateDate>
+  <version>1.21</version>
+  <title>IRC Archive for channel #phenotips on 29 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has joined #phenotips
+07:31 &lt;sdumitriu> has joined #phenotips
+08:32 &lt;sdumitriu> Hey bvancea
+08:37 &lt;sdumitriu1> has joined #phenotips
+08:38 &lt;sdumitriu1> has quit
+09:48 &lt;bvancea> hey sdumitriu
+09:48 &lt;bvancea> did you manage to finish the releases yesterday?
+10:41 &lt;sdumitriu> No
+10:41 &lt;sdumitriu> But we're very close
+12:51 &lt;bvancea> nice
+13:46 &lt;SayAsh> has joined #phenotips
+13:47 &lt;SayAsh> Hi, When we will get the comments on the proposals?
+13:54 &lt;sdumitriu> Hi SayAsh
+13:54 &lt;sdumitriu> This weekend
+13:54 &lt;sdumitriu> So today or tomorrow
+13:55 &lt;SayAsh> ok, feeling a bit nervous now by hearing this
+15:16 &lt;SayAsh> has quit
+19:06 &lt;bvancea> has quit
+20:59 &lt;sdumitriu> has quit
+22:12 &lt;sdumitriu> has joined #phenotips
+22:17 &lt;sdumitriu> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140329</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>616f0e72-62d7-4dd6-a7af-749253897130</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

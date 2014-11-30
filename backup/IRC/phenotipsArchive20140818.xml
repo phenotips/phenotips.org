@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140818</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1408371007000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1408407127000</date>
+  <contentUpdateDate>1408407127000</contentUpdateDate>
+  <version>1.41</version>
+  <title>IRC Archive for channel #phenotips on 18 August 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu1> has quit
+10:13 &lt;sdumitriu1> has joined #phenotips
+11:12 &lt;IJessa> has joined #phenotips
+11:12 &lt;IJessa> sergiu?
+11:20 &lt;sdumitriu> Yes
+11:20 &lt;sdumitriu> I'll bee at the office soon
+11:21 &lt;sdumitriu> IJessa: Tests are working?
+11:22 &lt;IJessa> they're working but there is a lot of bugs
+11:23 &lt;IJessa> is there a way to run the xwiki server just standalone without running the tests?
+11:25 &lt;sdumitriu> WDYM?
+11:25 &lt;sdumitriu> target/package/start.sh
+11:40 &lt;IJessa> thanks
+11:41 &lt;IJessa> it worked
+11:55 &lt;sdumitriu> IJessa: Change of plans, I'm not going to be there today
+11:55 &lt;sdumitriu> Ask here if you have other questions
+11:58 &lt;IJessa> the only think is a lot of the build is missing which is kinda making it hard to test, the measurements, genotype info and all the phenotype info are all missing so i'm stuck at a point where I can't really continue since all of the rest of the tests depend on the inputed phenotype info
+11:58 &lt;sdumitriu> OK, I'll work on fixing that today
+12:00 &lt;IJessa> thanks
+12:13 &lt;sdumitriu2> has joined #phenotips
+12:41 &lt;sdumitriu2> has quit
+12:42 &lt;sdumitriu2> has joined #phenotips
+12:49 &lt;IJessa1> has joined #phenotips
+12:49 &lt;IJessa> has quit
+12:51 &lt;IJessa1> has quit
+12:59 &lt;sdumitriu2> has quit
+13:00 &lt;sdumitriu2> has joined #phenotips
+13:17 &lt;sdumitriu2> has quit
+13:18 &lt;sdumitriu2> has joined #phenotips
+13:42 &lt;sdumitriu2> has quit
+13:44 &lt;sdumitriu2> has joined #phenotips
+13:48 &lt;sdumitriu2> has quit
+13:49 &lt;sdumitriu2> has joined #phenotips
+14:05 &lt;sdumitriu2> has quit
+14:07 &lt;sdumitriu2> has joined #phenotips
+14:31 &lt;sdumitriu> has quit
+14:32 &lt;sdumitriu2> has quit
+14:35 &lt;sdumitriu> has joined #phenotips
+17:38 &lt;IJessa> has joined #phenotips
+17:38 &lt;IJessa> has quit
+20:11 &lt;IJessa> has joined #phenotips
+20:12 &lt;IJessa> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140818</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>6a7281a6-83da-44ee-9cfa-145a073381bf</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

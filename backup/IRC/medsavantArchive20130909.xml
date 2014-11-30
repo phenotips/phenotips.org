@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130909</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1378714101000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1378757673000</date>
+  <contentUpdateDate>1378757673000</contentUpdateDate>
+  <version>1.20</version>
+  <title>IRC Archive for channel #medsavant on 09 September 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;mcupak> has joined #medsavant
+10:13 &lt;sdumitriu1> has joined #medsavant
+10:22 &lt;sdumitriu1> has joined #medsavant
+16:09 &lt;bvancea> has joined #medsavant
+16:10 &lt;bvancea> hey sdumitriu1
+16:10 &lt;sdumitriu1> Hey
+16:11 &lt;bvancea> I finally got a working power plug adapter for my laptop
+16:11 &lt;bvancea> I'm in Switzerland now
+16:11 &lt;bvancea> :D
+16:11 &lt;sdumitriu1> Nice
+16:11 &lt;bvancea> I was so sure I took everything into account
+16:11 &lt;sdumitriu1> Did you already start school?
+16:11 &lt;bvancea> even check that I'll have internet
+16:11 &lt;bvancea> no no
+16:11 &lt;bvancea> on the 17th
+16:12 &lt;bvancea> but the first week will be just random activities
+16:12 &lt;bvancea> which is awesome, since I'll have time to wrap up with gsoc
+16:14 &lt;bvancea> I'm a little annoyed that I lost the weekend, I planned to work a little, but I couldn't charge my laptop, and all electric stores seem to be closed here on weekends
+16:14 &lt;bvancea> how's the phenotips release going?
+16:14 &lt;sdumitriu1> Still missing some pieces</content>
+  <object>
+    <name>IRC.medsavantArchive20130909</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>454958ba-5c0c-40b2-a468-1c3ad3602e79</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

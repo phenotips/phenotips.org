@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130709</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1373373319000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1373401169000</date>
+  <contentUpdateDate>1373401169000</contentUpdateDate>
+  <version>1.65</version>
+  <title>IRC Archive for channel #medsavant on 09 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #medsavant
+10:50 &lt;sdumitriu> Hey bvancea, what's up?
+10:50 &lt;bvancea> hey
+10:50 &lt;bvancea> pretty good
+10:51 &lt;bvancea> I've been struggling with something for the last 2 hours
+10:51 &lt;bvancea> just got it to work
+10:53 &lt;bvancea> now I'm going to start working on the result set classes
+10:53 &lt;bvancea> some queries can either return some terms, or the whole entity
+10:54 &lt;bvancea> and how are you?
+10:55 &lt;sdumitriu> Good
+10:56 &lt;sdumitriu> Preparing to go to the office
+10:57 &lt;bvancea> oh, I see
+10:59 &lt;bvancea> I tend to forget about the timezone difference :)
+12:01 &lt;sdumitriu1> has joined #medsavant
+14:28 &lt;bvancea> I pushed some of my work from the last week, forgot to do it before
+16:06 &lt;marta> bvancea: call me lazy, but i would totally write a script to generate most of this stuff: https://github.com/compbio-UofT/medsavant/commit/792484484d029e1d64cb5d2578cde0a68c986aaa#L5R20
+16:07 &lt;marta> "generate the generator" :)
+16:07 &lt;bvancea> hello marta
+16:08 &lt;marta> (hi)
+16:08 &lt;bvancea> you mean, the keywords and lowercasing
+16:08 &lt;bvancea> ?
+16:08 &lt;sdumitriu1> Yes
+16:08 &lt;marta> yes
+16:09 &lt;bvancea> well, I was always a supporter of this kind of lazy-ness
+16:09 &lt;bvancea> and how would that work?
+16:09 &lt;sdumitriu1> I guess that's an artifact of the fact that grammars are case sensitive
+16:09 &lt;sdumitriu1> And query languages are case insensitive
+16:09 &lt;marta> well with maven you can always run the generating script before you actually need to use the grammar
+16:11 &lt;sdumitriu1> bvancea: One way is to use this: http://maven.apache.org/plugins/maven-remote-resources-plugin/process-mojo.html
+16:11 &lt;marta> yes, sdumitriu1 can help with that, he's the maven maven
+16:11 &lt;marta> ok, enough puns for today :)
+16:11 &lt;bvancea> haha
+16:11 &lt;bvancea> :)))
+16:12 &lt;sdumitriu1> But the remote resources plugin works with "remote" resources
+16:12 &lt;sdumitriu1> So that would add another step...
+16:12 &lt;sdumitriu1> So that would add another module...
+16:13 &lt;bvancea> remote as in a different module in a maven repository
+16:13 &lt;bvancea> could just as well be my own local repo, right?
+16:13 &lt;bvancea> hehe
+16:13 &lt;sdumitriu1> But there's the http://code.google.com/p/velocity-maven-plugin/wiki/HowToUseThePlugin
+16:13 &lt;bvancea> I haven't created the new modules yet, since Miro hasn't commented anything on it
+16:13 &lt;bvancea> I do hope he'll agree
+16:13 &lt;bvancea> :D
+16:13 &lt;sdumitriu1> Which works with resources from another directory
+16:14 &lt;bvancea> nice
+16:14 &lt;sdumitriu1> But I'm not as lazy as Marta, so I think this can wait
+16:15 &lt;sdumitriu1> It's OK to have that verbose boilerplate code in the grammar file
+16:15 &lt;bvancea> so the main idea would be to have grammar file as a resource, then use the plug-in to insert the keywords + lowercase ?
+16:15 &lt;sdumitriu1> Yes
+16:15 &lt;bvancea> nice
+16:15 &lt;bvancea> I'll try it
+16:15 &lt;sdumitriu1> src/main/sablecc-template/jpql.grammar.vm
+16:16 &lt;bvancea> but after I get more work done on the actual module functionality
+16:16 &lt;sdumitriu1> velocity-maven-plugin transforms that into src/main/sablecc/jpql.grammar
+16:16 &lt;bvancea> hmmm
+16:16 &lt;sdumitriu1> sablecc-maven-plugin transforms that into a parser
+16:16 &lt;bvancea> so the .vm file will contain some velocity variables
+16:17 &lt;bvancea> which will get replaced by the plug-in?
+16:17 &lt;bvancea> I think populated is a better word
+16:18 &lt;sdumitriu1> And instead of a, b, c... you just have:
+16:18 &lt;sdumitriu1> #foreach ($letter in ['a', 'b', 'c', ... 'z'])
+16:18 &lt;sdumitriu1> #end
+16:18 &lt;sdumitriu1> There are ways to get a..z nicely without explicitly listing every letter
+16:19 &lt;bvancea> oh
+16:19 &lt;bvancea> nice :D</content>
+  <object>
+    <name>IRC.medsavantArchive20130709</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>ae89bb34-2762-4ab6-9033-2900679d4a3a</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

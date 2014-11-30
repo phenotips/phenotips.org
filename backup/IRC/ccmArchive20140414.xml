@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140414</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1397448451000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1397533672000</date>
+  <contentUpdateDate>1397533672000</contentUpdateDate>
+  <version>1.8</version>
+  <title>IRC Archive for channel #ccm on 14 April 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #ccm
+03:04 &lt;sdumitriu1> has joined #ccm
+05:45 &lt;sdumitriu> has joined #ccm
+14:33 &lt;SayAsh> has joined #ccm
+18:33 &lt;sdumitriu1> has joined #ccm
+19:52 &lt;vijay13> has joined #ccm
+21:33 &lt;groundnuty> has joined #ccm
+23:47 &lt;groundnuty> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20140414</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>d773786d-6aaa-45d4-872e-7a81dec03231</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

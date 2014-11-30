@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140331</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1396276277000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1396314246000</date>
+  <contentUpdateDate>1396314246000</contentUpdateDate>
+  <version>1.58</version>
+  <title>IRC Archive for channel #phenotips on 31 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;allasm> has quit
+10:31 &lt;allasm> has joined #phenotips
+12:06 &lt;bvancea> has joined #phenotips
+12:24 &lt;akats> has joined #phenotips
+12:58 &lt;akats> Michael is probably right. The approach of taking the category doesn't seem to be working too well. Going one step up the tree is probably best.
+12:59 &lt;sdumitriu> Why?
+13:02 &lt;akats> Well if the two patients are matched on the same phenotype, then it gives the category which is that phenotype. Actually now that I think about it, this is the only case for which it makes sense to go up the tree. So that's something I should do, rather than always going up the tree.
+13:04 &lt;sdumitriu> OK, sounds good
+13:54 &lt;akats> We have a slight problem. Due to recent changes in PhenoTips repo, particularly in Feature and Patient interfaces, the Patient-Network repo does not build.
+13:54 &lt;sdumitriu> Hm, working on that repo later today
+13:54 &lt;sdumitriu> The build has been failing for a week
+13:54 &lt;sdumitriu> Are you sure you have the latest version?
+13:55 &lt;akats> I just pulled it. But I'll double check.
+13:55 &lt;akats> Up to date
+13:56 &lt;sdumitriu> OK, will check really soon
+13:57 &lt;akats> I'm building the remote project for a fresh install test, should I just roll back my
+13:57 &lt;akats> PhenoTips?
+13:58 &lt;sdumitriu> What remote project?
+13:58 &lt;akats> Gene matcher
+13:58 &lt;sdumitriu> Right
+13:58 &lt;sdumitriu> Hm, no
+13:58 &lt;sdumitriu> Can it wait an hour?
+13:58 &lt;akats> Sure. I'll go for lunch then.
+13:58 &lt;akats> Perfect actually
+15:41 &lt;sdumitriu> akats: The build should be working now
+15:43 &lt;akats> Thank you!
+16:03 &lt;akats> sdumitriu: I have a few components that are trying to overwrite each other. I've deleted the duplicates (the ones that have a date attached to them), but there are still a few overwrite warnings left. Off the top of your head, any ideas?
+16:16 &lt;bvancea> has quit
+16:26 &lt;akats> sdumitriu: Has anyone built phenomecentral after all the pushes?
+16:26 &lt;sdumitriu> Only Jenkins
+16:28 &lt;akats> Well, I built it once. Added patient-network, and my stuff. Ended up with "double" header on the front page. Thinking that maybe it's something I did, I rebuilt phenomecentral and ran it by itself. Still have a double header, and got errors
+16:28 &lt;akats> com.xpn.xwiki.XWikiException: Error number 3002 in 3: The attachment could not be found in the filesystem attachment store.
+16:29 &lt;akats> All of them like this one, it seems
+16:29 &lt;sdumitriu> Right, that's a known issue
+16:29 &lt;sdumitriu> There's a bug in one of the XWiki Maven plugins
+16:29 &lt;sdumitriu> You can fix it by going to the administration, and import the full pc xar
+16:30 &lt;akats> "full pc"? As in PhenoTips?
+16:31 &lt;akats> oh phenomecentral
+16:31 &lt;sdumitriu> PhenomeCentral
+16:51 &lt;akats> Hmm... didn't fix the problem on either instances. Just to clarify, you mean to go to import and select phenomecentral.org/ui/target/*.xar and import all, correct?
+16:51 &lt;sdumitriu> Yes
+17:13 &lt;akats> This is one of these days. I tried replacing PatientSheet, all UIX files, and some others from the PhenoTips target xar, but it didn't help. I still get this error when opening the "Clinical symptoms" tab. I don't want to distract you from work, so if you'd don't have off the top of the head solution, I'll give it a go. https://gist.github.com/soLEED/44d06261aebd1c98f802
+17:14 &lt;sdumitriu> You need to update the version of commons-lang3 that's in libs
+17:14 &lt;sdumitriu> We've updated to 3.3.1 last week
+17:15 &lt;akats> Gotcha
+17:24 &lt;akats> sdumitriu: Just a heads up, the problem wasn't the new version missing, it was the old version still being there.
+17:24 &lt;sdumitriu> OK
+17:24 &lt;sdumitriu> It shouldn't be in a clean install
+17:30 &lt;sdumitriu> allasm: When disabling "Allow user tokens", pushing always fails
+17:31 &lt;sdumitriu> allasm: What's the intended behavior for that?
+17:39 &lt;sdumitriu> allasm: When updates are disabled, the Push UI should not allow that option to be selected
+17:57 &lt;mcupak> has quit
+18:10 &lt;akats> There's a bug in the "Phenotypic features breakdown", but I think it's not in my code. When looking at the breakdown, for the info for the current patient (not the remote) is "The current patient (P0000004) presented with: Undisclosed information"
+18:11 &lt;sdumitriu> Hm...
+18:36 &lt;akats> has quit
+21:03 &lt;sdumitriu> has quit
+21:04 &lt;sdumitriu> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20140331</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f0635313-1659-42dd-9727-30a3bcecb47d</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

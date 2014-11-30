@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>PhenoTips</web>
+  <name>OrgSkin</name>
+  <language />
+  <defaultLanguage>en</defaultLanguage>
+  <translation>0</translation>
+  <creator>XWiki.marta</creator>
+  <creationDate>1415494185000</creationDate>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.marta</contentAuthor>
+  <date>1417025972000</date>
+  <contentUpdateDate>1415501546000</contentUpdateDate>
+  <version>5.18</version>
+  <title />
+  <comment />
+  <minorEdit>true</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content />
+  <object>
+    <name>PhenoTips.OrgSkin</name>
+    <number>0</number>
+    <className>XWiki.JavaScriptExtension</className>
+    <guid>a5ed7342-a1a0-42d9-9c9b-d8a939c44cc5</guid>
+    <class>
+      <name>XWiki.JavaScriptExtension</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>5</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <name>code</name>
+        <number>2</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>4</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>3</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage=Always on this page|onDemand=On demand|always=Always on this wiki</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <property>
+      <cache>long</cache>
+    </property>
+    <property>
+      <code>(function() {&#xd;
+  var init = function() {&#xd;
+    var i =new Element('img',  {alt:"Fork me on GitHub", src:"https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", "style":"position: absolute; top: 0; right: 0; border: 0;"})&#xd;
+    var a = new Element('a', {href: "https://github.com/phenotips/phenotips", "target": "_blank"});&#xd;
+    a.update(i);&#xd;
+    $('body').insert({bottom: a});&#xd;
+  };&#xd;
+&#xd;
+  (XWiki.domIsLoaded &amp;&amp; init()) || document.observe("xwiki:dom:loaded", init);&#xd;
+}())&#xd;
+</code>
+    </property>
+    <property>
+      <name></name>
+    </property>
+    <property>
+      <parse>0</parse>
+    </property>
+    <property>
+      <use>always</use>
+    </property>
+  </object>
+  <object>
+    <name>PhenoTips.OrgSkin</name>
+    <number>0</number>
+    <className>XWiki.StyleSheetExtension</className>
+    <guid>138db21d-954f-4074-83c1-fb9792aa4c82</guid>
+    <class>
+      <name>XWiki.StyleSheetExtension</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>5</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <name>code</name>
+        <number>2</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>4</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>3</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage=Always on this page|onDemand=On demand|always=Always on this wiki</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <property>
+      <cache>long</cache>
+    </property>
+    <property>
+      <code>html {&#xd;
+  background: #333;&#xd;
+}&#xd;
+h1, h2, h3, h4, h5, h6 {&#xd;
+  font-variant: small-caps;&#xd;
+}&#xd;
+&#xd;
+#companylogo a img {&#xd;
+  padding: 1.5em 0;&#xd;
+  height: 50px;&#xd;
+}&#xd;
+#headerglobal {&#xd;
+  padding: 0 10%;&#xd;
+  -moz-box-sizing: border-box;&#xd;
+  box-sizing: border-box;&#xd;
+}&#xd;
+#mainmenu {&#xd;
+  display: none;&#xd;
+}&#xd;
+#contentmenu {&#xd;
+  background-color: transparent;&#xd;
+  background-image: none;&#xd;
+  border: 0 none;&#xd;
+  float: right;&#xd;
+}&#xd;
+#contentmenu .leftmenu {&#xd;
+  float: right;&#xd;
+  padding-left: 0;&#xd;
+  position: relative;&#xd;
+}&#xd;
+.main {&#xd;
+  padding: 0;&#xd;
+}&#xd;
+#contentcontainer {&#xd;
+  padding: 0 10%;&#xd;
+}&#xd;
+#body.hideright #contentcolumn .main {&#xd;
+  margin-left: 225px;&#xd;
+}&#xd;
+#leftPanels {&#xd;
+  margin-top: 15px;&#xd;
+}&#xd;
+#leftPanels .panel {&#xd;
+  margin-left: 0;&#xd;
+}&#xd;
+#body #mainContentArea {&#xd;
+  padding: 0;&#xd;
+}&#xd;
+#mainContentArea, #mainEditArea {&#xd;
+  border: none;&#xd;
+}&#xd;
+.actionmenu a, .actionmenu a:visited {&#xd;
+  font: normal normal 700 1em/1.8em sans-serif;&#xd;
+  text-transform: none !important;&#xd;
+}&#xd;
+.actionmenu strong {&#xd;
+  font-weight: normal;&#xd;
+}&#xd;
+&#xd;
+.box, .plainmessage, fieldset.xwikimessage {&#xd;
+  background-image: none;&#xd;
+  background-color: #f5f5f5;&#xd;
+  border: 1px solid #e3e3e3;&#xd;
+  border-radius: 4px;&#xd;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;&#xd;
+  margin-bottom: 20px;&#xd;
+  min-height: 20px;&#xd;
+}&#xd;
+div.box {&#xd;
+  padding: 19px;&#xd;
+}&#xd;
+.infomessage {&#xd;
+  background-color: #d9edf7;&#xd;
+  border-color: #bce8f1;&#xd;
+  color: #31708f;&#xd;
+}&#xd;
+.warningmessage {&#xd;
+  background-color: #fcf8e3;&#xd;
+  border-color: #faebcc;&#xd;
+  color: #8a6d3b;&#xd;
+}&#xd;
+.errormessage {&#xd;
+  background-color: #f2dede;&#xd;
+  border-color: #ebccd1;&#xd;
+  color: #a94442;&#xd;
+}&#xd;
+.xwikimessage th {&#xd;
+  text-transform: none;&#xd;
+}</code>
+    </property>
+    <property>
+      <name></name>
+    </property>
+    <property>
+      <parse>0</parse>
+    </property>
+    <property>
+      <use>always</use>
+    </property>
+  </object>
+  <object>
+    <name>PhenoTips.OrgSkin</name>
+    <number>0</number>
+    <className>XWiki.XWikiSkins</className>
+    <guid>cf538209-8721-419b-ab31-6f90cdd02e16</guid>
+    <class>
+      <name>XWiki.XWikiSkins</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <baseskin>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>baseskin</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>Base Skin</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </baseskin>
+      <edit.vm>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>edit.vm</name>
+        <number>9</number>
+        <picker>0</picker>
+        <prettyName>Edit</prettyName>
+        <rows>15</rows>
+        <size>80</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </edit.vm>
+      <footer.vm>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>footer.vm</name>
+        <number>6</number>
+        <picker>0</picker>
+        <prettyName>Footer</prettyName>
+        <rows>15</rows>
+        <size>80</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </footer.vm>
+      <header.vm>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>header.vm</name>
+        <number>5</number>
+        <picker>0</picker>
+        <prettyName>Header</prettyName>
+        <rows>15</rows>
+        <size>80</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </header.vm>
+      <logo>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>logo</name>
+        <number>3</number>
+        <picker>0</picker>
+        <prettyName>Logo</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </logo>
+      <name>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <style.css>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>style.css</name>
+        <number>4</number>
+        <picker>0</picker>
+        <prettyName>Style</prettyName>
+        <rows>15</rows>
+        <size>80</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </style.css>
+      <view.vm>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>view.vm</name>
+        <number>8</number>
+        <picker>0</picker>
+        <prettyName>View</prettyName>
+        <rows>15</rows>
+        <size>80</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </view.vm>
+      <viewheader.vm>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>PureText</editor>
+        <name>viewheader.vm</name>
+        <number>7</number>
+        <picker>0</picker>
+        <prettyName>View Header</prettyName>
+        <rows>15</rows>
+        <size>80</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </viewheader.vm>
+    </class>
+    <property>
+      <baseskin>PhenoTips.Skin</baseskin>
+    </property>
+    <property>
+      <edit.vm></edit.vm>
+    </property>
+    <property>
+      <footer.vm>#includeTopic('PhenoTips.Footer')</footer.vm>
+    </property>
+    <property>
+      <header.vm></header.vm>
+    </property>
+    <property>
+      <logo></logo>
+    </property>
+    <property>
+      <name>PhenoTips.org skin</name>
+    </property>
+    <property>
+      <style.css></style.css>
+    </property>
+    <property>
+      <view.vm></view.vm>
+    </property>
+    <property>
+      <viewheader.vm></viewheader.vm>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130818</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1376851569000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1376884694000</date>
+  <contentUpdateDate>1376884694000</contentUpdateDate>
+  <version>1.19</version>
+  <title>IRC Archive for channel #ccm on 18 August 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #ccm
+23:19 &lt;lisi261> has joined #ccm
+23:19 &lt;lisi261> holaa
+23:24 &lt;lisi261> algun@ bebe viv@ por aki que quiera hablar?
+23:24 &lt;sdumitriu> Hi lisi261
+23:24 &lt;sdumitriu> I think you're in the wrong place
+23:25 &lt;lisi261> sdumitriu yo no hablo ingles yo hBLO ESPAÑOL
+23:27 &lt;lisi261> because you say
+23:28 &lt;lisi261> sdumitriu
+23:30 &lt;lisi261> :-*
+23:31 &lt;lisi261> hello how are you, how old are you
+23:40 &lt;lisi261> Helloo
+23:40 &lt;lisi261> algun@ bebe viv@ por aki que quiera hablar?
+23:42 &lt;lisi261> hello my love how are you
+23:49 &lt;lisi261> holaa  que clase de sala es esta nadie conversaa nadie habla, que les pasa? hablen vale
+23:49 &lt;lisi261> hi what kind of room is this one speaks no one speaks, that happens? speak it
+23:50 &lt;lisi261> >:o
+23:51 &lt;lisi261> coño hay alguien vivo aqui?
+23:58 &lt;lisi261> has left #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130818</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>7b17f49a-b528-4f0c-bda3-318fde5f9fcf</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

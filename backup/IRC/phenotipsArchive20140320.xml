@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140320</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395297767000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395373998000</date>
+  <contentUpdateDate>1395373998000</contentUpdateDate>
+  <version>1.157</version>
+  <title>IRC Archive for channel #phenotips on 20 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;tian2992> has quit
+03:30 &lt;ruthgrace> has quit
+08:30 &lt;tian2992> has joined #phenotips
+08:42 &lt;Shubham1> has quit
+10:50 &lt;aw1231> has quit
+12:34 &lt;Shubham> has quit
+13:18 &lt;mcupak> has quit
+13:40 &lt;qwebirc63957> has quit
+14:24 &lt;gauravsaini03> has joined #phenotips
+14:25 &lt;akats> has joined #phenotips
+14:25 &lt;akats> allasm: This might be useful http://www.modern.ie/en-us/virtualization-tools#downloads
+14:28 &lt;gauravsaini03> has left #phenotips
+15:34 &lt;akats> sdumitriu: So there is not way to use a hibernate class without having a configuration xml file for it?
+15:35 &lt;sdumitriu> There is
+15:35 &lt;sdumitriu> Why do you say that?
+15:36 &lt;akats> I haven't been able to find it through google, and I keep getting the "Unknown entity" error
+16:01 &lt;bvancea> has joined #phenotips
+17:00 &lt;tian2992> sdumitriu: did you have a chance to check the IC predictor?
+17:02 &lt;sdumitriu> Sorry tian2992, that meeting lasted longer, and after that another meeting started that lasted until close to midnight
+17:02 &lt;sdumitriu> I'll check today
+17:03 &lt;akats> has left #phenotips
+17:15 &lt;akats> has joined #phenotips
+17:21 &lt;akats> sdumitriu: I have a question for you. https://gist.github.com/soLEED/5c0f493ca9cc1721112e
+17:25 &lt;sdumitriu> akats: Answered
+17:27 &lt;akats> Thank you
+17:42 &lt;mikola> has joined #phenotips
+17:43 &lt;mikola> Hello everybody.
+17:44 &lt;mikola> I am interested in building phenotips application and contributing to it. Can I post my questions here?
+17:45 &lt;nairboon> has quit
+17:50 &lt;sdumitriu> Hi mikola, sure
+17:50 &lt;mikola> First of let me introduce myself.
+17:51 &lt;mikola> My name is Mikalai Parafeniuk. I am a student from Belarus.
+17:52 &lt;mikola> Right now I am trying to fix some beginner bugs in project. I need some basic advices about development process.
+17:52 &lt;mikola> I have built the project and run it locally as it is described on github.
+17:53 &lt;sdumitriu> Oh, right
+17:53 &lt;sdumitriu> You asked to be assigned issues
+17:53 &lt;mikola> Which ide should i use for the project, how can I speed up the build process?
+17:53 &lt;sdumitriu> Forgot to answer, you don't need to be assigned explicitly, you can just work on those issues
+17:53 &lt;mikola> Total time: 9:27.708s
+17:53 &lt;mikola> [INFO] Finished at: Fri Mar 21 00:40:25 FET 2014
+17:56 &lt;mikola> Don't worry it is not a problem. I have already started my work.
+17:57 &lt;mikola> So, how can I improve my performance? I think that building project for 10 minutes every time is not effective.
+17:58 &lt;sdumitriu> Is that time consisten between builds?
+17:59 &lt;sdumitriu> The first build should indeed take a lot of time, but after that it should be lower
+17:59 &lt;sdumitriu> There are several things you can do
+17:59 &lt;sdumitriu> One is to build through an IDE
+17:59 &lt;sdumitriu> We try to be IDE-agnostic, so you can use what you want
+17:59 &lt;mikola> First build took about an hour to download all dependencies.
+17:59 &lt;sdumitriu> But it would be better to use something with good support for Maven
+18:00 &lt;sdumitriu> I prefer Eclipse, other prefer IntelliJ IDEA
+18:00 &lt;sdumitriu> IDEA has better support for Maven
+18:01 &lt;sdumitriu> The other thing is to not rebuild everything, but just the modules you're editing, then copy the jars you get in target/ to the running instance, and restart the server
+18:01 &lt;sdumitriu> That works well for jar modules
+18:02 &lt;sdumitriu> For ui modules, which end up in .xar, you can change the direction of the workflow and edit in the running instance, and export back the documents once you're happy with the results
+18:02 &lt;mikola> There was nearly a day between builds.
+18:02 &lt;sdumitriu> That's much faster than rebuilding the code
+18:04 &lt;sdumitriu> Example editing in the browser: http://localhost:8080/bin/edit/PhenoTips/PatientSheetCode?editor=object
+18:04 &lt;sdumitriu> You can quick save and refresh a patient profile to see the new code live
+18:05 &lt;sdumitriu> Once you save and view, you'll see an Export -> XAR entry in the menu
+18:05 &lt;sdumitriu> That is a .zip file with the source XML which you can copy back into the proper location in the source tree
+18:05 &lt;sdumitriu> Run "mvn xar:format" in the module where that XML file is (the directory with a src/ and a pom.xml) to clean up the file
+18:13 &lt;mikola> So the resources file which are the mix of xml and some language which starts with # shouldn't be edit manually? They can be edited directly in browser?
+18:14 &lt;tian2992> sdumitriu: thanks :)
+18:14 &lt;sdumitriu> They can be edited in the browser for faster results
+18:14 &lt;sdumitriu> But you can edit them on disk if you want to
+18:14 &lt;mikola> Cool %)
+18:14 &lt;mikola> :)
+18:15 &lt;sdumitriu> That's faster if you have to make minor changes and are sure of the results
+18:16 &lt;mikola> I have tried the link you provided.
+18:17 &lt;mikola> I can see some script like this http://awesomescreenshot.com/0ef2iw5kf7
+18:17 &lt;mikola> But after clicking "Save and view summary" button I can't find appropriate option in export list.
+18:18 &lt;mikola> I can see only pdf, rtf, html options. Maybe I have clicked the wrong button?
+18:20 &lt;akats> sdumitriu: I'm I being totally unreasonable here? https://gist.github.com/soLEED/9675194
+18:20 &lt;sdumitriu> Are you logged in as the Admin account?
+18:20 &lt;sdumitriu> Only admins can access that
+18:21 &lt;sdumitriu> mikola: By default you can log in with user: Admin pass: admin (case sensitive)
+18:21 &lt;mikola> I guess no. I just registered simple user.
+18:21 &lt;sdumitriu> akats: Hm, let me check
+18:21 &lt;mikola> sdmitriu: Thanks. I think that I missed that in user guide.
+18:22 &lt;sdumitriu> akats: Weird...
+18:24 &lt;mikola> sdumitriu: It works with admin rights.
+18:28 &lt;mikola> sdumitriu: I am quite impressed with project. The project size at my home directory is 1.2 GB and it starts with maven command and script execution. Also I am impressed because in pom.xml you have defined &lt;coverage.instructionRatio>1.00&lt;/coverage.instructionRatio>. Does it really mean 100% test coverage?
+18:33 &lt;mikola> Thanks for the help. I think now I should learn some XWiki basics and setup preferred IDE to start work.
+18:34 &lt;sdumitriu> Yes
+18:34 &lt;sdumitriu> I mean yes, 100% test coverage
+18:34 &lt;sdumitriu> Although not in all modules
+18:34 &lt;sdumitriu> Some are lacking tests
+18:35 &lt;mikola> But this is still impressive.
+18:35 &lt;sdumitriu> Thank you
+18:35 &lt;sdumitriu> We're trying to keep the quality high
+18:36 &lt;sdumitriu> Although when deadlines approach, we add some technical debt which should get fixed later
+18:37 &lt;mikola> In projects where I participated such debt are not fixed for years :)
+18:38 &lt;mikola> And I have some organizational questions.
+18:39 &lt;mikola> I am planning to contribute to phenotips project as a GSOC 2014 student.
+18:39 &lt;sdumitriu> We do take care of the debt from time to time
+18:40 &lt;sdumitriu> When we need to revisit a module
+18:40 &lt;sdumitriu> We're still cleaning up the codebase
+18:40 &lt;sdumitriu> There are a few things left from the early prototyping days, but not many
+18:40 &lt;sdumitriu> What projects got your attention?
+18:40 &lt;mikola> I have created proposal and I want someone from organization to review it. I was communicating with Shankar Vembu and Quaid Morris.
+18:41 &lt;mikola> The GSOC deadline is coming but there is still no response for my mails. I have also posted to ccm-mentors@cs.toronto.edu
+18:42 &lt;mikola> I am interested in this project https://gsoc.ccm.sickkids.ca/GoogleSummerOfCode/WebHome#HDevelopmentofmachinelearningmethodsformodelingtheevolutionoftumors
+18:43 &lt;akats> has quit
+18:43 &lt;mikola> And the proposal can be found here: http://www.google-melange.com/gsoc/proposal/public/google/gsoc2014/mikalaj/5724160613416960
+18:43 &lt;sdumitriu> Well, the issue with a scientific organization is that most mentors are busy with other things; Quaid is a researcher and professor, so he's quite busy
+18:44 &lt;sdumitriu> He usually answers with some delay
+18:44 &lt;sdumitriu> Now, you should know that the CCM organization is an umbrella for different projects
+18:44 &lt;mikola> Oh, I understand.
+18:44 &lt;sdumitriu> So PhenoTips has nothing to do with that project
+18:50 &lt;sdumitriu> Also, Quaid wants C code, PhenoTips is in Java
+18:50 &lt;sdumitriu> You should remove the PhenoTips mentions from the proposal
+18:53 &lt;mikola> Thats a fail. I thought that phylosub is some kind of backend, and phenotips is frontend.
+18:54 &lt;sdumitriu> OK, the application looks good in general, but you should put more effort in the project plan / architecture part
+18:54 &lt;sdumitriu> Right now it seems pretty generic and doesn't show an understanding of the project
+18:55 &lt;mikola> And some clarification about organization structure. As I understand CCM has two main projects for GSOC - phenotips, and medsavand and some researcher tasks?
+18:55 &lt;sdumitriu> Look at the existing Python implementation, evaluate its main components and algorithms, and come up with a more detailed architecture of your planned codebase and tools you want to use
+18:56 &lt;mikola> Thanks for review.
+18:56 &lt;sdumitriu> There are multiple projects developed at the CCM, check out http://ccm.sickkids.ca/?q=node/32
+18:56 &lt;sdumitriu> But MedSavant and PhenoTips are the most advanced and maintained ones at the moment
+18:57 &lt;sdumitriu> Some of the other projects are on life support (or just history)
+18:58 &lt;sdumitriu> Other projects are more in the "researching" stage, with mainly scientific investigations going on, with a basic implementation
+18:58 &lt;sdumitriu> Other projects aren't suited for GSoC since they're not open source, or they can't easily be modularized
+18:59 &lt;sdumitriu> (or they're too small to be further divided)
+18:59 &lt;sdumitriu> Also, GeneMania participates with another organization, NRNB
+19:00 &lt;mikola> Maybe you can suggest some tools, to which I should pay attention? I thought that the main task of suggested project to research impact of parallel computation techniques and porting codebase to C++.
+19:00 &lt;sdumitriu> MedSavant and PhenoTips are actively maintained, engineering-rich, big enough projects
+19:02 &lt;sdumitriu> Besides that, there are also a few more research oriented ideas, like Quaid's two tumor projects, and Asha's extension for MedSavant
+19:04 &lt;sdumitriu> Hm, I'm not familiar with the PhyloSub code, so I can't accurately answer that
+19:05 &lt;mikola> Thanks for reply and review one more time!
+19:06 &lt;sdumitriu> But look at the data structures they use, would you use some standard C++ libraries instead, like STL? Or your own implementation? Or for better performance use raw structs with your own code on top?
+19:07 &lt;sdumitriu> Basically, provide a more detailed plan instead of the generic "port it and improve it until it's good"
+19:08 &lt;sdumitriu> Week one: convert the data structures into C++ code using the &lt;X> library
+19:08 &lt;sdumitriu> Week two: start porting the Y algorithms
+19:08 &lt;sdumitriu> Week three: Port the other algorithms
+19:09 &lt;sdumitriu> Week four: improve these two algorithms by switching to SIMD ASM code
+19:10 &lt;sdumitriu> Week five: investigate the option of running the code on FPGAs or GPUs or whatever you find better
+19:11 &lt;sdumitriu> The competition is high, you don't have to just be the best coder, you have to convince us that you understood the task and paid enough attention to it to understand what needs to be done
+19:19 &lt;qwebirc25631> has quit
+19:24 &lt;mikola> I will definitely pay attention to existing codebase and provide more detailed plan.
+19:25 &lt;bvancea> has quit
+19:46 &lt;sdumitriu> tian2992: I'm looking at the code now
+19:46 &lt;sdumitriu> It seems that it's not the ICPredictor that does that
+19:46 &lt;sdumitriu> The document involved is PhenoTips/DiffDiagnosisService
+19:47 &lt;sdumitriu> Which calls org.phenotips.solr.OmimScriptService.getDifferentialPhenotypes
+19:48 &lt;mikola> has left #phenotips
+20:20 &lt;Shubham> has quit
+20:27 &lt;Shubham1> has quit
+20:28 &lt;dev__> has quit
+20:42 &lt;Shubham> has quit
+21:00 &lt;Shubham> has quit
+21:08 &lt;Shubham> has quit
+21:14 &lt;Shubham> has quit
+21:15 &lt;Guest83137> is now known as &lt;sanjhee>
+22:11 &lt;sanjhee_> has quit
+22:12 &lt;sanjhee> has quit
+22:31 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;
+23:53 &lt;ruthgrace> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140320</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>05bf268a-ebe7-4371-8b72-1510d27fe841</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

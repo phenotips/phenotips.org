@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130502</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1367478883000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1367552493000</date>
+  <contentUpdateDate>1367552493000</contentUpdateDate>
+  <version>1.312</version>
+  <title>IRC Archive for channel #phenotips on 02 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;froggy> has quit
+03:24 &lt;tishan> has joined #phenotips
+03:30 &lt;tishan> Hi
+06:25 &lt;sdumitriu> Hi
+06:37 &lt;sdumitriu> tishan: Ping
+06:47 &lt;tishan> has quit
+07:06 &lt;tishan> has joined #phenotips
+07:39 &lt;BogdanVancea> has quit
+08:12 &lt;sdumitriu> Hey tishan
+08:23 &lt;tishan> Hi
+08:24 &lt;tishan> Sorry. I enabled beeps in case you contact. Yet I did not hear you :)
+08:33 &lt;sdumitriu> Did you get my last email?
+09:07 &lt;tishan> Yes. I went through it. Ill also go through resources you provided
+09:08 &lt;tishan> So are we moving to a DVC just to facilitate those problems mentioned in problem statemment or is it a part on road map
+09:13 &lt;kushalkhandelwal> has joined #phenotips
+09:15 &lt;kushalkhandelwal> sdumitriu: Hey
+09:18 &lt;sdumitriu> Hey kushalkhandelwal
+09:19 &lt;kushalkhandelwal> Morning :)
+09:19 &lt;sdumitriu> Been for a while
+09:19 &lt;kushalkhandelwal> What plans for the day ?
+09:19 &lt;kushalkhandelwal> In university ?
+09:19 &lt;sdumitriu> Implement imperial units for measurements
+09:20 &lt;sdumitriu> Not yet, about to leave
+09:20 &lt;kushalkhandelwal> Hmm
+09:20 &lt;kushalkhandelwal> Nice
+09:20 &lt;kushalkhandelwal> And I am onto Quantum Chemistry :D
+09:20 &lt;sdumitriu> tishan: Improving the versioning system has been on XWiki's roadmap for a long time, but implementing repeat visits is a top priority for PhenoTips
+09:21 &lt;kushalkhandelwal> Repeat Visits
+09:21 &lt;kushalkhandelwal> So that we can keep the history of all visits
+09:22 &lt;kushalkhandelwal> We discussed it once I guess
+09:24 &lt;tishan> sdumitriu:Ok. got it. So we should be able to show each visit uniquely(only changes made in that visit) or show changes of that visit merged in to previous records. I think it is the option 2
+09:25 &lt;sdumitriu> 2
+09:25 &lt;sdumitriu> I mean, each visit can be seen as a state, and that state has to reflect the full evaluation of the patient
+09:25 &lt;sdumitriu> But we must also be able to see how the patient evolves between visits
+09:26 &lt;sdumitriu> So we need to be able to diff any two visits
+09:26 &lt;sdumitriu> More complex, be able to see an animated timeline
+09:26 &lt;tishan> so you said the purpose of viewing last visit is either to edit it or add new test results
+09:27 &lt;kushalkhandelwal> Viewing last visit so that we can see the changes
+09:27 &lt;kushalkhandelwal> How the patient has progressed
+09:27 &lt;tishan> and it will be always done by the creator of that particular visit
+09:27 &lt;kushalkhandelwal> We should be able to see what are the current symptoms
+09:27 &lt;kushalkhandelwal> As in the current clinical findings
+09:27 &lt;kushalkhandelwal> Which might have changed
+09:28 &lt;kushalkhandelwal> tishan: Creator of that visit ?
+09:28 &lt;kushalkhandelwal> If a patient visits a department , he can be followed up by a different doctor in the department
+09:29 &lt;tishan> kushalkhandelwal: Rather reporter
+09:29 &lt;kushalkhandelwal> Anyone can add new findings
+09:29 &lt;kushalkhandelwal> which would be new reort in the history
+09:29 &lt;kushalkhandelwal> And when we compare the two visits we should be able to see what changed
+09:29 &lt;kushalkhandelwal> something like when you do " git diff "
+09:29 &lt;kushalkhandelwal> you see the change in your current branch
+09:30 &lt;kushalkhandelwal> and the previous one
+09:30 &lt;kushalkhandelwal> sdumitriu: That would be correct ?
+09:30 &lt;tishan> kushalkhandelwal: yeah understand that :)
+09:30 &lt;kushalkhandelwal> :)
+09:30 &lt;kushalkhandelwal> tishan: You made your proposal ?
+09:30 &lt;kushalkhandelwal> Deadline is approaching fast
+09:30 &lt;kushalkhandelwal> I would suggest upload whatever you have made till now and keep changing till deadline
+09:31 &lt;kushalkhandelwal> Put a link to a google doc in your proposal
+09:31 &lt;kushalkhandelwal> which can be edited
+09:31 &lt;tishan> Ill compose it tonight.
+09:31 &lt;tishan> Yeah. Ill post it today and keep it editing
+09:31 &lt;kushalkhandelwal> :)
+09:31 &lt;tishan> thanks for the head up
+09:31 &lt;kushalkhandelwal> Anytime :)
+09:32 &lt;kushalkhandelwal> tishan: Which place ?
+09:32 &lt;tishan> It is always great to keep something editable after deadline
+09:32 &lt;tishan> last time I maintained a wiki
+09:32 &lt;kushalkhandelwal> Yes its good , so you can add some more content
+09:33 &lt;kushalkhandelwal> But I think it would be better if we make only minor changes and keep it close to what is on melange
+09:33 &lt;tishan> yeah. thats why I am trying to clear doubts and bring up a good proposal
+09:37 &lt;kushalkhandelwal> Yep , all the best
+09:37 &lt;sdumitriu> Yes, that is correct
+09:37 &lt;sdumitriu> Another feature is "stamp of approval"
+09:38 &lt;sdumitriu> Meaning that the head doctor (head as in chief, not as in doctor that looks at the head) can review the record and approve that all the data is correct
+09:38 &lt;sdumitriu> That would translate into a signed tag
+09:39 &lt;kushalkhandelwal> Hmm
+09:39 &lt;sdumitriu> Going to the lab, ttyl
+09:39 &lt;kushalkhandelwal> So we need a record review system
+09:39 &lt;kushalkhandelwal> Ok
+09:39 &lt;tishan> ok.cya
+09:57 &lt;sdumitriu1> has joined #phenotips
+10:57 &lt;kushalkhandelwal> sdumitriu1: Hey
+10:58 &lt;sdumitriu1> Hey
+10:58 &lt;kushalkhandelwal> We were talking about the idea
+10:58 &lt;kushalkhandelwal> You were telling about stamp of approval
+10:58 &lt;sdumitriu1> Yep
+10:59 &lt;sdumitriu1> But that's a bit complex right now
+10:59 &lt;sdumitriu1> We need to wait for several changes in the XWiki platform
+11:00 &lt;kushalkhandelwal> Hm
+11:00 &lt;kushalkhandelwal> Will try my hands on XWiki this summer
+11:01 &lt;tishan> What is the xwiki version we are using. They recently release 5.0
+11:01 &lt;sdumitriu1> 4.5.3
+11:02 &lt;sdumitriu1> 5.0 final hasn't been released yet, might happen tomorrow
+11:03 &lt;kushalkhandelwal> Hmm
+11:03 &lt;kushalkhandelwal> We will upgrade ?
+11:03 &lt;tishan> is it? Just said coz I noticed a mail with subject line 5.0 release some days back. May be they hit some bugs then
+11:04 &lt;sdumitriu1> That was a thread about discussing the release
+11:04 &lt;sdumitriu1> There were some problems with the 5.0 development
+11:05 &lt;sdumitriu1> Some refactorings that were needed, but broke some features
+11:05 &lt;sdumitriu1> So the stabilization took longer than expected
+11:05 &lt;tishan> ok
+11:06 &lt;sdumitriu1> tishan: Do you know Asiri Rathnayake?
+11:06 &lt;tishan> sdumitri1: Yes. He taught OS module for us at University? How do you know him?
+11:07 &lt;sdumitriu1> Well, he was a GSoC student and then mentor for XWiki
+11:07 &lt;sdumitriu1> I'm the org admin for XWiki
+11:09 &lt;tishan> Ah.. I did not knew that. I also peeped into XWiki for this summer. But didnt find interesting deliverable idea
+11:11 &lt;tishan> sdumitriu1: So in this idea I have implement both backend and front end.
+11:12 &lt;sdumitriu1> Yes
+11:12 &lt;tishan> Ans also maintain a generic interface between two
+11:12 &lt;sdumitriu1> (I'm reading your email)
+11:13 &lt;tishan> Great. replying to that will be easy
+11:19 &lt;tishan> sdumitril: I will be afk for a while. out for dinner.
+11:22 &lt;sdumitriu1> Me too, meeting
+11:55 &lt;qwebirc28054> has quit
+12:19 &lt;mfiume> has quit
+12:22 &lt;mfiume1> has quit
+12:23 &lt;mfiume> is now known as &lt;mfiume1>
+12:23 &lt;mfiume1> is now known as &lt;mfiume>
+13:51 &lt;roque> has quit
+13:52 &lt;khodeir> has joined #phenotips
+14:14 &lt;khodeir> has quit
+14:20 &lt;phenotips_org> has joined #phenotips
+15:21 &lt;krinye> has quit
+16:03 &lt;tishan> sdumitriu1: Hi
+16:03 &lt;sdumitriu1> Hi
+16:04 &lt;tishan> Did you had time to read the mail
+16:04 &lt;sdumitriu1> Yes, but not to answer
+16:05 &lt;tishan> ok
+16:05 &lt;tishan> Still at university?
+16:05 &lt;sdumitriu1> Yes
+16:05 &lt;sdumitriu1> Let me answer quickly
+16:05 &lt;tishan> Its ok. take your time :)
+16:18 &lt;sdumitriu1> Sent
+16:18 &lt;tishan> Thanks I will take a look
+16:26 &lt;tishan> Hi
+16:27 &lt;tishan> sdumitriu1: Hi
+16:29 &lt;sdumitriu1> Hi again
+16:29 &lt;tishan> free enough to answer few more questions? :)
+16:29 &lt;sdumitriu1> Yes
+16:30 &lt;tishan> So the deliverable of this project would be
+16:30 &lt;tishan> 1. UI supporting multiple visits
+16:30 &lt;tishan> 2. redesigned backend API
+16:31 &lt;tishan> 3. versioning backend implementation
+16:31 &lt;sdumitriu1> Yes
+16:32 &lt;sdumitriu1> Are you good at UI design?
+16:32 &lt;sdumitriu1> How about frontend technologies: JS, CSS, HTML?
+16:32 &lt;tishan> I am good at it
+16:32 &lt;tishan> able to develop a UI
+16:33 &lt;sdumitriu1> OK
+16:33 &lt;tishan> recently I came across twitter bootstrap
+16:33 &lt;sdumitriu1> Anyway, you're not going to be alone
+16:33 &lt;tishan> its a nice way to design UIs
+16:34 &lt;tishan> http://twitter.github.io/bootstrap/
+16:34 &lt;tishan> I s kushalkhandewall also doing this
+16:35 &lt;sdumitriu1> Well, I'm not sure that's needed
+16:35 &lt;sdumitriu1> You're going to have to integrate that into the existing UI of PhenoTips
+16:35 &lt;sdumitriu1> Switching to Bootstrap is a big project on its own
+16:36 &lt;tishan> yeah understood
+16:39 &lt;tishan> Still I could not figure out facilitating "no way of updating a previous visit"
+16:40 &lt;sdumitriu1> So, the way this works is:
+16:40 &lt;sdumitriu1> Creating a new patient = create a new git repo
+16:40 &lt;sdumitriu1> With onle one branch
+16:40 &lt;sdumitriu1> Updating = commit on the current branch
+16:41 &lt;sdumitriu1> Starting a new visit = create a new branch from the tip of the latest visit
+16:41 &lt;sdumitriu1> Opening a previous visit = switching to that branch
+16:41 &lt;sdumitriu1> Updating a previous visit = committing on that branch
+16:42 &lt;sdumitriu1> Got it?
+16:43 &lt;tishan> After updating a branch it should always merged to trunk
+16:43 &lt;tishan> yeah got it
+16:43 &lt;sdumitriu1> Yes, but not always
+16:43 &lt;sdumitriu1> It would be better to ask the user for confirmation
+16:44 &lt;tishan> yeah
+16:45 &lt;tishan> Should there be a functionality to search a given visit
+16:46 &lt;sdumitriu1> WDYM search?
+16:47 &lt;tishan> Doctor/nurse needs to find his/her previous visit in order to add some test results
+16:48 &lt;tishan> Since we cant show all visits of the history through that tab pane
+16:48 &lt;tishan> what is the mechanism there
+16:48 &lt;sdumitriu1> Hm, maybe
+16:48 &lt;sdumitriu1> But that's not a priority
+16:49 &lt;tishan> Assumption: Users will not update very old records. ;)
+16:50 &lt;sdumitriu1> Correct
+16:50 &lt;sdumitriu1> And I don't expect to have that many records...
+16:52 &lt;tishan> We have to use named branches with naming convention to facilitate switching to the relevant branch
+16:52 &lt;sdumitriu1> Yes
+16:54 &lt;tishan> We have to focus very much on backend API also. Much effort will be needed to design that
+16:57 &lt;tishan> btw I have some building issues
+16:58 &lt;sdumitriu1> What's wrong?
+16:58 &lt;tishan&gt; build stop at Application interface 1.0
+16:59 &lt;tishan> it cant download jar lucene-analyzers-common/4.0.0/lucene-analyzers-common-4.0.0.jar
+16:59 &lt;tishan> I retried for several times
+16:59 &lt;sdumitriu1> Hm...
+16:59 &lt;tishan> tried -U
+17:00 &lt;tishan> it stops at the same spot 458 KB
+17:00 &lt;sdumitriu1> Checking
+17:01 &lt;sdumitriu1> Works for me
+17:01 &lt;tishan> I checked automated builds
+17:01 &lt;tishan> they are working also
+17:02 &lt;sdumitriu1> Could it be a limit on your internet connection?
+17:02 &lt;sdumitriu1> Can you manually download http://nexus.cs.toronto.edu/nexus/content/groups/public/org/apache/lucene/lucene-analyzers-common/4.0.0/lucene-analyzers-common-4.0.0.jar ?
+17:02 &lt;tishan> guessed that
+17:02 &lt;sdumitriu1> Or http://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/4.0.0/lucene-analyzers-common-4.0.0.jar
+17:04 &lt;tishan> I think it is some connection issue coz I could not even download M5 pack
+17:05 &lt;sdumitriu1> The second link doesn't work either?
+17:05 &lt;tishan> but I can download content from other places. Morning I downloaded a video of 200MB.
+17:05 &lt;krinye> has quit
+17:05 &lt;BogdanVancea> has quit
+17:06 &lt;tishan> waiting on second link
+17:07 &lt;tishan> It is also halted at the same place. 410 KB
+17:07 &lt;sdumitriu1> I can download from Europe as well, so it's definitely on your side
+17:08 &lt;tishan> :(
+17:09 &lt;tishan> I checked with reconnected connection, restarted machine
+17:09 &lt;tishan> Ill try to check with an ADSL connection tommorow
+17:10 &lt;vshivam> has quit
+17:10 &lt;krinye> has quit
+17:12 &lt;tishan&gt; I am gonna go out now. Its around 3 am here
+17:13 &lt;tishan> I'll compose a proposal by the time you wake tomorrow
+17:17 &lt;sdumitriu1> OK
+17:17 &lt;sdumitriu1> Have a good night
+17:17 &lt;tishan> Good evening for you I suppose :)
+17:21 &lt;tishan> has quit
+18:08 &lt;sdumitriu1> has quit
+20:22 &lt;phenotips_org> has joined #phenotips
+20:22 &lt;kushalkhandelwal> Done with imperial units ?
+20:22 &lt;sdumitriu> Good morning
+20:22 &lt;sdumitriu> Nope, not a single line of code today...
+20:23 &lt;kushalkhandelwal> Oh
+20:23 &lt;kushalkhandelwal&gt; why so ?
+20:24 &lt;sdumitriu> Students, meetings...
+20:25 &lt;kushalkhandelwal> Oh
+20:26 &lt;kushalkhandelwal> I slept early last night :\
+20:27 &lt;kushalkhandelwal> Slept while studying
+20:27 &lt;kushalkhandelwal> on my desk :P
+20:27 &lt;kushalkhandelwal> Couldn't work on any issue
+20:29 &lt;kushalkhandelwal> Few hours more for application
+20:29 &lt;kushalkhandelwal> Should I remove my personal details from application ?? My address and phone no ?
+20:30 &lt;sdumitriu> No
+20:34 &lt;kushalkhandelwal> Ok
+22:01 &lt;Krinye> has quit
+22:09 &lt;kushalkhandelwal> has quit
+22:37 &lt;ravigarg27> has quit
+23:08 &lt;Natasha> has joined #phenotips
+23:23 &lt;sdumitriu> Hey Natasha
+23:26 &lt;Natasha> Hi Sergiu
+23:26 &lt;Natasha> are there any news ?
+23:26 &lt;sdumitriu> Sorry for delaying with that email
+23:26 &lt;sdumitriu> We've all been terribly busy
+23:27 &lt;Natasha> It is fine ... I understand
+23:27 &lt;sdumitriu> Unfortunately our collaborators don't have any projects
+23:27 &lt;Natasha> But the deadline for the application is tomorrow noon
+23:27 &lt;sdumitriu> Yes, I'll let you edit it after that for a few days
+23:27 &lt;Natasha> So Phenotips won't be part od GSoC 2013 ?
+23:27 &lt;sdumitriu> It is
+23:29 &lt;sdumitriu> So, you're OK with the "Real-time collection of clinical data on patients with genetic disorders using various medical ontologies" project?
+23:30 &lt;Natasha> Yes I am, and I would like to work on if it is ok with you
+23:30 &lt;sdumitriu> Sure
+23:30 &lt;Natasha> so the current ontology should be extended with ICD-10 ?
+23:30 &lt;Natasha> are there any parts of the project that should be fulfilled ?
+23:31 &lt;Natasha> Can I write timeline according to the description given about the project, and send it to you, so you can check ?
+23:31 &lt;sdumitriu> Yes
+23:31 &lt;Natasha> should this timeline be permanent, or we can change it afterwards ?
+23:31 &lt;sdumitriu> It will definitely change
+23:32 &lt;Natasha> ok
+23:32 &lt;sdumitriu> I mean, nothing ever goes exactly as planned
+23:32 &lt;Natasha> and whom should I send my application ?
+23:32 &lt;sdumitriu> Through http://www.google-melange.com/gsoc/homepage/google/gsoc2013
+23:33 &lt;Natasha> yes, that is true, but it is a part from the application I have to fulfill
+23:33 &lt;Natasha> thank you
+23:33 &lt;Natasha> then, I will add that part, and I will try to send you the application later tonight, so you can check tomorrow morning if that is ok with you
+23:34 &lt;sdumitriu> Yes
+23:34 &lt;Natasha> do you have any suggestions about the application ?
+23:34 &lt;Natasha> are there any things it is good for me to mention ?
+23:34 &lt;sdumitriu> Well, the more details there are in the architecture and timeline, the better
+23:35 &lt;sdumitriu> Oh, about the empty database
+23:35 &lt;Natasha> yes ?
+23:35 &lt;sdumitriu> You're supposed to log in with:
+23:35 &lt;sdumitriu> username: Admin
+23:35 &lt;sdumitriu> password: admin
+23:35 &lt;sdumitriu> (both case sensitive)
+23:35 &lt;Natasha> thank you
+23:35 &lt;Natasha> i will try them
+23:36 &lt;Natasha> i don't want to bother you anymore
+23:36 &lt;Natasha> i will finish the application and send it to you
+23:36 &lt;sdumitriu> Don't worry, you're not bothering me
+23:36 &lt;sdumitriu> It's my fault for keeping you waiting
+23:36 &lt;Natasha> don't worry about that
+23:36 &lt;Natasha> is there a way how can I help ?
+23:37 &lt;Natasha> with some ideas, or to read about some other ontologies or impelemntations ?
+23:37 &lt;sdumitriu> Well, part of the selection will be to fix one or two easy issues from https://github.com/compbio-UofT/phenotips/issues?labels=easy
+23:37 &lt;sdumitriu> But you'll need my help
+23:38 &lt;sdumitriu> Are you busy in the following days?
+23:38 &lt;sdumitriu> Any exams left?
+23:38 &lt;Natasha> one more tomorrow, but afterwards I am available
+23:38 &lt;Natasha> my summer break starts :)
+23:39 &lt;sdumitriu> OK, good
+23:39 &lt;sdumitriu> You should hang around the channel more after the exam
+23:39 &lt;Natasha> I am sorry I didn't was online this week, but I had some issues with MIRC
+23:39 &lt;Natasha> yes, now I will be online more often
+23:39 &lt;sdumitriu> OK, it's late, I'm going to sleep
+23:40 &lt;Natasha> so, please, just let me know when you have time so you can help me to start
+23:40 &lt;sdumitriu> Yep
+23:40 &lt;Natasha> ok
+23:40 &lt;Natasha> good night then :)
+23:40 &lt;sdumitriu> https://github.com/compbio-UofT/phenotips/tree/master/components/solr-access-service is the current component that deals with searching the ontologies
+23:40 &lt;sdumitriu> Pluggin into https://github.com/compbio-UofT/phenotips/tree/master/resources/solr-configuration
+23:41 &lt;Natasha> ok
+23:41 &lt;sdumitriu> Good night
+23:41 &lt;Natasha> i will give a look today
+23:41 &lt;Natasha> thank you
+23:41 &lt;Natasha> good night</content>
+  <object>
+    <name>IRC.phenotipsArchive20130502</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>9f0e7ed8-b3d1-4cb5-93fb-ee2edc1bd701</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

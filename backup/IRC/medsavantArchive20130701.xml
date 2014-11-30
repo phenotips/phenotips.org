@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130701</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372680125000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1372699757000</date>
+  <contentUpdateDate>1372699757000</contentUpdateDate>
+  <version>1.72</version>
+  <title>IRC Archive for channel #medsavant on 01 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has joined #medsavant
+08:04 &lt;bvancea> hey sdumitriu
+08:05 &lt;bvancea> feeling less tired after the weekened?
+08:49 &lt;sdumitriu> has joined #medsavant
+10:05 &lt;bvancea> has joined #medsavant
+10:18 &lt;sdumitriu> Hello bvancea
+10:18 &lt;sdumitriu> It's still weekend here
+10:18 &lt;bvancea> hey
+10:18 &lt;sdumitriu> Today is the Canada national day
+10:18 &lt;bvancea> how come?
+10:18 &lt;bvancea> oooohh
+10:18 &lt;bvancea> I see
+10:18 &lt;bvancea> nice
+10:19 &lt;bvancea> any celebrations?
+10:19 &lt;sdumitriu> Me? No
+10:19 &lt;sdumitriu> But yes, there are a lot of activities in the city
+10:20 &lt;bvancea> hehe
+10:20 &lt;bvancea> well, you can enjoy the extended weekend
+10:22 &lt;bvancea> anyway, I want to work on the JQPL to Solr query translator this week
+10:22 &lt;sdumitriu> When did you say you're presenting your thesis?
+10:22 &lt;bvancea> hmm
+10:22 &lt;bvancea> next monday I think
+10:22 &lt;sdumitriu> OK
+10:23 &lt;bvancea> it one day in the interval 8-10 july, but they wont announce until sunday
+10:25 &lt;bvancea> I think the cleanest way would be something similar to the xwiki xwql translator
+10:25 &lt;bvancea> with sablecc
+10:26 &lt;sdumitriu> Yes
+10:26 &lt;bvancea> sweet
+10:27 &lt;bvancea> Its been some time since I've worked with lex/yacc, I'm a little excited
+10:28 &lt;bvancea> hmm... I was wondering if we should create separate modules for the solr backend, ice backend classes
+10:28 &lt;bvancea> maven modules that is
+10:29 &lt;bvancea> maybe even a separate module for the jpql abstractions
+10:30 &lt;sdumitriu> This has to be voted
+10:31 &lt;bvancea> nice
+10:31 &lt;bvancea> can I start the vote?
+10:32 &lt;sdumitriu> Sure
+10:32 &lt;sdumitriu> You should
+10:33 &lt;bvancea> okay
+10:33 &lt;sdumitriu> Send me a draft before, though
+10:33 &lt;bvancea> sure
+10:33 &lt;bvancea> how do you feel about the idea though?
+10:33 &lt;sdumitriu> The idea is to start splitting the large modules into smaller ones
+10:33 &lt;sdumitriu> So instead of one client and one server modules, we'd have smaller modules with one purpose only
+10:35 &lt;bvancea> yes
+10:35 &lt;bvancea> that would be pretty hard to do in one go though
+10:36 &lt;bvancea> so we could do it one module at a time
+10:36 &lt;bvancea> and since there hasn't been a lot of work done on the backends, now would be the best time to do it
+10:41 &lt;sdumitriu> Indeed
+10:55 &lt;bvancea> okay, send you the first draft
+10:55 &lt;bvancea> sent*
+10:57 &lt;sdumitriu> Will read it shortly
+10:58 &lt;bvancea> ok
+11:47 &lt;sdumitriu> bvancea: The mail looks good
+11:47 &lt;sdumitriu> You can send it
+11:48 &lt;bvancea> kay
+11:50 &lt;bvancea> I'll be afk for about 40-50 minutes, need to help my brother with some luggage to the train station
+11:50 &lt;bvancea> he's moving out of the dorms today ;))
+13:15 &lt;bvancea> has joined #medsavant
+13:21 &lt;sdumitriu> Welcome back bvancea
+13:21 &lt;bvancea> hey
+13:21 &lt;bvancea> thanks
+13:24 &lt;bvancea> did you manage to read Brian's response to my status email?
+13:25 &lt;bvancea> I didn't give facets to much though from the JPQL perspective
+13:26 &lt;sdumitriu> Yes, will answer soon
+13:26 &lt;bvancea> but aren't they somewhat equivalent to SELECT COUNT(*) FROM TABLE, group by COLUMN
+13:26 &lt;sdumitriu> Kind of
+13:27 &lt;bvancea&gt; I trying to think of cases when that isn't holding
+13:27 &lt;sdumitriu> You'd have to execute each such query individually, while Solr already provides the result for all the facets
+13:27 &lt;sdumitriu> Don't worry
+13:28 &lt;bvancea> okay
+13:29 &lt;bvancea> I'll get back to browsing the XWiki query parser code
+13:29 &lt;bvancea> :)</content>
+  <object>
+    <name>IRC.medsavantArchive20130701</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>5b7840b9-f65d-4f36-860e-1e813dbb288a</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20140714</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1405320382000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1405394434000</date>
+  <contentUpdateDate>1405394434000</contentUpdateDate>
+  <version>1.76</version>
+  <title>IRC Archive for channel #medsavant on 14 July 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;mcupak> has joined #medsavant
+09:37 &lt;jim_> has joined #medsavant
+13:55 &lt;meatcar> has joined #medsavant
+15:44 &lt;meatcar> jim_: I am trying to resolve https://github.com/compbio-UofT/medsavant/issues/341 I am unsure how to determine the reference genome that the current project is using.
+15:44 &lt;meatcar> as well as what happens if the project is using mutiple
+15:44 &lt;meatcar> multiple*
+15:44 &lt;jim_> OK, let me take a look
+15:47 &lt;meatcar> never mind, i see the reference is passed to Jannovar on initializaiton
+15:47 &lt;jim_> OK
+15:47 &lt;jim_> What happens if there are multiple references?
+15:47 &lt;jim_> I'm not sure we're handling that properly
+15:48 &lt;jim_> actually I think we only accept a single reference in the method call:     public int uploadVariants(String userSessionID, int[] transferIDs, int projID, int refID, String[][] tags, boolean includeHomoRef, String email, boolean autoPublish, boolean preAnnotateWithAnnovar, boolean doPhasing) throws Exception, LockException {
+15:51 &lt;meatcar> yea i see that. Im not sure what the behaviour is when there are multiple references in the project
+16:03 &lt;meatcar> just created a project with hg18 and h19, only hg19 is passed onto the uploadVariants()
+16:25 &lt;jim_> yeah I just filed a bug
+16:26 &lt;jim_> For 1.3 at least I'd favor just disabling multiple references per project.  We haven't really tested much with mixed references
+16:26 &lt;jim_> or at least, I haven't.
+16:27 &lt;jim_> let's see if Marc comments
+17:30 &lt;meatcar> is there a way to upgrade a database to be used in a newer version of medsavant?
+17:30 &lt;jim_> depends
+17:31 &lt;jim_> If the schema hasn't changed, then you can either update the database's version number, or you can mark older databases as compatible with newer databases by editing the xml
+17:31 &lt;jim_> One sec, I'll give more details
+17:32 &lt;jim_> The server's version is in the table 'settings'
+17:32 &lt;jim_> select * from settings where setting_key = 'server version';
+17:32 &lt;jim_> by changing that value to match the version number of the client, you should avoid seeing the compatibility error
+17:33 &lt;meatcar> i see.
+17:33 &lt;jim_> alternatively you can edit /filer/savantdropbox/medsavant/xml/db_server_compatibility.xml
+17:35 &lt;meatcar> thanks
+18:08 &lt;meatcar> jim_: For some reason I am still getting the jannovar issue with the new build, even though I cannot recreate it in master.
+18:12 &lt;meatcar> Specifically, when I compile and run 1.3-SNAPSHOT client and server, I can upload a VCF and the "Genome release set to default: hg19" error isn't thrown. But when I run 1.3.1-rc-1 server.zip and client.zip, I get the error again: https://gist.github.com/meatcar/834e68ebb15b70b805f7
+18:38 &lt;meatcar> And this is weird too: I copied my server.zip built from master, which is versioned as 1.3-SNAPSHOT, to m1.cs.utoronto.ca, but when I run it, it thinks it's version is 1.3.1-rc-1
+18:38 &lt;meatcar> https://gist.github.com/meatcar/51d065861cdb6a2188b9
+18:40 &lt;jim_> not sure i follow
+18:40 &lt;jim_> If you do a checkout of the master branch, then there is no problem?
+18:40 &lt;jim_> What is 1.3.1-rc-1? Is that the release that Marc just did?
+18:41 &lt;meatcar> yes, if I check out master, there are no problems.
+18:41 &lt;meatcar> 1.3.1-rc-1 is a release that was built off of master
+18:42 &lt;jim_> OK, master as it exists right now?
+18:42 &lt;meatcar> yes
+18:42 &lt;jim_> ok yes that's what it looks like
+18:44 &lt;jim_> is it possible that the pom is grabbing the wrong jannovar?
+18:45 &lt;jim_> I think you moved jannovar to a completely separate project, right?
+18:45 &lt;jim_> But there's still a jannovar subdir in the medsavant project
+18:45 &lt;meatcar> thats in another branch with another pom
+18:45 &lt;meatcar> master is totally clean
+18:46 &lt;jim_> https://github.com/compbio-UofT/medsavant/tree/master/jannovar
+18:46 &lt;jim_> there's a jannovar directory there
+18:46 &lt;jim_> shouldn't it be pulling in jannovar from https://github.com/compbio-UofT/jannovar ?
+18:47 &lt;meatcar> no. That did not make it into the 1.3 release as we have that issue with jannovar we saw on Friday
+18:47 &lt;jim_> ok, which didn't make it into the 1.3 release?  The  second link?
+18:47 &lt;meatcar> yes.
+18:48 &lt;jim_> hmm
+18:48 &lt;jim_> i think there's two jannovars in the pom
+18:48 &lt;jim_> https://github.com/compbio-UofT/medsavant/blob/master/MedSavantServerEngine/pom.xml
+18:48 &lt;meatcar> yea. im not sure why. they were like that when i started here
+18:48 &lt;jim_> line 40, and line 74
+18:49 &lt;jim_> OK, that's probably mucking things up
+18:49 &lt;jim_> originally jannovar wasn't mavenized, and was a separate project on my laptop that I'd push manually to nexus.  Then I'd include it in the pom with line 74
+18:49 &lt;jim_> then it got absorbed into the project
+18:49 &lt;jim_> so I think we can delete the block at around line 74
+18:49 &lt;meatcar> ok I got the locally built version running on ms1. Let's see if I can recreate this.
+18:50 &lt;jim_> err, actually it was mavenized, but it wasn't done right.  Anyway, doesn't matter, line 74 block is deprecated.
+18:52 &lt;meatcar> ok i'll remove it
+18:52 &lt;meatcar> i figured out the issue
+18:52 &lt;jim_> great
+18:54 &lt;meatcar> there are two calls to Jannovar, but I added the reference only to the second one. The first one that fetches the RefSeq data wasn't being hit locally because I already had those files installed
+18:54 &lt;jim_> ahh makes sense
+20:19 &lt;meatcar> jim_: if you've got some time today or tomorrow, can you briefly run the 1.3.1-rc-2 client against my server at ms1.cs.utoronto.ca:38125 root:joubert
+20:20 &lt;meatcar> you can download it here: http://nexus.cs.toronto.edu/nexus/content/repositories/releases/edu/toronto/cs/medsavant/medsavant-client-zip/1.3.1-rc-2/
+20:20 &lt;jim_&gt; ok
+20:20 &lt;meatcar> I'm not familiar enough with the application to be able to test all the weird corner cases..
+20:21 &lt;meatcar> thanks :)
+20:35 &lt;jim_> looks good
+20:36 &lt;jim_> test vcf worked
+23:20 &lt;meatcar> has joined #medsavant
+23:20 &lt;jim_> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20140714</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>9caa191c-5e4e-47fa-9829-4b4b440e0545</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140619</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1403155104000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1403217490000</date>
+  <contentUpdateDate>1403217490000</contentUpdateDate>
+  <version>1.10</version>
+  <title>IRC Archive for channel #ccm on 19 June 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;vijay13> has joined #ccm
+12:39 &lt;Not-cdc9> [Pay2Spawn] dries007 pushed 1 commit to master [+0/-0/±1] http://git.io/bx5JWQ
+12:39 &lt;Not-cdc9> [Pay2Spawn] dries007 9221c80 - Update readme
+12:43 &lt;Not-cdc9> [Pay2Spawn] dries007 pushed 12 commits to 1.7.2 [+2/-0/±33] https://github.com/CCM-Modding/Pay2Spawn/compare/2b0b801d9995...8c585e56d7a9
+12:43 &lt;Not-cdc9> [Pay2Spawn] dries007 8c585e5 - Merge pull request #122 from CCM-Modding/master update merge for last 1.0 code
+12:51 &lt;vijay13> has joined #ccm
+18:33 &lt;Not-cdc9&gt; [Pay2Spawn] dries007 pushed 1 commit to master [+5/-1/±11] http://git.io/F1VDUA
+18:33 &lt;Not-cdc9> [Pay2Spawn] dries007 0c94ab0 - Upgrade to 2.0. Works with streamtips.com now Work was done to support other sites aswel.
+18:38 &lt;Not-cdc9> [Pay2Spawn] dries007 pushed 1 commit to master [+0/-0/±1] http://git.io/tZrofw
+18:38 &lt;Not-cdc9> [Pay2Spawn] dries007 030526b - added comment for interval</content>
+  <object>
+    <name>IRC.ccmArchive20140619</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>78d896ed-0a8c-47f6-9bf2-52de252e6ffe</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

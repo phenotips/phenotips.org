@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>XWiki</web>
+  <name>AdminEmailSheet</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1299686461000</creationDate>
+  <parent>XWiki.AdminSheet</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1380351902000</date>
+  <contentUpdateDate>1380351902000</contentUpdateDate>
+  <version>2.1</version>
+  <title>AdminEmailSheet</title>
+  <comment>Import</comment>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.0</syntaxId>
+  <hidden>true</hidden>
+  <content>{{velocity output="false"}}
+### Administer email related wiki preferences, at global level
+#set ($params = {
+  'general': ['admin_email', 'obfuscateEmailAddresses'],
+  'smtp': ['smtp_server', 'smtp_port', 'smtp_server_username', 'smtp_server_password', 'javamail_extra_props']
+})
+{{/velocity}}
+
+{{include document="XWiki.AdminFieldsDisplaySheet" /}}</content>
+</xwikidoc>

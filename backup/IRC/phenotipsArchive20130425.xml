@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130425</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1366865536000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1366948368000</date>
+  <contentUpdateDate>1366948368000</contentUpdateDate>
+  <version>1.113</version>
+  <title>IRC Archive for channel #phenotips on 25 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;froggy> has quit
+01:22 &lt;UCC> has quit
+06:11 &lt;kushalkhandelwal> has quit
+07:49 &lt;kushalkhandelwal> has joined #phenotips
+08:04 &lt;kushalkhandelwal> sdumitriu: Hey
+08:04 &lt;sdumitriu> Hey
+08:05 &lt;kushalkhandelwal> Good morning :)
+08:05 &lt;kushalkhandelwal> At home ?
+08:06 &lt;sdumitriu> Yep
+08:18 &lt;sdumitriu> Woohoo, all done for this release!
+08:19 &lt;kushalkhandelwal> :)
+08:19 &lt;kushalkhandelwal> Finally your major task done :D
+08:49 &lt;kushalkhandelwal> has quit
+10:02 &lt;sdumitriu1> has joined #phenotips
+10:21 &lt;kushalkhandelwal> has joined #phenotips
+10:46 &lt;sdumitriu1> Ah, kushalkhandelwal, you broke something...
+10:47 &lt;kushalkhandelwal> ?
+10:47 &lt;kushalkhandelwal> What did i break ?
+10:48 &lt;kushalkhandelwal> sdumitriu1:
+10:49 &lt;sdumitriu1> https://github.com/compbio-UofT/phenotips/issues/422
+10:51 &lt;sdumitriu1> It's my fault for not noticing it
+10:51 &lt;kushalkhandelwal> Wait let me check
+10:51 &lt;kushalkhandelwal> Will fix it tonight
+10:52 &lt;sdumitriu1> I'll fix it, I already have the code ready
+10:54 &lt;kushalkhandelwal> You fixed it
+10:55 &lt;sdumitriu1> K, now to get back to emails
+10:55 &lt;kushalkhandelwal> Never noticed
+10:55 &lt;kushalkhandelwal> My bad
+10:55 &lt;kushalkhandelwal> Point To remember : XML escaping while changing to filesystem !
+10:56 &lt;kushalkhandelwal> Point Noted
+10:56 &lt;kushalkhandelwal> Emails ?
+10:57 &lt;sdumitriu1> Yeah, I have like 6 days of emails to answer
+10:57 &lt;sdumitriu1> Including GSoC proposals
+10:58 &lt;kushalkhandelwal> Including my emails :D
+10:58 &lt;kushalkhandelwal> Yes , many of them to answer
+10:58 &lt;kushalkhandelwal> Congratulation on one more release :) sdumitriu1 marta
+11:10 &lt;kushalkhandelwal> has quit
+11:27 &lt;kushalkhandelwal> has joined #phenotips
+11:29 &lt;kushalkhandelwal> Too many disconnections
+11:29 &lt;kushalkhandelwal> Back in room
+11:30 &lt;kushalkhandelwal> sdumitriu1: there ?
+11:31 &lt;sdumitriu1> Yep
+11:31 &lt;sdumitriu1> Do you have a twitter account?
+11:32 &lt;kushalkhandelwal> Yep
+11:32 &lt;kushalkhandelwal> @kushal124
+11:37 &lt;ravigarg27> has quit
+11:44 &lt;kushalkhandelwal> Thanks for the mentions :)
+11:45 &lt;sdumitriu1> Well, thank you for the contributions
+11:46 &lt;kushalkhandelwal> :)
+11:46 &lt;kushalkhandelwal> More to come
+11:47 &lt;sdumitriu1> I hope so
+11:48 &lt;kushalkhandelwal> There will be
+12:14 &lt;phenotips_org> has joined #phenotips
+12:14 &lt;sdumitriu1> !news
+12:22 &lt;sdumitriu1> So, Jenkins
+12:23 &lt;sdumitriu1> One thing is that it can deploy automatically to nexus.cs.toronto.edu
+12:23 &lt;sdumitriu1> And we need that
+12:23 &lt;sdumitriu1> It's easier to see just our projects, travis is a cloud for everybody
+12:24 &lt;sdumitriu1> It has a lot more plugins and configuration settings than Travis
+12:24 &lt;kushalkhandelwal> Ohh so automatic deployment of stable builds
+12:24 &lt;sdumitriu1> Yes
+12:24 &lt;kushalkhandelwal> Like ?
+12:24 &lt;sdumitriu1> Travis is mostly targeting small Ruby projects
+12:25 &lt;sdumitriu1> Jenkins is for Java projects
+12:25 &lt;sdumitriu1> https://wiki.jenkins-ci.org/display/JENKINS/Plugins
+12:26 &lt;kushalkhandelwal> Jenkins can be used for other projects also
+12:26 &lt;kushalkhandelwal> Travis is used to build and check if new commits break the existing code
+12:26 &lt;kushalkhandelwal> Thats why unit tests for every piece of code you write
+12:27 &lt;kushalkhandelwal> Unit Tests
+12:27 &lt;kushalkhandelwal> Integration Tests
+12:27 &lt;kushalkhandelwal> and Dependency checks
+12:43 &lt;phenotips_org> has joined #phenotips
+12:59 &lt;kushalkhandelwal> sdumitriu1:
+13:02 &lt;sdumitriu1> kushalkhandelwal: I installed https://wiki.jenkins-ci.org/display/JENKINS/Github+pull+request+builder+plugin
+13:02 &lt;sdumitriu1> Waiting for a pull request to test it...
+13:02 &lt;kushalkhandelwal> Nice :)
+13:03 &lt;kushalkhandelwal> Dont worry one would come soon
+13:03 &lt;kushalkhandelwal> I have a bug to fix
+13:03 &lt;kushalkhandelwal> would do it tonight
+13:03 &lt;kushalkhandelwal> not a bug but improvement
+13:04 &lt;sdumitriu1> I find that Jenkins has a nicer UI
+13:04 &lt;sdumitriu1> It reports which tests failed, and which were skipped
+13:04 &lt;sdumitriu1> Travis just says build passed/failed
+13:04 &lt;kushalkhandelwal> Yes
+13:04 &lt;kushalkhandelwal> it just reports the final status
+13:05 &lt;kushalkhandelwal> Nicer UI ?
+13:13 &lt;sdumitriu1> Easy issues for GSoC students: https://github.com/compbio-UofT/phenotips/issues?labels=easy&amp;page=1&amp;state=open
+13:26 &lt;Krinye_> has quit
+13:38 &lt;kushalkhandelwal> Some issue with it ?
+13:53 &lt;qwebirc765015> has joined #phenotips
+13:53 &lt;kushalkhandelwal> has quit
+13:53 &lt;qwebirc765015> is now known as &lt;kushalkhandelwal>
+14:12 &lt;ravigarg27> has left #phenotips
+14:44 &lt;kushalkhandelwal> has quit
+14:45 &lt;kushalk124> has quit
+14:49 &lt;kushalk124> has quit
+14:53 &lt;kushalk124> has quit
+14:58 &lt;kushalk124> has quit
+15:02 &lt;kushalk124> has quit
+15:06 &lt;kushalk124> has quit
+15:07 &lt;froggy> has quit
+15:12 &lt;kushalkhandelwal> has joined #phenotips
+15:20 &lt;qwebirc176207> is now known as &lt;kushalk124>
+15:20 &lt;kushalk124> has joined #phenotips
+15:23 &lt;kushalkhandelwal> has quit
+15:43 &lt;kushalk124> is now known as &lt;kushalkhandelwal>
+16:42 &lt;kushalkhandelwal> has quit
+16:47 &lt;froggy> has quit
+17:04 &lt;Dhritiman> has quit
+18:35 &lt;sdumitriu1> has quit
+21:57 &lt;ravigarg27> has joined #phenotips
+22:35 &lt;kushalkhandelwal> has joined #phenotips
+23:52 &lt;froggy> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130425</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>af4c6a6e-15a6-48bc-91d3-f087c18bce3d</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

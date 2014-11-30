@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140707</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1404735062000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1404787504000</date>
+  <contentUpdateDate>1404787504000</contentUpdateDate>
+  <version>1.45</version>
+  <title>IRC Archive for channel #phenotips on 07 July 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;akats> has joined #phenotips
+10:41 &lt;mcupak> has quit
+11:38 &lt;meatcar> has quit
+12:02 &lt;meatcar> has quit
+12:14 &lt;akats> sdumitriu: I'm faced with a problem, and I'm note sure if it's significant enough to spend time solving. For example: There is a subsection called Deafness. It has an id, and is rendered on the patient sheet as NA/Y/N Deafness. The y/n picker is the default one, and if yes is clicked, Deafness is seen in the Current Selection. If the page is saved, and is being reviewed, it no longer says Deafness but the title of the underlying id, which in this case is Hea
+12:14 &lt;akats> Is that a "real" problem?
+12:16 &lt;sdumitriu1> Kind of...
+12:16 &lt;sdumitriu1> Are you at the lab?
+12:18 &lt;akats> Lab?
+12:18 &lt;akats> Office?
+12:18 &lt;akats> Yes
+12:19 &lt;akats> That's what I thought too. It will be confusing to people. But I don't think the solution is an easy one.
+12:19 &lt;sdumitriu1> OK, be there soon
+13:24 &lt;akats> Sergiu did I not write code a long time ago to convert deprecated ids into current?
+13:26 &lt;sdumitriu> Yes you did
+13:26 &lt;sdumitriu> And it should be in the platform
+13:26 &lt;sdumitriu> But it might have been moved...
+13:36 &lt;meatcar> has quit
+14:19 &lt;meatcar> has quit
+14:33 &lt;akats> has quit
+14:42 &lt;meatcar_> is now known as &lt;meatcar>
+14:42 &lt;meatcar> has quit
+14:55 &lt;meatcar> has quit
+14:58 &lt;meatcar_away> is now known as &lt;meatcar>
+14:58 &lt;meatcar> has quit
+15:10 &lt;meatcar> has quit
+15:15 &lt;meatcar_away> is now known as &lt;meatcar>
+15:15 &lt;meatcar> has quit
+15:25 &lt;meatcar> has quit
+15:30 &lt;meatcar_away> is now known as &lt;meatcar>
+15:30 &lt;meatcar> has quit
+17:15 &lt;meatcar> has quit
+17:17 &lt;meatcar_away> is now known as &lt;meatcar>
+17:17 &lt;meatcar> has quit
+17:30 &lt;meatcar> has quit
+17:31 &lt;meatcar_away> is now known as &lt;meatcar>
+17:31 &lt;meatcar> has quit
+21:46 &lt;meatcar_> is now known as &lt;meatcar>
+21:46 &lt;meatcar> has quit
+22:04 &lt;meatcar> has quit
+22:10 &lt;meatcar_> is now known as &lt;meatcar>
+22:39 &lt;meatcar> has quit
+22:43 &lt;meatcar_> is now known as &lt;meatcar>
+22:43 &lt;meatcar> has quit
+22:45 &lt;jim__> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140707</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>cfa365f0-2144-44ea-8c1a-6e1c49d65354</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

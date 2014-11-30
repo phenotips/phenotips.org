@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130625</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372144439000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1372202037000</date>
+  <contentUpdateDate>1372202037000</contentUpdateDate>
+  <version>1.15</version>
+  <title>IRC Archive for channel #phenotips on 25 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has quit
+09:32 &lt;sdumitriu> has quit
+09:33 &lt;sdumitriu> has joined #phenotips
+10:34 &lt;bvancea> has quit
+10:45 &lt;sdumitriu> has quit
+10:47 &lt;sdumitriu> has joined #phenotips
+11:13 &lt;mcupak> has quit
+12:02 &lt;ravigarg27> has joined #phenotips
+12:29 &lt;ravigarg27> has quit
+13:05 &lt;sdumitriu1> has joined #phenotips
+13:16 &lt;ravigarg27> has joined #phenotips
+14:06 &lt;ravigarg27> has quit
+16:41 &lt;mfiume> has quit
+17:42 &lt;bvancea> has quit
+19:13 &lt;sdumitriu1> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130625</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>4e89f288-9aeb-40b8-a6d2-17cf16bf05de</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

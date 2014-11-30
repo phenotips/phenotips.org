@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140220</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1392874227000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1392938409000</date>
+  <contentUpdateDate>1392938409000</contentUpdateDate>
+  <version>1.31</version>
+  <title>IRC Archive for channel #phenotips on 20 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu1> has joined #phenotips
+01:09 &lt;sdumitriu1> has quit
+01:26 &lt;sdumitriu1> has joined #phenotips
+02:48 &lt;sdumitriu1> has quit
+06:55 &lt;kushalk124> has quit
+07:34 &lt;marta__> has quit
+07:35 &lt;marta__> has joined #phenotips
+09:19 &lt;akats> has joined #phenotips
+09:22 &lt;sdumitriu1> Hey akats, will be a bit late today, we have a couple of meetings first
+09:43 &lt;sdumitriu1> has quit
+09:46 &lt;akats> Ok. No problem. I've got a bunch of little things to fix.
+14:24 &lt;mcupak> has quit
+15:54 &lt;akats> This is not important, but just wanted to tell you that the boost for the Solr is not working. omitNorms=false didn't help. From debugQuery=on it appears that the boost info never gets stored. The situation is not remedied by putting boost into the &lt;field> or &lt;doc>
+15:56 &lt;marta__1> has joined #phenotips
+15:58 &lt;marta__> has quit
+16:04 &lt;allasm> has quit
+16:05 &lt;allasm> has joined #phenotips
+16:08 &lt;marta__1> has quit
+16:23 &lt;sdumitriu> akats: Can you try to use this instead? http://wiki.apache.org/solr/Suggester
+18:09 &lt;akats> How about we forget about boosting results and just sort them by population. I can't get the suggester to work with boosts either plus it comes with another problem - it only returns one word, not the whole name field.
+18:09 &lt;sdumitriu> Sounds good
+18:10 &lt;sdumitriu> That was my backup plan, explicit sorting
+18:10 &lt;sdumitriu> Or wait, where do you want to sort?
+18:10 &lt;sdumitriu> Solr has a param for that
+18:10 &lt;akats> I was guessing that it would
+18:11 &lt;akats> Was just hoping it would be as easy as sticking it into a query
+18:11 &lt;akats> By the way do you want me to leave the suggester enabled in solr, or do you want me to remove it?
+18:11 &lt;sdumitriu> Better remove it
+18:12 &lt;akats> ok no problem
+18:20 &lt;akats> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140220</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>65d6a8fc-2b77-4956-b947-dfe39abb4367</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

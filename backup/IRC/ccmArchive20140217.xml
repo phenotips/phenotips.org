@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140217</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1392636502000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1392683935000</date>
+  <contentUpdateDate>1392683935000</contentUpdateDate>
+  <version>1.23</version>
+  <title>IRC Archive for channel #ccm on 17 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;Shubhamtomar> has joined #ccm
+06:29 &lt;Shubhamtomar> Hi !
+06:42 &lt;Shubhamtomar> has joined #ccm
+09:41 &lt;Shubhamtomar> has joined #ccm
+09:43 &lt;Shubhamtomar> Hi
+10:09 &lt;sdumitriu1> has joined #ccm
+10:18 &lt;sdumitriu1> has joined #ccm
+10:21 &lt;sdumitriu1> Hi Shubhamtomar
+10:33 &lt;Shubhamtomar> Hello sdumitriu1
+10:34 &lt;Shubhamtomar> I am interested in Data visualization and ML projects hosted by CCM this year.
+10:35 &lt;sdumitriu1> has joined #ccm
+10:37 &lt;Shubhamtomar> there ?
+10:37 &lt;sdumitriu1> Yes
+10:37 &lt;sdumitriu1> The mentors responsible for those projects aren't online right now
+10:38 &lt;sdumitriu1> I suggest you write them on the email addresses displayed for each project
+10:38 &lt;Shubhamtomar> I've mailed Marc and Quaid. BTW thanks !
+10:38 &lt;sdumitriu1> You're welcome
+10:39 &lt;sdumitriu1> Sorry for not responding sooner, I've been away for the weekend
+10:39 &lt;Shubhamtomar> Its fine :)
+10:45 &lt;sdumitriu1> has joined #ccm
+12:42 &lt;Shubhamtomar> has joined #ccm
+14:51 &lt;sdumitriu1> has joined #ccm
+19:38 &lt;sdumitriu1> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20140217</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>e3c10110-6014-4352-aaa5-69cdea90ffd5</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

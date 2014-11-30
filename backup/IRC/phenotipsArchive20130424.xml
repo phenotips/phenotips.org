@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130424</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1366778850000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1366857002000</date>
+  <contentUpdateDate>1366857002000</contentUpdateDate>
+  <version>1.128</version>
+  <title>IRC Archive for channel #phenotips on 24 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalkhandelwal> sdumitriu:
+00:47 &lt;kushalkhandelwal> Morning
+00:47 &lt;sdumitriu> For you maybe...
+00:47 &lt;sdumitriu> I was just about to leave
+00:48 &lt;kushalkhandelwal> Hmm
+00:48 &lt;kushalkhandelwal> Too late
+00:48 &lt;sdumitriu> So, what's up?
+00:48 &lt;kushalkhandelwal> Just woke up
+00:49 &lt;kushalkhandelwal> Would finish application today  study a bit for exams
+00:49 &lt;kushalkhandelwal> Still some confusion on it
+00:49 &lt;kushalkhandelwal> Would clarify them once you are back
+00:49 &lt;kushalkhandelwal> You would be the mentor ?
+00:49 &lt;sdumitriu> One of them, yes
+00:49 &lt;sdumitriu> We think every project should have several mentors
+00:50 &lt;kushalkhandelwal> Ohh
+00:50 &lt;sdumitriu> Marta will probably handle more on the UI part, me on the code part
+00:50 &lt;kushalkhandelwal> So should I talk to her also ?
+00:50 &lt;kushalkhandelwal> So how many mentors in total ?
+00:50 &lt;kushalkhandelwal> You mentoring at Xwiki also ?
+00:50 &lt;sdumitriu> Yes
+00:51 &lt;kushalkhandelwal> Nice :)
+00:51 &lt;kushalkhandelwal> Yes for talking to marta or mentoring ? :P
+00:51 &lt;sdumitriu> Yes for Mentoring at XWiki
+00:52 &lt;kushalkhandelwal> Nice :)
+00:52 &lt;ravigarg27> has quit
+00:52 &lt;kushalkhandelwal> Should I talk to her also about the project once
+00:52 &lt;sdumitriu> Yes
+00:53 &lt;kushalkhandelwal> Ok
+00:53 &lt;kushalkhandelwal> would do that in the evening when you are back
+00:53 &lt;kushalkhandelwal> BTW who is the organization administrator for GSOC ?
+00:54 &lt;kushalkhandelwal> Michael Brudno ?
+00:54 &lt;sdumitriu> Yes, as the head of the CCM, but Marta is the actual admin
+00:55 &lt;kushalkhandelwal> Ohh so marta is head for GSOC
+00:57 &lt;kushalkhandelwal> So much of work these days ? You working late nights also
+00:57 &lt;kushalkhandelwal> Anyways how is the weather in toronto ? Burning hot in India :\
+00:58 &lt;sdumitriu> Cold, but getting warmer
+00:59 &lt;sdumitriu> Trees just started showing fresh new leaves
+00:59 &lt;sdumitriu> They'll probably bloom in a few days
+01:01 &lt;kushalkhandelwal> Ohh Great
+01:01 &lt;kushalkhandelwal> Have you ever been to India ?
+01:01 &lt;sdumitriu> Nope
+01:03 &lt;kushalkhandelwal> Hm
+01:09 &lt;froggy> has quit
+01:09 &lt;kushalkhandelwal> :)
+01:11 &lt;sdumitriu> You're not following the commit message pattern
+01:12 &lt;sdumitriu> -----
+01:12 &lt;sdumitriu> -----
+01:12 &lt;kushalkhandelwal> Oh Ok .. Fixed in the end
+01:13 &lt;sdumitriu> But anyway, good job
+01:16 &lt;kushalkhandelwal> thanks
+01:54 &lt;kushalkhandelwal> How come you awake ?
+02:31 &lt;kushalkhandelwal> has quit
+02:40 &lt;sdumitriu> has quit
+02:46 &lt;sdumitriu> has joined #phenotips
+03:38 &lt;kushalkhandelwal> has joined #phenotips
+04:32 &lt;kushalkhandelwal> has quit
+06:35 &lt;UCC> has quit
+06:42 &lt;kushalkhandelwal> has joined #phenotips
+07:26 &lt;ravigarg27> has quit
+07:44 &lt;qiangkou> has quit
+08:28 &lt;qwebirc48553> has quit
+08:51 &lt;UCC> has quit
+09:43 &lt;ravigarg27> has joined #phenotips
+10:37 &lt;sdumitriu1> has joined #phenotips
+10:59 &lt;UCC> has quit
+11:04 &lt;ravigarg27> has quit
+11:09 &lt;ravigarg27> has joined #phenotips
+12:08 &lt;ravigarg27> has quit
+12:16 &lt;ravigarg27> has joined #phenotips
+12:42 &lt;kushalk124> has quit
+12:46 &lt;kushalk124> has quit
+12:50 &lt;kushalk124> has quit
+12:54 &lt;kushalk124> has quit
+12:58 &lt;kushalk124> has quit
+13:02 &lt;kushalk124> has quit
+13:06 &lt;kushalk124> has quit
+13:10 &lt;kushalk124> has quit
+13:14 &lt;kushalk124> has quit
+13:18 &lt;kushalk124> has quit
+13:22 &lt;kushalk124> has quit
+13:26 &lt;froggy> has quit
+13:26 &lt;kushalk124> has quit
+13:30 &lt;ravigarg27> has quit
+13:30 &lt;kushalk124> has quit
+13:34 &lt;kushalk124> has quit
+13:38 &lt;kushalk124> has quit
+13:42 &lt;kushalk124> has quit
+13:47 &lt;kushalk124> has quit
+13:51 &lt;kushalk124> has quit
+13:55 &lt;kushalk124> has quit
+14:01 &lt;kushalk124> has quit
+14:06 &lt;kushalk124> has quit
+14:10 &lt;kushalk124> has quit
+14:14 &lt;kushalk124> has quit
+14:18 &lt;kushalk124> has quit
+14:21 &lt;qwebirc52220> has quit
+14:22 &lt;kushalk124> has quit
+14:28 &lt;kushalk124> has quit
+14:32 &lt;kushalk124> has quit
+14:36 &lt;kushalk124> has quit
+14:40 &lt;kushalk124> has quit
+14:44 &lt;kushalk124> has quit
+14:48 &lt;kushalk124> has quit
+14:48 &lt;sdumitriu> has quit
+14:50 &lt;sdumitriu> has joined #phenotips
+14:52 &lt;kushalk124> has quit
+14:56 &lt;kushalk124> has quit
+14:58 &lt;qwebirc161400> has joined #phenotips
+14:59 &lt;qwebirc161400> has quit
+14:59 &lt;prateek12592> has quit
+14:59 &lt;kushalkhandelwal> has quit
+14:59 &lt;kushalkhandelwal> has joined #phenotips
+15:00 &lt;kushalk124> has quit
+15:02 &lt;kushalkhandelwal> One minor thing you could change on phenotips.org
+15:02 &lt;kushalkhandelwal> sdumitriu1:
+15:02 &lt;kushalkhandelwal> Every registered user can post on the page or edit the current posts
+15:02 &lt;kushalkhandelwal> So I think you can change that
+15:07 &lt;kushalk124> has quit
+15:26 &lt;UCC> has quit
+17:24 &lt;UCC> has quit
+17:36 &lt;sdumitriu1> has quit
+17:41 &lt;sdumitriu1> has joined #phenotips
+18:02 &lt;sdumitriu1> has quit
+19:19 &lt;camelia_> has quit
+22:07 &lt;ravigarg27> has quit
+22:08 &lt;ravi_> has quit
+22:30 &lt;ravigarg27> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130424</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>06cb3e7e-bbcc-4f76-86de-fe5d97bace68</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

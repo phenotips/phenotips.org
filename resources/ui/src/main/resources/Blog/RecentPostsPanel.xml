@@ -111,7 +111,7 @@
   #panelheader($services.localization.render('xe.blog.recentposts.paneltitle'))&#xd;
   #foreach($entryDoc in $xwiki.wrapDocs($recentEntries))&#xd;
     #getEntryObject($entryDoc $entryObj)&#xd;
-; (%style="font-size: .8em"%)$!{services.jodatime.getDateTimeFormatterForPattern('MMM dd, YYYY').print($entryObj.getProperty('publishDate').value)}(%%)&#xd;
+; (%style="font-size: .8em"%)$!{xwiki.jodatime.getDateTimeFormatterForPattern('MMM dd, YYYY').print($entryObj.getProperty('publishDate').value)}(%%)&#xd;
 : [[$!{entryDoc.display('title', 'view', $entryObj).replaceAll('(\[|\]|\||>)', '~~$1')}>>$!{services.model.serialize($entryDoc.documentReference).replaceAll('(\[|\]|\||>)', '~$1')}]]&#xd;
   #end&#xd;
   #panelfooter()&#xd;

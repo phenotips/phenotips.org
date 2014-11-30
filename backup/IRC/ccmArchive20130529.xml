@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130529</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1369812006000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1369878619000</date>
+  <contentUpdateDate>1369878619000</contentUpdateDate>
+  <version>1.59</version>
+  <title>IRC Archive for channel #ccm on 29 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;BogdanVancea1_> has joined #ccm
+04:12 &lt;ravigarg27> has joined #ccm
+05:50 &lt;kushalkhandelwal> has joined #ccm
+06:50 &lt;ravigarg27> has joined #ccm
+08:44 &lt;ravigarg27> hey sdumitriu
+09:13 &lt;sdumitriu> Hi
+09:18 &lt;sdumitriu> ravigarg27: How's it going?
+09:18 &lt;sdumitriu> Time for the daily scrum
+09:18 &lt;ravigarg27> umm confused
+09:18 &lt;ravigarg27> I looked at the patientsheetcode file today
+09:19 &lt;ravigarg27> but couldnt understand it
+09:19 &lt;sdumitriu> Hm, it's indeed a bit complex
+09:20 &lt;ravigarg27> what I wanted to do is to play with ui parts
+09:20 &lt;ravigarg27> insert some elements
+09:20 &lt;ravigarg27> etc
+09:21 &lt;ravigarg27> I understood that some of the html elements are inserted from the velocity code
+09:22 &lt;sdumitriu> Yes
+09:23 &lt;ravigarg27> but couldn't find the actual portion from where all the ui element are being deployed
+09:24 &lt;ravigarg27> pls help me out!
+09:41 &lt;sdumitriu> Hold on, I'll be right back to you
+09:41 &lt;ravigarg27> ok
+09:57 &lt;sdumitriu> Sorry, I was having breakfast
+09:57 &lt;sdumitriu> So
+09:58 &lt;sdumitriu&gt; There are many different parts that contribute to the final HTML
+09:59 &lt;sdumitriu> The PatientSheetCode content is the one that triggers everything, thouh
+09:59 &lt;sdumitriu> though
+09:59 &lt;sdumitriu> Mostly with calls to $doc.display (or $obj.display)
+10:00 &lt;sdumitriu> $doc and $obj are references to Java objects
+10:00 &lt;sdumitriu> $doc is https://github.com/xwiki/xwiki-platform/blob/master/xwiki-platform-core/xwiki-platform-oldcore/src/main/java/com/xpn/xwiki/api/Document.java
+10:00 &lt;sdumitriu> $obj is https://github.com/xwiki/xwiki-platform/blob/master/xwiki-platform-core/xwiki-platform-oldcore/src/main/java/com/xpn/xwiki/api/Object.java
+10:01 &lt;sdumitriu> The display calls, if you follow them in Java, will end up either calling one of these classes: https://github.com/xwiki/xwiki-platform/tree/master/xwiki-platform-core/xwiki-platform-oldcore/src/main/java/com/xpn/xwiki/objects/classes
+10:02 &lt;sdumitriu> These output static HTML for editing or viewing properties
+10:02 &lt;sdumitriu> These properties are defined in a class
+10:03 &lt;sdumitriu> For example, this is the PatientClass holding most of the information about patients: https://github.com/compbio-UofT/phenotips/blob/master/components/patient-data/ui/src/main/resources/PhenoTips/PatientClass.xml
+10:03 &lt;sdumitriu> Some of the properties have a customDislay, though
+10:03 &lt;sdumitriu> For example https://github.com/compbio-UofT/phenotips/blob/master/components/patient-data/ui/src/main/resources/PhenoTips/PatientClass.xml#L57-75
+10:04 &lt;sdumitriu> When a property has a custom displayer, instead of being displayed using the static methods from the com.xpn.xwiki.objects.classes package, the code inside the custom displayer is executed
+10:04 &lt;sdumitriu> ravigarg27: With me so far?
+10:12 &lt;ravigarg27> sry was out, I got you upto this
+10:16 &lt;sdumitriu> OK, so you have to follow the code to see where it goes
+10:17 &lt;sdumitriu> Whenever you see a $variable, you can print its class with $variable.class to see what kind of object that is
+10:17 &lt;sdumitriu> Then you can go into Java, open that class, and follow the methods
+10:18 &lt;ravigarg27> k
+10:20 &lt;ravigarg27> also I wanted to ask you one more thing can I work on the ui part first and then on integration with cTAKES
+10:22 &lt;sdumitriu> Yes
+10:22 &lt;ravigarg27> yeah okay
+10:23 &lt;sdumitriu> Want some more easy issues to help you get into the code?
+10:26 &lt;ravigarg27> yeah will surely help
+10:27 &lt;sdumitriu> https://github.com/compbio-UofT/phenotips/issues/461
+10:27 &lt;sdumitriu> This isn't quite easy, more towards medium
+10:27 &lt;sdumitriu> But it's a good way of learning how to write components and work with the existing APIs
+10:27 &lt;ravigarg27> okay np
+10:28 &lt;ravigarg27> k will work on it
+11:12 &lt;BogdanVancea> has joined #ccm
+12:26 &lt;sdumitriu1> has joined #ccm
+13:58 &lt;ravigarg27> has joined #ccm
+14:35 &lt;ravigarg27> has left #ccm
+17:58 &lt;sdumitriu> has joined #ccm
+21:50 &lt;phenotips_org> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130529</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f0a7cc7c-a631-4dd3-993c-5b2e3487dce6</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

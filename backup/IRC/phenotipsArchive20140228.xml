@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140228</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1393567638000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1393639682000</date>
+  <contentUpdateDate>1393639682000</contentUpdateDate>
+  <version>1.62</version>
+  <title>IRC Archive for channel #phenotips on 28 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;gaurav_> has left #phenotips
+01:24 &lt;gauravsaini03> has joined #phenotips
+03:13 &lt;spanky> has joined #phenotips
+05:05 &lt;IonelPopescu> has joined #phenotips
+06:37 &lt;spanky> has quit
+07:12 &lt;Shubhamtomar> has quit
+09:59 &lt;gauravsaini03> has quit
+10:10 &lt;akats> has joined #phenotips
+10:15 &lt;IonelPopescu> has quit
+10:46 &lt;aw1231> has joined #phenotips
+10:58 &lt;aw1231> has quit
+11:14 &lt;vishnu93> has joined #phenotips
+12:06 &lt;gauravsaini03> has joined #phenotips
+12:30 &lt;gauravsaini03> has quit
+12:50 &lt;IonelPopescu> has joined #phenotips
+13:03 &lt;sayAsh> has joined #phenotips
+13:16 &lt;mcupak> has quit
+13:20 &lt;sayAsh> Hi, I am Ashish. I am a GSOC 2014 aspirant.
+13:20 &lt;sayAsh> As the instructions says I am building phenotips can anybody say me how much time it will take . It is around 50 minutes now and still it is building
+13:24 &lt;vishnu93> it takes quite some time
+13:24 &lt;vishnu93> wait till the files are finished downloading
+13:25 &lt;sayAsh> ok thanks
+13:54 &lt;sayAsh> has quit
+14:05 &lt;IonelPopescu> has quit
+14:50 &lt;vishnu93> has quit
+14:58 &lt;akif500> has quit
+15:05 &lt;nclandrei> has joined #phenotips
+15:05 &lt;nclandrei> hi everyone (-:
+15:10 &lt;akats> Hello
+15:11 &lt;nclandrei> how is work going?
+15:21 &lt;akats> Everyone has been working really hard
+15:21 &lt;nclandrei> oh okay then
+15:22 &lt;nclandrei> I won't bother you then.. I'll just hang around so if something happens I can see it :D
+15:22 &lt;nclandrei> I'm working out the code sdumitriu sent me yesterday, trying to figure it our
+15:22 &lt;nclandrei> out*
+15:25 &lt;akats> Keep hacking :)
+15:27 &lt;nclandrei> thanks, have easy work there
+15:32 &lt;akats> Thank you
+16:24 &lt;akats> sdumitriu: The GET parameter xpage= when appended to a URL makes the page use a .vm template?
+16:24 &lt;sdumitriu> Yes
+16:25 &lt;akats> That explains so much. Thanks.
+18:05 &lt;sdumitriu> Hey nclandrei
+18:05 &lt;sdumitriu> How's it going?
+18:12 &lt;nairboon> has quit
+18:14 &lt;IonelPopescu> has joined #phenotips
+18:15 &lt;akats> has quit
+18:15 &lt;nclandrei> hi sdumitriu
+18:16 &lt;nclandrei> nice to hear from you :D
+18:16 &lt;nclandrei> I was around, going through the code, playing with multiple users on PhenoTips
+18:16 &lt;nclandrei> I was just trying to get into the entire idea of this linear history
+18:16 &lt;nclandrei> of a record
+18:27 &lt;nclandrei> how about you? :D
+18:36 &lt;ionel_> has joined #phenotips
+18:42 &lt;IonelPopescu> has quit
+18:54 &lt;sdumitriu> is now known as &lt;sdumitriu_[away]&gt;
+19:03 &lt;ionel_> has quit
+19:22 &lt;nclandrei> I'm going to sleep
+19:22 &lt;nclandrei> talk to you tomorrow good night !
+19:22 &lt;nclandrei> has quit
+19:34 &lt;ionel_> has joined #phenotips
+20:40 &lt;raghav_> has quit
+21:08 &lt;ionel_> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140228</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>1e672341-f805-4f35-b8ee-77511f437a7c</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

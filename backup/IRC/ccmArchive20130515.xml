@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130515</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1368594734000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1368669403000</date>
+  <contentUpdateDate>1368669403000</contentUpdateDate>
+  <version>1.108</version>
+  <title>IRC Archive for channel #ccm on 15 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has joined #ccm
+01:39 &lt;BogdanVancea> has joined #ccm
+02:05 &lt;ravigarg27> has joined #ccm
+02:38 &lt;sdumitriu> has joined #ccm
+03:12 &lt;BogdanVancea> has joined #ccm
+03:25 &lt;Kushalk124> has joined #ccm
+05:35 &lt;BogdanVancea> has joined #ccm
+06:00 &lt;BogdanVancea> has joined #ccm
+06:14 &lt;sdumitriu> Good morning
+06:15 &lt;BogdanVancea> good morning
+06:16 &lt;sdumitriu> Interesting, although it's sunrise, it's getting darker outside
+06:16 &lt;sdumitriu> And there was a lovely huge double rainbow earlier
+06:17 &lt;sdumitriu> Now the storm is moving over me
+06:17 &lt;BogdanVancea> wow, thats some funky weather
+06:18 &lt;BogdanVancea> it rained here as well, but its cloudy now
+06:18 &lt;BogdanVancea> no rainbows sadly
+06:31 &lt;kushalkhandelwal> Good morning :)
+06:32 &lt;kushalkhandelwal> sdumitriu, Up early this morning ?
+06:32 &lt;sdumitriu> Almost every morning
+06:32 &lt;kushalkhandelwal> Oh
+06:32 &lt;kushalkhandelwal> what's the time ?
+06:33 &lt;kushalkhandelwal> its 6:40 :)
+06:33 &lt;kushalkhandelwal> Nice
+06:33 &lt;kushalkhandelwal> hey BogdanVancea
+06:34 &lt;BogdanVancea> hello, kushalkhandelwal
+06:34 &lt;BogdanVancea> :)
+07:22 &lt;sdumitriu> BogdanVancea: So, any progress on the issue?
+07:23 &lt;BogdanVancea> sdumitriu: a little
+07:23 &lt;BogdanVancea> I'm working on a parser
+07:23 &lt;BogdanVancea> for the vcf files
+07:23 &lt;BogdanVancea> :)
+08:08 &lt;ravigarg27> has joined #ccm
+09:48 &lt;ravigarg27> has joined #ccm
+09:59 &lt;ravigarg27> has joined #ccm
+10:06 &lt;ravigarg27> hey sdumitriu
+10:06 &lt;ravigarg27> free?
+10:06 &lt;sdumitriu> Hu
+10:06 &lt;sdumitriu> Hi
+10:08 &lt;ravigarg27> needed some info about the issue 457
+10:14 &lt;ravigarg27> has joined #ccm
+10:16 &lt;ravigarg27> umm sorry for that
+10:18 &lt;ravigarg27> can you guide me on how to proceed on that issue
+10:18 &lt;sdumitriu> Network issues?
+10:18 &lt;ravigarg27> nope actually battery
+10:20 &lt;sdumitriu> OK, so first thing first, is it clear what the goal is?
+10:21 &lt;ravigarg27> yeah I know what the problem is
+10:21 &lt;sdumitriu> Good
+10:22 &lt;ravigarg27> But what I am confused about is how it shud look in UI shud there be a message like synonym of mental retardation?
+10:23 &lt;ravigarg27> when it is not able to find exact match for the searched query
+10:26 &lt;sdumitriu> Hold on
+10:34 &lt;ravigarg27> has joined #ccm
+10:36 &lt;sdumitriu> Welcome back
+10:36 &lt;sdumitriu> I updated the issue with two screenshots
+10:37 &lt;BogdanVancea> sdumitriu, do you have 5 minutes?
+10:37 &lt;sdumitriu> The way I see it is that you should implement a quick edit distance measurement in JavaScript, and compare the user's input to the returned name
+10:37 &lt;sdumitriu> BogdanVancea: Yes, let me finish with Ravi first
+10:37 &lt;BogdanVancea> sure :)
+10:38 &lt;sdumitriu> If the distance is too large, then get each synonim and compute the distance between the input and the synonim
+10:38 &lt;sdumitriu> Remember the best match
+10:38 &lt;sdumitriu> Display it
+10:38 &lt;sdumitriu> You already have the synonims listed in the response JSON, you just have to process them
+10:38 &lt;sdumitriu> BogdanVancea: Shoot
+10:39 &lt;BogdanVancea> I've got some question regarding the vcf's
+10:39 &lt;BogdanVancea> do I need to check the metadata section?
+10:39 &lt;BogdanVancea> when processing the file?
+10:40 &lt;sdumitriu> I don't think so
+10:40 &lt;BogdanVancea> I've read that the metadata section is optional, so I'm not sure what to do about it
+10:40 &lt;BogdanVancea> from what I've seen, its pretty safe to ignore it
+10:40 &lt;sdumitriu> It's not like you can change the schema configuration after reading it
+10:41 &lt;BogdanVancea> yeah
+10:41 &lt;BogdanVancea> okay, so I'll just pass over it then
+10:41 &lt;ravigarg27> umm sry to interrupt but thanx sdumitriu :)
+10:41 &lt;sdumitriu> ravigarg27: Did I answer your questions?
+10:41 &lt;BogdanVancea> :)
+10:42 &lt;BogdanVancea> And I can use a dynamic field for the INFO fiels?
+10:42 &lt;sdumitriu> For the whole INFO field?
+10:43 &lt;sdumitriu> Or for each subfield?
+10:44 &lt;BogdanVancea> for each subfield
+10:44 &lt;sdumitriu> Hm, not sure, you decide
+10:44 &lt;BogdanVancea> okay then
+10:45 &lt;BogdanVancea> I'll continue then
+10:45 &lt;ravigarg27> I understood what i have to do; but just a couple more questions
+10:45 &lt;BogdanVancea> thanks :)
+10:45 &lt;BogdanVancea> and sorry for interrupting earlier, didn;t notice the ongoing discussion
+10:47 &lt;ravigarg27> can you just please brief me on the files I need to see or how to search for the relevant code files
+10:52 &lt;sdumitriu> There are two places of interest
+10:52 &lt;sdumitriu> http://localhost:8080/bin/edit/PhenoTips/Widgets?editor=object&amp;classname=XWiki.JavaScriptExtension&amp;object=0 is the general class that deals with suggestions
+10:53 &lt;sdumitriu> http://localhost:8080/bin/edit/PhenoTips/PatientSheetCode?editor=object&amp;classname=XWiki.JavaScriptExtension&amp;object=4 is where the actual suggest for phenotypes is customized
+10:56 &lt;ravigarg27> has joined #ccm
+10:58 &lt;ravigarg27> thanx again sdumitriu :)
+11:43 &lt;kushalkhandelwal> has joined #ccm
+12:04 &lt;BogdanVancea> has joined #ccm
+13:59 &lt;sdumitriu1> has joined #ccm
+17:11 &lt;phenotips_org> has joined #ccm
+18:24 &lt;BogdanVancea> has joined #ccm
+18:25 &lt;BogdanVancea> sdumitriu, I've made a pull request
+18:25 &lt;BogdanVancea> I hope I understood the requirments correctly :)
+18:25 &lt;sdumitriu> Yes, looking at it
+18:25 &lt;BogdanVancea> ah, ok
+18:28 &lt;sdumitriu> Quite long, I'll continue after dinner
+18:28 &lt;sdumitriu> Anyway, good job so far
+18:30 &lt;BogdanVancea> thanks:)
+18:30 &lt;BogdanVancea> well, I'm off to bed, is way past midnight now
+18:31 &lt;BogdanVancea> talk to you tommorrow
+18:31 &lt;BogdanVancea> bon apetit
+18:31 &lt;BogdanVancea> and good night :)
+18:32 &lt;sdumitriu> Good night
+21:56 &lt;Guest19352> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130515</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>3f353ca3-6e1a-415f-9c71-09c171d1a502</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

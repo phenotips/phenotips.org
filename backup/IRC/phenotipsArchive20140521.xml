@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140521</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1400664074000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1400728318000</date>
+  <contentUpdateDate>1400728318000</contentUpdateDate>
+  <version>1.23</version>
+  <title>IRC Archive for channel #phenotips on 21 May 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu1> has quit
+05:22 &lt;sdumitriu1> has joined #phenotips
+10:16 &lt;akats> has joined #phenotips
+10:18 &lt;akats> What if besides or instead of splitting different categories of phenotypes into their own columns we also split the document into sheets based on phenotype category?
+10:26 &lt;sdumitriu1> Too much
+10:27 &lt;sdumitriu1> All the data should be in view
+10:33 &lt;akats> ok
+13:33 &lt;akats> sdumitriu: Would we ever user sheets? Would we ever use formulas? And is .xlsx much more popular than .ods in our audience?
+13:34 &lt;sdumitriu> We might use sheets, but much later when we have support for cohorts
+13:34 &lt;sdumitriu> I doubt we'll use formulas
+13:35 &lt;sdumitriu> Hm, although we might for measurements, but that's a long way off, so no formulas for the foreseeable future
+13:35 &lt;sdumitriu> Yes, xlsx is more popular as of now
+13:35 &lt;akats> What are cohorts?
+13:35 &lt;sdumitriu> Families
+14:16 &lt;sdumitriu> has quit
+14:21 &lt;sdumitriu> has joined #phenotips
+15:05 &lt;vijay13> has quit
+15:35 &lt;akats> If I change a value of a mockito spy, does it change the value of the underlying object?
+16:36 &lt;allasm> has quit
+16:37 &lt;mcupak> has quit
+17:18 &lt;akats> has quit
+18:12 &lt;vijay13> has quit
+23:11 &lt;vijay13> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140521</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>d3dbbb64-3bcd-4515-a3d8-5339c72739c2</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

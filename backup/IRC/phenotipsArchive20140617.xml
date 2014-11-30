@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140617</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1402992965000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1403055610000</date>
+  <contentUpdateDate>1403055610000</contentUpdateDate>
+  <version>1.25</version>
+  <title>IRC Archive for channel #phenotips on 17 June 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;Not-cdc9> has quit
+04:16 &lt;allasm> has quit
+04:16 &lt;sdumitriu> has quit
+04:20 &lt;sdumitriu> has joined #phenotips
+04:32 &lt;Not-cdc9> has quit
+06:44 &lt;mcupak> has quit
+10:57 &lt;akats> has joined #phenotips
+11:08 &lt;mcupak> has quit
+13:13 &lt;allasm> has joined #phenotips
+14:56 &lt;akats> sdumitriu: Your last comment wasn't absolutely clear. Is this what you meant?
+14:56 &lt;akats> PatientData https://github.com/antonkatz/phenotips-1/blob/177d773a34f25dac83e9ef2046efd64ce097104c/components/patient-data/api/src/main/java/org/phenotips/data/PatientData.java
+14:57 &lt;akats> SimpleNamedData https://github.com/antonkatz/phenotips-1/blob/177d773a34f25dac83e9ef2046efd64ce097104c/components/patient-data/api/src/main/java/org/phenotips/data/SimpleNamedData.java
+15:39 &lt;sdumitriu1> akats: No
+15:39 &lt;sdumitriu1> K isn't needed
+15:39 &lt;sdumitriu1> The key, if any, is always String
+15:40 &lt;sdumitriu1> get(String name) should be in PatientData
+15:40 &lt;sdumitriu1> As well as get(int index)
+15:40 &lt;sdumitriu1> and getValue()
+15:45 &lt;akats> ok
+16:18 &lt;Not-cdc9> has quit
+19:57 &lt;akats> has quit
+20:03 &lt;akats> has joined #phenotips
+20:24 &lt;akats> has left #phenotips
+20:56 &lt;akats> has joined #phenotips
+21:40 &lt;akats> has left #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20140617</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>9e1ebaed-0773-4e7a-bbaa-d3b537e2dc25</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

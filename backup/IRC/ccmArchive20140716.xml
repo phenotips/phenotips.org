@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140716</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1405542668000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1405553243000</date>
+  <contentUpdateDate>1405553243000</contentUpdateDate>
+  <version>1.5</version>
+  <title>IRC Archive for channel #ccm on 16 July 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;meatcar> has joined #ccm
+19:01 &lt;Not-dd5a> [Pay2Spawn] dries007 pushed 1 commit to master [+0/-0/±6] http://git.io/Ge_T6g
+19:01 &lt;Not-dd5a> [Pay2Spawn] dries007 3044c58 - Random system update: Now available for commands and other STRING tags. This is now possible: "weather $random[clear, rain, thunder] $random(100, 1000)" for a random weather effect lasting anywhere from 100 to 1000 seconds
+19:27 &lt;Not-dd5a> [Pay2Spawn] dries007 pushed 1 commit to master [+0/-0/±2] http://git.io/r2pszQ
+19:27 &lt;Not-dd5a> [Pay2Spawn] dries007 3620ef9 - !important note! Read commit description replace all $random tags with $random()</content>
+  <object>
+    <name>IRC.ccmArchive20140716</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>a5be66c1-3cf0-4d6e-bb3d-c8aa1450f568</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

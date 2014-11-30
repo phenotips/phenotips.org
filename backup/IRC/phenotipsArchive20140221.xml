@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140221</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1392960224000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1393032832000</date>
+  <contentUpdateDate>1393032832000</contentUpdateDate>
+  <version>1.59</version>
+  <title>IRC Archive for channel #phenotips on 21 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu1> has joined #phenotips
+01:25 &lt;sdumitriu1> has quit
+08:52 &lt;sdumitriu1> has joined #phenotips
+10:27 &lt;Shubhamtomar> has quit
+11:00 &lt;akats2> has joined #phenotips
+11:09 &lt;kushalk124> has quit
+11:12 &lt;sdumitriu1> has quit
+11:25 &lt;kushalk124> has quit
+11:41 &lt;Shubhamtomar> has quit
+12:24 &lt;akats2> do you need spelling corrector functionality too?
+12:26 &lt;akats2> and also do you want to limit the number of results given out to 10?
+12:30 &lt;sdumitriu> Spelling would be great
+12:30 &lt;sdumitriu> I'm not sure it's a must, but it would be nice to have it
+12:31 &lt;sdumitriu> The way we do for HPO is to use different boosts for different fields
+12:31 &lt;sdumitriu> 10 results should be enough, the user should type more to get different results
+12:32 &lt;akats2> Am I supposed to see it in the xml response or is it only gotten through response.getSpellCheckResponse() ?
+12:32 &lt;sdumitriu> It should be in the XML if you ask for it
+12:32 &lt;sdumitriu> You need two more parameters
+12:33 &lt;sdumitriu> Check what the abstract solr ontology does when building the query
+12:34 &lt;akats2> gotcha
+13:05 &lt;akats2> I just found a bug in gitHub
+13:05 &lt;akats2> I'll show you later
+14:27 &lt;akats> has joined #phenotips
+14:42 &lt;akats> Might have found a very low priority bug in Phenotips
+14:45 &lt;sdumitriu> Which one?
+14:47 &lt;akats> Make new patient record, create new measurement, enter nothing, cancel edit
+14:48 &lt;akats> Also, """ Currently terms such as macrocephaly and growth terms are auto-populated  from the prenatal measurements and the clinical synopsis measurements  fields. """. I can't get it to do this.
+14:58 &lt;akats> Sergiu, I know exactly what we'll have them do! We'll have them write tests! Lots and lots of tests.
+14:59 &lt;sdumitriu> Do you think that's gonna be pleasant for them?
+15:01 &lt;akats> No. Not at all. Is it supposed to be?
+15:01 &lt;sdumitriu> Yes, a bit
+15:01 &lt;akats> Oh, I see
+15:01 &lt;sdumitriu> We're also competing with other famous organizations to get the best students
+15:02 &lt;akats> What kind of students are they. Highschool or Undergrad?
+15:02 &lt;sdumitriu> Undergrad -> PostDocs
+15:02 &lt;sdumitriu> Mostly undergrads and masters
+15:03 &lt;akats> Wow.
+15:03 &lt;akats> Can we have them implement features?
+15:03 &lt;akats> new features that is
+15:03 &lt;sdumitriu> After they get accepted, yes
+15:03 &lt;sdumitriu> That's the goal
+15:03 &lt;sdumitriu> Small tasks are just in the beginning, to prove that they're worthy
+15:04 &lt;sdumitriu> The acceptance ratio is less than 20%
+15:05 &lt;akats> How can that be? They are professional programmers
+15:14 &lt;akats> This is odd. I built master. But the only thing that gets selected automatically is "Stature for age". "Weight" and "Head circumference" are both not being selected.
+15:25 &lt;akats> So this is a solid bug that I found. There are several ways to trigger it.
+17:59 &lt;akats> So it appears that right now the whole automatic selection process is meant to be used only with "extreme-". All of the hooks that I've seen are only "extreme-" and more importantly the unselection process works only with "extreme-"
+18:00 &lt;akats> So really the easy fix would be a one way street to "above-norm" and "below-norm". But you said that some definitions are based on percentiles and some on S.D.
+18:03 &lt;sdumitriu> Hm, indeed, they only work with extreme-*
+18:03 &lt;sdumitriu> I was pretty sure I saw one with below-normal a few days ago when looking at that code
+18:04 &lt;sdumitriu> But it should be easy to make the code work with both values
+18:05 &lt;akats> Um... is there a reason why the unselect is written as ['extreme-below-normal', 'extreme-above-normal'].without(values[p]['valCategory'] || '').each(function(val)
+18:06 &lt;sdumitriu> There's a reason for everything
+18:06 &lt;sdumitriu> Sometimes, Marta works in misterious ways...
+18:08 &lt;akats> Is it ok if I rewrite it?
+18:08 &lt;sdumitriu> Sure
+18:08 &lt;akats> ok
+18:08 &lt;akats> has quit
+20:33 &lt;allasm> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140221</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>b2e22ad0-f11b-4c29-b5b0-ac8e0fd10d90</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

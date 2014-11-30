@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140304</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1393913152000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1393994755000</date>
+  <contentUpdateDate>1393994755000</contentUpdateDate>
+  <version>1.121</version>
+  <title>IRC Archive for channel #phenotips on 04 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;puneet> has quit
+01:29 &lt;raghav> has quit
+01:34 &lt;IonelPopescu> has joined #phenotips
+01:44 &lt;SayAsh> has joined #phenotips
+01:44 &lt;SayAsh> has quit
+01:53 &lt;IonelPopescu> has quit
+02:29 &lt;IonelPopescu> has joined #phenotips
+02:50 &lt;IonelPopescu> has quit
+02:56 &lt;nileshc> has quit
+03:24 &lt;anishshah101> has joined #phenotips
+03:29 &lt;anishshah101> has quit
+03:35 &lt;reid_a> has quit
+05:25 &lt;IonelPopescu> has joined #phenotips
+06:35 &lt;gauravsaini03> has joined #phenotips
+06:46 &lt;SayAsh> has joined #phenotips
+07:01 &lt;IonelPopescu> has quit
+08:01 &lt;Ravneet> has quit
+08:18 &lt;gauravsaini03> has joined #phenotips
+09:48 &lt;IonelPopescu> has joined #phenotips
+10:10 &lt;mcupak> has quit
+10:25 &lt;IonelPopescu> has quit
+10:35 &lt;nclandrei> has joined #phenotips
+10:35 &lt;nclandrei> hi everyone
+11:08 &lt;IonelPopescu> has joined #phenotips
+11:13 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+11:13 &lt;sdumitriu> Hi nclandrei
+11:15 &lt;nclandrei> a bit later in the evening, can I send you a small draft of how the proposal would look like?
+11:15 &lt;nclandrei> :)
+11:17 &lt;sdumitriu> Sure
+11:21 &lt;nclandrei> has quit
+11:28 &lt;akif500> has quit
+11:31 &lt;pradeeban> has quit
+11:33 &lt;pradeeban1> has quit
+11:35 &lt;pradeeban2> has quit
+11:38 &lt;akats> has joined #phenotips
+11:39 &lt;pradeeban> has quit
+11:50 &lt;akats> So I'm doing some cleaning up, and I just pushed whatever changes I made working on the REST server. Though you might want to have the link https://github.com/soLEED/phenotips-1/commit/3a7fdff148bb48fcfc296b0c1b64644c369274a9
+11:53 &lt;pradeeban1> has quit
+12:10 &lt;akats> So can the phenomecentral repo compile into standalone, or do I have to put it into a the phenotips standalone
+12:11 &lt;sdumitriu> standalone should have everything
+12:11 &lt;akats> ok
+12:26 &lt;akats> On your computer do you have the version in phenotips-parent pom set as 1.0-milestone-10 or 1.0-SNAPSHOT?
+12:28 &lt;sdumitriu> SNAPSHOT
+12:29 &lt;akats> well... phenomecentral would not build until I changed the phenotips-parent pom to version 1.0-milestone-10
+12:31 &lt;sdumitriu> Hm...
+12:31 &lt;sdumitriu> What was the error?
+12:32 &lt;akats> Couldn't find the pom
+12:32 &lt;akats> the phenotips-parent
+12:34 &lt;vishnu93> has joined #phenotips
+12:38 &lt;akats> I like the front page design
+12:41 &lt;puneet_> has quit
+12:49 &lt;SayAsh> hi I have a question to ask?
+12:49 &lt;sdumitriu> Hi SayAsh, I guess you do
+12:50 &lt;akats> sdumitriu: so right now the registration form does not create a new user. Where does the request go? Somebody's email?
+12:50 &lt;sdumitriu> Yes
+12:50 &lt;sdumitriu> That is a custom form, not the registration
+12:50 &lt;sdumitriu> The goal is to replace it with your code
+12:51 &lt;SayAsh> ya, I want to know that we have to create a mobile application for phenotips or just a website interface that would work with mobile appropriately?
+12:51 &lt;sdumitriu> akats: Just pushed an update to the pom to make the build work
+12:52 &lt;akats> sdumitiu: And I'm assuming I should do that with an adapter which would create a new user
+12:52 &lt;akats> sdumitiu: thanks
+12:52 &lt;IonelPopescu> has quit
+12:52 &lt;sdumitriu> SayAsh: Not an application, just a skin for the website
+12:53 &lt;SayAsh> ok
+12:54 &lt;SayAsh> and the template for it would like what it is given in this page http://phenotips.org/UserGuide/GettingStarted  right?
+12:56 &lt;SayAsh> and as you said just a skin for the website, then i think that u want that to work with both desktop and mobile browsers?
+12:56 &lt;sdumitriu> Yes, one flexible skin for every browser
+13:02 &lt;reid_a> has quit
+13:26 &lt;SayAsh> i have a doubt. In the "measurements" section for the patient information each time we enter a new entry. What I am thinking that the information which will going to remain same throughout should fill up automatically as a user clicks on "new entry". isn't it?
+13:27 &lt;sdumitriu> How do you know it should remain the same?
+13:28 &lt;sdumitriu> It's misleading data, unless the user clears it, it would seem that the doctor actually measured stuff and the numbers there are validated, which isn't the case
+13:38 &lt;SayAsh> ok, still what i am trying to convey is like take the eg of sitting height, then the length of arm and hand, that will going to remain same throughout the patient's life unless anything sever happens. So like these type of fields can be filled automatically though there would be an access to change those figures too in new entry if they had got change. This will going to save the time for the person who is filling. The weight and the height will be changin
+14:01 &lt;IonelPopescu> has joined #phenotips
+14:12 &lt;akats> sdumitriu: I should not include the xwikipreferences file in the commits, because I'm assuming it will overwrite whatever settings there already are?
+14:12 &lt;sdumitriu> You should, but with care
+14:32 &lt;pradeeban> has quit
+15:02 &lt;IonelPopescu> has quit
+15:05 &lt;IonelPopescu> has joined #phenotips
+15:12 &lt;SayAsh> has quit
+15:21 &lt;akats> So the registerinline template is overriden by XWiki/Registration
+15:22 &lt;akats> it's a fairly extensive document
+15:22 &lt;akats> I can include the current register page into it, which would take me some time
+15:23 &lt;akats> or I could include createUser() into the current Phenomecentral registration page
+15:35 &lt;vishnu93> has quit
+15:58 &lt;gauravsaini03> has quit
+16:08 &lt;akats> What should be the id of the xwiki document for the new user? There is no username. Should I put the email address? That is guaranteed to be unique. For example for admin it's xwiki:XWiki.Admin
+16:09 &lt;sdumitriu> No email address
+16:10 &lt;sdumitriu> The login won't work
+16:10 &lt;sdumitriu> You need to add the username field in the registration form
+16:11 &lt;akats> and then check for it's uniqueness
+16:11 &lt;sdumitriu> Yes
+16:12 &lt;sdumitriu> I guess the default registration page does that already
+16:12 &lt;sdumitriu> It has some live validation in it, you should reuse it
+16:12 &lt;akats> There's a macro if I remember correctly
+16:12 &lt;akats> Live as in javascript?
+16:12 &lt;sdumitriu> Yes
+16:12 &lt;akats> ok
+16:26 &lt;pradeeban> has quit
+16:38 &lt;akats> How would I change the document's (id?) from xwiki:data.WebHome to xwiki:XWiki.Username. document.rename() doesn't want to play nice. Is there another method, that would not require me to work with XWikiDocument rather than just Document?
+16:38 &lt;akats> That smiley is :d
+16:38 &lt;akats> :\d
+16:39 &lt;akats> without the \
+16:39 &lt;sdumitriu> I don't see smileys, they're disabled
+16:39 &lt;sdumitriu> (for me)
+16:39 &lt;sdumitriu> I don't understand the question
+16:43 &lt;reid_a> has quit
+16:44 &lt;pradeeban> has quit
+16:53 &lt;akats> has quit
+17:03 &lt;IonelPopescu> has quit
+17:10 &lt;nclandrei> has joined #phenotips
+17:18 &lt;IonelPopescu> has joined #phenotips
+17:37 &lt;nclandrei> has quit
+18:58 &lt;IonelPopescu> has quit
+19:03 &lt;pradeeban> has quit
+20:11 &lt;nairboon> has quit
+20:34 &lt;SayAsh> has joined #phenotips
+20:50 &lt;nclandrei> has joined #phenotips
+20:53 &lt;SayAsh> has quit
+20:56 &lt;nclandrei> has quit
+23:45 &lt;nileshc> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140304</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>9e01eb50-9c6a-4e75-96ad-d1eba14b461b</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

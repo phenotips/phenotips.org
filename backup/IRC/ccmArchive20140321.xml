@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140321</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395375345000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395457872000</date>
+  <contentUpdateDate>1395457872000</contentUpdateDate>
+  <version>1.93</version>
+  <title>IRC Archive for channel #ccm on 21 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;n7704> has joined #ccm
+01:06 &lt;lyonwj> has joined #ccm
+01:55 &lt;sdumitriu> has joined #ccm
+03:57 &lt;sanjhee__> has joined #ccm
+03:59 &lt;sanjhee> has joined #ccm
+06:25 &lt;SayAsh_> has joined #ccm
+06:46 &lt;groundnuty> has joined #ccm
+07:11 &lt;groundnuty> sdumitriu_[Away]: Dear Sir, I'm writing a proposal for "Development of machine learning methods for modeling the evolution of tumors". The more I read into a cited paper the more I conclude that the main chalange will be to grasp the complexity of the created method - not the coding and optimization part
+07:16 &lt;groundnuty> sdumitriu_[Away]: without a very good understanding of statistical methods and biology behind it its difficult to analyze the python codebase and propose a detailed architecture of the proposed solution
+07:20 &lt;groundnuty> said that, I would like to ask: who are you looking for? a person with good statistical/biological background who understads the subject of cited article well, or a computer scientis/programer?
+09:03 &lt;Shubham> has joined #ccm
+09:53 &lt;Shubham> has joined #ccm
+11:05 &lt;vijay13> has joined #ccm
+11:17 &lt;vijay13> has joined #ccm
+11:20 &lt;Shubham1> has joined #ccm
+11:41 &lt;shalinshah1993> has joined #ccm
+12:59 &lt;nav93> has joined #ccm
+13:12 &lt;sdumitriu> Hey groundnuty
+13:16 &lt;nairboon> has joined #ccm
+13:19 &lt;shalinshah1993> has joined #ccm
+13:52 &lt;vijay13> has joined #ccm
+14:07 &lt;shalinshah1993> How many application did MedSavant get this time?
+14:08 &lt;Shubham> has joined #ccm
+14:11 &lt;sdumitriu> 14
+14:11 &lt;sdumitriu> (so far)
+14:11 &lt;sdumitriu> Wait, miscounted
+14:11 &lt;sdumitriu> 11
+14:17 &lt;Shubham> has joined #ccm
+14:23 &lt;SayAsh> has joined #ccm
+14:31 &lt;shalinshah1993> Oh, so many.
+14:31 &lt;sdumitriu> I was expecting more, there were many emails
+14:31 &lt;shalinshah1993> And how many slots do you expect?
+14:31 &lt;sdumitriu> Either waiting for the last moment or found something more interesting
+14:31 &lt;sdumitriu> No idea
+14:31 &lt;shalinshah1993> I is going to be a tough competition then.
+14:32 &lt;shalinshah1993> it*
+14:32 &lt;Shubham> has joined #ccm
+14:33 &lt;shalinshah1993> So now where will every be more active IRC or email?
+14:36 &lt;shalinshah1993> Oh and I also have this confusion what is difference between MedSavant and GenomeSavant since when open MedSavant it redirects us
+14:37 &lt;shalinshah1993> to genomesavant
+14:37 &lt;shalinshah1993> or are the interchangeable ?
+14:38 &lt;vijay13> has joined #ccm
+14:46 &lt;Shubham> has joined #ccm
+14:53 &lt;groundnuty> shalinshah1993: add one more, just submited mine :)
+14:53 &lt;Shubham> has joined #ccm
+14:53 &lt;groundnuty> sory it was to sdumitriu
+14:57 &lt;sdumitriu> They're coming 1 per minute now
+14:58 &lt;shalinshah1993> Really?
+14:58 &lt;shalinshah1993> :D
+15:00 &lt;shalinshah1993> So now what is the final total?
+15:01 &lt;sdumitriu> 59
+15:02 &lt;sdumitriu> Up from 39 last year
+15:02 &lt;shalinshah1993> Boy! Such a jump from 11 to 59. God bless us!
+15:02 &lt;shalinshah1993> :D
+15:03 &lt;sdumitriu> Oh, no, they're not all for MedSavant
+15:03 &lt;sdumitriu> 59 for the whole of CCM
+15:03 &lt;sdumitriu> Now it looks like there are 14 for MedSavant
+15:03 &lt;sdumitriu> Although there might be more if they didn't include Medsavant in the title
+15:04 &lt;shalinshah1993> Alright.
+15:05 &lt;shalinshah1993> Well, it's ought to be ideas for CCM were really intriguing
+15:07 &lt;Shubham> has joined #ccm
+15:11 &lt;groundnuty> if I may ask, PhyloSub is part of MedSavant or...?
+15:12 &lt;sdumitriu> No, it's a separate project
+15:12 &lt;groundnuty> any statistics regarding this one?
+15:12 &lt;sdumitriu> That looks like the most popular one
+15:13 &lt;groundnuty> sdumitriu: ok, thank you for the news :)
+15:15 &lt;shalin__> has joined #ccm
+15:16 &lt;shalinshah1993> has joined #ccm
+15:17 &lt;sdumitriu> A quick filter shows 20 applications for the two tumor projects
+15:25 &lt;Shubham> has joined #ccm
+15:32 &lt;Shubham> has joined #ccm
+15:42 &lt;Shubham> has joined #ccm
+15:51 &lt;Shubham> has joined #ccm
+15:58 &lt;Shubham> has joined #ccm
+16:16 &lt;Shubham> has joined #ccm
+16:18 &lt;shalinshah1993> has joined #ccm
+16:19 &lt;Shubham1> has joined #ccm
+16:32 &lt;tweety098> has joined #ccm
+16:42 &lt;Shubham> has joined #ccm
+16:58 &lt;Shubham> has joined #ccm
+17:16 &lt;Shubham> has joined #ccm
+17:39 &lt;Shubham> has joined #ccm
+17:39 &lt;vijay13> has joined #ccm
+17:46 &lt;Shubham> has joined #ccm
+17:53 &lt;vijay13> has joined #ccm
+20:51 &lt;Shubham> has joined #ccm
+20:58 &lt;Shubham> has joined #ccm
+21:06 &lt;Shubham> has joined #ccm
+21:17 &lt;Shubham> has joined #ccm
+21:39 &lt;shalinshah1993> has joined #ccm
+22:16 &lt;Shubham> has joined #ccm
+22:37 &lt;vijay13> has joined #ccm
+23:11 &lt;shalinshah1993> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20140321</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>318fad7f-18da-4a2e-9e86-be5e47c72964</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

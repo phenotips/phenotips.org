@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140822</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1408719608000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1408763455000</date>
+  <contentUpdateDate>1408763455000</contentUpdateDate>
+  <version>1.30</version>
+  <title>IRC Archive for channel #phenotips on 22 August 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;IJessa> has joined #phenotips
+11:01 &lt;IJessa> sdumitriu: hi sergiu, slight problem, the entire build seems to be failing and it's throwing up all kinds of errors that I haven't seen before. i fetched and merged all the new changes and did everything that i was supposed to do and its still failing
+11:01 &lt;IJessa> sdumitriu: i don't know what to do now
+11:02 &lt;sdumitriu> IJessa: What's the error?
+11:04 &lt;IJessa> sdumitriu: [ERROR] COMPILATION ERROR :
+11:04 &lt;IJessa>   symbol:   method setPatientLastName(java.lang.String)
+11:04 &lt;IJessa>   location: variable patientEdit of type org.phenotips.data.test.po.PatientRecordEditPage
+11:05 &lt;IJessa> sdumitriu: and it does until [211, 20
+11:05 &lt;sdumitriu> Did you run mvn clean install or just mvn install?
+11:05 &lt;IJessa> both
+11:06 &lt;sdumitriu> Then something's wrong with your sources
+11:06 &lt;IJessa> yeah but i don't know what
+11:06 &lt;IJessa> cause i didn't change anything after i left last night
+12:35 &lt;IJessa> has quit
+14:30 &lt;marta__> has joined #phenotips
+16:43 &lt;phenotips_org> has joined #phenotips
+16:54 &lt;marta__> has quit
+16:55 &lt;marta__> has joined #phenotips
+17:04 &lt;marta__> has quit
+17:05 &lt;marta__> has joined #phenotips
+20:34 &lt;marta__> has quit
+20:35 &lt;marta__> has joined #phenotips
+20:56 &lt;marta__> has quit
+20:57 &lt;marta__> has joined #phenotips
+21:52 &lt;marta__> has quit
+21:53 &lt;marta__> has joined #phenotips
+21:58 &lt;marta__> has quit
+21:59 &lt;marta__> has joined #phenotips
+23:10 &lt;marta__> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140822</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>55a401c8-9b1e-4b8b-8878-4a04020a6292</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

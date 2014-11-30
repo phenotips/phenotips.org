@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130516</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1368688315000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1368761326000</date>
+  <contentUpdateDate>1368761326000</contentUpdateDate>
+  <version>1.114</version>
+  <title>IRC Archive for channel #ccm on 16 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalkhandelwal> has joined #ccm
+07:18 &lt;BogdanVancea1_> has joined #ccm
+07:18 &lt;BogdanVancea1_> hello everyone
+07:36 &lt;sdumitriu> Hi
+07:38 &lt;BogdanVancea1_> did you manage to take a look on my pull request?
+07:39 &lt;sdumitriu> Sorry, no
+07:39 &lt;BogdanVancea1_> ah, ok then :)
+07:39 &lt;sdumitriu> After dinner I had to fill in some paperwork, which took until midnight :(
+07:39 &lt;sdumitriu> And it's still not over
+07:39 &lt;BogdanVancea1_> ouch
+07:39 &lt;BogdanVancea1_> its ok
+07:39 &lt;sdumitriu> I don't like paperwork...
+07:39 &lt;BogdanVancea1_> I need to finish a paper
+07:40 &lt;BogdanVancea1_> so I've got some work aswell
+07:40 &lt;BogdanVancea1_> gsoc related paperwork?
+07:40 &lt;sdumitriu> No
+07:44 &lt;BogdanVancea1_> I see
+07:44 &lt;BogdanVancea1_> well, good luck with it :)
+07:44 &lt;BogdanVancea1_> we can talk when you're not as busy
+07:44 &lt;BogdanVancea1_> :)
+10:34 &lt;sdumitriu1> has joined #ccm
+10:48 &lt;ravigarg27> has joined #ccm
+11:18 &lt;ravigarg27_> has joined #ccm
+11:21 &lt;ravigarg27_> hey sdumitriu1
+11:21 &lt;ravigarg27_> free?
+11:21 &lt;sdumitriu1> Hey
+11:21 &lt;sdumitriu1> Not really
+11:21 &lt;sdumitriu1> But I got time for you
+11:22 &lt;ravigarg27_> hehe ok I will be quick I have written code for calculating distance between the terms
+11:23 &lt;ravigarg27_> I also went through the suggest code files you suggested
+11:23 &lt;ravigarg27_> understood quite a bit
+11:25 &lt;ravigarg27_> but was not able to understand the structure of json reply from the request send
+11:25 &lt;ravigarg27_> as in where are the synonyms stored
+11:32 &lt;sdumitriu1> Did you use Firebug to capture the response?
+11:32 &lt;sdumitriu1> Or how did you look at the JSON?
+11:34 &lt;ravigarg27_> I couldn't look at JSON response actually
+11:36 &lt;kushalkhandelwal> install firebug in firefox
+11:36 &lt;ravigarg27_> installed
+11:36 &lt;kushalkhandelwal> gr8
+11:36 &lt;kushalkhandelwal> open it
+11:37 &lt;sdumitriu1> Make sure the Net tab is activated
+11:37 &lt;ravigarg27_> ok done
+11:37 &lt;sdumitriu1> Then when you search for something, you should see the request
+11:37 &lt;sdumitriu1> And it should have a JSON subtab
+11:39 &lt;kushalkhandelwal&gt; ravigarg27_,  tried it ?
+11:39 &lt;ravigarg27_> yup doing thanx
+11:40 &lt;kushalkhandelwal> ok :)
+11:40 &lt;ravigarg27_> I meant thanx sdumitriu :P
+11:41 &lt;kushalkhandelwal> :P
+11:41 &lt;sdumitriu1> thanx kushalkhandelwal as well
+11:41 &lt;kushalkhandelwal> Ha its ok :)
+11:41 &lt;kushalkhandelwal> Paper work today ? sdumitriu1
+11:42 &lt;sdumitriu1> No, sysadmin work today...
+11:42 &lt;sdumitriu1> Done with the paperwork
+11:42 &lt;kushalkhandelwal> Ahh
+11:42 &lt;kushalkhandelwal> What kind of work ?
+11:42 &lt;kushalkhandelwal> You got the new machine ?
+11:43 &lt;kushalkhandelwal> for CI ?
+11:43 &lt;sdumitriu1> Almost
+11:43 &lt;sdumitriu1> I need to get login on the machine, but at least the machine is ready
+11:43 &lt;sdumitriu1> Actually two of them
+11:43 &lt;kushalkhandelwal> Oh nice
+11:43 &lt;kushalkhandelwal> Wohoo
+11:43 &lt;kushalkhandelwal> So faster builds
+11:43 &lt;ravigarg27_> thanx kushalkhandelwal
+11:44 &lt;kushalkhandelwal> Using machine for other work ?
+11:44 &lt;kushalkhandelwal> ravigarg27_, No problem :)
+11:45 &lt;kushalkhandelwal> sdumitriu1, Do you use puppet  ?
+11:45 &lt;sdumitriu1> Nope, not yet
+11:46 &lt;kushalkhandelwal> learning about it
+11:46 &lt;sdumitriu1> No need for it so far since I only had one machine
+11:46 &lt;sdumitriu1> But yes, it's a good tool for the future
+11:46 &lt;kushalkhandelwal> I am looking how I can automate machines at server room in my campus
+11:46 &lt;kushalkhandelwal> Yes it is
+11:46 &lt;kushalkhandelwal> I am working within fedora community
+11:46 &lt;kushalkhandelwal> Taking some helpful tips from there
+11:47 &lt;kushalkhandelwal> You are busy today
+11:48 &lt;kushalkhandelwal> When you get time a discussion on puppet and chef
+11:48 &lt;kushalkhandelwal> One more of random discussions with you :)
+12:48 &lt;gustavojordan> has joined #ccm
+14:57 &lt;ravigarg27> has joined #ccm
+15:27 &lt;ravigarg27> hey sdumitriu1
+15:27 &lt;sdumitriu1> Hey
+15:33 &lt;ravigarg27> I have pasted the updated code over here http://pastebin.com/S6tG8YJc new added starts from line number 466 I am still a begineer in JavaScript so was finding it difficult to debug it
+15:33 &lt;ravigarg27> can you please have a look
+15:34 &lt;ravigarg27> and please do pardon me if you find this too noobish
+15:40 &lt;sdumitriu1> minimator: I'd change the conditions to &lt;= instead of &lt;
+15:41 &lt;ravigarg27> ok will do that
+15:43 &lt;sdumitriu1> You're always setting a synonym
+15:43 &lt;sdumitriu1> matchSynonym = synonym[0]; -> should be inside the if after it
+15:44 &lt;sdumitriu1> Another thing that I didn't mention: this should also work when the user only typed a prefix
+15:44 &lt;sdumitriu> has joined #ccm
+15:44 &lt;sdumitriu1> So if I type "mental", it should highlight the "mental retardation" synonym
+15:45 &lt;sdumitriu1> But if I type "Intellectual", it correctly matches "Intellectual disability" better than other synonyms
+15:46 &lt;sdumitriu1> So, instead of computing the distance to the full m and n lengths, it should only compute the distance up to [n, min(m, n)]
+15:47 &lt;ravigarg27> ohh okay
+15:47 &lt;sdumitriu1> Also, you should check that the matched synonym doesn't have a worse score than the name itself
+15:47 &lt;sdumitriu1> But you're going in the right direction
+15:47 &lt;sdumitriu1> This looks good
+15:48 &lt;ravigarg27> is the processing of synonyms correct
+15:48 &lt;sdumitriu1> Yes, looks good
+15:49 &lt;sdumitriu1> Did you try it? Does it work?
+15:49 &lt;ravigarg27> Yeah I tried it; but sadly it didnt work
+15:49 &lt;ravigarg27> actually whole autosuggest didnt came up
+15:50 &lt;sdumitriu1> Hm... Might be a syntax error someplace
+15:50 &lt;sdumitriu1> Firebug can help again
+15:50 &lt;sdumitriu1> If it's a syntax error, it should print something in the Console tab
+15:51 &lt;ravigarg27> okay i am trying that
+16:05 &lt;ravigarg27_> has joined #ccm
+16:31 &lt;sdumitriu2> has joined #ccm
+16:51 &lt;phenotips_org> has joined #ccm
+16:52 &lt;phenotips_org> has joined #ccm
+20:44 &lt;marta> has joined #ccm
+23:28 &lt;ravigarg27> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130516</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>4f1adf2f-dd37-4b26-b364-ebdaf0341180</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

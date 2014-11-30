@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140407</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1396847096000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1396927835000</date>
+  <contentUpdateDate>1396927835000</contentUpdateDate>
+  <version>1.20</version>
+  <title>IRC Archive for channel #ccm on 07 April 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;vijay13> has joined #ccm
+03:44 &lt;vijay13> has joined #ccm
+06:46 &lt;vijay13_> has joined #ccm
+06:47 &lt;vijay13_> has joined #ccm
+10:40 &lt;vijay13> has joined #ccm
+19:05 &lt;CARAM> has joined #ccm
+19:25 &lt;CARAM> has joined #ccm
+19:57 &lt;CARAM> has joined #ccm
+20:08 &lt;CARAM> has joined #ccm
+20:18 &lt;CARAM> has joined #ccm
+20:56 &lt;CARAM> has joined #ccm
+20:57 &lt;CARAM> has joined #ccm
+21:28 &lt;CARAM> has joined #ccm
+22:03 &lt;CARAM> has joined #ccm
+22:30 &lt;CARAM> has joined #ccm
+22:50 &lt;CARAM> has joined #ccm
+22:56 &lt;CARAM_> has joined #ccm
+23:01 &lt;CARAM> has joined #ccm
+23:17 &lt;CARAM> has joined #ccm
+23:30 &lt;CARAM> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20140407</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>2898324d-0a6d-4c11-b6b8-9aff1bcc6b70</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

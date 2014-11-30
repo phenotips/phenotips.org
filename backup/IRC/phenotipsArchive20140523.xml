@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140523</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1400856456000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1400894129000</date>
+  <contentUpdateDate>1400894129000</contentUpdateDate>
+  <version>1.25</version>
+  <title>IRC Archive for channel #phenotips on 23 May 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;mcupak> has quit
+12:08 &lt;mcupak> has quit
+17:09 &lt;akats> has joined #phenotips
+17:10 &lt;akats> For the last issue with the All Data table, the records do appear in the all data page, correct?
+17:10 &lt;akats> Just not the all data page
+17:11 &lt;sdumitriu> No
+17:11 &lt;sdumitriu> That's the same thing
+17:11 &lt;sdumitriu> There's only one "All data"
+17:12 &lt;sdumitriu> That one is mine
+17:12 &lt;sdumitriu> (the issue)
+17:16 &lt;akats> oh ok
+17:26 &lt;akats> In the export, right now, metadata is exported like this Cataract; Congenital onset; Nonprogressive disorder
+17:27 &lt;akats> Would it make sense to export this with split cells
+17:27 &lt;akats> Cataract in one cell and the metadata in the next
+17:27 &lt;sdumitriu> Yes
+17:27 &lt;sdumitriu> If
+17:27 &lt;sdumitriu> Each term is on a separate row
+17:27 &lt;sdumitriu> Otherwise you don't know which metadata corresponds to which term
+17:28 &lt;akats> makes sense
+17:28 &lt;akats> some bottom borders would be useful too
+17:29 &lt;sdumitriu> Yes
+17:30 &lt;sdumitriu> For each patient, not for each phenotype
+17:30 &lt;akats&gt; ok
+18:59 &lt;akats> has quit
+21:15 &lt;vijay13> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140523</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>7e44c01c-6452-4272-95c4-7b251807cb5e</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140316</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1394947249000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395028265000</date>
+  <contentUpdateDate>1395028265000</contentUpdateDate>
+  <version>1.82</version>
+  <title>IRC Archive for channel #phenotips on 16 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;gauravsaini03> has joined #phenotips
+02:36 &lt;sdumitriu1> has joined #phenotips
+02:38 &lt;sdumitriu> has quit
+02:41 &lt;sdumitriu1> has quit
+02:44 &lt;sdumitriu> has joined #phenotips
+03:09 &lt;gauravsaini03> has quit
+03:20 &lt;gauravsaini03> has joined #phenotips
+03:29 &lt;sdumitriu> has quit
+03:44 &lt;sdumitriu> has joined #phenotips
+05:00 &lt;CARAM> has quit
+05:43 &lt;CARAM_> has quit
+05:46 &lt;sdumitriu> has quit
+05:48 &lt;sdumitriu> has joined #phenotips
+06:53 &lt;sdumitriu1> has joined #phenotips
+06:55 &lt;sdumitriu> has quit
+08:44 &lt;sdumitriu> has joined #phenotips
+08:45 &lt;sdumitriu1> has quit
+08:51 &lt;sdumitriu1> has joined #phenotips
+08:52 &lt;sdumitriu> has quit
+08:56 &lt;sdumitriu1> has quit
+08:56 &lt;sdumitriu> has joined #phenotips
+09:35 &lt;gauravsaini03> has quit
+09:35 &lt;gauravsaini03> has joined #phenotips
+09:55 &lt;sdumitriu1> has joined #phenotips
+09:57 &lt;sdumitriu> has quit
+10:00 &lt;sdumitriu1> has quit
+10:03 &lt;sdumitriu> has joined #phenotips
+10:07 &lt;SayAsh> has joined #phenotips
+10:13 &lt;sdumitriu> has quit
+10:14 &lt;sdumitriu> has joined #phenotips
+10:23 &lt;SayAsh> has quit
+10:52 &lt;sdumitriu1> has joined #phenotips
+10:54 &lt;sdumitriu> has quit
+10:55 &lt;sdumitriu> has joined #phenotips
+10:56 &lt;sdumitriu1> has quit
+10:57 &lt;sdumitriu> has quit
+10:59 &lt;sdumitriu> has joined #phenotips
+11:59 &lt;sdumitriu> has quit
+11:59 &lt;sdumitriu> has joined #phenotips
+12:59 &lt;sdumitriu> has quit
+13:01 &lt;sdumitriu> has joined #phenotips
+13:17 &lt;sdumitriu1> has joined #phenotips
+13:17 &lt;sdumitriu1> has quit
+13:19 &lt;sdumitriu1> has joined #phenotips
+13:19 &lt;sdumitriu> has quit
+13:36 &lt;SayAsh> has joined #phenotips
+13:44 &lt;sdumitriu> has joined #phenotips
+13:46 &lt;sdumitriu1> has quit
+14:19 &lt;SayAsh> has quit
+14:19 &lt;SayAsh> has joined #phenotips
+14:25 &lt;SayAsh> has quit
+14:26 &lt;sdumitriu1> has joined #phenotips
+14:28 &lt;sdumitriu> has quit
+14:49 &lt;sdumitriu1> has quit
+14:49 &lt;sdumitriu> has joined #phenotips
+15:59 &lt;sdumitriu1> has joined #phenotips
+16:00 &lt;sdumitriu> has quit
+16:33 &lt;sdumitriu> has joined #phenotips
+16:35 &lt;sdumitriu1> has quit
+17:00 &lt;sdumitriu> has quit
+17:03 &lt;sdumitriu> has joined #phenotips
+17:20 &lt;gauravsaini03> has quit
+17:36 &lt;winter_flower> has quit
+17:55 &lt;sdumitriu1> has joined #phenotips
+17:57 &lt;sdumitriu> has quit
+18:01 &lt;sdumitriu> has joined #phenotips
+18:03 &lt;sdumitriu1> has quit
+18:16 &lt;pm__> has quit
+19:06 &lt;sdumitriu1> has joined #phenotips
+19:09 &lt;sdumitriu> has quit
+19:10 &lt;sdumitriu> has joined #phenotips
+19:12 &lt;sdumitriu1> has quit
+19:29 &lt;sdumitriu> has quit
+19:43 &lt;sdumitriu> has joined #phenotips
+21:56 &lt;sdumitriu1> has joined #phenotips
+21:58 &lt;sdumitriu> has quit
+22:33 &lt;sdumitriu> has joined #phenotips
+22:35 &lt;sdumitriu1> has quit
+23:29 &lt;sdumitriu1> has joined #phenotips
+23:32 &lt;sdumitriu> has quit
+23:35 &lt;sdumitriu1> has quit
+23:51 &lt;sdumitriu> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20140316</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>3a6751f0-5759-43b0-b4e0-71db560d57c0</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

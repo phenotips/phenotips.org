@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130620</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1371727126000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1371763816000</date>
+  <contentUpdateDate>1371763816000</contentUpdateDate>
+  <version>1.83</version>
+  <title>IRC Archive for channel #phenotips on 20 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has quit
+08:17 &lt;mcupak> has quit
+11:01 &lt;sdumitriu1> has joined #phenotips
+13:46 &lt;kushalkhandelwal> has joined #phenotips
+13:46 &lt;kushalkhandelwal> How are you ?
+13:49 &lt;sdumitriu1> Hold on, talking with bvancea
+13:54 &lt;kushalkhandelwal> OK :)
+14:08 &lt;sdumitriu1> Hey kushalkhandelwal
+14:08 &lt;kushalkhandelwal> Hello
+14:09 &lt;sdumitriu1> So, what are you working on?
+14:10 &lt;kushalkhandelwal> Digit Recognition
+14:10 &lt;kushalkhandelwal> and some big data analysis
+14:10 &lt;kushalkhandelwal> in python django
+14:10 &lt;kushalkhandelwal> learning mongodb for that
+14:10 &lt;kushalkhandelwal> sdumitriu1, I have to start with my project for phenotips
+14:11 &lt;kushalkhandelwal> From where should I start
+14:11 &lt;kushalkhandelwal> Lets discuss about it when you get free so that I start working
+14:11 &lt;sdumitriu1> Sure
+14:13 &lt;kushalkhandelwal> So when will you be free ?
+14:13 &lt;sdumitriu1> In a few minutes, finishing up with Bogdan
+14:14 &lt;kushalkhandelwal> Ok
+14:14 &lt;kushalkhandelwal> Will wait till then
+14:28 &lt;sdumitriu1> OK
+14:29 &lt;sdumitriu1> Let's see
+14:31 &lt;sdumitriu1> I know
+14:31 &lt;sdumitriu1> You can start by marking phenotype mapping files with an object
+14:31 &lt;sdumitriu1> So, create a PhenoTips.PhenotypeMappingClass class
+14:32 &lt;sdumitriu1> Add fields to it: name (String), description (Textarea)
+14:36 &lt;sdumitriu1> Then add objects of this class to the existing mappings
+14:36 &lt;sdumitriu1> And change the two inputs where the mapping is chosen to list only existing mappings
+14:37 &lt;sdumitriu1> - on the administration page, where the global mapping is chosen
+14:37 &lt;sdumitriu1> - in the user profile, where a custom mapping for a user is chosen
+14:39 &lt;kushalkhandelwal> Hmm ok
+14:39 &lt;kushalkhandelwal> so first thing would be mapping
+14:42 &lt;kushalkhandelwal> sdumitriu1,
+14:43 &lt;sdumitriu1> Yes
+14:44 &lt;kushalkhandelwal> Would start working on it :)
+14:46 &lt;kushalkhandelwal> Starting phenotips after a long time :)
+14:46 &lt;sdumitriu1> Do you still remember how to set the full skin, which shows the edit->class menu?
+14:47 &lt;kushalkhandelwal> full skin ?
+14:47 &lt;sdumitriu1> Yes
+14:48 &lt;kushalkhandelwal> Tell me
+14:48 &lt;kushalkhandelwal> it was ctrl+g
+14:48 &lt;kushalkhandelwal> for opening a file ?
+14:49 &lt;sdumitriu1> Yes
+14:49 &lt;kushalkhandelwal> Its not working :(
+14:49 &lt;kushalkhandelwal> in firefox also
+14:49 &lt;sdumitriu1> Hm...
+14:49 &lt;sdumitriu1> Make sure the page has focus
+14:49 &lt;sdumitriu1> Click on the page
+14:50 &lt;kushalkhandelwal> It has
+14:50 &lt;kushalkhandelwal> I get the search bar
+14:50 &lt;sdumitriu1> Any JS errors?
+14:50 &lt;kushalkhandelwal> Oops
+14:50 &lt;kushalkhandelwal> I figured it
+14:50 &lt;kushalkhandelwal> I had disabled js in ff
+14:51 &lt;kushalkhandelwal> from webdev toolbar
+14:52 &lt;kushalkhandelwal> and for editing object it was something like
+14:52 &lt;kushalkhandelwal> http://localhost:8081/bin/edit/PhenoTips/PatientSheetCode?editor=object
+14:52 &lt;sdumitriu1> Yes
+14:52 &lt;kushalkhandelwal> Is this full skin ?
+14:53 &lt;kushalkhandelwal> Sorry , long time I might ask stupid questions
+14:53 &lt;kushalkhandelwal> Give me 1-2 days and I would be back on track
+14:54 &lt;kushalkhandelwal> So i need to add new objects in this page ?
+14:55 &lt;sdumitriu1> No
+14:56 &lt;sdumitriu1> The full skin was to go to the administration, wiki administration, Look &amp; Feel ->  Presentation, and set "colibri" as the skin
+14:56 &lt;sdumitriu1> You must add a new class
+14:57 &lt;sdumitriu1> http://localhost:8081/bin/edit/PhenoTips/PhenotypeMappingClass?editor=class
+14:57 &lt;kushalkhandelwal> Oh
+14:57 &lt;kushalkhandelwal> In never did that before
+14:57 &lt;kushalkhandelwal> full skin thing
+14:58 &lt;kushalkhandelwal> Didn't knew abt it
+15:05 &lt;kushalkhandelwal> So I have created the objects
+15:05 &lt;kushalkhandelwal> Rest tmrw
+15:05 &lt;kushalkhandelwal> From now would be regular on IRC
+15:05 &lt;kushalkhandelwal> and work :)
+15:05 &lt;kushalkhandelwal> Sleep time
+15:05 &lt;kushalkhandelwal> Good Night :) Meet you tomorrow
+15:06 &lt;sdumitriu1> Good night
+15:09 &lt;kushalkhandelwal> has quit
+17:00 &lt;sdumitriu1> has quit
+17:30 &lt;bvancea> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130620</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>e1221d92-becd-4553-b88d-ef6b308fe7f4</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

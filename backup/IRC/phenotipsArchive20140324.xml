@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140324</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395667199000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395707346000</date>
+  <contentUpdateDate>1395707346000</contentUpdateDate>
+  <version>1.35</version>
+  <title>IRC Archive for channel #phenotips on 24 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;tweety098> has quit
+09:49 &lt;SayAsh> has joined #phenotips
+09:54 &lt;tweety098> has quit
+10:18 &lt;akats> has joined #phenotips
+10:27 &lt;SayAsh> has quit
+11:14 &lt;vijay13> has quit
+11:37 &lt;SayAsh_> has joined #phenotips
+14:30 &lt;shalinshah1993> has quit
+14:54 &lt;akats> sdumitriu: I took a look at what you are asking me to do. I'm not clear on everything though.
+15:14 &lt;akats> Would you like me to turn sections in the word document (for example Corpus Callosum, which has 4 conditions listed under it), into subsections in the PhenoTips list? The subsections in PhenoTips require and HPO term as the id, and they are not provided, but I shouldn't have too much trouble finding the right terms through Solr.
+15:14 &lt;sdumitriu> Not yet
+15:14 &lt;sdumitriu> The issue is that items in a subsectition are not expandable
+15:14 &lt;sdumitriu> That's a bug that needs fixing
+15:15 &lt;akats> Oh, I see
+15:16 &lt;sdumitriu> But ideally yes, those should be subsections
+15:16 &lt;sdumitriu> And the ID is not required
+15:16 &lt;sdumitriu> It's not used at all actually
+15:17 &lt;sdumitriu> (for subsection titles)
+15:24 &lt;vijay13> has quit
+15:29 &lt;SayAsh_> has quit
+15:46 &lt;vijay13> has quit
+16:25 &lt;akats> I think I might have found a bug in PhenoTips, but can't say for sure because it's in the form preview, rather than on the full patient record
+16:27 &lt;shalinshah1993> has quit
+16:57 &lt;akats> so the bug that we were looking at is "partial" bug. Also I think I found another bug.
+17:09 &lt;mcupak> has quit
+17:33 &lt;akats> how do you want the file. Just the json, xar zip, or maven formatted xml?
+17:35 &lt;akats> I tried checking the terms, but its a bit hard when they are not named the same as on the list
+17:43 &lt;sdumitriu> You should put the mapping on dev.phenotips.org
+17:44 &lt;akats> I don't have admin access
+17:45 &lt;sdumitriu> Yes you do
+17:47 &lt;shalinshah1993> has quit
+17:53 &lt;akats> http://dev.phenotips.org/bin/PhenoTips/Neuro+Skeletal. I can't guarantee that I didn't miss something, but I did try double checking.
+17:53 &lt;sdumitriu> OK, thank you
+18:39 &lt;akats> has quit
+20:29 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;</content>
+  <object>
+    <name>IRC.phenotipsArchive20140324</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>5f1227e5-1a2f-4233-b003-c50807358cdd</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

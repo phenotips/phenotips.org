@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140204</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1391498311000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1391543494000</date>
+  <contentUpdateDate>1391543494000</contentUpdateDate>
+  <version>1.47</version>
+  <title>IRC Archive for channel #phenotips on 04 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has quit
+02:25 &lt;sdumitriu> has joined #phenotips
+09:57 &lt;akats> has joined #phenotips
+10:28 &lt;akats> ok got the labels in
+10:29 &lt;sdumitriu1> Committed?
+10:31 &lt;akats> just did
+10:33 &lt;sdumitriu1> K
+10:51 &lt;akats> fixed up
+10:53 &lt;sdumitriu1> Well, the method is still named insertHpoTerm, you should remove HPO from everywhere. Call it insertOntologyTerm, and fix the JavaDoc
+11:02 &lt;akats> has quit
+11:04 &lt;akats> has joined #phenotips
+11:12 &lt;akats> Did I miss anything this time?
+11:15 &lt;sdumitriu1> Checking
+11:17 &lt;sdumitriu1> Looks good
+11:17 &lt;sdumitriu1> I'll merge it soon, I have something else to debug
+11:17 &lt;sdumitriu1> There's some haunted code...
+11:19 &lt;akats> there should be sound effects in IRC
+11:19 &lt;akats> has quit
+11:19 &lt;akats> has joined #phenotips
+11:20 &lt;akats> So what is my task for now
+11:22 &lt;sdumitriu1> Found the ghost
+11:22 &lt;sdumitriu1> ghosts
+11:24 &lt;akats> :)
+11:25 &lt;sdumitriu1> https://github.com/phenotips/phenotips/issues/685
+11:25 &lt;sdumitriu1> The buggy code is in the obo2solr module
+11:26 &lt;sdumitriu1> http://oboformat.googlecode.com/svn/trunk/doc/obo-syntax.html describes the OBO syntax
+11:26 &lt;sdumitriu1> Marta can answer questions, I'll be in a call
+11:26 &lt;akats> ok
+12:32 &lt;akats> would this count as a definition with a colon
+12:33 &lt;akats> um... i got an IRC error. let me resend that.
+12:33 &lt;akats> would this count as a definition with a colon
+12:33 &lt;akats> Hypogonadotropic hypogonadism is characterized by reduced function of the gonads (testes in males or ovaries in females) and results from the absence of the gonadal stimulating pituitary hormones: follicle stimulating hormone (FSH) and luteinizing hormone (LH).
+12:33 &lt;sdumitriu1> Yes
+12:34 &lt;sdumitriu1> Did you fix it?
+12:34 &lt;akats> Nope
+12:35 &lt;akats> And by index you mean anything here for example http://localhost:8080/solr/hpo/select?q=id:*0000044
+12:37 &lt;sdumitriu1> Hm...
+12:37 &lt;sdumitriu1> Hold on a second
+12:37 &lt;sdumitriu1> I'm pretty sure I'm not crazy
+12:41 &lt;sdumitriu1> Oh...
+12:41 &lt;sdumitriu1> Nevermind...
+12:41 &lt;sdumitriu1> That is indeed invalid
+12:42 &lt;sdumitriu1> But this one isn't: https://github.com/phenotips/phenotips/issues/684
+12:43 &lt;sdumitriu1> For example: http://localhost:8080/solr/hpo/select?q=id:*0001212
+12:54 &lt;sdumitriu1> akats: https://github.com/organizations/phenotips/dashboard/issues/assigned?direction=desc&amp;state=open (your assigned issues)
+13:22 &lt;akats> whats $1?
+14:51 &lt;akats> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140204</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f3917d97-0258-4912-a58d-a973183cd5dc</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

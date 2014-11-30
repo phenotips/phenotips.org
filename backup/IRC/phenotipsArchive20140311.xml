@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140311</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1394516550000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1394595978000</date>
+  <contentUpdateDate>1394595978000</contentUpdateDate>
+  <version>1.72</version>
+  <title>IRC Archive for channel #phenotips on 11 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;IonelPopescu> has joined #phenotips
+01:54 &lt;IonelPopescu> has quit
+09:20 &lt;akats> has joined #phenotips
+10:36 &lt;Guest38811> has quit
+11:02 &lt;Guest38811> has quit
+11:03 &lt;SayAsh_> has joined #phenotips
+11:08 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+11:28 &lt;Guest38811> has quit
+11:39 &lt;Guest38811> has quit
+11:41 &lt;allasm> has joined #phenotips
+11:41 &lt;sdumitriu> akats: What are you working on?
+11:45 &lt;akats> Working on stopping the rights objects being recreated
+11:49 &lt;gauravsaini03> has joined #phenotips
+13:24 &lt;SayAsh_> has quit
+14:27 &lt;akats> Is there a know bug in XWiki where permissions (XWikiRights) on the "editor=object" page don't show XWikiAdmin, even if it is visible on the "xpage=xml" page?
+14:53 &lt;sdumitriu> Are you sure it's XWikiAdmin and not XWiki.Admin?
+14:53 &lt;mcupak> has quit
+14:55 &lt;akats> Actually it happens with other users too
+14:57 &lt;nclandrei> has joined #phenotips
+14:57 &lt;nclandrei> hi everyone !
+14:58 &lt;sdumitriu> Hi nclandrei
+14:58 &lt;nclandrei> how are things going?
+14:58 &lt;nclandrei> still a lot of work?
+14:58 &lt;sdumitriu> Always
+14:59 &lt;sdumitriu> I'm waiting for pull requests, but so far no student managed to solve any issues
+14:59 &lt;sdumitriu> akats: Actually if it takes too much time, you can skip tests for the moment
+15:01 &lt;nclandrei> I am also in a dead end with mine,I think I will change mine
+15:02 &lt;nclandrei> unfortunately this period is extremely busy for me too, I told you we have midterms
+15:02 &lt;sdumitriu> Yes
+15:02 &lt;nclandrei> and all this boring stuff haha
+15:02 &lt;nclandrei> with learning for
+15:02 &lt;nclandrei> classes like marketing etc.
+15:02 &lt;sdumitriu> Are those mandatory?
+15:03 &lt;nclandrei> yes, because we are forced to have a certain number of transdisciplinary courses
+15:03 &lt;nclandrei> so it is mandatory )-:
+15:03 &lt;akats> sdumitriu: ok
+15:09 &lt;Csine> has joined #phenotips
+15:12 &lt;Csine> has quit
+15:23 &lt;Csine> has quit
+15:23 &lt;ohotin> has quit
+15:26 &lt;nclandrei> I will wander around, anyway, while searching for a more approachable bug :D
+15:31 &lt;ellana> has joined #phenotips
+15:41 &lt;ellana> has quit
+15:46 &lt;botalovs> has quit
+15:50 &lt;gauravsaini03> has quit
+17:00 &lt;akats> has left #phenotips
+17:27 &lt;devsoft> has joined #phenotips
+17:27 &lt;devsoft> has quit
+17:28 &lt;nikolett> has joined #phenotips
+17:30 &lt;nikolett> has quit
+17:30 &lt;stolovaya> has quit
+17:32 &lt;allasm> has quit
+17:38 &lt;allasm> has joined #phenotips
+17:41 &lt;bvancea> has joined #phenotips
+17:41 &lt;sdumitriu> Hey bvancea
+17:41 &lt;bvancea> hey sdumitriu
+17:42 &lt;bvancea> what's up?
+17:42 &lt;sdumitriu> The bugcount
+17:42 &lt;bvancea> I found some time to play with phenotips, github seems down :(
+17:42 &lt;bvancea> hahaha
+17:42 &lt;bvancea> hmmm, seems to be up again
+17:42 &lt;sdumitriu> Yeah, it takes microsleeps from time to time
+17:43 &lt;bvancea> hmm, must be some maintenance
+18:03 &lt;qwebirc54442> has quit
+19:58 &lt;carum> has quit
+20:34 &lt;bvancea> has quit
+21:01 &lt;SayAsh> has joined #phenotips
+21:06 &lt;SayAsh> has quit
+21:26 &lt;nairboon> has quit
+21:37 &lt;SayAsh> has joined #phenotips
+22:04 &lt;SayAsh> has quit
+23:46 &lt;nclandrei> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140311</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>0b973177-7784-4045-9dc5-8a7735c18934</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

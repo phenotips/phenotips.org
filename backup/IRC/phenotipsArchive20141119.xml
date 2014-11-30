@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20141119</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1416421406000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1416431073000</date>
+  <contentUpdateDate>1416431073000</contentUpdateDate>
+  <version>1.51</version>
+  <title>IRC Archive for channel #phenotips on 19 November 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;jakester> has joined #phenotips
+13:29 &lt;jakester> I have a question on integrating phenotips with my application. I know I can display a patient record via a request to /bin/PhenoTips/OpenPatientRecord, but how can I provide user credentials?
+13:30 &lt;sdumitriu1> Hi jakester
+13:30 &lt;jakester> hello!
+13:30 &lt;sdumitriu1> That depends on where your users are defined
+13:31 &lt;sdumitriu1> By default, PhenoTips has local application users, but you can plug in other authenticators
+13:31 &lt;jakester> Let's say I am using a normal xwiki user, how would I do it?
+13:32 &lt;sdumitriu1> One minute
+13:32 &lt;jakester> thanks for helping!
+13:33 &lt;jakester> maybe I should say "using a local application user"
+13:37 &lt;jakester> xwiki docs mention I can do the usual http://user:pass@localhost/, but that didn't seem to work.
+13:37 &lt;sdumitriu1> Is basic auth OK?
+13:37 &lt;jakester> sure
+13:37 &lt;sdumitriu1> For that to work you must also append &amp;basicauth=1 in the URL
+13:39 &lt;sdumitriu1> curl 'http://localhost:8080/bin/get/PhenoTips/OpenPatientRecord' -d 'id=P0000134&amp;basicauth=1' -u user:pass
+13:40 &lt;sdumitriu1> Works for you?
+13:40 &lt;jakester> ok that works, I actually tried it on the ExportPatient url first and it doesn't work on that page when logged out
+13:41 &lt;jakester> once I hit OpenPatientRecord I can hit ExportPatient, that should  be ok
+13:41 &lt;jakester> thanks!
+13:42 &lt;sdumitriu1> Hm, it should work on ExportPatient, actually that's the one where I tested it
+13:43 &lt;jakester> ok probably something I did wrong, I will play around with it some more
+15:36 &lt;jakester> I've got another question
+15:36 &lt;sdumitriu1> Shoot
+15:37 &lt;jakester> I enabled `AppServerTrustedAuthServiceImpl` to allow for remote authentication, that seems to have worked, but now trying to get BaseAuthorizationModule to allow access by default
+15:37 &lt;jakester> I put the setting `phenotips.security.authorization.allowAllAccessByDefault=1` in xwiki.properties but still getting an authorization error
+15:40 &lt;sdumitriu1> Hm, that won't work like that
+15:40 &lt;sdumitriu1> BaseAuthorizationModule work only if no other module makes a decision
+15:41 &lt;sdumitriu1> And at the moment, XWikiACLAuthorizationModule can always make a decision
+15:41 &lt;sdumitriu1> So phenotips.security.authorization.allowAllAccessByDefault=1 would only work if you disable the XWikiACL
+15:42 &lt;sdumitriu1> The authorization modules are not yet complete...
+15:42 &lt;jakester> ok, I see that now
+15:42 &lt;sdumitriu1> Let's go back, does the authentication work?
+15:43 &lt;sdumitriu1> Meaning, you can see a username displayed in the upper right corner?
+15:43 &lt;jakester> I assumed it was, but having doubts now
+15:44 &lt;jakester> only giving me a partial page back that says "You don't have the permission to create a new patient record"
+15:46 &lt;sdumitriu1> Try using /bin/view/ instead of /bin/get/ in the URL
+15:49 &lt;jakester> no, authentication doesn't seem to have worked
+15:54 &lt;jakester> is that a misconfiguration on my part?
+15:54 &lt;sdumitriu1> Depends
+15:54 &lt;sdumitriu1> I would say yes
+15:56 &lt;sdumitriu1> AppServerTrustedAuthServiceImpl requires that you already authenticated with the servlet container (Tomcat?)
+15:56 &lt;sdumitriu1> Can you check that you are authenticated in the container?
+15:57 &lt;jakester> I am actually using an http client directly and setting REMOTE_USER header
+15:58 &lt;sdumitriu1> Oh, I see
+15:59 &lt;sdumitriu1> I'm not sure how remote users work...
+16:00 &lt;jakester> that should be enough to get it to take my user, I will do some more debugging to figure out where my problem lies
+16:00 &lt;sdumitriu1> A quick search doesn't seem to indicate that a REMOTE_USER header should work
+16:01 &lt;jakester> AppServerTrustedAuthServiceImpl.java calls getRemoteUser() to get the username
+16:01 &lt;sdumitriu1> Yes
+16:02 &lt;sdumitriu1> The javadoc says that it is "same as the value of the CGI variable REMOTE_USER", it doesn't mention a header name
+16:04 &lt;jakester> ok thanks, looks like I need to set up tomcat</content>
+  <object>
+    <name>IRC.phenotipsArchive20141119</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>708ed96f-9007-433f-8f65-bdbe4a45fc47</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

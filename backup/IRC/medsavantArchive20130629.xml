@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130629</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372490047000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1372536349000</date>
+  <contentUpdateDate>1372536349000</contentUpdateDate>
+  <version>1.76</version>
+  <title>IRC Archive for channel #medsavant on 29 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;marta> has joined #medsavant
+07:25 &lt;bvancea> has joined #medsavant
+08:29 &lt;bvancea> hey sdumitiru
+08:29 &lt;bvancea> sdumitriu*
+09:37 &lt;sdumitriu> Hey bvancea
+09:39 &lt;bvancea> how are you?
+09:39 &lt;sdumitriu> Tired
+09:39 &lt;sdumitriu> I need a vacation
+09:39 &lt;bvancea> hehe
+09:40 &lt;bvancea> when was the last time you had a vacation?
+09:49 &lt;sdumitriu> 2009?
+09:50 &lt;bvancea> wow
+09:50 &lt;bvancea> props to you for lasting so long
+11:23 &lt;sdumitriu> So, how's it going?
+11:23 &lt;sdumitriu> Done with the thesis rewrite?
+11:27 &lt;bvancea> yup, I've send it to the advisor
+11:28 &lt;bvancea> I'm working on that abstraction layer now
+11:29 &lt;bvancea> if I manage to finish that up and set up debugging for the new generated project version
+11:29 &lt;bvancea> I'll consider it a productive weekened
+11:29 &lt;bvancea> weekend*
+11:30 &lt;bvancea> I also had the final graduation festivity this morning :)
+11:30 &lt;bvancea> I'm not sure why my university likes to hold 2 separate graduation festivities
+11:30 &lt;bvancea> a lot of redundancy imo
+11:34 &lt;bvancea> I mean there's a festivity with all the faculties at the university, and there's the festivity with my year only
+12:42 &lt;bvancea> has joined #medsavant
+13:36 &lt;bvancea> so I have a question
+13:37 &lt;bvancea> after we would create a query object
+13:37 &lt;bvancea> and populate it with parameters, etc
+13:37 &lt;bvancea> and query.execute() is called
+13:38 &lt;bvancea> the object should have delegate the execution of the query to a QueryExecutor (I'm using the terminology from XWiki)
+13:38 &lt;bvancea> how are we going to do that?
+13:39 &lt;bvancea> I can only think of using dependency injection to inject a query executor into queries
+13:39 &lt;bvancea> or just singleton query executors
+13:39 &lt;bvancea> and have the query implementations call them
+14:37 &lt;bvancea> I create a new issue for the code I've been working on
+14:37 &lt;bvancea> hopefully the name is descriptive enough
+14:41 &lt;sdumitriu> bvancea: Sorry, I was talking with somebody
+14:41 &lt;bvancea> its okay
+14:41 &lt;bvancea> its saturday anyway
+14:41 &lt;bvancea> :)
+14:41 &lt;sdumitriu> So yes, the QueryExecutor is the one that will be different: SolrQueryExecutor, ICEQueryExecutor
+14:42 &lt;bvancea> I see
+14:42 &lt;sdumitriu> DI would be a good idea, except that MedSavant doesn't have one
+14:42 &lt;sdumitriu> So the next best idea is to use a Factory
+14:42 &lt;sdumitriu> Which uses a simple if..else based on a text configuration file
+14:43 &lt;sdumitriu> It's not that pretty, but it works
+14:43 &lt;bvancea> hmm
+14:44 &lt;bvancea> so the factory would read the classname for that executor and instantiate one?
+14:44 &lt;bvancea> from the config file I mean
+14:45 &lt;sdumitriu> Reflection is one idea, indeed
+14:45 &lt;sdumitriu> And it's more scalable
+14:46 &lt;bvancea> cool
+14:46 &lt;bvancea> what exactly do you mean by more scalable though?
+14:47 &lt;sdumitriu> What I said was to just have an if (configuration.engine == "solr") then executor = new SolrQueryExector() else executor = new IceQueryExecutor()
+14:47 &lt;sdumitriu> Which isn't scalable
+14:49 &lt;bvancea> I understand
+14:49 &lt;bvancea> but why exactly is reflection more scalable?
+14:49 &lt;sdumitriu> If we add a new query executor, we don't need to change the if
+14:50 &lt;sdumitriu> It's enough to include a new jar in the classpath and set the right classname in the configuration
+14:50 &lt;bvancea> hm, yes
+14:50 &lt;bvancea> :D
+14:51 &lt;bvancea> thats was better
+14:52 &lt;bvancea> that's way better*
+15:21 &lt;bvancea> http://www.ohloh.net/orgs/apache/projects?query=&amp;sort=committer_count
+15:21 &lt;bvancea> we were talking a few days ago about commiters on apache
+15:22 &lt;bvancea> I wonder how accurate that page is
+15:33 &lt;sdumitriu> Well, that column shows only committers active in the last 12 months, not all time
+15:34 &lt;sdumitriu> And there's an important difference to take into account: git shows authors, SVN shows committers
+15:34 &lt;sdumitriu> Which varies gratly
+15:34 &lt;sdumitriu> greatly
+15:37 &lt;sdumitriu> You should set a real usename on your local git
+15:37 &lt;sdumitriu> Not Xenosky
+16:05 &lt;bvancea> yeah, sorry about that
+16:05 &lt;bvancea> I do have it set though
+16:05 &lt;bvancea> but I think the IDE overwrites it
+16:05 &lt;bvancea> not sure why</content>
+  <object>
+    <name>IRC.medsavantArchive20130629</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>476038e3-97f2-4c9a-9314-2eec38438027</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

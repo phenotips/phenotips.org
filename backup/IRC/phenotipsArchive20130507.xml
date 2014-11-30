@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130507</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1367902075000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1367971625000</date>
+  <contentUpdateDate>1367971625000</contentUpdateDate>
+  <version>1.176</version>
+  <title>IRC Archive for channel #phenotips on 07 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #phenotips
+00:50 &lt;ravigarg27> has quit
+04:05 &lt;ravigarg27> has quit
+08:22 &lt;sdumitriu> has quit
+08:24 &lt;sdumitriu> has joined #phenotips
+08:57 &lt;ravigarg27> has joined #phenotips
+09:29 &lt;ravigarg27> has quit
+10:05 &lt;krinye> has quit
+10:09 &lt;kushalkhandelwal> has joined #phenotips
+10:14 &lt;lakhanpandya> has quit
+10:19 &lt;ravigarg27> has quit
+10:19 &lt;sdumitriu1> has joined #phenotips
+10:25 &lt;sdumitriu1> has quit
+10:27 &lt;sdumitriu1> has joined #phenotips
+12:27 &lt;ravigarg27> has joined #phenotips
+12:59 &lt;BogdanVancea> has quit
+13:29 &lt;ravigarg27> has quit
+13:40 &lt;kushalkhandelwal> has quit
+13:41 &lt;BogdanVancea> has quit
+14:01 &lt;ravigarg27> has quit
+14:11 &lt;kushalkhandelwal> has joined #phenotips
+14:11 &lt;kushalkhandelwal> sdumitriu1: Cant reproduce the bug
+14:20 &lt;BogdanVancea_> has quit
+14:50 &lt;kushalkhandelwal> sdumitriu1: there ?
+14:56 &lt;kushalkhandelwal> sdumitriu1: Help with the bug
+14:56 &lt;kushalkhandelwal> can reproduce it
+14:57 &lt;sdumitriu1> Hold on a bit
+15:08 &lt;kushalkhandelwal> Help me with the bug once you are done with this :)
+15:14 &lt;BogdanVancea> has quit
+15:22 &lt;sdumitriu1> kushalkhandelwal: My bad, it's Alt+Shift+S
+15:30 &lt;kushalkhandelwal> I can't see the error in firebug
+15:31 &lt;sdumitriu1> kushalkhandelwal: You have to enable "Break on all errors" to see it
+15:31 &lt;sdumitriu1> To do that
+15:31 &lt;sdumitriu1> In the Console tab
+15:32 &lt;sdumitriu1> At the bar with "Clear Persist Profile" buttons
+15:32 &lt;sdumitriu1> At the left end there's a Pause button
+15:32 &lt;sdumitriu1> Click it so that it's pulsating
+15:32 &lt;sdumitriu1> Refresh the page, press the key shortcut
+15:32 &lt;kushalkhandelwal> Oh I did that in the native devleoper tool
+15:33 &lt;kushalkhandelwal> Wait will try
+15:34 &lt;kushalkhandelwal> It didn't output anything
+15:36 &lt;kushalkhandelwal> Now can see that
+15:52 &lt;kushalkhandelwal> Ok too many problems with ff in linux
+15:52 &lt;kushalkhandelwal> finally firebug is working fine
+15:52 &lt;kushalkhandelwal> sdumitriu1:
+15:53 &lt;kushalkhandelwal> I think I found one issue
+15:53 &lt;kushalkhandelwal> in the same page
+15:53 &lt;kushalkhandelwal> database page
+15:53 &lt;kushalkhandelwal> Patient template  and Patient Class
+15:54 &lt;kushalkhandelwal> auto suggest doesn't work
+15:54 &lt;kushalkhandelwal> And
+15:55 &lt;kushalkhandelwal> ajaxSuggest used here is depriciated
+15:55 &lt;kushalkhandelwal> XWiki.widgets.suggest should be used
+15:56 &lt;sdumitriu1> Yes, I know about the suggest
+15:56 &lt;sdumitriu1> http://jira.xwiki.org/browse/XWIKI-9106
+15:57 &lt;kushalkhandelwal> Oh
+15:58 &lt;kushalkhandelwal> So why to keep it
+15:58 &lt;kushalkhandelwal> its better to remove it
+15:58 &lt;sdumitriu1> I agree
+16:09 &lt;kushalkhandelwal> It would be defined in  which page ?
+16:09 &lt;kushalkhandelwal> Webpreference /
+16:09 &lt;kushalkhandelwal> ?
+16:11 &lt;sdumitriu1> No, the class
+16:12 &lt;kushalkhandelwal> Class ?
+16:12 &lt;kushalkhandelwal> suggested class ?
+16:12 &lt;sdumitriu1> No
+16:12 &lt;sdumitriu1> The configuration class
+16:12 &lt;sdumitriu1> You have to find it
+16:13 &lt;kushalkhandelwal> Oh
+16:29 &lt;sdumitriu1> http://extensions.xwiki.org/xwiki/bin/view/Extension/Administration+Application#HMakingyourapplicationeasilyconfigurablewithConfigurableClass28SinceEnterprise2.3M129 might help
+16:32 &lt;kushalkhandelwal> I was looking in DBConfigurationclass
+16:32 &lt;sdumitriu1> Yes, that's the right one
+16:32 &lt;kushalkhandelwal> Ok
+16:32 &lt;kushalkhandelwal> I was looking at the right thing
+16:32 &lt;kushalkhandelwal> :)
+16:33 &lt;kushalkhandelwal> From where is the suggest coming I have to look that
+16:33 &lt;kushalkhandelwal> I was actually looking from where
+16:33 &lt;kushalkhandelwal> onfocus="new ajaxSuggest(
+16:33 &lt;kushalkhandelwal> this is appended to the form
+16:33 &lt;sdumitriu1> That comes from deep inside XWiki
+16:34 &lt;kushalkhandelwal> Hmm
+16:34 &lt;sdumitriu1> It's much simpler to turn it off than you think
+16:34 &lt;kushalkhandelwal> Hmm
+16:34 &lt;kushalkhandelwal> Let me try
+16:35 &lt;sdumitriu1> You're using ?editor=class in the URL, right?
+16:35 &lt;kushalkhandelwal> Yes
+16:35 &lt;kushalkhandelwal> spacedadmin
+16:37 &lt;kushalkhandelwal> Ohh i was not using that
+16:37 &lt;kushalkhandelwal> I was looking in the xml file
+16:39 &lt;kushalkhandelwal> I can see use suggest
+16:39 &lt;kushalkhandelwal> looking for it in xml
+16:41 &lt;kushalkhandelwal> Okay
+16:41 &lt;kushalkhandelwal> I guess I found it
+16:41 &lt;kushalkhandelwal> I have to set picker to 0
+16:41 &lt;kushalkhandelwal> for patientclass
+16:41 &lt;kushalkhandelwal> and patienttemplate
+16:41 &lt;kushalkhandelwal> sdumitriu1: That should do ?
+16:44 &lt;sdumitriu1> Hold on
+16:44 &lt;kushalkhandelwal> Oh ok
+16:52 &lt;kushalkhandelwal> sdumitriu1: ?
+16:55 &lt;BogdanVancea> has quit
+17:01 &lt;kushalkhandelwal> sdumitriu1: There ?
+17:02 &lt;sdumitriu1> Now yes
+17:02 &lt;kushalkhandelwal> Is that ok ?
+17:02 &lt;kushalkhandelwal> changing picker in the file
+17:02 &lt;kushalkhandelwal> to 0
+17:02 &lt;kushalkhandelwal> for Patient Class  Template and Phenotype Mapping
+17:02 &lt;sdumitriu1> Yes
+17:04 &lt;kushalkhandelwal> PR sent
+17:05 &lt;sdumitriu1> kushalkhandelwal: I don't see the changes in the template
+17:06 &lt;kushalkhandelwal> 3 changes
+17:07 &lt;kushalkhandelwal> In patient class
+17:07 &lt;kushalkhandelwal> patient template
+17:07 &lt;kushalkhandelwal> and mapping
+17:07 &lt;sdumitriu1> Oh, I see
+17:07 &lt;sdumitriu1> I mean changes in DBWebHomeTemplate
+17:07 &lt;sdumitriu1> Since that one also uses the class
+17:09 &lt;kushalkhandelwal> Oh
+17:09 &lt;kushalkhandelwal> didn't see that
+17:10 &lt;kushalkhandelwal> Where this file is used ?
+17:11 &lt;sdumitriu1> Rarely
+17:11 &lt;sdumitriu1> It's used when creating a different set of patients, in a different space
+17:11 &lt;sdumitriu1> Right now we only use the "data" space
+17:11 &lt;sdumitriu1> But you can create more
+17:12 &lt;kushalkhandelwal> Hmm
+17:13 &lt;kushalkhandelwal> Is it being used currently ?
+17:13 &lt;sdumitriu1> Nope
+17:13 &lt;kushalkhandelwal> Should I change in the same branch ?
+17:14 &lt;kushalkhandelwal> Pushed in the same branch
+17:16 &lt;sdumitriu1> Yes
+17:16 &lt;kushalkhandelwal> Ok :)
+17:17 &lt;kushalkhandelwal> One more thing
+17:17 &lt;kushalkhandelwal> I wanted to do
+17:17 &lt;kushalkhandelwal> in this Database Configuration Page
+17:17 &lt;kushalkhandelwal> For every group
+17:17 &lt;kushalkhandelwal> in  form
+17:17 &lt;kushalkhandelwal> like Patient information:
+17:17 &lt;kushalkhandelwal> Meta Information
+17:18 &lt;kushalkhandelwal> we cann add
+17:18 &lt;kushalkhandelwal> Selet All | Clear All | Reset
+17:18 &lt;kushalkhandelwal> When I was looking at #429
+17:18 &lt;kushalkhandelwal> It got irritating to select all livetable columns
+17:18 &lt;kushalkhandelwal> So I was thinking of it
+17:19 &lt;kushalkhandelwal> Oh this reminds me I have to try 429 also
+17:19 &lt;kushalkhandelwal> What do you say ? Should we add it
+17:19 &lt;kushalkhandelwal> Few lines of JS should do it I guess
+17:20 &lt;sdumitriu1> Not sure it's worth it now
+17:20 &lt;sdumitriu1> Few people will have to actually use them
+17:20 &lt;kushalkhandelwal> Hmm
+17:21 &lt;kushalkhandelwal> Let's say in Mandatory fields I want to make 25 out of say 40 mandatory
+17:21 &lt;kushalkhandelwal> Currently none are selected
+17:21 &lt;kushalkhandelwal> then it gets difficult to select 25
+17:21 &lt;kushalkhandelwal> Although it might not be used a lot
+17:21 &lt;sdumitriu1> Yes
+17:22 &lt;sdumitriu1> But "Select all" won't help
+17:22 &lt;kushalkhandelwal> Deselecting 5 is better than selecting 25  :D
+17:23 &lt;kushalkhandelwal> Random thoughts of mine
+17:23 &lt;kushalkhandelwal> It wont be that useful
+17:23 &lt;kushalkhandelwal> Will try 429 and 442 soon
+17:23 &lt;kushalkhandelwal> 2 more exams to go :D
+17:24 &lt;sdumitriu1> Feel free to try and implement that
+17:24 &lt;sdumitriu1> It would be a useful feature, but not important enough
+17:24 &lt;sdumitriu1> So, if you're bored, you can do it
+17:24 &lt;kushalkhandelwal> :D
+17:24 &lt;kushalkhandelwal> Ok
+17:25 &lt;kushalkhandelwal> For now I would sleep
+17:25 &lt;kushalkhandelwal> its 3
+17:25 &lt;kushalkhandelwal> Good night :)
+17:25 &lt;kushalkhandelwal> Bye
+17:26 &lt;kushalkhandelwal> is now known as &lt;kushal>
+17:27 &lt;kushal> is now known as &lt;kushal|Away>
+17:37 &lt;kushal|Away> has quit
+17:39 &lt;kushalk124> has quit
+18:16 &lt;sdumitriu1> has quit
+19:03 &lt;sdumitriu> has quit
+20:07 &lt;sdumitriu> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20130507</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>450b02a7-82d7-40a0-9e9c-7538ac2793de</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

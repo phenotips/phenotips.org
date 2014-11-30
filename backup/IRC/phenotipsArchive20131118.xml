@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20131118</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1384791744000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1384823706000</date>
+  <contentUpdateDate>1384823706000</contentUpdateDate>
+  <version>1.51</version>
+  <title>IRC Archive for channel #phenotips on 18 November 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_guest_> has joined #phenotips
+11:23 &lt;phenotips_guest_> Hi Sergiu
+11:24 &lt;phenotips_guest_> We communicated via email last week.
+11:24 &lt;phenotips_guest_> Ricardo Ulloa
+11:24 &lt;phenotips_guest_> I have a couple of questions
+11:24 &lt;phenotips_guest_> A PI is planning to use this tool and I need to extract the information from the DB so I can put it into our datamart. Do you have an automated way of extracting this information? Is there an API I can use to get this information?
+11:33 &lt;sdumitriu> Hi Ricardo
+11:34 &lt;sdumitriu> I saw your email
+11:34 &lt;sdumitriu> I was going to reply later today
+11:34 &lt;sdumitriu> Well, first of all there's the CSV export on the homepage
+11:35 &lt;sdumitriu> There should be an "Export database" link on the top right corner of the data table
+11:35 &lt;phenotips_guest_> I want to automate it.
+11:36 &lt;sdumitriu> But there's a bug in the 1.0M9 version which prevents most of the actual patient information from being exported, will be fixed in the upcoming release
+11:36 &lt;sdumitriu> There's also a JSON export for individual patients
+11:36 &lt;phenotips_guest_> if I have the sql to connect to the DB and pull the data automatically
+11:36 &lt;sdumitriu> Hm, that's not a good idea
+11:37 &lt;sdumitriu> The patient data is exploded in lots of tables
+11:37 &lt;phenotips_guest_> I would probalbly use mysql DB. Is the table structure the same in all Databases?
+11:37 &lt;sdumitriu> Yes
+11:37 &lt;phenotips_guest_> Do you have an API for extracting the patient data?
+11:38 &lt;sdumitriu> There will be a JSON global export implemented soon, to overcome the limitations of Excel (maximum number of characters in a column)
+11:38 &lt;sdumitriu> Yes
+11:39 &lt;phenotips_guest_> can you tell me the name and paratmeres of the API
+11:39 &lt;sdumitriu> Yes, working on it
+11:39 &lt;sdumitriu> It would look like: http://localhost:8080/bin/get/PhenoTips/PatientPhenotypeExportService?id=P0000001
+11:39 &lt;sdumitriu> Or http://localhost:8080/bin/get/PhenoTips/PatientPhenotypeExportService?eid=P1
+11:40 &lt;sdumitriu> id is the internal identifier, which you can see in the black tab on a patient record
+11:40 &lt;sdumitriu> eid is the external identifier which you can enter as patient data
+11:41 &lt;sdumitriu> For example: http://phenotips.org/get/PhenoTips/PatientPhenotypeExportService?id=P0000001
+11:41 &lt;phenotips_guest_> ok will test it out and let you hnow how it goes.
+11:42 &lt;sdumitriu> Not all the data is present in there, just phenotypes
+11:42 &lt;sdumitriu> It will be in the global JSON export
+11:43 &lt;phenotips_guest_> When do you think this will be ready for release?
+11:43 &lt;sdumitriu> Hopefully next Monday
+11:50 &lt;phenotips_guest_> Will this be on the backend as an API?
+11:50 &lt;sdumitriu> What do you mean?
+11:51 &lt;sdumitriu> Do you prefer a Java method?
+11:51 &lt;phenotips_guest_> I need to be able to build a datamart from this data and other sources.
+11:52 &lt;phenotips_guest_> So I need to be able to export most of the data from Phenotips and load it into another database.
+11:53 &lt;phenotips_guest_> at the same time I might need an API to get access to some data from another web application,
+11:53 &lt;phenotips_guest_> all of this should be automated.
+11:58 &lt;sdumitriu> There are three other ways of accessing patient information, but they're verbose
+11:58 &lt;sdumitriu> http://phenotips.org/data/P0000001?xpage=xml
+11:59 &lt;sdumitriu> http://phenotips.org/rest/wikis/xwiki/spaces/data/pages/P0000001 and its linked subpages, especially http://phenotips.org/rest/wikis/xwiki/spaces/data/pages/P0000001/objects
+12:00 &lt;sdumitriu> Or the zipped version of the xml, with multiple patients at once: phenotips.org/export/data/?format=xar&amp;name=PhenoTipsPatientData&amp;pages=P0000001&amp;pages=P0000002
+12:00 &lt;sdumitriu> All accessible via HTTP
+12:01 &lt;sdumitriu> I have to go for half an hour, be back later
+12:01 &lt;phenotips_guest_> ok this is good. Will test it and get back to you.
+13:21 &lt;sdumitriu1> has joined #phenotips
+15:55 &lt;phenotips_guest_> has quit
+20:15 &lt;sdumitriu1> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20131118</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>5cbd8e0c-9cec-43c0-ad00-91248b5a20b8</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

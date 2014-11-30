@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130627</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372318330000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1372368101000</date>
+  <contentUpdateDate>1372368101000</contentUpdateDate>
+  <version>1.77</version>
+  <title>IRC Archive for channel #medsavant on 27 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #medsavant
+08:21 &lt;mcupak> has joined #medsavant
+08:37 &lt;bvancea> has joined #medsavant
+08:41 &lt;bvancea> hey sdumitriu
+08:41 &lt;bvancea> what's up?
+09:45 &lt;sdumitriu> Hey bvancea
+09:47 &lt;bvancea> I'll finish up refactoring the varaint service and tests class
+09:47 &lt;bvancea> and then continue to play around with the hardcoded querries
+09:47 &lt;bvancea> we're still having that hangout today, right?
+09:48 &lt;sdumitriu> Yes
+10:00 &lt;mcupak> has joined #medsavant
+11:19 &lt;sdumitriu1> has joined #medsavant
+12:47 &lt;bvancea> hmm, I can't seen to run medsavant from an ide
+12:47 &lt;bvancea> due to the version
+12:47 &lt;bvancea> I've been running it from the jar for quite a while :|
+12:48 &lt;bvancea> how do you guys run it?
+12:53 &lt;mcupak> has joined #medsavant
+13:04 &lt;sdumitriu1> bvancea: From the command line...
+13:04 &lt;sdumitriu1> I fixed it for NetBeans
+13:04 &lt;bvancea> I've been running from the command-line too
+13:05 &lt;bvancea> I just tried to debug from the ide and didn't manage to do so
+13:06 &lt;bvancea> I'll try to find a fix for idea as well :)
+13:07 &lt;mcupak_> has joined #medsavant
+13:34 &lt;mcupak> has joined #medsavant
+14:02 &lt;mcupak> hi bvancea, are we having that hangout today?
+14:02 &lt;bvancea> um
+14:02 &lt;bvancea> yes
+14:02 &lt;mcupak> what time?
+14:03 &lt;bvancea> we should have started
+14:03 &lt;bvancea> 8 minutes ago
+14:03 &lt;bvancea> sdumitriu
+14:03 &lt;bvancea> when should we be starting?
+14:03 &lt;mcupak> thought so, just checking my info is up to date :)
+14:03 &lt;bvancea> hehe
+14:04 &lt;sdumitriu1> Just a minute
+14:04 &lt;sdumitriu1> Setting up
+14:04 &lt;bvancea> ah, ok
+14:04 &lt;mcupak> thanks!
+14:12 &lt;jimv_> has joined #medsavant
+14:13 &lt;sdumitriu1> https://plus.google.com/hangouts/_/a2dffb712ed3d8503292eafa6d5ec71718cfcbe6?hl=en
+14:54 &lt;bvancea> https://docs.google.com/document/d/1-yQ95oZ8xURH5zzgPTJKWn0dxg88UO4BuyK8MscLScI/edit?usp=sharing
+14:55 &lt;bvancea> I should probably send an email to development@medsavant with this
+14:56 &lt;bvancea> can anyone confirm you can access it?
+15:22 &lt;bvancea> sdumitriu, how exactly did you think about the JPQL abstraction layer?
+15:24 &lt;bvancea> I'm thinking about something like this: List&lt;Entity> results = persistence.query("SELECT e FROM Entity e WHERE e.field = ...")
+16:12 &lt;Jim_> has joined #medsavant
+16:34 &lt;sdumitriu1> bvancea: Yes, we can access it
+16:35 &lt;sdumitriu1> bvancea: Here's XWiki's query module: https://github.com/xwiki/xwiki-platform/tree/master/xwiki-platform-core/xwiki-platform-query
+16:35 &lt;sdumitriu1> It's more complex than what we need
+16:35 &lt;sdumitriu1> I like the Query interface from there
+16:36 &lt;sdumitriu1> The workflow is: QueryManager makes a Query object
+16:36 &lt;sdumitriu1> You can add settings to that Query: order, offset and count, query filters, etc
+16:36 &lt;sdumitriu1> Once you're done customizing the query, you execute() it
+16:37 &lt;bvancea> I see
+16:37 &lt;bvancea> nice
+16:37 &lt;bvancea> Query should be typed, right?
+16:37 &lt;sdumitriu1> Yes
+16:37 &lt;sdumitriu1> The complex part in XWiki that we don't need is that it supports multiple query languages
+16:38 &lt;sdumitriu1> What we want is similar to XWQL
+16:38 &lt;sdumitriu1> Which is an XWiki-specific extension of JPQL
+16:39 &lt;bvancea> wow, it's a pretty complex module
+16:39 &lt;bvancea> with its own query language
+16:39 &lt;bvancea> really nice
+16:39 &lt;bvancea> thanks for the tips and the link
+16:39 &lt;bvancea> :D
+16:39 &lt;sdumitriu1> It uses sablecc to parse the query
+16:42 &lt;bvancea> hmmm
+16:43 &lt;bvancea> and you can specify some rules for parsing in a different file, right?
+16:46 &lt;bvancea> sablecc looks a lot like lex/yacc
+16:46 &lt;sdumitriu1> Yes, it's a compiler compiler
+16:47 &lt;bvancea> hehe
+16:47 &lt;bvancea> nice
+16:47 &lt;sdumitriu1> (cc)
+16:47 &lt;bvancea> yup, I like the ya in yacc
+16:48 &lt;bvancea> I should have totally paid more attention to the translators course
+17:21 &lt;bvancea> I'll be off to bed, good night
+17:21 &lt;sdumitriu1> Good night</content>
+  <object>
+    <name>IRC.medsavantArchive20130627</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>3d02709f-2bc7-4f2b-8d9c-4de0f04328d9</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

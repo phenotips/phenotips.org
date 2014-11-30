@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130828</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1377670733000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1377722605000</date>
+  <contentUpdateDate>1377722605000</contentUpdateDate>
+  <version>1.57</version>
+  <title>IRC Archive for channel #phenotips on 28 August 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalkhandelwal> Hey sdumitriu
+02:18 &lt;kushalkhandelwal> How are you ?
+07:14 &lt;mcupak> has quit
+07:52 &lt;bvancea> has quit
+09:01 &lt;kushalkhandelwal> has quit
+09:13 &lt;kushalkhandelwal> has joined #phenotips
+10:57 &lt;bvancea> has quit
+11:09 &lt;ravigarg27> has joined #phenotips
+11:57 &lt;sdumitriu1> has joined #phenotips
+11:57 &lt;sdumitriu1> Hey ravigarg27
+11:57 &lt;sdumitriu1> Did you manage to fix the build?
+11:58 &lt;ravigarg27> Hi sdumitriu1
+11:59 &lt;ravigarg27> I am trying to do that but am not able to, I think the problem again is with Lucene
+11:59 &lt;ravigarg27> so meanwhile I started to clean up the code
+12:00 &lt;ravigarg27> actually I dont how but its running perfectly on one branch but not on other
+12:02 &lt;ravigarg27> Also I had a query regarding updation of current selection
+12:03 &lt;ravigarg27> I am able to insert all those terms which are on the home page
+12:03 &lt;ravigarg27> but how should I access the other HPO terms
+12:37 &lt;marta> hi ravigarg27
+12:37 &lt;ravigarg27> Hi marta
+12:37 &lt;marta> i understand you have an issue updating the hpo term selection
+12:37 &lt;marta> here's something to inspire you:
+12:39 &lt;marta> do you see the yellow-ish box entitled "You might want to check for..."  in the patient form, on top of the phenotype categories?
+12:39 &lt;ravigarg27> yup
+12:39 &lt;marta> it appears when you have a couple of phenotypes already selected
+12:40 &lt;ravigarg27> yeah right
+12:40 &lt;marta> so, deal with the selections _from_ that box, we use the following trick: we pretend that whatever the user selected from there was actually added using the "quick phenotype search" box which is right above
+12:41 &lt;marta> this way, all the events that we need (in order for all the pieces of the ui to be updated) are fired
+12:41 &lt;marta> so we don't need to do anything special
+12:41 &lt;marta> here's some code that does just that:
+12:41 &lt;marta> https://github.com/phenotips/phenotips/blob/master/components/patient-data/ui/src/main/resources/PhenoTips/PatientSheetCode.xml#L2607
+12:42 &lt;ravigarg27> ohh okay I will try that
+12:42 &lt;marta> let me know if it's unclear
+12:42 &lt;marta> i'm not particularly proud of that code, it really needs some refactoring :)
+12:42 &lt;ravigarg27> yeah sure and Thank you very much for the referral
+12:43 &lt;marta> no problem :) I hope  it wasn't too late though...
+12:43 &lt;ravigarg27> umm I dont think so
+12:46 &lt;ravigarg27> and also Kushal's mail actually said, for fall 2014 and spring 2015
+12:47 &lt;ravigarg27> :)
+12:54 &lt;kushalkhandelwal> Hey
+12:55 &lt;kushalkhandelwal> Hey sdumitriu and marta
+12:55 &lt;kushalkhandelwal> How are you ?
+12:57 &lt;sdumitriu1> Hey kushalkhandelwal
+12:57 &lt;sdumitriu1> Good, you?
+13:07 &lt;kushalkhandelwal> I am good :)
+13:08 &lt;kushalkhandelwal> So how is work ?
+13:08 &lt;sdumitriu1> Lots of it, as always
+13:09 &lt;kushalkhandelwal> Haha
+13:09 &lt;kushalkhandelwal> Nice :)
+13:10 &lt;kushalkhandelwal> Working on anything new ?
+13:11 &lt;sdumitriu1> Yes, right now on advanced permissions on patient sheets
+13:13 &lt;kushalkhandelwal> Oh good
+13:13 &lt;kushalkhandelwal> Anything I can work on ?
+13:27 &lt;ravigarg27> has quit
+13:52 &lt;Jim__> has quit
+13:56 &lt;kushalkhandelwal> has quit
+16:43 &lt;Jim__> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130828</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>ba79f873-afa2-49e5-a067-18638e0f41aa</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

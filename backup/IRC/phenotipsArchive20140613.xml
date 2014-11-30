@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140613</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1402660853000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1402688758000</date>
+  <contentUpdateDate>1402688758000</contentUpdateDate>
+  <version>1.18</version>
+  <title>IRC Archive for channel #phenotips on 13 June 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;mcupak> has quit
+08:45 &lt;akats> has joined #phenotips
+08:51 &lt;sdumitriu1> Hey akats
+09:02 &lt;akats> Hello
+09:03 &lt;sdumitriu1> How's it going?
+09:04 &lt;akats> Pretty good
+09:04 &lt;akats> Getting some solid code it for the export
+09:04 &lt;akats> Never managed to get the server running though
+09:04 &lt;sdumitriu1> Hm...
+09:15 &lt;akats> Also while I'm distracting you anyways, the export UI needs to be redone which will break the JSON export that I did a while back.
+09:16 &lt;akats> There was talk of combining them
+09:16 &lt;sdumitriu1> What will break?
+09:17 &lt;akats> The form where the user selects the what they want in the export needs to be redone
+09:17 &lt;akats> And though I'm not 100% sure, my guess it that will break the JSON export code that I wrote and hasn't been commited yet
+09:18 &lt;sdumitriu1> OK
+10:30 &lt;mcupak> has quit
+11:59 &lt;mcupak> has quit
+15:45 &lt;akats> has left #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20140613</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>ad01fdcc-bac9-4367-ac50-0b68d7bb15cd</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

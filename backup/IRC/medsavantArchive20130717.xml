@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130717</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1374051331000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1374089694000</date>
+  <contentUpdateDate>1374089694000</contentUpdateDate>
+  <version>1.74</version>
+  <title>IRC Archive for channel #medsavant on 17 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;mcupak> has joined #medsavant
+06:08 &lt;sdumitriu> has joined #medsavant
+09:15 &lt;bvancea> has joined #medsavant
+09:18 &lt;bvancea> hey sdumitriu
+09:19 &lt;bvancea> still busy with phenotips?
+09:19 &lt;sdumitriu> Hey
+09:19 &lt;sdumitriu> Yep
+09:19 &lt;sdumitriu> Why?
+09:19 &lt;bvancea> just curious
+09:19 &lt;bvancea> do we have an time set for the hangout?
+09:20 &lt;sdumitriu> No, either today late or tomorrow early
+09:20 &lt;bvancea> I'm not sure if it's decided when to have it
+09:20 &lt;bvancea> okay
+09:20 &lt;sdumitriu> I'll check if Marc is at the office today
+09:21 &lt;bvancea> okay
+09:21 &lt;bvancea> well, I'm playing around with the new queries
+09:21 &lt;bvancea> replacing the old sql queries with the new stuff I've added
+09:22 &lt;sdumitriu> And, does it work fine?
+09:22 &lt;sdumitriu> Anything broken so far?
+09:22 &lt;bvancea> well, currently I have some queries which take variants out of the index
+09:22 &lt;bvancea> and some from the databse
+09:22 &lt;bvancea> it works weird
+09:23 &lt;bvancea> and for some some reason I have the INFO_* fields for variants set as multivalued on the solr schema
+09:24 &lt;bvancea> and the VariantRecord class in Medsavant does not
+09:24 &lt;bvancea> so I did something not very awesome
+09:25 &lt;bvancea> I took the first string in the multivalued array and used that for the value
+09:25 &lt;bvancea> I think those fields can be changed to single valued fields
+09:53 &lt;Jim_> has joined #medsavant
+10:48 &lt;bvancea> has joined #medsavant
+11:01 &lt;bvancea> has joined #medsavant
+11:19 &lt;sdumitriu1> has joined #medsavant
+11:25 &lt;sdumitriu1> Marc's at the lab
+11:25 &lt;sdumitriu1> So we can have the hangout today
+11:25 &lt;sdumitriu1> +1 if you're available
+11:26 &lt;sdumitriu1> misko___, Jim_, bvancea, mcupak_afk
+11:27 &lt;bvancea> +1
+12:04 &lt;mfiume> has joined #medsavant
+12:53 &lt;Jim_> has joined #medsavant
+14:18 &lt;sdumitriu1> Hm, so Miro isn't here...
+14:22 &lt;bvancea> seems so
+14:25 &lt;bvancea> should we maybe try to email him?
+14:25 &lt;sdumitriu1> Yes
+14:26 &lt;bvancea> did you email? or should I?
+14:26 &lt;sdumitriu1> mfiume: Can you send Miro an email?
+14:32 &lt;mfiume> what time shouold we do it?
+14:32 &lt;mfiume> i need to step out for an hour
+14:32 &lt;sdumitriu1> 15:00
+14:32 &lt;mfiume> 3:45? 4?
+14:32 &lt;sdumitriu1> When do you have to go?
+14:32 &lt;sdumitriu1> Too late, that's 1 AM for Bogdan
+14:32 &lt;sdumitriu1> Hm, we'd better leave it for tomorrow morning
+14:33 &lt;sdumitriu1> 11:00 AM
+14:33 &lt;mfiume> im having a realy bad time with sinus infection, was going to go to drugstore now
+14:33 &lt;mfiume> i can go through a meeting now
+14:34 &lt;bvancea> hmm
+14:34 &lt;bvancea> hmmm
+14:34 &lt;bvancea> tomorrow then?
+14:34 &lt;sdumitriu1> +1 for tomorrow
+14:35 &lt;bvancea> do you think it will take more than 1 hour?
+14:35 &lt;mfiume> the meeting?
+14:35 &lt;mfiume> no
+14:35 &lt;bvancea> yes
+14:35 &lt;bvancea> tomorrow I'll be available until 12:00
+14:35 &lt;mfiume> ok lets do 11-12
+14:36 &lt;bvancea> I've got the graduation prom later the evening
+14:36 &lt;bvancea> sure, sounds good
+14:36 &lt;sdumitriu1> OK, I'll send an email
+14:36 &lt;bvancea> cool
+14:58 &lt;mcupak> has joined #medsavant
+15:22 &lt;sdumitriu> has joined #medsavant
+15:26 &lt;sdumitriu1> Hey mcupak, we were looking for you
+15:26 &lt;sdumitriu1> We've set the hangout for tomorrow (see the email)
+15:27 &lt;mcupak> hey sdumitriu1, yeah, I've seen it, sounds good
+15:34 &lt;misko__> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20130717</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>c46c1217-faf3-455d-8f34-0eba786f05b3</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

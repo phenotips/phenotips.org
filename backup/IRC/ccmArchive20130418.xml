@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130418</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1366260626000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1366343875000</date>
+  <contentUpdateDate>1366343875000</contentUpdateDate>
+  <version>1.309</version>
+  <title>IRC Archive for channel #ccm on 18 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has joined #ccm
+02:35 &lt;sdumitriu> has joined #ccm
+03:24 &lt;kushalkhandelwal> has joined #ccm
+07:42 &lt;phenotips_org> has joined #ccm
+07:59 &lt;ravigarg27> has joined #ccm
+09:24 &lt;ravigarg27> has joined #ccm
+11:58 &lt;sdumitriu> has joined #ccm
+11:58 &lt;ravigarg27> has joined #ccm
+12:14 &lt;Krinye> has joined #ccm
+12:33 &lt;BogdanVancea> has joined #ccm
+12:33 &lt;BogdanVancea> Hello everyone, any mentors around?
+12:35 &lt;sdumitriu> Hi BogdanVancea
+12:35 &lt;sdumitriu> Yes
+12:37 &lt;BogdanVancea> hello
+12:37 &lt;BogdanVancea> I have some question regarding the Solr backend for medsavant
+12:38 &lt;BogdanVancea> project*
+12:40 &lt;sdumitriu> Go ahead
+12:40 &lt;BogdanVancea> okay
+12:41 &lt;BogdanVancea> I've browsed through the source code
+12:41 &lt;BogdanVancea> for MedSavant that is
+12:42 &lt;BogdanVancea> the services I've found are all defined in the serverapi package
+12:44 &lt;BogdanVancea> the new classes should basically replace the ones present and remove all hard the hard coded parts?
+12:46 &lt;BogdanVancea> I've also noticed the project lists Maven and Git experience as nice to have skills, but the code on the svn repo is composed of several netbeans projects
+12:47 &lt;BogdanVancea> does this mean that I would need to migrate the build process to maven?
+12:47 &lt;qwebirc89327> has joined #ccm
+12:50 &lt;kushalkhandelwal> has joined #ccm
+12:57 &lt;sdumitriu> BogdanVancea: Yes, the idea is to replace hard-coded queries
+12:57 &lt;sdumitriu> No, you don't need to migrate the build yourself, this is something that we're currently working on
+12:59 &lt;BogdanVancea> I see, thanks
+13:02 &lt;BogdanVancea> I've also attempted to build the MedSavant server locally
+13:03 &lt;BogdanVancea> Is there a database dump available somewhere so I can play with it a little?
+13:21 &lt;BogdanVancea> I need to go now, I'll come back later or tomorrow with some more question. Good bye!
+13:25 &lt;sdumitriu> BogdanVancea: I'll try to get one available
+13:29 &lt;ravigarg27> has joined #ccm
+13:30 &lt;kushalkhandelwal> has joined #ccm
+13:34 &lt;kushalkhandelwal> has joined #ccm
+13:38 &lt;kushalkhandelwal> has joined #ccm
+13:42 &lt;kushalkhandelwal> has joined #ccm
+13:46 &lt;kushalkhandelwal> has joined #ccm
+13:50 &lt;kushalkhandelwal> has joined #ccm
+13:54 &lt;kushalkhandelwal> has joined #ccm
+13:58 &lt;kushalkhandelwal> has joined #ccm
+14:02 &lt;kushalkhandelwal> has joined #ccm
+14:05 &lt;camelia_> has joined #ccm
+14:06 &lt;kushalkhandelwal> has joined #ccm
+14:10 &lt;kushalkhandelwal> has joined #ccm
+14:14 &lt;p1f> has joined #ccm
+14:14 &lt;kushalkhandelwal> has joined #ccm
+14:16 &lt;ravigarg27> has joined #ccm
+14:19 &lt;kushalkhandelwal> has joined #ccm
+14:19 &lt;kushalkhandelwal> sdumitriu, marta   need some help with the build
+14:19 &lt;kushalkhandelwal> getting some errors
+14:20 &lt;sdumitriu> Hi kushalkhandelwal
+14:20 &lt;sdumitriu> Shoot
+14:20 &lt;kushalkhandelwal> Hey
+14:20 &lt;kushalkhandelwal> when I am use the command mvn install
+14:20 &lt;kushalkhandelwal> i get a build error
+14:20 &lt;kushalkhandelwal> PhenoTips - HSQLDB Database ....................... FAILURE [48.246s]
+14:20 &lt;kushalkhandelwal> [INFO] PhenoTips - War package ........................... SKIPPED
+14:20 &lt;kushalkhandelwal> [INFO] PhenoTips - Standalone Distribution ............... SKIPPED
+14:21 &lt;kushalkhandelwal> [ERROR] Failed to execute goal org.xwiki.platform:xwiki-platform-tool-packager-plugin:4.5.1:import (default) on project database-zip: Failed to import XAR dependencies: Extension [edu.toronto.cs.phenotips:phenotips-ui-1.0-SNAPSHOT] already exists in local repository -> [Help 1]
+14:21 &lt;sdumitriu> OK
+14:21 &lt;sdumitriu> mvn clean install
+14:21 &lt;sdumitriu> This deletes everything
+14:22 &lt;sdumitriu> And then builds on a clean slate
+14:22 &lt;kushalkhandelwal> ok
+14:23 &lt;kushalkhandelwal> has joined #ccm
+14:23 &lt;kushalkhandelwal> So what was the issue ?
+14:23 &lt;kushalkhandelwal> Sorry for the frequent disconnects my college net :\
+14:24 &lt;kushalkhandelwal> so now my build error has changed
+14:24 &lt;kushalkhandelwal> [INFO] PhenoTips - HSQLDB Database ....................... SUCCESS [43.960s]
+14:24 &lt;kushalkhandelwal> [INFO] PhenoTips - War package ........................... FAILURE [7.357s]
+14:24 &lt;kushalkhandelwal> [INFO] PhenoTips - Standalone Distribution ............... SKIPPED
+14:25 &lt;sdumitriu> The issue is that when doing mvn install a second time, you're re-adding stuff to the database
+14:25 &lt;sdumitriu> Since it doesn't start with a new, empty database
+14:25 &lt;sdumitriu> Now the database passes correctly
+14:26 &lt;sdumitriu> What's the error for the war package?
+14:26 &lt;kushalkhandelwal>  Failed to execute goal org.apache.maven.plugins:maven-war-plugin:2.2:war (default-war) on project phenotips-war: Error unpacking file [/root/.m2/repository/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-enterprise-web-4.5.1.war]to [/home/kushal/Projects/GSOC/phenotips/distribution/war/target/war/work/org.xwiki.enterprise/xwiki-enterprise-web]: Error while expanding /root/.m2/repository/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-e
+14:26 &lt;kushalkhandelwal> nterprise-web-4.5.1.war: Negative seek offset -> [Help 1]
+14:26 &lt;kushalkhandelwal> Ok , so everytime i do a install i should do a clean install so that i clear my database first
+14:27 &lt;sdumitriu> For the moment yes
+14:27 &lt;kushalkhandelwal> has joined #ccm
+14:28 &lt;kushalkhandelwal> Ok , so everytime i do a install i should do a clean install so that i clear my database first
+14:28 &lt;sdumitriu> For the moment yes
+14:29 &lt;sdumitriu> I'm guessing there was a problem downloading the enterprise war
+14:29 &lt;kushalk124> has joined #ccm
+14:29 &lt;sdumitriu> Since it's big
+14:30 &lt;sdumitriu> Try to delete it first:
+14:31 &lt;kushalkhandelwal> has joined #ccm
+14:33 &lt;sdumitriu> kushalkhandelwal: Did you get that?
+14:36 &lt;kushalkhandelwal> has joined #ccm
+14:36 &lt;sdumitriu> kushalkhandelwal: Did you get that?
+14:38 &lt;kushalkhandelwal> Yes , I will do that
+14:38 &lt;kushalkhandelwal> Disconnections :\
+14:40 &lt;kushalkhandelwal> has joined #ccm
+14:40 &lt;kushalkhandelwal> Ok removed that
+14:40 &lt;qwebirc458457> has joined #ccm
+14:40 &lt;kushalkhandelwal> Should i  do a mvn clean install again ?
+14:41 &lt;kushalkhandelwal> sdumitriu,
+14:41 &lt;sdumitriu> You can try
+14:41 &lt;mfiume> has joined #ccm
+14:41 &lt;sdumitriu> Alternatively you should download the file separately using a client that can resume if the download is interrupted
+14:42 &lt;sdumitriu> http://nexus.cs.toronto.edu/nexus/content/groups/public/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-enterprise-web-4.5.1.war
+14:43 &lt;sdumitriu> Check the size to make sure it's complete
+14:43 &lt;kushalkhandelwal> Ok i got the error
+14:44 &lt;kushalkhandelwal> has joined #ccm
+14:44 &lt;sdumitriu> kushalkhandelwal: Same error?
+14:44 &lt;kushalkhandelwal> Same error
+14:45 &lt;kushalkhandelwal> But now i know the problem
+14:45 &lt;kushalkhandelwal> i tried to open the link with the browser
+14:45 &lt;kushalkhandelwal> my college proxies set a restriction on the file size
+14:45 &lt;sdumitriu> Ah
+14:45 &lt;kushalkhandelwal> so I cannot download a size greater then a particular limit
+14:45 &lt;kushalkhandelwal> i think it is 100MB
+14:45 &lt;kushalkhandelwal> Sys Admin :\
+14:48 &lt;kushalkhandelwal> has joined #ccm
+14:49 &lt;kushalkhandelwal> Trying to download with a data card
+14:49 &lt;kushalkhandelwal> hopefully it should work
+15:01 &lt;ravigarg27> has joined #ccm
+15:04 &lt;kushalkhandelwal> sdumitriu:  I have downloaded the file
+15:05 &lt;sdumitriu> OK, now try mvn clean install again
+15:05 &lt;kushalkhandelwal> I should copy the file to the repository ?
+15:06 &lt;sdumitriu> Yes
+15:06 &lt;sdumitriu> In ~/.m2/repository/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-enterprise-web-4.5.1.war
+15:32 &lt;kushalkhandelwal> has joined #ccm
+15:32 &lt;kushalkhandelwal> sdumitriu: I am still getting the same error
+15:32 &lt;kushalkhandelwal> Failed to execute goal org.apache.maven.plugins:maven-war-plugin:2.2:war (default-war) on project phenotips-war: Error unpacking file [/root/.m2/repository/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-enterprise-web-4.5.1.war]to [/home/kushal/Projects/GSOC/phenotips/distribution/war/target/war/work/org.xwiki.enterprise/xwiki-enterprise-web]: Error while expanding /root/.m2/repository/org/xwiki/enterprise/xwiki-enterp
+15:37 &lt;sdumitriu> Do this:
+15:37 &lt;sdumitriu> stat ~/.m2/repository/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-enterprise-web-4.5.1.war
+15:38 &lt;krinye> has joined #ccm
+15:38 &lt;kushalkhandelwal> File: `/home/kushal/.m2/repository/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-enterprise-web-4.5.1.war'   Size: 171654132 	Blocks: 335280     IO Block: 4096   regular file Device: 809h/2057d	Inode: 1313886     Links: 1 Access: (0664/-rw-rw-r--)  Uid: ( 1000/  kushal)   Gid: ( 1000/  kushal) Access: 2013-04-19 00:43:36.000000000 +0530 Modify: 2013-04-19 00:32:48.000000000 +0530 Change: 2013-04-19 00:43:36.838417139 
+15:39 &lt;sdumitriu> It seems to be complete
+15:39 &lt;sdumitriu> Can you pastebin the whole log?
+15:40 &lt;kushalkhandelwal> I was doing sudo mvn clean install
+15:40 &lt;kushalkhandelwal> i think some permission errors
+15:40 &lt;kushalkhandelwal> I will paste bin the entire log
+15:41 &lt;sdumitriu> No need for sudo
+15:42 &lt;kushalkhandelwal> Cloning a new copy
+15:43 &lt;kushalkhandelwal> would do a fresh start
+15:49 &lt;kushalkhandelwal> http://pastebin.com/wFh7unue
+15:52 &lt;sdumitriu> unzip -t -v ~/.m2/repository/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-enterprise-web-4.5.1.war
+16:00 &lt;kushalkhandelwal> has joined #ccm
+16:00 &lt;kushalkhandelwal> did that
+16:04 &lt;kushalkhandelwal> No errors detected
+16:04 &lt;kushalkhandelwal> what should i do next
+16:04 &lt;kushalkhandelwal> sdumitriu:
+16:05 &lt;sdumitriu> Hm...
+16:05 &lt;sdumitriu> Did you sudo again?
+16:05 &lt;kushalkhandelwal> I did sudo
+16:06 &lt;sdumitriu> Don't do that
+16:06 &lt;kushalkhandelwal> I initially started with sudo
+16:06 &lt;kushalkhandelwal> so now when i do mvn clean install
+16:06 &lt;kushalkhandelwal> it wont be able to clean
+16:06 &lt;kushalkhandelwal> because my target was build with sudo privliges
+16:06 &lt;sdumitriu> sudo chown -R kushal .
+16:06 &lt;sdumitriu> Then mvn clean install
+16:08 &lt;kushalkhandelwal> downloading all files again
+16:09 &lt;kushalkhandelwal> so when i used sudo mvn install where were the dependencies downloaded ?
+16:11 &lt;sdumitriu> Error unpacking file [/root/.m2/repository/org/xwiki/enterprise/xwiki-enterprise-web/4.5.1/xwiki-enterprise-web-4.5.1.war]
+16:11 &lt;sdumitriu> So in /root/.m2
+16:12 &lt;kushalkhandelwal> Ok
+16:13 &lt;sdumitriu> As a rule, you should very rarely use sudo
+16:13 &lt;sdumitriu> Don't use it unless you're asked to
+16:13 &lt;kushalkhandelwal> so if i copy the dependencies from there and change the owner it should work
+16:13 &lt;kushalkhandelwal> Yup
+16:14 &lt;kushalkhandelwal> I should not have started with the sudo
+16:17 &lt;vshivam> has joined #ccm
+16:28 &lt;sdumitriu> kushalkhandelwal: Any progress?
+16:42 &lt;vshivam> Hi Sdumitriu
+16:42 &lt;vshivam> I am interested in working for the
+16:42 &lt;vshivam> Mobile Application for chronic disease management
+16:42 &lt;vshivam> on the Android Platform
+16:43 &lt;sdumitriu> Hi vshivam
+16:43 &lt;vshivam> I think this'll be the start of the project or has any work been done
+16:43 &lt;vshivam> on the application ?
+16:44 &lt;sdumitriu> This is a new application
+16:44 &lt;kushalkhandelwal> sdumitriu: Still downloading dependencies
+16:44 &lt;vshivam> I checked out the details on the ideas page.
+16:45 &lt;vshivam> Can you tell me something more about the project ? The ideas that we are looking at
+16:46 &lt;vshivam> a few basic features that the application is expected to have
+16:47 &lt;sdumitriu> It's supposed to be something like http://www.bantapp.com/
+16:50 &lt;vshivam> oh okay. I'll just check it out.
+16:52 &lt;vshivam> Is this app supposed to associated to some particular disease ?
+16:53 &lt;vshivam> The one that is proposed
+16:53 &lt;vshivam> like Bant App ?
+16:54 &lt;sdumitriu> Yes
+16:54 &lt;sdumitriu> You can't have something generic for more than one disease
+16:55 &lt;vshivam&gt; yeah
+16:55 &lt;vshivam> Diabetes or something else ?
+17:00 &lt;kushalk124> has joined #ccm
+17:02 &lt;vshivam> If we know the disease I'll probably have some more idea regarding the features to put in the app
+17:03 &lt;vshivam> or are we not finalised on it yet ?
+17:06 &lt;sdumitriu> It's very open ended at the moment
+17:10 &lt;vshivam> hm.
+17:11 &lt;vshivam> Is there a way I can get started on this project ?
+17:11 &lt;vshivam> I have experience working with Android Applications
+17:11 &lt;sdumitriu> You should talk with Marc
+17:11 &lt;sdumitriu> But he's off for today
+17:12 &lt;sdumitriu> What timezone are you in?
+17:12 &lt;vshivam> India
+17:12 &lt;vshivam> utc+530
+17:13 &lt;sdumitriu> OK, try tomorrow a bit earlier
+17:13 &lt;vshivam> Okay. Thanks
+17:14 &lt;sdumitriu> We're at UTC-4
+17:18 &lt;camelia_> has joined #ccm
+17:18 &lt;camelia_> Hello! I have a question, please: which package contains classes QueryManager and Query?
+17:20 &lt;sdumitriu> Hi camelia_
+17:20 &lt;sdumitriu> Here's a trick
+17:20 &lt;sdumitriu> Go to https://github.com/xwiki/xwiki-platform/
+17:20 &lt;sdumitriu> Press t
+17:21 &lt;sdumitriu> Which opens the file locator
+17:21 &lt;sdumitriu> Then start typing QueryManager
+17:29 &lt;sdumitriu> camelia_: Found it?
+17:33 &lt;camelia_> YES, THANK YOU. Now I continue
+17:35 &lt;vshivam> has joined #ccm
+17:57 &lt;camelia_> has joined #ccm
+18:35 &lt;camelia_> has joined #ccm
+18:36 &lt;camelia_> I tried a XWQL query provided in the documentation where doc.creationDate > '2008-01-01'
+18:37 &lt;camelia_> and I got the following error:ERROR o.h.u.JDBCExceptionReporter    - incompatible data types in combination
+18:37 &lt;camelia_> and the caught exception in the component: Exception while execute query. Query statement = [ select doc.fullName from XWikiDocument as doc where doc.creationDate > '2008-01-01' ]
+18:39 &lt;camelia_> is the date in an inappropiate format?
+18:39 &lt;sdumitriu> You should pass a real date as a parameter
+18:39 &lt;sdumitriu> Not hard-coded
+18:46 &lt;sdumitriu> $xwiki.queryManager.xwql("where doc.date > :date").bindValue('date', $xwiki.jodatime.getDateTime(2013, 1, 1, 0, 0, 0, 0).toDate()).execute()
+18:46 &lt;sdumitriu> Anyway, since that example is on xwiki.org, then it used to work at some point, I wonder when did it stop working...
+19:04 &lt;vshivam> has joined #ccm
+19:20 &lt;camelia_> ok, I managed to execute the query now . Thank You !
+19:21 &lt;camelia_> Good evening and see You tomorrow!
+20:12 &lt;UCC> has joined #ccm
+20:59 &lt;sdumitriu> has joined #ccm
+23:17 &lt;kushalk124> sdumitriu, i was finally able to complete it
+23:17 &lt;kushalk124> mvn install successful
+23:17 &lt;kushalk124> :)
+23:17 &lt;sdumitriu> Great
+23:17 &lt;sdumitriu> Do you want to try to fix a small issue?
+23:18 &lt;kushalk124> It took a lot of time :P
+23:18 &lt;kushalk124> [INFO] PhenoTips - HSQLDB Database ....................... SUCCESS [15:05.569s]
+23:18 &lt;kushalk124> [INFO] PhenoTips - War package ........................... SUCCESS [2:16.028s]
+23:18 &lt;kushalk124> [INFO] PhenoTips - Standalone Distribution ............... SUCCESS [4:40.684s
+23:18 &lt;kushalk124> Yup
+23:18 &lt;kushalk124> would like to do
+23:23 &lt;kushalk124> sdumitriu, ?
+23:23 &lt;sdumitriu> https://github.com/compbio-UofT/phenotips/issues/389
+23:25 &lt;kushalk124> Just one things before I begin
+23:26 &lt;sdumitriu> Don't hesitate to ask me questions
+23:26 &lt;kushalk124> can you help me understand the file structure
+23:26 &lt;sdumitriu> OK
+23:26 &lt;sdumitriu> First, did you read http://phenotips.org/Community/SourceRepository ?
+23:27 &lt;kushalk124> Yup read that
+23:28 &lt;kushalk124> Last night I read about how maven works
+23:28 &lt;sdumitriu> K
+23:28 &lt;kushalk124> and tried some examples also
+23:28 &lt;sdumitriu> So, there are two important places with PhenoTips code
+23:28 &lt;sdumitriu> One is everything under components/ (java code)
+23:29 &lt;sdumitriu> Two is resources/ui/ (the documents in the wiki)
+23:29 &lt;sdumitriu> You shouldn't edit the XML files directly from resources/ui/src/main/resources
+23:29 &lt;sdumitriu> But edit in the wiki, then export
+23:30 &lt;sdumitriu> The major problem is that we've hidden the UI for developers, so it's a bit harder to get to the edit mode
+23:30 &lt;sdumitriu> Here's a trick:
+23:30 &lt;sdumitriu> Press Ctrl+G
+23:30 &lt;sdumitriu> Type PhenoTips.PatientSheetCode
+23:31 &lt;sdumitriu> Then press on the Edit button
+23:31 &lt;sdumitriu> (in the browser)
+23:31 &lt;sdumitriu> Did you get to the edit mode?
+23:32 &lt;kushalk124> I didnt get you ?
+23:33 &lt;kushalk124> On what page ?
+23:33 &lt;sdumitriu> On the homepage of PhenoTips
+23:33 &lt;sdumitriu> Wait
+23:33 &lt;sdumitriu> Did you start PhenoTips locally?
+23:34 &lt;sdumitriu> After you built it:
+23:34 &lt;sdumitriu> cd distribution/standalone
+23:34 &lt;sdumitriu> unzip phenotips*
+23:36 &lt;kushalk124> the file is in distribution/standalone/target
+23:37 &lt;sdumitriu> Yes
+23:37 &lt;sdumitriu> Right
+23:38 &lt;kushalk124> i than ran ./start.sh
+23:38 &lt;sdumitriu> Yep
+23:38 &lt;sdumitriu> Then open http://localhost:8080 in a browser
+23:39 &lt;kushalk124> Started that
+23:40 &lt;sdumitriu> OK, now press Ctrl+G
+23:40 &lt;sdumitriu> No
+23:40 &lt;sdumitriu> Login first
+23:40 &lt;sdumitriu> Then press Ctrl+G
+23:40 &lt;kushalk124> What is the default login ?
+23:41 &lt;sdumitriu> username: Admin
+23:41 &lt;sdumitriu> password: admin
+23:42 &lt;kushalk124> i tried that
+23:42 &lt;kushalk124> ohh
+23:42 &lt;kushalk124> i was trying username : admin
+23:42 &lt;kushalk124> Ok let me login
+23:42 &lt;kushalk124> Done
+23:54 &lt;kushalk124> sdumitriu, ?
+23:55 &lt;sdumitriu> Right
+23:55 &lt;sdumitriu> Press Ctrl+G
+23:55 &lt;sdumitriu> It should display a modal box and darken the rest of the page
+23:56 &lt;kushalk124> I am in the editing mode :)
+23:56 &lt;sdumitriu> K
+23:56 &lt;sdumitriu> Now
+23:56 &lt;sdumitriu> Try to understand the bug and reproduce it
+23:56 &lt;kushalk124> It does not support webkit browsers
+23:56 &lt;kushalk124> I added 2 entries in measurement
+23:56 &lt;sdumitriu> Yeah, they're catching Ctrl+G early
+23:57 &lt;sdumitriu> Save, edit again
+23:57 &lt;sdumitriu> Add a third measurement
+23:57 &lt;sdumitriu> See if the labels have the same font or not
+23:57 &lt;kushalk124> Ok after editing 2 entries
+23:57 &lt;kushalk124> I save it
+23:57 &lt;kushalk124> go into edit again ?
+23:57 &lt;sdumitriu> Yes</content>
+  <object>
+    <name>IRC.ccmArchive20130418</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>5590dde8-ffe8-4d01-910a-5762d4424937</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

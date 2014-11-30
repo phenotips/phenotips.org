@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130514</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1368510785000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1368584607000</date>
+  <contentUpdateDate>1368584607000</contentUpdateDate>
+  <version>1.96</version>
+  <title>IRC Archive for channel #phenotips on 14 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalk124> has quit
+02:05 &lt;kushalk124> has joined #phenotips
+02:05 &lt;kushalk124> is now known as &lt;Guest43414>
+02:09 &lt;Guest43414> is now known as &lt;kushalkhandelwal>
+02:21 &lt;kushalkhandelwal> has quit
+03:17 &lt;kushalkhandelwal> has joined #phenotips
+03:17 &lt;kushalkhandelwal> is now known as &lt;Guest75413>
+03:38 &lt;Guest75413> has quit
+03:51 &lt;Guest75413> has joined #phenotips
+05:53 &lt;Guest75413> has quit
+08:14 &lt;sdumitriu> has quit
+08:16 &lt;sdumitriu> has joined #phenotips
+10:47 &lt;sdumitriu1> has joined #phenotips
+12:11 &lt;Guest75413> has joined #phenotips
+12:11 &lt;Guest75413> is now known as &lt;kushalkhandelwal>
+12:23 &lt;sdumitriu1> Hey kushalkhandelwal
+12:43 &lt;kushalkhandelwal> Hey sdumitriu1
+12:43 &lt;kushalkhandelwal> Good morning
+12:51 &lt;kushalkhandelwal> has quit
+12:54 &lt;kushalkhandelwal> has joined #phenotips
+12:54 &lt;kushalkhandelwal> is now known as &lt;Guest11228>
+12:55 &lt;Guest11228> is now known as &lt;Kushalk124>
+13:23 &lt;sdumitriu1> Kushalk124: How's the issue going?
+13:23 &lt;Kushalk124> sdumitriu, Working on it
+13:24 &lt;Kushalk124> Trying to find time , had a busy day
+13:24 &lt;Kushalk124> And fixing up things on my computer
+13:24 &lt;Kushalk124> :P
+13:24 &lt;Kushalk124> You say
+13:24 &lt;Kushalk124> Fixing minor bugs ?
+13:24 &lt;sdumitriu1> No, preparing bigger changes
+13:24 &lt;Kushalk124> Oh
+13:24 &lt;Kushalk124> Some major changes ?
+13:25 &lt;Kushalk124> Deadline for next milestone ?
+13:25 &lt;sdumitriu1> Tomorrow
+13:25 &lt;Kushalk124> :O
+13:25 &lt;Kushalk124> Ohh
+13:25 &lt;sdumitriu1> I have to finish some things
+13:25 &lt;Kushalk124> I will finish this bug tonight then
+13:25 &lt;sdumitriu1> (not a release, though)
+13:25 &lt;sdumitriu1> You don't have to
+13:26 &lt;sdumitriu1> The release should happen next Friday, 24
+13:26 &lt;Kushalk124> I will :)
+13:26 &lt;Kushalk124> A lot of time for that
+13:26 &lt;Kushalk124> So you working on some new feature ?
+13:27 &lt;sdumitriu1> Yep
+13:28 &lt;Kushalk124> When you get time tell me more about CNV and the work at lab :)
+15:01 &lt;Kushalk124> Do I have to add
+15:01 &lt;Kushalk124> extended_ * item also ?
+15:02 &lt;Kushalk124> sdumitriu1,  ?
+15:50 &lt;sdumitriu1> Back
+15:51 &lt;sdumitriu1> extended no
+15:51 &lt;Kushalk124> Come on ccm
+15:51 &lt;Kushalk124> Oh ok :)
+15:51 &lt;Kushalk124> Done with it
+15:51 &lt;Kushalk124> not able to push
+15:51 &lt;Kushalk124> some setting issue mostly
+15:51 &lt;Kushalk124> like old time
+15:51 &lt;Kushalk124> trying to figure that out
+15:51 &lt;Kushalk124> then would push
+17:39 &lt;sdumitriu1> has quit
+17:39 &lt;BogdanVancea> has quit
+19:20 &lt;BogdanVancea> has quit
+22:13 &lt;Kushalk124> Hey sdumitriu
+22:14 &lt;sdumitriu> Hey
+22:14 &lt;Kushalk124> Good morning
+22:15 &lt;Kushalk124> How are you ?
+22:15 &lt;sdumitriu> Sleepy
+22:15 &lt;Kushalk124> Ahh
+22:15 &lt;Kushalk124> Sleep
+22:15 &lt;Kushalk124> its late
+22:15 &lt;Kushalk124> Working ?
+22:15 &lt;Kushalk124> Just tell me one thing is there a way to live edit ?
+22:16 &lt;Kushalk124> Can I write JS withing the XWiki edit mode ?
+22:16 &lt;sdumitriu> Trying to finish some code
+22:16 &lt;sdumitriu> Yes
+22:16 &lt;sdumitriu> http://localhost:8080/bin/edit/ClinicalInformationCode/PatientSheetCode?editor=object
+22:16 &lt;Kushalk124> Within the same edit mode I write my JS ?
+22:17 &lt;Kushalk124> From here ?
+22:17 &lt;Kushalk124> How ?
+22:18 &lt;sdumitriu> Or maybe I don't understand your question
+22:18 &lt;sdumitriu> There are different objects there
+22:18 &lt;sdumitriu> Some with JS code, some with CSS
+22:19 &lt;sdumitriu> You can change existing code, save, and refresh a patient's record to have the new code
+22:19 &lt;sdumitriu> Or you can add a new object and write your own JS
+22:19 &lt;Kushalk124> Over here I dont see the option to edit
+22:20 &lt;Kushalk124> http://localhost:8080/bin/edit/PhenoTips/PatientSheetCode I can't write the new code here ?
+22:20 &lt;sdumitriu> No
+22:20 &lt;sdumitriu> Edit what?
+22:20 &lt;sdumitriu> What can't you edit?
+22:20 &lt;sdumitriu> You're already in edit mode
+22:20 &lt;sdumitriu> Just type
+22:21 &lt;sdumitriu> Ah, wait
+22:21 &lt;sdumitriu> Wrong URL
+22:21 &lt;sdumitriu> http://localhost:8080/bin/edit/PhenoTips/PatientSheetCode?editor=object
+22:23 &lt;Kushalk124> Ok
+22:23 &lt;Kushalk124> So here I can create a new object and write my new JS</content>
+  <object>
+    <name>IRC.phenotipsArchive20130514</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>112520c9-ab7f-402a-bd61-3760a3924243</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

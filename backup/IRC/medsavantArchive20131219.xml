@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20131219</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1387473494000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1387515233000</date>
+  <contentUpdateDate>1387515233000</contentUpdateDate>
+  <version>1.8</version>
+  <title>IRC Archive for channel #medsavant on 19 December 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;Jim_> has joined #medsavant
+12:18 &lt;sdumitriu1> has joined #medsavant
+12:27 &lt;Jim_> What was the URL to the nexus site where I can search for maven dependencies?  I thought it was nexus.cs.utoronto.ca, but that brings me to a phenotips website...
+12:31 &lt;Jim_> ah I got it.  toronto.edu
+12:31 &lt;sdumitriu1> Yep
+12:31 &lt;sdumitriu1> I can add an alias for utoronto
+23:46 &lt;mfiume> has joined #medsavant
+23:53 &lt;mfiume> has left #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20131219</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>74660f8b-16e0-41e4-ab1d-1603b5898140</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

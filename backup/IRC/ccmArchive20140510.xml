@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140510</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1399703468000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1399757003000</date>
+  <contentUpdateDate>1399757003000</contentUpdateDate>
+  <version>1.13</version>
+  <title>IRC Archive for channel #ccm on 10 May 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;vijay13> has joined #ccm
+02:38 &lt;vijay13_> has joined #ccm
+03:19 &lt;vijay13> has joined #ccm
+04:33 &lt;vijay13> has joined #ccm
+04:43 &lt;vijay13> has joined #ccm
+04:55 &lt;vijay13> has joined #ccm
+05:22 &lt;vijay13> has joined #ccm
+05:51 &lt;vijay13> has joined #ccm
+06:39 &lt;vijay13> has joined #ccm
+09:45 &lt;vijay13> has joined #ccm
+13:56 &lt;vijay13> has joined #ccm
+16:59 &lt;vijay13> has joined #ccm
+17:23 &lt;vijay13_> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20140510</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>3bfda615-06c1-44ba-b5c5-eeb6c8e5ddf2</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140328</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1396002596000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1396053738000</date>
+  <contentUpdateDate>1396053738000</contentUpdateDate>
+  <version>1.72</version>
+  <title>IRC Archive for channel #phenotips on 28 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has quit
+06:30 &lt;sdumitriu> has joined #phenotips
+08:13 &lt;sdumitriu> has quit
+08:16 &lt;sdumitriu> has joined #phenotips
+09:04 &lt;groundnuty> has quit
+09:06 &lt;groundnuty> has joined #phenotips
+11:37 &lt;phenotips_org> has joined #phenotips
+12:27 &lt;akats> has joined #phenotips
+12:27 &lt;akats> Beat it. But it's not really nice, because it loads eagerly rather than lazily.
+12:27 &lt;sdumitriu> Oh, that's fine
+12:27 &lt;sdumitriu> It's even better
+13:25 &lt;bvancea> has joined #phenotips
+13:26 &lt;sdumitriu> Hey bvancea
+13:26 &lt;sdumitriu> How's it going?
+13:26 &lt;bvancea> hey sdumitriu
+13:26 &lt;sdumitriu> Busy with school?
+13:26 &lt;bvancea> ah, just finished a really busy week
+13:26 &lt;bvancea> yeah
+13:26 &lt;bvancea> had a couple of deadlines
+13:27 &lt;bvancea> its a bit better now :D
+13:27 &lt;bvancea> and you?
+13:27 &lt;sdumitriu> Trying hard to release three things today
+13:28 &lt;bvancea> wow, that is a quite a schedule
+13:29 &lt;bvancea> phenotips/phenome-central?
+13:29 &lt;sdumitriu> Yes
+13:33 &lt;sdumitriu> I just sent this an hour ago: http://mail.phenotips.org/pipermail/devs/2014-March/000079.html
+13:34 &lt;sdumitriu> If you could lend a hand, that would be wonderful
+13:34 &lt;bvancea> sure
+13:43 &lt;bvancea> any new feature you want me to check?
+13:44 &lt;sdumitriu> Not particularly, just hammer at it until it breaks
+13:44 &lt;bvancea> okay :))
+13:51 &lt;bvancea> should I be able to access a hidden patient case if I'm not logged in?
+13:55 &lt;sdumitriu> No
+13:55 &lt;sdumitriu> Unless you created it
+13:55 &lt;sdumitriu> (as guest)
+13:56 &lt;bvancea> Hmmm
+13:56 &lt;bvancea> Well, this is what I did
+13:56 &lt;bvancea> I created a patient as admin
+13:57 &lt;bvancea> changed ownership to a bogus user : 22222222
+13:57 &lt;bvancea> logged out
+13:57 &lt;sdumitriu> Hm...
+13:57 &lt;bvancea> searched for P00000 in the search bar
+13:57 &lt;sdumitriu> That's a bug
+13:57 &lt;bvancea> and I can see the patient
+13:57 &lt;bvancea> even though its hidden
+14:05 &lt;bvancea> everything else seems fine
+14:05 &lt;bvancea> I'll go have dinner and have another look
+14:06 &lt;sdumitriu> Thank you
+14:31 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;
+16:03 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+16:05 &lt;bvancea> Hey sdumitriu
+16:05 &lt;bvancea> I've found another small issue
+16:05 &lt;sdumitriu> Hey again
+16:05 &lt;sdumitriu> Shoot
+16:06 &lt;bvancea> When editing a patient record, in the section Clinical symptoms and physical findings
+16:07 &lt;bvancea> if you search for something on the quick phenotipe search
+16:07 &lt;bvancea> then you check the checkbox this patient is clinically normal
+16:07 &lt;bvancea> you get a residual result window
+16:07 &lt;bvancea> that doesn't go away by clicking outside
+16:07 &lt;bvancea> its pretty minor
+16:10 &lt;sdumitriu> I see
+16:10 &lt;sdumitriu> There's a "hide suggestions" link in the top right corner, you know
+16:10 &lt;sdumitriu> Although nobody seems to see it
+16:10 &lt;sdumitriu> Bottom right too
+16:16 &lt;akats> sdumitriu: would you like to take a look at what I have?
+16:16 &lt;sdumitriu> Yes
+16:22 &lt;mcupak> has quit
+16:28 &lt;bvancea> has quit
+16:55 &lt;bvancea> has joined #phenotips
+16:56 &lt;bvancea> has quit
+18:30 &lt;akats> has quit
+20:42 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;</content>
+  <object>
+    <name>IRC.phenotipsArchive20140328</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f43c7522-ae4e-4763-b85f-fb79c8aeacd4</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

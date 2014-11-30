@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140416</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1397625439000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1397693340000</date>
+  <contentUpdateDate>1397693340000</contentUpdateDate>
+  <version>1.33</version>
+  <title>IRC Archive for channel #phenotips on 16 April 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;vijay13> has quit
+06:03 &lt;vijay13> has quit
+06:53 &lt;Csine> has quit
+10:03 &lt;vijay13> has quit
+12:58 &lt;SayAsh> has joined #phenotips
+13:23 &lt;vijay13> has quit
+14:01 &lt;akats> sdumitriu: Do you have a few minutes. Some things I wanted to talk about.
+14:02 &lt;sdumitriu> Sure
+14:03 &lt;akats> I'd have to show you
+14:04 &lt;sdumitriu> Be there soon
+14:29 &lt;SayAsh> has quit
+15:06 &lt;akats> for this issue https://github.com/phenotips/phenomecentral.org/issues/3, the patient record needs to belong to a group. Is my guess correct?
+15:06 &lt;sdumitriu> No
+15:07 &lt;sdumitriu> It needs to belong to someone else, but be shared (editable) with the current user
+15:07 &lt;vijay13> has quit
+15:07 &lt;sdumitriu> But indeed, if it belongs to a group, then the form should be displayed for any member of the group
+15:08 &lt;akats> Oh, like that even
+15:08 &lt;akats> Ok
+16:37 &lt;akats> I sent a pull request for phenomecentral. I'm not sure if this is exactly what you're looking for.
+16:38 &lt;sdumitriu> Nope
+16:39 &lt;sdumitriu> You should explicitly check if owner == current user or owner is a group and current user is member of that group
+16:40 &lt;akats> So a document cannot be owned by a person and a group at the same time?
+16:41 &lt;vijay13_> has quit
+16:41 &lt;sdumitriu> Nope
+16:41 &lt;sdumitriu> There's only one owner at the moment
+16:41 &lt;sdumitriu> Either a user, or a group
+16:41 &lt;akats> Can a document own another document?
+16:41 &lt;akats> If it's not a user nor a group
+16:42 &lt;sdumitriu> No
+16:42 &lt;akats> Interesting. Ok. I'll change it.
+18:28 &lt;akats> has quit
+18:34 &lt;mcupak> has quit
+20:09 &lt;allasm> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140416</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>039d2a1e-b0d1-404d-a81d-b3068dd0e75f</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

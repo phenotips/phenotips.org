@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130712</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1373611239000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1373676360000</date>
+  <contentUpdateDate>1373676360000</contentUpdateDate>
+  <version>1.14</version>
+  <title>IRC Archive for channel #phenotips on 12 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;misko__> has quit
+08:26 &lt;mcupak> is now known as &lt;mcupak_afk>
+10:13 &lt;ravigarg27> has joined #phenotips
+10:20 &lt;ravigarg27> has quit
+10:52 &lt;ravigarg27> has quit
+11:29 &lt;mcupak_afk> is now known as &lt;mcupak>
+12:26 &lt;ravigarg27> has quit
+12:36 &lt;mcupak> has quit
+14:14 &lt;mcupak> has quit
+15:05 &lt;ravigarg27> has quit
+16:10 &lt;ravigarg27> has quit
+16:40 &lt;ravigarg27> has quit
+20:44 &lt;sdumitriu> has quit
+20:46 &lt;sdumitriu> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20130712</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>61a4c3b5-ef08-45ee-ae87-0c80db7102b0</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

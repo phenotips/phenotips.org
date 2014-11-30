@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20131121</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1385011299000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1385064555000</date>
+  <contentUpdateDate>1385064555000</contentUpdateDate>
+  <version>1.36</version>
+  <title>IRC Archive for channel #phenotips on 21 November 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #phenotips
+06:54 &lt;zlad> has joined #phenotips
+06:55 &lt;zlad> Hello, I have a question about deploying class sheet code changes
+07:22 &lt;sdumitriu> Hi zlad
+07:22 &lt;zlad> hi sdumitriu
+07:23 &lt;sdumitriu> What's the issue?
+07:24 &lt;zlad> I'm wanting to make changes to PatientSheetCode.xml. I noticed that it is stored in the xwikilargestrings table. What is the recommended way to deploy changes?
+07:25 &lt;sdumitriu> Three ways:
+07:25 &lt;sdumitriu> 1. You make the changes in the sources, and recompile everything. This will get you a standalone build with your changes in place.
+07:26 &lt;sdumitriu> 2. You make the changes in the sources, and recompile only the module where you've made changes. This will give you a .xar file in the /target/ subdirectory.
+07:27 &lt;sdumitriu> In the running PhenoTips instance, you go to "Administration" (upper left corner), switch to "Wiki administration" (from the upper right dropdown), then "Content -> Import" (from the left side menu)
+07:28 &lt;sdumitriu> Upload the .xar file
+07:28 &lt;sdumitriu> Once it uploads, click on its name from the list of available packages
+07:28 &lt;sdumitriu> Unselect all files and select just the ones you've modified
+07:28 &lt;sdumitriu> Click on "Import"
+07:29 &lt;zlad> Does #1 or #2 result in a change to xwiki_db.script, or is the xml text compiled into the .class and the database updated when Phenotips starts?
+07:29 &lt;sdumitriu> #1 does result in changes to the xwiki_db.script
+07:30 &lt;sdumitriu> #2 just obtains the .xar file, which is a .zip with a set of .xml files
+07:30 &lt;sdumitriu> The .xml sources don't get compiled to Java classes, they all go into the database
+07:31 &lt;sdumitriu> 3. You work the other way around: you can make the changes in the running instance, since this way you get to see the results instantly, without the need to recompile anything
+07:31 &lt;zlad> Is the .zip a standard filename that XWiki recognizes and automatically unzips and imports the contents?
+07:31 &lt;sdumitriu> Yes
+07:32 &lt;sdumitriu> Once you're satisfied with the changes in your running instance, you can export back a .xar, either for each individual page, or for all the documents in the database
+07:33 &lt;sdumitriu> If you're using 1.0M9, all the documents in the PhenoTips space (which includes all the code pages) have an extra menu with an "Export" entry; there's a "Export as XAR" entry which gives you a .xar of that document
+07:34 &lt;sdumitriu> A global export is done from the global adminisitration, instead of "Content -> Import" select "Content -> Export"
+07:34 &lt;zlad> After I run maven I don't see any changes to xwiki_db.script
+07:34 &lt;sdumitriu> As I said, the .xar is actually a zip file, you can unzip it, get the xml sources from it and copy them over the original sources
+07:35 &lt;sdumitriu> You should run "mvn xar:format" in the module where the modified sources are (from the root of that module, where the pom.xml is) to cleanup the xml
+07:36 &lt;sdumitriu> Which xwiki_db.script? It only changes the one that ends up in the newly built standalone zip
+07:36 &lt;sdumitriu> It won't change a running instance from another place
+07:37 &lt;sdumitriu> And be careful, don't run a "stable" PhenoTips instance from the distribution/standalone/target directory, that one gets cleaned during builds
+07:41 &lt;zlad> Alright, that all helps a lot. Thank you
+07:42 &lt;sdumitriu> You're welcome
+08:36 &lt;zlad> has quit
+11:11 &lt;sdumitriu1> has joined #phenotips
+15:09 &lt;sdumitriu1> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20131121</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>be0210c0-d187-4abc-9537-f0fa099efc54</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

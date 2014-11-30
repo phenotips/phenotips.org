@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140422</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1398150933000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1398203474000</date>
+  <contentUpdateDate>1398203474000</contentUpdateDate>
+  <version>1.17</version>
+  <title>IRC Archive for channel #phenotips on 22 April 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;vijay13> has quit
+05:37 &lt;vijay13> has quit
+07:04 &lt;groundnuty> has left #phenotips
+08:17 &lt;mcupak> has quit
+09:57 &lt;akats> has joined #phenotips
+11:56 &lt;mcupak> has quit
+12:07 &lt;sdumitriu1> akats: Let me know if you run out of things to do
+12:41 &lt;akats> ok
+12:41 &lt;akats> I do have a question though. Are there any known issues with using components inside Executors?
+12:42 &lt;akats> I have a component, which has an Execution object injected
+12:42 &lt;akats> I can verify that when I call getContext() on that execution, it gives me context.
+12:43 &lt;akats> However, I then call one of the components functions inside an Executor
+12:43 &lt;akats> and the XWiki Execution no longer returns a context when I call getContext()
+12:59 &lt;akats> Here's a code snippet https://gist.github.com/anonymous/bc0124d58019bf5e497b
+13:19 &lt;mcupak> has quit
+15:14 &lt;akats> I did end up solving it, but not in a nice way
+17:51 &lt;akats> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140422</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>75828ebc-c0f8-48cd-8331-3fcec460fe1b</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

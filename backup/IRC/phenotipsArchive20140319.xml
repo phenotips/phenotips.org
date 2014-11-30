@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140319</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395203926000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395282137000</date>
+  <contentUpdateDate>1395282137000</contentUpdateDate>
+  <version>1.88</version>
+  <title>IRC Archive for channel #phenotips on 19 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #phenotips
+01:34 &lt;tian2992> has joined #phenotips
+02:31 &lt;sdumitriu> has quit
+02:32 &lt;ruthgrace> has quit
+02:51 &lt;Shubham1> has quit
+06:08 &lt;mcupak> has quit
+07:22 &lt;SayAsh_> has joined #phenotips
+07:22 &lt;SayAsh_> has quit
+07:55 &lt;CARAM> has quit
+10:10 &lt;bvancea> has joined #phenotips
+10:33 &lt;aw1231> has joined #phenotips
+10:36 &lt;aw1231> sdumitriu_[Away]: Correct me if I'm wrong, but you want my proposal to connect symptoms to diseases.
+10:52 &lt;bvancea> has quit
+10:53 &lt;punnu> has quit
+12:53 &lt;Shubham2> has quit
+13:10 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+13:11 &lt;sdumitriu> Hey aw1231
+14:47 &lt;tian2992> hello
+15:27 &lt;Shubham> has quit
+15:41 &lt;Shubham> has quit
+15:55 &lt;sdumitriu> Hi tian2992
+15:56 &lt;tian2992> sdumitriu: hi, I was checking out phenotips
+15:56 &lt;tian2992> for GSoC
+15:56 &lt;tian2992> I was trying to work on https://github.com/phenotips/phenotips/issues/756
+15:56 &lt;tian2992> but I can't find where is the list actually fetched
+15:57 &lt;tian2992> I found https://github.com/phenotips/phenotips/blob/master/components/patient-data/ui/src/main/resources/PhenoTips/UIX_Field__phenotype.xml and the PhenoTips.YesNoNAPicker component
+15:57 &lt;sdumitriu> Did you try Firebug or other Developer Tools?
+15:57 &lt;tian2992> I'm still building phenotips so I don't have it running yet
+15:59 &lt;sdumitriu> So, to make sure you're looking for the right thing, "Suggested terms" refers to the "You might want to check for..." area, for example on http://playground.phenotips.org/bin/edit/data/P0000060#HClinicalsymptomsandphysicalfindings
+16:01 &lt;tian2992> ohh
+16:04 &lt;tian2992> so it is related to the DiffDiagnosisService
+16:05 &lt;Shubham> has quit
+16:10 &lt;sdumitriu> Yes
+16:11 &lt;tian2992> I see now that it is connected to _service.getDifferentialPhenotypes
+16:12 &lt;tian2992> but there I see both the hpoa Predictor and PhenotypeMappingScriptService.java
+16:12 &lt;tian2992> yet I don't see the implementation
+16:13 &lt;tian2992> ohh, I see the AbstractPredictor.java has it
+16:14 &lt;sdumitriu> You're on the right track
+16:14 &lt;tian2992> I got a Failed to execute goal org.xwiki.platform:xwiki-platform-tool-packager-plugin:5.4.2:import (default) on project database-zip: Execution default of goal org.xwiki.platform:xwiki-platform-tool-packager-plugin:5.4.2:import failed: A required class was missing while executing org.xwiki.platform:xwiki-platform-tool-packager-plugin:5.4.2:import: Lorg/sonatype/aether/RepositorySystemSession;
+16:15 &lt;tian2992>  when building on my machine
+16:16 &lt;sdumitriu> You need to use Maven 3.0
+16:16 &lt;tian2992> I'm using maven 3.2.1
+16:16 &lt;sdumitriu> That's a bug in one of the Maven plugins we use, it doesn't work with recent versions of Maven
+16:16 &lt;tian2992> should I downgrade?
+16:16 &lt;sdumitriu> Yes
+16:16 &lt;tian2992> oh, ok
+16:17 &lt;ruthgrace> has quit
+16:22 &lt;mcupak> has quit
+16:23 &lt;sdumitriu> Cool, somebody's improving the documentation
+16:23 &lt;sdumitriu> Thank you tian2992
+16:23 &lt;tian2992> i'm Sebsatian Oliva ;P
+16:23 &lt;sdumitriu> Yeah, figured out
+16:29 &lt;Shubham> has quit
+16:57 &lt;ruthgrace> has quit
+17:12 &lt;Shubham> has quit
+17:16 &lt;tian2992> I don't know, as ICPredictor seems to be filtering for Phenotypes in getPhenotypesWithAnnotation
+17:23 &lt;ruthgrace> has quit
+17:30 &lt;akats> sdumitriu: So I ran into a little dilemma on my end. The version of HTTPClient that is currently used by phenotips is 4.2.5. Some of the basic parts that I need from it are now deprecated, and the latest version does them in a different way (for example instantiating the client).  Should I stick with the 4.2.5 or introduce 4.3.2/4.3.3?
+17:33 &lt;sdumitriu> I wonder if 4.3 is backwards compatible
+17:33 &lt;sdumitriu> Meaning that other parts of XWiki use 4.2, and maybe third party libraries use 4.2
+17:34 &lt;sdumitriu> Check the release notes
+17:34 &lt;sdumitriu> They usually say if it's compatible or not
+17:34 &lt;akats> ok one sec
+17:35 &lt;aw1231> sdumitriu: hey, sorry I keep missing you.  Are you available?
+17:35 &lt;sdumitriu> Yes
+17:36 &lt;aw1231> Good.  So, I am just having trouble grasping the scope of the project, and i am honestly probably missing something obvious.
+17:41 &lt;aw1231> What exactly is the project supposed to accomplish during the summer?
+17:41 &lt;akats> sdumitriu: I don't see it in the release notes. Would it be terrible to have both? Is that even possible, actually? But if I had to guess, I'd say they are compatible. http://www.apache.org/dist/httpcomponents/httpclient/RELEASE_NOTES-4.3.x.txt
+17:45 &lt;sdumitriu> Yes, they look compatible
+17:45 &lt;sdumitriu> A few classes are deprecated, but not removed
+17:45 &lt;sdumitriu> So you should just update
+17:46 &lt;sdumitriu> aw1231: Can you wait a few more minutes?
+17:46 &lt;sdumitriu> I'm in the middle of a discussion
+17:46 &lt;aw1231> Sure
+17:51 &lt;Shubham> has quit
+18:17 &lt;Shubham> has quit
+18:23 &lt;sdumitriu> aw1231: Sorry, this discussion is taking longer...
+18:24 &lt;aw1231> It's fine,  I might have to go here shortly though
+18:59 &lt;sdumitriu> aw1231: Still here?
+19:00 &lt;sdumitriu> tian2992: How's it going?
+19:02 &lt;tian2992> sdumitriu: I saw the IC predictor, and it seems to implement getPhenotypesWithAnnotation properly
+19:02 &lt;sdumitriu> Let me check
+19:41 &lt;akats> sdumitriu: I think I found a privacy issue in the server response specifications
+19:57 &lt;Shubham> has quit
+20:01 &lt;Shubham> has quit
+20:02 &lt;akats> has quit
+21:25 &lt;tweety098> has quit
+22:22 &lt;Shubham> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140319</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>78d472ab-9519-401f-8ae3-5b13dfeff908</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

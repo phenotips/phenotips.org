@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140129</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1391007186000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1391024798000</date>
+  <contentUpdateDate>1391024798000</contentUpdateDate>
+  <version>1.20</version>
+  <title>IRC Archive for channel #phenotips on 29 January 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;akats> has joined #phenotips
+11:04 &lt;akats> Is the JSON export implemented in the frontend UI? I found the service class in the java code and the Patient class (exports some json), but I can't seem to find an export JSON in the frontend UI.
+11:22 &lt;sdumitriu> akats: There's no UI for it yet
+11:22 &lt;sdumitriu> Just the backend
+11:24 &lt;akats> Would you like me to make a UI for it? And should I put the versioning code into the PhenoTipsPatient class (make a separate class in the same folder and then reference it in the PhenoTipsPatient class)?
+11:25 &lt;sdumitriu> No UI yet
+11:26 &lt;sdumitriu> It's more complex
+11:26 &lt;sdumitriu> I don't understand the second question
+11:27 &lt;sdumitriu> We'll be there in 20 minutes
+11:28 &lt;akats> Ok. I'll ask you then.
+12:22 &lt;akats> How would I test my changes in patient-data?
+12:22 &lt;sdumitriu1> To check that it works?
+12:23 &lt;sdumitriu1> Just make a new document (not a patient record), and write in it: {{velocity}}$services.patients.getPatientById('P0000001').toJSON(){{/velocity}}
+12:26 &lt;akats> well that was obvious. thanks
+13:21 &lt;akats> Ok. So I've got one line left to test, but that requires me to rebuild the whole project and will take while.
+13:21 &lt;akats> The rest is tested and works. Comparison here https://github.com/soLEED/phenotips-1/compare/phenotips:master...soLEED:issue-692-693?expand=1
+13:21 &lt;akats> Also I combined the issues 692 and 693 since it seemed logical.
+13:21 &lt;sdumitriu1> Yep, combining is OK
+13:22 &lt;sdumitriu1> Will check in a few minutes, working on something else
+14:46 &lt;akats> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140129</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>cc536d2b-ba2f-4f33-8288-1813813d8044</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

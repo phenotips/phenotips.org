@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130422</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1366609555000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1366688259000</date>
+  <contentUpdateDate>1366688259000</contentUpdateDate>
+  <version>1.146</version>
+  <title>IRC Archive for channel #ccm on 22 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalkhandelwal> has joined #ccm
+02:39 &lt;kushalkhandelwal> has joined #ccm
+03:08 &lt;kushalkhandelwal> has joined #ccm
+03:15 &lt;kushalkhandelwal> has joined #ccm
+03:28 &lt;kushalkhandelwal> has joined #ccm
+03:36 &lt;kushalkhandelwal> has joined #ccm
+03:41 &lt;kushalkhandelwal> has joined #ccm
+03:46 &lt;kushalkhandelwal> has joined #ccm
+03:51 &lt;kushalkhandelwal> has joined #ccm
+03:56 &lt;kushalkhandelwal> has joined #ccm
+04:02 &lt;kushalkhandelwal> has joined #ccm
+04:07 &lt;kushalkhandelwal> has joined #ccm
+04:11 &lt;kushalkhandelwal> has joined #ccm
+04:15 &lt;kushalkhandelwal> has joined #ccm
+04:19 &lt;kushalkhandelwal> has joined #ccm
+04:24 &lt;kushalkhandelwal> has joined #ccm
+04:28 &lt;kushalkhandelwal> has joined #ccm
+04:33 &lt;kushalkhandelwal> has joined #ccm
+04:37 &lt;kushalkhandelwal> has joined #ccm
+04:41 &lt;UCC> has joined #ccm
+04:42 &lt;kushalkhandelwal> has joined #ccm
+04:46 &lt;kushalkhandelwal> has joined #ccm
+04:53 &lt;kushalkhandelwal> has joined #ccm
+04:59 &lt;kushalkhandelwal> has joined #ccm
+05:02 &lt;kushalkhandelwal> has joined #ccm
+05:08 &lt;kushalkhandelwal> has joined #ccm
+05:12 &lt;kushalkhandelwal> has joined #ccm
+05:17 &lt;kushalkhandelwal> has joined #ccm
+05:21 &lt;kushalkhandelwal> has joined #ccm
+05:26 &lt;kushalkhandelwal> has joined #ccm
+05:30 &lt;kushalkhandelwal> has joined #ccm
+05:35 &lt;kushalkhandelwal> has joined #ccm
+05:41 &lt;kushalkhandelwal> has joined #ccm
+05:46 &lt;kushalkhandelwal> has joined #ccm
+05:49 &lt;kushalkhandelwal> has joined #ccm
+05:54 &lt;kushalkhandelwal> has joined #ccm
+05:57 &lt;kushalkhandelwal> has joined #ccm
+06:01 &lt;kushalkhandelwal> has joined #ccm
+07:38 &lt;UCC> has joined #ccm
+07:44 &lt;ravigarg27> has joined #ccm
+08:28 &lt;kushalkhandelwal> has joined #ccm
+08:29 &lt;kushalkhandelwal> Hey
+08:40 &lt;sdumitriu> Hey
+08:42 &lt;sdumitriu> kushalkhandelwal: https://wiki.jenkins-ci.org/display/JENKINS/Github+pull+request+builder+plugin
+08:43 &lt;sdumitriu> Travis isn't exactly a CI system
+08:43 &lt;sdumitriu> It only runs tests and checks that no tests fail
+08:43 &lt;sdumitriu> Jenkins does more
+08:44 &lt;kushalkhandelwal> Travis builds it runs tests and check for failures
+08:44 &lt;kushalkhandelwal> What else can we do with Jenkins ?
+08:45 &lt;kushalkhandelwal> Can we deploy with jenkins ?
+08:47 &lt;kushalkhandelwal> sdumitriu, ?
+08:48 &lt;sdumitriu> Yes, we already deploy to nexus.cs.toronto.edu
+08:48 &lt;sdumitriu> And it also has more details
+08:48 &lt;sdumitriu> For example, it can report which tests failed nicely
+08:48 &lt;sdumitriu> ttyl, going to sdumitriu1
+08:49 &lt;kushalkhandelwal> :P
+08:49 &lt;kushalkhandelwal> You change machines ?
+09:00 &lt;kushalkhandelwal> has joined #ccm
+09:09 &lt;sdumitriu1> has joined #ccm
+09:12 &lt;froggy> has joined #ccm
+09:15 &lt;kushalkhandelwal> sdumitriu1,
+09:15 &lt;kushalkhandelwal> Anout travis and Jenkins ?
+09:15 &lt;sdumitriu1> Yep
+09:31 &lt;kushalkhandelwal> has joined #ccm
+09:42 &lt;krinye> has joined #ccm
+09:47 &lt;kushalkhandelwal> has joined #ccm
+09:51 &lt;kushalkhandelwal> has joined #ccm
+09:55 &lt;kushalkhandelwal> has joined #ccm
+10:00 &lt;kushalkhandelwal> has joined #ccm
+10:04 &lt;kushalkhandelwal> has joined #ccm
+10:09 &lt;kushalkhandelwal> has joined #ccm
+10:13 &lt;kushalkhandelwal> has joined #ccm
+10:18 &lt;kushalkhandelwal> has joined #ccm
+10:23 &lt;kushalkhandelwal> has joined #ccm
+10:29 &lt;kushalkhandelwal> has joined #ccm
+10:30 &lt;UCC> has joined #ccm
+10:44 &lt;kushalkhandelwal> has joined #ccm
+10:56 &lt;kushalkhandelwal> has joined #ccm
+11:25 &lt;kushalk124> has joined #ccm
+11:29 &lt;kushalk124> sdumitriu1:
+11:29 &lt;kushalk124> there ?
+11:29 &lt;sdumitriu1> Yes
+11:51 &lt;kushalkhandelwal> has joined #ccm
+11:57 &lt;kushalkhandelwal> has joined #ccm
+11:59 &lt;Dhritiman> has joined #ccm
+12:07 &lt;kushalkhandelwal> has joined #ccm
+12:11 &lt;kushalkhandelwal> has joined #ccm
+12:15 &lt;kushalkhandelwal> has joined #ccm
+12:19 &lt;kushalkhandelwal> has joined #ccm
+12:23 &lt;kushalkhandelwal> has joined #ccm
+12:27 &lt;kushalkhandelwal> has joined #ccm
+12:31 &lt;kushalkhandelwal> has joined #ccm
+12:31 &lt;froggy> has joined #ccm
+12:35 &lt;kushalkhandelwal> has joined #ccm
+12:39 &lt;kushalkhandelwal> has joined #ccm
+12:43 &lt;kushalkhandelwal> has joined #ccm
+12:44 &lt;ravigarg27> #gsoc
+12:45 &lt;ravigarg27> oops
+12:47 &lt;kushalkhandelwal> has joined #ccm
+12:51 &lt;kushalkhandelwal> has joined #ccm
+12:55 &lt;kushal124> has joined #ccm
+12:59 &lt;kushal124> has joined #ccm
+13:03 &lt;kushal124> has joined #ccm
+13:07 &lt;kushal124> has joined #ccm
+13:11 &lt;kushal124> has joined #ccm
+13:15 &lt;kushal124> has joined #ccm
+13:19 &lt;kushal124> has joined #ccm
+13:23 &lt;kushal124> has joined #ccm
+13:27 &lt;kushal124> has joined #ccm
+13:31 &lt;kushal124> has joined #ccm
+13:36 &lt;kushal124> has joined #ccm
+13:39 &lt;kushal124> has joined #ccm
+13:43 &lt;kushal124> has joined #ccm
+13:48 &lt;kushal124> has joined #ccm
+13:52 &lt;kushal124> has joined #ccm
+13:56 &lt;kushal124> has joined #ccm
+14:00 &lt;kushal124> has joined #ccm
+14:04 &lt;kushal124> has joined #ccm
+14:08 &lt;kushal124> has joined #ccm
+14:12 &lt;camelia_> has joined #ccm
+14:13 &lt;kushal124> has joined #ccm
+14:17 &lt;kushal124> has joined #ccm
+14:19 &lt;froggy> has joined #ccm
+14:22 &lt;kushal124> has joined #ccm
+14:26 &lt;kushal124> has joined #ccm
+14:31 &lt;kushal124> has joined #ccm
+14:35 &lt;kushal124> has joined #ccm
+14:40 &lt;ssb_> has joined #ccm
+14:41 &lt;kushal124> has joined #ccm
+14:46 &lt;kushal124> has joined #ccm
+14:51 &lt;kushal124> has joined #ccm
+15:02 &lt;ravigarg27> has joined #ccm
+15:06 &lt;kushal124> has joined #ccm
+15:06 &lt;kushalk124> has joined #ccm
+15:09 &lt;kushalkhandelwal> has joined #ccm
+15:15 &lt;kushalkhandelwal> has joined #ccm
+15:26 &lt;kushalkhandelwal> has joined #ccm
+15:45 &lt;kushalkhandelwal> has joined #ccm
+16:56 &lt;kushalkhandelwal> has joined #ccm
+17:02 &lt;kushalk124> has joined #ccm
+17:07 &lt;camelia_> has joined #ccm
+18:49 &lt;camelia_> has joined #ccm
+21:48 &lt;vshivam> has joined #ccm
+22:02 &lt;kushalk124> has joined #ccm
+23:32 &lt;kushalk124> has joined #ccm
+23:37 &lt;froggy> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130422</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>d6ed7e97-2f34-4106-85f2-0e6cb8f10735</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

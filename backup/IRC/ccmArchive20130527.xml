@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130527</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1369630244000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1369703493000</date>
+  <contentUpdateDate>1369703493000</contentUpdateDate>
+  <version>1.93</version>
+  <title>IRC Archive for channel #ccm on 27 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #ccm
+03:32 &lt;qwebirc15871> has joined #ccm
+05:30 &lt;kushalkhandelwal> has joined #ccm
+07:26 &lt;krinye> has joined #ccm
+08:12 &lt;ravigarg27> has joined #ccm
+08:39 &lt;sdumitriu> Hey ravigarg27
+08:40 &lt;ravigarg27> Hi
+08:40 &lt;sdumitriu> Feeling lucky?
+08:40 &lt;ravigarg27> well 27 has always been lucky for me
+08:40 &lt;ravigarg27> :P
+10:16 &lt;krinye> has joined #ccm
+10:17 &lt;sdumitriu> has joined #ccm
+10:24 &lt;sdumitriu> has joined #ccm
+10:55 &lt;krinye> hi guys
+11:06 &lt;sdumitriu1> has joined #ccm
+11:07 &lt;sdumitriu1&gt; Hi krinye
+12:11 &lt;ravigarg27> has joined #ccm
+13:24 &lt;ravigarg27> has joined #ccm
+13:27 &lt;sdumitriu1> Hey ravigarg27
+13:27 &lt;sdumitriu1> Want to improve even more the similarity function?
+13:27 &lt;ravigarg27> yeah sure
+13:28 &lt;sdumitriu1> OK, this time I won't give you any hints, you have to find the solution yourself
+13:28 &lt;ravigarg27> yeah ok
+13:28 &lt;sdumitriu1> The goal is to support matches even if the words are reversed
+13:29 &lt;sdumitriu1> For example right now it matches "Mental retardation" to the equivalent synonym for Intellectual Disability
+13:29 &lt;sdumitriu1> But it should also match "Retardation, mental" to the same synonym
+13:30 &lt;ravigarg27> ok got that
+13:30 &lt;ravigarg27> will start soon
+13:30 &lt;sdumitriu1> So, the new scoring method should ignore puctuation, and it should support swapping words
+13:30 &lt;sdumitriu1> How do you do that?
+13:31 &lt;ravigarg27> umm will have to think about that
+14:07 &lt;ravigarg27> hey sdumitrui1, may I ask how many actually did got selected?
+14:14 &lt;sdumitriu1> ravigarg27: 5
+14:15 &lt;ravigarg27> ok nice substantial increase in slots :)
+14:16 &lt;ravigarg27> but still very limited activity here as you had told
+14:16 &lt;sdumitriu1> Yes...
+14:17 &lt;sdumitriu1> If students aren't active in the Community Bonding period we can easily drop them
+14:19 &lt;sdumitriu1> So, just a few minutes left
+14:20 &lt;sdumitriu1> What do you think? Did you get accepted?
+14:21 &lt;ravigarg27> I am certainly hoping so
+14:22 &lt;ravigarg27> but there is one thing certain even if I dont I will still go ahead with the project
+14:22 &lt;ravigarg27> I have learnt a lot in this build and want to keep learning
+14:22 &lt;ravigarg27> :)
+14:23 &lt;sdumitriu1> Oh, now you're saying...
+14:24 &lt;ravigarg27> does that mean I am in :P
+14:24 &lt;sdumitriu1> No, that's a secret
+14:24 &lt;sdumitriu1> And you're not allowed to know it
+14:25 &lt;ravigarg27> come on 33 minutes more I guess
+14:35 &lt;ravigarg27> hey also I was wondering if we can use tf-idf scoring along with the present algorithm to find the best match
+14:36 &lt;sdumitriu1> For matching synonyms?
+14:36 &lt;ravigarg27> yeah will that be feasible
+14:36 &lt;sdumitriu1> I think that's a bit too much
+14:37 &lt;sdumitriu1> We could, in theory, just ask Solr to tell us what matched, but that's a bit harder now, it requires reconfiguring the Solr core
+14:37 &lt;ravigarg27> ohh ok
+14:53 &lt;ravigarg27> woohooo
+14:53 &lt;ravigarg27> got the mail
+14:53 &lt;ravigarg27> :D
+14:53 &lt;ravigarg27> thanx sdumitrui1
+14:54 &lt;ravigarg27> happiest day of my life till now
+14:54 &lt;ravigarg27> :)
+14:54 &lt;sdumitriu1> What, already?
+14:54 &lt;ravigarg27> yup
+14:54 &lt;sdumitriu1> Congratulations!
+14:54 &lt;ravigarg27> :D :D
+14:54 &lt;BogdanVancea> has joined #ccm
+14:55 &lt;BogdanVancea> hello everyone :)
+14:55 &lt;sdumitriu1> Hey BogdanVancea
+14:55 &lt;ravigarg27> thanx a lot captian
+14:55 &lt;sdumitriu1> Congratulations
+14:55 &lt;BogdanVancea> thanks :D
+14:55 &lt;BogdanVancea> so happy :D
+14:55 &lt;ravigarg27> congrats BogdanVancea :)
+14:55 &lt;marta> congrats guys :)
+14:55 &lt;BogdanVancea> grats ravi
+14:56 &lt;BogdanVancea> congrats to you too! :D
+14:56 &lt;ravigarg27> thanx mate :)
+14:58 &lt;BogdanVancea> how is everyone? :)
+14:58 &lt;sdumitriu1> Busy writing emails
+14:58 &lt;BogdanVancea> I see
+14:59 &lt;ravigarg27> marta, thank you very much for your support and guidance
+14:59 &lt;ravigarg27> :D
+14:59 &lt;marta> it was my pleasure, and we'll be talking a lot more from now on
+15:00 &lt;ravigarg27> hehe sure
+15:00 &lt;marta> long scary email with instructions coming soon :)
+15:00 &lt;BogdanVancea> I'm going to receive one of those as well, right?
+15:00 &lt;BogdanVancea> ;))
+15:01 &lt;marta> just joking, it's not that long
+15:01 &lt;ravigarg27> hehe
+15:01 &lt;marta> BogdanVancea: yep, you too
+15:02 &lt;BogdanVancea> yay
+19:20 &lt;marta> has joined #ccm
+19:36 &lt;sdumitriu> has joined #ccm
+21:11 &lt;kushalkhandelwal> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130527</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>332c0157-98ff-4b09-9fed-7c5da9ffd23e</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

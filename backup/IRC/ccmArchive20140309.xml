@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140309</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1394342733000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1394417391000</date>
+  <contentUpdateDate>1394417391000</contentUpdateDate>
+  <version>1.27</version>
+  <title>IRC Archive for channel #ccm on 09 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;raianknight> has joined #ccm
+00:32 &lt;Guest38811> has joined #ccm
+00:40 &lt;kartik_bawa> has joined #ccm
+00:47 &lt;raianknight> has left #ccm
+00:47 &lt;raianknight> has joined #ccm
+01:53 &lt;SayAsh> has joined #ccm
+03:24 &lt;kartik_bawa> has joined #ccm
+04:41 &lt;SayAsh> has joined #ccm
+05:29 &lt;raianknight> has joined #ccm
+05:31 &lt;raianknight> Hi, could anybody answer to me about the following project idea: "Development of machine learning methods for modeling the evolution of tumors" ? I didn't find any google group connected with your project ideas, only e-mails are presented
+05:35 &lt;raianknight> Does this project idea concern to one of your existing projects? In other words, is there some basic application for development such machine learning methods?
+05:43 &lt;raianknight> Also, if you think that email is more convenient way to contact each other, you may write to leontev.petr@gmail.com
+06:34 &lt;raianknight> has left #ccm
+06:34 &lt;raianknight> has joined #ccm
+06:35 &lt;raianknight> has joined #ccm
+10:31 &lt;IonelPopescu> has joined #ccm
+10:38 &lt;SayAsh> has joined #ccm
+10:46 &lt;ologn13> has joined #ccm
+10:52 &lt;ologn13> Hello Everyone ! I am a Junior CS undergraduate. While looking at projects the organisation has proposed, I found one of them interesting , i.e. "Development of machine learning methods for modeling the evolution of tumors". Can someone give more description of the project please ?
+11:34 &lt;kartik_bawa> has joined #ccm
+11:47 &lt;amdor> has joined #ccm
+14:22 &lt;ologn13> has joined #ccm
+14:46 &lt;ushakov> has joined #ccm
+15:22 &lt;IonelPopescu> has joined #ccm
+19:28 &lt;IonelPopescu> has joined #ccm
+20:40 &lt;blink2> has joined #ccm
+22:09 &lt;qubitex> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20140309</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>56728c9e-819e-4a4b-a3d1-7145024b1dda</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

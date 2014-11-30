@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140203</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1391409277000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1391468897000</date>
+  <contentUpdateDate>1391468897000</contentUpdateDate>
+  <version>1.44</version>
+  <title>IRC Archive for channel #phenotips on 03 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #phenotips
+04:24 &lt;16WAALOBK> has joined #phenotips
+04:25 &lt;sdumitriu> is now known as &lt;Guest9004>
+08:41 &lt;Guest9004> has quit
+08:46 &lt;sdumitriu> has joined #phenotips
+10:18 &lt;akats> has joined #phenotips
+10:29 &lt;sdumitriu> Hey akats
+10:29 &lt;sdumitriu> We'll be there shortly
+10:38 &lt;akats> has quit
+10:38 &lt;akats> has joined #phenotips
+10:40 &lt;akats> Morning! I'll see you in a bit then.
+10:57 &lt;16WAALOBK> has quit
+10:57 &lt;sdumitriu> has quit
+10:57 &lt;akats> has quit
+11:08 &lt;akats> has joined #phenotips
+11:08 &lt;sdumitriu> has joined #phenotips
+11:33 &lt;akats> has quit
+11:58 &lt;marta__> has joined #phenotips
+11:58 &lt;23LAA3EZR> has joined #phenotips
+11:58 &lt;23LAA3EZR> has quit
+11:58 &lt;marta__> has quit
+11:58 &lt;23LAA3PTC> has joined #phenotips
+11:58 &lt;marta__> has joined #phenotips
+12:02 &lt;23LAA3PTC> has quit
+12:02 &lt;sdumitriu1> has joined #phenotips
+12:11 &lt;akats> has joined #phenotips
+12:36 &lt;akats> How do I get an xwiki document from reference. This doesnt seem to work XWikiDocument(documentReference)
+12:40 &lt;sdumitriu1> Two ways
+12:40 &lt;sdumitriu1> 1. Using components: @Inject a DocumentAccessBridge and use getDocument(reference) from it, cast the result to XWikiDocument
+12:41 &lt;sdumitriu1> 2. The old way, get hold of an XWikiContext and an XWiki object and use xwiki.getDocument(reference, context)
+12:42 &lt;akats> AccessBridge it is.
+12:43 &lt;akats> Thank you
+14:37 &lt;akats> has quit
+15:26 &lt;akats> has joined #phenotips
+15:28 &lt;akats> I pushed a rough draft of what patient-data looks like now. The basic structure is in place though.
+15:28 &lt;akats> https://github.com/soLEED/phenotips-1/compare/issue-JSON?expand=1
+16:16 &lt;sdumitriu1> akats: Looking
+16:31 &lt;akats> Also me and Andrey think that we should talk to you about how we should continue
+16:32 &lt;sdumitriu1> OK
+16:56 &lt;sdumitriu1> akats: Done with the review for now
+16:58 &lt;akats> Already looking at it. Thank you.
+17:04 &lt;sdumitriu> has quit
+17:06 &lt;sdumitriu> has joined #phenotips
+18:08 &lt;akats> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140203</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>361f0351-9921-4c35-a4f7-4c7dbff7441e</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

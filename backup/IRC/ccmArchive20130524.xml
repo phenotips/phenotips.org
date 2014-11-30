@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130524</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1369378691000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1369420030000</date>
+  <contentUpdateDate>1369420030000</contentUpdateDate>
+  <version>1.72</version>
+  <title>IRC Archive for channel #ccm on 24 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalkhandelwal> has joined #ccm
+10:18 &lt;sdumitriu1> has joined #ccm
+10:36 &lt;ravigarg27> has joined #ccm
+10:52 &lt;sdumitriu1> Hey Ravi
+10:53 &lt;ravigarg27> Hi
+10:54 &lt;ravigarg27> I am working on that
+10:54 &lt;ravigarg27> a small bit of time more
+11:38 &lt;ravigarg27> hey sdumitriu1, http://pastebin.com/pAqdzjFU pls have a look
+11:39 &lt;sdumitriu1> Looking
+11:39 &lt;sdumitriu1> Something seems wrong, let me check
+11:47 &lt;sdumitriu1> OK, so the alignment algorithms are the opposite of edit distance algorithm
+11:47 &lt;sdumitriu1> The purpose is to have the highest score possible
+11:48 &lt;sdumitriu1> So you should reward with positive scores good matches, and penalize mismatches
+11:48 &lt;ravigarg27> ohh
+11:48 &lt;sdumitriu1> And after that, instead of selecting the synonym with the lowest score, select the one with the highest score
+11:50 &lt;sdumitriu1> Plus, the edges are initialized with 0
+11:50 &lt;sdumitriu1> Hm, the Wikipedia article isn't that good, it's for partial alignments
+11:51 &lt;sdumitriu1> http://www.bioinformatics.wsu.edu/bioinfo_course/notes/Lecture6.pdf
+11:52 &lt;sdumitriu1> Ah, again partial alignment
+11:52 &lt;sdumitriu1> So, just remove the "0" from the list of values to chose from in that Max
+11:53 &lt;sdumitriu1> The edges are the only ones that are initialized with 0
+11:53 &lt;ravigarg27> ok, and I will change the penalty values too
+11:54 &lt;ravigarg27> as given in the link
+11:54 &lt;sdumitriu1> Yep
+11:55 &lt;sdumitriu1> Match positive, mismatch/gap negative
+11:55 &lt;sdumitriu1> And now you learn bioinformatics :)
+11:55 &lt;ravigarg27> hehe true
+11:55 &lt;sdumitriu1> Smith-Waterman is one of the fundamental algorithms
+12:06 &lt;ravigarg27> ok made the changes, should I send a commit with original file or just send you this as separate code?
+12:09 &lt;sdumitriu1> Show me once more, then do a pull request
+12:09 &lt;ravigarg27> ok, http://pastebin.com/GKW7iER7
+12:10 &lt;sdumitriu1> if (n == 0) {                         return m;                 }                 if (m == 0) {                         return n;                 }
+12:10 &lt;sdumitriu1> This is still wrong
+12:10 &lt;ravigarg27> I will remove that
+12:24 &lt;ravigarg27> hii ccm_marta,
+12:25 &lt;ccm_marta> hey ravigarg27
+12:25 &lt;ccm_marta> i see you're learning alignment methods :)
+12:28 &lt;ravigarg27> yeah a bit of bioinformatics :)
+12:32 &lt;ravigarg27_> has joined #ccm
+12:57 &lt;sdumitriu1> ravigarg27: Sorry, a bit busy
+12:57 &lt;ravigarg27> yeah np,
+12:57 &lt;sdumitriu1> I think it would be better to start from scratch with a clean S-W implementation
+12:57 &lt;sdumitriu1> Trying to adapt the old code made a mess out of it
+12:58 &lt;sdumitriu1> It shouldn't take more than 20-30 lines of code in total
+12:59 &lt;ravigarg27> yeah ok, there were a couple of more mistakes when I tried running it
+12:59 &lt;ravigarg27> will let you know when it gives  proper result
+13:50 &lt;ravigarg27> has joined #ccm
+14:16 &lt;kushalkhandelwal> has joined #ccm
+14:20 &lt;xwiki_sdumitriu> Hey kushalkhandelwal
+14:20 &lt;xwiki_sdumitriu> How's it going?
+14:20 &lt;kushalkhandelwal> Hey
+14:21 &lt;kushalkhandelwal> In new city , looking for acco , have to move out of my temp acco by sunday
+14:21 &lt;kushalkhandelwal> Was a tiring day , long walks in heat :
+14:21 &lt;kushalkhandelwal> :\
+14:21 &lt;xwiki_sdumitriu> Oh, that's nasty
+14:21 &lt;kushalkhandelwal> Rest going good ?
+14:21 &lt;xwiki_sdumitriu> I don't like looking for places
+14:21 &lt;kushalkhandelwal> I know
+14:21 &lt;kushalkhandelwal> It is difficult in a city where I am
+14:21 &lt;xwiki_sdumitriu> Here it's almost freezing
+14:22 &lt;kushalkhandelwal> No one ready to give for 2 months for summer
+14:22 &lt;kushalkhandelwal> Oh nice
+14:22 &lt;kushalkhandelwal> Winters are better
+14:22 &lt;kushalkhandelwal> so org meeting today ?
+14:22 &lt;kushalkhandelwal> what's up with "xwiki_" ?
+14:23 &lt;kushalkhandelwal> And acco is expensive in mumbai :\ Hate the place
+14:23 &lt;kushalkhandelwal> Oh org admins have to append org name in front for meeting
+14:23 &lt;kushalkhandelwal> Nice
+14:24 &lt;xwiki_sdumitriu> It's required for the meeting on #gsoc
+14:25 &lt;kushalkhandelwal> Done with the meeting ?
+14:26 &lt;xwiki_sdumitriu> No, it starts in 33 minutes
+14:27 &lt;kushalkhandelwal> Oh :)</content>
+  <object>
+    <name>IRC.ccmArchive20130524</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f7c0f15b-597f-4654-b40b-1e7e06681cf4</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

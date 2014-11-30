@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130615</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1371275675000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1371321847000</date>
+  <contentUpdateDate>1371321847000</contentUpdateDate>
+  <version>1.37</version>
+  <title>IRC Archive for channel #medsavant on 15 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #medsavant
+12:28 &lt;bvancea> has joined #medsavant
+12:33 &lt;bvancea> has joined #medsavant
+12:40 &lt;sdumitriu> Hey bvancea
+12:40 &lt;sdumitriu> How's it going?
+12:41 &lt;bvancea> hello sdumitriu
+12:41 &lt;bvancea> pretty good
+12:41 &lt;bvancea> just got my internet back
+12:41 &lt;bvancea> :D
+12:41 &lt;sdumitriu> Cool
+12:41 &lt;bvancea> I'm looking for different sized .vcf files
+12:41 &lt;bvancea> to index
+12:41 &lt;bvancea> :)
+12:41 &lt;bvancea> and how are you?
+12:42 &lt;sdumitriu> Good
+14:04 &lt;bvancea> nice
+14:04 &lt;bvancea&gt; did you apply it to all the files?
+14:06 &lt;sdumitriu> No
+14:06 &lt;sdumitriu> Just a package
+14:06 &lt;sdumitriu> I'm working on a NetBeans codestyle configuration file
+14:07 &lt;bvancea> ah, I see
+14:22 &lt;bvancea> did you do any solr performance testing on phenotips?
+14:22 &lt;bvancea> I've only tested using Solr meter, not sure what the best approaches are
+14:38 &lt;sdumitriu> Nope, but we don't have that much data yet to require performance testing
+14:39 &lt;sdumitriu> But it works fast enough for what we need
+14:39 &lt;sdumitriu> I mean sure, we had to add a cache for term access
+14:40 &lt;sdumitriu> But queries return in under 10ms usually
+14:41 &lt;bvancea> ah, I see
+14:41 &lt;bvancea> 10ms without the cache?
+14:41 &lt;bvancea> or with the cache?
+14:41 &lt;sdumitriu> Yes
+14:41 &lt;sdumitriu> WIthout
+14:41 &lt;bvancea> nice
+14:41 &lt;sdumitriu> It's queries
+14:43 &lt;bvancea> I've tested a bit on the 200k documents index
+14:43 &lt;bvancea> there's spikes of up to 2s
+14:44 &lt;bvancea> when searching for 2 different terms, dna_id and id</content>
+  <object>
+    <name>IRC.medsavantArchive20130615</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>f375b855-17cf-4603-9bde-2a75dd7f66dc</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

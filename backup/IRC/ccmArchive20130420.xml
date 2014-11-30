@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130420</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1366438447000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1366505339000</date>
+  <contentUpdateDate>1366505339000</contentUpdateDate>
+  <version>1.142</version>
+  <title>IRC Archive for channel #ccm on 20 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;Naman> has joined #ccm
+02:16 &lt;UCC> has joined #ccm
+02:16 &lt;Naman> @sdumitriu, Thank you for your support, I have the build is now working fine on my Linux machine..
+02:28 &lt;Naman> has left #ccm
+02:29 &lt;Naman__> has joined #ccm
+03:30 &lt;ravigarg27> has joined #ccm
+06:02 &lt;kushalkhandelwal> has joined #ccm
+06:07 &lt;kushalkhandelwal> has joined #ccm
+06:15 &lt;kushalkhandelwal> has joined #ccm
+06:20 &lt;kushalkhandelwal> has joined #ccm
+06:29 &lt;camelia_> has joined #ccm
+06:50 &lt;kushalkhandelwal> has joined #ccm
+07:06 &lt;camelia_> hello, I work on db lists and I'd like to kindly ask You in a HQL query after having joined the DBStringListProperty as dbprop  with the BaseObject as obj , how can I access the list items? I feel that there is one more join needed to get to the xwikilistitems....
+07:08 &lt;kushalkhandelwal> sdumitriu, marta hi :)
+07:11 &lt;camelia_> should I obtain them using elements(dbprop) ?
+07:12 &lt;camelia_> sorry , elements(dbprop.list)?
+08:27 &lt;kushalkhandelwal> sdumitriu, der ?
+08:40 &lt;camelia1789> has joined #ccm
+08:44 &lt;sdumitriu> Good morning
+08:53 &lt;vevo> has joined #ccm
+08:57 &lt;camelia1789> hello, I work on db lists and I'd like to kindly ask You in a HQL query after having joined the DBStringListProperty as dbprop  with the BaseObject as obj , how can I access the list items? Is it the elements(dbprop.list) that I should use?
+09:00 &lt;sdumitriu> In the from part, use:
+09:01 &lt;sdumitriu> DBStringListProperty as dbprop join dbprop.list as propvalue
+09:01 &lt;sdumitriu> Now propvalue is a value from the list
+09:05 &lt;kushalkhandelwal> sdumitriu, Hey
+09:05 &lt;sdumitriu> Hey kushalkhandelwal
+09:05 &lt;sdumitriu> Still fighting with that bug?
+09:06 &lt;kushalkhandelwal> Couldn't give that much of time
+09:06 &lt;camelia1789> Thank You! I'll try it this way then.
+09:06 &lt;kushalkhandelwal> but still trying to figure it out
+09:06 &lt;kushalkhandelwal> Finally over with project submission
+09:10 &lt;kushalkhandelwal> sdumitriu,
+09:22 &lt;kushalkhandelwal> has joined #ccm
+09:45 &lt;kushalkhandelwal> has joined #ccm
+09:48 &lt;kushalkhandelwal> has joined #ccm
+09:53 &lt;kushalkhandelwal> has joined #ccm
+09:57 &lt;kushalkhandelwal> has joined #ccm
+10:03 &lt;kushalkhandelwal> has joined #ccm
+10:12 &lt;kushalkhandelwal> has joined #ccm
+11:56 &lt;camelia1789> I managed to find smth but I'm not sure it's correct: are the items in omim_id numbers? Like 230350, 300558??
+11:58 &lt;sdumitriu> Yes
+11:59 &lt;camelia1789> Great then! And how can they be decoded into strings?
+11:59 &lt;camelia1789> I mean their title/ short description?
+12:00 &lt;sdumitriu> Where are you looking? What type of object do you have?
+12:00 &lt;kushalkhandelwal> has joined #ccm
+12:01 &lt;camelia1789> I made a query that finds all patients' disorders. Just for testing purposes. And now it's all numbers.
+12:01 &lt;sdumitriu> Aha
+12:02 &lt;camelia1789> Names and numbers, more precisely
+12:02 &lt;camelia1789> names of patients and numbers corresponding to their disorders
+12:03 &lt;sdumitriu> Well, the OMIM is indexed in Solr as well
+12:03 &lt;sdumitriu> So you'd do:
+12:04 &lt;sdumitriu> $services.omim.get('230350')
+12:04 &lt;sdumitriu> This gives you the Sorl Document for that OMIM term
+12:04 &lt;sdumitriu> And then you can do:
+12:04 &lt;camelia1789> I did everything in the Java component
+12:04 &lt;sdumitriu> $services.omim.get('230350').name to get the name
+12:06 &lt;sdumitriu> Ah, Java
+12:06 &lt;sdumitriu> OK
+12:06 &lt;sdumitriu> Then you get hold of the OMIM component with
+12:08 &lt;sdumitriu> @Inject @Named("omim") private ScriptService omimScriptService;
+12:08 &lt;sdumitriu> Unfortunately, you'd have to cast it to (OmimScriptService)
+12:09 &lt;sdumitriu> I'm working on improving the Solr components
+12:10 &lt;camelia1789> Thank You! I'll try Your suggestion.
+12:31 &lt;kushalkhandelwal> has joined #ccm
+12:36 &lt;kushalkhandelwal> has joined #ccm
+12:40 &lt;kushalkhandelwal> has joined #ccm
+12:44 &lt;kushalkhandelwal> has joined #ccm
+12:48 &lt;kushalkhandelwal> has joined #ccm
+12:53 &lt;kushalkhandelwal> has joined #ccm
+12:57 &lt;kushalkhandelwal> has joined #ccm
+13:04 &lt;kushalkhandelwal> has joined #ccm
+13:08 &lt;kushalkhandelwal> has joined #ccm
+13:11 &lt;kushalkhandelwal> has joined #ccm
+13:15 &lt;kushalkhandelwal> has joined #ccm
+13:19 &lt;kushalkhandelwal> has joined #ccm
+13:23 &lt;kushalkhandelwal> has joined #ccm
+13:28 &lt;kushalkhandelwal> has joined #ccm
+13:37 &lt;kushalkhandelwal> has joined #ccm
+13:41 &lt;kushalkhandelwal> has joined #ccm
+13:48 &lt;kushalkhandelwal> has joined #ccm
+13:53 &lt;kushalkhandelwal> has joined #ccm
+14:02 &lt;kushalkhandelwal> has joined #ccm
+14:05 &lt;kushalkhandelwal> has joined #ccm
+14:16 &lt;kushalkhandelwal> has joined #ccm
+14:34 &lt;kushalkhandelwal> has joined #ccm
+14:36 &lt;camelia1789> Thank You, good evening !
+14:38 &lt;kushalkhandelwal> has joined #ccm
+14:40 &lt;kushalkhandelwal> Hey sdumitriu
+14:44 &lt;kushalkhandelwal> has joined #ccm
+14:48 &lt;kushalkhandelwal> has joined #ccm
+14:51 &lt;kushalkhandelwal> sdumitriu, there ?
+14:59 &lt;kushalkhandelwal> has joined #ccm
+15:03 &lt;sdumitriu> kushalkhandelwal: Yep
+15:03 &lt;sdumitriu> Cooking
+15:03 &lt;kushalkhandelwal> aahh nice :)
+15:06 &lt;kushalkhandelwal> has joined #ccm
+15:09 &lt;kushalkhandelwal> has joined #ccm
+15:15 &lt;kushalkhandelwal> has joined #ccm
+15:18 &lt;kushalkhandelwal> has joined #ccm
+15:20 &lt;kushalkhandelwal> sdumitriu, I am not able to figure it out where it is assering the text box
+15:20 &lt;kushalkhandelwal> it is something with displayifnotempty macro
+15:20 &lt;kushalkhandelwal> also this is defined twice in the file
+15:20 &lt;sdumitriu> What?
+15:20 &lt;kushalkhandelwal> That bug
+15:21 &lt;kushalkhandelwal> How are we getting that WYSIWYG editor twice
+15:21 &lt;kushalkhandelwal> and
+15:21 &lt;kushalkhandelwal> #macro (__displayIfNotEmpty $propName)
+15:21 &lt;kushalkhandelwal> #end
+15:21 &lt;kushalkhandelwal> this is twice in the file
+15:23 &lt;kushalkhandelwal> has joined #ccm
+15:23 &lt;qwebirc36916> has joined #ccm
+15:24 &lt;sdumitriu> Hold on
+15:26 &lt;kushalkhandelwal> ok
+15:28 &lt;kushalkhandelwal> has joined #ccm
+15:34 &lt;sdumitriu> Back
+15:35 &lt;sdumitriu> So
+15:36 &lt;sdumitriu> Are you sure that the displayIfNotEmpty macro is defined twice?
+15:36 &lt;sdumitriu> I only see it once
+16:00 &lt;froggy> has joined #ccm
+19:46 &lt;kushalkhandelwal> sdumitriu, there ?
+19:46 &lt;kushalkhandelwal> sorry slept... .Was so sleepy I slept on my table
+19:47 &lt;kushalkhandelwal> ?
+19:50 &lt;qwebirc34782> has joined #ccm
+19:58 &lt;sdumitriu> Yep
+20:01 &lt;sdumitriu> You should rest
+20:28 &lt;kushalkhandelwal> Ahh its ok
+20:28 &lt;kushalkhandelwal> I want to solve this bug first
+20:28 &lt;kushalkhandelwal> I saw that micro twice
+20:30 &lt;kushalkhandelwal> line 24 and 53
+20:30 &lt;kushalkhandelwal> I migh have made copy whn editing the file
+20:32 &lt;kushalkhandelwal> I think I made a cop twice
+20:32 &lt;kushalkhandelwal> how do I generate the file without doing  a build ?
+20:33 &lt;kushalk124> sdumitriu:
+20:47 &lt;sdumitriu> kushalk124: Here's a trick
+20:47 &lt;sdumitriu> Click on the Administration link on the upper left menu
+20:47 &lt;sdumitriu> Then from the drop down menu on the right, select Wiki administration
+20:48 &lt;sdumitriu> Click on Import from the left menu
+20:48 &lt;sdumitriu> Upload phenotips/resources/ui/target/phenotips-ui-1.0-SNAPSHOT.xar
+20:48 &lt;sdumitriu> When it's done, click on the file name
+20:48 &lt;sdumitriu> And then you can select which documents to import</content>
+  <object>
+    <name>IRC.ccmArchive20130420</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>a40ba84a-ec30-4573-82b2-2479e3dab6c2</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

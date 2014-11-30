@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130412</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1365742198000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1365824529000</date>
+  <contentUpdateDate>1365824529000</contentUpdateDate>
+  <version>1.116</version>
+  <title>IRC Archive for channel #ccm on 12 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;kushalkhandelwal> has joined #ccm
+03:04 &lt;kushalkhandelwal> has joined #ccm
+03:10 &lt;kushalkhandelwal> has joined #ccm
+03:17 &lt;kushalkhandelwal> has joined #ccm
+03:28 &lt;kushalkhandelwal> has joined #ccm
+03:38 &lt;kushalkhandelwal> has joined #ccm
+03:45 &lt;kushalkhandelwal> has joined #ccm
+03:49 &lt;kushalkhandelwal> has joined #ccm
+03:54 &lt;kushalkhandelwal> has joined #ccm
+03:59 &lt;kushalkhandelwal> has joined #ccm
+04:04 &lt;kushalkhandelwal> has joined #ccm
+04:12 &lt;kushalkhandelwal> has joined #ccm
+04:17 &lt;kushalkhandelwal> has joined #ccm
+04:21 &lt;kushalkhandelwal> has joined #ccm
+04:25 &lt;kushalkhandelwal> has joined #ccm
+04:28 &lt;kushalkhandelwal> has joined #ccm
+04:36 &lt;kushalkhandelwal> has joined #ccm
+04:40 &lt;kushalkhandelwal> has joined #ccm
+04:51 &lt;kushalkhandelwal> has joined #ccm
+04:58 &lt;kushalkhandelwal> has joined #ccm
+05:04 &lt;kushalkhandelwal> has joined #ccm
+05:13 &lt;kushalkhandelwal> has joined #ccm
+05:21 &lt;kushalkhandelwal> has joined #ccm
+05:32 &lt;kushalkhandelwal> has joined #ccm
+05:49 &lt;vshivam> has joined #ccm
+05:49 &lt;kushalkhandelwal> has joined #ccm
+05:56 &lt;vshivam> has joined #ccm
+05:56 &lt;kushalkhandelwal> has joined #ccm
+06:09 &lt;kushalkhandelwal> has joined #ccm
+06:17 &lt;kushalkhandelwal> has joined #ccm
+06:35 &lt;kushalkhandelwal> has joined #ccm
+06:40 &lt;kushalkhandelwal> has joined #ccm
+06:52 &lt;kushalkhandelwal> has joined #ccm
+06:59 &lt;kushalkhandelwal> has joined #ccm
+07:11 &lt;kushalkhandelwal> has joined #ccm
+07:59 &lt;kushalkhandelwal> has joined #ccm
+09:11 &lt;kushalkhandelwal> has joined #ccm
+09:38 &lt;kushalkhandelwal> has joined #ccm
+09:45 &lt;kushalkhandelwal> has joined #ccm
+09:54 &lt;kushalkhandelwal> has joined #ccm
+09:58 &lt;kushalkhandelwal> has joined #ccm
+10:02 &lt;kushalkhandelwal> has joined #ccm
+10:05 &lt;kushalkhandelwal> has joined #ccm
+10:09 &lt;kushalkhandelwal> has joined #ccm
+10:16 &lt;kushalkhandelwal> has joined #ccm
+10:20 &lt;kushalkhandelwal> has joined #ccm
+10:24 &lt;kushalkhandelwal> has joined #ccm
+10:26 &lt;ravigarg27> has joined #ccm
+10:32 &lt;kushalkhandelwal> has joined #ccm
+10:37 &lt;kushalkhandelwal> has joined #ccm
+10:42 &lt;kushalkhandelwal> has joined #ccm
+12:07 &lt;ravi> has joined #ccm
+12:16 &lt;ravi_> has joined #ccm
+12:21 &lt;ravi__> has joined #ccm
+12:24 &lt;ravigarg27> has joined #ccm
+12:48 &lt;ravi> has joined #ccm
+12:48 &lt;ravi_> has joined #ccm
+12:48 &lt;ravigarg27> has joined #ccm
+12:54 &lt;ravigarg> has joined #ccm
+13:04 &lt;ravigarg> hey!
+13:07 &lt;ravigarg> i had some queries regarding project idea Extraction of ontology term from free form clinical text
+13:07 &lt;ravigarg> can some one please help
+13:45 &lt;ravigarg> has joined #ccm
+13:50 &lt;ravigarg> has joined #ccm
+13:54 &lt;ravigarg> has joined #ccm
+13:58 &lt;ravigarg> has joined #ccm
+13:58 &lt;kushalkhandelwal> has joined #ccm
+14:02 &lt;ravigarg> has joined #ccm
+14:02 &lt;kushalkhandelwal> has joined #ccm
+14:06 &lt;ravigarg> has joined #ccm
+14:07 &lt;kushalkhandelwal> has joined #ccm
+14:10 &lt;ravigarg> has joined #ccm
+14:10 &lt;kushalkhandelwal> has joined #ccm
+14:14 &lt;ravigarg> has joined #ccm
+14:14 &lt;kushalkhandelwal> has joined #ccm
+14:18 &lt;ravigarg> has joined #ccm
+14:19 &lt;kushalkhandelwal> has joined #ccm
+14:22 &lt;ravigarg> has joined #ccm
+14:23 &lt;kushalkhandelwal> has joined #ccm
+14:26 &lt;ravigarg> has joined #ccm
+14:27 &lt;kushalkhandelwal> has joined #ccm
+14:30 &lt;ravigarg> has joined #ccm
+14:31 &lt;kushalkhandelwal> has joined #ccm
+14:35 &lt;ravigarg> has joined #ccm
+14:35 &lt;kushalkhandelwal> has joined #ccm
+14:38 &lt;ravigarg> has joined #ccm
+14:39 &lt;kushalkhandelwal> has joined #ccm
+14:42 &lt;ravigarg> has joined #ccm
+14:43 &lt;kushalkhandelwal> has joined #ccm
+14:46 &lt;kushalkhandelwal> has joined #ccm
+14:46 &lt;ravigarg> has joined #ccm
+14:50 &lt;ravigarg> has joined #ccm
+14:51 &lt;kushalkhandelwal> has joined #ccm
+14:55 &lt;kushalkhandelwal> has joined #ccm
+14:55 &lt;ravigarg> has joined #ccm
+14:59 &lt;ravigarg> has joined #ccm
+14:59 &lt;kushalkhandelwal> has joined #ccm
+15:03 &lt;ravigarg> has joined #ccm
+15:04 &lt;kushalkhandelwal> has joined #ccm
+15:07 &lt;ravigarg> has joined #ccm
+15:08 &lt;kushalkhandelwal> has joined #ccm
+15:12 &lt;kushalkhandelwal> has joined #ccm
+15:16 &lt;kushalkhandelwal> has joined #ccm
+15:20 &lt;kushalkhandelwal> has joined #ccm
+15:24 &lt;kushalkhandelwal> has joined #ccm
+15:28 &lt;kushalkhandelwal> has joined #ccm
+15:32 &lt;kushalkhandelwal> has joined #ccm
+15:36 &lt;kushalkhandelwal> has joined #ccm
+15:41 &lt;kushalkhandelwal> has joined #ccm
+15:45 &lt;kushalkhandelwal> has joined #ccm
+15:47 &lt;ravigarg27> has joined #ccm
+15:51 &lt;kushalkhandelwal> has joined #ccm
+18:06 &lt;lacir> has joined #ccm
+20:24 &lt;selvam1991> has joined #ccm
+23:08 &lt;sdumitriu> has joined #ccm
+23:42 &lt;ravigarg> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130412</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>64a947ca-3a4f-450b-aa3e-bfc0b116993c</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

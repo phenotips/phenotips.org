@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140319</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395203935000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395281589000</date>
+  <contentUpdateDate>1395281589000</contentUpdateDate>
+  <version>1.109</version>
+  <title>IRC Archive for channel #ccm on 19 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #ccm
+00:39 &lt;sdumitriu> Hey groundnuty
+00:40 &lt;sdumitriu> Those projects are fairly popular, so I guess you'll have to do your best to impress the mentors
+00:42 &lt;sdumitriu> A detailed (and correct) architecture shows that you've given serious though to the problem, you understand what needs to be done, and have a good approach to it
+00:44 &lt;sdumitriu> A proper timeline shows that you have experience with developing large projects and understand the project development lifecycle, you have experience with the usual roadblocks, etc
+00:44 &lt;sdumitriu> ruthgrace: Did you set a root password?
+00:50 &lt;ruthgrace> no, not for mysql
+00:51 &lt;ruthgrace> @sdumitriu, if I don't have experience developing large projects, am I very unlikely to get in? Asha's project is the only one that looks really cool to me.
+00:52 &lt;woohee> has left #ccm
+00:54 &lt;sdumitriu> ruthgrace: You don't need to create databases outside MedSavant
+00:54 &lt;sdumitriu> Just start the server, then you can create a new database from within the client login screen
+00:54 &lt;sdumitriu> It's OK if you don't have experience with big projects
+00:54 &lt;ruthgrace> So I can give it any name I want?
+00:54 &lt;sdumitriu> Yes
+00:55 &lt;ruthgrace> thanks :) I hope Asha and the rest of the mentors reviewing my proposal are OK with it too
+00:55 &lt;sdumitriu> One of the goals of GSoC is to give students the oportunity to learn this
+00:55 &lt;sdumitriu> So it's not a requirement
+00:55 &lt;ruthgrace> That's a relief!
+00:55 &lt;sdumitriu> It's just a plus for projects with a lot of proposals
+00:56 &lt;ruthgrace> hopefully no one applies to Asha's project. :D
+00:56 &lt;ruthgrace> Is the 2-4 student limit for Sick Kids CCM a pretty hard limit?
+00:56 &lt;ruthgrace> Or would you guys be willing to take more students than that?
+00:57 &lt;sdumitriu> It's not a hard limit
+00:58 &lt;sdumitriu> It depends on the combination of students, projects and mentors
+00:58 &lt;sdumitriu> 2-4 was originally set when only MedSavant and PhenoTips were considered
+00:59 &lt;sdumitriu> But now we also have Quaid's 2 projects, Asha's, and Ron's
+00:59 &lt;sdumitriu> So that's 4 more mentors
+00:59 &lt;sdumitriu> But we'll see
+00:59 &lt;ruthgrace> Sounds great !
+00:59 &lt;sdumitriu> Oh, also, the number of slots that Google gives us
+00:59 &lt;ruthgrace> How many is that?
+01:00 &lt;sdumitriu> We don't know
+01:00 &lt;sdumitriu> It's up to them
+01:00 &lt;ruthgrace> I see.
+01:00 &lt;ruthgrace> When  I try to change my root password, I get this:
+01:00 &lt;ruthgrace> sudo mysqladmin -u root password 'ruthspassword' mysqladmin: connect to server at 'localhost' failed error: 'Access denied for user 'root'@'localhost' (using password: NO)'
+01:02 &lt;sdumitriu> It's usually -p
+01:02 &lt;sdumitriu> Not "password"
+01:03 &lt;sdumitriu> And either no space between -p and the password, as in -pruthpassword
+01:03 &lt;sdumitriu> Or no password at all, in which case you'll be promted to enter it
+01:04 &lt;sdumitriu> Oh, wait, you're tryig to set it, not enter it
+01:04 &lt;sdumitriu> Maybe it's already set
+01:04 &lt;ruthgrace> I think it worked
+01:04 &lt;ruthgrace> I typed in
+01:04 &lt;ruthgrace> sudo mysqladmin -u root -p password
+01:04 &lt;ruthgrace> and it prompted me for a new password
+01:04 &lt;ruthgrace> and to confirm it
+01:04 &lt;ruthgrace> well, I'll see if it works with MedSavant in a moment!
+01:10 &lt;ruthgrace> Hmmm, I tried connecting to a server, and got an Array Out of Bounds error
+01:10 &lt;ruthgrace> and a dialog popped up saying that the log in failed
+01:13 &lt;ruthgrace> Do you get this error if you try to make a new database?
+01:14 &lt;ruthgrace> ERROR org.ut.biolab.medsavant.client.view.list.ListView  - Unable to load list.
+01:15 &lt;sdumitriu> I think that error was fixed earlier today
+01:15 &lt;sdumitriu> Try to pull changes and rebuild
+01:24 &lt;ruthgrace> Thank you! It's not having the array out of bounds exception any more. I'm still not able to log in, though
+01:34 &lt;ruthgrace> hey, its a null pointer exception !
+01:34 &lt;ruthgrace> 2014-03-19 01:34:02,438 3552 [AWT-EventQueue-0] INFO  org.ut.biolab.medsavant.client.login.LoginController  - Starting session... java.lang.NullPointerException 	at org.ut.biolab.medsavant.client.login.LoginController.finishLogin(LoginController.java:130)
+01:52 &lt;ruthgrace> Maybe because I didn't open the ports
+02:06 &lt;ruthgrace> No, I think the ports are being used by MedSavant
+02:09 &lt;ruthgrace> Do I need a special user name and password?
+02:09 &lt;ruthgrace> that's different from my root mysql credentials?
+02:09 &lt;ruthgrace> (to log into the MedSavant client)
+02:10 &lt;sdumitriu> Hm, hold on
+02:10 &lt;sdumitriu> Are you using mysql or mysql-ib?
+02:10 &lt;sdumitriu> mysqladmin will set the mysql password
+02:10 &lt;sdumitriu> Those are different things
+02:11 &lt;ruthgrace> oh. ICE is using mysql-ib, right ?
+02:11 &lt;sdumitriu> Different servers running on different ports
+02:11 &lt;sdumitriu> Yes
+02:11 &lt;sdumitriu> Not sure if it has a mysqladmin-ib utility or not...
+02:15 &lt;ruthgrace> there is this:
+02:15 &lt;ruthgrace>  /usr/local/infobright-4.0.7-x86_64/bin/mysql_secure_installation
+02:15 &lt;ruthgrace> that lets you set the root password
+02:23 &lt;sdumitriu> Yes, I used that myself
+02:30 &lt;ruthgrace> I think I had set it before but didn't run sudo updatedb ... I am silly.
+02:31 &lt;ruthgrace> Aw, the log in is still failing, though.
+02:32 &lt;ruthgrace> I tested the ports and was able to echo back and forth from the server/client. Hmm. I'll figure it out later. Thanks sdumitriu! and good night.
+02:37 &lt;Shubham1> has joined #ccm
+02:38 &lt;Shubham1> Hi !
+06:42 &lt;CARAM> has joined #ccm
+06:56 &lt;groundnuty> sdumitriu_[Away]: pity, I hoped that a complicated topic would scare off most of the people
+07:01 &lt;groundnuty> sdumitriu_[Away]: anyway, thank you for your time
+07:22 &lt;SayAsh_> has joined #ccm
+10:43 &lt;punnu> has joined #ccm
+10:44 &lt;nairboon> has joined #ccm
+12:51 &lt;Shubham2> has joined #ccm
+14:54 &lt;Shubham> has joined #ccm
+14:54 &lt;Shubham> Hi !
+15:08 &lt;ruthgrace> has joined #ccm
+15:12 &lt;Shubham> anyone ?
+15:28 &lt;Shubham> has joined #ccm
+15:42 &lt;Shubham> has joined #ccm
+15:55 &lt;sdumitriu> Hi Shubham
+16:06 &lt;Shubham> has joined #ccm
+16:35 &lt;Shubham> has joined #ccm
+16:36 &lt;Shubham> sdumitriu there ?
+16:36 &lt;sdumitriu> Yes
+16:36 &lt;Shubham> I wanted you to have a look at my proposal and suggest some changes that I can make.
+16:37 &lt;Shubham> I dropped a mail to Quaid and Shankar but haven't received any reply yet.
+16:37 &lt;Shubham> BTW this is the first draft.
+16:37 &lt;sdumitriu> Right
+16:51 &lt;ruthgrace> has joined #ccm
+17:06 &lt;ruthgrace> has joined #ccm
+17:13 &lt;Shubham> has joined #ccm
+17:52 &lt;Shubham> has joined #ccm
+19:49 &lt;Shubham> has joined #ccm
+19:58 &lt;Shubham> has joined #ccm
+20:05 &lt;tweety098> has joined #ccm
+22:13 &lt;Shubham> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20140319</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>2f83609d-21a2-4558-91f4-2b5cdd124c51</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

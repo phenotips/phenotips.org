@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140407</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1396849298000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1396927955000</date>
+  <contentUpdateDate>1396927955000</contentUpdateDate>
+  <version>1.96</version>
+  <title>IRC Archive for channel #phenotips on 07 April 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;vijay13> has quit
+03:19 &lt;tian2992> has quit
+06:46 &lt;vijay13_> has quit
+06:48 &lt;vijay13> has quit
+09:47 &lt;vijay13_> has quit
+10:15 &lt;tian2992> has joined #phenotips
+10:41 &lt;tian2992> has quit
+11:25 &lt;tian2992> has joined #phenotips
+11:30 &lt;tian2992> has quit
+12:07 &lt;vijay13> has quit
+14:42 &lt;BFlavien> has joined #phenotips
+14:42 &lt;BFlavien> Hello !
+14:42 &lt;sdumitriu> Hi BFlavien
+14:42 &lt;sdumitriu> How's it going?
+14:42 &lt;BFlavien> I'm fine and you !
+14:43 &lt;BFlavien> I'm sorry for not coming earlier, I tried friday night and on saturday but I found nobody
+14:43 &lt;BFlavien> I was a bit busy last week (last week of course, so I was crawling under project deadlines !)
+14:43 &lt;sdumitriu> Yes, I had some connection issues at home
+14:45 &lt;BFlavien> This week is not really better, it's finals week, so if you want me to make some code samples, I probably won't be able to get into it before Wednesday or Thursday
+14:46 &lt;akats> has joined #phenotips
+14:47 &lt;sdumitriu> I see
+14:47 &lt;sdumitriu> That's the problem with a global program
+14:47 &lt;sdumitriu> Everybody's schedule is different
+14:47 &lt;BFlavien> Yes, even I prefer this one compared to the one of last summer
+14:48 &lt;BFlavien> I mean, it's not convenient for me this year because I'm studying abroad, but if I was still in France, it would have been better than last year
+14:49 &lt;BFlavien> It just make me think that I'm sorry about my english skills, I'm from France, so I'm not a native at all, but I hope it's still understandable, feel free to ask me to repeat, or say the thing differently if I'm not precise enough
+14:49 &lt;sdumitriu> Yes, you're very good
+14:49 &lt;sdumitriu> Don't worry about that
+14:49 &lt;sdumitriu> I've been in France for 4 years
+14:49 &lt;BFlavien> Why do you leave? I can't wait coming back home aha !
+14:50 &lt;sdumitriu> I like moving around
+14:50 &lt;sdumitriu> It was supposed to be a short detour in Canada, but I started liking it here
+14:50 &lt;BFlavien> Actually, where are you from, and where are you now?
+14:51 &lt;sdumitriu> From Romania, in Toronto
+14:51 &lt;sdumitriu> Been through Lille and Nancy
+14:51 &lt;BFlavien> Oh ok ! I know these cities !
+14:51 &lt;BFlavien> I'm actually studying in Windsor (on the other side of the Detroit river) !
+14:52 &lt;sdumitriu> Hm, not that close to Toronto
+14:52 &lt;sdumitriu> I was under the impression it's a bit closer
+14:53 &lt;BFlavien> Around 4h driving, a bit more by train
+14:53 &lt;BFlavien> From a european perspective it's pretty far, but from an american point of view, it's like neighborhood aha
+14:54 &lt;sdumitriu> Indeed
+14:54 &lt;sdumitriu> Let me check the timeline
+14:55 &lt;sdumitriu> 10 days left until the student selection
+14:55 &lt;BFlavien> About the GSOC, I looked in the IRC archive, to see if other applicants get here to get the "Technical discussion", but I didn't see any, is my proposal to precise enough?
+14:56 &lt;BFlavien> not precise enough* sorry
+14:56 &lt;sdumitriu> Well, yours is the best so far
+14:57 &lt;sdumitriu> But I'd like to see some actual work, either a small pull request for a minor issue, or some actual code for the touch-friendly interaction of a widget
+14:58 &lt;BFlavien> Oh ok, sure
+14:59 &lt;BFlavien> I have around 10 days to get this done? (Since it's finals week, I would appreciate sticking with finals first before getting into other things in the same time)
+14:59 &lt;sdumitriu> Yes
+14:59 &lt;sdumitriu> Exams come first
+15:00 &lt;sdumitriu> Ideally, next Monday would be a better deadline, to give us more time to discuss on the selected students
+15:01 &lt;sdumitriu> We don't know yet how many slots we get, so it's not just about the best student for the project, but also the best students for the whole organization
+15:01 &lt;BFlavien> Cool, thanks ! My last exam is on Saturday, but it's an Android project, so I might be able to finish it earlier, according to the moving-out policy (as an exchange student, I have to leave my residence 24h after my last exam, ...) but I will do my best to get into during the week end
+15:02 &lt;BFlavien> Yes, I understand, it was the same thing last year for my organization
+15:02 &lt;sdumitriu> Oh, that's hard
+15:02 &lt;sdumitriu> Are you leaving Canada, or spending a few more days somewhere else?
+15:04 &lt;BFlavien> According to the university, I'm supposed to leave 24h after my last exam, but I booked my plane tickets last summer (it was cheaper, and easier at the border to get a proof I plan to come back to my country), so I leave on 31th of April / 1st of May (depends on the timezone). I asked for an extension to my residence, but I didn't get an answer yet and my roomate get his refused, so I will definitely spend some days, but I don't know yet whe
+15:15 &lt;sdumitriu> BFlavien: Can you open http://playground.phenotips.org/bin/P0000003 and tell me if you see a tiny white line above the blue "Reported by" band?
+15:15 &lt;BFlavien> betweem the tab and the bar?
+15:16 &lt;sdumitriu> Not quite between the two, but on the right
+15:16 &lt;sdumitriu> I mean continuing from the tab
+15:17 &lt;BFlavien> Not on chrome, but I see it on Firefox
+15:17 &lt;sdumitriu> OK
+15:17 &lt;sdumitriu> Would you like to try and remove it when you have time?
+15:17 &lt;BFlavien> I'm on Ubuntu 12.04 with Chrome 33.0.1750.152, and Firefox 28.0
+15:18 &lt;BFlavien> Sure, I was in the bug tracker looking for one actually
+15:18 &lt;sdumitriu> https://github.com/phenotips/phenotips/issues/842
+15:20 &lt;BFlavien> I bookmarked it, I'm going into it as soon as I can
+15:21 &lt;sdumitriu> OK, thanks
+15:22 &lt;sdumitriu> This is also quite easy, but it involves JS code: https://github.com/phenotips/phenotips/issues/745
+15:24 &lt;BFlavien> I just checked quickly with the firefox developer tools about the first one, there is :
+15:24 &lt;BFlavien> border: 1px solid #FFF; in .space-data #mainContentArea in PatientCheatCode which is reponsible of the white line, but it looks there is another gray one behind
+15:47 &lt;akats> So the commit in patient-network seems to be an old one or an error on my part, because the one in phenomecentral is newer and more complete.
+15:47 &lt;akats> patient network https://github.com/soLEED/patient-network/commit/780198e9bd60bb6c9486cb1cf24a92f8061ae9a7
+15:47 &lt;akats> phenomecentral https://github.com/phenotips/phenomecentral.org/pull/2/files
+15:58 &lt;sdumitriu> OK, I'll check it out
+17:19 &lt;mcupak> has quit
+17:35 &lt;BFlavien> has quit
+19:03 &lt;akats> has quit
+19:22 &lt;CARAM> has quit
+19:49 &lt;CARAM> has quit
+20:07 &lt;CARAM> has quit
+20:14 &lt;CARAM> has quit
+20:28 &lt;CARAM> has quit
+20:57 &lt;CARAM> has quit
+21:21 &lt;CARAM> has quit
+21:29 &lt;CARAM> has quit
+22:06 &lt;CARAM> has quit
+22:34 &lt;CARAM> has quit
+22:58 &lt;CARAM_> has quit
+22:58 &lt;CARAM> has quit
+23:04 &lt;CARAM> has quit
+23:27 &lt;CARAM> has quit
+23:32 &lt;CARAM> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140407</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>46ba3360-a9f9-400c-a373-92dfc14e810e</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

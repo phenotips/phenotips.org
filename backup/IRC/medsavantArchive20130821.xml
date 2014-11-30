@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130821</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1377069627000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1377093898000</date>
+  <contentUpdateDate>1377093898000</contentUpdateDate>
+  <version>1.9</version>
+  <title>IRC Archive for channel #medsavant on 21 August 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has joined #medsavant
+04:43 &lt;bvancea> has joined #medsavant
+04:47 &lt;mcupak> has joined #medsavant
+09:17 &lt;bvancea> sdumitriu, what does this mean: - code status (are we there yet?)
+09:17 &lt;bvancea> from the hangout email
+09:21 &lt;sdumitriu> The planned release
+09:21 &lt;sdumitriu> It's more than a month late
+09:23 &lt;bvancea> Oh, I see
+10:04 &lt;sdumitriu1> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20130821</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>301da813-a5ae-4871-bcd2-2213e3cdcb12</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

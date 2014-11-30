@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20131028</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1382960497000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1383006072000</date>
+  <contentUpdateDate>1383006072000</contentUpdateDate>
+  <version>1.18</version>
+  <title>IRC Archive for channel #medsavant on 28 October 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #medsavant
+12:06 &lt;Jim^^> has joined #medsavant
+12:07 &lt;Jim^^> Hi Sergiu.  I've updated GeneMANIA, and now there is a new dependency on http://www.genemania.org/plugin/release/genemania-cytoscape-plugin-3.1.jar
+12:07 &lt;Jim^^> Can this be added to the remote repository?
+12:09 &lt;Jim^^> This replaces the dependencies with the artifact Ids 'genemania-common' and 'plugin-cy2'.    (I added the above jar to my local repository and added an appropriate dependency to the pom.xml, and I have commented out the genemania-common and plugin-cy2 sections of the pom.xml, and everything works)
+12:10 &lt;sdumitriu> Hi Jim^^
+12:10 &lt;sdumitriu> Yes, I'll do it shortly
+12:10 &lt;Jim^^> OK, thanks
+12:10 &lt;sdumitriu> I'm updating licenses right now
+12:18 &lt;sdumitriu> Jim^^: Going to the lab, will deploy from there
+12:18 &lt;sdumitriu> Can you send me an email with the location of the jars that need deployed?
+12:32 &lt;Jim^^> OK
+12:32 &lt;Jim^^> one is here
+12:32 &lt;Jim^^> actually this is the only one
+12:32 &lt;Jim^^> http://www.genemania.org/plugin/release/genemania-cytoscape-plugin-3.1.jar
+12:32 &lt;Jim^^> I'll email you it now too
+13:37 &lt;sdumitriu1> has joined #medsavant
+20:21 &lt;sdumitriu> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20131028</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>b302dca0-1b96-46ef-a46b-ab930a118bdb</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

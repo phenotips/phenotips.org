@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140131</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1391181688000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1391211849000</date>
+  <contentUpdateDate>1391211849000</contentUpdateDate>
+  <version>1.29</version>
+  <title>IRC Archive for channel #phenotips on 31 January 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;akats1> has joined #phenotips
+10:22 &lt;akats1> So here's the refactoring comparison. I feel like I forgot something though. https://github.com/soLEED/phenotips-1/compare/issue-refactor?expand=1
+10:31 &lt;sdumitriu1> akats1: Looking
+10:53 &lt;sdumitriu1> akats1: Looks good, make a PR
+13:13 &lt;akats1> You can't use a component that was injected with @Inject in the constructor?
+13:13 &lt;sdumitriu1> No
+13:13 &lt;sdumitriu1> You should use "implements Initializable"
+13:28 &lt;sdumitriu1> akats1: Can you also make the same changes that you did in https://github.com/phenotips/phenotips/pull/690 but for https://github.com/phenotips/phenotips/blob/master/components/solr-access-service/src/main/java/org/phenotips/solr/AbstractSolrScriptService.java#L92 ?
+14:10 &lt;akats1> If it doesn't give me a classFanOut, can I just stick it into the abstractSolr?
+14:12 &lt;sdumitriu1> Yes
+14:12 &lt;sdumitriu1> If it does, let me know before changing other things
+14:13 &lt;sdumitriu1> Since this is a deprecated module, it would be simpler to just disable that specific check
+14:14 &lt;akats1> ok
+15:06 &lt;akats1> So how would I test the changes if both components are named hpo?
+15:32 &lt;sdumitriu1> akats1: This sounds useful: http://guides.github.com
+15:34 &lt;akats1> I know what broke by the way.
+15:34 &lt;sdumitriu1> Good
+15:34 &lt;akats1> Changing he port to 9090 doesn't change the configuration string
+15:34 &lt;sdumitriu1> Ah, right'
+15:34 &lt;sdumitriu1> :D
+15:35 &lt;phenotips_guest_> has joined #phenotips
+15:36 &lt;phenotips_guest_> has quit
+15:55 &lt;marta__> has quit
+16:12 &lt;marta__> has joined #phenotips
+16:41 &lt;marta__> has quit
+16:58 &lt;marta__> has joined #phenotips
+18:02 &lt;akats1> Could you take a look at what I have so far when you have the time, see if I'm going in the right direction
+18:23 &lt;akats1> has quit
+18:44 &lt;marta__> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140131</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>1bb105ae-f7af-46da-9394-272d19d21358</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

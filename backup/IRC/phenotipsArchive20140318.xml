@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140318</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395116701000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395196210000</date>
+  <contentUpdateDate>1395196210000</contentUpdateDate>
+  <version>1.83</version>
+  <title>IRC Archive for channel #phenotips on 18 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;gauravsaini03> has joined #phenotips
+02:37 &lt;ruthgrace> has quit
+02:38 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;
+05:55 &lt;tweety098> has quit
+07:40 &lt;tweety098> has quit
+07:51 &lt;tweety098> has quit
+08:48 &lt;tweety098> has quit
+09:23 &lt;tweety098> has quit
+10:30 &lt;sdumitriu> has joined #phenotips
+10:37 &lt;allasm> has joined #phenotips
+10:39 &lt;sdumitriu> Hey allasm
+10:41 &lt;akats> has joined #phenotips
+10:42 &lt;sdumitriu1> has joined #phenotips
+10:44 &lt;sdumitriu> has quit
+10:46 &lt;tweety098> has quit
+10:47 &lt;sdumitriu1> has quit
+10:52 &lt;ruthgrace> has quit
+10:59 &lt;gauravsaini03> has quit
+11:34 &lt;tweety098> has quit
+11:47 &lt;tweety098> has quit
+12:09 &lt;shalini479> has quit
+12:26 &lt;ruthgrace> has quit
+12:54 &lt;tweety098> has quit
+13:04 &lt;SayAsh_> has joined #phenotips
+13:07 &lt;tweety098> has quit
+13:24 &lt;ruthgrace> has quit
+13:24 &lt;tweety098> has quit
+13:55 &lt;SayAsh_> has quit
+13:56 &lt;SayAsh> has joined #phenotips
+14:54 &lt;SayAsh> has quit
+15:22 &lt;aw1231> has joined #phenotips
+15:42 &lt;aw1231> sdumitiru_[Away]: I am unsure how to continue to work on my application.  It seems like most of the work has been done, and the work that is requested is nearly impossible.  I am considering withdrawing.
+16:01 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+16:01 &lt;sdumitriu> Hey aw1231
+16:01 &lt;sdumitriu> Why do you say it's nearly impossible?
+16:13 &lt;akats> sdumitriu: Would you like to see a magic trick when you have some free time? And by magic trick, I mean some ridiculous code.
+16:20 &lt;nclandrei> has joined #phenotips
+16:20 &lt;nclandrei> hi everyone !
+16:21 &lt;sdumitriu> Hi nclandrei
+16:28 &lt;nclandrei> how are things going?
+16:28 &lt;nclandrei> because I will send you a more detailed draft tonight or tomorrow, currently working on it!
+16:28 &lt;sdumitriu> Almost ready for a new release
+16:31 &lt;nclandrei> ooh, good news
+16:32 &lt;nclandrei> congrats!
+16:43 &lt;nclandrei> if everything happens, I am here, just ping me :D
+16:48 &lt;akats> sdumitriu: Which http client do we use? I've asked you before, but I think I misheard you, because I have HTTPD written down, which is a server.
+16:49 &lt;sdumitriu> org.apache.httpcomponents:httpclient
+16:49 &lt;akats> Thank you
+17:03 &lt;akats> https://github.com/soLEED/misc/blob/master/src/ethnicityParser.java
+17:19 &lt;nclandrei_> has joined #phenotips
+17:19 &lt;nclandrei_> sorry for that, back again
+17:20 &lt;akats> I don't completely understand the scoring in the debug output, but my guess is that the strength of the default boost is not enough. Log10 of the population brings down a difference of 8 million to 40 points.
+17:20 &lt;sdumitriu> Yes, was just looking at that
+17:22 &lt;akats> Actually currently it's not log10
+17:22 &lt;akats> its log10 which is then brought up to the power of 3
+17:23 &lt;nclandrei> has quit
+17:36 &lt;sdumitriu> akats: Actually it's almost normal for Asante to be so high
+17:36 &lt;sdumitriu> They have roughly the same population as ashkenazi
+17:38 &lt;akats> It still needs to be fixed, or no?
+17:38 &lt;sdumitriu> Hold on
+18:01 &lt;tweety098> has quit
+18:25 &lt;aw1231> has quit
+18:38 &lt;nclandrei_> has quit
+18:39 &lt;nclandrei> has joined #phenotips
+18:39 &lt;mcupak> has quit
+19:21 &lt;Shubham> has quit
+19:49 &lt;nclandrei> yeey, I am very happy, just finished the proposal (-:
+19:50 &lt;nclandrei> sdumitriu, should I send it to you on email?
+19:51 &lt;sdumitriu> Submit it through Melange
+19:51 &lt;nclandrei> okay, I shall do that
+19:51 &lt;nclandrei> so I only have to put it there?
+19:51 &lt;sdumitriu> Yes
+19:51 &lt;nclandrei> okay, thank you!
+19:59 &lt;Shubham> has quit
+20:01 &lt;nclandrei> I can go to sleep now! (-: thank you again
+20:01 &lt;nclandrei> have a good night and easy work
+20:05 &lt;nclandrei> has quit
+20:13 &lt;Shubham> has quit
+20:33 &lt;Shubham> has quit
+20:57 &lt;sdumitriu> is now known as &lt;sdumitriu_[Away]&gt;
+21:12 &lt;ruthgrace> has quit
+21:53 &lt;tweety098> has quit
+22:30 &lt;ruthgrace> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140318</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>213ddf01-df45-4871-8ecb-c56d9bf01be1</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

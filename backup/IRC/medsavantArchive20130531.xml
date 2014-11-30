@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130531</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1370010626000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1370039285000</date>
+  <contentUpdateDate>1370039285000</contentUpdateDate>
+  <version>1.101</version>
+  <title>IRC Archive for channel #medsavant on 31 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #medsavant
+11:36 &lt;sdumitriu> has joined #medsavant
+14:58 &lt;sdumitriu> has joined #medsavant
+16:14 &lt;BogdanVancea> has joined #medsavant
+16:15 &lt;sdumitriu> Hey BogdanVancea
+16:15 &lt;BogdanVancea> hello, sdumitriu
+16:15 &lt;BogdanVancea> :)
+16:15 &lt;BogdanVancea> how are you?
+16:15 &lt;sdumitriu> Good
+16:15 &lt;sdumitriu> Productive
+16:16 &lt;sdumitriu> The MedSavant build should work now in any IDE
+16:16 &lt;sdumitriu> At least it works for me in Eclipse
+16:16 &lt;sdumitriu> And it works from the command line
+16:17 &lt;BogdanVancea> awesome
+16:17 &lt;sdumitriu> You should test it
+16:17 &lt;BogdanVancea> I just pulled everything from git
+16:18 &lt;BogdanVancea> awesome
+16:18 &lt;BogdanVancea> I see you've moved all the icons
+16:18 &lt;BogdanVancea> in the resource folder
+16:18 &lt;sdumitriu> Yep
+16:18 &lt;BogdanVancea> after you left yesterday
+16:18 &lt;BogdanVancea> I bounced into the problem
+16:18 &lt;BogdanVancea> and was to lazy to move everything
+16:18 &lt;BogdanVancea> just renamed with iconroot variable
+16:19 &lt;BogdanVancea> the project is so nice and organized now
+16:19 &lt;BogdanVancea> :D
+16:19 &lt;sdumitriu> Eh, there's still work to do
+16:20 &lt;BogdanVancea> ;))
+16:20 &lt;BogdanVancea> there's always some work to be done
+16:20 &lt;BogdanVancea> how did you run it from the command line?
+16:21 &lt;sdumitriu> mvn clean install &amp;&amp; cd MedSavantClient/target/ &amp;&amp; java -jar medsavant-client-1.0-SNAPSHOT.jar
+16:23 &lt;BogdanVancea> ah, cool
+16:23 &lt;BogdanVancea> I think I saw a .sh script somewhere
+16:23 &lt;BogdanVancea> it didn't work for me when I tried it, and I don't seem to find it now
+16:26 &lt;sdumitriu> Yeah, it was useless
+16:26 &lt;sdumitriu> I removed it
+16:26 &lt;BogdanVancea> I see
+16:27 &lt;BogdanVancea> btw, I just remembered that when I read the idea for the project
+16:27 &lt;BogdanVancea> you mentioned test driven development
+16:27 &lt;BogdanVancea> I haven't worked that way before
+16:27 &lt;BogdanVancea> how should that work? :)
+16:28 &lt;sdumitriu> :)
+16:28 &lt;sdumitriu> The idea is that before writing code, you have to define the specifications: what is the code supposed to do?
+16:28 &lt;sdumitriu> So you do that by writing actual tests
+16:29 &lt;sdumitriu> That call methods from your new class and verify the output
+16:29 &lt;sdumitriu> MedSavant has 0 tests :(
+16:29 &lt;BogdanVancea> ah
+16:29 &lt;BogdanVancea> ;))
+16:29 &lt;BogdanVancea> hmm
+16:29 &lt;BogdanVancea> are JUnit tests ok?
+16:30 &lt;sdumitriu> Yes
+16:30 &lt;sdumitriu> https://github.com/compbio-UofT/phenotips/blob/master/components/patient-measurements/api/src/test/java/edu/toronto/cs/phenotips/measurements/MeasurementsScriptServiceTest.java
+16:30 &lt;BogdanVancea> ah
+16:30 &lt;BogdanVancea> mockito
+16:30 &lt;BogdanVancea> awesome
+16:30 &lt;BogdanVancea> I can finally use it
+16:30 &lt;sdumitriu> And I really mean that you write the test before the code
+16:30 &lt;BogdanVancea> with an actual reason
+16:30 &lt;sdumitriu> Initially tests fail
+16:31 &lt;sdumitriu> After you write the test case, you need to make it compile by writing the class/methods under test
+16:31 &lt;sdumitriu> Then you have to write the method logic that makes the test pass
+16:32 &lt;BogdanVancea> I see
+16:32 &lt;BogdanVancea> so I don't need to mock the components I want to test?
+16:33 &lt;sdumitriu> Well, MedSavant doesn't have components either :(
+16:33 &lt;sdumitriu> But you can mock other class fields
+16:33 &lt;BogdanVancea> true
+16:34 &lt;BogdanVancea> I'm actually excited
+16:34 &lt;BogdanVancea> I didn't get the chance to do something like this before
+16:34 &lt;BogdanVancea> also, am I the only student admitted for developing on Medsavant?
+16:35 &lt;sdumitriu> No
+16:35 &lt;sdumitriu> There's another one, but so far he didn't reply
+16:35 &lt;sdumitriu> Probably offline
+16:36 &lt;sdumitriu> Travelling back to his country
+16:36 &lt;BogdanVancea> ah
+16:36 &lt;BogdanVancea> I see
+16:36 &lt;sdumitriu> I sent you something
+16:36 &lt;BogdanVancea> thanks, reading it now :)
+16:38 &lt;BogdanVancea> nice, this will be great for a read before bed
+16:39 &lt;sdumitriu> It's short, so it shouldn't take long to read
+16:39 &lt;sdumitriu> Anyway, the idea was to start with creating the Solr index, then start to code it
+16:40 &lt;BogdanVancea> makes sense
+16:40 &lt;BogdanVancea> should I index everything in solr?
+16:40 &lt;BogdanVancea> or would it be better to go gradually
+16:41 &lt;sdumitriu> Better gradually
+16:41 &lt;BogdanVancea> nice
+16:42 &lt;BogdanVancea> ICE is actually a mysql database, right?
+16:42 &lt;BogdanVancea> "modified" mysql
+16:42 &lt;sdumitriu> Yes
+16:43 &lt;sdumitriu> http://mail.medsavant.com/mailman/listinfo/notification -> You can subscribe to receive commit notifications, if you want
+16:44 &lt;BogdanVancea> thanks
+17:13 &lt;sdumitriu> So, how was the first week?
+17:15 &lt;BogdanVancea> pretty good
+17:15 &lt;BogdanVancea> I actually excepted to do more
+17:15 &lt;sdumitriu> Yes, you're gonna have to get used to it
+17:15 &lt;sdumitriu> Time flies
+17:16 &lt;BogdanVancea> true
+17:17 &lt;BogdanVancea> but I'm confident I'll improve my pace
+17:17 &lt;BogdanVancea> I never do manage to get a lot of things done in the first week
+17:18 &lt;BogdanVancea> doesn't really matter what I'm trying to do
+18:18 &lt;marta> has joined #medsavant
+18:28 &lt;sdumitriu> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20130531</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>033e0d90-dacb-462f-a19e-217efa6b2aa4</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130511</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1368292259000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1368327731000</date>
+  <contentUpdateDate>1368327731000</contentUpdateDate>
+  <version>1.28</version>
+  <title>IRC Archive for channel #phenotips on 11 May 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has quit
+13:29 &lt;ravigarg27> has joined #phenotips
+14:01 &lt;sdumitriu1> has joined #phenotips
+14:07 &lt;ravigarg27> has quit
+14:07 &lt;sdumitriu> has quit
+14:08 &lt;sdumitriu1> has quit
+14:08 &lt;sdumitriu> has joined #phenotips
+14:38 &lt;sdumitriu> has quit
+14:39 &lt;sdumitriu> has joined #phenotips
+14:44 &lt;sdumitriu> is now known as &lt;Guest69911>
+16:05 &lt;kushalkhandelwal> has joined #phenotips
+16:05 &lt;kushalkhandelwal> Hey
+16:08 &lt;kushalkhandelwal> Hey marta
+16:09 &lt;kushalkhandelwal> has quit
+16:10 &lt;kushalkhandelwal> has joined #phenotips
+16:15 &lt;Guest69911> has quit
+16:15 &lt;sdumitriu> has joined #phenotips
+17:17 &lt;kushalkhandelwal> has quit
+17:17 &lt;kushalkhandelwal> has joined #phenotips
+18:01 &lt;kushalkhandelwal> is now known as &lt;Guest52333>
+18:01 &lt;sdumitriu> is now known as &lt;Guest55878>
+18:15 &lt;Guest55878> is now known as &lt;sdumitriu>
+18:43 &lt;kushalk124> has joined #phenotips
+18:43 &lt;kushalk124> is now known as &lt;Guest25165>
+18:48 &lt;Guest52333> has quit
+18:57 &lt;Guest25165> has quit
+21:04 &lt;phenotips_org> has joined #phenotips
+23:02 &lt;ChanServ> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130511</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>a27f6dd8-68fe-428a-9f62-003bbf0ad6b9</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

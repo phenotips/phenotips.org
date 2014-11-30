@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140128</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1390898954000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1390949883000</date>
+  <contentUpdateDate>1390949883000</contentUpdateDate>
+  <version>1.14</version>
+  <title>IRC Archive for channel #phenotips on 28 January 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has quit
+03:49 &lt;sdumitriu> has joined #phenotips
+09:37 &lt;akats> has joined #phenotips
+09:56 &lt;sdumitriu> akats: I ordered your computer
+10:14 &lt;akats> Awesome. Thank you.
+11:37 &lt;marta__> has joined #phenotips
+13:20 &lt;sdumitriu1> akats: Left some comments on https://github.com/phenotips/phenotips/pull/690
+13:20 &lt;sdumitriu1> Do you have a twitter account?
+13:23 &lt;akats> Nope
+13:52 &lt;akats> Is the version class object going to be linked to a patient class object by the external_id of the patient class?
+15:41 &lt;akats> Is it possible to do the same thing with .xar files as with jars (mvn install -> move jar to server's WEB-INF/lib)?
+17:20 &lt;sdumitriu1> Let's see...
+17:31 &lt;sdumitriu1> akats: Done with the review
+17:58 &lt;akats> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140128</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>5c590f94-b74a-4a29-adc3-bfd9807088f7</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

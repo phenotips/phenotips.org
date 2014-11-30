@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140509</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1399646824000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1399659352000</date>
+  <contentUpdateDate>1399659352000</contentUpdateDate>
+  <version>1.32</version>
+  <title>IRC Archive for channel #phenotips on 09 May 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;BFlavien> has joined #phenotips
+10:47 &lt;BFlavien> Hello :)
+10:47 &lt;sdumitriu1> Hi BFlavien
+10:47 &lt;sdumitriu1> Welcome
+10:47 &lt;BFlavien> How are you?
+10:47 &lt;BFlavien> Thank you :)
+10:47 &lt;BFlavien> Thank you again for accepting my proposal !
+10:47 &lt;sdumitriu1> I'm hungry :(
+10:47 &lt;sdumitriu1> You?
+10:48 &lt;BFlavien> Iḿ fine, a bit afraid about the Phenotips architecture :P I got some trouble getting into it
+10:48 &lt;BFlavien> I'm* (And as you can see, I'm also trying to get familiar with the international ubuntu keyboard aha)
+10:49 &lt;sdumitriu1> Yes, the code is kind of scary
+10:49 &lt;sdumitriu1> Especially if you also dig into XWiki
+10:49 &lt;BFlavien> I did a find -exec grep on my phenotips repository on the string "MS.", and I get some results, but I'm not sure if I should modify all of them (especially the files in the pedigree folder) because it was related to another project?
+10:50 &lt;sdumitriu1> Yes, you must modify all
+10:50 &lt;BFlavien> I never worked with XWiki, but every JS thing are in XML, I still don't understand how everything work together
+10:52 &lt;sdumitriu1> http://phenotips.org/DevGuide/UIX should provide some documentation about that
+10:52 &lt;sdumitriu1> Including the links to xwiki.org
+10:53 &lt;BFlavien> Oh cool, thanks, the only docs I found was : http://phenotips.org/DeveloperResources/SourceRepository and it was a bit light
+10:57 &lt;BFlavien> Here is my grep : http://i.imgur.com/XZhRy46.png
+10:57 &lt;BFlavien> I replace everything then?
+10:59 &lt;sdumitriu1> Not all
+10:59 &lt;sdumitriu1> There are a few .java files that have something different
+10:59 &lt;sdumitriu1> LMS.
+11:00 &lt;BFlavien> Yes of course, I was just talking about the MS. only, not the other string, sorry about that
+11:01 &lt;BFlavien> I will not replace it by command line anyway, I wil do it by hand to read everything and get a bit more into it
+11:01 &lt;sdumitriu1> The XML and JS files yes, all of them
+11:01 &lt;BFlavien> Ok, thank you !
+11:05 &lt;allasm> has joined #phenotips
+12:28 &lt;BFlavien> has quit
+12:33 &lt;mcupak> has quit
+14:15 &lt;mcupak> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140509</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>662004ea-5564-47df-ba73-8da44fcaf757</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

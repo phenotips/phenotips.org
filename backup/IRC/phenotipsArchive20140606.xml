@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140606</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1402031710000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1402082997000</date>
+  <contentUpdateDate>1402082997000</contentUpdateDate>
+  <version>1.8</version>
+  <title>IRC Archive for channel #phenotips on 06 June 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;allasm> has quit
+01:27 &lt;allasm> has joined #phenotips
+01:28 &lt;allasm> has quit
+01:33 &lt;allasm> has joined #phenotips
+06:40 &lt;vijay13> has quit
+07:00 &lt;vijay13> has quit
+11:38 &lt;mcupak> has quit
+15:29 &lt;vijay13> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140606</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>69a09b9c-cacb-42bc-88ce-11dd4c16d839</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

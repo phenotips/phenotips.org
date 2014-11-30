@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140226</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1393408209000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1393462456000</date>
+  <contentUpdateDate>1393462456000</contentUpdateDate>
+  <version>1.151</version>
+  <title>IRC Archive for channel #phenotips on 26 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;anishshah101___> has joined #phenotips
+05:34 &lt;gauravsaini03> has joined #phenotips
+06:00 &lt;gauravsaini03> has quit
+06:04 &lt;sosna_> has joined #phenotips
+06:45 &lt;gauravsaini03> has joined #phenotips
+07:57 &lt;vishnu93> has quit
+09:03 &lt;vishnu93> has quit
+10:37 &lt;vishnu93> has quit
+10:38 &lt;akats> has joined #phenotips
+10:39 &lt;bhargavgolla> has joined #phenotips
+10:43 &lt;bhargavgolla> Hi, I was trying to send a mail to dev@phenotips.org asking for questions regarding two project ideas. But, my mail was rejected my mailserver. Should I subscribe to the mailing list before posting to it?
+10:43 &lt;gauravsaini03> yes bhargavgolla you have to subscrbie
+10:44 &lt;bhargavgolla> Just found the link when I was exploring phenotips.org
+10:44 &lt;bhargavgolla> Thanks for that
+10:48 &lt;bhargavgolla> has left #phenotips
+10:51 &lt;sdumitriu_[Away]&gt; is now known as &lt;sdumitriu>
+10:53 &lt;sdumitriu> Good &lt;time of the day> everyone
+10:54 &lt;gauravsaini03> :)
+11:04 &lt;mcupak> has quit
+11:09 &lt;nclandrei> has joined #phenotips
+11:09 &lt;nclandrei> hi everyone
+11:09 &lt;nclandrei> anyone around? (-:
+11:09 &lt;gauravsaini03> hello nclandrei
+11:09 &lt;sdumitriu> No, we're all squares
+11:09 &lt;nclandrei> hahahahahaha
+11:10 &lt;gauravsaini03> :P
+11:10 &lt;nclandrei> back with some feedback, if someone can chat a little :D
+11:10 &lt;allasm> hello
+11:12 &lt;akats> sdumitriu: So xwiki already has a nice rest interface in place! http://platform.xwiki.org/xwiki/bin/view/Features/XWikiRESTfulAPI#HCreatinganXWikiObject
+11:17 &lt;sdumitriu> Yes
+11:17 &lt;sdumitriu> But it's low level
+11:18 &lt;sdumitriu> You're dealing with raw objects and properties, not with patient data
+11:19 &lt;nclandrei> so I'm presenting here my ideas/ feedback, whenever someone is free, please tell me if I'm doing it right :) so, I have installed the program and ran it, adding some patients
+11:19 &lt;nclandrei> exporting and so on
+11:20 &lt;nclandrei> first of all, the interface is very good, the feedback from the central database regarding diseases is extremely fast, so congratulations
+11:21 &lt;nclandrei> and I kind of have another point of view regarding multiple visits, collaborating on certain cases
+11:23 &lt;nclandrei> should I express my idea? :D
+11:23 &lt;sdumitriu> Sure
+11:26 &lt;nclandrei> well everyone who uses Phenotips has the possibility to choose if he/ she wants that data to be public or private
+11:26 &lt;nclandrei> even private, you can choose to have some collaborators, so we have 3 cases
+11:26 &lt;nclandrei> the case when it is private and without any collaborator is not of interest in this case
+11:26 &lt;nclandrei> so we are left with the other two cases
+11:27 &lt;nclandrei> when we have a new patient in the database of a user and the user selects
+11:27 &lt;nclandrei> that he/ she wants to have collaboratos or set it as public data
+11:28 &lt;nclandrei> we shall store the information about that patient either on his PC or on the central XWiki database
+11:28 &lt;nclandrei> and set a flag
+11:28 &lt;nclandrei> so we can basically work with that patient from that let's call it virtual server
+11:29 &lt;nclandrei> so the virtual server posseses information regarding all the patients who will have their data public, and we will keep that server on the FIRST user's PC/ central database
+11:35 &lt;akats> sdumitriu: true enough
+11:36 &lt;sdumitriu> akats: What?
+11:37 &lt;sdumitriu> nclandrei: You might have started with a false premise
+11:37 &lt;sdumitriu> Users don't have PhenoTips locally
+11:37 &lt;sdumitriu> There's one installation per institution
+11:37 &lt;akats> That it's too low level. We don't have any current rest implementations correct?
+11:38 &lt;akats> If not should I then make a separate module or just put it inside appropriate existing modules?
+11:39 &lt;sdumitriu> But there is some truth in your conclusion, coming up is a new feature to "Push to PhenomeCentral", which will share a patient record local to the institution to the central patient repository available at phenomecentral.org
+11:40 &lt;sdumitriu> Coming up in a more distant future is federated logins and the ability to connect PhenoTips users and share patients not onyl with users on the same instance, but with any user (based on OpenID or WebID or another federated authentication)
+11:41 &lt;nclandrei> okay then, so from there, on phenomcentral.org we can make a certain layout for the patient so that anyone allowed can see
+11:41 &lt;nclandrei> the last updates, visits and the ability of changing certain things
+11:42 &lt;sdumitriu> akats: Not yet, put them in separate submodules of the module they belong to, like components/patient-data/rest
+11:42 &lt;akats> Ok
+11:48 &lt;nclandrei> @sdumitriu: so what do you say?
+11:49 &lt;gauravsaini03> has quit
+11:53 &lt;sdumitriu> nclandrei: OK
+11:54 &lt;nclandrei> is this a good start? :D
+11:56 &lt;sdumitriu> I'm not sure yet...
+11:57 &lt;nclandrei> so what should I do from now onwards? should I play around more with Phenotips and maybe come with a different solution or improve this one?
+11:57 &lt;nclandrei> I mean before the application starts
+11:59 &lt;akats> sdumitriu: are we going to save through REST?
+12:07 &lt;sdumitriu> akats: Yes
+12:07 &lt;sdumitriu> nclandrei: You need to have an outstanding application before the student application period ends
+12:08 &lt;sdumitriu> So you can start preparing it
+12:08 &lt;sdumitriu> https://gsoc.ccm.sickkids.ca/GoogleSummerOfCode/StudentApplicationTemplate
+12:08 &lt;nclandrei> oh, outstanding sounds so scary haha
+12:09 &lt;nclandrei> how many people do you expect to apply for your projects? will there be a huge competition?
+12:09 &lt;sdumitriu> So play with the idea until you get a good detailed architecture and roadmap
+12:10 &lt;sdumitriu> Not huge, but tight
+12:10 &lt;nclandrei> can I also use your info? regarding the phenomcentral.org?
+12:11 &lt;sdumitriu> Yes
+12:11 &lt;nclandrei> excellent
+12:11 &lt;nclandrei> so I can start researching.. if I have any other ideas/ questions, I shall return here :)
+12:11 &lt;nclandrei> thanks
+12:11 &lt;sdumitriu> nclandrei: Did you look at the "history" of a patient record?
+12:15 &lt;nclandrei> like family/prenatal etc. histories?
+12:15 &lt;nclandrei> or the history of the entire record?
+12:27 &lt;sdumitriu> 2nd
+12:30 &lt;sdumitriu> http://pheno.tips/
+12:49 &lt;akats> If I'm adding a brand new module, is there a way to include it into the existing built standalone instance without rebuilding everything?
+12:49 &lt;sdumitriu> Yes, just copy the jar from target/ to webapps/phenotips/WEB-INF/libs
+12:50 &lt;akats> Ok then there's something wrong with the code
+13:47 &lt;akats> got it
+13:47 &lt;akats> but I have no idea what the problem was
+14:01 &lt;gauravsaini03> has joined #phenotips
+14:05 &lt;sosna_> has quit
+14:05 &lt;sosna> has quit
+14:40 &lt;sosna_> has joined #phenotips
+14:46 &lt;vishnu93> has quit
+14:59 &lt;gauravsaini03> has quit
+15:00 &lt;fabiocba_> has quit
+15:01 &lt;akats> There currently exists no alternative to X
+15:01 &lt;akats> Xwikidocument for adding objects to a doc?
+15:02 &lt;fabiocba> has quit
+15:02 &lt;akats> As far as I understand documentModelBridge is not capable
+15:02 &lt;sdumitriu> No
+15:02 &lt;akats> So what happens once they manage to come up with something better?
+15:02 &lt;akats> We rewrite?
+15:03 &lt;sdumitriu> We'll have to migrate the code
+15:03 &lt;akats> Ok
+15:03 &lt;sdumitriu> Yes
+15:05 &lt;fabiocba_> has quit
+15:11 &lt;sosna__> has joined #phenotips
+15:11 &lt;akats1> has joined #phenotips
+15:12 &lt;sosna___> has quit
+15:12 &lt;sosna__>  /quit
+15:12 &lt;sosna__> has quit
+15:17 &lt;sosna> has quit
+15:17 &lt;sosna_> has quit
+15:30 &lt;anishshah101___> hey
+15:30 &lt;anishshah101___> i am interested in doing with Phenotips
+15:30 &lt;anishshah101___> The idea which got me interested is Mobile web interface for Phenotips
+15:31 &lt;anishshah101___> needed some pointers to get started
+15:31 &lt;anishshah101___> interested in doing GSOC 2014
+15:37 &lt;sdumitriu> Hi anishshah101___
+15:37 &lt;anishshah101___> hi
+15:44 &lt;anishshah101___> could you suggest me a few pointers to get started with the project idea?
+15:44 &lt;sdumitriu> https://gsoc.ccm.sickkids.ca/GoogleSummerOfCode/FirstSteps
+15:46 &lt;anishshah101___> thanks for the link
+15:51 &lt;akats1> sdumitriu: do we have "xwiki" as a constant somewhere? Or in configuration files?
+15:51 &lt;sdumitriu> No
+15:52 &lt;akats1> Ok
+16:25 &lt;anishshah101___> has quit
+17:12 &lt;akats1> we don't need xml as an output for the rest server?
+17:12 &lt;akats1> just json is fine?
+17:13 &lt;sdumitriu> Yes
+17:35 &lt;IonelPopescu> has joined #phenotips
+18:08 &lt;nclandrei> sdumitriu: can I for example try to solve some posted bugs?
+18:09 &lt;nclandrei> so I can have a closer look at the code and interact with it a little
+18:15 &lt;nairboon> has quit
+18:45 &lt;sdumitriu> nclandrei: Sure
+19:04 &lt;akats1> has quit
+19:18 &lt;IonelPopescu> has quit
+19:51 &lt;nclandrei> I've started to go into the code more
+19:51 &lt;sdumitriu> Oh, you're still up
+19:51 &lt;nclandrei> but now it's too late, tomorrow I have classes and work :D I'll come back tomorrow evening with more feedback
+19:51 &lt;nclandrei> yes
+19:53 &lt;nclandrei> I think in Canada it's lunch/ afternoon, so have a good day
+19:53 &lt;sdumitriu> 8 in the evening
+19:53 &lt;sdumitriu> Hava a good night!
+19:53 &lt;sdumitriu> See you tomorrow
+19:54 &lt;nclandrei> then have a good night ! sure.. any plans or ideas you can give me, please throw them here (-:
+19:54 &lt;nclandrei> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140226</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>9e60f75d-27fd-4f41-a24d-d345c854b629</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

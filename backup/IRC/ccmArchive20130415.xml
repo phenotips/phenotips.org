@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130415</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1365998808000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1366084374000</date>
+  <contentUpdateDate>1366084374000</contentUpdateDate>
+  <version>1.220</version>
+  <title>IRC Archive for channel #ccm on 15 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;froggy> has joined #ccm
+02:50 &lt;Natasha> has joined #ccm
+03:38 &lt;aciid> has joined #ccm
+04:31 &lt;ravigarg27> has joined #ccm
+05:04 &lt;froggy> has joined #ccm
+06:56 &lt;aciid> has joined #ccm
+07:43 &lt;froggy> has joined #ccm
+09:16 &lt;froggy> has joined #ccm
+09:40 &lt;aciid> has joined #ccm
+09:58 &lt;ravigarg27> has joined #ccm
+10:08 &lt;froggy> has joined #ccm
+10:21 &lt;ishaan> has joined #ccm
+11:04 &lt;Krinye> has joined #ccm
+11:05 &lt;Krinye> Hello wondering if anyone could help me again with questions about project timelines
+11:05 &lt;sdumitriu> Hi Krinye
+11:06 &lt;Krinye> Hi sdmitriu, I have been trying to get more detailed information, other than the wiki, but mark hasn't set me the documents yet
+11:07 &lt;Krinye> I do not know what items to place on my timeline, at this point I am not sure if we are needed to generalize timelines or get into specifics
+11:07 &lt;Krinye> I am kind of worried because the deadline is coming up and I still have to make time for exams and stuff
+11:08 &lt;sdumitriu> The deadline isn't coming so soon
+11:08 &lt;sdumitriu> The student registration didn't even start yet
+11:09 &lt;Krinye> I applied last year and they really want the timelines to be specific.
+11:10 &lt;sdumitriu> Well, that varies from organization to organization
+11:10 &lt;Krinye> Although the registration is not yet here yet, I have to draft a proposal and have it critiqued before sending it in
+11:10 &lt;sdumitriu> I know that timelines aren't something to be counted upon
+11:10 &lt;sdumitriu> What's more important is seeing how much you understand what needs to be done
+11:11 &lt;sdumitriu> I'll talk with Marc later today
+11:12 &lt;Krinye> that would be great, is it possible to drop by the centre and talk to someone, get more info?
+11:13 &lt;sdumitriu> Not to the CCM, since it's tougher security, but by the lab
+11:14 &lt;sdumitriu> Pratt Bldg, Room 286
+11:14 &lt;sdumitriu> You know where that is?
+11:15 &lt;Krinye> near convocation hall front campus?
+11:17 &lt;sdumitriu> http://goo.gl/maps/YvpYk
+11:18 &lt;sdumitriu> Second floor
+11:18 &lt;sdumitriu> Right in front of the stairs
+11:18 &lt;sdumitriu> I'm not there yet, will be after 2
+11:20 &lt;Krinye> thanks I will make it there today. Thanks
+11:21 &lt;aciid> has joined #ccm
+11:26 &lt;Anuja> has joined #ccm
+11:27 &lt;Anuja> Hi
+11:30 &lt;sdumitriu> Hi Anuja
+11:31 &lt;Anuja> I am interested in working on the project - Visualization and analysis of patient data for the diagnosis of genetic disorders
+11:31 &lt;Anuja> I have some doubts regarding it
+11:32 &lt;sdumitriu> OK
+11:32 &lt;Anuja> Is it a right time to ask ?
+11:34 &lt;sdumitriu> Yes
+11:35 &lt;aciid> hi
+11:35 &lt;Anuja> What methods will be considered from retrieving patients with similar manfestations?
+11:35 &lt;aciid> I am interested in making iOS app
+11:36 &lt;aciid> i sent a mail to  vcell-discuss@googlegroups.com but no reply :(
+11:36 &lt;Anuja> Example - One way i can think is, if each patient is represented by a vector of attribute than cosine similarity can be used for finding similar patients
+11:36 &lt;Anuja> like how its dont in recommendation systems
+11:36 &lt;Anuja> *done
+11:37 &lt;sdumitriu> aciid: We're not affiliated with vcell
+11:37 &lt;aciid> Oh
+11:37 &lt;aciid> do you know how do i contact them?
+11:38 &lt;sdumitriu> They're part of NRNB
+11:38 &lt;aciid> do they have an irc channel?
+11:40 &lt;sdumitriu> vcell-discuss seems to be the right channel
+11:40 &lt;sdumitriu> So you should wait some more for a reply
+11:40 &lt;sdumitriu> When did you contact them?
+11:40 &lt;aciid> some 3 days ago
+11:40 &lt;sdumitriu> It's been a weekend, wait until tomorrow
+11:40 &lt;sdumitriu> If still no answer, write a follow-up email
+11:41 &lt;aciid> okay
+11:41 &lt;aciid> thank you :)
+11:41 &lt;froggy> I have some queries related to savant android version
+11:41 &lt;sdumitriu> You're welcome
+11:41 &lt;sdumitriu> froggy: Hold on, I still have to answer Anuja
+11:41 &lt;froggy> ok go on
+11:42 &lt;sdumitriu> Anuja: Yes, patients already have a list of phenotypes, and other observations
+11:42 &lt;sdumitriu> So indeed the goal is to select other patients with similar phenotypes
+11:43 &lt;sdumitriu> How exactly to measure the similarity is something to analyze together with the mentors
+11:43 &lt;sdumitriu> So one goal of the project is to find a good measure
+11:44 &lt;sdumitriu> The other goal is to make a nice UI for exploring the patients network
+11:44 &lt;aciid> has left #ccm
+11:45 &lt;Anuja> I have experience in Hibernate, Tomcat, Struts
+11:45 &lt;Anuja> I need to brush up javascript and CSS though
+11:46 &lt;Anuja> Also will it involve clustering algorithms?
+11:47 &lt;sdumitriu> Probably yes
+11:48 &lt;Anuja> okay thanks :)
+11:48 &lt;Anuja> Can you also tell what is expected from the mentee and a project proposal ?
+11:49 &lt;Anuja> Also will the main focus be on UI or on the algorithms being used. I can learn advance UI stuff in case needed
+11:54 &lt;sdumitriu> Both
+11:55 &lt;sdumitriu> But any of these done well is good enough
+11:57 &lt;Anuja> Ok cool, Thanks a ton :) . Will bother you in case of any further doubts
+12:01 &lt;froggy> sdumitriu: ping
+12:01 &lt;sdumitriu> Pong
+12:01 &lt;froggy> :P
+13:24 &lt;froggy> has joined #ccm
+13:53 &lt;sdumitriu1> has joined #ccm
+14:30 &lt;sdumitriu1> Hey froggy, did you get in touch with Marc?
+14:31 &lt;froggy> no, his nick ?
+14:31 &lt;sdumitriu1> Not here, let me fetch him
+14:31 &lt;froggy> i did send a mail . ok do that
+14:38 &lt;mfiume> has joined #ccm
+14:39 &lt;mfiume> Hi froggy, what's up?
+14:39 &lt;froggy> hi, so You marc
+14:39 &lt;mfiume> Yes I am :)
+14:41 &lt;froggy> so i have a query for the savant android version
+14:41 &lt;froggy> do you have an api for it ? ie for the android client
+14:42 &lt;froggy> what sort of data are we talking about which is to be parsed in the android client
+14:42 &lt;mfiume> no, the project will involve creating an API from the existing Java platform
+14:42 &lt;mfiume> the data is genomics data
+14:43 &lt;mfiume> the API should communicate via JSON elements
+14:43 &lt;froggy> a rest api /
+14:43 &lt;froggy> ?
+14:43 &lt;mfiume> preferrably
+14:44 &lt;froggy> man ! Its sad then . I came for android client . I know how to deal with api from android but i am inexperinced in creating apis
+14:47 &lt;mfiume> Unfortunately this project will involve creating an API
+14:56 &lt;froggy> ok ! maybe i will come next year after the api is completed to consume it through my android client
+14:56 &lt;froggy> :)
+14:57 &lt;sdumitriu1> Hey froggy, there's https://gsoc.ccm.sickkids.ca/GoogleSummerOfCode/Mobile+UI+for+the+Pedigree+tool
+14:57 &lt;froggy> wait . how did i miss that ! lemme see
+15:07 &lt;froggy> has left #ccm
+15:10 &lt;froggy> has joined #ccm
+15:20 &lt;froggy> hi sdumitriu1 , went through the idea .
+15:20 &lt;froggy> so where can i learn more about pedigree
+15:21 &lt;froggy> where is the code for the pedigree web app ?
+15:22 &lt;froggy> so basically , the idea is to implement the pedigree tool in android ?
+15:23 &lt;qwebirc85263> has joined #ccm
+15:23 &lt;sdumitriu1> You can see a demo at http://phenotips.org/edit/data/P0000016?sheet=PhenoTips.PedigreeEditor#
+15:23 &lt;sdumitriu1> Nope, discard that link, it's broken
+15:23 &lt;sdumitriu1> http://phenotips.org/data/
+15:23 &lt;sdumitriu1> Click on New patient record
+15:24 &lt;sdumitriu1> And in the Family History section, click on Draw Pedigree
+15:24 &lt;sdumitriu1> The code is in https://github.com/compbio-UofT/phenotips/tree/master/pedigree
+15:26 &lt;froggy> unable to click on new patient record
+15:27 &lt;froggy> no onclick listener :P
+15:27 &lt;sdumitriu1> That's normal, there should never be onclick listeners in a good web page
+15:27 &lt;sdumitriu1> It's supposed to be a link
+15:27 &lt;sdumitriu1> Nope, not a link, a form submit button
+15:28 &lt;froggy> yes i was kidding . Its not working
+15:28 &lt;sdumitriu1> Ah, I see
+15:28 &lt;froggy> ie the link
+15:28 &lt;sdumitriu1> That button...
+15:28 &lt;sdumitriu1> There was supposed to be another one at the bottom, but it's not there anymore...
+15:29 &lt;froggy> i edited a patient record
+15:29 &lt;froggy> now i am inside a record
+15:30 &lt;froggy> ok got it
+15:31 &lt;froggy> so viewing the pedigree o/p
+15:34 &lt;froggy> so the form data creates the pedigree output ?
+15:36 &lt;froggy> Android has opengl es libs to help draw shapes accorcing to inputs in a form .
+15:37 &lt;froggy> ie . it can work on the same lines as pedigree if that is the working principle
+15:37 &lt;sdumitriu1> We'd like to have this not as a native application, but as a web app
+15:37 &lt;sdumitriu1> HTML+JS+CSS+SVG
+15:38 &lt;froggy> but pedigree is already a web app i guess
+15:38 &lt;sdumitriu1> So most of the app already exists, what it needs is to make it work with touch events instead of onclick and onmouseover
+15:38 &lt;froggy> i am viewing it in a browser right now
+15:38 &lt;sdumitriu1> (which don't exist on mobile devices)
+15:39 &lt;froggy> o i get it
+15:40 &lt;froggy> Ok i get it ! You want it to be used in the browser of the mobile device ? Yes it can be done . But you can always create native android/ios app for it ?
+16:00 &lt;sdumitriu1> froggy: The new patient record button should work now
+16:01 &lt;froggy> ok . i just had to view the pedigree tool once . already did that
+16:23 &lt;kushalkhandelwal> has joined #ccm
+16:35 &lt;sdumitriu> Hi kushalkhandelwal
+16:38 &lt;kushalkhandelwal> Hi sdumitriu
+16:39 &lt;sdumitriu> Were you looking for the mentors?
+16:39 &lt;kushalkhandelwal> Yes I am looking
+16:39 &lt;kushalkhandelwal> Can you tell me more about " Real-time collection of clinical data on patients with genetic disorders using various medical ontologies"
+16:39 &lt;kushalkhandelwal> this idea
+16:40 &lt;kushalkhandelwal> how should I go about it
+16:41 &lt;kushalkhandelwal> sdumitriu, ?
+16:46 &lt;sdumitriu> Just so I know where to start explaining, did you take a look at PhenoTips? Did you understand what it does?
+16:52 &lt;kushalkhandelwal> Yes , I had a look at phenotips and have a gist of what it does
+16:53 &lt;kushalkhandelwal> sorry for the frequent disconnection , some power failure issues at my university
+16:53 &lt;kushalkhandelwal> From what I understand , it collects and analyzes the patient data
+16:54 &lt;kushalkhandelwal> it suggests clinical investigations
+16:54 &lt;kushalkhandelwal> helps in diagnosis
+16:54 &lt;sdumitriu> Yep
+16:55 &lt;sdumitriu> So, the most important part is the patient's phenotipic description, all the symptomps observed
+16:56 &lt;sdumitriu> And in order to have this data in a reusable manner, it is stored not as free text, but as terms from an ontology
+16:56 &lt;kushalkhandelwal> So one challenge is to accurately record the symptoms observed
+16:56 &lt;sdumitriu> "Attention Deficit Hyperactivity Disorder" is stored as HP:0007018
+16:57 &lt;sdumitriu> Now, while we like HPO because it's open, it's easy to improve, and so  far it's pretty comprehensive, most existing applications use other  standards
+16:57 &lt;sdumitriu> Most of the hospital where we deployed PhenoTips asked about ICD9, ICD10 or LDD
+16:57 &lt;sdumitriu> So the goal is to do the same thing that's happening now, but instead of using terms from HPO, use terms from ICD10 or LDD
+16:58 &lt;sdumitriu> The administrator should be able to chose among the available ontologies
+16:58 &lt;kushalkhandelwal> Ok , so we need to find the links in HPO and ICD10 and map them
+16:59 &lt;kushalkhandelwal> As I know from what i have heard around from doctors , ICD is the most common classification
+17:15 &lt;kushalkhandelwal> sdumitriu, ?
+17:16 &lt;sdumitriu> kushalkhandelwal: That's not the goal of the project, since it probably requires a lot of work
+17:16 &lt;sdumitriu> (there are 10.000 terms in HPO, and much more in ICD)
+17:17 &lt;sdumitriu> How it works right now is that the HPO is indexed in a Solr server
+17:17 &lt;kushalkhandelwal> ok
+17:17 &lt;sdumitriu> And when the user searches for something using free text, the best matches from the Solr index are retrieved and display
+17:18 &lt;sdumitriu> HPO has not just an ID, but also a name and a description of each term
+17:19 &lt;sdumitriu> So we match doctor's words agains the name and the description, and while we display the Name field to the user, we store the ID field in the database
+17:19 &lt;sdumitriu> So, the goal is to do the same for ICD10
+17:19 &lt;sdumitriu> Since terms in ICD10 also have identifier, name and description
+17:20 &lt;sdumitriu> So instead of searching in the indexed HPO, we search in the indexed ICD ontology and store terms from it
+17:21 &lt;kushalkhandelwal> Ok , so we have an option to chose from available ontologies
+17:21 &lt;sdumitriu> Yes
+17:21 &lt;kushalkhandelwal> use ICD10 or HPO
+17:21 &lt;sdumitriu> The main problem after that is that existing patient records won't be updated automatically
+17:21 &lt;sdumitriu> This is where the mapping between ontologies would be helpful
+17:22 &lt;sdumitriu> But it's outside the scope of this project
+17:22 &lt;sdumitriu> So you don't have to worry about that
+17:23 &lt;kushalkhandelwal> So we don't have to update the current records
+17:23 &lt;kushalkhandelwal> and only implement the new ontology for new patients
+17:23 &lt;sdumitriu> Yes
+17:26 &lt;kushalkhandelwal> So the goal of the project would be to provide an interface to chose between available ontologies , Index the new ontology
+17:27 &lt;sdumitriu> Yes
+17:29 &lt;kushalkhandelwal&gt; So I have forked the code , would go through the codebase
+17:29 &lt;kushalkhandelwal> I know a little bit about Solr , so need to know more about it
+17:33 &lt;vshivam> has joined #ccm
+18:08 &lt;kushalkhandelwal> sdumitriu,
+18:08 &lt;kushalkhandelwal> An initial draft for my application : http://goo.gl/W59hO
+18:34 &lt;kushalkhandelwal> timepass
+18:35 &lt;kushalkhandelwal> hackernews article padh raha hoon ab
+18:35 &lt;kushalkhandelwal> ab simplecv pe teko maarte we dekhne aa raha hoon
+18:39 &lt;marius> has joined #ccm
+18:59 &lt;sdumitriu> kushalkhandelwal: Sorry, I'm unavailable at the moment, I'll be back in about an hour
+19:12 &lt;hellboy2k8> has joined #ccm
+19:44 &lt;vshivam> has joined #ccm
+19:58 &lt;kushalkhandelwal> has joined #ccm
+20:24 &lt;hellboy2k8> has joined #ccm
+21:28 &lt;froggy> has joined #ccm
+22:45 &lt;vshivam> has joined #ccm
+23:47 &lt;kushalkhandelwal> has joined #ccm
+23:52 &lt;froggy> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130415</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>4f85f9db-5614-4b57-92fd-fa5d2a1cf246</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140527</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1401175789000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1401230226000</date>
+  <contentUpdateDate>1401230226000</contentUpdateDate>
+  <version>1.41</version>
+  <title>IRC Archive for channel #phenotips on 27 May 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;vijay13> has quit
+08:53 &lt;vijay13> has quit
+13:11 &lt;phenotips_org> has joined #phenotips
+14:02 &lt;mcupak> has quit
+16:38 &lt;phenotips_guest_> has joined #phenotips
+17:01 &lt;phenotips_guest_> Howdy, when building from the source code and deploying to Tomcat6 (following the instructions on http://phenotips.org/AdminGuide/Installation+on+Tomcat+and+MySQL), I get a page from XWiki with the message "We couldn't find any extension with id 'org.phenotips:phenotips-ui' and version '1.0-SNAPSHOT'. Make sure you have the right extension repositories configured".   Do I need to add my local maven (~/.m2) repo into the x
+17:03 &lt;qwebirc29634> has joined #phenotips
+17:05 &lt;phenotips_guest_> has quit
+17:06 &lt;qwebirc29634> has quit
+17:06 &lt;phenotips_guest_> has joined #phenotips
+17:07 &lt;phenotips_guest_> (That logout/login was my bad - I'm the OP for the xwiki/repository question)
+17:07 &lt;sdumitriu1> Hi phenotips_
+17:07 &lt;sdumitriu1> Hi phenotips_guest_
+17:08 &lt;sdumitriu1> Indeed, the -SNAPSHOT version is not available in the registered repositories
+17:09 &lt;sdumitriu1> Depending on what you want to do, you can either register our nexus repository for snapshots, or register the local .m2
+17:10 &lt;qwebirc543674> has joined #phenotips
+17:10 &lt;qwebirc543674> (Yikes, obnoxious network issues, sorry about that)
+17:10 &lt;sdumitriu1> qwebirc543674: Did you get what I said?
+17:11 &lt;sdumitriu1> If not, check http://phenotips.org/IRC/phenotipsArchive20140527
+17:11 &lt;phenotips_guest_> has quit
+17:12 &lt;sdumitriu1> http://extensions.xwiki.org/xwiki/bin/view/Extension/Extension+Module+Repositories shows how to register it
+17:13 &lt;vijay13> has quit
+17:13 &lt;phenotips_guest_> has joined #phenotips
+17:14 &lt;phenotips_guest_> Yes, I did see your response, and thank you. So then is configuring for the local repository only important for making modifications to the PhenoTips layout?
+17:14 &lt;qwebirc543674> has quit
+17:19 &lt;sdumitriu1> There is another way
+17:19 &lt;sdumitriu1> Skip the dw
+17:19 &lt;sdumitriu1> Then import the .xar manually
+17:19 &lt;sdumitriu1> For that you'd need to activate the superadmin account
+17:20 &lt;phenotips_guest_> The dw?
+17:34 &lt;phenotips_guest_> Ah, Distribution Wizard
+17:43 &lt;phenotips_guest_> Great, thank you! I've imported the .xar through the "Upload new package" option, and now the UI loads.
+17:48 &lt;sdumitriu1> Perfect
+17:55 &lt;vijay13> has quit
+18:09 &lt;phenotips_guest_> As for UI changes,
+18:10 &lt;phenotips_guest_> Would sticking to this route require en/dis-abling the superadmin account in order to deploy new changes?
+18:10 &lt;phenotips_guest_> Or the other option, would configuring a production repository make updating the UI as easy as "updating extensions" as the normal admin user?
+18:18 &lt;sdumitriu1> If you don't wipe the database, you don't need the superadmin anymore
+18:19 &lt;sdumitriu1> But yes, Administration->Import is the right way
+18:36 &lt;phenotips_guest_> Awesome.  Have a good evening!  And thanks again, you've been incredibly helpful!
+18:37 &lt;phenotips_guest_> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140527</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>17571de1-b313-425d-ae92-e29aef11d333</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20130409</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1365485278000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1365557790000</date>
+  <contentUpdateDate>1365557790000</contentUpdateDate>
+  <version>1.25</version>
+  <title>IRC Archive for channel #phenotips on 09 April 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ravigarg27> has quit
+01:41 &lt;sdumitriu> has quit
+03:05 &lt;phd> has quit
+04:18 &lt;qwebirc1228> has quit
+07:59 &lt;krinye> has quit
+08:05 &lt;sdumitriu> has joined #phenotips
+08:13 &lt;BogdanVancea> has quit
+08:52 &lt;sdumitriu> has quit
+09:04 &lt;krinye> has quit
+09:19 &lt;BogdanVancea> has quit
+09:20 &lt;phenotips_org> has joined #phenotips
+11:08 &lt;sdumitriu> has joined #phenotips
+11:45 &lt;sdumitriu> has quit
+11:53 &lt;krinye> has quit
+12:56 &lt;sdumitriu1> !bl
+13:55 &lt;krinye> has quit
+14:34 &lt;qwebirc24207> has quit
+14:59 &lt;RenatoM> has quit
+15:13 &lt;RenatoM> has quit
+16:10 &lt;RenatoM_> has quit
+17:31 &lt;mehitabel> has quit
+17:35 &lt;BogdanVancea> has quit
+18:27 &lt;sdumitriu1> has quit
+18:58 &lt;sdumitriu> has joined #phenotips
+21:36 &lt;phoenix_ukr> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20130409</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>df5ad2f3-44d8-4f46-b1e9-6afdcd263f14</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

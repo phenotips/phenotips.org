@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>JIRAIdBotListener</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1365182960000</creationDate>
+  <parent>IRC.IRCBot</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1365183959000</date>
+  <contentUpdateDate>1365182960000</contentUpdateDate>
+  <version>2.1</version>
+  <title>JIRA Id Bot Listener</title>
+  <comment>Import</comment>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <content />
+  <object>
+    <name>IRC.JIRAIdBotListener</name>
+    <number>0</number>
+    <className>IRC.IRCBotListenerClass</className>
+    <guid>ee0847e7-db8f-4819-9b29-7a3eac2179b0</guid>
+    <class>
+      <name>IRC.IRCBotListenerClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <description>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>description</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>Description</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </description>
+      <inactive>
+        <customDisplay />
+        <defaultValue />
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType />
+        <name>inactive</name>
+        <number>3</number>
+        <prettyName>Inactive</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </inactive>
+      <name>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+    </class>
+    <property>
+      <description>Displays description + URL of a JIRA issue when encountering a JIRA id in a typed message in the IRC channel</description>
+    </property>
+    <property>
+      <inactive>1</inactive>
+    </property>
+    <property>
+      <name>JIRA Id</name>
+    </property>
+  </object>
+  <object>
+    <name>IRC.JIRAIdBotListener</name>
+    <number>0</number>
+    <className>IRC.IRCBotListenerEventClass</className>
+    <guid>6d832e6f-7fe1-4bd5-9072-e87b1ba61ac1</guid>
+    <class>
+      <name>IRC.IRCBotListenerEventClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <event>
+        <cache>0</cache>
+        <customDisplay />
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>event</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Event</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <values>onRegistration|onConnect|onDisconnect|onJoin|onMessage|onPart|onNickChange|onPrivateMessage|onQuit</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </event>
+      <script>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>---</editor>
+        <name>script</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>Script</prettyName>
+        <rows>25</rows>
+        <size>120</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </script>
+    </class>
+    <property>
+      <event>onMessage</event>
+    </property>
+    <property>
+      <script>{{groovy}}&#xd;
+import java.util.regex.*&#xd;
+&#xd;
+def irccontext = services.get("ircbot").getContext() &#xd;
+def jiraURL = irccontext.get("jiraURL")&#xd;
+def jiraPattern = irccontext.get("jiraPattern")&#xd;
+def message = irccontext.get("message")&#xd;
+&#xd;
+if (jiraPattern != null &amp;&amp; jiraURL != null) {&#xd;
+  def matcher = jiraPattern.matcher(message)&#xd;
+  while(matcher.find()) {&#xd;
+    def jiraIssue = matcher.group()&#xd;
+    try {&#xd;
+      def url = "${jiraURL}/si/jira.issueviews:issue-xml/${jiraIssue}/${jiraIssue}.xml?field=key&amp;field=summary&amp;field=status&amp;field=link".toURL().text&#xd;
+      def root = new XmlSlurper().parseText(url)&#xd;
+      println "${root.channel.item.key} - ${root.channel.item.summary} - ${root.channel.item.link} (${root.channel.item.status})"&#xd;
+    } catch (Exception e) {&#xd;
+      println "No such issue [${jiraIssue}]"&#xd;
+    }&#xd;
+  }&#xd;
+}&#xd;
+{{/groovy}}</script>
+    </property>
+  </object>
+  <object>
+    <name>IRC.JIRAIdBotListener</name>
+    <number>1</number>
+    <className>IRC.IRCBotListenerEventClass</className>
+    <guid>3687db2b-5e48-4b88-af6d-83326f13dac3</guid>
+    <class>
+      <name>IRC.IRCBotListenerEventClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <event>
+        <cache>0</cache>
+        <customDisplay />
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>event</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Event</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <sort>none</sort>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <values>onRegistration|onConnect|onDisconnect|onJoin|onMessage|onPart|onNickChange|onPrivateMessage|onQuit</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </event>
+      <script>
+        <customDisplay />
+        <disabled>0</disabled>
+        <editor>---</editor>
+        <name>script</name>
+        <number>2</number>
+        <picker>0</picker>
+        <prettyName>Script</prettyName>
+        <rows>25</rows>
+        <size>120</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </script>
+    </class>
+    <property>
+      <event>onRegistration</event>
+    </property>
+    <property>
+      <script>{{groovy}}&#xd;
+import java.util.regex.*&#xd;
+&#xd;
+def object = xwiki.getDocument("IRC.IRCConfiguration").getObject("IRC.JIRAConfigurationClass")&#xd;
+if (object == null) {&#xd;
+  return&#xd;
+}&#xd;
+&#xd;
+def mappings = [:]&#xd;
+&#xd;
+def url = object.getProperty("url").value&#xd;
+if (url != null &amp;&amp; url.trim().length() > 0) {&#xd;
+  mappings.put("jiraURL", url)&#xd;
+}&#xd;
+&#xd;
+def pattern = object.getProperty("pattern").value&#xd;
+if (pattern != null &amp;&amp; pattern.trim().length() > 0) {&#xd;
+  mappings.put("jiraPattern", Pattern.compile(pattern))&#xd;
+}&#xd;
+&#xd;
+xcontext.put("irclistener", mappings)&#xd;
+{{/groovy}}</script>
+    </property>
+  </object>
+</xwikidoc>

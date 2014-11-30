@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140602</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1401727569000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1401762606000</date>
+  <contentUpdateDate>1401762606000</contentUpdateDate>
+  <version>1.46</version>
+  <title>IRC Archive for channel #phenotips on 02 June 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;akats> has joined #phenotips
+12:46 &lt;sdumitriu1> Let's see...
+12:47 &lt;akats> sdumitriu: Do you want me to continue working on the spreadsheet export or do you want me to tackle other issues on my list first?
+12:47 &lt;sdumitriu1> OK, let's say that will work
+12:47 &lt;sdumitriu1> Export
+15:05 &lt;sdumitriu> has quit
+15:05 &lt;sdumitriu> has joined #phenotips
+15:53 &lt;phenotips_guest_> has joined #phenotips
+16:33 &lt;phenotips_guest_> I'm having some trouble with the Solr admin interface.  With a local server running, the page localhost:8080/solr loads,
+16:33 &lt;phenotips_guest_> but the center panel indefinitely displays "Loading...", and the chrome dev window shows http://localhost:8080/solr$%7BadminPath%7D?wt=json 404 (Not Found)
+16:33 &lt;sdumitriu> Why are you trying to use that page?
+16:34 &lt;sdumitriu> What are you trying to do?
+16:34 &lt;sdumitriu> (in the latest snapshot the solr application no longer exists)
+16:34 &lt;phenotips_guest_> I am exploring ways to query to data
+16:34 &lt;phenotips_guest_> the* data
+16:35 &lt;sdumitriu> You can open http://localhost:8080/solr/hpo/select?q=*:*&amp;fl=id&amp;rows=64
+16:37 &lt;sdumitriu> akats: Found the problem
+16:52 &lt;phenotips_guest_> Ah, thanks
+16:53 &lt;phenotips_guest_> When it comes to making general queries (e.g.: get the list of phenotypes associated with all individuals of a certain ethnicity), what is the best way to get this data?
+16:54 &lt;sdumitriu> Hm...
+16:54 &lt;sdumitriu> Currently, raw hql queries to the database
+16:54 &lt;sdumitriu> Which are not pretty to write...
+16:54 &lt;sdumitriu> What would be better is to update the patient-data-index module to properly index all the patient data
+16:55 &lt;sdumitriu> Currently it only stores symptoms
+16:58 &lt;sdumitriu> Once we have a full patient index in Solr, you could do all kinds of queries
+16:58 &lt;sdumitriu> Much easier
+16:59 &lt;sdumitriu> But now... I guess you'll have to ask me for help with the hql queries
+17:04 &lt;phenotips_guest_> Ok. Is there a file in which you've set up an hql interface?
+17:04 &lt;sdumitriu> No, just create a new document
+17:04 &lt;sdumitriu> There's no UI for that, just type some new name in the URL
+17:05 &lt;sdumitriu> For example: http://localhost:8080/bin/PhenoTips/QueryPatients
+17:05 &lt;phenotips_guest_> Ok
+17:07 &lt;mcupak> has quit
+17:16 &lt;phenotips_guest_> Is the idea to drop an xwiki query module in?
+17:16 &lt;sdumitriu> No, the module is in place
+17:16 &lt;sdumitriu> Here's an example query:
+17:22 &lt;sdumitriu> https://gist.github.com/sdumitriu/96b444003cb3f375fc50
+17:23 &lt;sdumitriu> http://extensions.xwiki.org/xwiki/bin/view/Extension/Query+Module
+17:41 &lt;phenotips_guest_> Thanks for showing me this.  I suppose a csv export can then be added on top, too?
+18:07 &lt;sdumitriu1> Yes
+18:11 &lt;akats> sdumitriu: What is the problem?
+18:14 &lt;akats> Did you figure out what broke it?
+18:16 &lt;sdumitriu1> Yes
+18:16 &lt;sdumitriu1> See commits
+19:03 &lt;phenotips_guest_> has quit
+22:30 &lt;akats> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140602</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>9c584df8-1a34-46db-8c3f-b908bc9d55b6</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

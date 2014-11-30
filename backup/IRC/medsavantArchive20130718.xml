@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130718</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1374122568000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1374191733000</date>
+  <contentUpdateDate>1374191733000</contentUpdateDate>
+  <version>1.74</version>
+  <title>IRC Archive for channel #medsavant on 18 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #medsavant
+04:20 &lt;mcupak> has joined #medsavant
+07:39 &lt;bvancea> has joined #medsavant
+08:13 &lt;mcupak> hey sdumitriu
+08:13 &lt;sdumitriu> Hey mcupak
+08:14 &lt;mcupak> sdumitriu: how are you?
+08:14 &lt;sdumitriu> Good, you?
+08:14 &lt;mcupak> good
+08:15 &lt;mcupak> I'm working with Hibernate Shards, I managed to implement simple sharding on the variants table
+08:15 &lt;mcupak> but there are a few things that worry me
+08:16 &lt;mcupak> I see some schema manipulation - does the table schema change in runtime? i.e. can you add columns?
+08:16 &lt;sdumitriu> Yes
+08:17 &lt;sdumitriu> Hibernate has support for that, too, although they don't recommend it
+08:17 &lt;mcupak> how dynamic is that? can you add arbitrary columns?
+08:18 &lt;sdumitriu> Not sure
+08:18 &lt;sdumitriu> But I know that whole new tables are created at runtime
+08:19 &lt;mcupak> are sure hibernate supports that? I know you can have that set in configuration so you don't have to rebuild, but I haven't found a way to do it in runtime
+08:20 &lt;mcupak> the way objects are mapped...seems like you would have to have dynamic set of attributes or something
+08:22 &lt;sdumitriu> This might be deprecated, but you can make a new org.hibernate.cfg.Configuration
+08:22 &lt;sdumitriu> config.add(xml)
+08:23 &lt;sdumitriu> config.generateSchemaUpdateScript or config.generateSchemaCreationScript
+08:23 &lt;sdumitriu> And run that script
+08:23 &lt;sdumitriu> This works with XML mapping files
+08:25 &lt;mcupak> hmm
+08:26 &lt;mcupak> that would still cause problems with entities, wouldn't it?
+08:26 &lt;mcupak> meaning you can't add an attribute to map to the new column you create
+10:04 &lt;sdumitriu1> has joined #medsavant
+10:50 &lt;misko___> has joined #medsavant
+10:50 &lt;sdumitriu1> Hangout in 10 minutes?
+10:51 &lt;mcupak> has joined #medsavant
+10:51 &lt;sdumitriu1> I wonder where Marc is
+10:53 &lt;bvancea> he's not at the office?
+10:54 &lt;sdumitriu1> No
+11:01 &lt;Jim_> has joined #medsavant
+11:02 &lt;misko__> has joined #medsavant
+11:02 &lt;sdumitriu1> Look at all the miskos
+11:02 &lt;bvancea> yeah
+11:03 &lt;bvancea> the extra '_' 's get added automatically?
+11:03 &lt;sdumitriu1> Yes
+11:03 &lt;bvancea> hehe
+11:03 &lt;sdumitriu1> Marc's online
+11:03 &lt;bvancea> on gmail?
+11:03 &lt;sdumitriu1> es
+11:03 &lt;sdumitriu1> Yes
+11:03 &lt;sdumitriu1> Starting soon
+11:03 &lt;bvancea> nice
+11:03 &lt;bvancea> ok
+11:04 &lt;mcupak> has joined #medsavant
+11:04 &lt;misko__> too many Misko's?
+11:04 &lt;misko__> i thought it was just one
+11:05 &lt;misko__> excellent
+11:05 &lt;bvancea> Misko clones?
+11:05 &lt;bvancea> ;))
+11:05 &lt;misko__> hahaha
+11:05 &lt;misko__> i am the real Misko ;)
+11:05 &lt;marta> you finally did it misko, you drank soo much redbull that you multiplied
+11:05 &lt;bvancea> I wonder what would a clone say?
+11:05 &lt;misko__> haha misko.fork()
+11:05 &lt;bvancea> =)))
+11:05 &lt;bvancea> for (;;) misko.fork()
+11:06 &lt;misko__> hahaha, i think i need more redbull
+11:07 &lt;Jim_> My google hangout username: jim6416@gmail.com
+12:03 &lt;sdumitriu1> misko__: We forgot to add you to the hangout
+12:03 &lt;misko__> there is a hangout? right now?
+12:03 &lt;misko__> does this mean i have to put on a shirt?
+12:03 &lt;sdumitriu1> No, it's done
+12:05 &lt;sdumitriu1> Oh, you're not even on the mailing list
+12:05 &lt;sdumitriu1> http://mail.medsavant.com/mailman/listinfo/development
+12:07 &lt;sdumitriu1> misko__: You should join
+12:10 &lt;misko__> ok i think i joined
+12:10 &lt;sdumitriu1> You'll get a confirmation email
+12:10 &lt;sdumitriu1> Which you must follow
+12:13 &lt;sdumitriu1> OK, now you're subscribed
+19:55 &lt;sdumitriu> has joined #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20130718</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>0d37b110-ca4f-4641-a4f8-efbe624fd1d6</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

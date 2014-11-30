@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130618</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1371556596000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1371584718000</date>
+  <contentUpdateDate>1371584718000</contentUpdateDate>
+  <version>1.45</version>
+  <title>IRC Archive for channel #medsavant on 18 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;mcupak> has joined #medsavant
+09:24 &lt;bvancea> has joined #medsavant
+10:54 &lt;bvancea_> has joined #medsavant
+12:18 &lt;sdumitriu1> has joined #medsavant
+12:19 &lt;sdumitriu1> Hey all
+12:19 &lt;bvancea_> hey sdumitriu
+12:20 &lt;bvancea_> what's up?
+12:20 &lt;sdumitriu1> Not much
+12:20 &lt;sdumitriu1> You?
+12:20 &lt;bvancea_> indexing some more variants
+12:21 &lt;bvancea_> and reading up for an exam, in parallel
+12:21 &lt;bvancea_> ;))
+12:21 &lt;sdumitriu1> Tomorrow is your last exam?
+12:21 &lt;bvancea_> yup
+12:21 &lt;bvancea_> :D
+12:23 &lt;bvancea_> this week is sort of messed up tho
+12:24 &lt;bvancea_> I've found out last evening that my paper was accepted to a local conference
+12:24 &lt;bvancea_> and now the advisor wants some meetings
+12:25 &lt;bvancea_> to discuss any edits for the final version
+12:25 &lt;bvancea_> and to see a presentation
+12:25 &lt;bvancea_> I wasn't even aware you get to do final versions for articles
+12:26 &lt;sdumitriu1> First paper?
+12:26 &lt;bvancea_> yup
+12:28 &lt;bvancea_> I was under the impression that you sort of like write it once and then you've got your name on some conference proceedings
+12:33 &lt;bvancea_> btw, is there a date set up for the meeting on Thursday?
+12:33 &lt;bvancea_> and will it only be you, me and brian?
+12:35 &lt;sdumitriu1> Only us 3
+12:36 &lt;sdumitriu1> No hour set yet
+12:37 &lt;bvancea_> ah, okay :)
+14:27 &lt;sdumitriu1> mcupak: See these two commits
+14:34 &lt;mcupak> sdumitriu: hey, yeah, it's better to have it in nbactions.xml, thanks
+15:04 &lt;bvancea_> so, is it spam if reply with a +1 to that vote proposal email?
+15:04 &lt;sdumitriu1> No
+15:04 &lt;sdumitriu1> Well, depends
+15:05 &lt;sdumitriu1> If you just send a +1, it is a bit
+15:05 &lt;sdumitriu1> If you have something else to say, it's valuable feedback
+15:11 &lt;bvancea_> I see
+15:12 &lt;bvancea_> well, the vote system sounds cool
+15:12 &lt;bvancea_> I haven't heard about it before
+15:28 &lt;sdumitriu1> It's a standard practice
+15:29 &lt;sdumitriu1> I think Apache is the org that's using it the most
+15:29 &lt;sdumitriu1> http://www.apache.org/foundation/voting.html
+15:44 &lt;bvancea_> nice
+15:45 &lt;bvancea_> and they even have fractions
+15:45 &lt;bvancea_> bit overkill imo</content>
+  <object>
+    <name>IRC.medsavantArchive20130618</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>3e254b65-f954-4cfc-9b57-88c9e6e2f9fb</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

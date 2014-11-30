@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140227</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1393491596000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1393537705000</date>
+  <contentUpdateDate>1393537705000</contentUpdateDate>
+  <version>1.41</version>
+  <title>IRC Archive for channel #ccm on 27 February 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;IonelPopescu> has joined #ccm
+07:22 &lt;IonelPopescu> has joined #ccm
+08:33 &lt;ati94> has joined #ccm
+08:33 &lt;ati94> Hi guys!
+09:43 &lt;sdumitriu> Hi ati94
+10:38 &lt;prasht63> has joined #ccm
+10:55 &lt;vishnu93> has joined #ccm
+10:59 &lt;ati94> Sximitru, are you here?
+10:59 &lt;sdumitriu> ati94: Yes
+11:00 &lt;ati94> Sorry *sdimitru
+11:00 &lt;ati94> I cant wrjte
+11:01 &lt;sdumitriu> Yeah, virtual keyboards aren't the best for typing
+11:01 &lt;sdumitriu> Don't worry
+11:01 &lt;ati94> Yeah, but i am trying to do my best
+11:03 &lt;ati94> I dont know if you can help me, but i would like to get  more information about one of your  projects
+11:05 &lt;sdumitriu> Yes, I can
+11:05 &lt;sdumitriu> Which project
+11:06 &lt;ati94> Could you wait a sec,  i have to look for the full title of the project
+11:08 &lt;ati94> Development  of machine learning methods for modelling the evolution of tumor
+11:09 &lt;sdumitriu> OK, that project is coordinated by someone else
+11:11 &lt;sdumitriu> Quaid isn't here usually, so you have to contact him by email and ask for further instructions
+11:14 &lt;ati94> Okay thank you then. Actually i ve already sent a message to him. (Actually it was just yesterday) but i hoped i could find him here.
+11:15 &lt;sdumitriu> He's quite busy, will answer soon
+11:16 &lt;ati94> I can understand totally
+11:20 &lt;ati94> Bytheway, is there any chance to get this project? I am gonna finish my first year at the university
+11:20 &lt;sdumitriu> I don't know, but from what I've seen it's quite a popular project
+11:21 &lt;sdumitriu> I think Quaid will be looking for someone more experienced in machine learning, preferably a masters student
+11:24 &lt;ati94> Then probably i should look for an other projects then.
+11:24 &lt;sdumitriu> It's always good to have a backup plan
+11:25 &lt;ati94> But thanks for your help
+11:28 &lt;sdumitriu> You're welcome
+11:29 &lt;ati94> Bye
+11:45 &lt;vishnu93> has joined #ccm
+12:30 &lt;IonelPopescu> has joined #ccm
+13:52 &lt;IonelPopescu> has joined #ccm
+14:21 &lt;nairboon> has joined #ccm
+16:41 &lt;Not-002> [Pay2Spawn] dries007 pushed 1 commit to master [+1/-28/±2] http://git.io/rtg-2w
+16:41 &lt;Not-002> [Pay2Spawn] dries007 723789b - dl from github seems better then a 3Mb build
+16:48 &lt;Not-002> [Pay2Spawn] dries007 pushed 1 commit to master [+0/-0/±1] http://git.io/ShKchA
+16:48 &lt;Not-002> [Pay2Spawn] dries007 b8ae489 - dumb mistake</content>
+  <object>
+    <name>IRC.ccmArchive20140227</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>6343896a-8f30-41bc-b0f2-cd09fc14a067</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140327</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395926363000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395976270000</date>
+  <contentUpdateDate>1395976270000</contentUpdateDate>
+  <version>1.31</version>
+  <title>IRC Archive for channel #phenotips on 27 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu1> has joined #phenotips
+09:24 &lt;sdumitriu2> has joined #phenotips
+09:25 &lt;sdumitriu1> has quit
+09:26 &lt;sdumitriu1> has joined #phenotips
+09:28 &lt;sdumitriu2> has quit
+09:32 &lt;sdumitriu1> has quit
+09:46 &lt;sdumitriu1> has joined #phenotips
+09:53 &lt;sdumitriu2> has joined #phenotips
+09:53 &lt;sdumitriu2> has quit
+09:55 &lt;sdumitriu1> has quit
+11:42 &lt;akats> has joined #phenotips
+12:18 &lt;akats> Is there a way to keep the patient network search component (the one that takes forever to load) loaded in memory?
+12:20 &lt;sdumitriu> It is kept in memory after the server restarts
+12:20 &lt;sdumitriu> But you can't keep it in memory between restarts
+12:22 &lt;akats> At some later point, when I have time, would it be ok if I figured out a way to run it as a separate process? I mean the development of anything that uses this feature would be sped up quite a bit.
+12:24 &lt;sdumitriu> I'd rather keep it inside
+12:28 &lt;akats> I had not taken a close look at what's happening, but isn't it just doing some calculations that it then stores in cache?
+12:55 &lt;sdumitriu> Yes
+13:06 &lt;SayAsh_> has joined #phenotips
+13:07 &lt;SayAsh_> has quit
+13:08 &lt;SayAsh_> has joined #phenotips
+13:50 &lt;akats> Would this be a proper way of getting a hibernate object by id   session.get(OutgoingSearchRequest.class, requestId); ?
+13:52 &lt;sdumitriu> Yes
+14:15 &lt;akats> sdumitriu: I've been struggling with hibernate for a while, could you take a look at what I'm doing wrong?
+14:36 &lt;SayAsh_> has quit
+15:36 &lt;mcupak> has quit
+17:17 &lt;akats> has quit
+20:45 &lt;phenotips_org> has joined #phenotips
+21:37 &lt;phenotips_org> has joined #phenotips
+21:55 &lt;phenotips_org> has joined #phenotips
+23:11 &lt;phenotips_org> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20140327</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>1cd32ba0-0111-4769-bfc7-09db164474af</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

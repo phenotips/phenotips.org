@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140603</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1401776167000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1401848316000</date>
+  <contentUpdateDate>1401848316000</contentUpdateDate>
+  <version>1.22</version>
+  <title>IRC Archive for channel #phenotips on 03 June 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu1> has quit
+06:07 &lt;mcupak> has quit
+09:04 &lt;vijay13> has quit
+09:30 &lt;sdumitriu1> has joined #phenotips
+13:26 &lt;phenotips_org> has joined #phenotips
+13:45 &lt;BFlavien> has quit
+13:54 &lt;BFlavien> has joined #phenotips
+14:13 &lt;BFlavien> has quit
+15:02 &lt;vijay13> has quit
+16:14 &lt;phenotips_guest_> has joined #phenotips
+17:10 &lt;sdumitriu1> has quit
+17:11 &lt;sdumitriu1> has joined #phenotips
+17:54 &lt;akats> sdumitriu: You never answered my question about getConnectionToken
+17:54 &lt;sdumitriu> getConnectionToken should be robust
+17:54 &lt;sdumitriu> It should check if the patient has a document or not
+17:55 &lt;sdumitriu> If not, just return null
+17:55 &lt;sdumitriu> In general, exceptions are only supposed to be used for exceptional cases
+17:55 &lt;sdumitriu> Expecting exceptions for normal program flow is wrong
+17:56 &lt;sdumitriu> So yes, you can catch exceptions in the code to be sure the program always works, but any known exception should be solved so that there aren't any
+18:05 &lt;akats> has left #phenotips
+18:05 &lt;phenotips_guest_&gt; has quit
+22:18 &lt;phenotips_org> has joined #phenotips</content>
+  <object>
+    <name>IRC.phenotipsArchive20140603</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>86df62ac-7e0d-4de5-bd0f-bd3fcba5dd35</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

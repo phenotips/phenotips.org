@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>medsavantArchive20130625</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.Admin</creator>
+  <creationDate>1372140786000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.Admin</author>
+  <contentAuthor>XWiki.Admin</contentAuthor>
+  <date>1372202177000</date>
+  <contentUpdateDate>1372202177000</contentUpdateDate>
+  <version>1.201</version>
+  <title>IRC Archive for channel #medsavant on 25 June 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;bvancea> has joined #medsavant
+06:44 &lt;mcupak> has joined #medsavant
+09:05 &lt;sdumitriu> Hey mcupak
+09:06 &lt;mcupak> hey sdumitriu
+09:06 &lt;mcupak> how was it going?
+09:06 &lt;sdumitriu> Good
+09:07 &lt;sdumitriu> I see you're making progress as well
+09:08 &lt;mcupak> yeah, hopefully it will go faster now that I'm done with school :)
+09:33 &lt;sdumitriu> has joined #medsavant
+10:19 &lt;bvancea> has joined #medsavant
+10:21 &lt;bvancea> hey sdumitriu
+10:21 &lt;bvancea> and mcupak
+10:23 &lt;mcupak> hey bvancea
+10:24 &lt;bvancea> so yesterday I've been checking the medsavant
+10:24 &lt;bvancea> trying to come up with a list of places to modify
+10:24 &lt;bvancea> for the integration
+10:24 &lt;bvancea> and I've also continued working on the testing class for the existing variant core
+10:25 &lt;bvancea> I'm still having a small issue with some illegal characters in the query I'm trying to assemble
+10:26 &lt;bvancea> and I'll try to fix that asap
+10:26 &lt;bvancea> and them commit what I've worked for the branch you've set up
+10:27 &lt;bvancea> so we're set on Thursday for the meeting?
+10:34 &lt;bvancea> has joined #medsavant
+10:47 &lt;sdumitriu> has joined #medsavant
+10:47 &lt;sdumitriu> bvancea, mcupak: Take a look at JPQL
+10:55 &lt;mcupak> sdumitriu: what about it?
+10:57 &lt;bvancea> hmmm
+10:57 &lt;bvancea> looks nice
+10:57 &lt;bvancea> we could work on that
+10:57 &lt;bvancea> to abstract
+10:57 &lt;bvancea> the backend
+10:57 &lt;bvancea> the backends*
+12:52 &lt;bvancea> sdumitriu: if you could manage to a take a look on what I've committed, I'd like to get some feedback :)
+13:05 &lt;sdumitriu1> has joined #medsavant
+14:21 &lt;bvancea> oh man, so many blunders :(
+14:22 &lt;sdumitriu1> Hehe
+14:22 &lt;bvancea> cleaning up stuff now
+14:22 &lt;bvancea> btw
+14:22 &lt;sdumitriu1> And that was just a quick look
+14:22 &lt;bvancea> regarding the code with the wrong licensing
+14:22 &lt;bvancea> (yeah, I've found more myself)
+14:23 &lt;bvancea> I've took that at the beginning, to get stuff running
+14:23 &lt;bvancea> but, as you pointed out, its a different license
+14:23 &lt;bvancea> would it be better to just re-write the classes?
+14:23 &lt;sdumitriu1> It depends
+14:24 &lt;sdumitriu1> In this case you can just reuse it, since it's also our project, we allow you to relicense it
+14:24 &lt;sdumitriu1> In general, it depends on how much work that would be for you
+14:24 &lt;bvancea> I see
+14:25 &lt;sdumitriu1> Sometimes authors will allow you to reuse their code if you ask nicely and explain what you're taking and how it's going to be used
+14:25 &lt;sdumitriu1> Most are not OK with relicensing as closed source
+14:25 &lt;sdumitriu1> But relicensing for another open source project under another open source license, you have good chances of success as long as it's not a significant amount of code that you're taking
+14:26 &lt;sdumitriu1> If it's something too small, you're better of just rewriting it
+14:26 &lt;bvancea> I see, thanks for explaning
+14:26 &lt;sdumitriu1> If it's something too big, big enough to be a library, you'll probably find another library under a more permissive license
+14:26 &lt;bvancea> and sorry for taking it without asking
+14:27 &lt;sdumitriu1> Don't worry, you're learning
+14:27 &lt;sdumitriu1> That's what GSoC is about
+14:27 &lt;bvancea> hmm, I re-reading the MIT and apache licenses
+14:27 &lt;sdumitriu1> Learning both how to write code and all the related meta-stuff around coding
+14:28 &lt;bvancea> yup :)
+14:28 &lt;bvancea> so, the MIT license is more permissive
+14:28 &lt;bvancea> than the apache one?
+14:28 &lt;sdumitriu1> Yes, that's one of the most permissive ones
+14:28 &lt;sdumitriu1> Except the DWTFYW license
+14:28 &lt;bvancea> haha
+14:29 &lt;bvancea> that's a really funny license
+14:29 &lt;bvancea> well, thanks for the feedback
+14:29 &lt;sdumitriu1> The most permissive "license" is the public domain
+14:29 &lt;sdumitriu1> But that's not really a license
+14:29 &lt;bvancea> hmm, how does that work?
+14:30 &lt;sdumitriu1> Well, it's stuff that nobody owns
+14:30 &lt;bvancea> what kind of software is public domain?
+14:30 &lt;sdumitriu1> So you can do anything with it
+14:30 &lt;sdumitriu1> Normally stuff becomes public domain when the copyright expires
+14:30 &lt;sdumitriu1> Old books are public domain
+14:30 &lt;sdumitriu1> Code isn't yet young enough to enter public domain automatically
+14:31 &lt;sdumitriu1> So the authors must explicitly declare that they're giving up copyright on something and allow it to be public domain
+14:31 &lt;sdumitriu1> But then they can't control in any way what others do with it
+14:31 &lt;bvancea> ah, that makes sense
+14:32 &lt;bvancea> open source culture is really interesting :D
+14:32 &lt;sdumitriu1> (code isn't old enough)
+14:32 &lt;bvancea> (yup, noticed)
+14:32 &lt;sdumitriu1> The GPL tries to grant the more freedom, but they do that by taking away some permissions
+14:33 &lt;sdumitriu1> Like the permission to make something non-free
+14:33 &lt;sdumitriu1> That's what makes the GPL family special, and why it's incompatible with most other licenses
+14:34 &lt;bvancea> ah, so you can use code licensed under GPL as long as you're doing something purely open-source
+14:35 &lt;sdumitriu1> Yes
+14:35 &lt;bvancea> but I think you can't modify the actual code under GPL
+14:35 &lt;bvancea> just integrate as is
+14:35 &lt;sdumitriu1> And GPL is "viral", meaning that the tinyest amount of GPL code makes the whole software GPL
+14:35 &lt;bvancea> I remember reading something like this
+14:35 &lt;bvancea> oh, I see
+14:36 &lt;sdumitriu1> LGPL is more permissive, it affects only the code that is directly touching the GPL code
+14:36 &lt;sdumitriu1> So it can be confined in a "library"
+14:37 &lt;sdumitriu1> AGPL is even more restrictive, it spreads over the network
+14:38 &lt;bvancea> hmmm
+14:38 &lt;bvancea> that means that if a software runs on a server offering some servicies
+14:38 &lt;bvancea> and I write a second software that uses those services
+14:38 &lt;bvancea> my software will be affected?
+15:25 &lt;mfiume> has joined #medsavant
+15:26 &lt;sdumitriu1> bvancea: Well, not really, it's more about distribution
+15:26 &lt;sdumitriu1> Some smart guys found a loophole in the GPL license
+15:26 &lt;sdumitriu1> It requires you to distribute the sources any time you distribute the software
+15:27 &lt;sdumitriu1> But since accessing the software through network isn't actual "distribution", the GPL doesn't really apply
+15:27 &lt;bvancea> oh, I see
+15:27 &lt;bvancea> clever
+15:27 &lt;sdumitriu1> Although the GPL was defined before the internet became popular, so distributing software was the only way to use it
+15:28 &lt;sdumitriu1> So what they actually meant is "let the user use the software", not "distribute the software to the user so that he can use it"
+15:28 &lt;sdumitriu1> AGPL corrected this language to make it clear that any kind of usage counts
+15:29 &lt;bvancea> I see
+15:29 &lt;bvancea> it makes sense
+15:29 &lt;sdumitriu1> Going back to the network usage, it depend
+15:30 &lt;sdumitriu1> s
+15:30 &lt;sdumitriu1> For example, the way PhenoTips is packaged to include Solr as a web application used through SolrJ, it's communication over the network
+15:30 &lt;sdumitriu1> But Solr is a key element of the whole package
+15:31 &lt;sdumitriu1> So the AGPL should apply to the rest of PhenoTips if Solr was under the AGPL and PhenoTips wasn't
+15:31 &lt;bvancea> hehe, nice
+15:31 &lt;sdumitriu1> But if you're offering a public Solr server that anybody can connect to, and someone connects to it with a non-AGPL client, then it shouldn't be bound to the AGPL, since it's an external user
+15:33 &lt;bvancea> I see, that is true if Solr would be licensed under the AGPL
+15:33 &lt;sdumitriu1> Yes
+15:33 &lt;sdumitriu1> But fortunately it's under Apache
+15:33 &lt;sdumitriu1> So you can use it in any way
+15:34 &lt;bvancea> yup
+15:34 &lt;bvancea> so, If I may ask
+15:34 &lt;sdumitriu1> A difference between GPL2 and GPL3
+15:34 &lt;sdumitriu1> TIVO-ization
+15:34 &lt;bvancea> how did you decide on the licesing for the lab software? (keep going on your idea though, and answer this later)
+15:35 &lt;sdumitriu1> Basically, hardware makers found another loophole in the GPL
+15:35 &lt;sdumitriu1> They put software on their hardware, they do give the sources to the software, but they don't allow you to change in any way what's already on the hardware
+15:36 &lt;sdumitriu1> So as a user, you have the sources, you can't modify them, but you can't put the modified software on the machine
+15:36 &lt;sdumitriu1> So it's completely useless
+15:36 &lt;sdumitriu1&gt; You don't really have the freedom to improve your device
+15:36 &lt;sdumitriu1> And that's one of the freedoms that GPL enforces
+15:37 &lt;sdumitriu1> GPL3 prevents that as well
+15:37 &lt;sdumitriu1> Choosing...
+15:38 &lt;sdumitriu1> Well, I'm not sure why the Apache one was chosen for Savant and MedSavant
+15:38 &lt;sdumitriu1> Probably because it's becoming the most popular open source license
+15:39 &lt;sdumitriu1> Basically people are split into two licensing camps, the GPL and the rest
+15:39 &lt;sdumitriu1> And it goes down to the difference between "free software (free as in freedom, not as in beer)", and "open source"
+15:40 &lt;sdumitriu1> One is emphasizing the freedom of the users, the other is trying to get the best code
+15:40 &lt;bvancea> oh, I see
+15:40 &lt;sdumitriu1> So free software is about ensuring that users have the freedom to improve their software
+15:41 &lt;sdumitriu1> Open source is about applying development practices that make good software
+15:41 &lt;sdumitriu1> GPL doesn't let others take away these freedoms
+15:42 &lt;sdumitriu1> The other licenses do let companies use the code in non-open ways, but they encourage participation
+15:42 &lt;sdumitriu1> On the non-GPL side, the most popular ones are Apache, MIT/BSD, Mozilla, Eclipse
+15:43 &lt;sdumitriu1> MIT/BSD keep things simple
+15:43 &lt;sdumitriu1> Mozilla and Eclipse are mostly used in their ecosystems
+15:44 &lt;bvancea> I didn't hear about Mozilla and Eclipse before
+15:44 &lt;sdumitriu1> So Apache is usually the obvious choice
+15:44 &lt;sdumitriu1> MPL/EPL
+15:44 &lt;sdumitriu1> They all look a lot like Apache
+15:44 &lt;sdumitriu1> The language is a bit different
+15:45 &lt;sdumitriu1> The weird thing about the MPL is that it puts restrictions on the naming of derivatives
+15:45 &lt;sdumitriu1> Basically, only official Firefox builds are allowed to be called Firefox
+15:46 &lt;sdumitriu1> That's why Debian has IceWeasel and not Firefox, since they patch the sources they're not allowed to call it Firefox
+15:47 &lt;bvancea> haha
+15:47 &lt;bvancea> I was always wondering about iceweasel
+15:47 &lt;sdumitriu1> That's for protecting the name, as a legal defence against buggy derivates that could harm the Firefox brand
+15:47 &lt;bvancea> make sense
+15:48 &lt;bvancea> makes*
+15:48 &lt;sdumitriu1> Since I'm on the Free Software side, I chose the most permissive GPL license, the LGPL
+15:49 &lt;sdumitriu1> Well, kind of, it actually got grandfathered from XWiki anyway
+15:50 &lt;bvancea> the LGPL?
+15:50 &lt;sdumitriu1> Yes
+15:51 &lt;bvancea> cool
+15:52 &lt;bvancea> what's the story behind that?
+15:53 &lt;sdumitriu1> Since XWiki was started by a company, the original author wanted to protect his business, so he chose the license that is best for that: GPL
+15:53 &lt;sdumitriu1> A few months later switched to LGPL, which is more permissive for users, and less scary for companies
+15:55 &lt;bvancea> I see
+15:55 &lt;sdumitriu1> When I got to XWiki I was also mostly using the LGPL for my other projects
+15:59 &lt;bvancea> nice, thanks for the explanation
+15:59 &lt;bvancea> :D
+16:00 &lt;bvancea> so apparently the GPL family is the way to go if you start a project and want to protect your rights
+16:01 &lt;sdumitriu1> Yes
+16:01 &lt;sdumitriu1> Apache is better if you want more contributos
+16:01 &lt;sdumitriu1> contributors
+16:02 &lt;sdumitriu1> Although the Linux kernel contradicts that, it has more contributors than any Apache project
+16:02 &lt;sdumitriu1> Probably more than *any* project, actually
+16:03 &lt;bvancea> hehe, didn't think about that before
+16:03 &lt;bvancea> apache has a lot of project though
+16:03 &lt;sdumitriu1> Yes
+16:03 &lt;sdumitriu1> Most are small scale, though
+16:04 &lt;bvancea> yup
+16:04 &lt;bvancea> I think Hadoop and Cassandra have the most contributers
+16:06 &lt;sdumitriu1> I wouldn't be so sure
+16:06 &lt;sdumitriu1> HTTPD is the oldest and the one that's more likely to be used by hackers
+16:07 &lt;sdumitriu1> And hackers like to contribute
+16:07 &lt;bvancea> they do?
+16:07 &lt;sdumitriu1> Apache doesn't force users to contribute back, so enterprise users can just use the software for their own needs
+16:08 &lt;sdumitriu1> Don't confuse the term hacker with what the media uses it for
+16:08 &lt;bvancea> ah
+16:08 &lt;bvancea> yeah
+16:08 &lt;sdumitriu1> http://en.wikipedia.org/wiki/Hacker_%28programmer_subculture%29
+16:08 &lt;bvancea> hehe
+16:09 &lt;bvancea> hackers like those who frequest hackernews
+16:13 &lt;bvancea> nice
+16:14 &lt;bvancea> the Jargon File: http://www.catb.org/~esr/jargon/html/index.html is awesome
+17:42 &lt;bvancea> well, I'm off to bed
+17:42 &lt;bvancea> good night
+19:15 &lt;mfiume> has joined #medsavant
+19:16 &lt;mfiume> has left #medsavant</content>
+  <object>
+    <name>IRC.medsavantArchive20130625</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>526ad68c-485d-4ba8-8a53-e17d0917c8c0</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>medsavant</channel>
+    </property>
+  </object>
+</xwikidoc>

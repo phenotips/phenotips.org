@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130715</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1373876133000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1373915109000</date>
+  <contentUpdateDate>1373915109000</contentUpdateDate>
+  <version>1.58</version>
+  <title>IRC Archive for channel #ccm on 15 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu> has joined #ccm
+06:08 &lt;sdumitriu> has joined #ccm
+06:32 &lt;ravigarg27> has joined #ccm
+09:18 &lt;ravigarg27> has joined #ccm
+09:22 &lt;ravigarg27_> has joined #ccm
+09:35 &lt;ravigarg27_> hi sdumitriu,
+09:38 &lt;sdumitriu1> has joined #ccm
+09:55 &lt;ravigarg27_> Hi sdumitriu1,
+10:15 &lt;sdumitriu1> Hi ravigarg27_
+10:34 &lt;ravigarg27> has joined #ccm
+10:34 &lt;ravigarg27> Hey sdumitriu1, sorry had gone for dinner
+10:35 &lt;ravigarg27> The external resources now is running fine but it doesnt get initialised when I include dictionary lookup annotator
+10:35 &lt;ravigarg27> doesnt show any error too
+10:36 &lt;ravigarg27> also have given apt memory so that shudnt also be an issue
+10:37 &lt;sdumitriu1> Hi Ravi
+10:37 &lt;sdumitriu1> Well, I don't know what to say, there is no timeout set on the thread
+10:38 &lt;sdumitriu1> Did you try to debug it?
+10:38 &lt;sdumitriu1> See where it fails?
+10:38 &lt;sdumitriu1> I can't help you very much without seeing the code
+10:38 &lt;ravigarg27> yeah I tried that
+10:38 &lt;ravigarg27> If I dont include the dictionary one it work good
+10:39 &lt;ravigarg27> but after I include it it doesnt show up anything
+10:39 &lt;sdumitriu1> Note that you don't need to wait for the code to be perfect (or event functional) before you commit it
+10:39 &lt;sdumitriu1> One common way to commit work in progress is to create a feature branch and perform regular commits there
+10:39 &lt;sdumitriu1> This way, the code is available for the team to provide feedback, the  master branch is not affected by half-done features, and the feature  branch can be easily merged into the master one the implementation is  stable
+10:39 &lt;ravigarg27> ok I will to that today itself
+10:39 &lt;sdumitriu1> Committing is not releasing
+10:39 &lt;sdumitriu1> You should commit very often
+10:40 &lt;sdumitriu1> http://en.wikipedia.org/wiki/Release_early,_release_often
+10:40 &lt;ravigarg27> okay sure I will start from today itself
+10:40 &lt;sdumitriu1> Commit early, commit often
+10:40 &lt;sdumitriu1> I have to go for a short while, will be back soon
+10:40 &lt;ravigarg27> okay
+11:47 &lt;BogdanVancea1> has joined #ccm
+12:00 &lt;ravigarg27> has joined #ccm
+13:21 &lt;ravigarg27> has joined #ccm
+13:55 &lt;ravigarg27_> has joined #ccm
+14:12 &lt;ravigarg27_> hey sdumitru1, the resources in total are 73mb should I push them too?
+14:13 &lt;sdumitriu1> Push where?
+14:13 &lt;sdumitriu1> In the repo
+14:13 &lt;sdumitriu1> Hm...
+14:13 &lt;ravigarg27_> yeah
+14:13 &lt;sdumitriu1> Not sure
+14:13 &lt;sdumitriu1> They should be external resources
+14:13 &lt;ravigarg27_> yup
+14:13 &lt;sdumitriu1> In a different repo
+14:17 &lt;ravigarg27_> I need to make a branch in my forked repo right ?
+14:18 &lt;sdumitriu1> What for?
+14:19 &lt;ravigarg27_> you said a feature branch so I though of making a branch in my forked repo and then doing pull request
+14:19 &lt;sdumitriu1> Right
+14:19 &lt;ravigarg27_> sorry very new to github
+14:19 &lt;ravigarg27_> ohh okay
+14:20 &lt;sdumitriu1> Sorry, we were talking about the external resources right before, wasn't sure what was the branch for
+14:22 &lt;ravigarg27_> no its ok for now I will commit to this repo only I have reduced it to like 14-15 mb
+14:23 &lt;ravigarg27_> then later on whereever you say
+14:23 &lt;sdumitriu1> OK, that sounds reasonable
+14:27 &lt;kushalkhandelwal> has joined #ccm
+15:05 &lt;ravigarg27> has joined #ccm</content>
+  <object>
+    <name>IRC.ccmArchive20130715</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>5ef658ca-ad85-428e-801c-e7f2af4633a1</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20140318</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1395115535000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1395198083000</date>
+  <contentUpdateDate>1395198083000</contentUpdateDate>
+  <version>1.104</version>
+  <title>IRC Archive for channel #ccm on 18 March 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;ruthgrace> my first pull request :)
+00:05 &lt;ruthgrace> Thanks @sdumitriu !
+00:07 &lt;sdumitriu> You're welcome
+01:42 &lt;ruthgrace> Hey @sdumitriu, would you be willing to look over the first draft of my project proposal?
+01:42 &lt;ruthgrace> And give me some feedback?
+01:42 &lt;sdumitriu> Sure
+01:46 &lt;ruthgrace> I uploaded it here: http://ruthgrace.weebly.com/gsoc-proposal.html
+01:46 &lt;ruthgrace> any and all criticisms are welcome! :)
+01:46 &lt;ruthgrace> thank you so much!
+01:47 &lt;ruthgrace> I haven't uploaded any code samples yet, so that section has no links.
+01:47 &lt;sdumitriu> Cool, LaTeX!
+01:47 &lt;ruthgrace> :)
+01:48 &lt;ruthgrace> Do you think I should have some sort of flowchart or graphic to display the tentative archetecture in a way that is more easy to read?
+01:49 &lt;ruthgrace> Also I am generally worried that I will lose marks on not having enough actual programming experience. My lab work consists largely of scripting, rather than making actual programs.
+01:49 &lt;sdumitriu> Did you read the papers that Asha suggested?
+01:50 &lt;ruthgrace> Yes, the pathway analysis one
+01:51 &lt;ruthgrace> He actually suggested to me that we start with the simple Over-Representation Analysis and move on to Functional Class Scoring after that
+01:51 &lt;ruthgrace> Sorry, I should say that the paper he linked me talked about Over-Representation analysis, which is the easiest, then Functional Class Scoring, and finally 3rd generation analysis
+01:52 &lt;ruthgrace> Asha is working on a 3rd generation  analysis approach, and he said that we could implement that if it works out.
+01:52 &lt;sdumitriu> Typo: it's architecture, not archetecture
+01:52 &lt;ruthgrace> Whoops, thank you !
+01:54 &lt;ruthgrace> Are you a bioinformatician?
+01:55 &lt;sdumitriu> No, pure software developer
+01:55 &lt;sdumitriu> Previous open source: you could mention your experience as a user
+01:55 &lt;ruthgrace> Oh, good idea. Thank you.
+01:57 &lt;sdumitriu> OK, looks good so far
+01:57 &lt;sdumitriu> Personally, I would like to see more details from the implementation perspective
+01:57 &lt;ruthgrace> Sure. Should that be a part of the proposal? I was going to write out some skeleton classes with empty methods.
+01:58 &lt;ruthgrace> Would it be appropriate to put those details there? Or is it alright to make the Tentative Architecture section really big
+01:58 &lt;sdumitriu> The architecture part details the scientific side well, and I guess that for this project it's important to have that pinned down
+01:58 &lt;sdumitriu> But for most "software" projects in GSoC, architecture usually means how the code will be organized
+01:59 &lt;ruthgrace> Ooohhhh
+01:59 &lt;sdumitriu> If you make a stub of the implementation, and just link to it from the proposal, I guess that should work
+01:59 &lt;ruthgrace> Perhaps I can split it up into a section about how the code will be organized, and another section about the scientific aspects
+02:00 &lt;sdumitriu> Code "speaks" better than words
+02:00 &lt;ruthgrace> That will be much less messy :)
+02:00 &lt;sdumitriu> Yes
+02:04 &lt;ruthgrace> Do you think it's worth sending my next proposal draft to the ccm-mentors email for feedback?
+02:05 &lt;sdumitriu> You should submit it through Melange
+02:36 &lt;ruthgrace> I am exhausted! I will deal with my code samples tomorrow. Have a good night, @sdumitriu ! Thank you for everything.
+02:36 &lt;sdumitriu> You're welcome
+02:36 &lt;sdumitriu> Good night
+03:32 &lt;tweety098> has joined #ccm
+03:41 &lt;tweety098> Hi I'm interested in working on the project 'Development of machine learning methods for modeling the evolution o tumors'
+03:43 &lt;tweety098> I'm going through the source code provided. Can anyone guide me as to where do I get started as in what code patches should I work upon?
+06:03 &lt;tweety098> has joined #ccm
+07:41 &lt;tweety098> has joined #ccm
+08:26 &lt;tweety098> has joined #ccm
+08:50 &lt;tweety098> has joined #ccm
+09:35 &lt;tweety098> has joined #ccm
+10:12 &lt;tweety098> ?
+10:12 &lt;tweety098> ?
+10:25 &lt;shalini479> has joined #ccm
+10:25 &lt;shalini479> has left #ccm
+10:25 &lt;shalini479> has joined #ccm
+10:30 &lt;sdumitriu> has joined #ccm
+10:42 &lt;sdumitriu1> has joined #ccm
+10:48 &lt;tweety098> has joined #ccm
+10:49 &lt;ruthgrace> has joined #ccm
+10:50 &lt;ruthgrace> @sdumitriu_: Linux mint isn't one of the OSs that infobright supports. :( I'll try today on Windows 7.
+11:36 &lt;ruthgrace> has joined #ccm
+11:36 &lt;tweety098> has joined #ccm
+12:34 &lt;ruthgrace> has joined #ccm
+12:45 &lt;tweety098> has joined #ccm
+12:53 &lt;shalini479> has joined #ccm
+12:57 &lt;tweety098> has joined #ccm
+13:04 &lt;SayAsh_> has joined #ccm
+13:16 &lt;tweety098> has joined #ccm
+13:34 &lt;shalini479> has left #ccm
+13:56 &lt;SayAsh> has joined #ccm
+14:54 &lt;tweety098> has joined #ccm
+18:01 &lt;tweety098> has joined #ccm
+19:11 &lt;Shubham> has joined #ccm
+19:11 &lt;Shubham> Hi !
+19:22 &lt;Shubham> has joined #ccm
+19:34 &lt;sdumitriu> Hi Shubham
+19:35 &lt;Shubham> Hi sdumitriu. I have submitted my first proposal. Would you like to suggest some improvements I can make ?
+19:36 &lt;Shubham> Its the first draft. So, brutal scrutiny will be appreciated :)
+19:37 &lt;sdumitriu> Not today, sorry, I was just about to leave
+20:00 &lt;Shubham> has joined #ccm
+20:29 &lt;ruthgrace> has joined #ccm
+20:33 &lt;Shubham> has joined #ccm
+20:35 &lt;ruthgrace> Hi, when running the MedSavant client, what should I put in for DATABASE ?
+20:36 &lt;ruthgrace> I think HOSTNAME is localhost and PORT is 5029, but i'm not sure what the database name is
+20:36 &lt;ruthgrace> do i have to make one ?
+20:36 &lt;sdumitriu> Yes
+20:39 &lt;ruthgrace> Do you have sample data to load in?
+20:40 &lt;sdumitriu> Marc should know where to find it
+20:40 &lt;sdumitriu> But you can look for VCF files
+20:40 &lt;ruthgrace> Okay. Thank you!
+21:09 &lt;ruthgrace> hey tweety
+21:09 &lt;ruthgrace> are you going to try to do a MedSavant project?
+21:44 &lt;woohee> has joined #ccm
+21:45 &lt;woohee> good evening
+21:51 &lt;ruthgrace> has joined #ccm
+21:55 &lt;groundnuty> has joined #ccm
+21:57 &lt;groundnuty> Greetings, I'm a PhD student from Poland and I'm strongly considering applying for one of your Proposals connected with PhyloSub
+21:57 &lt;groundnuty> preferably the one connected with rewriting the code from Python to C++
+22:00 &lt;groundnuty> I had truble judging how detailed description of architecture/timeling is required and after trying to consult this on #gosc I was adviced to ask the mentoring organization
+22:04 &lt;groundnuty> if possible I would be greatefull for any information on that subject
+22:34 &lt;ruthgrace> has joined #ccm
+22:59 &lt;ruthgrace> @sdumitriu sorry, dumb question, but how do I make a database using the infobright mysqld server?
+23:00 &lt;ruthgrace> I've managed to set it up so that the server is running under the username mysql and I don't have access to it even as root
+23:01 &lt;ruthgrace> (I switched back to linux mint - I think I just didn't sudo something before, because for some reason the servers are working now)</content>
+  <object>
+    <name>IRC.ccmArchive20140318</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>6b8321c8-33de-4a87-8705-dba77bb6fa23</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>

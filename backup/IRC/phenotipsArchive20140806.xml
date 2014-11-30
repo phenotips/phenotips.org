@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>phenotipsArchive20140806</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1407340135000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1407378252000</date>
+  <contentUpdateDate>1407378252000</contentUpdateDate>
+  <version>1.10</version>
+  <title>IRC Archive for channel #phenotips on 06 August 2014</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;sdumitriu2> has quit
+11:50 &lt;sdumitriu1> has joined #phenotips
+15:30 &lt;ijessa> has joined #phenotips
+15:32 &lt;meatcar> sdumitriu: Here's one where you can pick the years or months. Change "Min view mode" to enable only selecting months or years.  http://eternicode.github.io/bootstrap-datepicker/
+15:36 &lt;sdumitriu> OK, looks interesting
+15:37 &lt;sdumitriu> Still, we whould need a way to skip going down
+15:37 &lt;sdumitriu> Like there's the Today button, there should be a "I don't have more details" button
+15:38 &lt;sdumitriu> So that we don't clutter the user's view with so many buttons
+16:04 &lt;ijessa> has quit
+22:24 &lt;jim^^> has quit</content>
+  <object>
+    <name>IRC.phenotipsArchive20140806</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>bbee0fc5-c937-4165-a5f8-b10822f1dac4</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>phenotips</channel>
+    </property>
+  </object>
+</xwikidoc>

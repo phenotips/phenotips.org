@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xwikidoc version="1.1">
+  <web>IRC</web>
+  <name>ccmArchive20130720</name>
+  <language />
+  <defaultLanguage />
+  <translation>0</translation>
+  <creator>XWiki.sdumitriu</creator>
+  <creationDate>1374328875000</creationDate>
+  <parent>IRC.WebHome</parent>
+  <author>XWiki.sdumitriu</author>
+  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <date>1374341099000</date>
+  <contentUpdateDate>1374341099000</contentUpdateDate>
+  <version>1.12</version>
+  <title>IRC Archive for channel #ccm on 20 July 2013</title>
+  <comment>Logging from IRC</comment>
+  <minorEdit>true</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>&lt;phenotips_org> has joined #ccm
+13:03 &lt;ravigarg27> has joined #ccm
+13:20 &lt;sdumitriu> Hey ravigarg27
+13:20 &lt;sdumitriu> How's it going?
+13:21 &lt;ravigarg27> Hi, you had a chance to look at yesterday's commit?
+13:21 &lt;sdumitriu> No, not yet
+13:21 &lt;ravigarg27> actually there was more file which I had to change
+13:22 &lt;ravigarg27> I changed that
+13:22 &lt;ravigarg27> Its analysing fine now but still getting stuck at extraction
+13:22 &lt;ravigarg27> sry initialising
+13:24 &lt;ravigarg27> tried debugging and found its not detecting the MedicationEvent Annotation
+13:24 &lt;ravigarg27> so its stuck over there now</content>
+  <object>
+    <name>IRC.ccmArchive20130720</name>
+    <number>0</number>
+    <className>IRC.IRCBotArchiveClass</className>
+    <guid>323f7c57-3657-4cfa-bd7d-ef62bbf24f47</guid>
+    <class>
+      <name>IRC.IRCBotArchiveClass</name>
+      <customClass />
+      <customMapping />
+      <defaultViewSheet />
+      <defaultEditSheet />
+      <defaultWeb />
+      <nameField />
+      <validationScript />
+      <channel>
+        <customDisplay />
+        <disabled>0</disabled>
+        <name>channel</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Channel</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage />
+        <validationRegExp />
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </channel>
+    </class>
+    <property>
+      <channel>ccm</channel>
+    </property>
+  </object>
+</xwikidoc>
