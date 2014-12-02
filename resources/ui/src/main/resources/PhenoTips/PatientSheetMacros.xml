@@ -1,20 +1,41 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>PatientSheetMacros</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1380351504000</creationDate>
   <parent>PhenoTips.PatientSheet</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1406669528000</date>
   <contentUpdateDate>1406669528000</contentUpdateDate>
-  <version>4.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:phenotips-ui-1.0-milestone-13]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
@@ -31,7 +52,7 @@
      #if ("$!{propName}" != '')
        #set($for = "for='$!{class.name}_$!{obj.number}_$!{propName}'")
      #end
-     {{html clean="false" wiki="false"}}&lt;label class="$!{cssClass}" $!{for}>${displayedText}&lt;/label>{{/html}}##
+     {{html clean="false" wiki="false"}}&lt;label class="$!{cssClass}" $!{for}&gt;${displayedText}&lt;/label&gt;{{/html}}##
      #if ($services.localization.get("$!{class.name}_${propName}_hint"))
        #* Empty comment needed for the whitespace trimmer to leave an empty space before the icon *# {{icon name="question-circle" cssClass="xHelpButton" title="$services.localization.render("PhenoTips.PatientClass_${propName}_hint").replace('"', '~~~"')"/}}##
      #end
@@ -39,7 +60,7 @@
 #end
 
 #macro (__display $propName)
-(% class="displayed-value"%)(((#if($xcontext.action == 'edit' || ($doc.display($propName) != ''))${doc.display($propName).replaceAll('^(\{\{html clean="false" wiki="false"}})?&lt;p>|&lt;/p>(\{\{/html}})?$', '$1$2')}#{else}-#{end})))##
+(% class="displayed-value"%)(((#if($xcontext.action == 'edit' || ($doc.display($propName) != ''))${doc.display($propName).replaceAll('^(\{\{html clean="false" wiki="false"}})?&lt;p&gt;|&lt;/p&gt;(\{\{/html}})?$', '$1$2')}#{else}-#{end})))##
 #end
 
 #macro (__displayIfNotEmpty $propName)
@@ -132,7 +153,7 @@
     #if ($mode == 'half-width')
       #__displayHalfWidth($propName $label $_groupCssClass $labelCssClass)
     #else
-      #__label($propName $labelCssClass $label) (% class="displayed-value"%)#if ("$!{doc.display($propName)}" == '')-#else${doc.display($propName).replaceAll('^(\{\{html clean="false" wiki="false"}})?&lt;p>|&lt;/p>(\{\{/html}})?$', '$1$2')}#end(%%)
+      #__label($propName $labelCssClass $label) (% class="displayed-value"%)#if ("$!{doc.display($propName)}" == '')-#else${doc.display($propName).replaceAll('^(\{\{html clean="false" wiki="false"}})?&lt;p&gt;|&lt;/p&gt;(\{\{/html}})?$', '$1$2')}#end(%%)
     #end
   #else
     #if ($mode == 'half-width')
@@ -186,21 +207,21 @@
     #set($collapsibleProperties = ['age_of_onset', 'pace_of_progression', 'severity', 'temporal_pattern', 'spatial_pattern', 'laterality'])
     #set($targetId = "phenotypeMeta__$!{class.name}_$!{obj.number}_$!{targetObj.getProperty('target_property_name').value}__$!{targetObj.getProperty('target_property_value').value}")
     {{html wiki="true" clean="false"}}##
-    {{html wiki="false" clean="false"}}&lt;dl id="$targetId">{{/html}}##
+    {{html wiki="false" clean="false"}}&lt;dl id="$targetId"&gt;{{/html}}##
       #foreach($prop in $dataClass.properties)##
         #if ($enabledProperties.contains($prop.name))#set($displayMode='')#else#set($displayMode=' hidden')#end##
-        &lt;dt class="${prop.name}${displayMode}"> #if ($collapsibleProperties.contains($prop.name)) &lt;span class="collapse-button">&lt;/span> #end &lt;label for="">${prop.prettyName}:&lt;/label>&lt;/dt>##
-        &lt;dd class="${prop.name}${displayMode}">$doc.display($prop.getName(), $targetObj)&lt;/dd>##
+        &lt;dt class="${prop.name}${displayMode}"&gt; #if ($collapsibleProperties.contains($prop.name)) &lt;span class="collapse-button"&gt;&lt;/span&gt; #end &lt;label for=""&gt;${prop.prettyName}:&lt;/label&gt;&lt;/dt&gt;##
+        &lt;dd class="${prop.name}${displayMode}"&gt;$doc.display($prop.getName(), $targetObj)&lt;/dd&gt;##
       #end##
-    &lt;/dl>##
-    &lt;input type="hidden" name="delete-action" value="$doc.getURL('objectremove', "classname=${targetObj.xWikiClass.name}&amp;amp;classid=${targetObj.number}&amp;amp;form_token=$!{services.csrf.getToken()}")"/>##
+    &lt;/dl&gt;##
+    &lt;input type="hidden" name="delete-action" value="$doc.getURL('objectremove', "classname=${targetObj.xWikiClass.name}&amp;amp;classid=${targetObj.number}&amp;amp;form_token=$!{services.csrf.getToken()}")"/&gt;##
     {{/html}}
 #end
 
 #macro (__phenotypeMeta_displayLastEntry)
   #set($dataClassName = 'PhenoTips.PhenotypeMetaClass')
   #set ($objects = $doc.getObjects($dataClassName))
-  #if ($objects.size() > 0)
+  #if ($objects.size() &gt; 0)
     #set ($targetObj = $objects.get($mathtool.sub($objects.size(), 1)))
     #__phenotypeMeta_displayEntry($targetObj $mode)
   #end
@@ -209,7 +230,7 @@
 #macro (__phenotypeMeta_displayAll)
   #set($dataClassName = 'PhenoTips.PhenotypeMetaClass')
   #set ($objects = $doc.getObjects($dataClassName))
-  #if ($objects.size() > 0)
+  #if ($objects.size() &gt; 0)
     (% class="hidden" %)(((
     #foreach ($pmObj in $objects)
       #__phenotypeMeta_displayEntry($pmObj)

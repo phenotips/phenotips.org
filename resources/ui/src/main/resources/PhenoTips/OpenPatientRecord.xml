@@ -1,20 +1,41 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>OpenPatientRecord</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.sdumitriu</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1370442238000</creationDate>
   <parent>PhenoTips.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1412703129000</date>
   <contentUpdateDate>1412703129000</contentUpdateDate>
-  <version>6.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:patient-data-ui-1.0]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
@@ -81,7 +102,7 @@
       #saveDataFromRequest()
     #end
     $response.sendRedirect($patientDoc.getURL($mode))
-  #elseif ($matchingDocuments.size() > 1)
+  #elseif ($matchingDocuments.size() &gt; 1)
     {{error}}Non-unique identifier.{{/error}}
   #elseif ("$!{request.create}" == 'true')
     #set ($patient = $services.patients.createNewPatient())

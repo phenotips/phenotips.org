@@ -1,20 +1,41 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>PhenotypeMappingPreview</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.sdumitriu</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1393267050000</creationDate>
   <parent>PhenoTips.PhenotypeMappingClass</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1393267050000</date>
   <contentUpdateDate>1393267050000</contentUpdateDate>
   <version>1.1</version>
   <title>PhenotypeMappingPreview</title>
-  <comment>Import</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
@@ -59,13 +80,13 @@ $xwiki.jsx.use('PhenoTips.PatientSheetCode')##
     <guid>2046b272-5863-4c04-a6b7-c8bb2850868b</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -144,7 +165,7 @@ var init = function(event) {
   // or b/ the radio buttons for the options
   var options = $$('input[type="radio"][name$="apping"]');
   // If 1 or 2 are missing, move along, there's nothing to do here
-  if (!previewContainer || !(textInputs.size() == 1 || options.size() > 0)) {
+  if (!previewContainer || !(textInputs.size() == 1 || options.size() &gt; 0)) {
     return;
   }
 
@@ -282,7 +303,7 @@ var init = function(event) {
     });
   }
   // 2. radio buttons:
-  if (options.size() > 0) {
+  if (options.size() &gt; 0) {
     options.each(function (item) {
       var container = new Element('div', {'class' : 'option-container'});
       var label = item.up('label');
@@ -316,7 +337,7 @@ var init = function(event) {
 (XWiki.domIsLoaded &amp;&amp; init()) || document.observe("xwiki:dom:loaded", init);</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>0</parse>
@@ -332,13 +353,13 @@ var init = function(event) {
     <guid>150b3f6c-a46d-4dd3-b362-c1cdbf63a83b</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -535,7 +556,7 @@ var init = function(event) {
 }</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>

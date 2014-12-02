@@ -1,24 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>PatientSheetCode</name>
-  <language />
-  <defaultLanguage>en</defaultLanguage>
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1337795658000</creationDate>
   <parent>PhenoTips.PatientClass</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1412703130000</date>
   <contentUpdateDate>1412703130000</contentUpdateDate>
-  <version>22.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:patient-data-ui-1.0]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <object>
     <name>PhenoTips.PatientSheetCode</name>
     <number>2</number>
@@ -26,13 +47,13 @@
     <guid>3dbaeab5-a161-4a7e-9884-f130958b03b5</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -129,7 +150,7 @@ var restoreCategory = function (element) {
   if (parentElement) {
     var originalName = parentElement.down('input[name="fieldName"]');
     parentElement.select('.term-category input[type=hidden]').each(function (item) {
-      if (ignoredCategories &amp;&amp; ignoredCategories.indexOf(item.value) >= 0) return;
+      if (ignoredCategories &amp;&amp; ignoredCategories.indexOf(item.value) &gt;= 0) return;
       selector += 'input.suggested[name^="' + (originalName &amp;&amp; originalName.value || element.name) + '"] + input[type=hidden][name=_category][value*="' + item.value +'"], '
     });
   }
@@ -235,13 +256,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>fcece596-8be6-4fa6-a193-609666005fd9</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -346,13 +367,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>e1208274-545d-4b27-9609-010a6ce16194</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -1062,7 +1083,7 @@ document.observe('xwiki:dom:loaded', function() {
       $$('.phenotype-group, .prenatal_phenotype-group').each(function(group) {
         var sugestedInput = group.down('.suggested.multi');
         if (sugestedInput) {
-          group.select('.predefined-entries label.term-entry > input[type=checkbox], .predefined-entries .term-entry .yes-no-picker .yes input[type=checkbox]').each(function(item) {
+          group.select('.predefined-entries label.term-entry &gt; input[type=checkbox], .predefined-entries .term-entry .yes-no-picker .yes input[type=checkbox]').each(function(item) {
             var item_subsection = item.up('.subsection');
             if (item_subsection) {
               if (item_subsection.hasClassName('single-select')){
@@ -1148,7 +1169,7 @@ document.observe('xwiki:dom:loaded', function() {
             }
           };
           subtermsInCategory.each(countIfSelectedSubterm);
-          if (selectedSubterms > 0) {
+          if (selectedSubterms &gt; 0) {
             //if (source) {source.addClassName('invisible');}
             field.up('label').addClassName('subterm-selected');
             if (DO_EXPAND &amp;&amp; field._ontologyBrowser &amp;&amp; field._trigger &amp;&amp; field._trigger._root) {
@@ -1254,13 +1275,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>47891262-4dc8-44ea-83b2-944326a5acd0</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -1583,17 +1604,17 @@ document.observe('xwiki:dom:loaded', function() {
       var cDateObj = Date.parseISO_8601(crtDate.alt || '');
       if (!bDateObj || !cDateObj) {return ''}
       var age = (cDateObj.getFullYear() - bDateObj.getFullYear()) * 12 + (cDateObj.getMonth() - bDateObj.getMonth()) + (cDateObj.getDate() &lt; bDateObj.getDate() ? -1 : 0);
-      if (age >= 0) {
+      if (age &gt;= 0) {
         var displayedAge = '';
         if (age == 0) {
           displayedAge = '0';
         }
         var y = Math.floor(age / 12);
         var m = age % 12;
-        if (y > 0) {
+        if (y &gt; 0) {
           displayedAge = y + 'y ';
         }
-        if (m > 0) {
+        if (m &gt; 0) {
           displayedAge += m + 'm ';
         }
         var target = crtDate.up('tr') &amp;&amp; crtDate.up('tr').down('td.age');
@@ -1606,7 +1627,7 @@ document.observe('xwiki:dom:loaded', function() {
           }
         }
       }
-      return (age >= 0) &amp;&amp; ('&amp;' + name + '=' + encodeURIComponent(age)) || forceParam &amp;&amp; ('&amp;' + name + '=') || '';
+      return (age &gt;= 0) &amp;&amp; ('&amp;' + name + '=' + encodeURIComponent(age)) || forceParam &amp;&amp; ('&amp;' + name + '=') || '';
     },
 
     /**
@@ -1699,9 +1720,9 @@ document.observe('xwiki:dom:loaded', function() {
           onSuccess: function(transport) {
             var response = transport.responseJSON.rows[0];
             if (response) {
-              var categories = '&lt;span class="hidden term-category">';
-              response.term_category.each(function(category){categories += '&lt;input type="hidden" value="' + category + '">'});
-              categories + "&lt;/span>";
+              var categories = '&lt;span class="hidden term-category"&gt;';
+              response.term_category.each(function(category){categories += '&lt;input type="hidden" value="' + category + '"&gt;'});
+              categories + "&lt;/span&gt;";
               var data = {'id':id, 'value':response.name, 'category': categories}
               var title =  response.name;
               suggestWidget.acceptEntry(data, title, title);
@@ -1982,7 +2003,7 @@ document.observe('xwiki:dom:loaded', function() {
     // And one more thing (not exactly related to measurements directly:
     // If we're collecting data about gestational age, select premature birth for low gestational ages
     var gaInput = $$('input[type="text"][name$="_gestation"]');
-    gaInput = gaInput.size() > 0 &amp;&amp; gaInput[0] || '';
+    gaInput = gaInput.size() &gt; 0 &amp;&amp; gaInput[0] || '';
     var pbInput = findFormElementForPhenotype('HP:0001622', false, 'prenatal');
     if (gaInput &amp;&amp; pbInput) {
       gaInput.observe('blur', function (event) {
@@ -2040,13 +2061,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>fee0fd2a-16d1-45ac-8a44-16af9afec0f7</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2117,7 +2138,7 @@ document.observe('xwiki:dom:loaded', function() {
   // Edit buttons for every heading in view mode
   var editButton = $('prActionEdit');
   if (editButton) {
-    $$('.chapter > h2[id]').each(function(title) {
+    $$('.chapter &gt; h2[id]').each(function(title) {
       var editLink = new Element('a', {'class' : 'action-edit fa fa-pencil', 'href' : editButton.href + '#' + title.id, 'title' : 'Edit'});
       title.insert(editLink);
     });
@@ -2127,7 +2148,7 @@ document.observe('xwiki:dom:loaded', function() {
   // , .chapter.phenotype-info .negative_phenotype-group
   $$('.chapter.phenotype-info .phenotype-group').invoke('addClassName', 'collapsible-group');
 
-  $$('.chapter > h2').each(function(item){
+  $$('.chapter &gt; h2').each(function(item){
     var chapterShow = new Element('span', {'class' : 'tool show'}).update('Show');
     var chapterHide = new Element('span', {'class' : 'tool hide'}).update('Hide');
     var chapterExpandTools = new Element('span', {'class' : 'expand-tools'}).insert(chapterShow).insert(chapterHide);
@@ -2160,13 +2181,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>ec95a008-e5ee-4400-83fc-b60abd4d4440</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2533,13 +2554,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>108065a7-3adb-4e83-b9c4-c9e7a7fbfd89</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2614,8 +2635,8 @@ document.observe('xwiki:dom:loaded', function() {
     if (!dateValueInput || !dateValueInput.title || !monthSelect || !yearSelect) {return;}
     [monthSelect, yearSelect].invoke('observe', 'change', function(event) {
        var format = dateValueInput.title;
-       var month = monthSelect.selectedIndex >= 0 &amp;&amp; monthSelect.options[monthSelect.selectedIndex].value;
-       var year = yearSelect.selectedIndex >= 0 &amp;&amp; yearSelect.options[yearSelect.selectedIndex].value;
+       var month = monthSelect.selectedIndex &gt;= 0 &amp;&amp; monthSelect.options[monthSelect.selectedIndex].value;
+       var year = yearSelect.selectedIndex &gt;= 0 &amp;&amp; yearSelect.options[yearSelect.selectedIndex].value;
        if (month &amp;&amp; year) {
           var date = new Date();
           date.setFullYear(year, month, 1);
@@ -2647,13 +2668,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>96600d0a-4191-4307-9350-f0c8fb5b1a26</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2786,13 +2807,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>caf691e4-d58c-485a-9916-7abe49199ce3</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2884,13 +2905,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>98e58dee-d663-42fb-88b0-2daa181ec3d4</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2984,13 +3005,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>b4ad6f0b-ebac-4bca-a223-ea8f394c837c</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -3148,13 +3169,13 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>0dad2b4e-4f21-4652-b032-0aa9d6ee2e5a</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -3244,15 +3265,15 @@ document.observe('xwiki:dom:loaded', function() {
     <guid>8013b262-b466-4c84-be89-c48455787e47</guid>
     <class>
       <name>XWiki.PDFClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <fopxsl>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>fopxsl</name>
@@ -3262,12 +3283,12 @@ document.observe('xwiki:dom:loaded', function() {
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </fopxsl>
       <style>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>style</name>
@@ -3277,12 +3298,12 @@ document.observe('xwiki:dom:loaded', function() {
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </style>
       <xhtmlxsl>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>xhtmlxsl</name>
@@ -3292,92 +3313,92 @@ document.observe('xwiki:dom:loaded', function() {
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </xhtmlxsl>
     </class>
     <property>
-      <fopxsl>&lt;?xml version="1.0" encoding="UTF-8"?>
+      <fopxsl>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:fo="http://www.w3.org/1999/XSL/Format"
-    xmlns:html="http://www.w3.org/1999/xhtml">
+    xmlns:html="http://www.w3.org/1999/xhtml"&gt;
 
-  &lt;xsl:output method="xml"/>
+  &lt;xsl:output method="xml"/&gt;
 
-  &lt;xsl:template match="@*|node()">
-    &lt;xsl:copy>
-      &lt;xsl:apply-templates select="@*|node()"/>
-    &lt;/xsl:copy>
-  &lt;/xsl:template>
+  &lt;xsl:template match="@*|node()"&gt;
+    &lt;xsl:copy&gt;
+      &lt;xsl:apply-templates select="@*|node()"/&gt;
+    &lt;/xsl:copy&gt;
+  &lt;/xsl:template&gt;
 
-  &lt;!-- Skip fo:table-and-caption because Fop won't render tables otherwise -->
-  &lt;xsl:template match="fo:table-and-caption">
-    &lt;xsl:apply-templates/>
-  &lt;/xsl:template>
+  &lt;!-- Skip fo:table-and-caption because Fop won't render tables otherwise --&gt;
+  &lt;xsl:template match="fo:table-and-caption"&gt;
+    &lt;xsl:apply-templates/&gt;
+  &lt;/xsl:template&gt;
 
-  &lt;!-- Ignore fo:table-caption because it is not supported -->
-  &lt;xsl:template match="fo:table-caption" />
+  &lt;!-- Ignore fo:table-caption because it is not supported --&gt;
+  &lt;xsl:template match="fo:table-caption" /&gt;
 
-  &lt;!-- Change the page dimensions to Letter -->
-  &lt;xsl:template match="fo:simple-page-master/@page-height">
-    &lt;xsl:attribute name="page-height">
-      &lt;xsl:value-of select="'11in'"/>
-    &lt;/xsl:attribute>
-  &lt;/xsl:template>
-  &lt;xsl:template match="fo:simple-page-master/@page-width">
-    &lt;xsl:attribute name="page-width">
-      &lt;xsl:value-of select="'8.5in'"/>
-    &lt;/xsl:attribute>
-  &lt;/xsl:template>
-  &lt;!-- Change the font to FreeSans -->
-  &lt;xsl:template match="fo:root/@font-family">
-    &lt;xsl:attribute name="font-family">
-      &lt;xsl:value-of select="'FreeSans'"/>
-    &lt;/xsl:attribute>
-  &lt;/xsl:template>
+  &lt;!-- Change the page dimensions to Letter --&gt;
+  &lt;xsl:template match="fo:simple-page-master/@page-height"&gt;
+    &lt;xsl:attribute name="page-height"&gt;
+      &lt;xsl:value-of select="'11in'"/&gt;
+    &lt;/xsl:attribute&gt;
+  &lt;/xsl:template&gt;
+  &lt;xsl:template match="fo:simple-page-master/@page-width"&gt;
+    &lt;xsl:attribute name="page-width"&gt;
+      &lt;xsl:value-of select="'8.5in'"/&gt;
+    &lt;/xsl:attribute&gt;
+  &lt;/xsl:template&gt;
+  &lt;!-- Change the font to FreeSans --&gt;
+  &lt;xsl:template match="fo:root/@font-family"&gt;
+    &lt;xsl:attribute name="font-family"&gt;
+      &lt;xsl:value-of select="'FreeSans'"/&gt;
+    &lt;/xsl:attribute&gt;
+  &lt;/xsl:template&gt;
 
-  &lt;!-- Change the header -->
-  &lt;xsl:template match="fo:static-content[@flow-name='page-header']">
-    &lt;xsl:copy>
-      &lt;xsl:attribute name="precedence">true&lt;/xsl:attribute>
-      &lt;xsl:apply-templates select="@*"/>
-      &lt;fo:table margin-top="2em">&lt;fo:table-body>&lt;fo:table-row>&lt;fo:table-cell>
-      &lt;fo:block text-align="left">
+  &lt;!-- Change the header --&gt;
+  &lt;xsl:template match="fo:static-content[@flow-name='page-header']"&gt;
+    &lt;xsl:copy&gt;
+      &lt;xsl:attribute name="precedence"&gt;true&lt;/xsl:attribute&gt;
+      &lt;xsl:apply-templates select="@*"/&gt;
+      &lt;fo:table margin-top="2em"&gt;&lt;fo:table-body&gt;&lt;fo:table-row&gt;&lt;fo:table-cell&gt;
+      &lt;fo:block text-align="left"&gt;
         &lt;fo:instream-foreign-object content-width="scale-to-fit" content-height="scale-to-fit"
             inline-progression-dimension.minimum="auto" inline-progression-dimension.maximum="100%"
-            block-progression-dimension.minimum="auto" block-progression-dimension.maximum="700px">
-          &lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" text-rendering="geometricPrecision" viewBox="-0.5 9.5 301 60" width="100" height="20">
-          &lt;/svg>
-        &lt;/fo:instream-foreign-object>
-      &lt;/fo:block>
-     &lt;/fo:table-cell>&lt;fo:table-cell>
-      &lt;fo:block font-size="large" space-after="0.5in" space-after.conditionality="retain" text-align="right">&lt;xsl:value-of select="//fo:block[@role='html:h1']"/>&lt;/fo:block>
-     &lt;/fo:table-cell>&lt;/fo:table-row>&lt;/fo:table-body>&lt;/fo:table>
-    &lt;/xsl:copy>
-  &lt;/xsl:template>
+            block-progression-dimension.minimum="auto" block-progression-dimension.maximum="700px"&gt;
+          &lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" text-rendering="geometricPrecision" viewBox="-0.5 9.5 301 60" width="100" height="20"&gt;
+          &lt;/svg&gt;
+        &lt;/fo:instream-foreign-object&gt;
+      &lt;/fo:block&gt;
+     &lt;/fo:table-cell&gt;&lt;fo:table-cell&gt;
+      &lt;fo:block font-size="large" space-after="0.5in" space-after.conditionality="retain" text-align="right"&gt;&lt;xsl:value-of select="//fo:block[@role='html:h1']"/&gt;&lt;/fo:block&gt;
+     &lt;/fo:table-cell&gt;&lt;/fo:table-row&gt;&lt;/fo:table-body&gt;&lt;/fo:table&gt;
+    &lt;/xsl:copy&gt;
+  &lt;/xsl:template&gt;
 
-  &lt;!-- Change the footer -->
-  &lt;xsl:template match="fo:static-content[@flow-name='page-footer']">
-    &lt;xsl:copy>
-      &lt;xsl:apply-templates select="@*"/>
-      &lt;fo:block font-size="small" space-after="0.5in" space-after.conditionality="retain" text-align="center">Page &lt;fo:page-number/> of &lt;fo:page-number-citation-last ref-id="x-page-sequence"/>&lt;/fo:block>
-    &lt;/xsl:copy>
-  &lt;/xsl:template>
+  &lt;!-- Change the footer --&gt;
+  &lt;xsl:template match="fo:static-content[@flow-name='page-footer']"&gt;
+    &lt;xsl:copy&gt;
+      &lt;xsl:apply-templates select="@*"/&gt;
+      &lt;fo:block font-size="small" space-after="0.5in" space-after.conditionality="retain" text-align="center"&gt;Page &lt;fo:page-number/&gt; of &lt;fo:page-number-citation-last ref-id="x-page-sequence"/&gt;&lt;/fo:block&gt;
+    &lt;/xsl:copy&gt;
+  &lt;/xsl:template&gt;
 
-  &lt;!-- Ignore some elements -->
-  &lt;xsl:template match="fo:block[@id='document-actions']" />
-  &lt;xsl:template match="fo:block[@role='html:h1']" />
+  &lt;!-- Ignore some elements --&gt;
+  &lt;xsl:template match="fo:block[@id='document-actions']" /&gt;
+  &lt;xsl:template match="fo:block[@role='html:h1']" /&gt;
 
-  &lt;!-- Add an ID to the whole page sequence, to be able to get the total number of pages -->
-  &lt;xsl:template match="fo:page-sequence">
-    &lt;xsl:copy>
-      &lt;xsl:attribute name="id">&lt;xsl:text>x-page-sequence&lt;/xsl:text>&lt;/xsl:attribute>
-      &lt;xsl:apply-templates select="@*|node()"/>
-    &lt;/xsl:copy>
-  &lt;/xsl:template>
-&lt;/xsl:stylesheet></fopxsl>
+  &lt;!-- Add an ID to the whole page sequence, to be able to get the total number of pages --&gt;
+  &lt;xsl:template match="fo:page-sequence"&gt;
+    &lt;xsl:copy&gt;
+      &lt;xsl:attribute name="id"&gt;&lt;xsl:text&gt;x-page-sequence&lt;/xsl:text&gt;&lt;/xsl:attribute&gt;
+      &lt;xsl:apply-templates select="@*|node()"/&gt;
+    &lt;/xsl:copy&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</fopxsl>
     </property>
     <property>
       <style>#template('colorThemeInit.vm')
@@ -3403,7 +3424,7 @@ hr {
 </style>
     </property>
     <property>
-      <xhtmlxsl></xhtmlxsl>
+      <xhtmlxsl/>
     </property>
   </object>
   <object>
@@ -3413,13 +3434,13 @@ hr {
     <guid>972515de-46fe-48d5-85b6-4d4dc5a696f5</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -3677,7 +3698,7 @@ h2 a.action-edit {
 h1, h2, h3, h4 {
   text-shadow: 1px 1px 0 $theme.pageContentBackgroundColor;
 }
-.chapter > h2 {
+.chapter &gt; h2 {
   border-bottom: 1px solid $theme.titleColor;
   cursor: default;
   font-family: Georgia,serif;
@@ -3685,10 +3706,10 @@ h1, h2, h3, h4 {
   margin: -1.5em -10px 0;
   padding-left: 10px;
 }
-.editbody .chapter > h2 {
+.editbody .chapter &gt; h2 {
   cursor: pointer;
 }
-.chapter > h2+.hint {
+.chapter &gt; h2+.hint {
   margin: 1em 0;
 }
 .chapter h3 {
@@ -3796,7 +3817,7 @@ h1, h2, h3, h4 {
 }
 .chapter.collapsed .expand-tools .inner-expand-tools,
 .chapter.collapsed .expand-tools .hide,
-.chapter.collapsed > *,
+.chapter.collapsed &gt; *,
 .chapter.collapsed table,
 .chapter .expand-tools .show {
   display: none;
@@ -3804,7 +3825,7 @@ h1, h2, h3, h4 {
 .chapter.collapsed .expand-tools, .chapter.collapsed .expand-tools .show {
   display: inline
 }
-.chapter.collapsed > h2 {
+.chapter.collapsed &gt; h2 {
   display: block;
 }
 /** --------------------------------------------- **/
@@ -3858,13 +3879,13 @@ h1, h2, h3, h4 {
     <guid>ccd8a586-777c-4597-98e9-2303833adacb</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -4087,13 +4108,13 @@ form .extradata-list tr:hover td {
     <guid>a92ecd55-7896-45b8-878a-a7e2228a740d</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -4263,13 +4284,13 @@ form .extradata-list tr:hover td {
     <guid>6b031d72-7733-4ce5-905f-b999ec0c3165</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -4478,13 +4499,13 @@ form .extradata-list tr:hover td {
     <guid>af20ed8f-b8cd-4d2f-ae19-f053f0bb5f03</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>

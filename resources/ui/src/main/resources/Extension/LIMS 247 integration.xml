@@ -1,24 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>Extension</web>
   <name>LIMS 247 integration</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1412031147000</creationDate>
   <parent>Extension.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1412902762000</date>
   <contentUpdateDate>1412902761000</contentUpdateDate>
-  <version>1.6</version>
-  <title />
-  <comment>Validated extension</comment>
-  <minorEdit>true</minorEdit>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>false</hidden>
-  <content />
+  <content/>
   <object>
     <name>Extension.LIMS 247 integration</name>
     <number>0</number>
@@ -26,13 +47,13 @@
     <guid>6ed81d41-2a89-486b-a6c8-f2b73fb8b8f3</guid>
     <class>
       <name>ExtensionCode.ExtensionClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <authors>
         <cache>0</cache>
         <customDisplay>{{include document="ExtensionCode.ExtensionAuthorsDisplayer"/}}</customDisplay>
@@ -49,27 +70,27 @@
         <size>30</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
-        <values />
+        <validationMessage/>
+        <validationRegExp/>
+        <values/>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </authors>
       <customInstallationOnly>
-        <customDisplay />
+        <customDisplay/>
         <defaultValue>0</defaultValue>
         <disabled>0</disabled>
         <displayFormType>checkbox</displayFormType>
-        <displayType />
+        <displayType/>
         <name>customInstallationOnly</name>
         <number>15</number>
         <prettyName>Only Custom Installation instructions</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </customInstallationOnly>
       <description>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>description</name>
@@ -79,13 +100,13 @@
         <rows>50</rows>
         <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </description>
       <features>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -99,13 +120,13 @@
         <size>60</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
-        <values />
+        <validationMessage/>
+        <validationRegExp/>
+        <values/>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </features>
       <icon>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>icon</name>
         <number>12</number>
@@ -113,12 +134,12 @@
         <prettyName>Display Icon Location</prettyName>
         <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </icon>
       <id>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>id</name>
         <number>1</number>
@@ -126,12 +147,12 @@
         <prettyName>Id</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </id>
       <installation>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>installation</name>
@@ -141,12 +162,12 @@
         <rows>15</rows>
         <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </installation>
       <lastVersion>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>lastVersion</name>
         <number>9</number>
@@ -154,13 +175,13 @@
         <prettyName>Last version</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </lastVersion>
       <licenseName>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -174,13 +195,13 @@
         <size>1</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>GNU General Public License 1|GNU General Public License 2|GNU General Public License 3|GNU Lesser General Public License 2|GNU Lesser General Public License 2.1|GNU Lesser General Public License 3|Apache License 2.0|BSD license|Modified BSD License|Simplified BSD License|GNU Affero General Public License 3|GNU Free Documentation License 1.1|GNU Free Documentation License 1.2|GNU Free Documentation License 1.3|Educational Community License 1.0|Educational Community License 2.0|Do What The Fuck You Want To Public License 2</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </licenseName>
       <name>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>name</name>
         <number>3</number>
@@ -188,12 +209,12 @@
         <prettyName>Name</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
       <source>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>source</name>
         <number>14</number>
@@ -201,12 +222,12 @@
         <prettyName>Source</prettyName>
         <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </source>
       <summary>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>summary</name>
         <number>4</number>
@@ -214,14 +235,14 @@
         <prettyName>Summary</prettyName>
         <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </summary>
       <type>
         <cache>0</cache>
         <classname>ExtensionCode.ExtensionTypeClass</classname>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <idField>id</idField>
@@ -232,32 +253,32 @@
         <prettyName>Type</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>1</size>
         <sort>value</sort>
-        <sql />
+        <sql/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <valueField>name</valueField>
         <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
       </type>
       <validExtension>
-        <customDisplay />
+        <customDisplay/>
         <defaultValue>0</defaultValue>
         <disabled>0</disabled>
         <displayFormType>checkbox</displayFormType>
-        <displayType />
+        <displayType/>
         <name>validExtension</name>
         <number>11</number>
         <prettyName>Installable with Extension Manager</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </validExtension>
       <website>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>website</name>
         <number>6</number>
@@ -265,13 +286,13 @@
         <prettyName>Website</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </website>
     </class>
     <property>
-      <authors />
+      <authors/>
     </property>
     <property>
       <customInstallationOnly>0</customInstallationOnly>
@@ -280,16 +301,16 @@
       <description>PhenoTips is a software tool providing an easy-to-use Web interface and standardized database back-end for collecting clinical symptoms and physical findings observed in patients with genetic disorders.</description>
     </property>
     <property>
-      <features />
+      <features/>
     </property>
     <property>
-      <icon></icon>
+      <icon/>
     </property>
     <property>
       <id>org.phenotips:lims-integration-ui</id>
     </property>
     <property>
-      <installation></installation>
+      <installation/>
     </property>
     <property>
       <lastVersion>1.0</lastVersion>
@@ -301,7 +322,7 @@
       <name>LIMS 24/7 integration</name>
     </property>
     <property>
-      <source></source>
+      <source/>
     </property>
     <property>
       <summary>PhenoTips is a software tool providing an easy-to-use Web interface and standardized database back-end for collecting clinical symptoms and physical findings observed in patients with genetic disorders.</summary>
@@ -313,7 +334,7 @@
       <validExtension>1</validExtension>
     </property>
     <property>
-      <website></website>
+      <website/>
     </property>
   </object>
   <object>
@@ -323,15 +344,15 @@
     <guid>0621dfae-0b82-4262-9e39-8c8cf0554570</guid>
     <class>
       <name>ExtensionCode.ExtensionDependencyClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <constraint>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>constraint</name>
         <number>3</number>
@@ -339,12 +360,12 @@
         <prettyName>Dependency version constraint</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </constraint>
       <extensionVersion>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>extensionVersion</name>
         <number>1</number>
@@ -352,12 +373,12 @@
         <prettyName>Extension version</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </extensionVersion>
       <id>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>id</name>
         <number>2</number>
@@ -365,8 +386,8 @@
         <prettyName>Dependency id</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </id>
     </class>
@@ -387,29 +408,29 @@
     <guid>40bef723-7d16-42e4-8d7c-6ed123f23b29</guid>
     <class>
       <name>ExtensionCode.ExtensionProxyClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <autoUpdate>
-        <customDisplay />
+        <customDisplay/>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
         <displayFormType>checkbox</displayFormType>
-        <displayType />
+        <displayType/>
         <name>autoUpdate</name>
         <number>4</number>
         <prettyName>Auto update</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </autoUpdate>
       <repositoryId>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>repositoryId</name>
         <number>1</number>
@@ -417,12 +438,12 @@
         <prettyName>Repository Id</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </repositoryId>
       <repositoryType>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>repositoryType</name>
         <number>2</number>
@@ -430,12 +451,12 @@
         <prettyName>Repository type</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </repositoryType>
       <repositoryURI>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>repositoryURI</name>
         <number>3</number>
@@ -443,8 +464,8 @@
         <prettyName>Repository URI</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </repositoryURI>
     </class>
@@ -468,15 +489,15 @@
     <guid>2ba468e0-bdc7-4071-93a3-94a364a0d22b</guid>
     <class>
       <name>ExtensionCode.ExtensionVersionClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <download>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>download</name>
         <number>3</number>
@@ -484,8 +505,8 @@
         <prettyName>Download URL</prettyName>
         <size>50</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </download>
       <id>
@@ -498,7 +519,7 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </id>
       <notes>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>notes</name>
@@ -508,12 +529,12 @@
         <rows>15</rows>
         <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </notes>
       <version>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>version</name>
         <number>4</number>
@@ -521,8 +542,8 @@
         <prettyName>Version</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </version>
     </class>

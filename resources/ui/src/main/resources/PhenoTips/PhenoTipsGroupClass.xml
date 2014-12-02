@@ -1,35 +1,56 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>PhenoTipsGroupClass</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1380351513000</creationDate>
   <parent>PhenoTips.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1396448840000</date>
   <contentUpdateDate>1396448840000</contentUpdateDate>
-  <version>3.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:phenotips-ui-1.0-milestone-11]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <class>
     <name>PhenoTips.PhenoTipsGroupClass</name>
-    <customClass />
-    <customMapping />
-    <defaultViewSheet />
-    <defaultEditSheet />
-    <defaultWeb />
-    <nameField />
-    <validationScript />
+    <customClass/>
+    <customMapping/>
+    <defaultViewSheet/>
+    <defaultEditSheet/>
+    <defaultWeb/>
+    <nameField/>
+    <validationScript/>
     <contact>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>contact</name>
       <number>4</number>
@@ -37,12 +58,12 @@
       <prettyName>Contact</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
+      <validationMessage/>
       <validationRegExp>/^(([^@\s]+)@((?:[-a-zA-Z0-9]+\.)+[a-zA-Z]{2,}))?$/</validationRegExp>
       <classType>com.xpn.xwiki.objects.classes.EmailClass</classType>
     </contact>
     <description>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>description</name>
@@ -53,7 +74,7 @@
       <size>40</size>
       <unmodifiable>0</unmodifiable>
       <validationMessage>Some information about this group for other users visiting this page</validationMessage>
-      <validationRegExp />
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </description>
     <image>
@@ -66,13 +87,13 @@
       <prettyName>Image</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </image>
     <public_sections>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>checkbox</displayType>
       <multiSelect>1</multiSelect>
@@ -86,18 +107,18 @@
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>members=Show member list to non-members|cases=Show list of public cases to non-members</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </public_sections>
     <studies>
       <cache>0</cache>
-      <classname />
-      <customDisplay />
+      <classname/>
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>checkbox</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>studies</name>
       <number>5</number>
@@ -105,14 +126,14 @@
       <prettyName>studies</prettyName>
       <relationalStorage>1</relationalStorage>
       <separator> </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
       <sql>select doc.fullName, doc.name from XWikiDocument doc, BaseObject obj where doc.fullName &lt;&gt; 'PhenoTips.StudyTemplate' and obj.name = doc.fullName and obj.className = 'PhenoTips.StudyClass'</sql>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </studies>
   </class>
@@ -123,15 +144,15 @@
     <guid>1212ded4-4f1c-4b74-8977-ef38b76e95e5</guid>
     <class>
       <name>XWiki.ClassSheetBinding</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <sheet>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>sheet</name>
         <number>1</number>
@@ -139,8 +160,8 @@
         <prettyName>Sheet</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
@@ -155,29 +176,29 @@
     <guid>0740edd5-ed6c-41db-a916-706121771de5</guid>
     <class>
       <name>XWiki.ConfigurableClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <advancedOnly>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>advancedOnly</name>
         <number>5</number>
         <prettyName>advancedOnly</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </advancedOnly>
       <categoryPriority>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>categoryPriority</name>
         <number>2</number>
@@ -185,12 +206,12 @@
         <prettyName>categoryPriority</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.NumberClass</classType>
       </categoryPriority>
       <codeToExecute>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>codeToExecute</name>
@@ -200,12 +221,12 @@
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </codeToExecute>
       <configurationClass>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>configurationClass</name>
         <number>7</number>
@@ -213,26 +234,26 @@
         <prettyName>configurationClass</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </configurationClass>
       <configureGlobally>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>checkbox</displayFormType>
-        <displayType />
+        <displayType/>
         <name>configureGlobally</name>
         <number>8</number>
         <prettyName>configureGlobally</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </configureGlobally>
       <displayInCategory>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>displayInCategory</name>
         <number>1</number>
@@ -240,12 +261,12 @@
         <prettyName>displayInCategory</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </displayInCategory>
       <displayInSection>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>displayInSection</name>
         <number>3</number>
@@ -253,12 +274,12 @@
         <prettyName>displayInSection</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </displayInSection>
       <heading>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>heading</name>
         <number>6</number>
@@ -266,12 +287,12 @@
         <prettyName>heading</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </heading>
       <iconAttachment>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>iconAttachment</name>
         <number>12</number>
@@ -279,12 +300,12 @@
         <prettyName>iconAttachment</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </iconAttachment>
       <linkPrefix>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>linkPrefix</name>
         <number>9</number>
@@ -292,13 +313,13 @@
         <prettyName>linkPrefix</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </linkPrefix>
       <propertiesToShow>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -312,13 +333,13 @@
         <size>20</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
-        <values />
+        <validationMessage/>
+        <validationRegExp/>
+        <values/>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </propertiesToShow>
       <sectionPriority>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>sectionPriority</name>
         <number>4</number>
@@ -326,13 +347,13 @@
         <prettyName>sectionPriority</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.NumberClass</classType>
       </sectionPriority>
     </class>
     <property>
-      <advancedOnly />
+      <advancedOnly/>
     </property>
     <property>
       <categoryPriority>0</categoryPriority>
@@ -361,20 +382,20 @@
 #set ($groupsHome = 'Groups.WebHome')
 
 {{html}}
-&lt;form id="group-creation-form" class="xformInline" action="$doc.getURL($xcontext.action, $request.queryString)" method="post">&lt;div>
-  &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}" />
-  &lt;input type="hidden" name="doCreate" value="1" />
-  &lt;input type="hidden" name="classTemplate" value="$groupTemplateName" />
-  &lt;input type="hidden" name="space" value="$xwiki.getDocument(${groupsHome}).space" />
-  &lt;input type="hidden" name="parent" value="${groupsHome}" />
-  &lt;label>&lt;span class="fa fa-plus-circle"> &lt;/span>New group: &lt;input type="text" name="name" placeholder="Name" value="" size="30"/>&lt;/label> &lt;input type="submit" class="button" value="Create"/>
-&lt;/div>&lt;/form>
+&lt;form id="group-creation-form" class="xformInline" action="$doc.getURL($xcontext.action, $request.queryString)" method="post"&gt;&lt;div&gt;
+  &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}" /&gt;
+  &lt;input type="hidden" name="doCreate" value="1" /&gt;
+  &lt;input type="hidden" name="classTemplate" value="$groupTemplateName" /&gt;
+  &lt;input type="hidden" name="space" value="$xwiki.getDocument(${groupsHome}).space" /&gt;
+  &lt;input type="hidden" name="parent" value="${groupsHome}" /&gt;
+  &lt;label&gt;&lt;span class="fa fa-plus-circle"&gt; &lt;/span&gt;New group: &lt;input type="text" name="name" placeholder="Name" value="" size="30"/&gt;&lt;/label&gt; &lt;input type="submit" class="button" value="Create"/&gt;
+&lt;/div&gt;&lt;/form&gt;
 {{/html}}
 
 {{include reference="Groups.WebHome" /}}</codeToExecute>
     </property>
     <property>
-      <configurationClass></configurationClass>
+      <configurationClass/>
     </property>
     <property>
       <configureGlobally>1</configureGlobally>
@@ -389,13 +410,13 @@
       <heading>Work groups</heading>
     </property>
     <property>
-      <iconAttachment></iconAttachment>
+      <iconAttachment/>
     </property>
     <property>
-      <linkPrefix></linkPrefix>
+      <linkPrefix/>
     </property>
     <property>
-      <propertiesToShow />
+      <propertiesToShow/>
     </property>
     <property>
       <sectionPriority>400</sectionPriority>
@@ -408,13 +429,13 @@
     <guid>554a74fa-cfea-4b34-aed6-04a5a54311c2</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -535,7 +556,7 @@
 });</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>0</parse>
@@ -551,13 +572,13 @@
     <guid>0f1cfed1-fd4f-49a8-941a-9fe90c159c11</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -642,13 +663,13 @@
   opacity: .5;
 }
 
-#groups-directory td.desc > div {
+#groups-directory td.desc &gt; div {
   background-color: $theme.backgroundSecondaryColor;
   border-radius: 0 4px 4px;
   padding: 0.5em 1em;
   position: relative;
 }
-#groups-directory td.desc > div:before {
+#groups-directory td.desc &gt; div:before {
   content: "";
   border-top: 0 none;
   border-right: 16px solid $theme.backgroundSecondaryColor;
@@ -670,7 +691,7 @@
 }</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>
@@ -686,13 +707,13 @@
     <guid>dbcd4ec8-4a94-4634-80c7-839729f02690</guid>
     <class>
       <name>XWiki.WikiMacroClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <code>
         <disabled>0</disabled>
         <name>code</name>
@@ -844,7 +865,7 @@
 #set ($groupSortedData = $sorttool.sort($groupData, ["${order}:${orders.get($order)}"]))
 
 #set ($max = $mathtool.toInteger($xcontext.macro.params.max))
-#if (!($max &amp;&amp; $max > 0 &amp;&amp; $max &lt; $groupSortedData.size()))
+#if (!($max &amp;&amp; $max &gt; 0 &amp;&amp; $max &lt; $groupSortedData.size()))
   #set ($max = $groupSortedData.size())
 #end
 
@@ -861,30 +882,30 @@ $xwiki.jsx.use($groupClassName)
 
 #else
 
-{{info}}No groups have been defined yet.#if($hasAdmin &amp;&amp; $doc.documentReference.name != 'XWikiPreferences') [[Manage groups »>>path:${xwiki.getDocument('XWiki.XWikiPreferences').getURL('admin', 'editor=globaladmin&amp;section=workgroups')}]]#end{{/info}}
+{{info}}No groups have been defined yet.#if($hasAdmin &amp;&amp; $doc.documentReference.name != 'XWikiPreferences') [[Manage groups »&gt;&gt;path:${xwiki.getDocument('XWiki.XWikiPreferences').getURL('admin', 'editor=globaladmin&amp;section=workgroups')}]]#end{{/info}}
 
 #end
 #else
 #foreach ($groupDatum in $groupSortedData)#if ($foreach.index &lt; $max)
 |(% class="logo" %) #if ("$!{groupDatum.get('logo')}" != '')[[[[image:${groupDatum.get('logo')}|| width="80px"]]&gt;&gt;$groupDatum.get('doc.fullName')]]#end##
-|(% class="name" %) [[$groupDatum.get('name')>>$groupDatum.get('doc.fullName')]] \\(% class="members"%)$groupDatum.get('members') member#if($groupDatum.get('members') != 1)s#end(%%) \\(% class="patients"%)$groupDatum.get('cases') case#if($groupDatum.get('cases') != 1)s#end(%%)##
+|(% class="name" %) [[$groupDatum.get('name')&gt;&gt;$groupDatum.get('doc.fullName')]] \\(% class="members"%)$groupDatum.get('members') member#if($groupDatum.get('members') != 1)s#end(%%) \\(% class="patients"%)$groupDatum.get('cases') case#if($groupDatum.get('cases') != 1)s#end(%%)##
 #if ($xcontext.macro.params.fullinfo == 'true')|#if ("$!{groupDatum.get('obj').getProperty('description').value.trim()}" != '')(% class="desc" %) ((($groupDatum.get('doc').display('description'))))#end#end
 #if ($xcontext.macro.params.tools == 'true' &amp;&amp; $hasAdmin)|(% class="tools" %) (((##
-  [[{{icon name="pencil" title="Edit this group"/}}>>path:$xwiki.getURL($groupDatum.get('doc.fullName'), 'edit')||class="tool edit"]]##
-  [[{{icon name="times" title="Delete this group"/}}>>path:$xwiki.getURL($groupDatum.get('doc.fullName'), 'delete')||class="tool delete"]]##
+  [[{{icon name="pencil" title="Edit this group"/}}&gt;&gt;path:$xwiki.getURL($groupDatum.get('doc.fullName'), 'edit')||class="tool edit"]]##
+  [[{{icon name="times" title="Delete this group"/}}&gt;&gt;path:$xwiki.getURL($groupDatum.get('doc.fullName'), 'delete')||class="tool delete"]]##
 )))#end\\
 #end#end
 #end
 {{/velocity}}</code>
     </property>
     <property>
-      <contentDescription></contentDescription>
+      <contentDescription/>
     </property>
     <property>
       <contentType>No content</contentType>
     </property>
     <property>
-      <defaultCategory></defaultCategory>
+      <defaultCategory/>
     </property>
     <property>
       <description>Lists PhenoTips groups</description>
@@ -909,13 +930,13 @@ $xwiki.jsx.use($groupClassName)
     <guid>ab1c9598-a891-483f-b9e6-c9f040626944</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -975,13 +996,13 @@ $xwiki.jsx.use($groupClassName)
     <guid>580415f3-fe52-483d-9638-b9b60882b526</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -1041,13 +1062,13 @@ $xwiki.jsx.use($groupClassName)
     <guid>316f42fd-f7b0-4157-970c-cbd0507d2fc6</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -1107,13 +1128,13 @@ $xwiki.jsx.use($groupClassName)
     <guid>02c37cc2-92d8-4c15-8d6d-c66f7b0e39a4</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -1154,7 +1175,7 @@ $xwiki.jsx.use($groupClassName)
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
       <description>How many entries to display for a list not displayed in full. Values that are not between 1 and the size of the list are interpreted as "display the entire list".</description>
@@ -1173,13 +1194,13 @@ $xwiki.jsx.use($groupClassName)
     <guid>80597b3a-ed61-4421-9f27-2bb7358ee023</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -1220,10 +1241,10 @@ $xwiki.jsx.use($groupClassName)
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
-      <description></description>
+      <description/>
     </property>
     <property>
       <mandatory>0</mandatory>
@@ -1239,13 +1260,13 @@ $xwiki.jsx.use($groupClassName)
     <guid>4e897e5e-0179-4c74-9241-d01b8b020573</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -1286,10 +1307,10 @@ $xwiki.jsx.use($groupClassName)
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
-      <description></description>
+      <description/>
     </property>
     <property>
       <mandatory>0</mandatory>

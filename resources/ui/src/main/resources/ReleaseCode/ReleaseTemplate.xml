@@ -1,20 +1,41 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>ReleaseCode</web>
   <name>ReleaseTemplate</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1399870072000</creationDate>
   <parent>Release.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1411435898000</date>
   <contentUpdateDate>1411435898000</contentUpdateDate>
-  <version>12.1</version>
-  <title />
-  <comment>Install extensoin [org.xwiki.platform:xwiki-platform-release-ui-5.4.5]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
@@ -25,13 +46,13 @@
 
 {{info}}Use these icons to mark the release progress: (x) not done, (/) done, (!) not done for a good reason (explain reason){{/info}}
 
-* (x) Check that you have the [[needed accounts>>Release.ReleasePlanHelp||anchor="HSetupyouridentity"]]
-* (x) Verify that there are no {{velocity}}[[open issues on GitHub for version $version>>https://github.com/phenotips/phenotips/milestones]]{{/velocity}}
-* (x) Verify that [[the build passes on the CI Server>>http://ci.cs.toronto.edu/jenkins/job/phenotips/]]
-* (x) Close the Milestone on [[GitHub>>https://github.com/phenotips/phenotips/milestones]]
+* (x) Check that you have the [[needed accounts&gt;&gt;Release.ReleasePlanHelp||anchor="HSetupyouridentity"]]
+* (x) Verify that there are no {{velocity}}[[open issues on GitHub for version $version&gt;&gt;https://github.com/phenotips/phenotips/milestones]]{{/velocity}}
+* (x) Verify that [[the build passes on the CI Server&gt;&gt;http://ci.cs.toronto.edu/jenkins/job/phenotips/]]
+* (x) Close the Milestone on [[GitHub&gt;&gt;https://github.com/phenotips/phenotips/milestones]]
 * (x) Make sure the build machine has "rpmbuild" utility installed
 * (x) Increase the amount of memory available to Maven: ##export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=256m"##
-* (x) [[Perform the release>>Release.ReleasePlanHelp||anchor="HBuildtherelease"]]
+* (x) [[Perform the release&gt;&gt;Release.ReleasePlanHelp||anchor="HBuildtherelease"]]
 * (x) Unzip the standalone distributions and perform a quick smoke test:
 ** (x) Does the homepage display correctly?
 ** (x) Does creating a new patient work?
@@ -49,9 +70,9 @@
 ** (x) Does pushing a patient from one local instance to another works (id, sex, phenpotypes and disorders are pushed correctly)? Does pushing a new patient and updating existing work? Error handling when server is unavailable? Pushing multiple patients form the "all data" page (filters work, patients get pushed)?
 * (x) Remove the Clirr exclusions/ignores from the main ##pom.xml## file, if any
 * (x) Upgrade ##playground.phenotips.org## and ##phenotips.org##
-* (x) [[Create blog post on phenotips.org>>Blog.WebHome]]
+* (x) [[Create blog post on phenotips.org&gt;&gt;Blog.WebHome]]
 * (x) Send the Announcement Mail
-* (x) Announce on Twitter with the [[PhenoTips account>>https://twitter.com/PhenoTips/]]
+* (x) Announce on Twitter with the [[PhenoTips account&gt;&gt;https://twitter.com/PhenoTips/]]
 </content>
   <object>
     <name>ReleaseCode.ReleaseTemplate</name>
@@ -60,15 +81,15 @@
     <guid>20b336c1-eb07-4937-a1e6-a8c57588a17f</guid>
     <class>
       <name>ReleaseCode.ReleaseClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <releaseDate>
-        <customDisplay />
+        <customDisplay/>
         <dateFormat>dd/MM/yyyy</dateFormat>
         <disabled>0</disabled>
         <emptyIsToday>0</emptyIsToday>
@@ -78,13 +99,13 @@
         <prettyName>Release Date</prettyName>
         <size>20</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.DateClass</classType>
       </releaseDate>
       <releaseManagers>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -94,17 +115,17 @@
         <prettyName>Release Managers</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>20</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
         <usesList>0</usesList>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.UsersClass</classType>
       </releaseManagers>
       <releaseNotes>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>releaseNotes</name>
         <number>4</number>
@@ -112,12 +133,12 @@
         <prettyName>Release Notes</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </releaseNotes>
       <version>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>version</name>
         <number>1</number>
@@ -125,22 +146,22 @@
         <prettyName>Version</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </version>
     </class>
     <property>
-      <releaseDate></releaseDate>
+      <releaseDate/>
     </property>
     <property>
-      <releaseManagers></releaseManagers>
+      <releaseManagers/>
     </property>
     <property>
-      <releaseNotes></releaseNotes>
+      <releaseNotes/>
     </property>
     <property>
-      <version></version>
+      <version/>
     </property>
   </object>
 </xwikidoc>

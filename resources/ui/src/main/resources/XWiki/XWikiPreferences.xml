@@ -1,140 +1,161 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>XWiki</web>
   <name>XWikiPreferences</name>
-  <language />
-  <defaultLanguage>en</defaultLanguage>
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1106333217000</creationDate>
   <parent>XWiki.WebHome</parent>
-  <author>XWiki.marta</author>
-  <contentAuthor>XWiki.marta</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1415645525000</date>
   <contentUpdateDate>1415645525000</contentUpdateDate>
-  <version>36.5</version>
+  <version>1.1</version>
   <title>Global Administration</title>
-  <comment>deny register right for XWiki.XWikiGuest</comment>
-  <minorEdit>true</minorEdit>
+  <comment/>
+  <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <class>
     <name>XWiki.XWikiPreferences</name>
-    <customClass />
+    <customClass/>
     <customMapping>internal</customMapping>
-    <defaultViewSheet />
-    <defaultEditSheet />
-    <defaultWeb />
-    <nameField />
-    <validationScript />
+    <defaultViewSheet/>
+    <defaultEditSheet/>
+    <defaultWeb/>
+    <nameField/>
+    <validationScript/>
     <accessibility>
-      <customDisplay />
+      <customDisplay/>
       <defaultValue>0</defaultValue>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>accessibility</name>
       <number>79</number>
       <prettyName>Enable extra accessibility features</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </accessibility>
     <admin_email>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>admin_email</name>
       <number>14</number>
       <picker>0</picker>
       <prettyName>Admin eMail</prettyName>
       <size>30</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </admin_email>
     <auth_active_check>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>auth_active_check</name>
       <number>31</number>
       <prettyName>Authentication Active Check</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </auth_active_check>
     <authenticate_edit>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>authenticate_edit</name>
       <number>7</number>
       <prettyName>Authenticate On Edit</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </authenticate_edit>
     <authenticate_view>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>authenticate_view</name>
       <number>5</number>
       <prettyName>Authenticated View</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </authenticate_view>
     <backlinks>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>backlinks</name>
       <number>25</number>
       <prettyName>Backlinks</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </backlinks>
     <colorTheme>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{velocity}}
 {{html wiki="false" clean="false"}}
 #if ("$!value" == '')
   #set ($value = '')
 #end
-&lt;select name="${object.getxWikiClass().name}_${object.number}_${name}" id="${object.getxWikiClass().name}_${object.number}_${name}">
-  #if ($editor != 'globaladmin')&lt;option value=""#if ($value == '') selected="selected"#end>---&lt;/option>#end
+&lt;select name="${object.getxWikiClass().name}_${object.number}_${name}" id="${object.getxWikiClass().name}_${object.number}_${name}"&gt;
+  #if ($editor != 'globaladmin')&lt;option value=""#if ($value == '') selected="selected"#end&gt;---&lt;/option&gt;#end
 #foreach($theme in $xwiki.wrapDocs($services.query.hql(", BaseObject as theme where doc.fullName=theme.name and theme.className='ColorThemes.ColorThemeClass' and doc.fullName&lt;&gt;'ColorThemes.ColorThemeTemplate' order by doc.title").execute()))
-  &lt;option value="$theme.fullName"#if ($theme.fullName.equals($value)) selected="selected"#end>$theme.plainTitle&lt;/option>
+  &lt;option value="$theme.fullName"#if ($theme.fullName.equals($value)) selected="selected"#end&gt;$theme.plainTitle&lt;/option&gt;
 #end
-&lt;/select>
+&lt;/select&gt;
 {{/html}}
 {{/velocity}}</customDisplay>
       <disabled>0</disabled>
       <displayType>select</displayType>
-      <idField />
+      <idField/>
       <multiSelect>0</multiSelect>
       <name>colorTheme</name>
       <number>76</number>
@@ -142,19 +163,19 @@
       <prettyName>Color theme</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
       <sql>select doc.fullName, doc.title from XWikiDocument as doc, BaseObject as theme where doc.fullName=theme.name and theme.className='ColorThemes.ColorThemeClass' and doc.fullName&lt;&gt;'ColorThemes.ColorThemeTemplate'</sql>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </colorTheme>
     <comment_anonymous>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -167,16 +188,16 @@
       <separators> ,|</separators>
       <size>1</size>
       <sort>none</sort>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>---|Image|Text</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </comment_anonymous>
     <comment_registered>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -189,16 +210,16 @@
       <separators> ,|</separators>
       <size>1</size>
       <sort>none</sort>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>---|Image|Text</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </comment_registered>
     <confirmation_email_content>
       <contenttype>FullyRenderedText</contenttype>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>confirmation_email_content</name>
@@ -207,10 +228,10 @@
       <prettyName>Confirmation eMail Content</prettyName>
       <rows>10</rows>
       <size>72</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </confirmation_email_content>
     <core.defaultDocumentSyntax>
@@ -219,16 +240,16 @@
 #if ("$!value" == '')
   #set ($value = $xwiki.getDefaultDocumentSyntax())
 #end
-&lt;select name="${object.getxWikiClass().name}_${object.number}_${name}" id="${object.getxWikiClass().name}_${object.number}_${name}">
+&lt;select name="${object.getxWikiClass().name}_${object.number}_${name}" id="${object.getxWikiClass().name}_${object.number}_${name}"&gt;
 #set ($configuredSyntaxes = $xwiki.getConfiguredSyntaxes())
 #set ($availableParserSyntaxes = $services.rendering.getAvailableParserSyntaxes())
 ##
 #foreach($syntax in $availableParserSyntaxes)
   #if($configuredSyntaxes.contains($syntax.toIdString()))
-    &lt;option value="$syntax.toIdString()"#if($syntax.toIdString().equalsIgnoreCase($value)) selected="selected"#end>$syntax.toString()&lt;/option>
+    &lt;option value="$syntax.toIdString()"#if($syntax.toIdString().equalsIgnoreCase($value)) selected="selected"#end&gt;$syntax.toString()&lt;/option&gt;
   #end
 #end
-&lt;/select>
+&lt;/select&gt;
 {{/html}}
 {{/velocity}}</customDisplay>
       <disabled>0</disabled>
@@ -238,12 +259,12 @@
       <prettyName>Default document syntax</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </core.defaultDocumentSyntax>
     <dateformat>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>dateformat</name>
       <number>54</number>
@@ -251,41 +272,41 @@
       <prettyName>Date Format</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </dateformat>
     <default_language>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>default_language</name>
       <number>20</number>
       <picker>0</picker>
       <prettyName>Default Language</prettyName>
       <size>5</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </default_language>
     <documentBundles>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>documentBundles</name>
       <number>52</number>
       <picker>0</picker>
       <prettyName>Internationalization Document Bundles</prettyName>
       <size>60</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </documentBundles>
     <edit_anonymous>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -298,16 +319,16 @@
       <separators> ,|</separators>
       <size>1</size>
       <sort>none</sort>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>---|Image|Text</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </edit_anonymous>
     <edit_registered>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -320,44 +341,44 @@
       <separators> ,|</separators>
       <size>1</size>
       <sort>none</sort>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>---|Image|Text</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </edit_registered>
     <editcomment>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>editcomment</name>
       <number>85</number>
       <prettyName>Enable version summary</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </editcomment>
     <editcomment_mandatory>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>editcomment_mandatory</name>
       <number>86</number>
       <prettyName>Make version summary mandatory</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </editcomment_mandatory>
     <editor>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -370,30 +391,30 @@
       <separators> ,|</separators>
       <size>1</size>
       <sort>none</sort>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>Text|Wysiwyg</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </editor>
     <guest_comment_requires_captcha>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>guest_comment_requires_captcha</name>
       <number>77</number>
       <prettyName>Enable CAPTCHA in Comments for Unregistered Users</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </guest_comment_requires_captcha>
     <invitation_email_content>
       <contenttype>FullyRenderedText</contenttype>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>invitation_email_content</name>
@@ -402,14 +423,14 @@
       <prettyName>Invitation eMail Content</prettyName>
       <rows>10</rows>
       <size>72</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </invitation_email_content>
     <javamail_extra_props>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>javamail_extra_props</name>
@@ -419,27 +440,27 @@
       <rows>6</rows>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </javamail_extra_props>
     <languages>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>languages</name>
       <number>49</number>
       <picker>0</picker>
       <prettyName>Supported languages</prettyName>
       <size>30</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </languages>
     <ldap>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
@@ -447,12 +468,12 @@
       <number>60</number>
       <prettyName>Ldap</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </ldap>
     <ldap_UID_attr>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_UID_attr</name>
       <number>69</number>
@@ -460,12 +481,12 @@
       <prettyName>Ldap UID attribute name</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_UID_attr>
     <ldap_base_DN>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_base_DN</name>
       <number>68</number>
@@ -473,12 +494,12 @@
       <prettyName>Ldap base DN</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_base_DN>
     <ldap_bind_DN>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_bind_DN</name>
       <number>63</number>
@@ -486,12 +507,12 @@
       <prettyName>Ldap login matching</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_bind_DN>
     <ldap_bind_pass>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_bind_pass</name>
       <number>64</number>
@@ -499,12 +520,12 @@
       <prettyName>Ldap password matching</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_bind_pass>
     <ldap_exclude_group>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_exclude_group</name>
       <number>67</number>
@@ -512,12 +533,12 @@
       <prettyName>Ldap group to exclude</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_exclude_group>
     <ldap_fields_mapping>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_fields_mapping</name>
       <number>70</number>
@@ -525,12 +546,12 @@
       <prettyName>Ldap user fields mapping</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_fields_mapping>
     <ldap_group_mapping>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>ldap_group_mapping</name>
@@ -540,12 +561,12 @@
       <rows>5</rows>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </ldap_group_mapping>
     <ldap_groupcache_expiration>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_groupcache_expiration</name>
       <number>73</number>
@@ -553,13 +574,13 @@
       <prettyName>LDAP groups members cache</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_groupcache_expiration>
     <ldap_mode_group_sync>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -573,13 +594,13 @@
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>|always|create</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </ldap_mode_group_sync>
     <ldap_port>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_port</name>
       <number>62</number>
@@ -587,12 +608,12 @@
       <prettyName>Ldap server port</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_port>
     <ldap_server>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_server</name>
       <number>61</number>
@@ -600,13 +621,13 @@
       <prettyName>Ldap server address</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_server>
     <ldap_trylocal>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
@@ -614,13 +635,13 @@
       <number>75</number>
       <prettyName>Try local login</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </ldap_trylocal>
     <ldap_update_user>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
@@ -628,12 +649,12 @@
       <number>71</number>
       <prettyName>Update user from LDAP</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </ldap_update_user>
     <ldap_user_group>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>ldap_user_group</name>
       <number>66</number>
@@ -641,13 +662,13 @@
       <prettyName>Ldap group filter</prettyName>
       <size>60</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </ldap_user_group>
     <ldap_validate_password>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
@@ -655,27 +676,27 @@
       <number>65</number>
       <prettyName>Validate Ldap user/password</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </ldap_validate_password>
     <leftPanels>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>leftPanels</name>
       <number>44</number>
       <picker>0</picker>
       <prettyName>Panels displayed on the left</prettyName>
       <size>60</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </leftPanels>
     <meta>
       <contenttype>FullyRenderedText</contenttype>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>meta</name>
@@ -684,43 +705,43 @@
       <prettyName>HTTP Meta Info</prettyName>
       <rows>5</rows>
       <size>40</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </meta>
     <minoredit>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>minoredit</name>
       <number>87</number>
       <prettyName>Enable minor edits</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </minoredit>
     <multilingual>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>multilingual</name>
       <number>19</number>
       <prettyName>Multi-Lingual</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </multilingual>
     <parent>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>parent</name>
       <number>52</number>
@@ -728,27 +749,27 @@
       <prettyName>Parent Space</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </parent>
     <plugins>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>plugins</name>
       <number>6</number>
       <picker>0</picker>
       <prettyName>Plugins</prettyName>
       <size>40</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </plugins>
     <registration_anonymous>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -761,16 +782,16 @@
       <separators> ,|</separators>
       <size>1</size>
       <sort>none</sort>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>---|Image|Text</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </registration_anonymous>
     <registration_registered>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -783,143 +804,143 @@
       <separators> ,|</separators>
       <size>1</size>
       <sort>none</sort>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>---|Image|Text</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </registration_registered>
     <rightPanels>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>rightPanels</name>
       <number>45</number>
       <picker>0</picker>
       <prettyName>Panels displayed on the right</prettyName>
       <size>60</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </rightPanels>
     <showLeftPanels>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>showLeftPanels</name>
       <number>46</number>
       <prettyName>Display the left panel column</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </showLeftPanels>
     <showRightPanels>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>showRightPanels</name>
       <number>47</number>
       <prettyName>Display the right panel column</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </showRightPanels>
     <showannotations>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>showannotations</name>
       <number>80</number>
       <prettyName>Show document annotations</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </showannotations>
     <showattachments>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>showattachments</name>
       <number>82</number>
       <prettyName>Show document attachments</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </showattachments>
     <showcomments>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>showcomments</name>
       <number>81</number>
       <prettyName>Show document comments</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </showcomments>
     <showhistory>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>showhistory</name>
       <number>83</number>
       <prettyName>Show document history</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </showhistory>
     <showinformation>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>showinformation</name>
       <number>84</number>
       <prettyName>Show document information</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </showinformation>
     <skin>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>skin</name>
       <number>2</number>
       <picker>0</picker>
       <prettyName>Skin</prettyName>
       <size>20</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </skin>
     <smtp_port>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>smtp_port</name>
       <number>55</number>
@@ -927,26 +948,26 @@
       <prettyName>SMTP Port</prettyName>
       <size>5</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </smtp_port>
     <smtp_server>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>smtp_server</name>
       <number>13</number>
       <picker>0</picker>
       <prettyName>SMTP Server</prettyName>
       <size>30</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </smtp_server>
     <smtp_server_password>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>smtp_server_password</name>
       <number>57</number>
@@ -954,12 +975,12 @@
       <prettyName>Server password (optional)</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </smtp_server_password>
     <smtp_server_username>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>smtp_server_username</name>
       <number>56</number>
@@ -967,51 +988,51 @@
       <prettyName>Server username (optional)</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </smtp_server_username>
     <stylesheet>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>stylesheet</name>
       <number>17</number>
       <picker>0</picker>
       <prettyName>Stylesheet</prettyName>
       <size>30</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </stylesheet>
     <stylesheets>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>stylesheets</name>
       <number>18</number>
       <picker>0</picker>
       <prettyName>Stylesheets</prettyName>
       <size>30</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </stylesheets>
     <tags>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>tags</name>
       <number>51</number>
       <prettyName>Activate the tagging</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </tags>
     <timezone>
@@ -1019,14 +1040,14 @@
       #if ($xcontext.action == 'admin' || $xcontext.action == 'edit' || $xcontext.action == 'inline')
         {{html}}
           #if($xwiki.jodatime)
-            &lt;select id='$prefix$name' name='$prefix$name'>
-              &lt;option value="" #if($value == $tz)selected="selected"#end>$services.localization.render('XWiki.XWikiPreferences_timezone_default')&lt;/option>
+            &lt;select id='$prefix$name' name='$prefix$name'&gt;
+              &lt;option value="" #if($value == $tz)selected="selected"#end&gt;$services.localization.render('XWiki.XWikiPreferences_timezone_default')&lt;/option&gt;
               #foreach($tz in $xwiki.jodatime.getServerTimezone().getAvailableIDs())
-                &lt;option value="$tz" #if($value == $tz)selected="selected"#end>$tz&lt;/option>
+                &lt;option value="$tz" #if($value == $tz)selected="selected"#end&gt;$tz&lt;/option&gt;
               #end
-            &lt;/select>
+            &lt;/select&gt;
           #else
-            &lt;input id='$prefix$name' name='$prefix$name' type="text" value="$!value"/>
+            &lt;input id='$prefix$name' name='$prefix$name' type="text" value="$!value"/&gt;
           #end
         {{/html}}
       #else
@@ -1040,26 +1061,26 @@
       <prettyName>Timezone</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </timezone>
     <title>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>title</name>
       <number>10</number>
       <picker>0</picker>
       <prettyName>Title</prettyName>
       <size>30</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </title>
     <upload_maxsize>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>upload_maxsize</name>
       <number>53</number>
@@ -1067,28 +1088,28 @@
       <prettyName>Maximum Upload Size</prettyName>
       <size>5</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.NumberClass</classType>
     </upload_maxsize>
     <use_email_verification>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
       <displayType>yesno</displayType>
       <name>use_email_verification</name>
       <number>24</number>
       <prettyName>Use eMail Verification</prettyName>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </use_email_verification>
     <validation_email_content>
       <contenttype>FullyRenderedText</contenttype>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>validation_email_content</name>
@@ -1097,52 +1118,52 @@
       <prettyName>Validation eMail Content</prettyName>
       <rows>10</rows>
       <size>72</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </validation_email_content>
     <version>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>version</name>
       <number>12</number>
       <picker>0</picker>
       <prettyName>Version</prettyName>
       <size>30</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </version>
     <webcopyright>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>webcopyright</name>
       <number>5</number>
       <picker>0</picker>
       <prettyName>Web Copyright</prettyName>
       <size>60</size>
-      <tooltip />
+      <tooltip/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </webcopyright>
     <xwiki.title.mandatory>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>xwiki.title.mandatory</name>
       <number>78</number>
       <prettyName>Make document title field mandatory</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </xwiki.title.mandatory>
   </class>
@@ -1153,15 +1174,15 @@
     <guid>9fd37c41-b39b-4bce-8824-f45161f36083</guid>
     <class>
       <name>PhenoTips.PushPatientServer</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <description>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>description</name>
@@ -1171,12 +1192,12 @@
         <rows>2</rows>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </description>
       <name>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>name</name>
         <number>1</number>
@@ -1184,12 +1205,12 @@
         <prettyName>Server name</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
       <url>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>url</name>
         <number>2</number>
@@ -1197,8 +1218,8 @@
         <prettyName>Server URL</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </url>
     </class>
@@ -1209,7 +1230,7 @@
       <name>PhenomeCentral</name>
     </property>
     <property>
-      <token></token>
+      <token/>
     </property>
     <property>
       <url>https://phenomecentral.org/</url>
@@ -1222,13 +1243,13 @@
     <guid>9fd37c41-b39b-4bce-8824-f45161f36987</guid>
     <class>
       <name>PhenoTips.ReceivePatientSettings</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
     </class>
     <property>
       <AllowPushesFromNonListedServers>1</AllowPushesFromNonListedServers>
@@ -1241,15 +1262,15 @@
     <guid>a31af27a-2ed7-4a6a-9b53-afe212bd8e2b</guid>
     <class>
       <name>XWiki.ClassSheetBinding</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <sheet>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>sheet</name>
         <number>1</number>
@@ -1257,8 +1278,8 @@
         <prettyName>Sheet</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
@@ -1273,13 +1294,13 @@
     <guid>369eb46f-6311-437b-a3a1-38755f324898</guid>
     <class>
       <name>XWiki.XWikiGlobalRights</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <allow>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
@@ -1346,7 +1367,7 @@
       <levels>admin,edit,undelete,delete,programming</levels>
     </property>
     <property>
-      <users></users>
+      <users/>
     </property>
   </object>
   <object>
@@ -1356,13 +1377,13 @@
     <guid>e9630277-a371-4228-8659-8a1abc7bacfa</guid>
     <class>
       <name>XWiki.XWikiGlobalRights</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <allow>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
@@ -1429,7 +1450,7 @@
       <levels>view,comment</levels>
     </property>
     <property>
-      <users></users>
+      <users/>
     </property>
   </object>
   <object>
@@ -1439,13 +1460,13 @@
     <guid>4ab252d2-8d57-4135-a966-76aba09f9bc6</guid>
     <class>
       <name>XWiki.XWikiGlobalRights</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <allow>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
@@ -1506,7 +1527,7 @@
       <allow>1</allow>
     </property>
     <property>
-      <groups></groups>
+      <groups/>
     </property>
     <property>
       <levels>view</levels>
@@ -1522,13 +1543,13 @@
     <guid>5d43311b-c0c6-4be6-9e78-6e76f3f2d019</guid>
     <class>
       <name>XWiki.XWikiGlobalRights</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <allow>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
@@ -1602,13 +1623,13 @@
     <guid>3e5e4b1a-10c8-4ad4-a746-fc633f09b19f</guid>
     <class>
       <name>XWiki.XWikiGlobalRights</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <allow>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
@@ -1682,120 +1703,120 @@
     <guid>a2464e0e-d798-467c-8f3e-8ae4443cd4fe</guid>
     <class>
       <name>XWiki.XWikiPreferences</name>
-      <customClass />
+      <customClass/>
       <customMapping>internal</customMapping>
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <accessibility>
-        <customDisplay />
+        <customDisplay/>
         <defaultValue>0</defaultValue>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>accessibility</name>
         <number>79</number>
         <prettyName>Enable extra accessibility features</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </accessibility>
       <admin_email>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>admin_email</name>
         <number>14</number>
         <picker>0</picker>
         <prettyName>Admin eMail</prettyName>
         <size>30</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </admin_email>
       <auth_active_check>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>auth_active_check</name>
         <number>31</number>
         <prettyName>Authentication Active Check</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </auth_active_check>
       <authenticate_edit>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>authenticate_edit</name>
         <number>7</number>
         <prettyName>Authenticate On Edit</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </authenticate_edit>
       <authenticate_view>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>authenticate_view</name>
         <number>5</number>
         <prettyName>Authenticated View</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </authenticate_view>
       <backlinks>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>backlinks</name>
         <number>25</number>
         <prettyName>Backlinks</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </backlinks>
       <colorTheme>
         <cache>0</cache>
-        <classname />
+        <classname/>
         <customDisplay>{{velocity}}
 {{html wiki="false" clean="false"}}
 #if ("$!value" == '')
   #set ($value = '')
 #end
-&lt;select name="${object.getxWikiClass().name}_${object.number}_${name}" id="${object.getxWikiClass().name}_${object.number}_${name}">
-  #if ($editor != 'globaladmin')&lt;option value=""#if ($value == '') selected="selected"#end>---&lt;/option>#end
+&lt;select name="${object.getxWikiClass().name}_${object.number}_${name}" id="${object.getxWikiClass().name}_${object.number}_${name}"&gt;
+  #if ($editor != 'globaladmin')&lt;option value=""#if ($value == '') selected="selected"#end&gt;---&lt;/option&gt;#end
 #foreach($theme in $xwiki.wrapDocs($services.query.hql(", BaseObject as theme where doc.fullName=theme.name and theme.className='ColorThemes.ColorThemeClass' and doc.fullName&lt;&gt;'ColorThemes.ColorThemeTemplate' order by doc.title").execute()))
-  &lt;option value="$theme.fullName"#if ($theme.fullName.equals($value)) selected="selected"#end>$theme.plainTitle&lt;/option>
+  &lt;option value="$theme.fullName"#if ($theme.fullName.equals($value)) selected="selected"#end&gt;$theme.plainTitle&lt;/option&gt;
 #end
-&lt;/select>
+&lt;/select&gt;
 {{/html}}
 {{/velocity}}</customDisplay>
         <disabled>0</disabled>
         <displayType>select</displayType>
-        <idField />
+        <idField/>
         <multiSelect>0</multiSelect>
         <name>colorTheme</name>
         <number>76</number>
@@ -1803,19 +1824,19 @@
         <prettyName>Color theme</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>1</size>
         <sort>none</sort>
         <sql>select doc.fullName, doc.title from XWikiDocument as doc, BaseObject as theme where doc.fullName=theme.name and theme.className='ColorThemes.ColorThemeClass' and doc.fullName&lt;&gt;'ColorThemes.ColorThemeTemplate'</sql>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
-        <valueField />
+        <validationMessage/>
+        <validationRegExp/>
+        <valueField/>
         <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
       </colorTheme>
       <comment_anonymous>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -1828,16 +1849,16 @@
         <separators> ,|</separators>
         <size>1</size>
         <sort>none</sort>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>---|Image|Text</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </comment_anonymous>
       <comment_registered>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -1850,16 +1871,16 @@
         <separators> ,|</separators>
         <size>1</size>
         <sort>none</sort>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>---|Image|Text</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </comment_registered>
       <confirmation_email_content>
         <contenttype>FullyRenderedText</contenttype>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>confirmation_email_content</name>
@@ -1868,10 +1889,10 @@
         <prettyName>Confirmation eMail Content</prettyName>
         <rows>10</rows>
         <size>72</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </confirmation_email_content>
       <core.defaultDocumentSyntax>
@@ -1880,16 +1901,16 @@
 #if ("$!value" == '')
   #set ($value = $xwiki.getDefaultDocumentSyntax())
 #end
-&lt;select name="${object.getxWikiClass().name}_${object.number}_${name}" id="${object.getxWikiClass().name}_${object.number}_${name}">
+&lt;select name="${object.getxWikiClass().name}_${object.number}_${name}" id="${object.getxWikiClass().name}_${object.number}_${name}"&gt;
 #set ($configuredSyntaxes = $xwiki.getConfiguredSyntaxes())
 #set ($availableParserSyntaxes = $services.rendering.getAvailableParserSyntaxes())
 ##
 #foreach($syntax in $availableParserSyntaxes)
   #if($configuredSyntaxes.contains($syntax.toIdString()))
-    &lt;option value="$syntax.toIdString()"#if($syntax.toIdString().equalsIgnoreCase($value)) selected="selected"#end>$syntax.toString()&lt;/option>
+    &lt;option value="$syntax.toIdString()"#if($syntax.toIdString().equalsIgnoreCase($value)) selected="selected"#end&gt;$syntax.toString()&lt;/option&gt;
   #end
 #end
-&lt;/select>
+&lt;/select&gt;
 {{/html}}
 {{/velocity}}</customDisplay>
         <disabled>0</disabled>
@@ -1899,12 +1920,12 @@
         <prettyName>Default document syntax</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </core.defaultDocumentSyntax>
       <dateformat>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>dateformat</name>
         <number>54</number>
@@ -1912,41 +1933,41 @@
         <prettyName>Date Format</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </dateformat>
       <default_language>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>default_language</name>
         <number>20</number>
         <picker>0</picker>
         <prettyName>Default Language</prettyName>
         <size>5</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </default_language>
       <documentBundles>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>documentBundles</name>
         <number>52</number>
         <picker>0</picker>
         <prettyName>Internationalization Document Bundles</prettyName>
         <size>60</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </documentBundles>
       <edit_anonymous>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -1959,16 +1980,16 @@
         <separators> ,|</separators>
         <size>1</size>
         <sort>none</sort>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>---|Image|Text</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </edit_anonymous>
       <edit_registered>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -1981,44 +2002,44 @@
         <separators> ,|</separators>
         <size>1</size>
         <sort>none</sort>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>---|Image|Text</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </edit_registered>
       <editcomment>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>editcomment</name>
         <number>85</number>
         <prettyName>Enable version summary</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </editcomment>
       <editcomment_mandatory>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>editcomment_mandatory</name>
         <number>86</number>
         <prettyName>Make version summary mandatory</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </editcomment_mandatory>
       <editor>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -2031,30 +2052,30 @@
         <separators> ,|</separators>
         <size>1</size>
         <sort>none</sort>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>Text|Wysiwyg</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </editor>
       <guest_comment_requires_captcha>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>guest_comment_requires_captcha</name>
         <number>77</number>
         <prettyName>Enable CAPTCHA in Comments for Unregistered Users</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </guest_comment_requires_captcha>
       <invitation_email_content>
         <contenttype>FullyRenderedText</contenttype>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>invitation_email_content</name>
@@ -2063,14 +2084,14 @@
         <prettyName>Invitation eMail Content</prettyName>
         <rows>10</rows>
         <size>72</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </invitation_email_content>
       <javamail_extra_props>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>javamail_extra_props</name>
@@ -2080,27 +2101,27 @@
         <rows>6</rows>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </javamail_extra_props>
       <languages>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>languages</name>
         <number>49</number>
         <picker>0</picker>
         <prettyName>Supported languages</prettyName>
         <size>30</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </languages>
       <ldap>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
@@ -2108,12 +2129,12 @@
         <number>60</number>
         <prettyName>Ldap</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </ldap>
       <ldap_UID_attr>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_UID_attr</name>
         <number>69</number>
@@ -2121,12 +2142,12 @@
         <prettyName>Ldap UID attribute name</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_UID_attr>
       <ldap_base_DN>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_base_DN</name>
         <number>68</number>
@@ -2134,12 +2155,12 @@
         <prettyName>Ldap base DN</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_base_DN>
       <ldap_bind_DN>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_bind_DN</name>
         <number>63</number>
@@ -2147,12 +2168,12 @@
         <prettyName>Ldap login matching</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_bind_DN>
       <ldap_bind_pass>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_bind_pass</name>
         <number>64</number>
@@ -2160,12 +2181,12 @@
         <prettyName>Ldap password matching</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_bind_pass>
       <ldap_exclude_group>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_exclude_group</name>
         <number>67</number>
@@ -2173,12 +2194,12 @@
         <prettyName>Ldap group to exclude</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_exclude_group>
       <ldap_fields_mapping>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_fields_mapping</name>
         <number>70</number>
@@ -2186,12 +2207,12 @@
         <prettyName>Ldap user fields mapping</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_fields_mapping>
       <ldap_group_mapping>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>ldap_group_mapping</name>
@@ -2201,12 +2222,12 @@
         <rows>5</rows>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </ldap_group_mapping>
       <ldap_groupcache_expiration>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_groupcache_expiration</name>
         <number>73</number>
@@ -2214,13 +2235,13 @@
         <prettyName>LDAP groups members cache</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_groupcache_expiration>
       <ldap_mode_group_sync>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -2234,13 +2255,13 @@
         <size>1</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>|always|create</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </ldap_mode_group_sync>
       <ldap_port>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_port</name>
         <number>62</number>
@@ -2248,12 +2269,12 @@
         <prettyName>Ldap server port</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_port>
       <ldap_server>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_server</name>
         <number>61</number>
@@ -2261,13 +2282,13 @@
         <prettyName>Ldap server address</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_server>
       <ldap_trylocal>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
@@ -2275,13 +2296,13 @@
         <number>75</number>
         <prettyName>Try local login</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </ldap_trylocal>
       <ldap_update_user>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
@@ -2289,12 +2310,12 @@
         <number>71</number>
         <prettyName>Update user from LDAP</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </ldap_update_user>
       <ldap_user_group>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>ldap_user_group</name>
         <number>66</number>
@@ -2302,13 +2323,13 @@
         <prettyName>Ldap group filter</prettyName>
         <size>60</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </ldap_user_group>
       <ldap_validate_password>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
@@ -2316,27 +2337,27 @@
         <number>65</number>
         <prettyName>Validate Ldap user/password</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </ldap_validate_password>
       <leftPanels>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>leftPanels</name>
         <number>44</number>
         <picker>0</picker>
         <prettyName>Panels displayed on the left</prettyName>
         <size>60</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </leftPanels>
       <meta>
         <contenttype>FullyRenderedText</contenttype>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>meta</name>
@@ -2345,43 +2366,43 @@
         <prettyName>HTTP Meta Info</prettyName>
         <rows>5</rows>
         <size>40</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </meta>
       <minoredit>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>minoredit</name>
         <number>87</number>
         <prettyName>Enable minor edits</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </minoredit>
       <multilingual>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>multilingual</name>
         <number>19</number>
         <prettyName>Multi-Lingual</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </multilingual>
       <parent>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>parent</name>
         <number>52</number>
@@ -2389,27 +2410,27 @@
         <prettyName>Parent Space</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </parent>
       <plugins>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>plugins</name>
         <number>6</number>
         <picker>0</picker>
         <prettyName>Plugins</prettyName>
         <size>40</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </plugins>
       <registration_anonymous>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -2422,16 +2443,16 @@
         <separators> ,|</separators>
         <size>1</size>
         <sort>none</sort>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>---|Image|Text</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </registration_anonymous>
       <registration_registered>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -2444,143 +2465,143 @@
         <separators> ,|</separators>
         <size>1</size>
         <sort>none</sort>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>---|Image|Text</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </registration_registered>
       <rightPanels>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>rightPanels</name>
         <number>45</number>
         <picker>0</picker>
         <prettyName>Panels displayed on the right</prettyName>
         <size>60</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </rightPanels>
       <showLeftPanels>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>showLeftPanels</name>
         <number>46</number>
         <prettyName>Display the left panel column</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </showLeftPanels>
       <showRightPanels>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>showRightPanels</name>
         <number>47</number>
         <prettyName>Display the right panel column</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </showRightPanels>
       <showannotations>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>showannotations</name>
         <number>80</number>
         <prettyName>Show document annotations</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </showannotations>
       <showattachments>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>showattachments</name>
         <number>82</number>
         <prettyName>Show document attachments</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </showattachments>
       <showcomments>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>showcomments</name>
         <number>81</number>
         <prettyName>Show document comments</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </showcomments>
       <showhistory>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>showhistory</name>
         <number>83</number>
         <prettyName>Show document history</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </showhistory>
       <showinformation>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>showinformation</name>
         <number>84</number>
         <prettyName>Show document information</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </showinformation>
       <skin>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>skin</name>
         <number>2</number>
         <picker>0</picker>
         <prettyName>Skin</prettyName>
         <size>20</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </skin>
       <smtp_port>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>smtp_port</name>
         <number>55</number>
@@ -2588,26 +2609,26 @@
         <prettyName>SMTP Port</prettyName>
         <size>5</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </smtp_port>
       <smtp_server>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>smtp_server</name>
         <number>13</number>
         <picker>0</picker>
         <prettyName>SMTP Server</prettyName>
         <size>30</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </smtp_server>
       <smtp_server_password>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>smtp_server_password</name>
         <number>57</number>
@@ -2615,12 +2636,12 @@
         <prettyName>Server password (optional)</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </smtp_server_password>
       <smtp_server_username>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>smtp_server_username</name>
         <number>56</number>
@@ -2628,51 +2649,51 @@
         <prettyName>Server username (optional)</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </smtp_server_username>
       <stylesheet>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>stylesheet</name>
         <number>17</number>
         <picker>0</picker>
         <prettyName>Stylesheet</prettyName>
         <size>30</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </stylesheet>
       <stylesheets>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>stylesheets</name>
         <number>18</number>
         <picker>0</picker>
         <prettyName>Stylesheets</prettyName>
         <size>30</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </stylesheets>
       <tags>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>tags</name>
         <number>51</number>
         <prettyName>Activate the tagging</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </tags>
       <timezone>
@@ -2680,14 +2701,14 @@
       #if ($xcontext.action == 'admin' || $xcontext.action == 'edit' || $xcontext.action == 'inline')
         {{html}}
           #if($xwiki.jodatime)
-            &lt;select id='$prefix$name' name='$prefix$name'>
-              &lt;option value="" #if($value == $tz)selected="selected"#end>$services.localization.render('XWiki.XWikiPreferences_timezone_default')&lt;/option>
+            &lt;select id='$prefix$name' name='$prefix$name'&gt;
+              &lt;option value="" #if($value == $tz)selected="selected"#end&gt;$services.localization.render('XWiki.XWikiPreferences_timezone_default')&lt;/option&gt;
               #foreach($tz in $xwiki.jodatime.getServerTimezone().getAvailableIDs())
-                &lt;option value="$tz" #if($value == $tz)selected="selected"#end>$tz&lt;/option>
+                &lt;option value="$tz" #if($value == $tz)selected="selected"#end&gt;$tz&lt;/option&gt;
               #end
-            &lt;/select>
+            &lt;/select&gt;
           #else
-            &lt;input id='$prefix$name' name='$prefix$name' type="text" value="$!value"/>
+            &lt;input id='$prefix$name' name='$prefix$name' type="text" value="$!value"/&gt;
           #end
         {{/html}}
       #else
@@ -2701,26 +2722,26 @@
         <prettyName>Timezone</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </timezone>
       <title>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>title</name>
         <number>10</number>
         <picker>0</picker>
         <prettyName>Title</prettyName>
         <size>30</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </title>
       <upload_maxsize>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>upload_maxsize</name>
         <number>53</number>
@@ -2728,28 +2749,28 @@
         <prettyName>Maximum Upload Size</prettyName>
         <size>5</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.NumberClass</classType>
       </upload_maxsize>
       <use_email_verification>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
         <name>use_email_verification</name>
         <number>24</number>
         <prettyName>Use eMail Verification</prettyName>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </use_email_verification>
       <validation_email_content>
         <contenttype>FullyRenderedText</contenttype>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>validation_email_content</name>
@@ -2758,52 +2779,52 @@
         <prettyName>Validation eMail Content</prettyName>
         <rows>10</rows>
         <size>72</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </validation_email_content>
       <version>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>version</name>
         <number>12</number>
         <picker>0</picker>
         <prettyName>Version</prettyName>
         <size>30</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </version>
       <webcopyright>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>webcopyright</name>
         <number>5</number>
         <picker>0</picker>
         <prettyName>Web Copyright</prettyName>
         <size>60</size>
-        <tooltip />
+        <tooltip/>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </webcopyright>
       <xwiki.title.mandatory>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>xwiki.title.mandatory</name>
         <number>78</number>
         <prettyName>Make document title field mandatory</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </xwiki.title.mandatory>
     </class>
@@ -2811,7 +2832,7 @@
       <accessibility>0</accessibility>
     </property>
     <property>
-      <admin_email></admin_email>
+      <admin_email/>
     </property>
     <property>
       <authenticate_edit>0</authenticate_edit>
@@ -2829,20 +2850,20 @@
       <comment_registered>---</comment_registered>
     </property>
     <property>
-      <confirmation_email_content>#set ($wikiname = $request.serverName)&#xd;
-#set ($host = ${request.getRequestURL()})&#xd;
-#set ($host = ${host.substring(0, ${host.indexOf('/', ${mathtool.add(${host.indexOf('//')}, 2)})})})&#xd;
-Subject: Your account on ${wikiname} has been activated&#xd;
-&#xd;
-Hello ${xwiki.getUserName("$xwikiname", false)},&#xd;
-&#xd;
+      <confirmation_email_content>#set ($wikiname = $request.serverName)
+#set ($host = ${request.getRequestURL()})
+#set ($host = ${host.substring(0, ${host.indexOf('/', ${mathtool.add(${host.indexOf('//')}, 2)})})})
+Subject: Your account on ${wikiname} has been activated
+
+Hello ${xwiki.getUserName("$xwikiname", false)},
+
 Your account on ${wikiname} has been successfully activated. You can now login at ${host}${xwiki.getURL('XWiki.XWikiLogin', 'login')} using your username (${xwiki.getDocument($xwikiname).getName()}).</confirmation_email_content>
     </property>
     <property>
       <core.defaultDocumentSyntax>xwiki/2.1</core.defaultDocumentSyntax>
     </property>
     <property>
-      <dateformat></dateformat>
+      <dateformat/>
     </property>
     <property>
       <default_language>en</default_language>
@@ -2860,35 +2881,35 @@ Your account on ${wikiname} has been successfully activated. You can now login a
       <editcomment>0</editcomment>
     </property>
     <property>
-      <editcomment_mandatory />
+      <editcomment_mandatory/>
     </property>
     <property>
       <editor>Text</editor>
     </property>
     <property>
-      <invitation_email_content></invitation_email_content>
+      <invitation_email_content/>
     </property>
     <property>
-      <languages></languages>
+      <languages/>
     </property>
     <property>
-      <leftPanels></leftPanels>
+      <leftPanels/>
     </property>
     <property>
-      <meta>&lt;meta name="revisit-after" content="7 days" />
-&lt;meta name="description" content="$escapetool.xml($!tdoc.plainTitle)" />
+      <meta>&lt;meta name="revisit-after" content="7 days" /&gt;
+&lt;meta name="description" content="$escapetool.xml($!tdoc.plainTitle)" /&gt;
 #set($keywords = "wiki,$!doc.getTags()")
-&lt;meta name="keywords" content="$escapetool.xml($keywords.replaceAll('[|,]', ' ').trim())" />
-&lt;meta name="distribution" content="GLOBAL" />
-&lt;meta name="rating" content="General" />
-&lt;meta name="author" content="$escapetool.xml($!xwiki.getUserName($doc.getAuthor(), false))" />
-&lt;meta http-equiv="reply-to" content="" />
-&lt;meta name="language" content="$!xcontext.language" />
+&lt;meta name="keywords" content="$escapetool.xml($keywords.replaceAll('[|,]', ' ').trim())" /&gt;
+&lt;meta name="distribution" content="GLOBAL" /&gt;
+&lt;meta name="rating" content="General" /&gt;
+&lt;meta name="author" content="$escapetool.xml($!xwiki.getUserName($doc.getAuthor(), false))" /&gt;
+&lt;meta http-equiv="reply-to" content="" /&gt;
+&lt;meta name="language" content="$!xcontext.language" /&gt;
 ## We verify that we don't display RSS feeds on the login page since it causes problems if these feeds are
 ## protected. In addition it makes the login redirect to the feeds page in some cases.
 #if($doc.fullName != "XWiki.XWikiLogin")
-&lt;link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="$xwiki.getURL('Main.WebRss', 'view', 'xpage=rdf')" />
-&lt;link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="$xwiki.getURL('Blog.GlobalBlogRss', 'view', 'xpage=plain')" />
+&lt;link rel="alternate" type="application/rss+xml" title="Wiki Feed RSS" href="$xwiki.getURL('Main.WebRss', 'view', 'xpage=rdf')" /&gt;
+&lt;link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="$xwiki.getURL('Blog.GlobalBlogRss', 'view', 'xpage=plain')" /&gt;
 #end
 $xwiki.ssx.use($xwiki.getSpacePreference('colorTheme'))</meta>
     </property>
@@ -2899,7 +2920,7 @@ $xwiki.ssx.use($xwiki.getSpacePreference('colorTheme'))</meta>
       <multilingual>0</multilingual>
     </property>
     <property>
-      <plugins></plugins>
+      <plugins/>
     </property>
     <property>
       <registration_anonymous>---</registration_anonymous>
@@ -2935,16 +2956,16 @@ $xwiki.ssx.use($xwiki.getSpacePreference('colorTheme'))</meta>
       <skin>PhenoTips.OrgSkin</skin>
     </property>
     <property>
-      <smtp_port></smtp_port>
+      <smtp_port/>
     </property>
     <property>
       <smtp_server>127.0.0.1</smtp_server>
     </property>
     <property>
-      <smtp_server_password></smtp_server_password>
+      <smtp_server_password/>
     </property>
     <property>
-      <smtp_server_username></smtp_server_username>
+      <smtp_server_username/>
     </property>
     <property>
       <stylesheet>style.css</stylesheet>
@@ -2959,20 +2980,20 @@ $xwiki.ssx.use($xwiki.getSpacePreference('colorTheme'))</meta>
       <upload_maxsize>33554432</upload_maxsize>
     </property>
     <property>
-      <validation_email_content>#set ($wikiname = $request.serverName)&#xd;
-#set ($host = ${request.getRequestURL()})&#xd;
-#set ($host = ${host.substring(0, ${host.indexOf('/', ${mathtool.add(${host.indexOf('//')}, 2)})})})&#xd;
-Subject: Validate your account on ${wikiname}&#xd;
-&#xd;
-Hello ${xwiki.getUserName("XWiki.$xwikiname", false)},&#xd;
-&#xd;
-This email address was used to register a new account on ${wikiname}. If you did not make the request, please ignore this message.&#xd;
-&#xd;
-In order to activate your account, please follow this link:&#xd;
+      <validation_email_content>#set ($wikiname = $request.serverName)
+#set ($host = ${request.getRequestURL()})
+#set ($host = ${host.substring(0, ${host.indexOf('/', ${mathtool.add(${host.indexOf('//')}, 2)})})})
+Subject: Validate your account on ${wikiname}
+
+Hello ${xwiki.getUserName("XWiki.$xwikiname", false)},
+
+This email address was used to register a new account on ${wikiname}. If you did not make the request, please ignore this message.
+
+In order to activate your account, please follow this link:
 ${host}${xwiki.getURL('XWiki.AccountValidation', 'view', "validkey=${validkey}&amp;xwikiname=${xwikiname}")}</validation_email_content>
     </property>
     <property>
-      <version>&lt;a href="http://phenotips.org">PhenoTips&lt;/a> version $!{services.distribution.distributionExtension.id.version}</version>
+      <version>&lt;a href="http://phenotips.org"&gt;PhenoTips&lt;/a&gt; version $!{services.distribution.distributionExtension.id.version}</version>
     </property>
     <property>
       <webcopyright>Reproducing or distributing this clinical information without permission from the institution that owns it is strictly forbidden.</webcopyright>

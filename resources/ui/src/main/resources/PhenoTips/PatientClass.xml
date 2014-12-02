@@ -1,36 +1,57 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>PatientClass</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1320960524000</creationDate>
   <parent>XWiki.XWikiClasses</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1411434796000</date>
   <contentUpdateDate>1411434796000</contentUpdateDate>
-  <version>10.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:patient-data-ui-1.0-rc-1]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
   <content>{{include document="XWiki.ClassSheet"/}}</content>
   <class>
     <name>PhenoTips.PatientClass</name>
-    <customClass />
-    <customMapping />
-    <defaultViewSheet />
-    <defaultEditSheet />
-    <defaultWeb />
-    <nameField />
-    <validationScript />
+    <customClass/>
+    <customMapping/>
+    <defaultViewSheet/>
+    <defaultEditSheet/>
+    <defaultWeb/>
+    <nameField/>
+    <validationScript/>
     <apgar1>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -44,14 +65,14 @@
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>unknown|0|1|2|3|4|5|6|7|8|9|10</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </apgar1>
     <apgar5>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
       <multiSelect>0</multiSelect>
@@ -65,51 +86,51 @@
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>unknown|0|1|2|3|4|5|6|7|8|9|10</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </apgar5>
     <assistedReproduction_fertilityMeds>
       <customDisplay>{{include document="PhenoTips.YesNoNAPicker" /}}</customDisplay>
-      <defaultValue />
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>checkbox</displayFormType>
-      <displayType />
+      <displayType/>
       <name>assistedReproduction_fertilityMeds</name>
       <number>38</number>
       <prettyName>Conception after fertility medication</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </assistedReproduction_fertilityMeds>
     <assistedReproduction_surrogacy>
       <customDisplay>{{include document="PhenoTips.YesNoNAPicker" /}}</customDisplay>
-      <defaultValue />
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>checkbox</displayFormType>
-      <displayType />
+      <displayType/>
       <name>assistedReproduction_surrogacy</name>
       <number>39</number>
       <prettyName>Gestational surrogacy</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </assistedReproduction_surrogacy>
     <consanguinity>
       <customDisplay>{{include document="PhenoTips.YesNoNAPicker" /}}</customDisplay>
-      <defaultValue />
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>consanguinity</name>
       <number>17</number>
       <prettyName>Consanguinity</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </consanguinity>
     <date_of_birth>
@@ -130,32 +151,32 @@
     #end
   #end
   #if ($format.indexOf('d') &lt; 0)
-    &lt;span class="month-year-date $name" id="$prefix${name}_container">
-      &lt;input type="hidden" id="$prefix$name" title="$!definedFormat" name="$prefix$name" value="$!xwiki.formatDate($value.toDate(), $definedFormat)" class="xwiki-date-hidden" alt="#formatdateISO($value.toDate())"/>
+    &lt;span class="month-year-date $name" id="$prefix${name}_container"&gt;
+      &lt;input type="hidden" id="$prefix$name" title="$!definedFormat" name="$prefix$name" value="$!xwiki.formatDate($value.toDate(), $definedFormat)" class="xwiki-date-hidden" alt="#formatdateISO($value.toDate())"/&gt;
       #set ($selMonth = $value.monthOfYear)
       #set ($selYear= $value.year)
       #set ($mFormat = $format.replaceAll("[^M]", ''))
       #set ($yFormat = $format.replaceAll("[^y]", ''))
 
-      &lt;select name="$prefix${name}_month" class="month">
+      &lt;select name="$prefix${name}_month" class="month"&gt;
       #foreach ($val in [1..12])
         #set ($date.monthOfYear = $val)
-        &lt;option value="$mathtool.sub($val, 1)"#if ($selMonth == $val) selected="selected"#end>$xwiki.formatDate($date.toDate(), $mFormat)&lt;/option>
+        &lt;option value="$mathtool.sub($val, 1)"#if ($selMonth == $val) selected="selected"#end&gt;$xwiki.formatDate($date.toDate(), $mFormat)&lt;/option&gt;
       #end
-      &lt;/select>
+      &lt;/select&gt;
 
       #set ($startYear = $date.year - 99)
       #set ($endYear = $date.year + 1)
 
-      &lt;select name="$prefix${name}_year" class="year">
+      &lt;select name="$prefix${name}_year" class="year"&gt;
       #foreach ($val in [$startYear..$endYear])
         #set ($date.year = $val)
-        &lt;option value="$val"#if ($selYear == $val) selected="selected"#end>$xwiki.formatDate($date.toDate(), $yFormat)&lt;/option>
+        &lt;option value="$val"#if ($selYear == $val) selected="selected"#end&gt;$xwiki.formatDate($date.toDate(), $yFormat)&lt;/option&gt;
       #end
-      &lt;/select>
-    &lt;/span>
+      &lt;/select&gt;
+    &lt;/span&gt;
   #else
-    &lt;input type="text" id="$prefix$name" title="$!definedFormat" name="$prefix$name" value="$!xwiki.formatDate($value.toDate(), $definedFormat)" class="xwiki-date" alt="#formatdateISO($value.toDate())"/>
+    &lt;input type="text" id="$prefix$name" title="$!definedFormat" name="$prefix$name" value="$!xwiki.formatDate($value.toDate(), $definedFormat)" class="xwiki-date" alt="#formatdateISO($value.toDate())"/&gt;
   #end
 #else
 #if ($value)
@@ -163,7 +184,7 @@
   #if ("$!xwiki.getUserPreference('timezone')" != '')
     #set ($discard = $value.setZoneRetainFields($services.jodatime.getTimezone($xwiki.getUserPreference('timezone'))))
   #end
-  &lt;span class="date">$!xwiki.formatDate($value.toDate(), $format)&lt;/span>
+  &lt;span class="date"&gt;$!xwiki.formatDate($value.toDate(), $format)&lt;/span&gt;
 #end
 #end
 {{/html}}{{/velocity}}</customDisplay>
@@ -176,12 +197,12 @@
       <prettyName>Date of birth</prettyName>
       <size>20</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.DateClass</classType>
     </date_of_birth>
     <diagnosis_notes>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>diagnosis_notes</name>
@@ -191,8 +212,8 @@
       <rows>5</rows>
       <size>40</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </diagnosis_notes>
     <exam_date>
@@ -213,32 +234,32 @@
     #end
   #end
   #if ($format.indexOf('d') &lt; 0)
-    &lt;span class="month-year-date $name" id="$prefix${name}_container">
-      &lt;input type="hidden" id="$prefix$name" title="$!definedFormat" name="$prefix$name" value="$!xwiki.formatDate($value.toDate(), $definedFormat)" class="xwiki-date-hidden" alt="#formatdateISO($value.toDate())"/>
+    &lt;span class="month-year-date $name" id="$prefix${name}_container"&gt;
+      &lt;input type="hidden" id="$prefix$name" title="$!definedFormat" name="$prefix$name" value="$!xwiki.formatDate($value.toDate(), $definedFormat)" class="xwiki-date-hidden" alt="#formatdateISO($value.toDate())"/&gt;
       #set ($selMonth = $value.monthOfYear)
       #set ($selYear= $value.year)
       #set ($mFormat = $format.replaceAll("[^M]", ''))
       #set ($yFormat = $format.replaceAll("[^y]", ''))
 
-      &lt;select name="$prefix${name}_month" class="month">
+      &lt;select name="$prefix${name}_month" class="month"&gt;
       #foreach ($val in [1..12])
         #set ($date.monthOfYear = $val)
-        &lt;option value="$mathtool.sub($val, 1)"#if ($selMonth == $val) selected="selected"#end>$xwiki.formatDate($date.toDate(), $mFormat)&lt;/option>
+        &lt;option value="$mathtool.sub($val, 1)"#if ($selMonth == $val) selected="selected"#end&gt;$xwiki.formatDate($date.toDate(), $mFormat)&lt;/option&gt;
       #end
-      &lt;/select>
+      &lt;/select&gt;
 
       #set ($startYear = $date.year - 99)
       #set ($endYear = $date.year + 1)
 
-      &lt;select name="$prefix${name}_year" class="year">
+      &lt;select name="$prefix${name}_year" class="year"&gt;
       #foreach ($val in [$startYear..$endYear])
         #set ($date.year = $val)
-        &lt;option value="$val"#if ($selYear == $val) selected="selected"#end>$xwiki.formatDate($date.toDate(), $yFormat)&lt;/option>
+        &lt;option value="$val"#if ($selYear == $val) selected="selected"#end&gt;$xwiki.formatDate($date.toDate(), $yFormat)&lt;/option&gt;
       #end
-      &lt;/select>
-    &lt;/span>
+      &lt;/select&gt;
+    &lt;/span&gt;
   #else
-    &lt;input type="text" id="$prefix$name" title="$!definedFormat" name="$prefix$name" value="$!xwiki.formatDate($value.toDate(), $definedFormat)" class="xwiki-date" alt="#formatdateISO($value.toDate())"/>
+    &lt;input type="text" id="$prefix$name" title="$!definedFormat" name="$prefix$name" value="$!xwiki.formatDate($value.toDate(), $definedFormat)" class="xwiki-date" alt="#formatdateISO($value.toDate())"/&gt;
   #end
 #else
 #if ($value)
@@ -246,7 +267,7 @@
   #if ("$!xwiki.getUserPreference('timezone')" != '')
     #set ($discard = $value.setZoneRetainFields($services.jodatime.getTimezone($xwiki.getUserPreference('timezone'))))
   #end
-  &lt;span class="date">$!xwiki.formatDate($value.toDate(), $format)&lt;/span>
+  &lt;span class="date"&gt;$!xwiki.formatDate($value.toDate(), $format)&lt;/span&gt;
 #end
 #end
 {{/html}}{{/velocity}}</customDisplay>
@@ -259,17 +280,17 @@
       <prettyName>Exam date</prettyName>
       <size>20</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.DateClass</classType>
     </exam_date>
     <extended_negative_phenotype>
       <cache>0</cache>
-      <classname />
-      <customDisplay />
+      <classname/>
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>checkbox</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>extended_negative_phenotype</name>
       <number>34</number>
@@ -278,23 +299,23 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </extended_negative_phenotype>
     <extended_negative_prenatal_phenotype>
       <cache>0</cache>
-      <classname />
-      <customDisplay />
+      <classname/>
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>checkbox</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>extended_negative_prenatal_phenotype</name>
       <number>35</number>
@@ -303,23 +324,23 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </extended_negative_prenatal_phenotype>
     <extended_phenotype>
       <cache>0</cache>
-      <classname />
-      <customDisplay />
+      <classname/>
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>checkbox</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>extended_phenotype</name>
       <number>32</number>
@@ -328,23 +349,23 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </extended_phenotype>
     <extended_prenatal_phenotype>
       <cache>0</cache>
-      <classname />
-      <customDisplay />
+      <classname/>
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>checkbox</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>extended_prenatal_phenotype</name>
       <number>33</number>
@@ -353,18 +374,18 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </extended_prenatal_phenotype>
     <external_id>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>external_id</name>
       <number>2</number>
@@ -372,12 +393,12 @@
       <prettyName>Identifier</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </external_id>
     <family_history>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>family_history</name>
@@ -387,21 +408,21 @@
       <rows>5</rows>
       <size>40</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </family_history>
     <family_of>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{velocity}}
 #if ($type == 'edit')
-{{html clean="false"}}&lt;input class="suggested" id="${doc.fullName}_${prefix}${name}" name="${prefix}${name}" onfocus="new ajaxSuggest(this, {script: '$xwiki.getURL('', 'get', "xpage=suggest&amp;classname=${field.className}&amp;fieldname=${name}&amp;firCol=eid.value&amp;secCol=-")&amp;', varname:'input'} )" type="text" value="$!escapetool.xml($value)" />
+{{html clean="false"}}&lt;input class="suggested" id="${doc.fullName}_${prefix}${name}" name="${prefix}${name}" onfocus="new ajaxSuggest(this, {script: '$xwiki.getURL('', 'get', "xpage=suggest&amp;classname=${field.className}&amp;fieldname=${name}&amp;firCol=eid.value&amp;secCol=-")&amp;', varname:'input'} )" type="text" value="$!escapetool.xml($value)" /&gt;
 {{/html}}
 #elseif ("$!value" != '')
   #set ($matchingDocuments = $xwiki.wrapDocs($services.query.xwql("where doc.object(PhenoTips.PatientClass).external_id = :eid").bindValue('eid', $value).execute()))
   #if ($matchingDocuments.size() == 1)
-    [[${value}>>$matchingDocuments.get(0).documentReference]]##
+    [[${value}&gt;&gt;$matchingDocuments.get(0).documentReference]]##
   #else
     $!value##
   #end
@@ -409,7 +430,7 @@
 {{/velocity}}</customDisplay>
       <disabled>0</disabled>
       <displayType>input</displayType>
-      <idField />
+      <idField/>
       <multiSelect>0</multiSelect>
       <name>family_of</name>
       <number>13</number>
@@ -417,18 +438,18 @@
       <prettyName>This patient is part of the familiy of</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
       <sql>select eid.value from BaseObject as obj, StringProperty as eid where obj.className = 'PhenoTips.PatientClass' and eid.id.id = obj.id and eid.id.name = 'external_id'</sql>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </family_of>
     <first_name>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>first_name</name>
       <number>4</number>
@@ -436,13 +457,13 @@
       <prettyName>First name</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </first_name>
     <gender>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>radio</displayType>
       <multiSelect>0</multiSelect>
@@ -456,13 +477,13 @@
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <values>M=Male|F=Female</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </gender>
     <gestation>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>gestation</name>
       <number>26</number>
@@ -470,13 +491,13 @@
       <prettyName>Gestation at delivery (weeks)</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.NumberClass</classType>
     </gestation>
     <global_age_of_onset>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{velocity}}
 #set ($order = [
   'HP:0003577',
@@ -497,7 +518,7 @@
 {{include reference="PhenoTips.HPOBranchDisplayer"/}}</customDisplay>
       <disabled>0</disabled>
       <displayType>select</displayType>
-      <idField />
+      <idField/>
       <multiSelect>0</multiSelect>
       <name>global_age_of_onset</name>
       <number>8</number>
@@ -505,19 +526,19 @@
       <prettyName>Global age of onset</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </global_age_of_onset>
     <global_mode_of_inheritance>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{velocity}}
 #set ($order = [
   'HP:0003745',
@@ -549,7 +570,7 @@
 {{include reference="PhenoTips.HPOBranchDisplayer"/}}</customDisplay>
       <disabled>0</disabled>
       <displayType>select</displayType>
-      <idField />
+      <idField/>
       <multiSelect>0</multiSelect>
       <name>global_mode_of_inheritance</name>
       <number>9</number>
@@ -557,18 +578,18 @@
       <prettyName>Global mode of inheritance</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </global_mode_of_inheritance>
     <health_card>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>health_card</name>
       <number>11</number>
@@ -576,12 +597,12 @@
       <prettyName>Provincial Health Card #</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </health_card>
     <identifier>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>identifier</name>
       <number>1</number>
@@ -589,12 +610,12 @@
       <prettyName>Identifier</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.NumberClass</classType>
     </identifier>
     <indication_for_referral>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>PureText</editor>
       <name>indication_for_referral</name>
@@ -604,26 +625,26 @@
       <rows>2</rows>
       <size>40</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </indication_for_referral>
     <ivf>
       <customDisplay>{{include document="PhenoTips.YesNoNAPicker" /}}</customDisplay>
-      <defaultValue />
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>checkbox</displayFormType>
-      <displayType />
+      <displayType/>
       <name>ivf</name>
       <number>16</number>
       <prettyName>In vitro fertilization</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </ivf>
     <last_name>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <name>last_name</name>
       <number>5</number>
@@ -631,8 +652,8 @@
       <prettyName>Last name</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </last_name>
     <maternal_ethnicity>
@@ -640,9 +661,9 @@
       <customDisplay>{{velocity filter="indent"}}{{html wiki=true clean=false}}
 #if ($xcontext.action == 'edit' || $xcontext.action == 'inline')
 #set ($suggest_script = $xwiki.getURL('PhenoTips.EthnicitySearch', 'get', 'outputSyntax=plain'))
-{{html wiki=false clean=false}}&lt;input name="xwiki-free-multiselect-suggest-script" type="hidden" value="$!escapetool.xml($suggest_script)"/>{{/html}}
+{{html wiki=false clean=false}}&lt;input name="xwiki-free-multiselect-suggest-script" type="hidden" value="$!escapetool.xml($suggest_script)"/&gt;{{/html}}
 #end
-#macro (_fms__displayValue $v $counter) #if($xcontext.action == 'edit' || $xcontext.action == 'inline') {{html wiki=false clean=false}}&lt;input class="xwiki-free-multiselect-value" type="text" size="30" name="${prefix}${name}" id="${prefix}${name}_${counter}" value="$!escapetool.xml($v)"/>{{/html}} #else $escapetool.xml($v) #end#end
+#macro (_fms__displayValue $v $counter) #if($xcontext.action == 'edit' || $xcontext.action == 'inline') {{html wiki=false clean=false}}&lt;input class="xwiki-free-multiselect-value" type="text" size="30" name="${prefix}${name}" id="${prefix}${name}_${counter}" value="$!escapetool.xml($v)"/&gt;{{/html}} #else $escapetool.xml($v) #end#end
 (% class="xwiki-free-multiselect"%)
 #foreach ($v in $value)
 1. #_fms__displayValue($v ${foreach.count})
@@ -661,17 +682,17 @@
       <prettyName>Maternal ethnicity</prettyName>
       <relationalStorage>1</relationalStorage>
       <separator>, </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <values />
+      <validationMessage/>
+      <validationRegExp/>
+      <values/>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </maternal_ethnicity>
     <medical_history>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>medical_history</name>
@@ -681,31 +702,31 @@
       <rows>5</rows>
       <size>40</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </medical_history>
     <miscarriages>
       <customDisplay>{{include document="PhenoTips.YesNoNAPicker" /}}</customDisplay>
-      <defaultValue />
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>select</displayFormType>
-      <displayType />
+      <displayType/>
       <name>miscarriages</name>
       <number>18</number>
       <prettyName>Parents with at least 3 miscarriages</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </miscarriages>
     <negative_phenotype>
       <cache>0</cache>
-      <classname />
-      <customDisplay />
+      <classname/>
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>input</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>negative_phenotype</name>
       <number>22</number>
@@ -714,23 +735,23 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </negative_phenotype>
     <negative_prenatal_phenotype>
       <cache>0</cache>
-      <classname />
-      <customDisplay />
+      <classname/>
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>select</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>negative_prenatal_phenotype</name>
       <number>24</number>
@@ -739,23 +760,23 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </negative_prenatal_phenotype>
     <omim_id>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{include document="PhenoTips.OmimDisplay" /}}</customDisplay>
       <disabled>0</disabled>
       <displayType>input</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>omim_id</name>
       <number>19</number>
@@ -764,14 +785,14 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </omim_id>
     <paternal_ethnicity>
@@ -779,9 +800,9 @@
       <customDisplay>{{velocity filter="indent"}}{{html wiki=true clean=false}}
 #if ($xcontext.action == 'edit' || $xcontext.action == 'inline')
 #set ($suggest_script = $xwiki.getURL('PhenoTips.EthnicitySearch', 'get', 'outputSyntax=plain'))
-{{html wiki=false clean=false}}&lt;input name="xwiki-free-multiselect-suggest-script" type="hidden" value="$!escapetool.xml($suggest_script)"/>{{/html}}
+{{html wiki=false clean=false}}&lt;input name="xwiki-free-multiselect-suggest-script" type="hidden" value="$!escapetool.xml($suggest_script)"/&gt;{{/html}}
 #end
-#macro (_fms__displayValue $v $counter) #if($xcontext.action == 'edit' || $xcontext.action == 'inline') {{html wiki=false clean=false}}&lt;input class="xwiki-free-multiselect-value" type="text" size="30" name="${prefix}${name}" id="${prefix}${name}_${counter}" value="$!escapetool.xml($v)"/>{{/html}} #else $escapetool.xml($v) #end#end
+#macro (_fms__displayValue $v $counter) #if($xcontext.action == 'edit' || $xcontext.action == 'inline') {{html wiki=false clean=false}}&lt;input class="xwiki-free-multiselect-value" type="text" size="30" name="${prefix}${name}" id="${prefix}${name}_${counter}" value="$!escapetool.xml($v)"/&gt;{{/html}} #else $escapetool.xml($v) #end#end
 (% class="xwiki-free-multiselect"%)
 #foreach ($v in $value)
 1. #_fms__displayValue($v ${foreach.count})
@@ -800,22 +821,22 @@
       <prettyName>Paternal ethnicity</prettyName>
       <relationalStorage>1</relationalStorage>
       <separator>, </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <values />
+      <validationMessage/>
+      <validationRegExp/>
+      <values/>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </paternal_ethnicity>
     <pedigree>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{include document="PhenoTips.ImageDisplayer" /}}</customDisplay>
       <disabled>0</disabled>
       <displayType>radio</displayType>
-      <idField />
+      <idField/>
       <multiSelect>0</multiSelect>
       <name>pedigree</name>
       <number>28</number>
@@ -823,19 +844,19 @@
       <prettyName>Pedigree</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </pedigree>
     <phenotype>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{velocity}}
 #set($config = $xwiki.getDocument("${doc.space}.WebHome").getObject('PhenoTips.DBConfigurationClass'))
 #if ($config)
@@ -844,7 +865,7 @@
 {{/velocity}}</customDisplay>
       <disabled>0</disabled>
       <displayType>select</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>phenotype</name>
       <number>21</number>
@@ -853,18 +874,18 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </phenotype>
     <prenatal_development>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
       <name>prenatal_development</name>
@@ -874,13 +895,13 @@
       <rows>5</rows>
       <size>40</size>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </prenatal_development>
     <prenatal_phenotype>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{velocity}}
 #set($config = $xwiki.getDocument("${doc.space}.WebHome").getObject('PhenoTips.DBConfigurationClass'))
 #if ($config)
@@ -889,7 +910,7 @@
 {{/velocity}}</customDisplay>
       <disabled>0</disabled>
       <displayType>select</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>prenatal_phenotype</name>
       <number>23</number>
@@ -898,33 +919,33 @@
       <relationalStorage>1</relationalStorage>
       <separator>
 </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <valueField />
+      <validationMessage/>
+      <validationRegExp/>
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </prenatal_phenotype>
     <proband>
-      <customDisplay />
+      <customDisplay/>
       <defaultValue>1</defaultValue>
       <disabled>0</disabled>
       <displayFormType>checkbox</displayFormType>
-      <displayType />
+      <displayType/>
       <name>proband</name>
       <number>12</number>
       <prettyName>This is the proband</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </proband>
     <reports_history>
       <cache>0</cache>
-      <classname />
+      <classname/>
       <customDisplay>{{velocity output="false"}}
 #if (!$value)
   #set ($value = [])
@@ -934,7 +955,7 @@
 {{include document="PhenoTips.ImageDisplayer" /}}</customDisplay>
       <disabled>0</disabled>
       <displayType>checkbox</displayType>
-      <idField />
+      <idField/>
       <multiSelect>1</multiSelect>
       <name>reports_history</name>
       <number>31</number>
@@ -942,28 +963,28 @@
       <prettyName>Reports</prettyName>
       <relationalStorage>1</relationalStorage>
       <separator> </separator>
-      <separators />
+      <separators/>
       <size>1</size>
       <sort>none</sort>
-      <sql />
+      <sql/>
       <unmodifiable>0</unmodifiable>
       <validationMessage>pdf</validationMessage>
       <validationRegExp>^application\/pdf$</validationRegExp>
-      <valueField />
+      <valueField/>
       <classType>com.xpn.xwiki.objects.classes.DBListClass</classType>
     </reports_history>
     <unaffected>
-      <customDisplay />
-      <defaultValue />
+      <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayFormType>checkbox</displayFormType>
-      <displayType />
+      <displayType/>
       <name>unaffected</name>
       <number>20</number>
       <prettyName>This patient is clinically normal</prettyName>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
+      <validationMessage/>
+      <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
     </unaffected>
   </class>
@@ -974,15 +995,15 @@
     <guid>26f66b49-19b2-4e19-9035-4ed4c309045a</guid>
     <class>
       <name>XWiki.ClassSheetBinding</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <sheet>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>sheet</name>
         <number>1</number>
@@ -990,8 +1011,8 @@
         <prettyName>Sheet</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>

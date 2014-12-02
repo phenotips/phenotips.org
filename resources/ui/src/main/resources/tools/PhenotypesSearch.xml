@@ -1,204 +1,225 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>tools</web>
   <name>PhenotypesSearch</name>
-  <language />
-  <defaultLanguage>en</defaultLanguage>
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1368286818000</creationDate>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1414169778000</date>
   <contentUpdateDate>1396021382000</contentUpdateDate>
-  <version>5.5</version>
+  <version>1.1</version>
   <title>Phenotypes search</title>
-  <comment>Copied from xwiki:PhenoTips.MultiTermSearch</comment>
-  <minorEdit>true</minorEdit>
+  <comment/>
+  <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>{{velocity}}&#xd;
-$xwiki.jsx.use($doc.fullName, {'minify': false})##&#xd;
-##$xwiki.jsx.use('PhenoTips.TouchscreenEvents', {'minify': false})##&#xd;
-$xwiki.jsx.use('PhenoTips.Widgets', {'minify': false})##&#xd;
-##$xwiki.jsx.use('PhenoTips.PatientSheetCode', {'minify': false})##&#xd;
-$xwiki.ssx.use('PhenoTips.Widgets', {'minify': false})##&#xd;
-$xwiki.ssx.use('PhenoTips.PatientSheetCode', {'minify': false})##&#xd;
-#if ($request.data)&#xd;
-## =================================================&#xd;
-## GENERATE REVIEW TABLE FOR THE GIVEN DATA...&#xd;
-## =================================================&#xd;
-== Search results ==&#xd;
-#set($texts = $request.data.split("\n"))&#xd;
-#if ($request.sort)&#xd;
-#set($texts = $sorttool.sort($texts))&#xd;
-#end&#xd;
-#set ($crtNo = 0)&#xd;
-#set ($prevText = '')&#xd;
-{{html clean=false wiki=false}}&lt;form action="$doc.getURL('get')" method="post" class="xform">{{/html}}&#xd;
-(% id="results" %)&#xd;
-#foreach ($t in $texts)&#xd;
-  #if ((!$request.sort || $t != $prevText) &amp;&amp; "$!t.trim()" != "")&#xd;
-  #set($prevText = $t)&#xd;
-  #set($crtNo = $mathtool.add($crtNo, 1))&#xd;
-  #if ($t.startsWith("HP:"))&#xd;
-    #set ($r = $services.hpo.get($t.trim()))&#xd;
-    #set ($results = [$r])&#xd;
-  #else&#xd;
-    #set ($params = {&#xd;
-      "defType" : "edismax",&#xd;
-      "fq" : "+(term_category:HP\:0000118)",&#xd;
-      "lowercaseOperators": "false",&#xd;
-      "pf": "name^20 nameSpell^36 nameExact^100 namePrefix^30 synonym^15 synonymSpell^25 synonymExact^70 synonymPrefix^20 text^3 textSpell^5",&#xd;
-      "q": "${t}",&#xd;
-      "qf": "name^10 nameSpell^18 synonym^6 synonymSpell^10 text^1 textSpell^2",&#xd;
-      "spellcheck" : "true",&#xd;
-      "spellcheck.collate" : "true"&#xd;
-  })&#xd;
-    #set($results = $services.hpo.customSearch($params))&#xd;
-  #end&#xd;
-|(% class="count new-term"%)${crtNo}{{html clean=false wiki=false}}&lt;input type="hidden" class="idx" value="${crtNo}"/>{{/html}}##&#xd;
-|(% class="text new-term" title="${t}" %)${t.trim()}{{html clean=false wiki=false}}&lt;input type="hidden" name="original_${crtNo}" value="${t.trim()}"/>{{/html}}##&#xd;
-|(% class="status new-term" %)|(% class="custom new-term" colspan="3" %){{html clean=false wiki=false}}&lt;input type="text" class="suggested multi suggest-hpo" placeholder="Enter keywords and choose among suggested ontology terms" size="16" speech="" x-webkit-speech="" autocomplete="off">&lt;p class="hint">Or see below the best matches found in the HPO for &lt;em>$!{t.trim()}&lt;/em>:&lt;/p>{{/html}}&#xd;
-  #foreach ($r in $results)&#xd;
-||(% class="text" title="${t}" %)|##&#xd;
-|(% class="id" title="Learn more about ${r.id} ${r.name}"%)${r.id}{{html clean=false wiki=false}}&lt;input type="hidden" name="id_${crtNo}" value="${r.id}"/&gt;{{/html}}##&#xd;
-|(% class="name" title="${r.def}" %) ${r.name}{{html clean=false wiki=false}}&lt;input type="hidden" name="name_${crtNo}" value="${r.name}"/>{{/html}}##&#xd;
-|(% class="syn" %) (((#if($r.synonym.isEmpty() == false)(% class="hint" %)Synonyms:&#xd;
-#foreach ($s in $r.synonym)&#xd;
-* ${s}{{html clean=false wiki=false}}&lt;input type="hidden" name="syn_${crtNo}" value="${s}"/>{{/html}}&#xd;
-#end#end)))&#xd;
-  #end&#xd;
-  #end&#xd;
-#end&#xd;
-&#xd;
-{{html clean=false wiki=false}}&#xd;
-&lt;hr/>&#xd;
-&#xd;
-&lt;div class="export-options">&#xd;
-&lt;fieldset>&#xd;
-&lt;legend>Export as CSV&lt;/legend>&#xd;
-&lt;input type="hidden" name="csv" value="1"/>&#xd;
-&lt;input type="hidden" name="outputSyntax" value="plain"/>&#xd;
-From the table above, select:&lt;br/>&#xd;
-&lt;label>&lt;input type="radio" name="select" value="all" checked="checked"/>All&lt;/label>&lt;br/>&#xd;
-&lt;label>&lt;input type="radio" name="select" value="range"/>Range&lt;/label> &lt;label>from &lt;input type="text" name="range_from" value="1" placeholder="1" size="4" class="table-range"/>&lt;/label> &lt;label>to &lt;input type="text" name="range_to" value="$!{texts.size()}" placeholder="$!{texts.size()}" size="4" class="table-range"/>&lt;/label>&lt;br/>## TODO: switch to input type="number" once the support improves&#xd;
-&lt;hr/>&#xd;
-From this selection, export:&lt;br/>&#xd;
-&lt;label>&lt;input type="radio" name="what" value="all" checked="checked"/>All entries&lt;/label>&lt;br/>&#xd;
-&lt;label>&lt;input type="radio" name="what" value="unmatched"/>Entries without a match&lt;/label>&lt;br/>&#xd;
-&lt;label>&lt;input type="radio" name="what" value="unique"/>Entries with unique matches&lt;/label>&lt;br/>&#xd;
-&lt;label>&lt;input type="radio" name="what" value="multiple"/>Entries with multiple matches&lt;/label>&lt;br/>&#xd;
-&lt;hr/>&#xd;
-&lt;label>&lt;input type="checkbox" name="withSyn" value="1"/>Include selected synonyms &lt;/label>&lt;br/>&#xd;
-&lt;/fieldset>&#xd;
-&lt;input type="submit" name="csv" class="button" value="Export..."/>&#xd;
-&lt;/div>&#xd;
-&lt;div class="export-results-container">&#xd;
-&lt;fieldset>&#xd;
-&lt;legend>CSV export results will appear here:&lt;/legend>&lt;a href="#export-results">Clear&lt;/a>&#xd;
-&lt;textarea id="export-results" value="" placeholder="Select your export options and press Export..." disabled="disabled" rows="14" cols="80">&lt;/textarea>&#xd;
-&lt;/fieldset>&#xd;
-&lt;/div>&#xd;
-&lt;/form>{{/html}}&#xd;
-#elseif ($request.csv)&#xd;
-## =================================================&#xd;
-## GENERATE CSV...&#xd;
-## =================================================&#xd;
-## -------------------------------------------------&#xd;
-## Prepare the data&#xd;
-## -------------------------------------------------&#xd;
-#set ($data = {})&#xd;
-#set ($withSynonyms = $request.withSyn)&#xd;
-#foreach($n in $request.getParameterNames())&#xd;
-  #set($parts = $n.split('_'))&#xd;
-  #if ($parts[0] == 'original' || $parts[0] == 'name' || $parts[0] == 'id' || ($request.withSyn &amp;&amp; $parts[0] == 'syn'))&#xd;
-    #set($entry = $data.get($parts[1]))&#xd;
-    #if (!$entry)&#xd;
-      #set($entry = {})&#xd;
-      #set($discard = $data.put($parts[1], $entry))&#xd;
-    #end&#xd;
-    #if ($parts[0] == 'original')&#xd;
-      #set($discard = $entry.put($parts[0], $request.get($n)))&#xd;
-    #else&#xd;
-      #set($values = [])&#xd;
-      #set($discard = $entry.put($parts[0], $values))&#xd;
-      #foreach ($v in $request.getParameterValues($n))&#xd;
-        #set($discard = $values.add($v))&#xd;
-      #end&#xd;
-    #end&#xd;
-  #end&#xd;
-#end&#xd;
-## -------------------------------------------------&#xd;
-## Process the options&#xd;
-## -------------------------------------------------&#xd;
-#set($selection = $request.select)&#xd;
-#if ($selection == "range")&#xd;
-  #set ($from = $mathtool.toInteger("$request.range_from"))&#xd;
-  #set ($to = $mathtool.toInteger("$request.range_to"))&#xd;
-  #if ($to &lt; $from)&#xd;
-    #set ($tmp = $from)&#xd;
-    #set ($from = $to)&#xd;
-    #set ($to = $tmp)&#xd;
-  #end&#xd;
-  #if ($from &lt; 1)&#xd;
-    #set ($from = 1)&#xd;
-  #end&#xd;
-  #if ($to > $data.size())&#xd;
-    #set ($to = $data.size())&#xd;
-  #end&#xd;
-#else&#xd;
-  #set ($selection = "all")&#xd;
-  #set ($from = 1)&#xd;
-  #set ($to = $data.size())&#xd;
-#end&#xd;
-#set ($what = "$!{request.what}")&#xd;
-#if ($what != "unmatched" &amp;&amp; $what != "unique" &amp;&amp; $what != "multiple")&#xd;
-  #set ($what = "all")&#xd;
-#end&#xd;
-## -------------------------------------------------&#xd;
-## Macro for generating one entry&#xd;
-## -------------------------------------------------&#xd;
-#macro(__generate_csv_rows $entry)&#xd;
-#if (($what != 'unmatched' || !$entry.id || $entry.id.size() == 0) &amp;&amp; ($what != 'unique' || $entry.id.size() == 1) &amp;&amp; ($what != 'multiple' || $entry.id.size() > 1))&#xd;
-"$!entry.original","#if($entry.id.size() >= 1)$!{entry.id[0]}#{else}NA#end","#if($entry.name.size() >= 1)$!{entry.name[0]}#end"#if($what != 'multiple' &amp;&amp; $request.withSyn),"#if($request.withSyn &amp;&amp; $entry.id.size() == 1 &amp;&amp; $entry.syn.size() >= 1)$!{entry.syn[0]}#end"#end&#xd;
-&#xd;
-#if ($entry.id.size() > 1)&#xd;
-#foreach ($i in [1..$mathtool.sub($entry.id.size(), 1)])&#xd;
-"","$!{entry.id[$i]}","$!{entry.name[$i]}"#if($what != 'multiple' &amp;&amp; $request.withSyn),""#end&#xd;
-&#xd;
-#end&#xd;
-#end&#xd;
-#end&#xd;
-#end&#xd;
-## -------------------------------------------------&#xd;
-## Generate the CSV&#xd;
-## -------------------------------------------------&#xd;
-#foreach ($e in [$from..$to])&#xd;
-  #set($entry = $data.get("$e"))&#xd;
-  #if ($entry)&#xd;
-    #__generate_csv_rows($entry)&#xd;
-  #end&#xd;
-#end&#xd;
-#else&#xd;
-## =================================================&#xd;
-## GENERATE INPUT FORM&#xd;
-## =================================================&#xd;
-{{html wiki=false clean=false}}&#xd;
-&lt;form action="" method="post" class="xform">&#xd;
-&lt;div>&#xd;
-&lt;p>&lt;label for="data">Enter below a list of terms that you wish to map to &lt;a href="http://human-phenotype-ontology.org" title="Human Phenotype Ontology">HPO&lt;/a> (one per line):&lt;/label>&lt;/p>&#xd;
-&lt;textarea id="data" name="data" placeholder="Enter phenotypes, one per line" rows="25" cols="80">&lt;/textarea>&#xd;
-&lt;p>&#xd;
-&lt;label>&lt;input type="checkbox" name="sort" value="1" checked="checked"/>Sort entries alphabetically and remove duplicates&lt;/label>&#xd;
-&lt;/p>&#xd;
-&lt;/div>&#xd;
-&lt;div>&#xd;
-&lt;input type="submit" class="button" value="Find matching HPO terms..."/>&#xd;
-&lt;/div>&#xd;
-&lt;/form>&#xd;
-{{/html}}&#xd;
-#end## request.parameters checking&#xd;
+  <content>{{velocity}}
+$xwiki.jsx.use($doc.fullName, {'minify': false})##
+##$xwiki.jsx.use('PhenoTips.TouchscreenEvents', {'minify': false})##
+$xwiki.jsx.use('PhenoTips.Widgets', {'minify': false})##
+##$xwiki.jsx.use('PhenoTips.PatientSheetCode', {'minify': false})##
+$xwiki.ssx.use('PhenoTips.Widgets', {'minify': false})##
+$xwiki.ssx.use('PhenoTips.PatientSheetCode', {'minify': false})##
+#if ($request.data)
+## =================================================
+## GENERATE REVIEW TABLE FOR THE GIVEN DATA...
+## =================================================
+== Search results ==
+#set($texts = $request.data.split("\n"))
+#if ($request.sort)
+#set($texts = $sorttool.sort($texts))
+#end
+#set ($crtNo = 0)
+#set ($prevText = '')
+{{html clean=false wiki=false}}&lt;form action="$doc.getURL('get')" method="post" class="xform"&gt;{{/html}}
+(% id="results" %)
+#foreach ($t in $texts)
+  #if ((!$request.sort || $t != $prevText) &amp;&amp; "$!t.trim()" != "")
+  #set($prevText = $t)
+  #set($crtNo = $mathtool.add($crtNo, 1))
+  #if ($t.startsWith("HP:"))
+    #set ($r = $services.hpo.get($t.trim()))
+    #set ($results = [$r])
+  #else
+    #set ($params = {
+      "defType" : "edismax",
+      "fq" : "+(term_category:HP\:0000118)",
+      "lowercaseOperators": "false",
+      "pf": "name^20 nameSpell^36 nameExact^100 namePrefix^30 synonym^15 synonymSpell^25 synonymExact^70 synonymPrefix^20 text^3 textSpell^5",
+      "q": "${t}",
+      "qf": "name^10 nameSpell^18 synonym^6 synonymSpell^10 text^1 textSpell^2",
+      "spellcheck" : "true",
+      "spellcheck.collate" : "true"
+  })
+    #set($results = $services.hpo.customSearch($params))
+  #end
+|(% class="count new-term"%)${crtNo}{{html clean=false wiki=false}}&lt;input type="hidden" class="idx" value="${crtNo}"/&gt;{{/html}}##
+|(% class="text new-term" title="${t}" %)${t.trim()}{{html clean=false wiki=false}}&lt;input type="hidden" name="original_${crtNo}" value="${t.trim()}"/&gt;{{/html}}##
+|(% class="status new-term" %)|(% class="custom new-term" colspan="3" %){{html clean=false wiki=false}}&lt;input type="text" class="suggested multi suggest-hpo" placeholder="Enter keywords and choose among suggested ontology terms" size="16" speech="" x-webkit-speech="" autocomplete="off"&gt;&lt;p class="hint"&gt;Or see below the best matches found in the HPO for &lt;em&gt;$!{t.trim()}&lt;/em&gt;:&lt;/p&gt;{{/html}}
+  #foreach ($r in $results)
+||(% class="text" title="${t}" %)|##
+|(% class="id" title="Learn more about ${r.id} ${r.name}"%)${r.id}{{html clean=false wiki=false}}&lt;input type="hidden" name="id_${crtNo}" value="${r.id}"/&gt;{{/html}}##
+|(% class="name" title="${r.def}" %) ${r.name}{{html clean=false wiki=false}}&lt;input type="hidden" name="name_${crtNo}" value="${r.name}"/&gt;{{/html}}##
+|(% class="syn" %) (((#if($r.synonym.isEmpty() == false)(% class="hint" %)Synonyms:
+#foreach ($s in $r.synonym)
+* ${s}{{html clean=false wiki=false}}&lt;input type="hidden" name="syn_${crtNo}" value="${s}"/&gt;{{/html}}
+#end#end)))
+  #end
+  #end
+#end
+
+{{html clean=false wiki=false}}
+&lt;hr/&gt;
+
+&lt;div class="export-options"&gt;
+&lt;fieldset&gt;
+&lt;legend&gt;Export as CSV&lt;/legend&gt;
+&lt;input type="hidden" name="csv" value="1"/&gt;
+&lt;input type="hidden" name="outputSyntax" value="plain"/&gt;
+From the table above, select:&lt;br/&gt;
+&lt;label&gt;&lt;input type="radio" name="select" value="all" checked="checked"/&gt;All&lt;/label&gt;&lt;br/&gt;
+&lt;label&gt;&lt;input type="radio" name="select" value="range"/&gt;Range&lt;/label&gt; &lt;label&gt;from &lt;input type="text" name="range_from" value="1" placeholder="1" size="4" class="table-range"/&gt;&lt;/label&gt; &lt;label&gt;to &lt;input type="text" name="range_to" value="$!{texts.size()}" placeholder="$!{texts.size()}" size="4" class="table-range"/&gt;&lt;/label&gt;&lt;br/&gt;## TODO: switch to input type="number" once the support improves
+&lt;hr/&gt;
+From this selection, export:&lt;br/&gt;
+&lt;label&gt;&lt;input type="radio" name="what" value="all" checked="checked"/&gt;All entries&lt;/label&gt;&lt;br/&gt;
+&lt;label&gt;&lt;input type="radio" name="what" value="unmatched"/&gt;Entries without a match&lt;/label&gt;&lt;br/&gt;
+&lt;label&gt;&lt;input type="radio" name="what" value="unique"/&gt;Entries with unique matches&lt;/label&gt;&lt;br/&gt;
+&lt;label&gt;&lt;input type="radio" name="what" value="multiple"/&gt;Entries with multiple matches&lt;/label&gt;&lt;br/&gt;
+&lt;hr/&gt;
+&lt;label&gt;&lt;input type="checkbox" name="withSyn" value="1"/&gt;Include selected synonyms &lt;/label&gt;&lt;br/&gt;
+&lt;/fieldset&gt;
+&lt;input type="submit" name="csv" class="button" value="Export..."/&gt;
+&lt;/div&gt;
+&lt;div class="export-results-container"&gt;
+&lt;fieldset&gt;
+&lt;legend&gt;CSV export results will appear here:&lt;/legend&gt;&lt;a href="#export-results"&gt;Clear&lt;/a&gt;
+&lt;textarea id="export-results" value="" placeholder="Select your export options and press Export..." disabled="disabled" rows="14" cols="80"&gt;&lt;/textarea&gt;
+&lt;/fieldset&gt;
+&lt;/div&gt;
+&lt;/form&gt;{{/html}}
+#elseif ($request.csv)
+## =================================================
+## GENERATE CSV...
+## =================================================
+## -------------------------------------------------
+## Prepare the data
+## -------------------------------------------------
+#set ($data = {})
+#set ($withSynonyms = $request.withSyn)
+#foreach($n in $request.getParameterNames())
+  #set($parts = $n.split('_'))
+  #if ($parts[0] == 'original' || $parts[0] == 'name' || $parts[0] == 'id' || ($request.withSyn &amp;&amp; $parts[0] == 'syn'))
+    #set($entry = $data.get($parts[1]))
+    #if (!$entry)
+      #set($entry = {})
+      #set($discard = $data.put($parts[1], $entry))
+    #end
+    #if ($parts[0] == 'original')
+      #set($discard = $entry.put($parts[0], $request.get($n)))
+    #else
+      #set($values = [])
+      #set($discard = $entry.put($parts[0], $values))
+      #foreach ($v in $request.getParameterValues($n))
+        #set($discard = $values.add($v))
+      #end
+    #end
+  #end
+#end
+## -------------------------------------------------
+## Process the options
+## -------------------------------------------------
+#set($selection = $request.select)
+#if ($selection == "range")
+  #set ($from = $mathtool.toInteger("$request.range_from"))
+  #set ($to = $mathtool.toInteger("$request.range_to"))
+  #if ($to &lt; $from)
+    #set ($tmp = $from)
+    #set ($from = $to)
+    #set ($to = $tmp)
+  #end
+  #if ($from &lt; 1)
+    #set ($from = 1)
+  #end
+  #if ($to &gt; $data.size())
+    #set ($to = $data.size())
+  #end
+#else
+  #set ($selection = "all")
+  #set ($from = 1)
+  #set ($to = $data.size())
+#end
+#set ($what = "$!{request.what}")
+#if ($what != "unmatched" &amp;&amp; $what != "unique" &amp;&amp; $what != "multiple")
+  #set ($what = "all")
+#end
+## -------------------------------------------------
+## Macro for generating one entry
+## -------------------------------------------------
+#macro(__generate_csv_rows $entry)
+#if (($what != 'unmatched' || !$entry.id || $entry.id.size() == 0) &amp;&amp; ($what != 'unique' || $entry.id.size() == 1) &amp;&amp; ($what != 'multiple' || $entry.id.size() &gt; 1))
+"$!entry.original","#if($entry.id.size() &gt;= 1)$!{entry.id[0]}#{else}NA#end","#if($entry.name.size() &gt;= 1)$!{entry.name[0]}#end"#if($what != 'multiple' &amp;&amp; $request.withSyn),"#if($request.withSyn &amp;&amp; $entry.id.size() == 1 &amp;&amp; $entry.syn.size() &gt;= 1)$!{entry.syn[0]}#end"#end
+
+#if ($entry.id.size() &gt; 1)
+#foreach ($i in [1..$mathtool.sub($entry.id.size(), 1)])
+"","$!{entry.id[$i]}","$!{entry.name[$i]}"#if($what != 'multiple' &amp;&amp; $request.withSyn),""#end
+
+#end
+#end
+#end
+#end
+## -------------------------------------------------
+## Generate the CSV
+## -------------------------------------------------
+#foreach ($e in [$from..$to])
+  #set($entry = $data.get("$e"))
+  #if ($entry)
+    #__generate_csv_rows($entry)
+  #end
+#end
+#else
+## =================================================
+## GENERATE INPUT FORM
+## =================================================
+{{html wiki=false clean=false}}
+&lt;form action="" method="post" class="xform"&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;label for="data"&gt;Enter below a list of terms that you wish to map to &lt;a href="http://human-phenotype-ontology.org" title="Human Phenotype Ontology"&gt;HPO&lt;/a&gt; (one per line):&lt;/label&gt;&lt;/p&gt;
+&lt;textarea id="data" name="data" placeholder="Enter phenotypes, one per line" rows="25" cols="80"&gt;&lt;/textarea&gt;
+&lt;p&gt;
+&lt;label&gt;&lt;input type="checkbox" name="sort" value="1" checked="checked"/&gt;Sort entries alphabetically and remove duplicates&lt;/label&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;input type="submit" class="button" value="Find matching HPO terms..."/&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+{{/html}}
+#end## request.parameters checking
 {{/velocity}}</content>
   <object>
     <name>tools.PhenotypesSearch</name>
@@ -207,13 +228,13 @@ From this selection, export:&lt;br/>&#xd;
     <guid>341e89a9-86ee-4578-89e9-d7b26db7ff6c</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -280,279 +301,279 @@ From this selection, export:&lt;br/>&#xd;
       <cache>forbid</cache>
     </property>
     <property>
-      <code>document.observe('dom:loaded', function() {&#xd;
-  if (!$('results')) {return;}&#xd;
-  var getTermInfo = function(_row) {&#xd;
-    var info = {row: _row};&#xd;
-    info.cell = _row &amp;&amp; _row.down('.text');&#xd;
-    info.text = info.cell &amp;&amp; info.cell.title.strip();&#xd;
-    info.displayedText = info.cell &amp;&amp; info.cell.innerHTML.strip();&#xd;
-    return info;&#xd;
-  }&#xd;
-  var hpoSuggestOptions = {&#xd;
-            script: "$xwiki.getURL('PhenoTips.SolrService', 'get')?",&#xd;
-            queryProcessor: typeof(PhenoTips.widgets.SolrQueryProcessor) == "undefined" ? null : new PhenoTips.widgets.SolrQueryProcessor({&#xd;
-                           'name' : {'wordBoost': 10, 'phraseBoost': 20},&#xd;
-                           'nameSpell' : {'wordBoost': 18, 'phraseBoost': 36, 'stubBoost': 14},&#xd;
-                           'nameExact' : {'phraseBoost': 100},&#xd;
-                           'namePrefix' : {'phraseBoost': 30},&#xd;
-                           'synonym' : {'wordBoost': 6, 'phraseBoost': 15},&#xd;
-                           'synonymSpell' : {'wordBoost': 10, 'phraseBoost': 25, 'stubBoost': 7},&#xd;
-                           'synonymExact' : {'phraseBoost': 70},&#xd;
-                           'synonymPrefix' : {'phraseBoost': 20},&#xd;
-                           'text' : {'wordBoost': 1, 'phraseBoost': 3, 'stubBoost': 1},&#xd;
-                           'textSpell' : {'wordBoost': 2, 'phraseBoost': 5, 'stubBoost': 2, 'stubTrigger': true},&#xd;
-                           'id' : {'activationRegex' : /^HP:[0-9]+$/i, 'mandatory' : true, 'transform': function(query) {return query.toUpperCase().replace(/:/g, "\\:");}},&#xd;
-                           'alt_id' : {'activationRegex' : /^HP:[0-9]+$/i, 'mandatory' : true, 'transform': function(query) {return query.toUpperCase().replace(/:/g, "\\:");}}&#xd;
-                         }, {&#xd;
-                           'term_category': ['HP:0000118']&#xd;
-                         }),&#xd;
-            varname: "q",&#xd;
-            noresults: "No matching terms",&#xd;
-            json: true,&#xd;
-            resultsParameter : "rows",&#xd;
-            resultId : "id",&#xd;
-            resultValue : "name",&#xd;
-            resultCategory : "term_category",&#xd;
-            resultInfo : {&#xd;
-                 "Browse related terms..." : {"extern" : true,&#xd;
-                                              "processor" : function(trigger) {&#xd;
-                                                              trigger._obrowser = new PhenoTips.widgets.OntologyBrowser(this, null, {});&#xd;
-                                                              trigger.observe('click', function(event){&#xd;
-                                                                event.stop();&#xd;
-                                                                event.element()._obrowser.show(&#xd;
-                                                                  event.element().up('.suggestItem').down('.suggestId').firstChild.nodeValue&#xd;
-                                                                );&#xd;
-                                                              }.bindAsEventListener(this));&#xd;
-                                                            }&#xd;
-                                             }&#xd;
-                         },&#xd;
-            enableHierarchy: true,&#xd;
-            resultParent : "is_a",&#xd;
-            fadeOnClear : false,&#xd;
-            timeout : 30000,&#xd;
-            parentContainer : null&#xd;
-  };&#xd;
-&#xd;
-  var crtSuggest = null;&#xd;
-  $('results').select('tr').each(function(row){&#xd;
-    // ===================================================================&#xd;
-    // SUGGEST PICKERS&#xd;
-    // ===================================================================&#xd;
-    row.select('input.suggest-hpo').each(function(item) {&#xd;
-       if (!item.hasClassName('initialized')) {&#xd;
-         // Create the Suggest.&#xd;
-         item._suggest = new PhenoTips.widgets.Suggest(item, hpoSuggestOptions);&#xd;
-         if (item.hasClassName('multi') &amp;&amp; typeof(PhenoTips.widgets.SuggestPicker) != "undefined") {&#xd;
-             var suggestPicker = new PhenoTips.widgets.SuggestPicker(item, item._suggest, {});&#xd;
-             item._suggestPicker = suggestPicker;&#xd;
-             suggestPicker.silent = true;&#xd;
-         }&#xd;
-         item.addClassName('initialized');&#xd;
-         crtSuggest = item._suggest;&#xd;
-       }&#xd;
-     });&#xd;
-    // ===================================================================&#xd;
-    // ONTOLOGY BROWSER&#xd;
-    // ===================================================================&#xd;
-    row.select('.id').each(function(trigger) {&#xd;
-      trigger._obrowser = new PhenoTips.widgets.OntologyBrowser(crtSuggest, null, {});&#xd;
-      trigger.observe('click', function(event){&#xd;
-        event.stop();&#xd;
-        var t = event.findElement('.id');&#xd;
-        t._obrowser.show(t.down('input').value);&#xd;
-      }.bindAsEventListener(this));&#xd;
-    });&#xd;
-    // ===================================================================&#xd;
-    // TERM TOOLS&#xd;
-    // ===================================================================&#xd;
-    var termCell = row.down('.new-term.text');&#xd;
-    if (termCell) {&#xd;
-       var termAccept = new Element('span', {&#xd;
-                                  'class' : 'accept tool',&#xd;
-                                  'title': 'Accept this new term'&#xd;
-                                   }).update('✔');&#xd;
-       termAccept.observe('click', function(event){&#xd;
-         var crt = getTermInfo(event.findElement('tr'));&#xd;
-         if (!crt.row) {return;}&#xd;
-         var rel, next = crt.row.next('tr');&#xd;
-         while (next &amp;&amp; (rel = getTermInfo(next))) {&#xd;
-           if (rel.text == crt.text) {&#xd;
-             rel.row.remove();&#xd;
-             next = crt.row.next('tr');&#xd;
-           } else {&#xd;
-             next = false;&#xd;
-           }&#xd;
-         }&#xd;
-       });&#xd;
-       termCell.insert(termAccept);&#xd;
-       return;&#xd;
-    }&#xd;
-    // ===================================================================&#xd;
-    // ROW TOOLS&#xd;
-    // ===================================================================&#xd;
-    // -------------------------------------------------------------------&#xd;
-    // Delete row&#xd;
-    // -------------------------------------------------------------------&#xd;
-    var rowDelete = new Element('span', {&#xd;
-                                  'class' : 'delete tool',&#xd;
-                                  'title': 'Delete this match'&#xd;
-                                }).update('✖');&#xd;
-    rowDelete.observe('click', function(event){&#xd;
-      var crt = getTermInfo(event.findElement('tr'));&#xd;
-      if (!crt.row) {return;}&#xd;
-      if (crt.text == crt.displayedText) {&#xd;
-        var next = getTermInfo(crt.row.next('tr'));&#xd;
-        if (next.text != next.displayedText) {&#xd;
-          next.cell.update(next.text);&#xd;
-        } else {&#xd;
-          crt.row.down('.id').update('NA');&#xd;
-          crt.row.down('.name').update('');&#xd;
-          crt.row.down('.syn').update('');&#xd;
-          return;&#xd;
-        }&#xd;
-      }     &#xd;
-      crt.row.remove();&#xd;
-    });&#xd;
-    row.down('.name').insert(rowDelete);&#xd;
-    //row.insert(new Element('td', {'class' : 'actions'}).update(rowDelete));&#xd;
-    // -------------------------------------------------------------------&#xd;
-    // Accept row&#xd;
-    // -------------------------------------------------------------------&#xd;
-    var rowAccept = new Element('span', {&#xd;
-                                  'class' : 'accept tool',&#xd;
-                                  'title': 'Accept this match'&#xd;
-                                }).update('✔');&#xd;
-    rowAccept.observe('click', function(event){&#xd;
-      var crt = getTermInfo(event.findElement('tr'));&#xd;
-      if (!crt.row) {return;}&#xd;
-      var rel, next = crt.row.next('tr'), prev = crt.row.previous('tr');&#xd;
-      while (next &amp;&amp; (rel = getTermInfo(next))) {&#xd;
-        if (rel.text == crt.text) {&#xd;
-           rel.row.remove();&#xd;
-           next = crt.row.next('tr');&#xd;
-        } else {&#xd;
-           next = false;&#xd;
-        }&#xd;
-      }&#xd;
-      while (prev &amp;&amp; (rel = getTermInfo(prev))) {&#xd;
-        if (rel.text == crt.text &amp;&amp; !rel.row.down('.new-term')) {&#xd;
-           rel.row.remove();&#xd;
-           prev = crt.row.previous('tr');&#xd;
-        } else {&#xd;
-           prev = false;&#xd;
-        }&#xd;
-      }&#xd;
-      //crt.row.down('.name .tool.delete').remove();&#xd;
-      //crt.cell.update(crt.text);&#xd;
-    });&#xd;
-    row.down('.name').insert(rowAccept);&#xd;
-    // ===================================================================&#xd;
-    // SYNONYM TOOLS&#xd;
-    // ===================================================================&#xd;
-    row.select('.syn li').each(function(syn){&#xd;
-      // -------------------------------------------------------------------&#xd;
-      // Delete syn&#xd;
-      // -------------------------------------------------------------------&#xd;
-      var synDelete = new Element('span', {&#xd;
-               'class' : 'delete tool',&#xd;
-               'title': 'Delete this synonym'&#xd;
-           }).update('✖');&#xd;
-       synDelete.observe('click', function(event){&#xd;
-         event.findElement('li').remove();&#xd;
-       });&#xd;
-       syn.insert(synDelete);&#xd;
-      // -------------------------------------------------------------------&#xd;
-      // Accept syn&#xd;
-      // -------------------------------------------------------------------&#xd;
-      var synAccept = new Element('span', {&#xd;
-                                  'class' : 'accept tool',&#xd;
-                                  'title': 'Accept this synonym'&#xd;
-                                }).update('✔');&#xd;
-       synAccept.observe('click', function(event){&#xd;
-         var accepted =  event.findElement('li');&#xd;
-         var list = accepted.up();&#xd;
-         list.select('li').each(function(item){&#xd;
-           if (item != accepted) {item.remove();}&#xd;
-         });&#xd;
-       });&#xd;
-       syn.insert(synAccept);&#xd;
-    });&#xd;
-  });&#xd;
-  // ===================================================================&#xd;
-  // OPTIONS VALIDATION&#xd;
-  // ===================================================================&#xd;
-  $$('.table-range').each(function(item) {&#xd;
-    item.observe('keypress', function(event) {&#xd;
-      if (event.keyCode == 0 &amp;&amp; (event.charCode &lt; 48 || event.charCode > 57)) {&#xd;
-        event.stop();&#xd;
-      }&#xd;
-    });&#xd;
-  });&#xd;
-  // ===================================================================&#xd;
-  // FORM SUBMISSION&#xd;
-  // ===================================================================&#xd;
-  var form = $('results').up(form);&#xd;
-  var exportResults =  $('export-results');&#xd;
-  if (!exportResults) {&#xd;
-     return;&#xd;
-  }&#xd;
-  exportResults.value = '';&#xd;
-  var cleartool = exportResults.previous('a');&#xd;
-  cleartool.hide();&#xd;
-  cleartool.observe('click', function(event){&#xd;
-      event.stop();&#xd;
-      exportResults.removeClassName('loading');&#xd;
-      exportResults.removeClassName('error');&#xd;
-      exportResults.value = "";&#xd;
-      exportResults.disabled = "disabled";&#xd;
-      cleartool.hide();&#xd;
-  });&#xd;
-  form.observe('submit', function(event) {&#xd;
-    event.stop();&#xd;
-    // Generate hidden inputs for custom entries&#xd;
-    Element.select(form, '.accepted-suggestions li').each(function(item){&#xd;
-      var idx = item.up('tr').down('.idx').value;&#xd;
-      if (!item.down('input[type="hidden"][name="id_' + idx + '"]')) {&#xd;
-         item.insert(&#xd;
-           new Element('input', {'type' : 'hidden', 'name' : 'id_' + idx, 'value' : item.down('input[type="hidden"][name=""]').value})&#xd;
-         ).insert(&#xd;
-           new Element('input', {'type' : 'hidden', 'name' : 'name_' + idx, 'value' : item.down('.value').firstChild.nodeValue})&#xd;
-         );&#xd;
-      }&#xd;
-    });&#xd;
-    // -------------------------------------------------------------------&#xd;
-    // AJAX submission&#xd;
-    // -------------------------------------------------------------------&#xd;
-    new Ajax.Request(form.action, {&#xd;
-      method : form.method,&#xd;
-      parameters : new Hash(form.serialize(true)),&#xd;
-      onCreate : function () {&#xd;
-         exportResults.value = "Generating CSV..."&#xd;
-         exportResults.addClassName('loading');&#xd;
-      },&#xd;
-      onSuccess: function(response) {&#xd;
-         exportResults.value = response.responseText;&#xd;
-         exportResults.disabled = false;&#xd;
-         exportResults.select();&#xd;
-      },&#xd;
-      onFailure: function(response) {&#xd;
-         exportResults.value = 'CSV generation failed';&#xd;
-         exportResults.addClassName('error');&#xd;
-      },&#xd;
-      on0 : function (response) {&#xd;
-        response.request.options.onFailure(response);&#xd;
-      },&#xd;
-      onComplete : function() {&#xd;
-         exportResults.removeClassName('loading');&#xd;
-         cleartool.show();&#xd;
-      }&#xd;
-    });&#xd;
-  });&#xd;
+      <code>document.observe('dom:loaded', function() {
+  if (!$('results')) {return;}
+  var getTermInfo = function(_row) {
+    var info = {row: _row};
+    info.cell = _row &amp;&amp; _row.down('.text');
+    info.text = info.cell &amp;&amp; info.cell.title.strip();
+    info.displayedText = info.cell &amp;&amp; info.cell.innerHTML.strip();
+    return info;
+  }
+  var hpoSuggestOptions = {
+            script: "$xwiki.getURL('PhenoTips.SolrService', 'get')?",
+            queryProcessor: typeof(PhenoTips.widgets.SolrQueryProcessor) == "undefined" ? null : new PhenoTips.widgets.SolrQueryProcessor({
+                           'name' : {'wordBoost': 10, 'phraseBoost': 20},
+                           'nameSpell' : {'wordBoost': 18, 'phraseBoost': 36, 'stubBoost': 14},
+                           'nameExact' : {'phraseBoost': 100},
+                           'namePrefix' : {'phraseBoost': 30},
+                           'synonym' : {'wordBoost': 6, 'phraseBoost': 15},
+                           'synonymSpell' : {'wordBoost': 10, 'phraseBoost': 25, 'stubBoost': 7},
+                           'synonymExact' : {'phraseBoost': 70},
+                           'synonymPrefix' : {'phraseBoost': 20},
+                           'text' : {'wordBoost': 1, 'phraseBoost': 3, 'stubBoost': 1},
+                           'textSpell' : {'wordBoost': 2, 'phraseBoost': 5, 'stubBoost': 2, 'stubTrigger': true},
+                           'id' : {'activationRegex' : /^HP:[0-9]+$/i, 'mandatory' : true, 'transform': function(query) {return query.toUpperCase().replace(/:/g, "\\:");}},
+                           'alt_id' : {'activationRegex' : /^HP:[0-9]+$/i, 'mandatory' : true, 'transform': function(query) {return query.toUpperCase().replace(/:/g, "\\:");}}
+                         }, {
+                           'term_category': ['HP:0000118']
+                         }),
+            varname: "q",
+            noresults: "No matching terms",
+            json: true,
+            resultsParameter : "rows",
+            resultId : "id",
+            resultValue : "name",
+            resultCategory : "term_category",
+            resultInfo : {
+                 "Browse related terms..." : {"extern" : true,
+                                              "processor" : function(trigger) {
+                                                              trigger._obrowser = new PhenoTips.widgets.OntologyBrowser(this, null, {});
+                                                              trigger.observe('click', function(event){
+                                                                event.stop();
+                                                                event.element()._obrowser.show(
+                                                                  event.element().up('.suggestItem').down('.suggestId').firstChild.nodeValue
+                                                                );
+                                                              }.bindAsEventListener(this));
+                                                            }
+                                             }
+                         },
+            enableHierarchy: true,
+            resultParent : "is_a",
+            fadeOnClear : false,
+            timeout : 30000,
+            parentContainer : null
+  };
+
+  var crtSuggest = null;
+  $('results').select('tr').each(function(row){
+    // ===================================================================
+    // SUGGEST PICKERS
+    // ===================================================================
+    row.select('input.suggest-hpo').each(function(item) {
+       if (!item.hasClassName('initialized')) {
+         // Create the Suggest.
+         item._suggest = new PhenoTips.widgets.Suggest(item, hpoSuggestOptions);
+         if (item.hasClassName('multi') &amp;&amp; typeof(PhenoTips.widgets.SuggestPicker) != "undefined") {
+             var suggestPicker = new PhenoTips.widgets.SuggestPicker(item, item._suggest, {});
+             item._suggestPicker = suggestPicker;
+             suggestPicker.silent = true;
+         }
+         item.addClassName('initialized');
+         crtSuggest = item._suggest;
+       }
+     });
+    // ===================================================================
+    // ONTOLOGY BROWSER
+    // ===================================================================
+    row.select('.id').each(function(trigger) {
+      trigger._obrowser = new PhenoTips.widgets.OntologyBrowser(crtSuggest, null, {});
+      trigger.observe('click', function(event){
+        event.stop();
+        var t = event.findElement('.id');
+        t._obrowser.show(t.down('input').value);
+      }.bindAsEventListener(this));
+    });
+    // ===================================================================
+    // TERM TOOLS
+    // ===================================================================
+    var termCell = row.down('.new-term.text');
+    if (termCell) {
+       var termAccept = new Element('span', {
+                                  'class' : 'accept tool',
+                                  'title': 'Accept this new term'
+                                   }).update('✔');
+       termAccept.observe('click', function(event){
+         var crt = getTermInfo(event.findElement('tr'));
+         if (!crt.row) {return;}
+         var rel, next = crt.row.next('tr');
+         while (next &amp;&amp; (rel = getTermInfo(next))) {
+           if (rel.text == crt.text) {
+             rel.row.remove();
+             next = crt.row.next('tr');
+           } else {
+             next = false;
+           }
+         }
+       });
+       termCell.insert(termAccept);
+       return;
+    }
+    // ===================================================================
+    // ROW TOOLS
+    // ===================================================================
+    // -------------------------------------------------------------------
+    // Delete row
+    // -------------------------------------------------------------------
+    var rowDelete = new Element('span', {
+                                  'class' : 'delete tool',
+                                  'title': 'Delete this match'
+                                }).update('✖');
+    rowDelete.observe('click', function(event){
+      var crt = getTermInfo(event.findElement('tr'));
+      if (!crt.row) {return;}
+      if (crt.text == crt.displayedText) {
+        var next = getTermInfo(crt.row.next('tr'));
+        if (next.text != next.displayedText) {
+          next.cell.update(next.text);
+        } else {
+          crt.row.down('.id').update('NA');
+          crt.row.down('.name').update('');
+          crt.row.down('.syn').update('');
+          return;
+        }
+      }     
+      crt.row.remove();
+    });
+    row.down('.name').insert(rowDelete);
+    //row.insert(new Element('td', {'class' : 'actions'}).update(rowDelete));
+    // -------------------------------------------------------------------
+    // Accept row
+    // -------------------------------------------------------------------
+    var rowAccept = new Element('span', {
+                                  'class' : 'accept tool',
+                                  'title': 'Accept this match'
+                                }).update('✔');
+    rowAccept.observe('click', function(event){
+      var crt = getTermInfo(event.findElement('tr'));
+      if (!crt.row) {return;}
+      var rel, next = crt.row.next('tr'), prev = crt.row.previous('tr');
+      while (next &amp;&amp; (rel = getTermInfo(next))) {
+        if (rel.text == crt.text) {
+           rel.row.remove();
+           next = crt.row.next('tr');
+        } else {
+           next = false;
+        }
+      }
+      while (prev &amp;&amp; (rel = getTermInfo(prev))) {
+        if (rel.text == crt.text &amp;&amp; !rel.row.down('.new-term')) {
+           rel.row.remove();
+           prev = crt.row.previous('tr');
+        } else {
+           prev = false;
+        }
+      }
+      //crt.row.down('.name .tool.delete').remove();
+      //crt.cell.update(crt.text);
+    });
+    row.down('.name').insert(rowAccept);
+    // ===================================================================
+    // SYNONYM TOOLS
+    // ===================================================================
+    row.select('.syn li').each(function(syn){
+      // -------------------------------------------------------------------
+      // Delete syn
+      // -------------------------------------------------------------------
+      var synDelete = new Element('span', {
+               'class' : 'delete tool',
+               'title': 'Delete this synonym'
+           }).update('✖');
+       synDelete.observe('click', function(event){
+         event.findElement('li').remove();
+       });
+       syn.insert(synDelete);
+      // -------------------------------------------------------------------
+      // Accept syn
+      // -------------------------------------------------------------------
+      var synAccept = new Element('span', {
+                                  'class' : 'accept tool',
+                                  'title': 'Accept this synonym'
+                                }).update('✔');
+       synAccept.observe('click', function(event){
+         var accepted =  event.findElement('li');
+         var list = accepted.up();
+         list.select('li').each(function(item){
+           if (item != accepted) {item.remove();}
+         });
+       });
+       syn.insert(synAccept);
+    });
+  });
+  // ===================================================================
+  // OPTIONS VALIDATION
+  // ===================================================================
+  $$('.table-range').each(function(item) {
+    item.observe('keypress', function(event) {
+      if (event.keyCode == 0 &amp;&amp; (event.charCode &lt; 48 || event.charCode &gt; 57)) {
+        event.stop();
+      }
+    });
+  });
+  // ===================================================================
+  // FORM SUBMISSION
+  // ===================================================================
+  var form = $('results').up(form);
+  var exportResults =  $('export-results');
+  if (!exportResults) {
+     return;
+  }
+  exportResults.value = '';
+  var cleartool = exportResults.previous('a');
+  cleartool.hide();
+  cleartool.observe('click', function(event){
+      event.stop();
+      exportResults.removeClassName('loading');
+      exportResults.removeClassName('error');
+      exportResults.value = "";
+      exportResults.disabled = "disabled";
+      cleartool.hide();
+  });
+  form.observe('submit', function(event) {
+    event.stop();
+    // Generate hidden inputs for custom entries
+    Element.select(form, '.accepted-suggestions li').each(function(item){
+      var idx = item.up('tr').down('.idx').value;
+      if (!item.down('input[type="hidden"][name="id_' + idx + '"]')) {
+         item.insert(
+           new Element('input', {'type' : 'hidden', 'name' : 'id_' + idx, 'value' : item.down('input[type="hidden"][name=""]').value})
+         ).insert(
+           new Element('input', {'type' : 'hidden', 'name' : 'name_' + idx, 'value' : item.down('.value').firstChild.nodeValue})
+         );
+      }
+    });
+    // -------------------------------------------------------------------
+    // AJAX submission
+    // -------------------------------------------------------------------
+    new Ajax.Request(form.action, {
+      method : form.method,
+      parameters : new Hash(form.serialize(true)),
+      onCreate : function () {
+         exportResults.value = "Generating CSV..."
+         exportResults.addClassName('loading');
+      },
+      onSuccess: function(response) {
+         exportResults.value = response.responseText;
+         exportResults.disabled = false;
+         exportResults.select();
+      },
+      onFailure: function(response) {
+         exportResults.value = 'CSV generation failed';
+         exportResults.addClassName('error');
+      },
+      on0 : function (response) {
+        response.request.options.onFailure(response);
+      },
+      onComplete : function() {
+         exportResults.removeClassName('loading');
+         cleartool.show();
+      }
+    });
+  });
 });</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>
@@ -568,13 +589,13 @@ From this selection, export:&lt;br/>&#xd;
     <guid>ac92ff38-9e53-4f96-8bc7-5656faab6bd5</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -641,83 +662,83 @@ From this selection, export:&lt;br/>&#xd;
       <cache>long</cache>
     </property>
     <property>
-      <code>#template('colorThemeInit.vm')&#xd;
-.tool {&#xd;
-  cursor: pointer;&#xd;
-  display: inline-block;&#xd;
-  float: right;&#xd;
-}&#xd;
-.tool.delete {&#xd;
-  color: #c00;&#xd;
-}&#xd;
-.tool.accept {&#xd;
-  color: #0c0;&#xd;
-}&#xd;
-#results .accepted-suggestions li .delete-tool, .clear-tool {&#xd;
-  background-color: transparent;&#xd;
-  border-radius: 3px 3px 3px 3px;&#xd;
-  color: #c00;&#xd;
-  display: block;&#xd;
-  visibility: visible;&#xd;
-}&#xd;
-#results td {&#xd;
-  text-align: left;&#xd;
-  background-color: $theme.pageContentBackgroundColor;&#xd;
-}&#xd;
-#results .new-term {&#xd;
-  border-top-width: 4px;&#xd;
-  background-color: $theme.highlightColor;&#xd;
-}&#xd;
-#results .new-term.text {&#xd;
-  font-weight: bold;&#xd;
-}&#xd;
-#results .custom input {&#xd;
-  width: 98%;&#xd;
-}&#xd;
-#results .syn ul {&#xd;
-  margin: 0;&#xd;
-  padding: 0;&#xd;
-  list-style-type: none;&#xd;
-}&#xd;
-#results .syn li:hover {&#xd;
-  text-shadow: $theme.linkColor;&#xd;
-}&#xd;
-#results .id {&#xd;
-  color: $theme.linkColor;&#xd;
-  cursor: help;&#xd;
-}&#xd;
-#results .id:hover {&#xd;
-  background-color: $theme.highlightColor;&#xd;
-  text-decoration: underline;&#xd;
-}&#xd;
-input.table-range {&#xd;
-  width: auto !important;&#xd;
-}&#xd;
-.export-options {&#xd;
-  width: 38%;&#xd;
-  float: left;&#xd;
-}&#xd;
-.export-results-container {&#xd;
-  float: right;&#xd;
-  width: 60%;&#xd;
-}&#xd;
-.export-results-container legend:before {&#xd;
-  content: "↷ ";&#xd;
-  font-size: 1.3em;&#xd;
-  color: #0c0;&#xd;
-}&#xd;
-.export-results-container a {&#xd;
-    float: right;&#xd;
-    margin-right: 1%;&#xd;
-    margin-top: -1.2em;&#xd;
-}&#xd;
-#export-results.error {&#xd;
-  border-color: #c00;&#xd;
-  color: #c00;&#xd;
+      <code>#template('colorThemeInit.vm')
+.tool {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+}
+.tool.delete {
+  color: #c00;
+}
+.tool.accept {
+  color: #0c0;
+}
+#results .accepted-suggestions li .delete-tool, .clear-tool {
+  background-color: transparent;
+  border-radius: 3px 3px 3px 3px;
+  color: #c00;
+  display: block;
+  visibility: visible;
+}
+#results td {
+  text-align: left;
+  background-color: $theme.pageContentBackgroundColor;
+}
+#results .new-term {
+  border-top-width: 4px;
+  background-color: $theme.highlightColor;
+}
+#results .new-term.text {
+  font-weight: bold;
+}
+#results .custom input {
+  width: 98%;
+}
+#results .syn ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#results .syn li:hover {
+  text-shadow: $theme.linkColor;
+}
+#results .id {
+  color: $theme.linkColor;
+  cursor: help;
+}
+#results .id:hover {
+  background-color: $theme.highlightColor;
+  text-decoration: underline;
+}
+input.table-range {
+  width: auto !important;
+}
+.export-options {
+  width: 38%;
+  float: left;
+}
+.export-results-container {
+  float: right;
+  width: 60%;
+}
+.export-results-container legend:before {
+  content: "↷ ";
+  font-size: 1.3em;
+  color: #0c0;
+}
+.export-results-container a {
+    float: right;
+    margin-right: 1%;
+    margin-top: -1.2em;
+}
+#export-results.error {
+  border-color: #c00;
+  color: #c00;
 }</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>

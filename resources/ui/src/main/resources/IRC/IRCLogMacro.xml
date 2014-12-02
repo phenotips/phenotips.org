@@ -1,24 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>IRC</web>
   <name>IRCLogMacro</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1365182961000</creationDate>
   <parent>IRC.WebHome</parent>
-  <author>XWiki.Admin</author>
-  <contentAuthor>XWiki.Admin</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1365182961000</date>
   <contentUpdateDate>1365182961000</contentUpdateDate>
   <version>1.1</version>
   <title>IRC Logging Macro</title>
-  <comment>Import</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <object>
     <name>IRC.IRCLogMacro</name>
     <number>0</number>
@@ -26,13 +47,13 @@
     <guid>0f963aec-191e-4109-b806-cb2bada5d729</guid>
     <class>
       <name>XWiki.WikiMacroClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <code>
         <disabled>0</disabled>
         <name>code</name>
@@ -167,7 +188,7 @@
       #set ($channel = $stringtool.stripStart($channel, '#'))
     #end
     #if ("$!channel" == '')
-      #set ($channel = "&lt;unknown>")
+      #set ($channel = "&lt;unknown&gt;")
     #end
     #set ($titleDate = $datetool.get('dd MMMM yyyy'))
     #set ($discard = $logDoc.setTitle("IRC Archive for channel #$channel on $titleDate"))
@@ -186,7 +207,7 @@
   ## ============================================
   #set ($currentContent = $logDoc.content)
   #set ($newContent = $xcontext.macro.content)
-  #if ($currentContent &amp;&amp; $currentContent.length() > 0)
+  #if ($currentContent &amp;&amp; $currentContent.length() &gt; 0)
     #set ($logDate = $datetool.get('HH:mm'))
     #set ($newContent = "$currentContent
   $logDate $newContent")
@@ -206,7 +227,7 @@
       <contentType>Mandatory</contentType>
     </property>
     <property>
-      <defaultCategory></defaultCategory>
+      <defaultCategory/>
     </property>
     <property>
       <description>Adds a log entry in the IRC Archive for a channel</description>

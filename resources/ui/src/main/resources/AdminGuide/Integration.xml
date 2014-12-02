@@ -1,132 +1,153 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>AdminGuide</web>
   <name>Integration</name>
-  <language />
-  <defaultLanguage>en</defaultLanguage>
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.sdumitriu</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1406313949000</creationDate>
   <parent>AdminGuide.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1407897666000</date>
   <contentUpdateDate>1407897666000</contentUpdateDate>
-  <version>6.1</version>
+  <version>1.1</version>
   <title>Integration</title>
-  <comment>Upload new attachment pedigree-image-service.xar</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>The easiest way of integrating PhenoTips into another web-based system is through an embedded HTML iframe.&#xd;
-&#xd;
-== Stripping the PhenoTips skin ==&#xd;
-&#xd;
-The default skin of PhenoTips is not well suited for embedding into another application, since it comes with its own header, footer, and extra padding. However, there already is a special skin useful for embedding. To activate it:&#xd;
-&#xd;
-* Open PhenoTips in a browser&#xd;
-* Log in with an administrative account&#xd;
-* Click on the //Administration// link displayed in the top left corner&#xd;
-* Select the //Look &amp; Feel / Presentation// entry from the left menu&#xd;
-* Type ##PhenoTips.EmbeddableSkin## in the //Skin// field, click //Save//&#xd;
-&#xd;
-{{warning}}Before 1.0-milestone-13, you must do the same for the //data// space: once you're in the administrative area, from the drop down menu in the upper right side, currently displaying ##Wiki administration##, select ##data##, and change the //Skin// option here as well.{{/warning}}&#xd;
-&#xd;
-You should now see only the essential elements of the page. Unfortunately, this doesn't include links back to the homepage, or to the administration. Fortunately, you can configure the skin only for a specific user, too, though the UI for doing that is not easily discoverable:&#xd;
-&#xd;
-* Open ##**(% style="color: #F93" %)http(%%)**:/~/**(% style="color: #900" %)localhost(%%)**(% style="color: #009" %)**:8080**(%%)/**(% style="color: #990" %)phenotips/(%%)**bin/edit/XWiki/**(% style="color: #090" %)Admin(%%)**?editor=object&amp;classname=XWiki.XWikiUsers&amp;object=0&amp;property=skin## - using the right **(% style="color: #F93" %)protocol(%%)**, **(% style="color: #900" %)host name(%%)**, **(% style="color: #009" %)optional port(%%)**, **(% style="color: #990" %)optional application name(%%)**, and the right **(% style="color: #090" %)username(%%)**&#xd;
-* Type ##PhenoTips.Skin## in the //skin// field, click one of the //Save// buttons&#xd;
-&#xd;
-== Displaying a patient record ==&#xd;
-&#xd;
-Display ##http[s]://&lt;hostname>[:&lt;port>]/&lt;appname>/bin/PhenoTips/OpenPatientRecord?[e]id=&lt;identifier>[&amp;mode=&lt;mode>][&amp;create=true]## in an iframe.&#xd;
-&#xd;
-Where:&#xd;
-; ##hostname##&#xd;
-: the actual hostname where PhenoTips is reachable&#xd;
-; ##port##&#xd;
-: the port, if needed&#xd;
-; ##appname##&#xd;
-: the name of the webapp (missing in the standalone zip)&#xd;
-; ##id##&#xd;
-: the PhenoTips identifier of an existing patient record, for example ##P0000001##&#xd;
-; ##eid##&#xd;
-: the external identifier that users can set for a patient; either one already set in an existing patient record, or a new identifier to set for a new record when ##create=true##&#xd;
-: (only one of ##id## or ##eid## is required in the URL)&#xd;
-; ##mode##&#xd;
-: ##view## or ##edit##; optional, default is ##view##&#xd;
-; ##create##&#xd;
-: use to force the creation of a new record when passing an ##eid## and no record was found with that identifier; optional, by default an error message is returned when the requested patient is not found&#xd;
-&#xd;
-For example:&#xd;
-&#xd;
-##http:/~/localhost:8080/bin/PhenoTips/OpenPatientRecord?eid=Patient15&amp;mode=edit&amp;create=true##&#xd;
-&#xd;
-== Getting a patient's data ==&#xd;
-&#xd;
-**Since 1.0-milestone-13**: Call ##http[s]://&lt;hostname>[:&lt;port>]/&lt;appname>/bin/get/PhenoTips/ExportPatient?[e]id=&lt;identifier>## from your application and parse the returned JSON.&#xd;
-&#xd;
-**Older versions**: Call ##http[s]://&lt;hostname>[:&lt;port>]/&lt;appname>/bin/get/PhenoTips/PatientPhenotypeExportService?[e]id=&lt;identifier>## from your application and parse the returned JSON.&#xd;
-&#xd;
-For example:&#xd;
-&#xd;
-##http:/~/localhost:8080/bin/get/PhenoTips/ExportPatient?eid=Patient15##&#xd;
-&#xd;
-##http:/~/localhost:8080/bin/get/PhenoTips/PatientPhenotypeExportService?eid=Patient15##&#xd;
-&#xd;
-== Getting a pedigree image ==&#xd;
-&#xd;
-There is no service bundled with PhenoTips 1.0-milestone-13 or older versions for retrieving the pedigree image. [[This feature will be available in 1.0-rc-1>>https://github.com/phenotips/phenotips/issues/1052]] (to be made available early September). Until then, you can follow the steps listed below to add this functionality to your PhenoTips:&#xd;
-==== Installation: ====&#xd;
-1. Download [[attach:pedigree-image-service.xar]].&#xd;
-1. Go to the Administration screen of your PhenoTips.&#xd;
-1. (((Open the **Import** section which can be found in the left menu under the **Content** category.&#xd;
-&#xd;
-{{warning}}If you do not see this section/category, then you need to set your user level as //Advanced//. You can do that form your user profile, which is accessible by clicking on your user name displayed in the top-right corner of the page: open the **Preferences** section, click on the pencil to modify them, change the //User type// field from //Simple// to //Advanced//, save the changes and return to the **Administration**. You should now have access to the **Import** section.{{/warning}}&#xd;
-)))&#xd;
-1. Upload the //pedigree-image-service.xar// package downloaded at step 1.&#xd;
-1. Once it shows up in the list of available packages, click on its name to import it. The contents will be listed on the right.&#xd;
-1. Click **Import** to complete the installation.&#xd;
-==== Usage ====&#xd;
-Call ##http[s]://&lt;hostname>[:&lt;port>]/&lt;appname>/bin/get/PhenoTips/PedigreeImageService?[e]id=&lt;identifier>[&amp;format=raster]## from your application.&#xd;
-&#xd;
-If the //format// parameter is missing or is different than //raster//, the service returns the vectorial image in [[SVG>>http://www.w3.org/TR/SVG/||title="Scalable Vector Graphics"]] format, otherwise it returns a PNG.&#xd;
-&#xd;
-{{warning}}All pedigree images are currently sized 500px X 500px, regardless of the actual pedigree's aspect ratio. [[This has been improved for the next release>>https://github.com/phenotips/phenotips/issues/1055]].{{/warning}}&#xd;
-&#xd;
-&#xd;
-== Changing the skin to better emulate the wrapping application ==&#xd;
-&#xd;
-The recommended way of styling PhenoTips is through a custom //Color Theme//.&#xd;
-&#xd;
-* Open PhenoTips in a browser&#xd;
-* Log in with an administrative account&#xd;
-* Click on the //Administration// link displayed in the top left corner&#xd;
-* Select the //Look &amp; Feel / Presentation// entry from the left menu&#xd;
-* Select one of the existing //Color Theme//s, or click on //Manage color themes// to create a new one&#xd;
-* From the color theme management interface, you can create a new color theme by typing a name for it and clicking the //Create new theme// button&#xd;
-* The colors for the different elements of the page can now be modified using an in-place editor, though this doesn't cover other aspects of the skin, such as fonts, paddings and margins, shadows and gradients...&#xd;
-* To add extra CSS, while on your custom color theme page, hover over the //Edit// menu and select the //Objects// option&#xd;
-* From the //New object// drop down, select ##XWiki / StyleSheetExtension##, click //Add//&#xd;
-* Type your custom CSS code in the //Code// text area, save when done&#xd;
-** While still developing the CSS rules, change the //Caching policy// to ##forbid## so that you don't save the old version of the code in the browser's cache; don't forget to change it back to ##long## when the site is ready for production use&#xd;
-&#xd;
-{{warning}}If you do not see the drop down list under the //Edit// menu, then the currently logged in user is marked as a //Simple// user, and only //Advanced// users can see that menu. To change your user type:&#xd;
-&#xd;
-* Click on your username in the top right corner&#xd;
-* Select //Preferences// from the left side menu&#xd;
-* Click the pencil icon on the right of //Display Preferences//&#xd;
-* From the //Editor Preferences / User type// drop down, select ##Advanced##&#xd;
-* Click one of the //Save// buttons&#xd;
-&#xd;
-You should now see the edit options.&#xd;
+  <content>The easiest way of integrating PhenoTips into another web-based system is through an embedded HTML iframe.
+
+== Stripping the PhenoTips skin ==
+
+The default skin of PhenoTips is not well suited for embedding into another application, since it comes with its own header, footer, and extra padding. However, there already is a special skin useful for embedding. To activate it:
+
+* Open PhenoTips in a browser
+* Log in with an administrative account
+* Click on the //Administration// link displayed in the top left corner
+* Select the //Look &amp; Feel / Presentation// entry from the left menu
+* Type ##PhenoTips.EmbeddableSkin## in the //Skin// field, click //Save//
+
+{{warning}}Before 1.0-milestone-13, you must do the same for the //data// space: once you're in the administrative area, from the drop down menu in the upper right side, currently displaying ##Wiki administration##, select ##data##, and change the //Skin// option here as well.{{/warning}}
+
+You should now see only the essential elements of the page. Unfortunately, this doesn't include links back to the homepage, or to the administration. Fortunately, you can configure the skin only for a specific user, too, though the UI for doing that is not easily discoverable:
+
+* Open ##**(% style="color: #F93" %)http(%%)**:/~/**(% style="color: #900" %)localhost(%%)**(% style="color: #009" %)**:8080**(%%)/**(% style="color: #990" %)phenotips/(%%)**bin/edit/XWiki/**(% style="color: #090" %)Admin(%%)**?editor=object&amp;classname=XWiki.XWikiUsers&amp;object=0&amp;property=skin## - using the right **(% style="color: #F93" %)protocol(%%)**, **(% style="color: #900" %)host name(%%)**, **(% style="color: #009" %)optional port(%%)**, **(% style="color: #990" %)optional application name(%%)**, and the right **(% style="color: #090" %)username(%%)**
+* Type ##PhenoTips.Skin## in the //skin// field, click one of the //Save// buttons
+
+== Displaying a patient record ==
+
+Display ##http[s]://&lt;hostname&gt;[:&lt;port&gt;]/&lt;appname&gt;/bin/PhenoTips/OpenPatientRecord?[e]id=&lt;identifier&gt;[&amp;mode=&lt;mode&gt;][&amp;create=true]## in an iframe.
+
+Where:
+; ##hostname##
+: the actual hostname where PhenoTips is reachable
+; ##port##
+: the port, if needed
+; ##appname##
+: the name of the webapp (missing in the standalone zip)
+; ##id##
+: the PhenoTips identifier of an existing patient record, for example ##P0000001##
+; ##eid##
+: the external identifier that users can set for a patient; either one already set in an existing patient record, or a new identifier to set for a new record when ##create=true##
+: (only one of ##id## or ##eid## is required in the URL)
+; ##mode##
+: ##view## or ##edit##; optional, default is ##view##
+; ##create##
+: use to force the creation of a new record when passing an ##eid## and no record was found with that identifier; optional, by default an error message is returned when the requested patient is not found
+
+For example:
+
+##http:/~/localhost:8080/bin/PhenoTips/OpenPatientRecord?eid=Patient15&amp;mode=edit&amp;create=true##
+
+== Getting a patient's data ==
+
+**Since 1.0-milestone-13**: Call ##http[s]://&lt;hostname&gt;[:&lt;port&gt;]/&lt;appname&gt;/bin/get/PhenoTips/ExportPatient?[e]id=&lt;identifier&gt;## from your application and parse the returned JSON.
+
+**Older versions**: Call ##http[s]://&lt;hostname&gt;[:&lt;port&gt;]/&lt;appname&gt;/bin/get/PhenoTips/PatientPhenotypeExportService?[e]id=&lt;identifier&gt;## from your application and parse the returned JSON.
+
+For example:
+
+##http:/~/localhost:8080/bin/get/PhenoTips/ExportPatient?eid=Patient15##
+
+##http:/~/localhost:8080/bin/get/PhenoTips/PatientPhenotypeExportService?eid=Patient15##
+
+== Getting a pedigree image ==
+
+There is no service bundled with PhenoTips 1.0-milestone-13 or older versions for retrieving the pedigree image. [[This feature will be available in 1.0-rc-1&gt;&gt;https://github.com/phenotips/phenotips/issues/1052]] (to be made available early September). Until then, you can follow the steps listed below to add this functionality to your PhenoTips:
+==== Installation: ====
+1. Download [[attach:pedigree-image-service.xar]].
+1. Go to the Administration screen of your PhenoTips.
+1. (((Open the **Import** section which can be found in the left menu under the **Content** category.
+
+{{warning}}If you do not see this section/category, then you need to set your user level as //Advanced//. You can do that form your user profile, which is accessible by clicking on your user name displayed in the top-right corner of the page: open the **Preferences** section, click on the pencil to modify them, change the //User type// field from //Simple// to //Advanced//, save the changes and return to the **Administration**. You should now have access to the **Import** section.{{/warning}}
+)))
+1. Upload the //pedigree-image-service.xar// package downloaded at step 1.
+1. Once it shows up in the list of available packages, click on its name to import it. The contents will be listed on the right.
+1. Click **Import** to complete the installation.
+==== Usage ====
+Call ##http[s]://&lt;hostname&gt;[:&lt;port&gt;]/&lt;appname&gt;/bin/get/PhenoTips/PedigreeImageService?[e]id=&lt;identifier&gt;[&amp;format=raster]## from your application.
+
+If the //format// parameter is missing or is different than //raster//, the service returns the vectorial image in [[SVG&gt;&gt;http://www.w3.org/TR/SVG/||title="Scalable Vector Graphics"]] format, otherwise it returns a PNG.
+
+{{warning}}All pedigree images are currently sized 500px X 500px, regardless of the actual pedigree's aspect ratio. [[This has been improved for the next release&gt;&gt;https://github.com/phenotips/phenotips/issues/1055]].{{/warning}}
+
+
+== Changing the skin to better emulate the wrapping application ==
+
+The recommended way of styling PhenoTips is through a custom //Color Theme//.
+
+* Open PhenoTips in a browser
+* Log in with an administrative account
+* Click on the //Administration// link displayed in the top left corner
+* Select the //Look &amp; Feel / Presentation// entry from the left menu
+* Select one of the existing //Color Theme//s, or click on //Manage color themes// to create a new one
+* From the color theme management interface, you can create a new color theme by typing a name for it and clicking the //Create new theme// button
+* The colors for the different elements of the page can now be modified using an in-place editor, though this doesn't cover other aspects of the skin, such as fonts, paddings and margins, shadows and gradients...
+* To add extra CSS, while on your custom color theme page, hover over the //Edit// menu and select the //Objects// option
+* From the //New object// drop down, select ##XWiki / StyleSheetExtension##, click //Add//
+* Type your custom CSS code in the //Code// text area, save when done
+** While still developing the CSS rules, change the //Caching policy// to ##forbid## so that you don't save the old version of the code in the browser's cache; don't forget to change it back to ##long## when the site is ready for production use
+
+{{warning}}If you do not see the drop down list under the //Edit// menu, then the currently logged in user is marked as a //Simple// user, and only //Advanced// users can see that menu. To change your user type:
+
+* Click on your username in the top right corner
+* Select //Preferences// from the left side menu
+* Click the pencil icon on the right of //Display Preferences//
+* From the //Editor Preferences / User type// drop down, select ##Advanced##
+* Click one of the //Save// buttons
+
+You should now see the edit options.
 {{/warning}}</content>
   <attachment>
     <filename>pedigree-image-service.xar</filename>
     <author>XWiki.sdumitriu</author>
     <date>1407896196000</date>
     <version>1.2</version>
-    <comment />
+    <comment/>
     <content>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</content>
     <filesize>1589</filesize>
   </attachment>

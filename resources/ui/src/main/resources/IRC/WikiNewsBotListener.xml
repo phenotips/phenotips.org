@@ -1,36 +1,57 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>IRC</web>
   <name>WikiNewsBotListener</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1365182960000</creationDate>
   <parent>IRC.IRCBot</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1393268506000</date>
   <contentUpdateDate>1365182960000</contentUpdateDate>
-  <version>2.1</version>
+  <version>1.1</version>
   <title>Wiki News Bot Listener</title>
-  <comment>Import</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <class>
     <name>IRC.WikiNewsBotListener</name>
-    <customClass />
-    <customMapping />
-    <defaultViewSheet />
-    <defaultEditSheet />
-    <defaultWeb />
-    <nameField />
-    <validationScript />
+    <customClass/>
+    <customMapping/>
+    <defaultViewSheet/>
+    <defaultEditSheet/>
+    <defaultWeb/>
+    <nameField/>
+    <validationScript/>
     <wikis>
       <cache>0</cache>
-      <customDisplay />
+      <customDisplay/>
       <disabled>0</disabled>
       <displayType>input</displayType>
       <multiSelect>0</multiSelect>
@@ -44,9 +65,9 @@
       <size>1</size>
       <sort>none</sort>
       <unmodifiable>0</unmodifiable>
-      <validationMessage />
-      <validationRegExp />
-      <values />
+      <validationMessage/>
+      <validationRegExp/>
+      <values/>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </wikis>
   </class>
@@ -57,15 +78,15 @@
     <guid>fb2667a6-1ee9-454e-b175-988407a127df</guid>
     <class>
       <name>IRC.IRCBotListenerClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <description>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>description</name>
         <number>2</number>
@@ -73,26 +94,26 @@
         <prettyName>Description</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </description>
       <inactive>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>inactive</name>
         <number>3</number>
         <prettyName>Inactive</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </inactive>
       <name>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>name</name>
         <number>1</number>
@@ -100,8 +121,8 @@
         <prettyName>Name</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
     </class>
@@ -109,7 +130,7 @@
       <description>!news: list the last modifications done on the wiki</description>
     </property>
     <property>
-      <inactive />
+      <inactive/>
     </property>
     <property>
       <name>Wiki News</name>
@@ -122,16 +143,16 @@
     <guid>50d28f5b-c229-44d5-b664-434709bcbb92</guid>
     <class>
       <name>IRC.IRCBotListenerEventClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <event>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -145,13 +166,13 @@
         <size>1</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>onRegistration|onConnect|onDisconnect|onJoin|onMessage|onPart|onNickChange|onPrivateMessage|onQuit</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </event>
       <script>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>script</name>
@@ -161,8 +182,8 @@
         <rows>25</rows>
         <size>120</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </script>
     </class>
@@ -198,7 +219,7 @@ List getLastModifications(String sql, int nbModifications, XWiki xwiki, XWikiCon
 
   for (wikiname in names) {
     addModifications(documentlist, wikiname, sql, nbModifications, xwiki, context)
-    if (documentlist.size() > nbModifications)  {
+    if (documentlist.size() &gt; nbModifications)  {
       documentlist = documentlist.subList(0, nbModifications)
     }
   }
@@ -252,16 +273,16 @@ void addModifications(List documentlist, String wikiname, String sql, int nbModi
     <guid>aa3391c1-db44-4789-a961-c0fad2c684e5</guid>
     <class>
       <name>IRC.IRCBotListenerEventClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <event>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>0</multiSelect>
@@ -275,13 +296,13 @@ void addModifications(List documentlist, String wikiname, String sql, int nbModi
         <size>1</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <values>onRegistration|onConnect|onDisconnect|onJoin|onMessage|onPart|onNickChange|onPrivateMessage|onQuit</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </event>
       <script>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>script</name>
@@ -291,8 +312,8 @@ void addModifications(List documentlist, String wikiname, String sql, int nbModi
         <rows>25</rows>
         <size>120</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </script>
     </class>
@@ -309,7 +330,7 @@ if (object == null) {
 def mappings = [:]
 
 def wikis = object.getProperty("wikis").value
-if (wikis != null &amp;&amp; wikis.trim().length() > 0) {
+if (wikis != null &amp;&amp; wikis.trim().length() &gt; 0) {
   mappings.put("wikis", wikis)
 }
 

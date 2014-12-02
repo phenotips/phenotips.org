@@ -1,20 +1,41 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>PatientAccessRightsManagement</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1380351498000</creationDate>
   <parent>PhenoTips.PatientSheet</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1411434803000</date>
   <contentUpdateDate>1411434803000</contentUpdateDate>
-  <version>6.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:patient-access-rules-ui-1.0-rc-1]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
@@ -107,13 +128,13 @@
     <guid>ab66e72f-1d22-4a38-ad9b-f55d74a0473f</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -341,7 +362,7 @@
       var newCollaborator = new Element('tfoot');
       var newCollaboratorInput = $('new-collaborator-input') || '';
       var newGroupInput = $('new-group-input') || '';
-      newCollaborator.insert(new Element('td', {'colspan' : 4}).insert(newCollaboratorInput).insert('&lt;br/>').insert(newGroupInput));
+      newCollaborator.insert(new Element('td', {'colspan' : 4}).insert(newCollaboratorInput).insert('&lt;br/&gt;').insert(newGroupInput));
       // Add the two sections
       this._collaboratorsManager.insert(table.insert(newCollaborator).insert(this._collaboratorsList));
       // Capture selection events
@@ -398,7 +419,7 @@
             if (owner &amp;&amp; ownershipTransfer) {
               var newOwner = '';
               var newOwnerGroup = ownershipTransfer.down('select');
-              if (newOwnerGroup &amp;&amp; !newOwnerGroup.disabled &amp;&amp; newOwnerGroup.selectedIndex > 0) {
+              if (newOwnerGroup &amp;&amp; !newOwnerGroup.disabled &amp;&amp; newOwnerGroup.selectedIndex &gt; 0) {
                 newOwner = newOwnerGroup.options[newOwnerGroup.selectedIndex].text;
               } else {
                 var newOwnerUser = ownershipTransfer.down('input[type="text"]');
@@ -458,7 +479,7 @@
           _this._messages.update('');
           _this._dialog.showDialog();
           _this._container.up('.msdialog-modal-container').style.zIndex = 3001;
-          _this._collaboratorsList.update('&lt;tr>&lt;td colspan="3">&lt;img src="$xwiki.getSkinFile('icons/xwiki/ajax-loader-large.gif')"/>&lt;/td>&lt;/tr>');
+          _this._collaboratorsList.update('&lt;tr&gt;&lt;td colspan="3"&gt;&lt;img src="$xwiki.getSkinFile('icons/xwiki/ajax-loader-large.gif')"/&gt;&lt;/td&gt;&lt;/tr&gt;');
         },
         onSuccess : function(response) {
            var data = response.responseJSON;
@@ -526,7 +547,7 @@ document.observe("xwiki:dom:loaded", function() {
 });</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>
@@ -542,13 +563,13 @@ document.observe("xwiki:dom:loaded", function() {
     <guid>3f13b7c9-93f5-4e94-b01e-b180d2a383de</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -677,7 +698,7 @@ document.observe("xwiki:dom:loaded", function() {
 }</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>
@@ -693,13 +714,13 @@ document.observe("xwiki:dom:loaded", function() {
     <guid>3d24805b-d647-4e9b-a7ca-00f55fb5a7f3</guid>
     <class>
       <name>XWiki.UIExtensionClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <content>
         <disabled>0</disabled>
         <name>content</name>
@@ -797,25 +818,25 @@ $xwiki.ssx.use($serviceDocName)
   #end
   #set ($canManage = $patientAccess.hasAccessLevel('manage'))
   (% id="access-rights-summary" %)(((
-    This case is owned by (% class="access-rights-info" %){{html wiki="true" clean="false"}}{{icon name="user"/}}&lt;span class="owner">$ownerName&lt;/span>{{/html}}(%%)##
+    This case is owned by (% class="access-rights-info" %){{html wiki="true" clean="false"}}{{icon name="user"/}}&lt;span class="owner"&gt;$ownerName&lt;/span&gt;{{/html}}(%%)##
     #if ($canManage),#else and#end it is (% class="access-rights-info visibility" title="$!{visibility.description}" %){{icon name="$visibility"/}}${visibility.label}(%%)##
     #if ($canManage) ##
-      and it is shared with (% class="access-rights-info" %){{html wiki="true" clean="false"}}{{icon name="group"/}}&lt;span class="collaborators">$collaboratorsCount collaborator#if ($collaboratorsCount != 1)s#{end}&lt;/span>{{/html}}. ##
-      (% class="buttonwrapper tool edit" %)[[ {{icon name="wrench" title="Modify visibility and collaborations" /}} Modify permissions>>path:#||class="button"]]##
+      and it is shared with (% class="access-rights-info" %){{html wiki="true" clean="false"}}{{icon name="group"/}}&lt;span class="collaborators"&gt;$collaboratorsCount collaborator#if ($collaboratorsCount != 1)s#{end}&lt;/span&gt;{{/html}}. ##
+      (% class="buttonwrapper tool edit" %)[[ {{icon name="wrench" title="Modify visibility and collaborations" /}} Modify permissions&gt;&gt;path:#||class="button"]]##
       (% class="hidden" %)((({{html wiki="true" clean="false"}}
-        &lt;input type="hidden" name="serviceURL" value="$serviceDoc.getURL('get', 'outputSyntax=plain')"/>
+        &lt;input type="hidden" name="serviceURL" value="$serviceDoc.getURL('get', 'outputSyntax=plain')"/&gt;
         #foreach ($l in $_service.listAccessLevels())
-          &lt;input type="hidden" name="access-level" value="${l.name}" alt="$!{l.description}" />
+          &lt;input type="hidden" name="access-level" value="${l.name}" alt="$!{l.description}" /&gt;
         #end
         #foreach ($l in $_service.listVisibilityOptions())
-          &lt;input type="hidden" name="visibility" value="${l.name}" alt="$!{l.label}" title="$!{l.description}" />{{icon name="${l.name}" /}}
+          &lt;input type="hidden" name="visibility" value="${l.name}" alt="$!{l.label}" title="$!{l.description}" /&gt;{{icon name="${l.name}" /}}
         #end
         #if ($canManage)
-          &lt;input type="text" name="user" class="suggestUsers" value="" placeholder="New collaborator" id="new-collaborator-input" />
-          &lt;input type="text" name="group" class="suggestGroups" value="" placeholder="New collaborating group" id="new-group-input" />
+          &lt;input type="text" name="user" class="suggestUsers" value="" placeholder="New collaborator" id="new-collaborator-input" /&gt;
+          &lt;input type="text" name="group" class="suggestGroups" value="" placeholder="New collaborating group" id="new-group-input" /&gt;
         #end
         #if ($canTransfer)
-          &lt;div id="new-owner-input">&lt;input type="text" name="owner" id="new-owner-user-select" class="suggestUsers" value="" placeholder="New owner" />&lt;/div>
+          &lt;div id="new-owner-input"&gt;&lt;input type="text" name="owner" id="new-owner-user-select" class="suggestUsers" value="" placeholder="New owner" /&gt;&lt;/div&gt;
           #set ($toProcess = $collectionstool.queue)
           #set ($discard = $toProcess.add($xcontext.userReference.toString()))
           #set ($groups = $collectionstool.sortedMap)
@@ -841,14 +862,14 @@ $xwiki.ssx.use($serviceDocName)
             #end
           #end
           #if (!$groups.isEmpty())
-          &lt;select name="owner" id="new-owner-group-select">
-            &lt;option value="" selected="selected">New owner group&lt;/option>
-            &lt;optgroup label="New owner group">
+          &lt;select name="owner" id="new-owner-group-select"&gt;
+            &lt;option value="" selected="selected"&gt;New owner group&lt;/option&gt;
+            &lt;optgroup label="New owner group"&gt;
             #foreach ($g in $groups.entrySet())
-              &lt;option value="${g.key}"#if ("$!{ownerReference}" == "$g.key") selected="selected"#end>${g.value}&lt;/option>
+              &lt;option value="${g.key}"#if ("$!{ownerReference}" == "$g.key") selected="selected"#end&gt;${g.value}&lt;/option&gt;
             #end
-            &lt;/optgroup>
-          &lt;/select>
+            &lt;/optgroup&gt;
+          &lt;/select&gt;
           #end
         #end
       {{/html}})))
@@ -865,7 +886,7 @@ $xwiki.ssx.use($serviceDocName)
       <name>org.phenotips.patientSheet.accessLevels</name>
     </property>
     <property>
-      <parameters></parameters>
+      <parameters/>
     </property>
     <property>
       <scope>wiki</scope>

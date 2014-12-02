@@ -1,54 +1,75 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>About</name>
-  <language />
-  <defaultLanguage>en</defaultLanguage>
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1367528927000</creationDate>
   <parent>Main.WebHome</parent>
-  <author>XWiki.marta</author>
-  <contentAuthor>XWiki.marta</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1415512732000</date>
   <contentUpdateDate>1415512732000</contentUpdateDate>
-  <version>6.1</version>
-  <title />
-  <comment />
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>= About PhenoTips =&#xd;
-{{box cssClass="floatinginfobox" title="**Contents**"}}&#xd;
-{{toc depth="3"/}}&#xd;
-{{/box}}&#xd;
-&#xd;
-== Overview ==&#xd;
-&#xd;
-//PhenoTips// is an open source software tool for collecting and analyzing phenotypic information for patients with genetic disorders. The user interface closely mirrors clinician workflows so as to facilitate the recording of observations made during the patient encounter. This easy-to-use front-end, compatible with any device that runs a Web browser, is coupled with with a standardized database back-end where phenotypic information is represented using the [[Human Phenotype Ontology (HPO)>>http://human-phenotype-ontology.org/]].&#xd;
-&#xd;
-Collected data include demographics, medical history, family history, physical and laboratory measurements, physical findings, and free-form notes.&#xd;
-&#xd;
-In addition to data collection, //PhenoTips// automatically analyzes a wide range of measurements and plots live the corresponding growth curves. It also supports accurate diagnosis based on the entered data, and can suggest additional clinical investigations that can improve the diagnosis.&#xd;
-&#xd;
-== Team ==&#xd;
-PhenoTips is developed in the [[Computational Biology Lab>>http://www.cs.toronto.edu/~brudno/group.html]] at [[University of Toronto>>http://www.utoronto.ca/]]'s [[Computer Science Department>>http://web.cs.toronto.edu/]], in collaboration with geneticists and clinicians form [[SickKids>>http://sickkids.ca]] and [[CARE for RARE>>http://care4rare.ca]].&#xd;
-&#xd;
-== Publications ==&#xd;
-&#xd;
-This software is presented in the paper entitled [["//PhenoTips: Patient Phenotyping Software for Clinical and Research Use//">>http://onlinelibrary.wiley.com/doi/10.1002/humu.22347/abstract]].&#xd;
-&#xd;
-== Who uses PhenoTips ==&#xd;
-&#xd;
-PhenoTips is currently being used by several major research projects, including:&#xd;
-* [[CARE for RARE Canada>>http://care4rare.ca]]&#xd;
-* [[NIH Undiagnosed Disease Program>>http://rarediseases.info.nih.gov/research/pages/27/undiagnosed-diseases-program||title="NIH Undiagnosed Disease Program"]]&#xd;
-* [[RD-Connect Neuromics>>]]&#xd;
-&#xd;
-If you are interested in using PhenoTips and need help getting started please [[contact us>>PhenoTips.Contact]].&#xd;
-&#xd;
-== Screenshots ==&#xd;
-{{display reference="PhenoTips.FeaturePreview" type="document"/}}&#xd;
+  <content>= About PhenoTips =
+{{box cssClass="floatinginfobox" title="**Contents**"}}
+{{toc depth="3"/}}
+{{/box}}
+
+== Overview ==
+
+//PhenoTips// is an open source software tool for collecting and analyzing phenotypic information for patients with genetic disorders. The user interface closely mirrors clinician workflows so as to facilitate the recording of observations made during the patient encounter. This easy-to-use front-end, compatible with any device that runs a Web browser, is coupled with with a standardized database back-end where phenotypic information is represented using the [[Human Phenotype Ontology (HPO)&gt;&gt;http://human-phenotype-ontology.org/]].
+
+Collected data include demographics, medical history, family history, physical and laboratory measurements, physical findings, and free-form notes.
+
+In addition to data collection, //PhenoTips// automatically analyzes a wide range of measurements and plots live the corresponding growth curves. It also supports accurate diagnosis based on the entered data, and can suggest additional clinical investigations that can improve the diagnosis.
+
+== Team ==
+PhenoTips is developed in the [[Computational Biology Lab&gt;&gt;http://www.cs.toronto.edu/~brudno/group.html]] at [[University of Toronto&gt;&gt;http://www.utoronto.ca/]]'s [[Computer Science Department&gt;&gt;http://web.cs.toronto.edu/]], in collaboration with geneticists and clinicians form [[SickKids&gt;&gt;http://sickkids.ca]] and [[CARE for RARE&gt;&gt;http://care4rare.ca]].
+
+== Publications ==
+
+This software is presented in the paper entitled [["//PhenoTips: Patient Phenotyping Software for Clinical and Research Use//"&gt;&gt;http://onlinelibrary.wiley.com/doi/10.1002/humu.22347/abstract]].
+
+== Who uses PhenoTips ==
+
+PhenoTips is currently being used by several major research projects, including:
+* [[CARE for RARE Canada&gt;&gt;http://care4rare.ca]]
+* [[NIH Undiagnosed Disease Program&gt;&gt;http://rarediseases.info.nih.gov/research/pages/27/undiagnosed-diseases-program||title="NIH Undiagnosed Disease Program"]]
+* [[RD-Connect Neuromics&gt;&gt;]]
+
+If you are interested in using PhenoTips and need help getting started please [[contact us&gt;&gt;PhenoTips.Contact]].
+
+== Screenshots ==
+{{display reference="PhenoTips.FeaturePreview" type="document"/}}
 </content>
   <object>
     <name>PhenoTips.About</name>
@@ -57,13 +78,13 @@ If you are interested in using PhenoTips and need help getting started please [[
     <guid>af5fb1bc-754b-4127-b769-921841e1edc1</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -130,36 +151,36 @@ If you are interested in using PhenoTips and need help getting started please [[
       <cache>long</cache>
     </property>
     <property>
-      <code>.Carousel {&#xd;
-  background: none repeat scroll 0 0 #F5F5F5;&#xd;
-  border: 1px solid #FFFFFF;&#xd;
-  box-shadow: 0 0 5px #CCCCCC, 0 0 25px #CCCCCC inset;&#xd;
-}&#xd;
-.carousel .controls .on, .carousel .controls .on:hover {&#xd;
-  background-color: #69c !important;&#xd;
-}&#xd;
-.carousel .controls .item:hover {&#xd;
-  background-color: #555;&#xd;
-}&#xd;
-.carousel .controls .item {&#xd;
-  background-color: #ddd;&#xd;
-}&#xd;
-.carousel .section {&#xd;
-  padding: 10px;&#xd;
-}&#xd;
-.carousel .scroller, .carousel .section {&#xd;
-  height: 350px;&#xd;
-}&#xd;
-.carousel .section .subsection {&#xd;
-  font-size: 90%;&#xd;
-  text-shadow: 0 1px 1px #fff;&#xd;
+      <code>.Carousel {
+  background: none repeat scroll 0 0 #F5F5F5;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0 0 5px #CCCCCC, 0 0 25px #CCCCCC inset;
+}
+.carousel .controls .on, .carousel .controls .on:hover {
+  background-color: #69c !important;
+}
+.carousel .controls .item:hover {
+  background-color: #555;
+}
+.carousel .controls .item {
+  background-color: #ddd;
+}
+.carousel .section {
+  padding: 10px;
+}
+.carousel .scroller, .carousel .section {
+  height: 350px;
+}
+.carousel .section .subsection {
+  font-size: 90%;
+  text-shadow: 0 1px 1px #fff;
 }</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
-      <parse />
+      <parse/>
     </property>
     <property>
       <use>currentPage</use>

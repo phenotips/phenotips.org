@@ -1,24 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>SkinCustomization</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1380351544000</creationDate>
   <parent>PhenoTips.WebHome</parent>
-  <author>XWiki.marta</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1415670241000</date>
   <contentUpdateDate>1396448841000</contentUpdateDate>
-  <version>5.10</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:phenotips-ui-1.0-milestone-11]</comment>
-  <minorEdit>true</minorEdit>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <object>
     <name>PhenoTips.SkinCustomization</name>
     <number>0</number>
@@ -26,13 +47,13 @@
     <guid>6e3e70c9-22a3-4133-948a-fa18b7db7257</guid>
     <class>
       <name>XWiki.UIExtensionClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <content>
         <disabled>0</disabled>
         <name>content</name>
@@ -89,53 +110,53 @@
       </scope>
     </class>
     <property>
-      <content>{{velocity}}{{html clean=false}}&#xd;
-$xwiki.ssfx.use('icons/font-awesome/css/font-awesome.min.css')##&#xd;
-$xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
-&lt;div id="phenotips-mainmenu" class="layoutsubsection actionmenu">&#xd;
-&lt;strong id="xwikimenutitle" class="hidden">$services.localization.render('core.menu.main.title')&lt;/strong>&#xd;
-&lt;div class="rightmenu">&#xd;
-#set ($workspaceManagerMainDocumentReference = $services.model.createDocumentReference($xcontext.mainWikiName, 'WorkspaceManager', 'WebHome'))&#xd;
-#set ($isWorkspaceManagerAppInstalled = $xwiki.exists($workspaceManagerMainDocumentReference))&#xd;
-#set ($isWorkspace = $services.workspace.isWorkspace($xcontext.database))&#xd;
-#set ($isMainWikiUser = ($xcontext.mainWikiName == "$!{xcontext.userReference.wikiReference.name}"))&#xd;
-##&#xd;
-## User&#xd;
-##&#xd;
-#if (!$xcontext.action.startsWith('login'))&#xd;
-  #if ($isGuest)&#xd;
-    #set ($loginurl = $xwiki.getURL('XWiki.XWikiLogin', 'login', "xredirect=$escapetool.url($xwiki.relativeRequestURL)"))&#xd;
-    #xwikitopmenuentry($!loginurl $!services.localization.render('login') 'tmLogin' 'fa fa-sign-in')&#xd;
-  #else&#xd;
-    #set ($logouturl = $xwiki.getURL('XWiki.XWikiLogout', 'logout', "xredirect=$escapetool.url($xwiki.relativeRequestURL)"))&#xd;
-    #xwikitopmenuentry($!logouturl $!services.localization.render('logout') 'tmLogout' 'fa fa-sign-out')&#xd;
-  #end&#xd;
-#end&#xd;
-#if ($isGuest &amp;&amp; $xwiki.hasAccessLevel('register', 'XWiki.XWikiPreferences'))&#xd;
-  #set ($regurl = $xwiki.getURL('XWiki.Register', 'register'))&#xd;
-  #xwikitopmenuentry($!regurl $!services.localization.render('core.register') 'tmRegister' 'fa fa-plus-square')&#xd;
-#end&#xd;
-##&#xd;
-##&#xd;
-#if (!$isGuest)&#xd;
-#if ($isSuperAdmin)&#xd;
-  #xwikitopmenuentry('#' $!services.localization.render('superadmin') 'tmUser' 'fa fa-user')&#xd;
-#else&#xd;
-  #xwikitopmenuentry("$!xwiki.getURL($xcontext.user)" "$!xwiki.getUserName($xcontext.user, false)" 'tmUser' 'fa fa-user')&#xd;
-#end&#xd;
-#end&#xd;
-&lt;/div>&#xd;
-&lt;div class="leftmenu">&#xd;
-##&#xd;
-## Administration&#xd;
-##&#xd;
-#set ($isAdminAppInstalled = $xwiki.exists('XWiki.AdminSheet'))&#xd;
-#if ($isAdminAppInstalled &amp;&amp; $hasSpaceAdmin)&#xd;
-  #set ($adminspaceaction = $!xwiki.getURL("XWiki.XWikiPreferences", 'admin'))&#xd;
-  #xwikitopmenuentry($adminspaceaction 'Administration' 'tmAdminSpace' 'fa fa-cogs')&#xd;
-#end&#xd;
-&lt;/div>&#xd;
-&lt;/div>&#xd;
+      <content>{{velocity}}{{html clean=false}}
+$xwiki.ssfx.use('icons/font-awesome/css/font-awesome.min.css')##
+$xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##
+&lt;div id="phenotips-mainmenu" class="layoutsubsection actionmenu"&gt;
+&lt;strong id="xwikimenutitle" class="hidden"&gt;$services.localization.render('core.menu.main.title')&lt;/strong&gt;
+&lt;div class="rightmenu"&gt;
+#set ($workspaceManagerMainDocumentReference = $services.model.createDocumentReference($xcontext.mainWikiName, 'WorkspaceManager', 'WebHome'))
+#set ($isWorkspaceManagerAppInstalled = $xwiki.exists($workspaceManagerMainDocumentReference))
+#set ($isWorkspace = $services.workspace.isWorkspace($xcontext.database))
+#set ($isMainWikiUser = ($xcontext.mainWikiName == "$!{xcontext.userReference.wikiReference.name}"))
+##
+## User
+##
+#if (!$xcontext.action.startsWith('login'))
+  #if ($isGuest)
+    #set ($loginurl = $xwiki.getURL('XWiki.XWikiLogin', 'login', "xredirect=$escapetool.url($xwiki.relativeRequestURL)"))
+    #xwikitopmenuentry($!loginurl $!services.localization.render('login') 'tmLogin' 'fa fa-sign-in')
+  #else
+    #set ($logouturl = $xwiki.getURL('XWiki.XWikiLogout', 'logout', "xredirect=$escapetool.url($xwiki.relativeRequestURL)"))
+    #xwikitopmenuentry($!logouturl $!services.localization.render('logout') 'tmLogout' 'fa fa-sign-out')
+  #end
+#end
+#if ($isGuest &amp;&amp; $xwiki.hasAccessLevel('register', 'XWiki.XWikiPreferences'))
+  #set ($regurl = $xwiki.getURL('XWiki.Register', 'register'))
+  #xwikitopmenuentry($!regurl $!services.localization.render('core.register') 'tmRegister' 'fa fa-plus-square')
+#end
+##
+##
+#if (!$isGuest)
+#if ($isSuperAdmin)
+  #xwikitopmenuentry('#' $!services.localization.render('superadmin') 'tmUser' 'fa fa-user')
+#else
+  #xwikitopmenuentry("$!xwiki.getURL($xcontext.user)" "$!xwiki.getUserName($xcontext.user, false)" 'tmUser' 'fa fa-user')
+#end
+#end
+&lt;/div&gt;
+&lt;div class="leftmenu"&gt;
+##
+## Administration
+##
+#set ($isAdminAppInstalled = $xwiki.exists('XWiki.AdminSheet'))
+#if ($isAdminAppInstalled &amp;&amp; $hasSpaceAdmin)
+  #set ($adminspaceaction = $!xwiki.getURL("XWiki.XWikiPreferences", 'admin'))
+  #xwikitopmenuentry($adminspaceaction 'Administration' 'tmAdminSpace' 'fa fa-cogs')
+#end
+&lt;/div&gt;
+&lt;/div&gt;
 {{/html}}{{/velocity}}</content>
     </property>
     <property>
@@ -145,7 +166,7 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
       <name>org.phenotips.header.top</name>
     </property>
     <property>
-      <parameters></parameters>
+      <parameters/>
     </property>
     <property>
       <scope>wiki</scope>
@@ -158,13 +179,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
     <guid>c92a9749-be15-42c4-9d98-04a69a519b2d</guid>
     <class>
       <name>XWiki.UIExtensionClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <content>
         <disabled>0</disabled>
         <name>content</name>
@@ -221,13 +242,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
       </scope>
     </class>
     <property>
-      <content>{{velocity}}&#xd;
-#set($uixs = $services.uix.getExtensions("org.phenotips.header.bottom"))&#xd;
-#if ($uixs.size() > 0)&#xd;
-  #foreach ($uix in $uixs)&#xd;
-    {{html clean=false}}$services.rendering.render($uix.execute(), 'xhtml/1.0'){{/html}}&#xd;
-  #end&#xd;
-#end&#xd;
+      <content>{{velocity}}
+#set($uixs = $services.uix.getExtensions("org.phenotips.header.bottom"))
+#if ($uixs.size() &gt; 0)
+  #foreach ($uix in $uixs)
+    {{html clean=false}}$services.rendering.render($uix.execute(), 'xhtml/1.0'){{/html}}
+  #end
+#end
 {{/velocity}}</content>
     </property>
     <property>
@@ -237,7 +258,7 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
       <name>org.phenotips.header.bottom</name>
     </property>
     <property>
-      <parameters></parameters>
+      <parameters/>
     </property>
     <property>
       <scope>wiki</scope>
@@ -250,13 +271,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
     <guid>51232060-d6a2-409e-91eb-feea8cdd0e73</guid>
     <class>
       <name>XWiki.UIExtensionClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <content>
         <disabled>0</disabled>
         <name>content</name>
@@ -313,30 +334,30 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
       </scope>
     </class>
     <property>
-      <content>{{velocity}}&#xd;
-#set($uixs = $services.uix.getExtensions("org.phenotips.main.top:${doc.space}"))&#xd;
-#if ($uixs.size() > 0)&#xd;
-  #foreach ($uix in $uixs)&#xd;
-    {{html clean=false}}$services.rendering.render($uix.execute(), 'xhtml/1.0'){{/html}}&#xd;
-  #end&#xd;
-#else&#xd;
-  #if(!$isGuest)&#xd;
-    {{html clean=false}}&#xd;
-    #if ($xcontext.action == 'edit')&#xd;
-      #set ($menuName = 'editmenu')&#xd;
-    #else&#xd;
-      #set ($menuName = 'contentmenu')&#xd;
-    #end&#xd;
-    #set ($menuTemplate = "${menuName}.vm")&#xd;
-    #if ("$!editor" == 'inline')&#xd;
-      #set ($menuTemplate = 'contentmenu.vm')&#xd;
-    #end&#xd;
-    &lt;div id="${menuName}" class="actionmenu">&#xd;
-      #template($menuTemplate)&#xd;
-    &lt;/div>&#xd;
-    {{/html}}&#xd;
-  #end&#xd;
-#end&#xd;
+      <content>{{velocity}}
+#set($uixs = $services.uix.getExtensions("org.phenotips.main.top:${doc.space}"))
+#if ($uixs.size() &gt; 0)
+  #foreach ($uix in $uixs)
+    {{html clean=false}}$services.rendering.render($uix.execute(), 'xhtml/1.0'){{/html}}
+  #end
+#else
+  #if(!$isGuest)
+    {{html clean=false}}
+    #if ($xcontext.action == 'edit')
+      #set ($menuName = 'editmenu')
+    #else
+      #set ($menuName = 'contentmenu')
+    #end
+    #set ($menuTemplate = "${menuName}.vm")
+    #if ("$!editor" == 'inline')
+      #set ($menuTemplate = 'contentmenu.vm')
+    #end
+    &lt;div id="${menuName}" class="actionmenu"&gt;
+      #template($menuTemplate)
+    &lt;/div&gt;
+    {{/html}}
+  #end
+#end
 {{/velocity}}</content>
     </property>
     <property>
@@ -346,7 +367,7 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
       <name>org.phenotips.main.top</name>
     </property>
     <property>
-      <parameters></parameters>
+      <parameters/>
     </property>
     <property>
       <scope>wiki</scope>
@@ -359,13 +380,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
     <guid>c92aad87-9fc7-415f-b073-6d7696d7c7bc</guid>
     <class>
       <name>XWiki.UIExtensionClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <content>
         <disabled>0</disabled>
         <name>content</name>
@@ -422,21 +443,21 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
       </scope>
     </class>
     <property>
-      <content>{{velocity}}&#xd;
-#set($uixs = $services.uix.getExtensions("org.phenotips.content.top:${doc.space}"))&#xd;
-#if ($uixs.size() > 10)&#xd;
-  #foreach ($uix in $uixs)&#xd;
-    {{html clean=false}}$services.rendering.render($uix.execute(), 'xhtml/1.0'){{/html}}&#xd;
-&#xd;
-  #end&#xd;
-#else&#xd;
-  {{html clean=false}}&#xd;
-  #template("hierarchy.vm")&#xd;
-  #if (($editor == 'wiki' == 'inline' || $editor == 'wiki' || $editor == 'wysiwyg') &amp;&amp; !$request.section)&#xd;
-    #template('editmeta.vm')&#xd;
-  #end&#xd;
-  {{/html}}&#xd;
-#end&#xd;
+      <content>{{velocity}}
+#set($uixs = $services.uix.getExtensions("org.phenotips.content.top:${doc.space}"))
+#if ($uixs.size() &gt; 10)
+  #foreach ($uix in $uixs)
+    {{html clean=false}}$services.rendering.render($uix.execute(), 'xhtml/1.0'){{/html}}
+
+  #end
+#else
+  {{html clean=false}}
+  #template("hierarchy.vm")
+  #if (($editor == 'wiki' == 'inline' || $editor == 'wiki' || $editor == 'wysiwyg') &amp;&amp; !$request.section)
+    #template('editmeta.vm')
+  #end
+  {{/html}}
+#end
 {{/velocity}}</content>
     </property>
     <property>
@@ -446,7 +467,7 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
       <name>org.phenotips.content.top</name>
     </property>
     <property>
-      <parameters></parameters>
+      <parameters/>
     </property>
     <property>
       <scope>wiki</scope>
@@ -459,15 +480,15 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
     <guid>007a396b-14ff-4fba-ad44-e23c905d29c1</guid>
     <class>
       <name>XWiki.XWikiRights</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <allow>
-        <customDisplay />
+        <customDisplay/>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
@@ -476,13 +497,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
         <number>4</number>
         <prettyName>Allow/Deny</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </allow>
       <groups>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -492,18 +513,18 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
         <prettyName>Groups</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>5</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
         <usesList>0</usesList>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.GroupsClass</classType>
       </groups>
       <levels>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>1</multiSelect>
@@ -517,13 +538,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
         <size>3</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.LevelsClass</classType>
       </levels>
       <users>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -533,13 +554,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')##&#xd;
         <prettyName>Users</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>5</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
         <usesList>0</usesList>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.UsersClass</classType>
       </users>
     </class>

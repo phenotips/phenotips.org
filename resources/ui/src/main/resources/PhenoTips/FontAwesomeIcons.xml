@@ -1,24 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>FontAwesomeIcons</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1380351524000</creationDate>
   <parent>PhenoTips.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1411434781000</date>
   <contentUpdateDate>1411434781000</contentUpdateDate>
-  <version>3.1</version>
+  <version>1.1</version>
   <title>Macro for inserting Font Awesome icons</title>
-  <comment>Install extensoin [org.phenotips:phenotips-widgets-ui-1.0-rc-1]</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <object>
     <name>PhenoTips.FontAwesomeIcons</name>
     <number>0</number>
@@ -26,13 +47,13 @@
     <guid>20e6d01c-ccdd-4417-b3c5-b67851c65298</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -139,13 +160,13 @@
     <guid>90c03ff1-f1ba-4f3e-9648-e2a7aa423b6e</guid>
     <class>
       <name>XWiki.WikiMacroClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <code>
         <disabled>0</disabled>
         <name>code</name>
@@ -310,13 +331,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')
     <guid>3bd583dc-fe5b-48a0-be80-5dbda6e5d123</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -357,7 +378,7 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
       <description>The name of the icon. See the Font Awesome supported icons (http://fortawesome.github.io/Font-Awesome/icons) for a complete list.</description>
@@ -376,13 +397,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')
     <guid>48b1ea40-a3e4-427c-833c-b440a07cddd0</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -423,7 +444,7 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
       <description>The size of the icon. Supported values: "large" (33% increase), "2x", "3x", "4x". By default, the icon size is the inherited font size.</description>
@@ -442,13 +463,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')
     <guid>34d49cbf-067d-4553-8827-40b5ab64bcbc</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -489,7 +510,7 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
       <description>A tooltip to display on hover.</description>
@@ -508,13 +529,13 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')
     <guid>384e2e9f-bf98-4504-b174-835f1a3cbdc5</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -555,7 +576,7 @@ $xwiki.ssx.use('PhenoTips.FontAwesomeIcons')
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
       <description>An additional CSS class for the icon element.</description>

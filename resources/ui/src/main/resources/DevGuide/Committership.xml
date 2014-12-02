@@ -1,68 +1,89 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>DevGuide</web>
   <name>Committership</name>
-  <language />
-  <defaultLanguage>en</defaultLanguage>
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.sdumitriu</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1415672975000</creationDate>
   <parent>DevGuide.Governance</parent>
-  <author>XWiki.marta</author>
-  <contentAuthor>XWiki.marta</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1415673119000</date>
   <contentUpdateDate>1415673119000</contentUpdateDate>
-  <version>4.1</version>
+  <version>1.1</version>
   <title>Committership</title>
-  <comment>Changed parent to DevGuide.Governance following the rename of that page</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>{{box cssClass="floatinginfobox" title="**Contents**"}}&#xd;
-{{toc/}}&#xd;
-{{/box}}&#xd;
-&#xd;
-Committers are long standing contributors who have been voted in to a level with more responsibilities to the PhenoTips project. They are interested in the PhenoTips project over the long run (this is different from a contributor who might be interested in contributing a fix or small feature in order to help their usage of PhenoTips). Committers are the people ensuring that the project is healthy and goes in the right direction.&#xd;
-&#xd;
-= Roles and Responsibilities of Committers =&#xd;
-&#xd;
-* Committers have write access to the [[source repository>>SourceRepository]]&#xd;
-* Committers must watch everything that goes in the source repository and ensure it's of good quality and matches with the direction of the project&#xd;
-* Committers accept patches (pull requests) from [[contributors>>Contributing]] (through {{scm}}GitHub{{/scm}}), review them and when they are satisfied with the quality and the relevance, apply them&#xd;
-* Committers have a duty of following and participating to the [[PhenoTips mailing lists>>Contact.Mailing Lists]] and answering when there are votes posted (identified with the //[VOTE]// keyword in the subject); see the voting section below&#xd;
-* Committers can (and should) propose to vote in new committers when they identify a contributor they judge adequate for the role, in which case they should send a vote to the list proposing the new committer and explaining why that person is fit to become a committer in their opinion&#xd;
-&#xd;
-= Voting =&#xd;
-&#xd;
-In general votes should be sent in case of big changes (whether it's about code or about processes or people). A vote is mandatory for voting in new committers or from removing committers. It's not necessary to send a vote when performing minor or even sometimes substantial modifications provided the author judges everyone would agree to them. This is called lazy consensus. However should someone objects to the code committed, the author must then be prepared to revert it if asked.&#xd;
-&#xd;
-* A successful vote must have at least 2 committers answering&#xd;
-* Votes are carried for 72 hours and the votes are tallied after this time is elapsed&#xd;
-* A summary email containing the result of the vote must be sent by the person proposing the vote after the 72 hours have expired&#xd;
-* Contributors and users can vote but their vote is only indicative and not binding&#xd;
-* Committers must vote as part of their duties&#xd;
-* There are several possible votes:&#xd;
-** +1 -> I agree and I'll help as I can&#xd;
-**  0 -> I'm ok but I'm letting the others decide and I'll be happy with whatever the outcome is&#xd;
-** -1 -> I'm against it and I veto the change&#xd;
-* A vote cannot pass if a committer has voted -1. In that case the proponent should try to explain his rational to the vetoer and try to convince him/her to remove the veto. Possibly the proposal should also be reviewed and changed.&#xd;
-&#xd;
-= Active Committers =&#xd;
-&#xd;
-A committer is considered **active** if he/she's been committing at least once in the past rolling year.&#xd;
-&#xd;
-= Emeritus Committers =&#xd;
-&#xd;
-If a committer is no longer active his status can be changed (with his agreement) to emeritus. This means that he'll no longer have write access to the repository and his votes will be non binding. However, it also means that if at any point in the future he wants to contribute again to the project he'll just have to ask to get his rights back (without going through a vote).&#xd;
-&#xd;
-The rationale behind the emeritus status is that non-active committers make it more difficult to reach consensus in decisions as they are expected to vote and take part in discussions and they won't if they're not active in the project anymore.&#xd;
-&#xd;
-= How to become a Committer =&#xd;
-&#xd;
-Here's a good strategy to be voted in as a committer:&#xd;
-&#xd;
-* Start [[contributing>>Contributing]]&#xd;
-* Send lots of good patches. A good patch is a patch that applies cleanly, meaning that the committer who applies your patch doesn't have to do extra work like add documentation not provided, rework the code because it's of poor quality, add unit tests not provided, etc&#xd;
-* Show dedication and interest for PhenoTips over the long run. You must be interested in the project itself and not simply on fixing something because you need it for one of your projects. If this is the case then patches should be good enough&#xd;
+  <content>{{box cssClass="floatinginfobox" title="**Contents**"}}
+{{toc/}}
+{{/box}}
+
+Committers are long standing contributors who have been voted in to a level with more responsibilities to the PhenoTips project. They are interested in the PhenoTips project over the long run (this is different from a contributor who might be interested in contributing a fix or small feature in order to help their usage of PhenoTips). Committers are the people ensuring that the project is healthy and goes in the right direction.
+
+= Roles and Responsibilities of Committers =
+
+* Committers have write access to the [[source repository&gt;&gt;SourceRepository]]
+* Committers must watch everything that goes in the source repository and ensure it's of good quality and matches with the direction of the project
+* Committers accept patches (pull requests) from [[contributors&gt;&gt;Contributing]] (through {{scm}}GitHub{{/scm}}), review them and when they are satisfied with the quality and the relevance, apply them
+* Committers have a duty of following and participating to the [[PhenoTips mailing lists&gt;&gt;Contact.Mailing Lists]] and answering when there are votes posted (identified with the //[VOTE]// keyword in the subject); see the voting section below
+* Committers can (and should) propose to vote in new committers when they identify a contributor they judge adequate for the role, in which case they should send a vote to the list proposing the new committer and explaining why that person is fit to become a committer in their opinion
+
+= Voting =
+
+In general votes should be sent in case of big changes (whether it's about code or about processes or people). A vote is mandatory for voting in new committers or from removing committers. It's not necessary to send a vote when performing minor or even sometimes substantial modifications provided the author judges everyone would agree to them. This is called lazy consensus. However should someone objects to the code committed, the author must then be prepared to revert it if asked.
+
+* A successful vote must have at least 2 committers answering
+* Votes are carried for 72 hours and the votes are tallied after this time is elapsed
+* A summary email containing the result of the vote must be sent by the person proposing the vote after the 72 hours have expired
+* Contributors and users can vote but their vote is only indicative and not binding
+* Committers must vote as part of their duties
+* There are several possible votes:
+** +1 -&gt; I agree and I'll help as I can
+**  0 -&gt; I'm ok but I'm letting the others decide and I'll be happy with whatever the outcome is
+** -1 -&gt; I'm against it and I veto the change
+* A vote cannot pass if a committer has voted -1. In that case the proponent should try to explain his rational to the vetoer and try to convince him/her to remove the veto. Possibly the proposal should also be reviewed and changed.
+
+= Active Committers =
+
+A committer is considered **active** if he/she's been committing at least once in the past rolling year.
+
+= Emeritus Committers =
+
+If a committer is no longer active his status can be changed (with his agreement) to emeritus. This means that he'll no longer have write access to the repository and his votes will be non binding. However, it also means that if at any point in the future he wants to contribute again to the project he'll just have to ask to get his rights back (without going through a vote).
+
+The rationale behind the emeritus status is that non-active committers make it more difficult to reach consensus in decisions as they are expected to vote and take part in discussions and they won't if they're not active in the project anymore.
+
+= How to become a Committer =
+
+Here's a good strategy to be voted in as a committer:
+
+* Start [[contributing&gt;&gt;Contributing]]
+* Send lots of good patches. A good patch is a patch that applies cleanly, meaning that the committer who applies your patch doesn't have to do extra work like add documentation not provided, rework the code because it's of poor quality, add unit tests not provided, etc
+* Show dedication and interest for PhenoTips over the long run. You must be interested in the project itself and not simply on fixing something because you need it for one of your projects. If this is the case then patches should be good enough
 * After some time, the current committers applying your patches will get fed up applying them and if they're of good quality you'll be proposed to become a committer</content>
 </xwikidoc>

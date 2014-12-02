@@ -1,29 +1,50 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>Macros</web>
   <name>SCM</name>
-  <language />
-  <defaultLanguage>en</defaultLanguage>
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.ThomasMortagne</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1316783576000</creationDate>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1373554028000</date>
   <contentUpdateDate>1373553990000</contentUpdateDate>
-  <version>4.1</version>
+  <version>1.1</version>
   <title>SCM Macro</title>
-  <comment>Imported from XAR</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>false</hidden>
-  <content>= Parameters&#xd;
-&#xd;
-|= Parameter name |= Default value |= Description&#xd;
-| user | phenotips | the github user&#xd;
-| project | phenotips | the repository name in the provided user&#xd;
-| branch | master | the branch or tag&#xd;
-| raw | false | UI or raw content&#xd;
+  <content>= Parameters
+
+|= Parameter name |= Default value |= Description
+| user | phenotips | the github user
+| project | phenotips | the repository name in the provided user
+| branch | master | the branch or tag
+| raw | false | UI or raw content
 | path | empty string | the resource in the repository</content>
   <object>
     <name>Macros.SCM</name>
@@ -32,13 +53,13 @@
     <guid>c5179cba-5190-4307-9acd-d382d0d0a34c</guid>
     <class>
       <name>XWiki.WikiMacroClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <code>
         <disabled>0</disabled>
         <name>code</name>
@@ -140,66 +161,66 @@
       </visibility>
     </class>
     <property>
-      <code>{{velocity}}&#xd;
-#if ($xcontext.macro.params.raw.toLowerCase() == 'true')&#xd;
-  #set($scmBase = 'http://raw.github.com')&#xd;
-#else&#xd;
-  #set($scmBase = 'http://www.github.com')&#xd;
-#end&#xd;
-##&#xd;
-#set($scmDefaulUser = 'xwiki')&#xd;
-#set($scmDefaultProject = 'xwiki-platform')&#xd;
-#set($scmDefaultBranch = 'master')&#xd;
-##&#xd;
-#set($scmUrl = "$scmBase")&#xd;
-##&#xd;
-## user&#xd;
-#if ($xcontext.macro.params.user)&#xd;
-  #set($scmUrl = "$scmUrl/${xcontext.macro.params.user}")&#xd;
-#else&#xd;
-  #set($scmUrl = "$scmDefaulUser")&#xd;
-#end&#xd;
-##&#xd;
-## project&#xd;
-#if ($xcontext.macro.params.project)&#xd;
-  #set($scmUrl = "$scmUrl/${xcontext.macro.params.project}")&#xd;
-#end&#xd;
-##&#xd;
-## raw&#xd;
-#if ($xcontext.macro.params.raw.toLowerCase() == 'true')&#xd;
-  #set($scBranchPrefix = '')&#xd;
-#else&#xd;
-  #set($scBranchPrefix = 'tree/')&#xd;
-#end&#xd;
-##&#xd;
-## branch&#xd;
-#if ($xcontext.macro.params.branch)&#xd;
-  #if (!$xcontext.macro.params.project)&#xd;
-    #set($scmUrl = "$scmUrl/$scmDefaultProject")&#xd;
-  #end&#xd;
-  #set($scmUrl = "$scmUrl/${scBranchPrefix}${xcontext.macro.params.branch}")&#xd;
-#end&#xd;
-##&#xd;
-## path&#xd;
-#if ($xcontext.macro.params.path)&#xd;
-  #if (!$xcontext.macro.params.branch &amp;&amp; $scmDefaultBranch)&#xd;
-    #if (!$xcontext.macro.params.project)&#xd;
-      #set($scmUrl = "$scmUrl/$scmDefaultProject")&#xd;
-    #end&#xd;
-    #set($scmUrl = "$scmUrl/${scBranchPrefix}$scmDefaultBranch")&#xd;
-  #end&#xd;
-  #set($scmUrl = "$scmUrl/${xcontext.macro.params.path}")&#xd;
-#end&#xd;
-##&#xd;
-#if ($xcontext.macro.content)&#xd;
-  [[$xcontext.macro.content>>$scmUrl]]&#xd;
-#else&#xd;
-  [[$scmUrl]]&#xd;
-#end&#xd;
+      <code>{{velocity}}
+#if ($xcontext.macro.params.raw.toLowerCase() == 'true')
+  #set($scmBase = 'http://raw.github.com')
+#else
+  #set($scmBase = 'http://www.github.com')
+#end
+##
+#set($scmDefaulUser = 'xwiki')
+#set($scmDefaultProject = 'xwiki-platform')
+#set($scmDefaultBranch = 'master')
+##
+#set($scmUrl = "$scmBase")
+##
+## user
+#if ($xcontext.macro.params.user)
+  #set($scmUrl = "$scmUrl/${xcontext.macro.params.user}")
+#else
+  #set($scmUrl = "$scmDefaulUser")
+#end
+##
+## project
+#if ($xcontext.macro.params.project)
+  #set($scmUrl = "$scmUrl/${xcontext.macro.params.project}")
+#end
+##
+## raw
+#if ($xcontext.macro.params.raw.toLowerCase() == 'true')
+  #set($scBranchPrefix = '')
+#else
+  #set($scBranchPrefix = 'tree/')
+#end
+##
+## branch
+#if ($xcontext.macro.params.branch)
+  #if (!$xcontext.macro.params.project)
+    #set($scmUrl = "$scmUrl/$scmDefaultProject")
+  #end
+  #set($scmUrl = "$scmUrl/${scBranchPrefix}${xcontext.macro.params.branch}")
+#end
+##
+## path
+#if ($xcontext.macro.params.path)
+  #if (!$xcontext.macro.params.branch &amp;&amp; $scmDefaultBranch)
+    #if (!$xcontext.macro.params.project)
+      #set($scmUrl = "$scmUrl/$scmDefaultProject")
+    #end
+    #set($scmUrl = "$scmUrl/${scBranchPrefix}$scmDefaultBranch")
+  #end
+  #set($scmUrl = "$scmUrl/${xcontext.macro.params.path}")
+#end
+##
+#if ($xcontext.macro.content)
+  [[$xcontext.macro.content&gt;&gt;$scmUrl]]
+#else
+  [[$scmUrl]]
+#end
 {{/velocity}}</code>
     </property>
     <property>
-      <contentDescription></contentDescription>
+      <contentDescription/>
     </property>
     <property>
       <contentType>Optional</contentType>
@@ -230,13 +251,13 @@
     <guid>3b7539ac-4dc4-4e3a-bcbf-889d3c0911ff</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -296,13 +317,13 @@
     <guid>14f1e07c-c659-441a-928b-9751d6dc40e2</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -343,7 +364,7 @@
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
       <description>The end of the URL</description>
@@ -362,13 +383,13 @@
     <guid>465995da-ebf4-44bf-a336-1d9ff0328ecf</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -409,7 +430,7 @@
       </name>
     </class>
     <property>
-      <defaultValue></defaultValue>
+      <defaultValue/>
     </property>
     <property>
       <description>The branch</description>
@@ -428,13 +449,13 @@
     <guid>9531e84d-17d3-44b7-8c90-76da1f52d61f</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -478,7 +499,7 @@
       <defaultValue>phenotips</defaultValue>
     </property>
     <property>
-      <description></description>
+      <description/>
     </property>
     <property>
       <mandatory>0</mandatory>
@@ -494,13 +515,13 @@
     <guid>d2111c34-17aa-4487-a7b0-4b360958c7ac</guid>
     <class>
       <name>XWiki.WikiMacroParameterClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <defaultValue>
         <disabled>0</disabled>
         <name>defaultValue</name>
@@ -544,7 +565,7 @@
       <defaultValue>false</defaultValue>
     </property>
     <property>
-      <description></description>
+      <description/>
     </property>
     <property>
       <mandatory>0</mandatory>

@@ -1,24 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>PushPatient</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.sdumitriu</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1396448834000</creationDate>
   <parent>PhenoTips.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1411434815000</date>
   <contentUpdateDate>1411434815000</contentUpdateDate>
-  <version>4.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:patient-data-sharing-push-ui-1.0-rc-1]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content />
+  <content/>
   <object>
     <name>PhenoTips.PushPatient</name>
     <number>0</number>
@@ -26,13 +47,13 @@
     <guid>767e254e-4d44-413d-8243-c88835562b5e</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -211,7 +232,7 @@
       this._approveElement = new Element('div', {'class' : 'confirm-push plainmessage'});
       this._approveElement.insert(labelApprove);
       if (this._pushManyPatients) {
-          this._container.insert("&lt;br/>");
+          this._container.insert("&lt;br/&gt;");
       }
       this._container.insert(this._approveElement);
 
@@ -266,7 +287,7 @@
     },
 
     _generateNoPushServerConfiguredMessage: function() {
-          return new Element('div', {'class' : 'errormessage'}).update("No remote PhenoTips target servers are configured in your system.&lt;br/>" +
+          return new Element('div', {'class' : 'errormessage'}).update("No remote PhenoTips target servers are configured in your system.&lt;br/&gt;" +
                                                                        "Please contact your administrator for further details.");
     },
 
@@ -493,13 +514,13 @@
           console.log("PUSH: get remote config - complete");
 
           if (this._lastLoginResponse.status == "success") {
-            console.log("--> login successful!");
+            console.log("--&gt; login successful!");
             this._lastApprovedUser = username;
             this._updateUserList();  // update current user list with an indication that this user has successfully logged in
             this._populateGroupsAndData(this._lastLoginResponse.groups, this._lastLoginResponse.serverfields, this._lastLoginResponse.updatesEnabled);
           }
           else {
-            console.log("--> login failed!");
+            console.log("--&gt; login failed!");
             if (this._lastApprovedUser == username) {
               this._lastApprovedUser = undefined;   // this user is no longer approved
             }
@@ -543,7 +564,7 @@
     _updateUserList: function(selectedUserName, lastLoginResponse, user_when_failed, password_when_failed) {
       if (lastLoginResponse) {
         if (this._lastLoginResponse.unauthorizedserver) {
-          this._userManager.update(this._generateCantConnectToServerMessage("This server is not authorized to push patients to the selected server.&lt;br/>"+
+          this._userManager.update(this._generateCantConnectToServerMessage("This server is not authorized to push patients to the selected server.&lt;br/&gt;"+
                                                                             "please contact your administrator", user_when_failed, password_when_failed));
           return;
         }
@@ -560,7 +581,7 @@
 
       // either show only the username/password inputs + "authorize" button or
       // a radiobox [last approved user] and [the inputs + button above]
-      // => re-login at every change
+      // =&gt; re-login at every change
 
       // 1) if `lastApprovedUser` and `selectedUserName` are not set: only username/password inputs (selected)
       // 1) if `lastApprovedUser` is not set and `selectedUserName` is set: only username/password inputs (selected and prefilled)
@@ -608,7 +629,7 @@
            this._onUnapprovedUser();
            this._logoutUser();
         }.bind(this));
-        var preApprovedOption = _addUserOption(preApprovedChecked, "check", "Currently authenticated user: &lt;strong>" + this._lastApprovedUser + "&lt;/strong>&amp;nbsp;",
+        var preApprovedOption = _addUserOption(preApprovedChecked, "check", "Currently authenticated user: &lt;strong&gt;" + this._lastApprovedUser + "&lt;/strong&gt;&amp;nbsp;",
                                                function(){
                                                  this._userLoginError.hide();
                                                  this._onUnapprovedUser();
@@ -706,7 +727,7 @@
       if (!this._updatingExistingPatient())  {
           var noGroupMessage = "None";
           if (groupList.length == 0) {
-            noGroupMessage += " &lt;span class ='hint'>(user " + this._lastApprovedUser + " does not belong to any PhenoTips groups on the selected server)&lt;/span>";
+            noGroupMessage += " &lt;span class ='hint'&gt;(user " + this._lastApprovedUser + " does not belong to any PhenoTips groups on the selected server)&lt;/span&gt;";
           }
           groupListElement.insert(_addGroupOption(true, "user", noGroupMessage, "__self"));
 
@@ -715,7 +736,7 @@
             });
       } else {
           var msg = "Keep existing group(s)";
-          msg += " &lt;span class ='hint'>(the group can't be changed when updating an existing patient)&lt;/span>";
+          msg += " &lt;span class ='hint'&gt;(the group can't be changed when updating an existing patient)&lt;/span&gt;";
           groupListElement.insert(_addGroupOption(true, "check", msg, "__self"));
       }
 
@@ -862,7 +883,7 @@
 
         var existingPatientDataInfo = '';
 
-        if (serverData.pushAgeHours !== undefined &amp;&amp; serverData.pushAgeHours >=0) {
+        if (serverData.pushAgeHours !== undefined &amp;&amp; serverData.pushAgeHours &gt;=0) {
            existingPatientDataInfo = new Element('dd');
 
            var description = new Element('p', {'id': 'server-description'});
@@ -871,7 +892,7 @@
            if (lastUpdated &lt; 1) {
               description.insert(" less than an hour ago");
            } else {
-              if (lastUpdated >= 48) {
+              if (lastUpdated &gt;= 48) {
                   description.insert(" " + Math.floor(lastUpdated/24) + " days ago");
               } else {
                   description.insert(" " + lastUpdated + " hours ago");
@@ -879,7 +900,7 @@
            }
 
            description.insert(" as ").insert(new Element('a', {'href' : serverData.remoteURL, 'target' : '_blank'}).update(serverData.remoteID)).insert('.');
-           description.insert("&lt;br/>Further pushes will attempt to update the patient on the remote server.")
+           description.insert("&lt;br/&gt;Further pushes will attempt to update the patient on the remote server.")
            existingPatientDataInfo.insert(description);
 
            var _this = this;
@@ -1000,7 +1021,7 @@
         var radioSelectUpdate = document.getElementById('choice-update-patient-label');
         if (radioSelectUpdate) {
             var serverDesc = document.getElementById('server-description');
-            serverDesc.insert("&lt;p>Selected server does not allow updating existing patients, so can only push again to a new patient record.&lt;/p>");
+            serverDesc.insert("&lt;p&gt;Selected server does not allow updating existing patients, so can only push again to a new patient record.&lt;/p&gt;");
             radioSelectUpdate.hide()
         }
     },
@@ -1058,10 +1079,10 @@
                     _this._remoteServers[_this._selectedServer]["remoteURL"]    = newURL;
 
                     if (_this._updatingExistingPatient()) {
-                        var linkToOld = "(&lt;a href='" + newURL + "' target='_blank'>click here to open remote patient&lt;/a>)";
+                        var linkToOld = "(&lt;a href='" + newURL + "' target='_blank'&gt;click here to open remote patient&lt;/a&gt;)";
                         _this._pushResultSection.update(new Element('div', {'class' : 'infomessage'}).update("Updated patient successfully. " + linkToOld));
                     } else {
-                        var linkToNew = "&lt;a href='" + newURL + "' target='_blank'>" + res.patientid + "&lt;/a>";
+                        var linkToNew = "&lt;a href='" + newURL + "' target='_blank'&gt;" + res.patientid + "&lt;/a&gt;";
                         _this._pushResultSection.update(new Element('div', {'class' : 'infomessage'})
                                                 .update("Pushed patient successfully, ID of the new patient on the remote server is " + linkToNew));
                     }
@@ -1137,7 +1158,7 @@
         var _this = this;
 
         var doMultiPush = function(patients, columns) {
-            //console.log("Push with params: " + patients + " -> " + columns + " -> " + _this._selectedServer);
+            //console.log("Push with params: " + patients + " -&gt; " + columns + " -&gt; " + _this._selectedServer);
             _this._checkBoxApprove.checked = false;
             var pushResult = new Element("div", {"class": "multi-push-results infomessage"});
             _this._pushResultSection.update(pushResult);
@@ -1158,12 +1179,12 @@
                        } else if (previousPushResult.accessdeniedguid) {
                            reason = "unable to update: access denied.";
                        }
-                       pushResult.insert(' ' + reason + "&lt;br/>");
+                       pushResult.insert(' ' + reason + "&lt;br/&gt;");
                    } else {
                        pushResult.innerHTML = pushResult.innerHTML.replace(/Pushing (\w+?)\.\.\.$/, "");
                        var newURL       = _this._remoteServers[_this._selectedServer].url + previousPushResult.patienturl;
-                       var linkToRemote = "&lt;a href='" + newURL + "' target='_blank'>" + previousPushResult.patientid + "&lt;/a>";
-                       pushResult.insert("&lt;div class='pushed-ok-message'>Pushed " + prevPatientID + " successfully, remote patient ID is " + linkToRemote + "&lt;/div>");
+                       var linkToRemote = "&lt;a href='" + newURL + "' target='_blank'&gt;" + previousPushResult.patientid + "&lt;/a&gt;";
+                       pushResult.insert("&lt;div class='pushed-ok-message'&gt;Pushed " + prevPatientID + " successfully, remote patient ID is " + linkToRemote + "&lt;/div&gt;");
                    }
                }
                // push next
@@ -1181,11 +1202,11 @@
                 return;
             }
             var confirmMessage = "Do you want to push the following " + patients.length + " patients to " + _this._selectedServer + "?"+
-                                 "&lt;br/>&lt;div class='plainmessage multi-push-patient-list'>&lt;ol>";
+                                 "&lt;br/&gt;&lt;div class='plainmessage multi-push-patient-list'&gt;&lt;ol&gt;";
             patients.each(function(item) {
-                confirmMessage += "&lt;li>" + item + "&lt;/li>";
+                confirmMessage += "&lt;li&gt;" + item + "&lt;/li&gt;";
             });
-            confirmMessage += "&lt;/ol>&lt;/div>"
+            confirmMessage += "&lt;/ol&gt;&lt;/div&gt;"
 
             new XWiki.widgets.ConfirmationBox(
               { onYes : function() { doMultiPush(patients, columns); }, },
@@ -1197,7 +1218,7 @@
         }
         var exportTool = $('phenotips_export');
         if (!exportTool) return;
-        var dialog = new PhenoTips.widgets.ModalPopup('&lt;img src="$xwiki.getSkinFile('icons/xwiki/ajax-loader-large.gif')"/>', false, {'title': 'Export options', 'verticalPosition': 'top', 'removeOnClose': true, 'extraClassName': 'export-dialog'});
+        var dialog = new PhenoTips.widgets.ModalPopup('&lt;img src="$xwiki.getSkinFile('icons/xwiki/ajax-loader-large.gif')"/&gt;', false, {'title': 'Export options', 'verticalPosition': 'top', 'removeOnClose': true, 'extraClassName': 'export-dialog'});
         dialog.showDialog();
         // =================================================================================
         // Generate the dialog content
@@ -1281,7 +1302,7 @@ function stringifyObject(obj) {
 }
 
 function _printObjectInternal(o, level) {
-    if (level > 10) return "...[too deep, possibly a recursive object]...";
+    if (level &gt; 10) return "...[too deep, possibly a recursive object]...";
     var output = '';
     if (typeof o == 'object')
     {
@@ -1289,7 +1310,7 @@ function _printObjectInternal(o, level) {
         {
             output = '[';
             for (var i = 0; i &lt; o.length; i++) {
-                if (i > 0) output += ', ';
+                if (i &gt; 0) output += ', ';
                 output += _printObjectInternal(o[i], level+1);
             }
             output += ']';
@@ -1323,7 +1344,7 @@ function _printObjectInternal(o, level) {
 </code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>
@@ -1339,13 +1360,13 @@ function _printObjectInternal(o, level) {
     <guid>039b7857-377d-4086-8a44-e16fce031439</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -1532,7 +1553,7 @@ function _printObjectInternal(o, level) {
 }</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>
@@ -1548,13 +1569,13 @@ function _printObjectInternal(o, level) {
     <guid>87b251c1-821f-4c7b-8258-787134bd0cd9</guid>
     <class>
       <name>XWiki.UIExtensionClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <content>
         <disabled>0</disabled>
         <name>content</name>
@@ -1619,14 +1640,14 @@ $xwiki.ssx.use('PhenoTips.PushPatient')##
 #foreach ($mapEntry in $configuredServers.entrySet())
   ## make sure PhenomeCentral is enabled/configured, and if it is list it as the first push target
   #if ($mapEntry.key.getServerID() == "PhenomeCentral")
-    (% id="push-patient-pc" name="PhenomeCentral" %)((([[Push to PhenomeCentral>>path:#]])))
+    (% id="push-patient-pc" name="PhenomeCentral" %)((([[Push to PhenomeCentral&gt;&gt;path:#]])))
   #end
 #end
 #set ($counter = 0)
 #foreach ($mapEntry in $configuredServers.entrySet())
   #set ($serverName = $mapEntry.key.getServerID())
   #if ($serverName != "PhenomeCentral")
-    (% id="push-patient-$counter" name="$serverName" %)((([[Push to $serverName>>path:#]])))
+    (% id="push-patient-$counter" name="$serverName" %)((([[Push to $serverName&gt;&gt;path:#]])))
     #set( $counter = $counter + 1 )
   #end
 #end
@@ -1639,7 +1660,7 @@ $xwiki.ssx.use('PhenoTips.PushPatient')##
       <name>org.phenotips.widget.pushpatient</name>
     </property>
     <property>
-      <parameters></parameters>
+      <parameters/>
     </property>
     <property>
       <scope>wiki</scope>

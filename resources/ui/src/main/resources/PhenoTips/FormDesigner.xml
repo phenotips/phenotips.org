@@ -1,20 +1,41 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>FormDesigner</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1380351525000</creationDate>
   <parent>PhenoTips.DBWebHomeSheet</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1411434789000</date>
   <contentUpdateDate>1411434789000</contentUpdateDate>
-  <version>5.1</version>
+  <version>1.1</version>
   <title>Patient form designer</title>
-  <comment>Install extensoin [org.phenotips:ontology-hpo-access-ui-1.0-rc-1]</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
@@ -57,7 +78,7 @@
     #set ($discard = $uixDocsMap.put($uixObj.getProperty('name').value, $uixDoc))
   #end
   ## If another configuration overrides the order/enabled status, reorder and re-mark:
-  #if ("$!{selectionOverride}" != '' &amp;&amp; $selectionOverride.size() > 0)
+  #if ("$!{selectionOverride}" != '' &amp;&amp; $selectionOverride.size() &gt; 0)
     #set ($uixMap = {})
     #foreach ($uix in $uixs)
       #set ($discard = $uixMap.put($uix.id, $uix))
@@ -162,7 +183,7 @@
       #end
     #end
     #set ($extPt = $request.get("${extensionType}_${extensionDatum.id}_extensionPointId"))
-    #if ($uixModifiedParams.size() > 0 || $extPt != $extensionDatum.uix.getExtensionPointId())
+    #if ($uixModifiedParams.size() &gt; 0 || $extPt != $extensionDatum.uix.getExtensionPointId())
       #set ($uixObj = $extensionDatum.doc.getObject($uixClass))
       #set ($discard = $uixObj.set('extensionPointId', $extPt))
       #set ($originalParamsBlock = $uixObj.getProperty('parameters').value)
@@ -271,20 +292,20 @@ $xwiki.ssfx.use('icons/font-awesome/css/font-awesome.min.css')
 ## ----------------------------------------------------------------------
 ## One tool for handling an extension
 ## ----------------------------------------------------------------------
-#macro(_formDesigner__displayExtensionTool $name $icon $hint $url $attrs)&lt;a href="$url" title="$!{hint}" class="extension-tool ${name}" $!{attrs}>&lt;i class="fa fa-${icon}">&lt;/i>&lt;/a>#end
+#macro(_formDesigner__displayExtensionTool $name $icon $hint $url $attrs)&lt;a href="$url" title="$!{hint}" class="extension-tool ${name}" $!{attrs}&gt;&lt;i class="fa fa-${icon}"&gt;&lt;/i&gt;&lt;/a&gt;#end
 
 ## ----------------------------------------------------------------------
 ## Toolbox for handling an extension
 ## ----------------------------------------------------------------------
 #macro(_formDesigner__displayExtensionTools $extension $tools)
-{{html wiki=false clean=false}}&lt;div class="extension-tools">
+{{html wiki=false clean=false}}&lt;div class="extension-tools"&gt;
 #if ($globalConfig)
-#if ($tools.required)&lt;label class="extension-tool flag" title="Required?">&lt;i class="fa fa-asterisk">&lt;/i>&lt;input type="checkbox" class="uix-required" name="${prefix}${extension.type}s_${extension.id}_required" value="true" #if ($extension.required) checked="true" #end/>&lt;/label>#end
+#if ($tools.required)&lt;label class="extension-tool flag" title="Required?"&gt;&lt;i class="fa fa-asterisk"&gt;&lt;/i&gt;&lt;input type="checkbox" class="uix-required" name="${prefix}${extension.type}s_${extension.id}_required" value="true" #if ($extension.required) checked="true" #end/&gt;&lt;/label&gt;#end
 #if ($tools.edit)#_formDesigner__displayExtensionTool('edit' 'pencil' 'Modify this extension' $extension.doc.getURL('edit', 'editor=object') 'target="_blank"')#end
 #if ($tools.delete)#_formDesigner__displayExtensionTool('delete' 'times' 'Delete this extension' $extension.doc.getURL('delete') 'target="_blank"')#end
 #end
 #if ($tools.move)#_formDesigner__displayExtensionTool('move' 'arrows' 'Drag and drop to reorganize' '#')#end
-&lt;/div>{{/html}}
+&lt;/div&gt;{{/html}}
 #end
 
 ## ----------------------------------------------------------------------
@@ -292,9 +313,9 @@ $xwiki.ssfx.use('icons/font-awesome/css/font-awesome.min.css')
 ## ----------------------------------------------------------------------
 #macro(_formDesigner__displayExtensionInputs $extension $fieldName)##
 {{html wiki=false clean=false}}
-&lt;input type="checkbox" class="uix-toggle"   name="$fieldName" value="${extension.id}" #if ($extension.enabled) checked="true" #end/>
-&lt;input type="hidden"   class="uix-pointid"  name="${fieldName}_${extension.id}_extensionPointId" value="${extension.uix.getExtensionPointId()}" />
-&lt;input type="hidden"   class="uix-order"    name="${fieldName}_${extension.id}_order" value="" />
+&lt;input type="checkbox" class="uix-toggle"   name="$fieldName" value="${extension.id}" #if ($extension.enabled) checked="true" #end/&gt;
+&lt;input type="hidden"   class="uix-pointid"  name="${fieldName}_${extension.id}_extensionPointId" value="${extension.uix.getExtensionPointId()}" /&gt;
+&lt;input type="hidden"   class="uix-order"    name="${fieldName}_${extension.id}_order" value="" /&gt;
 {{/html}}##
 #end
 
@@ -362,16 +383,16 @@ $xwiki.ssfx.use('icons/font-awesome/css/font-awesome.min.css')
 ## SHOW SECTION ADDITION FORM
 ## =====================================================================
 #if ($globalConfig)
-{{html clean=false wiki=false}}&lt;form action="$formAction" method="post" class="xformInline" id="create-section-form">
-&lt;h2>Add a form section&lt;/h2>
-&lt;div>
-  &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}"/>
-  &lt;input type="hidden" name="create_extension" value="1"/>
-  &lt;input type="hidden" name="xredirect" value="$doc.getURL('get', 'showsection=')"/>
-  &lt;input type="text" name="extension_id" value="" placeholder='Section identifier (e.g. "new-section")' title="Alphanumeric characters and dashes only" size="32"/>
-  &lt;input type="text" name="extension_name" value="" placeholder="Section title" size="32"/>
-  &lt;input class="button" type="button" name="create_extension" value="Create"/>
-&lt;/div>&lt;/form>{{/html}}
+{{html clean=false wiki=false}}&lt;form action="$formAction" method="post" class="xformInline" id="create-section-form"&gt;
+&lt;h2&gt;Add a form section&lt;/h2&gt;
+&lt;div&gt;
+  &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}"/&gt;
+  &lt;input type="hidden" name="create_extension" value="1"/&gt;
+  &lt;input type="hidden" name="xredirect" value="$doc.getURL('get', 'showsection=')"/&gt;
+  &lt;input type="text" name="extension_id" value="" placeholder='Section identifier (e.g. "new-section")' title="Alphanumeric characters and dashes only" size="32"/&gt;
+  &lt;input type="text" name="extension_name" value="" placeholder="Section title" size="32"/&gt;
+  &lt;input class="button" type="button" name="create_extension" value="Create"/&gt;
+&lt;/div&gt;&lt;/form&gt;{{/html}}
 
 #end
 ## =====================================================================
@@ -381,15 +402,15 @@ $xwiki.ssfx.use('icons/font-awesome/css/font-awesome.min.css')
 ## ----------------------------------------------------------------------
 ## Display the configuration form if the user has permissions
 ## ----------------------------------------------------------------------
-{{html clean=false wiki=false}}&lt;form action="$formAction" method="post">{{/html}}
+{{html clean=false wiki=false}}&lt;form action="$formAction" method="post"&gt;{{/html}}
 (% id="patient-form-designer" #if ($globalConfig) class="global" #end%)(((
 (% class="designer-panel sections" %)(((
 #_formDesigner__displaySections()
 #if ($globalConfig)
 (% id="new-section" class="new-section xformInline" %)((((% class="section-title" %)(((New section...))){{html clean=false wiki=false}}
-  &lt;input type="text" name="extension_id" value="" placeholder='Section identifier (e.g. "new-section")' title="Alphanumeric characters and dashes only" size="32"/>
-  &lt;input type="text" name="extension_name" value="" placeholder="Section title" size="32"/>
-  &lt;input class="button" type="button" name="${formSubmit}" value="Create"/>{{/html}}
+  &lt;input type="text" name="extension_id" value="" placeholder='Section identifier (e.g. "new-section")' title="Alphanumeric characters and dashes only" size="32"/&gt;
+  &lt;input type="text" name="extension_name" value="" placeholder="Section title" size="32"/&gt;
+  &lt;input class="button" type="button" name="${formSubmit}" value="Create"/&gt;{{/html}}
 )))## new section
 #end
 )))
@@ -417,7 +438,7 @@ $xwiki.ssfx.use('icons/font-awesome/css/font-awesome.min.css')
 {{info}}The phenotype categories and phenotypes that are displayed by default in the patient form, on the in the left side of the "Clinical symptoms &amp; physical findings" section, are defined in a separate configuration document. Choose below the configuration document to use.{{/info}}
 ; Phenotype configuration document
 : (((
-{{html clean=false wiki=false}}&lt;label class="xwiki-form-listclass default" for="xwiki-form-mapping-0-default">&lt;input id="xwiki-form-mapping-0-default" type="radio" name="${prefix}mapping" value="" #if ("$!{studyConfig.getProperty('mapping').value}" == '') checked="checked" #end/>None (use the global default)&lt;/label>{{/html}}
+{{html clean=false wiki=false}}&lt;label class="xwiki-form-listclass default" for="xwiki-form-mapping-0-default"&gt;&lt;input id="xwiki-form-mapping-0-default" type="radio" name="${prefix}mapping" value="" #if ("$!{studyConfig.getProperty('mapping').value}" == '') checked="checked" #end/&gt;None (use the global default)&lt;/label&gt;{{/html}}
 $doc.display('mapping', 'edit')
 )))
 
@@ -436,16 +457,16 @@ $xwiki.jsx.use('PhenoTips.PhenotypeMappingPreview')##
 (% class="clearfloats" %)((()))
 )))
 {{html clean=false wiki=false}}
-&lt;div class="hidden">
-  &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}"/>
+&lt;div class="hidden"&gt;
+  &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}"/&gt;
 #foreach ($p in $formParams.keySet())
-  &lt;input type="hidden" name="$p" value="$formParams.get($p)"/>
+  &lt;input type="hidden" name="$p" value="$formParams.get($p)"/&gt;
 #end
-&lt;/div>
-&lt;div class="buttons">
- &lt;input class="button" type="submit" name="${formSubmit}" value="Save patient form configuration"/>
-&lt;/div>
-&lt;/form>{{/html}}
+&lt;/div&gt;
+&lt;div class="buttons"&gt;
+ &lt;input class="button" type="submit" name="${formSubmit}" value="Save patient form configuration"/&gt;
+&lt;/div&gt;
+&lt;/form&gt;{{/html}}
 #else
 {{warning}}You don't have permission to access this configuration.{{/warning}}
 #end
@@ -459,13 +480,13 @@ $xwiki.jsx.use('PhenoTips.PhenotypeMappingPreview')##
     <guid>f932f5b4-9eb5-4334-9fdf-d92946a5d6c5</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -857,7 +878,7 @@ document.observe("xwiki:dom:loaded", function(){
 });</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>
@@ -873,13 +894,13 @@ document.observe("xwiki:dom:loaded", function(){
     <guid>8d49282c-87bb-4a60-a5ea-83a25d3c87fc</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -1102,7 +1123,7 @@ document.observe("xwiki:dom:loaded", function(){
 }</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>

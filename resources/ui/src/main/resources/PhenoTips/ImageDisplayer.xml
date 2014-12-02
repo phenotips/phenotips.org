@@ -1,20 +1,41 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>ImageDisplayer</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1323918579000</creationDate>
   <parent>PhenoTips.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1411434782000</date>
   <contentUpdateDate>1411434782000</contentUpdateDate>
-  <version>8.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:phenotips-widgets-ui-1.0-rc-1]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
@@ -75,7 +96,7 @@
 #end
 #set ($qString = "doc=$!escapetool.url($!{targetDoc.fullName})&amp;property=$!{property}&amp;classname=$!escapetool.url($!{object.xWikiClass.name})&amp;object=${object.number}")
 
-#if ($options.filter &amp;&amp; $options.filter.size() > 0)
+#if ($options.filter &amp;&amp; $options.filter.size() &gt; 0)
   #foreach($item in $options.filter)
     #set($options.rawfilter = "$!{options.rawfilter}, ${item}")
   #end
@@ -87,15 +108,15 @@
 #macro (__getExtension $filename)$!{filename.substring($mathtool.add($filename.lastIndexOf('.'), 1)).toLowerCase()}#end
 
 #macro (__displaySelectableAttachment $attachment $targetDocument $selection)
-  {{html wiki=true clean=false}}&lt;div class="attachment-item #if($options.isImage) image #else #__getExtension(${attachment.filename})#{end}#if($selection.contains(${attachment.filename})) selected#{end}">
-  &lt;label for='${fieldName}_${attachment.filename}' title='${attachment.filename}'>
-  {{html wiki=false clean=false}}&lt;input id='${fieldName}_${attachment.filename}' type='${options.inputType}' name='${fieldName}' value='${attachment.filename}'#if($selection.contains(${attachment.filename})) checked='checked'#{end}/>{{/html}}${attachment.filename} &lt;span class="size">(#dynamicsize($attachment.filesize))&lt;/span>&lt;/label>##
+  {{html wiki=true clean=false}}&lt;div class="attachment-item #if($options.isImage) image #else #__getExtension(${attachment.filename})#{end}#if($selection.contains(${attachment.filename})) selected#{end}"&gt;
+  &lt;label for='${fieldName}_${attachment.filename}' title='${attachment.filename}'&gt;
+  {{html wiki=false clean=false}}&lt;input id='${fieldName}_${attachment.filename}' type='${options.inputType}' name='${fieldName}' value='${attachment.filename}'#if($selection.contains(${attachment.filename})) checked='checked'#{end}/&gt;{{/html}}${attachment.filename} &lt;span class="size"&gt;(#dynamicsize($attachment.filesize))&lt;/span&gt;&lt;/label&gt;##
   #if ($options.manage)
-  &lt;a class='action delete fa fa-times-circle fa-lg fa-fw' href="$targetDocument.getAttachmentURL(${attachment.filename}, 'delattachment', "form_token=$!{services.csrf.getToken()}&amp;xredirect=$!{escapetool.url($doc.getURL($xcontext.action, $request.queryString))}")" title="Delete">&lt;/a>##
+  &lt;a class='action delete fa fa-times-circle fa-lg fa-fw' href="$targetDocument.getAttachmentURL(${attachment.filename}, 'delattachment', "form_token=$!{services.csrf.getToken()}&amp;xredirect=$!{escapetool.url($doc.getURL($xcontext.action, $request.queryString))}")" title="Delete"&gt;&lt;/a&gt;##
   #end
   #if($options.isImage)(% class="attachment-preview" %)((([[image:${targetDoc.fullName}@${attachment.filename}||title="${attachment.filename}"]])))#else##
- &lt;a class='view #if($options.manage)hidden#end' target="_blank" href="$targetDocument.getAttachmentURL(${attachment.filename})" title="Open $!{attachment.filename}"> [open]&lt;/a>#end##
-  &lt;/div>{{/html}}##
+ &lt;a class='view #if($options.manage)hidden#end' target="_blank" href="$targetDocument.getAttachmentURL(${attachment.filename})" title="Open $!{attachment.filename}"&gt; [open]&lt;/a&gt;#end##
+  &lt;/div&gt;{{/html}}##
 #end
 
 #macro (__displaySelectableAttachmentList $targetDocument $selection)
@@ -108,13 +129,13 @@
       #__displaySelectableAttachment($attachment $targetDocument $selection)
     #end
   #end
-  {{html wiki=false clean=false}}&lt;input type='hidden' name='${fieldName}' value=''/>{{/html}}##
+  {{html wiki=false clean=false}}&lt;input type='hidden' name='${fieldName}' value=''/&gt;{{/html}}##
   )))(% class="clear" %)((()))###
 #end
 
 #macro (__displayLastAttachmentSelected $targetDocument)
   #set ($sortedAttachments = $sorttool.sort($targetDocument.getAttachmentList(), 'date:desc') )
-  #if ($sortedAttachments.size() > 0)
+  #if ($sortedAttachments.size() &gt; 0)
     #set ($attachment = $sortedAttachments.get(0))
     #set ($extension = "#__getExtension($attachment.getFilename())")
     #if ($options.filter.size() == 0 || $options.filter.contains($extension))
@@ -125,19 +146,19 @@
 
 #macro (__displayUploadForm $targetDocument)
   {{html wiki=false clean=false}}
-  &lt;form action="$targetDocument.getURL('upload')" enctype="multipart/form-data" method="post" id="${fieldName}-upload2" class="upload-attachment xform">
-  &lt;div>
+  &lt;form action="$targetDocument.getURL('upload')" enctype="multipart/form-data" method="post" id="${fieldName}-upload2" class="upload-attachment xform"&gt;
+  &lt;div&gt;
     #if (${options.rawfilter} != '')
-      &lt;span class="xHint">Accepted file formats: ${options.rawfilter}&lt;/span>
+      &lt;span class="xHint"&gt;Accepted file formats: ${options.rawfilter}&lt;/span&gt;
     #end
-    &lt;input type="file" name="filepath" id="attachfile2" class="attachment" size="30" title="$!{escapetool.xml($options.rawfilter)}"/>
-    &lt;input type="hidden" name="filter" value="$!{escapetool.xml($options.html5Filter)}" />
-    &lt;input type="hidden" name="xredirect" value="$!{escapetool.xml($doc.getURL($xcontext.action, $request.queryString))}" />
-    &lt;input type="hidden" name="ajaxxredirect" value="$!{escapetool.xml($displayer.getURL('get', "$!{qString}&amp;xaction=lastatt" ))}" />
-    &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}" />
-    &lt;input type="submit" name="action_upload" class="button" value='Upload and select'  title='Upload and select'/>
-  &lt;/div>
-  &lt;/form>
+    &lt;input type="file" name="filepath" id="attachfile2" class="attachment" size="30" title="$!{escapetool.xml($options.rawfilter)}"/&gt;
+    &lt;input type="hidden" name="filter" value="$!{escapetool.xml($options.html5Filter)}" /&gt;
+    &lt;input type="hidden" name="xredirect" value="$!{escapetool.xml($doc.getURL($xcontext.action, $request.queryString))}" /&gt;
+    &lt;input type="hidden" name="ajaxxredirect" value="$!{escapetool.xml($displayer.getURL('get', "$!{qString}&amp;xaction=lastatt" ))}" /&gt;
+    &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}" /&gt;
+    &lt;input type="submit" name="action_upload" class="button" value='Upload and select'  title='Upload and select'/&gt;
+  &lt;/div&gt;
+  &lt;/form&gt;
   {{/html}}
 #end
 
@@ -180,7 +201,7 @@ $content
         #__displayUploadForm($targetDoc)
       #else
         #set ($actionURL = $displayer.getURL('view', "$!{qString}&amp;mode=edit&amp;manage=true"))
-        {{html wiki=false clean=false}}&lt;div class="actions">&lt;label class="create-button-label">+&lt;/label>&lt;span class="buttonwrapper">&lt;a class="add-data-button button manage-images-button" href="${actionURL}">Upload and manage&lt;/a>&lt;/span>&lt;/div>{{/html}}
+        {{html wiki=false clean=false}}&lt;div class="actions"&gt;&lt;label class="create-button-label"&gt;+&lt;/label&gt;&lt;span class="buttonwrapper"&gt;&lt;a class="add-data-button button manage-images-button" href="${actionURL}"&gt;Upload and manage&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;{{/html}}
       #end
       #__displaySelectableAttachmentList($targetDoc $propValue)
       )))
@@ -197,13 +218,13 @@ $content
     <guid>92c4c790-a961-4909-a1e5-ec02c0cf2e85</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -485,7 +506,7 @@ $content
     }
   });
 
-  var loading = new Element('div', {'class' : 'imgcenter'}).update("&lt;img src=\"$xwiki.getSkinFile('icons/xwiki/ajax-loader-large.gif')\"/>");
+  var loading = new Element('div', {'class' : 'imgcenter'}).update("&lt;img src=\"$xwiki.getSkinFile('icons/xwiki/ajax-loader-large.gif')\"/&gt;");
   var dialog;
 
   /* Hook onto the picker buttons so that the gallery is loaded via AJAX in a modal dialog. */
@@ -524,7 +545,7 @@ $content
             if (window.gallery_lb) {
               window.gallery_lb.updateImageList();
             }
-            // Manually convert the special rel values into target attributes for the newly inserted content (rel="_something" => target="something")
+            // Manually convert the special rel values into target attributes for the newly inserted content (rel="_something" =&gt; target="something")
             if (typeof (XWiki.fixLinksTargetAttribute) == 'function') {
               // Trick the function into updating link targets in inline mode; normally the conversion only takes place in view mode
               var __tmp = XWiki.contextaction;
@@ -575,13 +596,13 @@ $content
     <guid>71632e63-756b-45e6-94bc-6b81867954b3</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -809,7 +830,7 @@ $content
       }
 
       // little test for filesize
-      if (lFile.size > this.options.maxFilesize) {
+      if (lFile.size &gt; this.options.maxFilesize) {
         this.MESSAGE_CONTAINER.update(this.UPLOAD_SIZE_MESSAGE);
         this.fileIsValid = false;
         return;
@@ -902,9 +923,9 @@ $content
 
       // update speed info
       var iSpeed = iDiff.toString() + 'B/s';
-      if (iDiff > 1024 * 1024) {
+      if (iDiff &gt; 1024 * 1024) {
         iSpeed = (Math.round(iDiff * 100/(1024*1024))/100).toString() + 'MB/s';
-      } else if (iDiff > 1024) {
+      } else if (iDiff &gt; 1024) {
         iSpeed =  (Math.round(iDiff * 100/1024)/100).toString() + 'KB/s';
       }
       this.PROGRESS_SPEED.update(iSpeed);
@@ -991,13 +1012,13 @@ $content
     <guid>138649f5-23c9-4416-884f-37b72d3b2309</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -1189,13 +1210,13 @@ $content
     <guid>a716b014-bd8a-43c3-b18c-38f84a651e81</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>

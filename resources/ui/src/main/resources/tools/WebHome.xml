@@ -1,34 +1,55 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>tools</web>
   <name>WebHome</name>
-  <language />
-  <defaultLanguage>en</defaultLanguage>
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1348075979000</creationDate>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1414171201000</date>
   <contentUpdateDate>1414171155000</contentUpdateDate>
-  <version>2.1</version>
+  <version>1.1</version>
   <title>Tools</title>
-  <comment>Imported from XAR</comment>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>false</hidden>
-  <content>{{velocity}}&#xd;
-$xwiki.ssx.use('PhenoTips.Widgets', {'colorTheme' : "$xwiki.getSpacePreference('colorTheme')"})##&#xd;
-$xwiki.jsx.use('PhenoTips.Widgets')##&#xd;
-$xwiki.ssx.use('PhenoTips.PatientSheetCode', {'colorTheme' : "$xwiki.getSpacePreference('colorTheme')"})##&#xd;
-$xwiki.jsx.use('PhenoTips.Widgets')##&#xd;
-$xwiki.jsx.use('tools.WebHome')##&#xd;
-{{/velocity}}&#xd;
-&#xd;
-== Quick phenotype search ==&#xd;
-{{html}}&#xd;
-&lt;input type="text" id="quick-phenotype-search" size="16" value="Enter keywords and choose among suggested ontology terms" class="suggested multi suggest-hpo quickSearch withTip" name="PhenoTips.PatientClass_0_phenotype__suggested" autocomplete="off">&#xd;
-{{/html}}&#xd;
+  <content>{{velocity}}
+$xwiki.ssx.use('PhenoTips.Widgets', {'colorTheme' : "$xwiki.getSpacePreference('colorTheme')"})##
+$xwiki.jsx.use('PhenoTips.Widgets')##
+$xwiki.ssx.use('PhenoTips.PatientSheetCode', {'colorTheme' : "$xwiki.getSpacePreference('colorTheme')"})##
+$xwiki.jsx.use('PhenoTips.Widgets')##
+$xwiki.jsx.use('tools.WebHome')##
+{{/velocity}}
+
+== Quick phenotype search ==
+{{html}}
+&lt;input type="text" id="quick-phenotype-search" size="16" value="Enter keywords and choose among suggested ontology terms" class="suggested multi suggest-hpo quickSearch withTip" name="PhenoTips.PatientClass_0_phenotype__suggested" autocomplete="off"&gt;
+{{/html}}
 </content>
   <object>
     <name>tools.WebHome</name>
@@ -37,13 +58,13 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
     <guid>8ff5a9a3-fafc-47a9-8772-63bcc9e6a0ef</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -110,92 +131,92 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
       <cache>forbid</cache>
     </property>
     <property>
-      <code>document.observe("xwiki:dom:loaded", function() {&#xd;
-       var suggestionsMapping = {&#xd;
-        "hpo" : {&#xd;
-            script: "$xwiki.getURL('PhenoTips.SolrService', 'get')?",&#xd;
-            queryProcessor: typeof(PhenoTips.widgets.SolrQueryProcessor) == "undefined" ? null : new PhenoTips.widgets.SolrQueryProcessor({&#xd;
-                           'name' : { 'stub': true, 'boost': 1500 },&#xd;
-                           'synonym' : { 'stub': true, 'boost': 1 },&#xd;
-                           'is_a' : { 'stub': true},&#xd;
-                           'text' : { 'stub': true, 'default': true },&#xd;
-                           'id' : {'activationRegex' : 'HP:[0-9]+', 'stub': true, 'boost' : 50}&#xd;
-                         }, {&#xd;
-                           'term_category': ['HP:0000118']&#xd;
-                         }),&#xd;
-            varname: "q",&#xd;
-            noresults: "No matching terms",&#xd;
-            json: true,&#xd;
-            resultsParameter : "rows",&#xd;
-            resultId : "id",&#xd;
-            resultValue : "name",&#xd;
-            resultCategory : "term_category",&#xd;
-            resultInfo : {&#xd;
-		 "Browse related terms..." : {"extern" : true,&#xd;
-		                              "processor" : function(trigger) {&#xd;
-							      trigger._obrowser = new PhenoTips.widgets.OntologyBrowser(this, null);&#xd;
-							      trigger.observe('click', function(event){&#xd;
-								event.stop();&#xd;
-								event.element()._obrowser.show(&#xd;
-								  event.element().up('.suggestItem').down('.suggestId').firstChild.nodeValue&#xd;
-								);&#xd;
-							      }.bindAsEventListener(this));&#xd;
-							    }&#xd;
-			                      }&#xd;
-                         },&#xd;
-            enableHierarchy: true,&#xd;
-            resultParent : "is_a",&#xd;
-            fadeOnClear : false,&#xd;
-            timeout : 30000,&#xd;
-            parentContainer : null&#xd;
-        }&#xd;
-      };&#xd;
-      var pickerSpecialClassOptions = {&#xd;
-      'quickSearch' : {&#xd;
-                  'showKey' : true,&#xd;
-                  'showTooltip' : false,&#xd;
-                  'showDeleteTool' : true,&#xd;
-                  'enableSort' : false,&#xd;
-                  'showClearTool' : true,&#xd;
-                  'inputType': 'checkbox',&#xd;
-                  'listInsertionElt' : $('quick-phenotype-search'),&#xd;
-                  'listInsertionPosition' : 'after',&#xd;
-                  'silent' : true&#xd;
-      }&#xd;
-    }&#xd;
-    // -----------------------------------------------------------------&#xd;
-    // Create and attach the suggests&#xd;
-    // -----------------------------------------------------------------&#xd;
-    if (typeof(PhenoTips.widgets.Suggest) != "undefined") {&#xd;
-      var keys = Object.keys(suggestionsMapping);&#xd;
-      var specialClasses = Object.keys(pickerSpecialClassOptions);&#xd;
-      for (var i = 0; i &lt; keys.length; i++) {&#xd;
-        var selector = 'input.suggest-' + keys[i];&#xd;
-        $$(selector).each(function(item) {&#xd;
-          if (!item.hasClassName('initialized')) {&#xd;
-            item._customOptions = Object.clone(suggestionsMapping[keys[i]]);&#xd;
-            // Create the Suggest.&#xd;
-            item._suggest = new PhenoTips.widgets.Suggest(item, item._customOptions);&#xd;
-            if (item.hasClassName('multi') &amp;&amp; typeof(PhenoTips.widgets.SuggestPicker) != "undefined") {&#xd;
-              var multiSuggestOptions = {};&#xd;
-              for (var j = 0; j &lt; specialClasses.length; j++) {&#xd;
-                if (item.hasClassName(specialClasses[j])) {&#xd;
-                  multiSuggestOptions = pickerSpecialClassOptions[specialClasses[j]];&#xd;
-                  break;&#xd;
-                }&#xd;
-              }&#xd;
-              var suggestPicker = new PhenoTips.widgets.SuggestPicker(item, item._suggest, multiSuggestOptions);&#xd;
-              item._suggestPicker = suggestPicker; &#xd;
-            }&#xd;
-            item.addClassName('initialized');&#xd;
-          }&#xd;
-        });&#xd;
-      }&#xd;
-    }&#xd;
+      <code>document.observe("xwiki:dom:loaded", function() {
+       var suggestionsMapping = {
+        "hpo" : {
+            script: "$xwiki.getURL('PhenoTips.SolrService', 'get')?",
+            queryProcessor: typeof(PhenoTips.widgets.SolrQueryProcessor) == "undefined" ? null : new PhenoTips.widgets.SolrQueryProcessor({
+                           'name' : { 'stub': true, 'boost': 1500 },
+                           'synonym' : { 'stub': true, 'boost': 1 },
+                           'is_a' : { 'stub': true},
+                           'text' : { 'stub': true, 'default': true },
+                           'id' : {'activationRegex' : 'HP:[0-9]+', 'stub': true, 'boost' : 50}
+                         }, {
+                           'term_category': ['HP:0000118']
+                         }),
+            varname: "q",
+            noresults: "No matching terms",
+            json: true,
+            resultsParameter : "rows",
+            resultId : "id",
+            resultValue : "name",
+            resultCategory : "term_category",
+            resultInfo : {
+		 "Browse related terms..." : {"extern" : true,
+		                              "processor" : function(trigger) {
+							      trigger._obrowser = new PhenoTips.widgets.OntologyBrowser(this, null);
+							      trigger.observe('click', function(event){
+								event.stop();
+								event.element()._obrowser.show(
+								  event.element().up('.suggestItem').down('.suggestId').firstChild.nodeValue
+								);
+							      }.bindAsEventListener(this));
+							    }
+			                      }
+                         },
+            enableHierarchy: true,
+            resultParent : "is_a",
+            fadeOnClear : false,
+            timeout : 30000,
+            parentContainer : null
+        }
+      };
+      var pickerSpecialClassOptions = {
+      'quickSearch' : {
+                  'showKey' : true,
+                  'showTooltip' : false,
+                  'showDeleteTool' : true,
+                  'enableSort' : false,
+                  'showClearTool' : true,
+                  'inputType': 'checkbox',
+                  'listInsertionElt' : $('quick-phenotype-search'),
+                  'listInsertionPosition' : 'after',
+                  'silent' : true
+      }
+    }
+    // -----------------------------------------------------------------
+    // Create and attach the suggests
+    // -----------------------------------------------------------------
+    if (typeof(PhenoTips.widgets.Suggest) != "undefined") {
+      var keys = Object.keys(suggestionsMapping);
+      var specialClasses = Object.keys(pickerSpecialClassOptions);
+      for (var i = 0; i &lt; keys.length; i++) {
+        var selector = 'input.suggest-' + keys[i];
+        $$(selector).each(function(item) {
+          if (!item.hasClassName('initialized')) {
+            item._customOptions = Object.clone(suggestionsMapping[keys[i]]);
+            // Create the Suggest.
+            item._suggest = new PhenoTips.widgets.Suggest(item, item._customOptions);
+            if (item.hasClassName('multi') &amp;&amp; typeof(PhenoTips.widgets.SuggestPicker) != "undefined") {
+              var multiSuggestOptions = {};
+              for (var j = 0; j &lt; specialClasses.length; j++) {
+                if (item.hasClassName(specialClasses[j])) {
+                  multiSuggestOptions = pickerSpecialClassOptions[specialClasses[j]];
+                  break;
+                }
+              }
+              var suggestPicker = new PhenoTips.widgets.SuggestPicker(item, item._suggest, multiSuggestOptions);
+              item._suggestPicker = suggestPicker; 
+            }
+            item.addClassName('initialized');
+          }
+        });
+      }
+    }
 });</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
       <parse>1</parse>
@@ -211,13 +232,13 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
     <guid>948a6027-0f45-47c0-9f7a-00a9de4d7077</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -284,24 +305,24 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
       <cache>long</cache>
     </property>
     <property>
-      <code>#quick-phenotype-search {&#xd;
-  opacity: 0.5;&#xd;
-}&#xd;
-#quick-phenotype-search:focus {&#xd;
-  opacity: 1;&#xd;
-}&#xd;
-.delete-tool {&#xd;
-  text-shadow: black 0 0 !important;&#xd;
-}&#xd;
-.accepted-suggestions input {&#xd;
-  vertical-align: middle;&#xd;
+      <code>#quick-phenotype-search {
+  opacity: 0.5;
+}
+#quick-phenotype-search:focus {
+  opacity: 1;
+}
+.delete-tool {
+  text-shadow: black 0 0 !important;
+}
+.accepted-suggestions input {
+  vertical-align: middle;
 }</code>
     </property>
     <property>
-      <name></name>
+      <name/>
     </property>
     <property>
-      <parse />
+      <parse/>
     </property>
     <property>
       <use>currentPage</use>
@@ -314,15 +335,15 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
     <guid>c541b3cc-0e63-4fa4-8bf7-198b8e7ca27b</guid>
     <class>
       <name>XWiki.XWikiRights</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <allow>
-        <customDisplay />
+        <customDisplay/>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
@@ -331,13 +352,13 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
         <number>4</number>
         <prettyName>Allow/Deny</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </allow>
       <groups>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -347,18 +368,18 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
         <prettyName>Groups</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>5</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
         <usesList>0</usesList>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.GroupsClass</classType>
       </groups>
       <levels>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>1</multiSelect>
@@ -372,13 +393,13 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
         <size>3</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.LevelsClass</classType>
       </levels>
       <users>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -388,13 +409,13 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
         <prettyName>Users</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>5</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
         <usesList>0</usesList>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.UsersClass</classType>
       </users>
     </class>
@@ -408,7 +429,7 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
       <levels>view</levels>
     </property>
     <property>
-      <users></users>
+      <users/>
     </property>
   </object>
   <object>
@@ -418,15 +439,15 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
     <guid>a9ce9235-1b5c-4962-aed8-62c9768f3da3</guid>
     <class>
       <name>XWiki.XWikiRights</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <allow>
-        <customDisplay />
+        <customDisplay/>
         <defaultValue>1</defaultValue>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
@@ -435,13 +456,13 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
         <number>4</number>
         <prettyName>Allow/Deny</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </allow>
       <groups>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -451,18 +472,18 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
         <prettyName>Groups</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>5</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
         <usesList>0</usesList>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.GroupsClass</classType>
       </groups>
       <levels>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <multiSelect>1</multiSelect>
@@ -476,13 +497,13 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
         <size>3</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.LevelsClass</classType>
       </levels>
       <users>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>1</multiSelect>
@@ -492,13 +513,13 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
         <prettyName>Users</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators />
+        <separators/>
         <size>5</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
         <usesList>0</usesList>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.UsersClass</classType>
       </users>
     </class>
@@ -506,7 +527,7 @@ $xwiki.jsx.use('tools.WebHome')##&#xd;
       <allow>1</allow>
     </property>
     <property>
-      <groups></groups>
+      <groups/>
     </property>
     <property>
       <levels>view</levels>

@@ -1,24 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>PhenoTips</web>
   <name>Widgets</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1323127778000</creationDate>
   <parent>PhenoTips.WebHome</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1411434783000</date>
   <contentUpdateDate>1411434783000</contentUpdateDate>
-  <version>11.1</version>
-  <title />
-  <comment>Install extensoin [org.phenotips:phenotips-widgets-ui-1.0-rc-1]</comment>
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <object>
     <name>PhenoTips.Widgets</name>
     <number>0</number>
@@ -26,13 +47,13 @@
     <guid>0e1a6de2-6050-432f-a39f-656bb3b90163</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -205,7 +226,7 @@
 
     // Clone default options from the prototype so that they are not shared and extend options with passed parameters
     this.options = Object.extend(Object.clone(this.options), param || { });
-    if (typeof this.options.sources == 'object' &amp;&amp; this.options.sources.length > 1) {
+    if (typeof this.options.sources == 'object' &amp;&amp; this.options.sources.length &gt; 1) {
       // We are in multi-sources mode
       this.sources = this.options.sources;
     } else {
@@ -284,7 +305,7 @@
         if(this.seps) {
           var lastIndx = -1;
           for(var i = 0; i &lt; this.seps.length; i++) {
-            if(this.fld.value.lastIndexOf(this.seps.charAt(i)) > lastIndx) {
+            if(this.fld.value.lastIndexOf(this.seps.charAt(i)) &gt; lastIndx) {
               lastIndx = this.fld.value.lastIndexOf(this.seps.charAt(i));
             }
           }
@@ -365,7 +386,7 @@
     // if caching enabled, and user is typing (ie. length of input is increasing)
     // filter results out of aSuggestions from last request
     //
-    if (val.length>this.nInputChars &amp;&amp; this.aSuggestions.length &amp;&amp; this.options.cache)
+    if (val.length&gt;this.nInputChars &amp;&amp; this.aSuggestions.length &amp;&amp; this.options.cache)
     {
       var arr = [];
       for (var i=0;i&lt;this.aSuggestions.length;i++) {
@@ -585,7 +606,7 @@
         var nameMatchScore = this.computeSimilarity(name, this.sInput);
         for (var k = 0; k &lt; altNames.length; ++k) {
            var altNameMatchScore = this.computeSimilarity(altNames[k], this.sInput);
-           if (altNameMatchScore > nameMatchScore) {
+           if (altNameMatchScore &gt; nameMatchScore) {
              bestNameMatch = altNames[k];
              nameMatchScore = altNameMatchScore;
            }
@@ -635,7 +656,7 @@
       }
 
       //update max possible if available
-      if (d[i][0] > maxSoFar) {
+      if (d[i][0] &gt; maxSoFar) {
         maxSoFar = d[i][0];
       }
     }
@@ -651,7 +672,7 @@
       }
 
       //update max possible if available
-      if (d[0][j] > maxSoFar) {
+      if (d[0][j] &gt; maxSoFar) {
         maxSoFar = d[0][j];
       }
     }
@@ -665,7 +686,7 @@
         // find lowest cost at point from three possible
         d[i][j] = Math.max(0,d[i - 1][j] - gapCost,d[i][j - 1] - gapCost,d[i - 1][j - 1] + score);
         //update max possible if available
-        if (d[i][j] > maxSoFar) {
+        if (d[i][j] &gt; maxSoFar) {
           maxSoFar = d[i][j];
         }
       }
@@ -745,7 +766,7 @@
       });
     }
 
-    if (this.sources.length > 1) {
+    if (this.sources.length &gt; 1) {
       // If we are in multi-source mode, we need to prepare a sub-container for each of the suggestion source
       for (var i=0;i&lt;this.sources.length;i++) {
 
@@ -847,9 +868,9 @@
 
     // create holding div
     //
-    if (this.sources.length > 1) {
+    if (this.sources.length &gt; 1) {
       var div = this.resultContainer.down(".results" + source.id);
-      if (arr.length > 0 || this.options.shownoresults) {
+      if (arr.length &gt; 0 || this.options.shownoresults) {
         div.down('.sourceContent').removeClassName('loading');
         this.resultContainer.down(".results" + source.id).removeClassName("hidden loading");
       }
@@ -883,7 +904,7 @@
 
     // remove list after an interval
     var pointer = this;
-    if (this.options.timeout > 0) {
+    if (this.options.timeout &gt; 0) {
       this.toID = setTimeout(function () { pointer.clearSuggestions() }, this.options.timeout);
     }
   },
@@ -993,7 +1014,7 @@
       // We iterate over each fragments, and try to find one or several matches in this suggestion
       // item display value.
       var index = output.toLowerCase().indexOf(fragments[j].toLowerCase());
-      while (index >= 0) {
+      while (index &gt;= 0) {
         // As long as we have matches, we store their index and replace them in the output string with the space char
         // so that they don't get matched for ever.
         // Note that the space char is the only one safe to use, as it cannot be part of a fragment.
@@ -1014,7 +1035,7 @@
       var before = output.substring(0, parseInt(key) + offset);
       var after = output.substring(parseInt(key) + matches[key].length + offset);
       // Emphasize the match in the output string that will be displayed
-      output = before + "&lt;em>" + matches[key] + "&lt;/em>" + after;
+      output = before + "&lt;em&gt;" + matches[key] + "&lt;/em&gt;" + after;
       // Increase the offset by 9, which correspond to the number of chars in the opening and closing "em" tags
       // we have introduced for this match in the output String
       offset += 9;
@@ -1080,7 +1101,7 @@
         }
       }
       else if (key == Event.KEY_UP)
-        if (list.select('li') > 0) {
+        if (list.select('li') &gt; 0) {
           elem = list.select('li')[list.select('li').length - 1];
         }
     }
@@ -1146,7 +1167,7 @@
         if(this.seps) {
            var lastIndx = -1;
            for(var i = 0; i &lt; this.seps.length; i++)
-             if(this.fld.value.lastIndexOf(this.seps.charAt(i)) > lastIndx)
+             if(this.fld.value.lastIndexOf(this.seps.charAt(i)) &gt; lastIndx)
                lastIndx = this.fld.value.lastIndexOf(this.seps.charAt(i));
             if(lastIndx == -1)
               selection = newFieldValue = this.iHighlighted.down(".suggestValue").innerHTML;
@@ -1188,7 +1209,7 @@
         }
 
         //there is a hidden input
-        if(this.fld.id.indexOf("_suggest") > 0) {
+        if(this.fld.id.indexOf("_suggest") &gt; 0) {
           var hidden_id = this.fld.id.substring(0, this.fld.id.indexOf("_suggest"));
           var hidden_inp = $(hidden_id);
           if (hidden_inp) {
@@ -1264,13 +1285,13 @@
     <guid>d12911da-ec96-4e6b-bee9-8e6a5673edf8</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -1414,8 +1435,8 @@
       }
       section = section.up('.collapsed:not(.force-collapse)');
     }
-    if (element.viewportOffset().top > this.input.viewportOffset().top) {
-      if (element.viewportOffset().top > document.viewport.getHeight()) {
+    if (element.viewportOffset().top &gt; this.input.viewportOffset().top) {
+      if (element.viewportOffset().top &gt; document.viewport.getHeight()) {
         if (element.viewportOffset().top - this.input.viewportOffset().top &lt; document.viewport.getHeight()) {
           this.input.scrollTo();
         } else {
@@ -1508,13 +1529,13 @@
 
   updateListTools : function () {
     if (this.clearTool) {
-      if (this.list.select('li .accepted-suggestion').length > 0) {
+      if (this.list.select('li .accepted-suggestion').length &gt; 0) {
         this.clearTool.removeClassName('invisible');
       } else {
         this.clearTool.addClassName('invisible');
       }
     }
-    if (this.options.enableSort &amp;&amp; this.list.select('li .accepted-suggestion').length > 0 &amp;&amp; typeof(Sortable) != "undefined") {
+    if (this.options.enableSort &amp;&amp; this.list.select('li .accepted-suggestion').length &gt; 0 &amp;&amp; typeof(Sortable) != "undefined") {
       Sortable.create(this.list);
     }
     if (this.serializedDataInput) {
@@ -1605,13 +1626,13 @@
     <guid>8671764c-5e4b-4641-a1ae-0a77d30d8009</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2005,13 +2026,13 @@ return PhenoTips;
     <guid>d536b27d-9de4-4d3d-9bc8-e458d3274c16</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2211,13 +2232,13 @@ return PhenoTips;
     <guid>984c7b53-5644-489c-8ddc-ef51a196254a</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2807,13 +2828,13 @@ return PhenoTips;
     <guid>62a03919-3321-48ca-ae5a-b748ca291f63</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -2945,13 +2966,13 @@ return PhenoTips;
     <guid>1cc2a76f-aca1-4bfa-a468-3a599799c13c</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -3045,7 +3066,7 @@ return PhenoTips;
     },
 
     resetPosition : function() {
-      if (!this.options.isSticky(this.stickyElement) || this.stickyElement.getHeight() >= this.stickyAreaElement.getHeight()) {
+      if (!this.options.isSticky(this.stickyElement) || this.stickyElement.getHeight() &gt;= this.stickyAreaElement.getHeight()) {
         return;
       }
       this.stickyElement.style.height = '';
@@ -3068,18 +3089,18 @@ return PhenoTips;
       var relativeContentPosition = this.stickyAreaElement.viewportOffset().top;
       this.direction = 0;
       if (this.stickyAreaElement._prevPosition) {
-        if (this.stickyAreaElement._prevPosition > relativeContentPosition) {
+        if (this.stickyAreaElement._prevPosition &gt; relativeContentPosition) {
           this.direction = 1;
         } else if (this.stickyAreaElement._prevPosition &lt; relativeContentPosition) {
           this.direction = -1;
         }
       }
       if ((this.options.isSticky(this.stickyElement) || this.direction == 1) &amp;&amp;
-        document.viewport.getScrollOffsets().top >= this.boxMinTop &amp;&amp;
+        document.viewport.getScrollOffsets().top &gt;= this.boxMinTop &amp;&amp;
         document.viewport.getScrollOffsets().top &lt; this.boxMaxTop) {
         this.makeFixed();
       } else if ((this.options.isSticky(this.stickyElement) || this.direction == -1) &amp;&amp;
-        document.viewport.getScrollOffsets().top >= this.boxMaxTop) {
+        document.viewport.getScrollOffsets().top &gt;= this.boxMaxTop) {
         this.makeAbsolute();
       } else {
         this.makeDefault();
@@ -3150,13 +3171,13 @@ return PhenoTips;
     <guid>576a48e8-6707-4310-941b-0abb9e532d23</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -3364,13 +3385,13 @@ document.observe("xwiki:dom:loaded", function() {
     <guid>a81251a5-7e93-4dda-b851-c37f4841d346</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -3506,13 +3527,13 @@ document.observe("xwiki:dom:loaded", function() {
     <guid>ce0e1cc4-d0b1-4bf0-9815-444160042fd0</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -3762,13 +3783,13 @@ document.observe("xwiki:dom:loaded", function() {
     <guid>34bc814b-fee0-4738-bc6d-b5803a08a0dc</guid>
     <class>
       <name>XWiki.JavaScriptExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -3862,7 +3883,7 @@ document.observe("xwiki:dom:loaded", function() {
                                        .insert(' ')
                                        .insert(elt('span', 'value').update(json.label))
                   );
-          json.def &amp;&amp; c.insert(elt('p').update(json.def.replace(/\s*\n\s*/, ' ').replace(/`([^`]+)`\s+\(([A-Z]+:[0-9]+)`?\)/g, '&lt;em title="$2">$1&lt;/em>')));
+          json.def &amp;&amp; c.insert(elt('p').update(json.def.replace(/\s*\n\s*/, ' ').replace(/`([^`]+)`\s+\(([A-Z]+:[0-9]+)`?\)/g, '&lt;em title="$2"&gt;$1&lt;/em&gt;')));
 
           var labels = {'synonym' : 'Also known as', 'is_a' : 'Is a type of'};
           var advancedInfo = elt('dl');
@@ -3911,7 +3932,7 @@ document.observe("xwiki:dom:loaded", function() {
                                        .insert(' ')
                                        .insert(elt('span', 'value').update(json.label))
                   );
-          json.def &amp;&amp; c.insert(elt('p').update(json.def.replace(/\s*\n\s*/, ' ').replace(/`([^`]+)`\s+\(([A-Z]+:[0-9]+)`?\)/g, '&lt;em title="$2">$1&lt;/em>')));
+          json.def &amp;&amp; c.insert(elt('p').update(json.def.replace(/\s*\n\s*/, ' ').replace(/`([^`]+)`\s+\(([A-Z]+:[0-9]+)`?\)/g, '&lt;em title="$2"&gt;$1&lt;/em&gt;')));
         }
       },
       'omim-disease-info' : {
@@ -3932,7 +3953,7 @@ document.observe("xwiki:dom:loaded", function() {
           var labels = {'label' : '', 'symptoms' : 'This disorder is typically characterized by', 'not_symptoms' : 'This disorder does not typically cause'};
           var advancedInfo = elt('dl');
           for (var l in labels) {
-            if (json[l] &amp;&amp; json[l].length > 0) {
+            if (json[l] &amp;&amp; json[l].length &gt; 0) {
               advancedInfo.insert(elt('dt', '', labels[l]));
               json[l].each(function (item) {
                 advancedInfo.insert(elt('dd', '', item.label || item));
@@ -3968,7 +3989,7 @@ document.observe("xwiki:dom:loaded", function() {
           var labels = {'alias_symbol' : 'Aliases', 'gene_family' : 'Gene family'};
           var advancedInfo = elt('dl');
           for (var l in labels) {
-            if (json[l] &amp;&amp; json[l].length > 0) {
+            if (json[l] &amp;&amp; json[l].length &gt; 0) {
               advancedInfo.insert(elt('dt', '', labels[l]));
               json[l].each(function (item) {
                 advancedInfo.insert(elt('dd', '', item.label || item));
@@ -4144,13 +4165,13 @@ document.observe("xwiki:dom:loaded", function() {
     <guid>3adf8acf-b6e8-4d05-a382-fa56ee969cf9</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -4304,13 +4325,13 @@ document.observe("xwiki:dom:loaded", function() {
     <guid>95d4225b-2cf1-4680-9922-a2d82e238ffe</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -4626,13 +4647,13 @@ div.resultContainer div.sourceContent.loading {
     <guid>64464fe6-5214-4cab-b03d-ba1892d3bb2c</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -4781,13 +4802,13 @@ div.resultContainer div.sourceContent.loading {
     <guid>8b79ea53-be8b-4d5e-a725-4d60224414b7</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -4893,19 +4914,19 @@ div.resultContainer div.sourceContent.loading {
   opacity: .4;
   font-size: .8em;
 }
-.ontology-tree .root>.entry-data .value {
+.ontology-tree .root&gt;.entry-data .value {
   font-weight: bold;
 }
-.ontology-tree .root>.descendents {
+.ontology-tree .root&gt;.descendents {
   margin-left: 2.4em;
 }
-.ontology-tree .no-root>.descendents {
+.ontology-tree .no-root&gt;.descendents {
   margin: 0 0;
 }
 .ontology-tree .no-root:before {
   display: none;
 }
-.ontology-tree .root>.empty {
+.ontology-tree .root&gt;.empty {
   margin-left: 3.8em;
 }
 .ontology-tree .descendents li {
@@ -4940,10 +4961,10 @@ div.resultContainer div.sourceContent.loading {
   background: $theme.highlightColor;
 }
 
-.ontology-tree .accepted >.entry-data {
+.ontology-tree .accepted &gt;.entry-data {
   background-color: $theme.backgroundSecondaryColor;
 }
-.ontology-tree .accepted >.entry-data .info .value {
+.ontology-tree .accepted &gt;.entry-data .info .value {
   font-weight: bold;
 }
 
@@ -5010,13 +5031,13 @@ div.resultContainer div.sourceContent.loading {
     <guid>a629e713-040b-4000-b42e-4b34bb397448</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -5103,7 +5124,7 @@ div.resultContainer div.sourceContent.loading {
   line-height: 1.4em;
   padding-right: 1.1em;
 }
-.dropdown .ontology-tree .entry-data>.info .key {
+.dropdown .ontology-tree .entry-data&gt;.info .key {
   display: none;
 }
 .term-label .expand-tool {
@@ -5131,13 +5152,13 @@ div.resultContainer div.sourceContent.loading {
     <guid>6a32e24f-34dd-4972-b5da-305be3db4027</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -5228,13 +5249,13 @@ input.xwiki-free-multiselect-value {
     <guid>db98aaff-6646-4778-8d05-160724bac290</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>
@@ -5324,13 +5345,13 @@ input.xwiki-free-multiselect-value {
     <guid>00ed2265-5601-43d6-94b9-c1cab4eaae52</guid>
     <class>
       <name>XWiki.StyleSheetExtension</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <cache>
         <cache>0</cache>
         <disabled>0</disabled>

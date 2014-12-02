@@ -1,24 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
 <xwikidoc version="1.1">
   <web>IRC</web>
   <name>IRCConfiguration</name>
-  <language />
-  <defaultLanguage />
+  <language/>
+  <defaultLanguage/>
   <translation>0</translation>
-  <creator>XWiki.Admin</creator>
+  <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1365182959000</creationDate>
   <parent>IRC.IRCBot</parent>
-  <author>XWiki.sdumitriu</author>
-  <contentAuthor>XWiki.sdumitriu</contentAuthor>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1372347311000</date>
   <contentUpdateDate>1372347293000</contentUpdateDate>
-  <version>15.1</version>
-  <title />
-  <comment />
+  <version>1.1</version>
+  <title/>
+  <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content />
+  <content/>
   <object>
     <name>IRC.IRCConfiguration</name>
     <number>0</number>
@@ -26,25 +47,25 @@
     <guid>0efac5df-a4aa-47d9-99a5-0624d7a6fd35</guid>
     <class>
       <name>IRC.BrokenLinkClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <inactive>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>inactive</name>
         <number>1</number>
         <prettyName>Inactive</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </inactive>
     </class>
@@ -59,15 +80,15 @@
     <guid>f503ecf2-a10b-439d-ab31-858a3033254e</guid>
     <class>
       <name>IRC.DocumentModifiedClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <pattern>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>pattern</name>
@@ -77,8 +98,8 @@
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </pattern>
     </class>
@@ -93,15 +114,15 @@
     <guid>504c4655-9a5e-4611-9a37-628b9c2ac270</guid>
     <class>
       <name>IRC.DocumentModifiedClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <pattern>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>pattern</name>
@@ -111,8 +132,8 @@
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </pattern>
     </class>
@@ -127,15 +148,15 @@
     <guid>6d5e0b08-c733-45b1-aacf-33e36190b79b</guid>
     <class>
       <name>IRC.DocumentModifiedClass</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <pattern>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>pattern</name>
@@ -145,8 +166,8 @@
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </pattern>
     </class>
@@ -161,15 +182,15 @@
     <guid>a25f7fa6-02eb-404c-80b1-2a2abfc4c21b</guid>
     <class>
       <name>IRC.IRCBot</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <botname>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>botname</name>
         <number>1</number>
@@ -177,12 +198,12 @@
         <prettyName>Bot Name</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </botname>
       <channel>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>channel</name>
         <number>3</number>
@@ -190,27 +211,27 @@
         <prettyName>Channel</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </channel>
       <inactive>
-        <customDisplay />
-        <defaultValue />
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
-        <displayType />
+        <displayType/>
         <name>inactive</name>
         <number>5</number>
         <prettyName>Inactive</prettyName>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </inactive>
       <password>
-        <algorithm />
-        <customDisplay />
+        <algorithm/>
+        <customDisplay/>
         <disabled>0</disabled>
         <name>password</name>
         <number>4</number>
@@ -219,12 +240,12 @@
         <size>30</size>
         <storageType>Clear</storageType>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.PasswordClass</classType>
       </password>
       <server>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <name>server</name>
         <number>2</number>
@@ -232,8 +253,8 @@
         <prettyName>Server</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </server>
     </class>
@@ -260,15 +281,15 @@
     <guid>bfc1d12f-7bfe-4b2b-96a9-a99d97ff3cbf</guid>
     <class>
       <name>IRC.LoggingBotListener</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <page>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>---</editor>
         <name>page</name>
@@ -278,30 +299,30 @@
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </page>
     </class>
     <property>
-      <page>{{velocity}}&#xd;
-#set ($irccontext = $services.ircbot.context)&#xd;
-#set ($date = $datetool.get('yyyyMMdd'))&#xd;
-#if ("$!irccontext" != "")&#xd;
-  #set ($channel = "$!irccontext.channel.name")&#xd;
-  #if ("$!channel" == "")&#xd;
-    #set ($channelNameIterator = $!irccontext.bot.channelsNames.iterator())&#xd;
-    #if ($channelNameIterator.hasNext())&#xd;
-      #set ($channel = "$channelNameIterator.next()")&#xd;
-    #else&#xd;
-      #set ($channel = '')&#xd;
-    #end&#xd;
-  #end&#xd;
-  #if ("$!channel" != '')&#xd;
-    #set ($channel = $stringtool.stripStart($channel, '#'))&#xd;
-    IRC.${channel}Archive${date}&#xd;
-  #end&#xd;
-#end&#xd;
+      <page>{{velocity}}
+#set ($irccontext = $services.ircbot.context)
+#set ($date = $datetool.get('yyyyMMdd'))
+#if ("$!irccontext" != "")
+  #set ($channel = "$!irccontext.channel.name")
+  #if ("$!channel" == "")
+    #set ($channelNameIterator = $!irccontext.bot.channelsNames.iterator())
+    #if ($channelNameIterator.hasNext())
+      #set ($channel = "$channelNameIterator.next()")
+    #else
+      #set ($channel = '')
+    #end
+  #end
+  #if ("$!channel" != '')
+    #set ($channel = $stringtool.stripStart($channel, '#'))
+    IRC.${channel}Archive${date}
+  #end
+#end
 {{/velocity}}</page>
     </property>
   </object>
@@ -312,16 +333,16 @@
     <guid>74b1fe6b-ec4b-4318-a4e6-e20ea88eb6ef</guid>
     <class>
       <name>IRC.WikiNewsBotListener</name>
-      <customClass />
-      <customMapping />
-      <defaultViewSheet />
-      <defaultEditSheet />
-      <defaultWeb />
-      <nameField />
-      <validationScript />
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
       <wikis>
         <cache>0</cache>
-        <customDisplay />
+        <customDisplay/>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <multiSelect>0</multiSelect>
@@ -335,9 +356,9 @@
         <size>1</size>
         <sort>none</sort>
         <unmodifiable>0</unmodifiable>
-        <validationMessage />
-        <validationRegExp />
-        <values />
+        <validationMessage/>
+        <validationRegExp/>
+        <values/>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </wikis>
     </class>
