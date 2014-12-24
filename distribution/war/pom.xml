@@ -26,7 +26,7 @@
   <parent>
     <groupId>org.phenotips</groupId>
     <artifactId>phenotips.org-distribution</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
   </parent>
   <artifactId>phenotips.org-war</artifactId>
   <name>PhenoTips.org - War package</name>
