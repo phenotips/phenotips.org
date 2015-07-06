@@ -21,37 +21,32 @@
 -->
 
 <xwikidoc version="1.1">
-  <web>ReleaseCode</web>
-  <name>Translations</name>
+  <web>FAQCode</web>
+  <name>FAQTemplate</name>
   <language/>
-  <defaultLanguage>en</defaultLanguage>
+  <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1399870072000</creationDate>
-  <parent>ReleaseCode.WebHome</parent>
+  <creationDate>1434485051000</creationDate>
+  <parent>FAQ.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1360759398000</date>
-  <contentUpdateDate>1360759398000</contentUpdateDate>
+  <date>1360434235000</date>
+  <contentUpdateDate>1360434235000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <comment/>
   <minorEdit>false</minorEdit>
-  <syntaxId>xwiki/2.1</syntaxId>
-  <hidden>false</hidden>
-  <content>release.livetable.version=Version
-release.livetable.releaseManagers=Release Managers
-release.livetable.releaseDate=Released on
-release.livetable.releaseNotes=Release Notes
-release.applicationsPanelEntryLabel=Release
-release.livetable.emptyvalue=</content>
+  <syntaxId>xwiki/2.0</syntaxId>
+  <hidden>true</hidden>
+  <content/>
   <object>
-    <name>ReleaseCode.Translations</name>
+    <name>FAQCode.FAQTemplate</name>
     <number>0</number>
-    <className>XWiki.TranslationDocumentClass</className>
-    <guid>00ae01c9-5f37-40db-ad6a-536df4e149a3</guid>
+    <className>FAQCode.FAQClass</className>
+    <guid>f2b881f1-8360-4c88-adab-53af00013b20</guid>
     <class>
-      <name>XWiki.TranslationDocumentClass</name>
+      <name>FAQCode.FAQClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -59,25 +54,24 @@ release.livetable.emptyvalue=</content>
       <defaultWeb/>
       <nameField/>
       <validationScript/>
-      <scope>
-        <cache>0</cache>
+      <answer>
+        <customDisplay/>
         <disabled>0</disabled>
-        <displayType>select</displayType>
-        <multiSelect>0</multiSelect>
-        <name>scope</name>
+        <editor>---</editor>
+        <name>answer</name>
         <number>1</number>
-        <prettyName>Scope</prettyName>
-        <relationalStorage>0</relationalStorage>
-        <separator> </separator>
-        <separators> ,|</separators>
-        <size>1</size>
+        <picker>0</picker>
+        <prettyName>answer</prettyName>
+        <rows>50</rows>
+        <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
-        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
-      </scope>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </answer>
     </class>
     <property>
-      <scope>WIKI</scope>
+      <answer/>
     </property>
   </object>
 </xwikidoc>

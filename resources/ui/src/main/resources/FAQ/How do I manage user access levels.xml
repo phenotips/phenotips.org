@@ -21,37 +21,32 @@
 -->
 
 <xwikidoc version="1.1">
-  <web>ReleaseCode</web>
-  <name>Translations</name>
+  <web>FAQ</web>
+  <name>How do I manage user access levels</name>
   <language/>
-  <defaultLanguage>en</defaultLanguage>
+  <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1399870072000</creationDate>
-  <parent>ReleaseCode.WebHome</parent>
+  <creationDate>1434729139000</creationDate>
+  <parent>FAQ.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1360759398000</date>
-  <contentUpdateDate>1360759398000</contentUpdateDate>
+  <date>1435178509000</date>
+  <contentUpdateDate>1434730741000</contentUpdateDate>
   <version>1.1</version>
-  <title/>
+  <title>How do I manage access rights for a patient record</title>
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>release.livetable.version=Version
-release.livetable.releaseManagers=Release Managers
-release.livetable.releaseDate=Released on
-release.livetable.releaseNotes=Release Notes
-release.applicationsPanelEntryLabel=Release
-release.livetable.emptyvalue=</content>
+  <content/>
   <object>
-    <name>ReleaseCode.Translations</name>
+    <name>FAQ.How do I manage user access levels</name>
     <number>0</number>
-    <className>XWiki.TranslationDocumentClass</className>
-    <guid>00ae01c9-5f37-40db-ad6a-536df4e149a3</guid>
+    <className>FAQCode.FAQClass</className>
+    <guid>291d04ff-0f04-4b20-a3c4-6a084af1aead</guid>
     <class>
-      <name>XWiki.TranslationDocumentClass</name>
+      <name>FAQCode.FAQClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -59,25 +54,29 @@ release.livetable.emptyvalue=</content>
       <defaultWeb/>
       <nameField/>
       <validationScript/>
-      <scope>
-        <cache>0</cache>
+      <answer>
+        <customDisplay/>
         <disabled>0</disabled>
-        <displayType>select</displayType>
-        <multiSelect>0</multiSelect>
-        <name>scope</name>
+        <editor>---</editor>
+        <name>answer</name>
         <number>1</number>
-        <prettyName>Scope</prettyName>
-        <relationalStorage>0</relationalStorage>
-        <separator> </separator>
-        <separators> ,|</separators>
-        <size>1</size>
+        <picker>0</picker>
+        <prettyName>answer</prettyName>
+        <rows>50</rows>
+        <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
-        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
-      </scope>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </answer>
     </class>
     <property>
-      <scope>WIKI</scope>
+      <answer>You may modify access rights for a patient record for which you are an owner, or a collaborator with the necessary permission level. To manage access rights, navigate to the patient record and click on //Modify Permissions// (only visible if you have the required permission level). Here, you may:
+
+* Transfer ownership of the record to another user (only if you are the owner, or an administrator)
+* Set the Global Visibility level for the record
+* Add or delete collaborators and collaborating groups for the record
+* Change the permission levels of collaborators and collaborating groups for the record</answer>
     </property>
   </object>
 </xwikidoc>

@@ -21,37 +21,32 @@
 -->
 
 <xwikidoc version="1.1">
-  <web>ReleaseCode</web>
-  <name>Translations</name>
+  <web>FAQ</web>
+  <name>How do I use the Family Study features</name>
   <language/>
-  <defaultLanguage>en</defaultLanguage>
+  <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1399870072000</creationDate>
-  <parent>ReleaseCode.WebHome</parent>
+  <creationDate>1435178434000</creationDate>
+  <parent>FAQ.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1360759398000</date>
-  <contentUpdateDate>1360759398000</contentUpdateDate>
+  <date>1435255656000</date>
+  <contentUpdateDate>1435178473000</contentUpdateDate>
   <version>1.1</version>
-  <title/>
+  <title>How do I use the Family Study features</title>
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>release.livetable.version=Version
-release.livetable.releaseManagers=Release Managers
-release.livetable.releaseDate=Released on
-release.livetable.releaseNotes=Release Notes
-release.applicationsPanelEntryLabel=Release
-release.livetable.emptyvalue=</content>
+  <content/>
   <object>
-    <name>ReleaseCode.Translations</name>
+    <name>FAQ.How do I use the Family Study features</name>
     <number>0</number>
-    <className>XWiki.TranslationDocumentClass</className>
-    <guid>00ae01c9-5f37-40db-ad6a-536df4e149a3</guid>
+    <className>FAQCode.FAQClass</className>
+    <guid>bfb49c57-689a-469a-a934-1680b6be2104</guid>
     <class>
-      <name>XWiki.TranslationDocumentClass</name>
+      <name>FAQCode.FAQClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -59,25 +54,24 @@ release.livetable.emptyvalue=</content>
       <defaultWeb/>
       <nameField/>
       <validationScript/>
-      <scope>
-        <cache>0</cache>
+      <answer>
+        <customDisplay/>
         <disabled>0</disabled>
-        <displayType>select</displayType>
-        <multiSelect>0</multiSelect>
-        <name>scope</name>
+        <editor>---</editor>
+        <name>answer</name>
         <number>1</number>
-        <prettyName>Scope</prettyName>
-        <relationalStorage>0</relationalStorage>
-        <separator> </separator>
-        <separators> ,|</separators>
-        <size>1</size>
+        <picker>0</picker>
+        <prettyName>answer</prettyName>
+        <rows>50</rows>
+        <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
-        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
-      </scope>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </answer>
     </class>
     <property>
-      <scope>WIKI</scope>
+      <answer>Metapage for Family Study features. Link FAQ question related to Family Study here.</answer>
     </property>
   </object>
 </xwikidoc>

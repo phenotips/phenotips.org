@@ -21,37 +21,32 @@
 -->
 
 <xwikidoc version="1.1">
-  <web>ReleaseCode</web>
-  <name>Translations</name>
+  <web>FAQ</web>
+  <name>Export As JSON</name>
   <language/>
-  <defaultLanguage>en</defaultLanguage>
+  <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1399870072000</creationDate>
-  <parent>ReleaseCode.WebHome</parent>
+  <creationDate>1434728169000</creationDate>
+  <parent>FAQ.How can I Export Patient Records</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1360759398000</date>
-  <contentUpdateDate>1360759398000</contentUpdateDate>
+  <date>1434840402000</date>
+  <contentUpdateDate>1434746519000</contentUpdateDate>
   <version>1.1</version>
-  <title/>
+  <title>How do I export a patient record as JSON</title>
   <comment/>
   <minorEdit>false</minorEdit>
-  <syntaxId>xwiki/2.1</syntaxId>
+  <syntaxId>xwiki/2.0</syntaxId>
   <hidden>false</hidden>
-  <content>release.livetable.version=Version
-release.livetable.releaseManagers=Release Managers
-release.livetable.releaseDate=Released on
-release.livetable.releaseNotes=Release Notes
-release.applicationsPanelEntryLabel=Release
-release.livetable.emptyvalue=</content>
+  <content/>
   <object>
-    <name>ReleaseCode.Translations</name>
+    <name>FAQ.Export As JSON</name>
     <number>0</number>
-    <className>XWiki.TranslationDocumentClass</className>
-    <guid>00ae01c9-5f37-40db-ad6a-536df4e149a3</guid>
+    <className>FAQCode.FAQClass</className>
+    <guid>85e981c9-e61b-4e90-878c-a4af4941ca37</guid>
     <class>
-      <name>XWiki.TranslationDocumentClass</name>
+      <name>FAQCode.FAQClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -59,25 +54,34 @@ release.livetable.emptyvalue=</content>
       <defaultWeb/>
       <nameField/>
       <validationScript/>
-      <scope>
-        <cache>0</cache>
+      <answer>
+        <customDisplay/>
         <disabled>0</disabled>
-        <displayType>select</displayType>
-        <multiSelect>0</multiSelect>
-        <name>scope</name>
+        <editor>---</editor>
+        <name>answer</name>
         <number>1</number>
-        <prettyName>Scope</prettyName>
-        <relationalStorage>0</relationalStorage>
-        <separator> </separator>
-        <separators> ,|</separators>
-        <size>1</size>
+        <picker>0</picker>
+        <prettyName>answer</prettyName>
+        <rows>50</rows>
+        <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
-        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
-      </scope>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </answer>
     </class>
     <property>
-      <scope>WIKI</scope>
+      <answer>For individual patient records, there is an //Export JSON// option in the //More Actions// menu in the top right corner of the page, but **that entry is only shown for "advanced" users.**
+
+If you do not see that option, then you must switch your user type from simple to advanced:
+
+1. open your user profile by clicking on your name in the upper right corner
+1. click the pencil icon on the right of //Personal Information//
+1. open the //Preferences// tab from the list on the left
+1. change the //User Type// option to ##Advanced##
+1. save
+
+The option //Export JSON// should now show up in the //More Actions// menu for all patient records.</answer>
     </property>
   </object>
 </xwikidoc>

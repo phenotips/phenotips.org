@@ -21,37 +21,32 @@
 -->
 
 <xwikidoc version="1.1">
-  <web>ReleaseCode</web>
-  <name>Translations</name>
+  <web>FAQ</web>
+  <name>What is PhenoTips</name>
   <language/>
-  <defaultLanguage>en</defaultLanguage>
+  <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1399870072000</creationDate>
-  <parent>ReleaseCode.WebHome</parent>
+  <creationDate>1434996793000</creationDate>
+  <parent>FAQ.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1360759398000</date>
-  <contentUpdateDate>1360759398000</contentUpdateDate>
+  <date>1435177397000</date>
+  <contentUpdateDate>1434997833000</contentUpdateDate>
   <version>1.1</version>
-  <title/>
+  <title>What is PhenoTips</title>
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>release.livetable.version=Version
-release.livetable.releaseManagers=Release Managers
-release.livetable.releaseDate=Released on
-release.livetable.releaseNotes=Release Notes
-release.applicationsPanelEntryLabel=Release
-release.livetable.emptyvalue=</content>
+  <content/>
   <object>
-    <name>ReleaseCode.Translations</name>
+    <name>FAQ.What is PhenoTips</name>
     <number>0</number>
-    <className>XWiki.TranslationDocumentClass</className>
-    <guid>00ae01c9-5f37-40db-ad6a-536df4e149a3</guid>
+    <className>FAQCode.FAQClass</className>
+    <guid>26a7c07a-b17e-4fe1-bd13-c54a80495218</guid>
     <class>
-      <name>XWiki.TranslationDocumentClass</name>
+      <name>FAQCode.FAQClass</name>
       <customClass/>
       <customMapping/>
       <defaultViewSheet/>
@@ -59,25 +54,32 @@ release.livetable.emptyvalue=</content>
       <defaultWeb/>
       <nameField/>
       <validationScript/>
-      <scope>
-        <cache>0</cache>
+      <answer>
+        <customDisplay/>
         <disabled>0</disabled>
-        <displayType>select</displayType>
-        <multiSelect>0</multiSelect>
-        <name>scope</name>
+        <editor>---</editor>
+        <name>answer</name>
         <number>1</number>
-        <prettyName>Scope</prettyName>
-        <relationalStorage>0</relationalStorage>
-        <separator> </separator>
-        <separators> ,|</separators>
-        <size>1</size>
+        <picker>0</picker>
+        <prettyName>answer</prettyName>
+        <rows>50</rows>
+        <size>75</size>
         <unmodifiable>0</unmodifiable>
-        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
-        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
-      </scope>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </answer>
     </class>
     <property>
-      <scope>WIKI</scope>
+      <answer>PhenoTips is a customizable, web-based open source tool for collecting and analyzing phenotypic information for patients with genetic disorders. Its features include:
+
+* Standardized phenotyping using the [[Human Phenotype Ontology (HPO)&gt;&gt;http://human-phenotype-ontology.org/]]
+* Error-tolerant, predictive search of the ontology
+* Real-time evaluation of the informational value of the phenotypic description via the [[Monarch Phenotype Profile Analysis&gt;&gt;http://monarchinitiative.org/]]
+* Powerful built-in pedigree editor
+* Measurements and growth curves
+* Diagnosis assistance based on the entered data
+</answer>
     </property>
   </object>
 </xwikidoc>
