@@ -74,7 +74,7 @@ phenotypic profile specificity evaluation.
 
 # Availability
 
-PhenoTips is freely available under the terms of the the [GNU Affero General Public License, version 3.0](http://localhost:8000/DevGuide/License).
+PhenoTips is freely available under the terms of the [GNU Affero General Public License, version 3.0](http://localhost:8000/DevGuide/License).
 
 You can find the source code for PhenoTips at:
 {% include icon-github.html username="phenotips" %} /
