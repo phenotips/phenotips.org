@@ -11,7 +11,6 @@ email: support@phenotips.org
 description: > # this means to ignore newlines until "baseurl:"
   PhenoTips™ is a software tool for collecting and analyzing phenotypic
   information for patients with genetic disorders.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://phenotips.org" # the base hostname & protocol for your site
 twitter_username: phenotips
 github_username:  phenotips
