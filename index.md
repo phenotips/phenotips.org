@@ -7,8 +7,10 @@ permalink: /
 
 --- 
 
-# **phenotips.org is under construction** 
-Please bear with us while we get our site back online.
+# **phenotips.org is temporarily down**
+
+We are working to get it back up as soon as possible. Please bear with us while
+we get our site back online.
 
 --- 
 <br/>
