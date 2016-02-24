@@ -46,8 +46,6 @@ If you wish to mention PhenoTips in a scientific article, please refer to our
 
 ## The Human Phenotype Ontology
 
-The Human Phenotype Ontology
-
 PhenoTips enables the collection of phenotype data using the [Human Phenotype
 Ontology (HPO)](http://human-phenotype-ontology.github.io/), a standardized
 vocabulary of phenotypic abnormalities
