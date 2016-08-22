@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.1">
+  <web>FAQ</web>
+  <name>Overriding translations</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1471642902000</creationDate>
+  <parent>FAQ.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1471705187000</date>
+  <contentUpdateDate>1471705187000</contentUpdateDate>
+  <version>1.1</version>
+  <title>How do I modify a text displayed in the PhenoTips user interface?</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>Most of the texts displayed in the PhenoTips user interface are generated using translation keys processed by the [[localization service&gt;&gt;http://extensions.xwiki.org/xwiki/bin/view/Extension/Localization+Module]]. This is part of our effort to make PhenoTips available in multiple languages. The translations are defined in ##ApplicationResources[_&lt;language_key&gt;].properties## files bundled with each PhenoTips component.
+
+To override a specific translation, we strongly advise against modifying the ##ApplicationResources.properties## file directly, since this will make upgrades difficult for you. Instead, a practice that allows for more flexibility is to create an [[XWiki Translation document&gt;&gt;http://extensions.xwiki.org/xwiki/bin/view/Extension/Localization+Module#HRegisterawikitranslation]] and specify the desired modification in that document instead.
+
+=== Example ===
+How to change the label for the patient's date of birth from "Date of birth" to "Birth date":
+* To find the translation key, you could search for "Date of birth" in the PhenoTips ##*.properties## files. You will find it in [[##components/patient-data/impl/src/main/resources/ApplicationResources.properties##&gt;&gt;https://github.com/phenotips/phenotips/blob/45d369f26a77ef1b0a27398bd481e345e5b97651/components/patient-data/impl/src/main/resources/ApplicationResources.properties#L45]], and you will see the translation key for the field is ##PhenoTips.PatientClass_date_of_birth##. As a general rule, translation keys for property labels have the format ##&lt;classname&gt;_&lt;propertyname&gt;## (as explained [[in the localization conventions documentation&gt;&gt;http://dev.xwiki.org/xwiki/bin/view/Community/L10N%20Conventions#HTranslatingXClasses]]:
+* Create a new XWiki document for translations, e.g. ##PhenoTips/MyTranslationOverrides##
+** Open ##https:~//&lt;mydomain&gt;/bin/edit/PhenoTips/MyTranslationOverrides?editor=object##
+** Add a ##XWiki.TranslationDocumentClass## object to it
+** Set the scope to ##Wiki##
+** Save
+** Navigate to the document's content editor:  ##https:~//&lt;mydomain&gt;/bin/edit/PhenoTips/MyTranslationOverrides## (just as before, but without the ##?editor=object## query string)
+** (((Enter your translation overrides as ##key=value## pairs, one per line. For example:
+
+{{code}}
+PhenoTips.PatientClass_date_of_birth=Birth date
+{{/code}}
+)))
+** Save
+** Navigate to any patient form to see the results.
+</content>
+</xwikidoc>
