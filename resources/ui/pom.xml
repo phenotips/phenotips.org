@@ -157,6 +157,18 @@
       <version>${xwiki.version}</version>
       <type>xar</type>
     </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-ircbot-ui</artifactId>
+      <version>${xwiki.version}</version>
+      <type>xar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-release-ui</artifactId>
+      <version>${xwiki.version}</version>
+      <type>xar</type>
+    </dependency>
 
   </dependencies>
   <build>
