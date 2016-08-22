@@ -151,6 +151,12 @@
       <version>${xwiki.version}</version>
       <type>xar</type>
     </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-faq-ui</artifactId>
+      <version>${xwiki.version}</version>
+      <type>xar</type>
+    </dependency>
 
   </dependencies>
   <build>
