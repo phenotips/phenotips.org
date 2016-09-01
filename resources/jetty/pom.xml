@@ -31,7 +31,6 @@
     <jetty.version>8.1.15.v20140411</jetty.version>
   </properties>
   <modules>
-    <module>startup-listener</module>
     <module>packaging</module>
   </modules>
 </project>
