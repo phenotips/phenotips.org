@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.
@@ -16,6 +17,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see http://www.gnu.org/licenses/
 -->
+
 <xwikidoc version="1.1">
   <web>UserGuide</web>
   <name>GettingStarted</name>
@@ -148,7 +150,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
 </content>
   <attachment>
     <filename>ChangeCollaborators.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385969737000</date>
     <version>1.1</version>
     <comment/>
@@ -157,7 +159,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>ChangeCollaboratorsDialog.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385989437000</date>
     <version>1.1</version>
     <comment/>
@@ -166,7 +168,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>ChangeOwnership.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385969739000</date>
     <version>1.1</version>
     <comment/>
@@ -175,7 +177,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>ChangeOwnershipDialog.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385989439000</date>
     <version>1.1</version>
     <comment/>
@@ -184,7 +186,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>ChangeVisibility.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385969740000</date>
     <version>1.1</version>
     <comment/>
@@ -193,7 +195,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>ChangeVisibilityDialog.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385989440000</date>
     <version>1.1</version>
     <comment/>
@@ -202,7 +204,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>Differential.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385970399000</date>
     <version>1.1</version>
     <comment/>
@@ -211,7 +213,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>HomeLink.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385970630000</date>
     <version>1.1</version>
     <comment/>
@@ -220,7 +222,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>Homepage.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385968795000</date>
     <version>1.1</version>
     <comment/>
@@ -229,7 +231,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>LoginForm.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1385968796000</date>
     <version>1.1</version>
     <comment/>
@@ -238,7 +240,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>NewRecord.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1392148849000</date>
     <version>1.1</version>
     <comment/>
@@ -247,7 +249,7 @@ To give a **trusted** colleague access to one of your non-public cases. When vie
   </attachment>
   <attachment>
     <filename>NewRecord2.png</filename>
-    <author>XWiki.marta</author>
+    <author>xwiki:XWiki.Admin</author>
     <date>1392148874000</date>
     <version>1.1</version>
     <comment/>
