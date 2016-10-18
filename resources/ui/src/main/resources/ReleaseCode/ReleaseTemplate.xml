@@ -31,8 +31,8 @@
   <parent>Release.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1411435898000</date>
-  <contentUpdateDate>1411435898000</contentUpdateDate>
+  <date>1476372300000</date>
+  <contentUpdateDate>1476371658000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <comment/>
@@ -48,28 +48,92 @@
 
 * (x) Check that you have the [[needed accounts&gt;&gt;Release.ReleasePlanHelp||anchor="HSetupyouridentity"]]
 * (x) Verify that there are no {{velocity}}[[open issues on GitHub for version $version&gt;&gt;https://github.com/phenotips/phenotips/milestones]]{{/velocity}}
-* (x) Verify that [[the build passes on the CI Server&gt;&gt;http://ci.cs.toronto.edu/jenkins/job/phenotips/]]
-* (x) Close the Milestone on [[GitHub&gt;&gt;https://github.com/phenotips/phenotips/milestones]]
+* (x) Verify that [[the build passes on the CI Server&gt;&gt;https://ci.phenotips.org/job/phenotips/]]
+* (x) Close the Version on [[Jira&gt;&gt;https://phenotips.atlassian.net/plugins/servlet/project-config/PT/versions]]
 * (x) Make sure the build machine has "rpmbuild" utility installed
 * (x) Increase the amount of memory available to Maven: ##export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=256m"##
 * (x) [[Perform the release&gt;&gt;Release.ReleasePlanHelp||anchor="HBuildtherelease"]]
 * (x) Unzip the standalone distributions and perform a quick smoke test:
 ** (x) Does the homepage display correctly?
 ** (x) Does creating a new patient work?
-** (x) Does creating a pedigree work (select a template, delete nodes, search for diseases, drag/drop diseases, search for genes and phenotypes, drag/drop multi-generation relationships, create a sibling, use the node menu...)?
+** (x) Do hints work?
+** (x) Does creating a pedigree work?
+*** (x) Can you assign a patient to an existing family?
+*** (x) Can you create a new family for patient?
+*** (x) Does linking and unlinking patient to a pedigree node works?
+*** (x) Can you create a new patient record for an existing pedigree node?
+*** (x) select a template
+*** (x) delete nodes
+*** (x) drag/drop diseases
+*** (x) drag/drop multi-generation relationships
+*** (x) create a sibling
+*** (x) use the children options menu
+**** (x) create a child of each gender
+**** (x) twins, triplets
+**** (x) "group"
+**** (x) pregnancy
+**** (x) mark individual/couple as infertile (using the bubble button)
+**** (x) mark individual/couple as childless (using the bubble button)
+*** (x) use the node menu
+**** (x) change gender
+**** (x) search for ethnicities
+**** (x) change the adopted status and it updates the node appearance
+**** (x) change the alive and deceased status and it updates the node appearance
+**** (x) mark individual/couple as infertile (using the node menu)
+**** (x) mark individual/couple as childless (using the node menu)
+**** (x) change the carrier status
+**** (x) search for disorders
+**** (x) search for phenotypes
+**** (x) search for genes
+**** (x) add a comment in each tab
+**** (x) indicate a type of cancer with status and age at diagnosis and additional notes
+*** (x) renumber the nodes
+*** (x) export as JSON, BOADICEA and PED
+** (x) Does printing a pedigree work? (try different options e.g. anonymized, with/without legend, multiple pages, zoomed &amp; panned, etc)
+** (x) Can you export pedigree as PDF, PNG and SVG?
 ** (x) Does saving a pedigree work?
+** (x) Are saving failures for common reasons clearly communicated to the user?
+*** (x) In a separate tab, log out of PhenoTips. Then try saving the pedigree in the pedigree editor. Does the editor correctly and visibly inform you that saving failed?
+*** (x) From the terminal, shut down PhenoTips. Then try saving the pedigree. Does the editor correctly and visibly inform you that saving failed?
+*** (x) (Restart PhenoTips and log back in to continue testing)
+** (x) Are all saved pedigree edits present in the Patient form's corresponding fields?
 ** (x) Does re-editing a pedigree work?
+** (x) Does the Pedigree and Family section show pedigree thumbnail with its action buttons?
+** (x) Do all pedigree action buttons work as expected?
 ** (x) Does ethnicity suggestion box work? Does saving ethnicities work?
+** (x) Does ##Other## prenatal growth parameters and development search/suggestions work?
+** (x) Can you record allergies?
 ** (x) Do measurements work? Percentile computations? Charts?
+** (x) Can you upload a previous medical report?
+** (x) Can you search for a list of genes?
+** (x) Can you upload a VCF file?
+** (x) Are phenotype categories collapsed by default?
 ** (x) Are the predefined phenotypes correctly displayed?
 ** (x) Does the //Quick phenotype search// work?
+** (x) Are Global mode of inheritance and Global age of onset collapsed by default?
+** (x) Are Global mode of inheritance and Global age of onset taken into account for diagnosis and "other phenotypes" suggestions?
 ** (x) Does adding phenotype details work?
 ** (x) Do the diagnosis suggestions show up correctly?
+** (x) Can you resolve the case?
 ** (x) Does the record save correctly?
+** (x) Can you comment on patient record?
+** (x) Does the PDF export correctly?
+** (x) Can you open family page?
+*** (x) Can you mark family as one with sensitive info?
+*** (x) Does the modal with sensitive info pops up when expected?
+*** (x) Can you update pedigree?
+*** (x) Do all action buttons work as expected?
+*** (x) Can you delete a family record?
 ** (x) Do the tables on the homepage and the //All data// table work?
-** (x) Does pushing a patient from one local instance to another works (id, sex, phenpotypes and disorders are pushed correctly)? Does pushing a new patient and updating existing work? Error handling when server is unavailable? Pushing multiple patients form the "all data" page (filters work, patients get pushed)?
-* (x) Remove the Clirr exclusions/ignores from the main ##pom.xml## file, if any
-* (x) Upgrade ##playground.phenotips.org## and ##phenotips.org##
+** (x) Does the Excel and JSON export work?
+** (x) Does pushing a complete patient from one local instance to another work (##exceptions are DOD unknown, pedigree, medical reports, obstetric history, copy number variants, additional files##)?
+*** (x) Does pushing a new patient and updating existing work?
+*** (x) Error handling when server is unavailable?
+*** (x) Pushing multiple patients form the "all data" page (filters work, patients get pushed)?
+* (x) Release the MacOS DMG
+* (x) If branching a new version, remove the Clirr exclusions/ignores from the main ##pom.xml## file, if any
+* (x) Update the Download page
+* (x) Upgrade ##playground.phenotips.org## and other maintained instances
 * (x) [[Create blog post on phenotips.org&gt;&gt;Blog.WebHome]]
 * (x) Send the Announcement Mail
 * (x) Announce on Twitter with the [[PhenoTips account&gt;&gt;https://twitter.com/PhenoTips/]]
