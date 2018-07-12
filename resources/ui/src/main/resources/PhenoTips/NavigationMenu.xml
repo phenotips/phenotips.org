@@ -646,6 +646,7 @@ $xwiki.jsx.use('PhenoTips.NavigationMenu')##
 * [[Home&gt;&gt;http://www.phenotips.org]]
 * [[Playground&gt;&gt;http://playground.phenotips.org]]
 * [[Download&gt;&gt;PhenoTips.Download]]
+* [[Licensing&gt;&gt;DevGuide.License]]
 * Documentation
 ** [[User guide&gt;&gt;UserGuide.WebHome]]
 ** [[Administrator guide&gt;&gt;AdminGuide.WebHome]]
