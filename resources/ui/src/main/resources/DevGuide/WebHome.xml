@@ -37,9 +37,7 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>{{warning}}This guide is a stub{{/warning}}
-
-PhenoTips is built on top of [[XWiki&gt;&gt;http://xwiki.org]], a professional java-based with enterprise features such as strong rights management, LDAP authentication, PDF export, full skinning, advanced Form and scripting engine. For information about XWiki development, please consult the [[XWiki Developer Documentation&gt;&gt;http://platform.xwiki.org/xwiki/bin/view/DevGuide/WebHome]].
+  <content>PhenoTips is built on top of [[XWiki&gt;&gt;http://xwiki.org]], a professional java-based with enterprise features such as strong rights management, LDAP authentication, PDF export, full skinning, advanced Form and scripting engine. For information about XWiki development, please consult the [[XWiki Developer Documentation&gt;&gt;http://platform.xwiki.org/xwiki/bin/view/DevGuide/WebHome]].
 
 (% style="width: 48%; float: left"%)(((
 === Developer resources ===

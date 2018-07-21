@@ -54,8 +54,6 @@
 : //Keep all your data safe with a backup script.//
 )))(% style="float: right; width: 48%;" %)(((
 == Application configuration ==
-{{warning}}This guide is a stub{{/warning}}
-
 ; {{icon name="group" size="large" /}} [[User administration&gt;&gt;AdminGuide.UserAdministration]]
 : //Learn how to manage the users and groups on your PhenoTips installation.//
 

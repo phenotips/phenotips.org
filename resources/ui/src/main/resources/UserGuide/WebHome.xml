@@ -37,8 +37,6 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>false</hidden>
-  <content>{{warning}}This guide is a stub{{/warning}}
-
-; {{icon name="rocket" size="large" /}} [[Getting started&gt;&gt;UserGuide.GettingStarted]]
+  <content>; {{icon name="rocket" size="large" /}} [[Getting started&gt;&gt;UserGuide.GettingStarted]]
 : //Learn how to use your account, enter data and collaborate with other users.//</content>
 </xwikidoc>

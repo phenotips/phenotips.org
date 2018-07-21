@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.1">
+  <web>PhenoTips</web>
+  <name>Licensing</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1415672894000</creationDate>
+  <parent>PhenoTips.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1415672870000</date>
+  <contentUpdateDate>1365531548000</contentUpdateDate>
+  <version>1.1</version>
+  <title>Licensing</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>PhenoTips is available under two licenses:
+1. The **Community Edition (CE)** is distributed under the GNU Affero General Public License version 3.0 (AGPL), a well known free software/open source license recognized by the Free Software Foundation and the Open Source Initiative. You can read the full text at: https://www.gnu.org/licenses/agpl-3.0.html
+1. The **Enterprise** version is distributed under a closed-source commercial license from [[Gene42 Inc&gt;&gt;https://gene42.com]].
+
+
+== Community Edition (CE) ==
+The AGPL is a strong copyleft license, which ensures that PhenoTips CE and software built on top of it remain open-source and available to the public. By making PhenoTips CE available under the AGPL:
+(% style="list-style-type: disc" %)
+* You are free to download, use, modify, and distribute PhenoTips CE according to the terms of the AGPL
+* If you modify PhenoTips CE, you must state your changes and disclose the updated source under the AGPL
+* If you create a derivative or combined work by integrating PhenoTips CE with other applications, that derivative or combined work must also be made available under the AGPL
+(% style="list-style-type: circle" %)
+** This applies whether PhenoTips CE is modified or not
+** This applies even if the integration only uses the APIs
+
+{{warning}}
+For example, the following integrations **are** considered to form a combined work:
+* Integrating with an electronic medical/health record system or patient management system (including API integration or UI embedding)
+* Integrating with a laboratory information management system (LIMS)
+* Integrating with a laboratory test ordering system
+* Integrating with a variant/genome analysis platform
+{{/warning}}
+
+{{success}}
+For example, the following integrations **are not** considered to form a combined work:
+* Configuring PhenoTips to authenticate through another system, such as LDAP or SSO
+* Configuring PhenoTips to use an SMTP server for email delivery
+* Configuring and using PhenoTips CE’s “push” functionality to manually export patient records to another system or receive them from another system in which they were manually exported
+{{/success}}
+
+
+== Enterprise/commercial licensing ==
+
+If you are interested in integrating PhenoTips with closed-source software, such as electronic medical record systems, you can obtain a license from [[Gene42 Inc&gt;&gt;https://gene42.com]]. Gene42 also provides integration and deployment assistance, help-desk support, and custom development services.
+
+If you have any questions about licensing PhenoTips, please contact [[info@gene42.com&gt;&gt;mailto:info@gene42.com]].
+
+
+
+</content>
+</xwikidoc>

@@ -41,7 +41,7 @@
 
 (% class="information"%)((((% class="section"%)(((
 == Availability ==
-PhenoTips is freely available under the terms of the the [[GNU Lesser General Public License, version 2.1&gt;&gt;DevGuide.License]].
+PhenoTips is freely available under the terms of the the [[GNU Lesser General Public License, version 2.1&gt;&gt;PhenoTips.Licensing]].
 
 ; (% class="external-link download"%){{icon name="download" size="large"/}}[[Download the latest release&gt;&gt;Download]]
 ; (% class="external-link demo"%){{icon name="play-circle" size="large"/}}[[Play with our demo&gt;&gt;https://playground.phenotips.org/||title="Try it out"]]
